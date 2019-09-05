@@ -1,0 +1,127 @@
+{
+  "name": "@lbzui/vue",
+  "version": "0.1.0",
+  "description": "Material Design UI Components for Vue.js",
+  "keywords": [
+    "lbzui",
+    "material-components",
+    "material-components-vue",
+    "material-design"
+  ],
+  "homepage": "https://github.com/lbzui/lbzui-vue#readme",
+  "bugs": {
+    "url": "https://github.com/lbzui/lbzui-vue/issues",
+    "email": "<lbz_ui@163.com>"
+  },
+  "license": "MIT",
+  "author": "LAN Bizhong <bizhong_lan@163.com> (https://lanbizhong.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lbzui/lbzui-vue.git"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "normalize.css": "^8.0.1",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.1.0",
+    "vue-router": "^3.0.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.1.4",
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-plugin-e2e-cypress": "^3.11.0",
+    "@vue/cli-plugin-typescript": "^3.11.0",
+    "@vue/cli-plugin-unit-jest": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-pxtorem": "^4.0.1",
+    "ts-jest": "^23.0.0",
+    "typescript": "^3.4.3",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "engines": {
+    "node": ">=8.9"
+  },
+  "private": false,
+  "postcss": {
+    "plugins": {
+      "postcss-preset-env": {
+        "stage": 3,
+        "features": {},
+        "autoprefixer": {
+          "flexbox": "no-2009",
+          "grid": "autoplace"
+        },
+        "preserve": true,
+        "importFrom": []
+      },
+      "postcss-pxtorem": {
+        "rootValue": 16,
+        "unitPrecision": 8,
+        "propList": [
+          "font",
+          "font-size",
+          "line-height"
+        ],
+        "selectorBlackList": [],
+        "replace": true,
+        "mediaQuery": false,
+        "minPixelValue": 0
+      }
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie < 10"
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "vue",
+      "ts",
+      "tsx"
+    ],
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ],
+    "testMatch": [
+      "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
+    ],
+    "testURL": "http://localhost/",
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
+    ],
+    "globals": {
+      "ts-jest": {
+        "babelConfig": true
+      }
+    }
+  }
+}
