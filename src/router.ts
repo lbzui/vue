@@ -18,5 +18,10 @@ export default new Router({
       name: 'elevation',
       component: () => import('./views/styles/Elevation.vue'),
     },
+    {
+      path: '/styles/shadow',
+      name: 'shadow',
+      component: () => import('./views/styles/Shadow.vue'),
+    },
   ],
 });

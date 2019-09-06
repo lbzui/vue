@@ -4,7 +4,8 @@
       <router-link tag="h1" to="/">LBZUI</router-link>
       <h2>Styles:</h2>
       <nav class="lbzui__nav" role="navigation">
-        <router-link to="/styles/elevation">Elevation</router-link>
+        <router-link to="/styles/elevation">Elevation</router-link> | 
+        <router-link to="/styles/shadow">Shadow</router-link>
       </nav>
     </header>
     <router-view class="lbzui_main" role="main"/>
@@ -18,6 +19,7 @@
   .lbzui_main {
     .square {
       display: inline-block;
+      margin: 16px;
       width: 160px;
       height: 160px;
     }
