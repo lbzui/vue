@@ -11,10 +11,12 @@ export default new Router({
       name: 'home',
       component: Home,
     },
+
+    // styles
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('./views/About.vue'),
+      path: '/styles/elevation',
+      name: 'elevation',
+      component: () => import('./views/styles/Elevation.vue'),
     },
   ],
 });
