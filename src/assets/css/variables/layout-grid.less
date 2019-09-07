@@ -1,0 +1,27 @@
+// usage:
+// `var(--lbz-layout-grid-x)`(column, gutter, margin)
+
+:root {
+  // min-width: 840px
+  --lbz-layout-grid-column: 12;
+  --lbz-layout-grid-gutter: 24px;
+  --lbz-layout-grid-margin: 24px;
+
+  @media (min-width: 720px) and (max-width: 839px) {
+    --lbz-layout-grid-column: 8;
+    --lbz-layout-grid-gutter: 24px;
+    --lbz-layout-grid-margin: 24px;
+  }
+
+  @media (min-width: 600px) and (max-width: 719px) {
+    --lbz-layout-grid-column: 8;
+    --lbz-layout-grid-gutter: 16px;
+    --lbz-layout-grid-margin: 16px;
+  }
+
+  @media (max-width: 599px) {
+    --lbz-layout-grid-column: 4;
+    --lbz-layout-grid-gutter: 16px;
+    --lbz-layout-grid-margin: 16px;
+  }
+}
