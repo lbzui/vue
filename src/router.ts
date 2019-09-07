@@ -28,5 +28,10 @@ export default new Router({
       name: 'surface',
       component: () => import('./views/styles/Surface.vue'),
     },
+    {
+      path: '/styles/typography',
+      name: 'typography',
+      component: () => import('./views/styles/Typography.vue'),
+    },
   ],
 });
