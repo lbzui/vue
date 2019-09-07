@@ -1,45 +1,48 @@
-// Light theme
-#lbz-theme-light() {
-  // Primary color
-  primary: #6200ee;
-  primary-variant: #3700b3;
+// Theme
+#lbz-theme() {
+  // Light theme
+  .light() {
+    // Primary color
+    primary: #6200ee;
+    primary-variant: #3700b3;
 
-  // Secondary color
-  secondary: #03dac6;
-  secondary-variant: #018786;
+    // Secondary color
+    secondary: #03dac6;
+    secondary-variant: #018786;
 
-  // Surface, background, and error colors
-  background: #fff;
-  surface: #fff;
-  error: #b00020;
+    // Surface, background, and error colors
+    background: #fff;
+    surface: #fff;
+    error: #b00020;
 
-  // Typography and iconography colors ( #fff || #000)
-  on-primary: #fff;
-  on-secondary: #000;
-  on-background: #000;
-  on-surface: #000;
-  on-error: #fff;
-}
+    // Typography and iconography colors (#fff, #000)
+    on-primary: #fff;
+    on-secondary: #000;
+    on-background: #000;
+    on-surface: #000;
+    on-error: #fff;
+  }
 
-// Dark theme
-#lbz-theme-dark() {
-  // Primary color
-  primary: #bb86fc;
-  primary-variant: #3700b3;
+  // Dark theme
+  .dark() {
+    // Primary color
+    primary: #bb86fc;
+    primary-variant: #3700b3;
 
-  // Secondary color
-  secondary: #03dac6;
-  secondary-variant: #03dac6;
+    // Secondary color
+    secondary: #03dac6;
+    secondary-variant: #03dac6;
 
-  // Surface, background, and error colors
-  background: #121212;
-  surface: #121212;
-  error: #cf6679;
+    // Surface, background, and error colors
+    background: #121212;
+    surface: #121212;
+    error: #cf6679;
 
-  // Typography and iconography colors ( #fff || #000)
-  on-primary: #000;
-  on-secondary: #000;
-  on-background: #fff;
-  on-surface: #fff;
-  on-error: #000;
+    // Typography and iconography colors (#fff, #000)
+    on-primary: #000;
+    on-secondary: #000;
+    on-background: #fff;
+    on-surface: #fff;
+    on-error: #000;
+  }
 }
