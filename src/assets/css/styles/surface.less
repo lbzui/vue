@@ -1,0 +1,61 @@
+// usage(call Mixins are not supported):
+// `.lbz-surface--x`(x: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24)
+
+.lbz-surface {
+  &--0,
+  &--1,
+  &--2,
+  &--3,
+  &--4,
+  &--6,
+  &--8,
+  &--12,
+  &--16,
+  &--24 {
+    background-color: var(--lbz-theme-surface-0);
+  }
+}
+
+html[theme="dark"] {
+  .lbz-surface {
+    &--0 {
+      background-color: var(--lbz-theme-surface-0);
+    }
+
+    &--1 {
+      background-color: var(--lbz-theme-surface-1);
+    }
+
+    &--2 {
+      background-color: var(--lbz-theme-surface-2);
+    }
+
+    &--3 {
+      background-color: var(--lbz-theme-surface-3);
+    }
+
+    &--4 {
+      background-color: var(--lbz-theme-surface-4);
+    }
+
+    &--6 {
+      background-color: var(--lbz-theme-surface-6);
+    }
+
+    &--8 {
+      background-color: var(--lbz-theme-surface-8);
+    }
+
+    &--12 {
+      background-color: var(--lbz-theme-surface-12);
+    }
+
+    &--16 {
+      background-color: var(--lbz-theme-surface-16);
+    }
+
+    &--24 {
+      background-color: var(--lbz-theme-surface-24);
+    }
+  }
+}

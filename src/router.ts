@@ -23,5 +23,10 @@ export default new Router({
       name: 'shadow',
       component: () => import('./views/styles/Shadow.vue'),
     },
+    {
+      path: '/styles/surface',
+      name: 'surface',
+      component: () => import('./views/styles/Surface.vue'),
+    },
   ],
 });
