@@ -1,0 +1,123 @@
+// Icon button
+// active: true, false (default)
+// toggle: true, false (default)
+// surface: 'primary', 'secondary', 'surface' (default)
+// disabled: true, false (default)
+
+.lbz-icon-button {
+  -webkit-appearance: none;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  vertical-align: middle;
+  color: inherit;
+  fill: currentColor;
+  background-color: transparent;
+  outline: none;
+  cursor: default;
+  user-select: none;
+
+  // disabled
+  &:disabled {
+    color: var(--lbz-theme-text-disabled-on-surface);
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--lbz-theme-on-surface);
+    opacity: #lbz-state.surface[enabled];
+    transition: opacity 15ms linear, background-color 15ms linear;
+    content: "";
+    pointer-events: none;
+  }
+
+  svg,
+  img {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  .lbz-icon-button__icon {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    transition: opacity 100ms linear;
+
+    // toggle
+    &.lbz-icon-button__icon--on {
+      opacity: 0;
+    }
+
+    &.lbz-icon-button__icon--off {
+      opacity: 1;
+    }
+  }
+
+  // active
+  &.is-active {
+    .lbz-icon-button__icon {
+      &.lbz-icon-button__icon--on {
+        opacity: 1;
+      }
+
+      &.lbz-icon-button__icon--off {
+        opacity: 0;
+      }
+    }
+  }
+
+  &:not(:disabled):hover {
+    cursor: pointer;
+
+    &::before {
+      opacity: #lbz-state.surface[hover];
+    }
+  }
+
+  &:not(:disabled):focus {
+    &::before {
+      opacity: #lbz-state.surface[focused];
+    }
+  }
+
+  // surface
+  &.lbz-icon-button--primary,
+  &.lbz-icon-button--secondary {
+    &::before {
+      background-color: var(--lbz-theme-on-primary);
+      opacity: #lbz-state.primary[enabled];
+    }
+
+    &:not(:disabled):hover {
+      &::before {
+        opacity: #lbz-state.primary[hover];
+      }
+    }
+
+    &:not(:disabled):focus {
+      &::before {
+        opacity: #lbz-state.primary[focused];
+      }
+    }
+  }
+
+  &.lbz-icon-button--secondary {
+    &::before {
+      background-color: var(--lbz-theme-on-secondary);
+    }
+  }
+}

@@ -4,14 +4,13 @@
     :class="[
       type ? `lbz-button--${ type }` : '',
       dense ? 'is-dense' : '',
-      unelevated ? 'is-unelevated': '',
+      type === 'contained' && unelevated ? 'is-unelevated': '',
       ripple ? 'lbz-ripple' : ''
     ]"
     :disabled="disabled"
     @click="$emit('click', $event)"
   >
-    <lbz-icon v-if="icon" class="lbz-button__icon">{{ icon }}</lbz-icon>
-    <i v-else-if="$slots.icon" class="lbz-button__icon"><slot name="icon"/></i>
+    <lbz-icon v-if="icon || $slots.icon" class="lbz-button__icon"><template v-if="icon">{{ icon }}</template><slot v-else name="icon"/></lbz-icon>
     <span class="lbz-button__label"><slot/></span>
   </button>
 </template>

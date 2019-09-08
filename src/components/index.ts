@@ -2,11 +2,13 @@ import { default as _Vue, VueConstructor, PluginFunction } from 'vue';
 import Button from './button';
 import Divider from './divider';
 import Icon from './icon';
+import IconButton from './icon-button';
 
 const components: any[] = [
   Button,
   Divider,
   Icon,
+  IconButton,
 ];
 const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any) => {
   components.map((Component) => {
@@ -36,4 +38,5 @@ export {
   Button,
   Divider,
   Icon,
+  IconButton,
 };

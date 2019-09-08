@@ -1,6 +1,6 @@
 <template>
   <main>
-    <p class="lbz-typography--body1">Text Button</p>
+    <p class="lbz-typography--body1">Text button</p>
     <lbz-button>Default</lbz-button>
     <lbz-button dense>Dense</lbz-button>
     <lbz-button :ripple="false">No ripple</lbz-button>
@@ -20,7 +20,7 @@
       Img
     </lbz-button>
 
-    <p class="lbz-typography--body1">Outlined Button</p>
+    <p class="lbz-typography--body1">Outlined button</p>
     <lbz-button type="outlined">Default</lbz-button>
     <lbz-button type="outlined" dense>Dense</lbz-button>
     <lbz-button type="outlined" :ripple="false">No ripple</lbz-button>
@@ -40,7 +40,7 @@
       Img
     </lbz-button>
 
-    <p class="lbz-typography--body1">Contained Button</p>
+    <p class="lbz-typography--body1">Contained button</p>
     <lbz-button type="contained">Default</lbz-button>
     <lbz-button type="contained" dense>Dense</lbz-button>
     <lbz-button type="contained" unelevated>Unelevated</lbz-button>

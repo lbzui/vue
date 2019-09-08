@@ -13,7 +13,8 @@
       <nav class="lbzui__nav" role="navigation">
         <router-link to="/components/button">Button</router-link> |
         <router-link to="/components/divider">Divider</router-link> |
-        <router-link to="/components/icon">Icon</router-link>
+        <router-link to="/components/icon">Icon</router-link> |
+        <router-link to="/components/icon-button">Icon button</router-link>
       </nav>
     </header>
     <router-view class="lbzui_main" role="main"/>

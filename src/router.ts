@@ -50,5 +50,10 @@ export default new Router({
       name: 'icon',
       component: () => import('./views/components/Icon.vue'),
     },
+    {
+      path: '/components/icon-button',
+      name: 'icon-button',
+      component: () => import('./views/components/IconButton.vue'),
+    },
   ],
 });

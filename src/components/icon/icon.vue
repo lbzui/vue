@@ -4,7 +4,7 @@
     :class="[
       size ? `lbz-icon--${ size }` : '',
       color ? `lbz-icon--${ color }` : '',
-      disabled ? 'is-disabled' : ''
+      color && disabled ? 'is-disabled' : ''
     ]"
   ><slot/></i>
 </template>
