@@ -1,7 +1,9 @@
 import { default as _Vue, VueConstructor, PluginFunction } from 'vue';
+import Divider from './divider';
 import Icon from './icon';
 
 const components: any[] = [
+  Divider,
   Icon,
 ];
 const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any) => {
@@ -29,5 +31,6 @@ export default install;
 
 export {
   install,
+  Divider,
   Icon,
 };

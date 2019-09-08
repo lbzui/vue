@@ -6,7 +6,7 @@
       color ? `lbz-icon--${ color }` : '',
       disabled ? 'is-disabled' : ''
     ]"
-  ><slot /></i>
+  ><slot/></i>
 </template>
 
 <script lang="ts">

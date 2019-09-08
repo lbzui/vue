@@ -1,0 +1,30 @@
+// Divider
+// color: 'primary', 'secondary', 'background', 'surface' (default), 'error'
+
+.lbz-divider {
+  margin: 0;
+  border: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--lbz-theme-divider-on-surface);
+
+  &--primary {
+    border-bottom-color: var(--lbz-theme-divider-on-primary);
+  }
+
+  &--secondary {
+    border-bottom-color: var(--lbz-theme-divider-on-secondary);
+  }
+
+  &--background {
+    border-bottom-color: var(--lbz-theme-divider-on-background);
+  }
+
+  &--surface {
+    border-bottom-color: var(--lbz-theme-divider-on-surface);
+  }
+
+  &--error {
+    border-bottom-color: var(--lbz-theme-divider-on-error);
+  }
+}
