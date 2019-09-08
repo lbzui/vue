@@ -11,6 +11,7 @@
       </nav>
       <h2>Components:</h2>
       <nav class="lbzui__nav" role="navigation">
+        <router-link to="/components/button">Button</router-link> |
         <router-link to="/components/divider">Divider</router-link> |
         <router-link to="/components/icon">Icon</router-link>
       </nav>

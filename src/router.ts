@@ -36,6 +36,11 @@ export default new Router({
 
     // Components
     {
+      path: '/components/button',
+      name: 'button',
+      component: () => import('./views/components/Button.vue'),
+    },
+    {
       path: '/components/divider',
       name: 'divider',
       component: () => import('./views/components/Divider.vue'),

@@ -1,7 +1,7 @@
 <template>
   <hr
     class="lbz-divider"
-    :class="[color ? `lbz-divider--${color}` : '']"
+    :class="[color ? `lbz-divider--${ color }` : '']"
   >
 </template>
 

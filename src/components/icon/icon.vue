@@ -18,7 +18,7 @@ export default class Icon extends Vue {
   @Prop({ type: Number }) private size!: number;
   // color: '' (default), 'light', 'dark'
   @Prop({ type: String, default: '' }) private color!: string;
-  // disabled: true, false (default)
+  // disabled (color): true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
 }
 </script>

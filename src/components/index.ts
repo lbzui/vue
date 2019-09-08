@@ -1,8 +1,10 @@
 import { default as _Vue, VueConstructor, PluginFunction } from 'vue';
+import Button from './button';
 import Divider from './divider';
 import Icon from './icon';
 
 const components: any[] = [
+  Button,
   Divider,
   Icon,
 ];
@@ -31,6 +33,7 @@ export default install;
 
 export {
   install,
+  Button,
   Divider,
   Icon,
 };
