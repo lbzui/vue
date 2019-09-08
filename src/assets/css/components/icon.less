@@ -1,0 +1,42 @@
+// Icon
+// size: 18, 24 (default), 36, 48
+// color: '' (default), 'light', 'dark'
+// disabled: true, false (default)
+
+.lbz-icon {
+  font-size: 24px;
+
+  // size
+  &--18 {
+    font-size: 18px;
+  }
+
+  &--24 {
+    font-size: 24px;
+  }
+
+  &--36 {
+    font-size: 36px;
+  }
+
+  &--48 {
+    font-size: 48px;
+  }
+
+  // color
+  &--light {
+    color: var(--lbz-theme-icon-active-unfocused-on-dark);
+
+    &.is-disabled {
+      color: var(--lbz-theme-icon-inactive-on-dark);
+    }
+  }
+
+  &--dark {
+    color: var(--lbz-theme-icon-active-unfocused-on-light);
+
+    &.is-disabled {
+      color: var(--lbz-theme-icon-inactive-on-light);
+    }
+  }
+}

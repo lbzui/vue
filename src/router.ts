@@ -12,7 +12,7 @@ export default new Router({
       component: Home,
     },
 
-    // styles
+    // Styles
     {
       path: '/styles/elevation',
       name: 'elevation',
@@ -32,6 +32,13 @@ export default new Router({
       path: '/styles/typography',
       name: 'typography',
       component: () => import('./views/styles/Typography.vue'),
+    },
+
+    // Components
+    {
+      path: '/components/icon',
+      name: 'icon',
+      component: () => import('./views/components/Icon.vue'),
     },
   ],
 });

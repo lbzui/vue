@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-
 import './assets/css/index.less';
+import LBZUI from './components';
+
+Vue.use(LBZUI);
 
 Vue.config.productionTip = false;
 

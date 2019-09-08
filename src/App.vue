@@ -9,6 +9,10 @@
         <router-link to="/styles/surface">Surface</router-link> |
         <router-link to="/styles/typography">Typography</router-link>
       </nav>
+      <h2>Components:</h2>
+      <nav class="lbzui__nav" role="navigation">
+        <router-link to="/components/icon">Icon</router-link>
+      </nav>
     </header>
     <router-view class="lbzui_main" role="main"/>
   </div>
