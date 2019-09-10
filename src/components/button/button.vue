@@ -19,7 +19,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Divider extends Vue {
+export default class Button extends Vue {
   // type: 'text' (default), 'outlined', 'contained'
   @Prop({ type: String, default: '' }) private type!: string;
   // dense: true, false (default)

@@ -7,7 +7,7 @@
 .lbz-button {
   -webkit-appearance: none;
   display: inline-flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -55,7 +55,7 @@
     pointer-events: none;
   }
 
-  .lbz-button__icon {
+  & &__icon {
     overflow: hidden;
     margin-right: 8px;
     width: 18px;
@@ -85,7 +85,7 @@
   }
 
   // type
-  &.lbz-button--outlined {
+  &&--outlined {
     border: 1px solid var(--lbz-theme-primary);
     padding: 0 15px;
     line-height: 34px;
@@ -99,7 +99,7 @@
     }
   }
 
-  &.lbz-button--contained {
+  &&--contained {
     padding: 0 16px;
     color: var(--lbz-theme-on-primary);
     background-color: var(--lbz-theme-primary);

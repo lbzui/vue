@@ -1,0 +1,17 @@
+// Mixin
+// usage: `.lbz-mixin--x();`
+
+.lbz-mixin--one-line() {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.lbz-mixin--two-lines() {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

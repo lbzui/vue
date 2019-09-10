@@ -4,11 +4,11 @@
     :class="[
       surface ? `lbz-icon-button--${ surface }` : '',
       !toggle ? 'material-icons' : '',
-      toggle && cisOn ? 'is-active' : '',
+      toggle && cisActive ? 'is-active' : '',
       ripple ? 'lbz-ripple' : ''
     ]"
     :disabled="disabled"
-    @click="fclick($event)"
+    @click="ftoggleActive($event)"
   >
     <template v-if="toggle">
       <lbz-icon class="lbz-icon-button__icon lbz-icon-button__icon--on"><template v-if="onicon">{{ onicon }}</template><slot v-else-if="$slots.onicon" name="onicon"/></lbz-icon>
@@ -22,9 +22,9 @@
 import { Component, PropSync, Prop, Emit, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Divider extends Vue {
+export default class IconButton extends Vue {
   // active: true, false (default)
-  @PropSync('active', { type: Boolean, default: false }) private cisOn !: boolean;
+  @PropSync('active', { type: Boolean, default: false }) private cisActive !: boolean;
   // toggle: true, false (default)
   @Prop({ type: Boolean, default: false }) private toggle!: boolean;
   // surface: 'primary', 'secondary', 'surface' (default)
@@ -33,15 +33,15 @@ export default class Divider extends Vue {
   @Prop({ type: Boolean, default: true }) private ripple!: boolean;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
-  // onicon (toggle): true, false (default)
+  // onicon (toggle): '' (default), 'x'
   @Prop({ type: String, default: '' }) private onicon!: string;
-  // officon (toggle): true, false (default)
+  // officon (toggle): '' (default), 'x'
   @Prop({ type: String, default: '' }) private officon!: string;
 
   @Emit('click')
-  private fclick(e: MouseEvent) {
+  private ftoggleActive(e: MouseEvent) {
     if (this.toggle) {
-      this.cisOn = !this.cisOn;
+      this.cisActive = !this.cisActive;
     }
   }
 }

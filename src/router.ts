@@ -55,5 +55,10 @@ export default new Router({
       name: 'icon-button',
       component: () => import('./views/components/IconButton.vue'),
     },
+    {
+      path: '/components/top-app-bar',
+      name: 'top-app-bar',
+      component: () => import('./views/components/TopAppBar.vue'),
+    },
   ],
 });

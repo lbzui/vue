@@ -3,12 +3,14 @@ import Button from './button';
 import Divider from './divider';
 import Icon from './icon';
 import IconButton from './icon-button';
+import TopAppBar from './top-app-bar';
 
 const components: any[] = [
   Button,
   Divider,
   Icon,
   IconButton,
+  TopAppBar,
 ];
 const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any) => {
   components.map((Component) => {
@@ -39,4 +41,5 @@ export {
   Divider,
   Icon,
   IconButton,
+  TopAppBar,
 };

@@ -51,18 +51,18 @@
     height: 24px;
   }
 
-  .lbz-icon-button__icon {
+  & &__icon {
     position: absolute;
     top: 12px;
     left: 12px;
     transition: opacity 100ms linear;
 
     // toggle
-    &.lbz-icon-button__icon--on {
+    &--on {
       opacity: 0;
     }
 
-    &.lbz-icon-button__icon--off {
+    &--off {
       opacity: 1;
     }
   }
@@ -70,11 +70,11 @@
   // active
   &.is-active {
     .lbz-icon-button__icon {
-      &.lbz-icon-button__icon--on {
+      &--on {
         opacity: 1;
       }
 
-      &.lbz-icon-button__icon--off {
+      &--off {
         opacity: 0;
       }
     }
@@ -95,8 +95,8 @@
   }
 
   // surface
-  &.lbz-icon-button--primary,
-  &.lbz-icon-button--secondary {
+  &&--primary,
+  &&--secondary {
     &::before {
       background-color: var(--lbz-theme-on-primary);
       opacity: #lbz-state.primary[enabled];
@@ -115,7 +115,7 @@
     }
   }
 
-  &.lbz-icon-button--secondary {
+  &&--secondary {
     &::before {
       background-color: var(--lbz-theme-on-secondary);
     }
