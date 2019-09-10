@@ -26,7 +26,7 @@
 
   // disabled
   &:disabled {
-    color: var(--lbz-theme-text-disabled-on-surface);
+    color: #lbz-theme-text.dark[disabled];
   }
 
   &::before {
@@ -39,7 +39,7 @@
     height: 100%;
     background-color: var(--lbz-theme-on-surface);
     opacity: #lbz-state.surface[enabled];
-    transition: opacity 15ms linear, background-color 15ms linear;
+    transition: background-color 15ms linear, opacity 15ms linear;
     content: "";
     pointer-events: none;
   }
@@ -80,17 +80,17 @@
     }
   }
 
+  &:not(:disabled):focus {
+    &::before {
+      opacity: #lbz-state.surface[focus];
+    }
+  }
+
   &:not(:disabled):hover {
     cursor: pointer;
 
     &::before {
       opacity: #lbz-state.surface[hover];
-    }
-  }
-
-  &:not(:disabled):focus {
-    &::before {
-      opacity: #lbz-state.surface[focused];
     }
   }
 
@@ -102,15 +102,15 @@
       opacity: #lbz-state.primary[enabled];
     }
 
-    &:not(:disabled):hover {
+    &:not(:disabled):focus {
       &::before {
-        opacity: #lbz-state.primary[hover];
+        opacity: #lbz-state.primary[focus];
       }
     }
 
-    &:not(:disabled):focus {
+    &:not(:disabled):hover {
       &::before {
-        opacity: #lbz-state.primary[focused];
+        opacity: #lbz-state.primary[hover];
       }
     }
   }

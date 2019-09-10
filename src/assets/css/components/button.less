@@ -37,7 +37,7 @@
 
   // disabled
   &:disabled {
-    color: var(--lbz-theme-text-disabled-on-surface);
+    color: #lbz-theme-text.dark[disabled];
   }
 
   &::before {
@@ -50,13 +50,12 @@
     height: 200%;
     background-color: var(--lbz-theme-primary);
     opacity: #lbz-state.surface[enabled];
-    transition: opacity 15ms linear, background-color 15ms linear;
+    transition: background-color 15ms linear, opacity 15ms linear;
     content: "";
     pointer-events: none;
   }
 
   & &__icon {
-    overflow: hidden;
     margin-right: 8px;
     width: 18px;
     height: 18px;
@@ -70,6 +69,12 @@
     }
   }
 
+  &:not(:disabled):focus {
+    &::before {
+      opacity: #lbz-state.surface[focus];
+    }
+  }
+
   &:not(:disabled):hover {
     cursor: pointer;
 
@@ -78,24 +83,20 @@
     }
   }
 
-  &:not(:disabled):focus {
+  &:not(:disabled):active {
     &::before {
-      opacity: #lbz-state.surface[focused];
+      opacity: #lbz-state.surface[activated];
     }
   }
 
   // type
   &&--outlined {
-    border: 1px solid var(--lbz-theme-primary);
+    border: 1px solid #lbz-theme-divider[dark];
     padding: 0 15px;
     line-height: 34px;
 
     &.is-dense {
       line-height: 30px;
-    }
-
-    &:disabled {
-      border-color: var(--lbz-theme-text-disabled-on-surface);
     }
   }
 
@@ -112,8 +113,8 @@
     }
 
     &:disabled {
-      color: var(--lbz-theme-text-disabled-on-surface);
-      background-color: var(--lbz-theme-text-disabled-on-surface);
+      color: #lbz-theme-text.dark[disabled];
+      background-color: #lbz-theme-divider[dark];
       box-shadow: none;
     }
 
@@ -125,9 +126,15 @@
       margin-left: -4px;
     }
 
-    &:not(.is-unelevated):not(:disabled):hover,
-    &:not(.is-unelevated):not(:disabled):focus {
+    &:not(.is-unelevated):not(:disabled):focus,
+    &:not(.is-unelevated):not(:disabled):hover {
       .lbz-shadow--4();
+    }
+
+    &:not(:disabled):focus {
+      &::before {
+        opacity: #lbz-state.primary[focus];
+      }
     }
 
     &:not(:disabled):hover {
@@ -136,9 +143,9 @@
       }
     }
 
-    &:not(:disabled):focus {
+    &:not(:disabled):active {
       &::before {
-        opacity: #lbz-state.primary[focused];
+        opacity: #lbz-state.primary[activated];
       }
     }
   }

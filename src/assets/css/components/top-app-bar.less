@@ -1,8 +1,8 @@
 // Top app bar
 // active: true (default), false
 // type: 'regular' (default), 'extended', 'short'
-// dense (desktop only): true, false (default)
 // background: 'primary' (default), 'secondary', 'surface', 'transparent'
+// dense (desktop only): true, false (default)
 // elevated: true, false (default)
 
 .lbz-top-app-bar {
@@ -20,10 +20,11 @@
   height: 64px;
   color: var(--lbz-theme-on-primary);
   background-color: var(--lbz-theme-primary);
-  transition: box-shadow 200ms linear;
+  transition: width 300ms #lbz-motion.easing[standard], box-shadow 200ms linear, transform 250ms #lbz-motion.easing[decelerate];
 
   // active
   &.is-inactive {
+    transition: transform 200ms #lbz-motion.easing[accelerate];
     transform: translate3d(0, -128px, 0);
   }
 

@@ -3,16 +3,20 @@
     class="lbz-icon-button"
     :class="[
       surface ? `lbz-icon-button--${ surface }` : '',
+      ripple ? 'lbz-ripple' : '',
       !toggle ? 'material-icons' : '',
-      toggle && cisActive ? 'is-active' : '',
-      ripple ? 'lbz-ripple' : ''
+      toggle && cisActive ? 'is-active' : ''
     ]"
     :disabled="disabled"
-    @click="ftoggleActive($event)"
+    @click="fclick($event)"
   >
     <template v-if="toggle">
-      <lbz-icon class="lbz-icon-button__icon lbz-icon-button__icon--on"><template v-if="onicon">{{ onicon }}</template><slot v-else-if="$slots.onicon" name="onicon"/></lbz-icon>
-      <lbz-icon class="lbz-icon-button__icon lbz-icon-button__icon--off"><template v-if="officon">{{ officon }}</template><slot v-else-if="$slots.officon" name="officon"/></lbz-icon>
+      <lbz-icon class="lbz-icon-button__icon lbz-icon-button__icon--on">
+        <template v-if="onicon">{{ onicon }}</template><slot v-else-if="$slots.onicon" name="onicon"/>
+      </lbz-icon>
+      <lbz-icon class="lbz-icon-button__icon lbz-icon-button__icon--off">
+        <template v-if="officon">{{ officon }}</template><slot v-else-if="$slots.officon" name="officon"/>
+      </lbz-icon>
     </template>
     <template v-else><slot/></template>
   </button>
@@ -39,7 +43,7 @@ export default class IconButton extends Vue {
   @Prop({ type: String, default: '' }) private officon!: string;
 
   @Emit('click')
-  private ftoggleActive(e: MouseEvent) {
+  private fclick(e: MouseEvent) {
     if (this.toggle) {
       this.cisActive = !this.cisActive;
     }

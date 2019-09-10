@@ -5,39 +5,71 @@
 
 .lbz-icon {
   font-size: 24px;
+  fill: currentColor;
+
+  svg,
+  img {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
 
   // size
   &--18 {
     font-size: 18px;
+
+    svg,
+    img {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   &--24 {
     font-size: 24px;
+
+    svg,
+    img {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &--36 {
     font-size: 36px;
+
+    svg,
+    img {
+      width: 36px;
+      height: 36px;
+    }
   }
 
   &--48 {
     font-size: 48px;
+
+    svg,
+    img {
+      width: 48px;
+      height: 48px;
+    }
   }
 
   // color
   &--light {
-    color: var(--lbz-theme-icon-active-unfocused-on-dark);
+    color: #lbz-theme-text.light[secondary];
 
     // disabled
     &.is-disabled {
-      color: var(--lbz-theme-icon-inactive-on-dark);
+      color: #lbz-theme-text.light[disabled];
     }
   }
 
   &--dark {
-    color: var(--lbz-theme-icon-active-unfocused-on-light);
+    color: #lbz-theme-text.dark[secondary];
 
     &.is-disabled {
-      color: var(--lbz-theme-icon-inactive-on-light);
+      color: #lbz-theme-text.dark[disabled];
     }
   }
 }
