@@ -36,6 +36,11 @@ export default new Router({
 
     // Components
     {
+      path: '/components/backdrop',
+      name: 'backdrop',
+      component: () => import('./views/components/Backdrop.vue'),
+    },
+    {
       path: '/components/button',
       name: 'button',
       component: () => import('./views/components/Button.vue'),

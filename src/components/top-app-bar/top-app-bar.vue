@@ -1,14 +1,16 @@
 <template>
   <header
-    class="lbz-top-app-bar"
     :class="[
+      'lbz-top-app-bar',
       type ? `lbz-top-app-bar--${ type }` : '',
       background ? `lbz-top-app-bar--${ background }` : '',
-      dense ? 'is-dense' : '',
-      elevated ? 'is-elevated': '',
-      !active ? 'is-inactive' : ''
+      {
+        'is-dense': dense,
+        'is-elevated': elevated,
+        'is-inactive': !active
+      }
     ]"
-    :style="type === 'extended' && img ? { backgroundImage: `url(${ img })` } : {}"
+    :style="type === 'extended' && media ? { backgroundImage: `url(${ media })` } : {}"
   >
     <section v-if="$slots.start" class="lbz-top-app-bar__start">
       <slot name="start"/>
@@ -41,7 +43,7 @@ export default class TopAppBar extends Vue {
   @Prop({ type: Boolean, default: false }) private elevated!: boolean;
   // title: '' (default), 'x'
   @Prop({ type: String, default: '' }) private title!: string;
-  // img (type === 'extended'): '' (default), 'x'
-  @Prop({ type: String, default: '' }) private img!: string;
+  // media (type === 'extended'): '' (default), 'x'
+  @Prop({ type: String, default: '' }) private media!: string;
 }
 </script>

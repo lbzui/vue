@@ -1,10 +1,10 @@
 <template>
   <i
-    class="material-icons lbz-icon"
     :class="[
+      'material-icons lbz-icon',
       size ? `lbz-icon--${ size }` : '',
       color ? `lbz-icon--${ color }` : '',
-      color && disabled ? 'is-disabled' : ''
+      { 'is-disabled': color && disabled }
     ]"
   ><slot/></i>
 </template>

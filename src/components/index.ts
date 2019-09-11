@@ -1,4 +1,5 @@
 import { default as _Vue, VueConstructor, PluginFunction } from 'vue';
+import Backdrop from './backdrop';
 import Button from './button';
 import Divider from './divider';
 import Icon from './icon';
@@ -6,6 +7,7 @@ import IconButton from './icon-button';
 import TopAppBar from './top-app-bar';
 
 const components: any[] = [
+  Backdrop,
   Button,
   Divider,
   Icon,
@@ -37,6 +39,7 @@ export default install;
 
 export {
   install,
+  Backdrop,
   Button,
   Divider,
   Icon,

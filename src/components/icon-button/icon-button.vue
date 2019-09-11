@@ -1,21 +1,23 @@
 <template>
   <button
-    class="lbz-icon-button"
     :class="[
-      surface ? `lbz-icon-button--${ surface }` : '',
-      ripple ? 'lbz-ripple' : '',
       !toggle ? 'material-icons' : '',
-      toggle && cisActive ? 'is-active' : ''
+      'lbz-icon-button',
+      onBackground ? `lbz-icon-button--${ onBackground }` : '',
+      {
+        'lbz-ripple': ripple,
+        'is-active': toggle && cisActive
+      }
     ]"
     :disabled="disabled"
     @click="fclick($event)"
   >
     <template v-if="toggle">
       <lbz-icon class="lbz-icon-button__icon lbz-icon-button__icon--on">
-        <template v-if="onicon">{{ onicon }}</template><slot v-else-if="$slots.onicon" name="onicon"/>
+        <template v-if="onIcon">{{ onIcon }}</template><slot v-else-if="$slots['on-icon']" name="on-icon"/>
       </lbz-icon>
       <lbz-icon class="lbz-icon-button__icon lbz-icon-button__icon--off">
-        <template v-if="officon">{{ officon }}</template><slot v-else-if="$slots.officon" name="officon"/>
+        <template v-if="offIcon">{{ offIcon }}</template><slot v-else-if="$slots['off-icon']" name="off-icon"/>
       </lbz-icon>
     </template>
     <template v-else><slot/></template>
@@ -31,16 +33,16 @@ export default class IconButton extends Vue {
   @PropSync('active', { type: Boolean, default: false }) private cisActive !: boolean;
   // toggle: true, false (default)
   @Prop({ type: Boolean, default: false }) private toggle!: boolean;
-  // surface: 'primary', 'secondary', 'surface' (default)
-  @Prop({ type: String, default: '' }) private surface!: string;
+  // on-background: 'primary', 'secondary', 'surface' (default)
+  @Prop({ type: String, default: '' }) private onBackground!: string;
   // ripple: true (default), false
   @Prop({ type: Boolean, default: true }) private ripple!: boolean;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
-  // onicon (toggle): '' (default), 'x'
-  @Prop({ type: String, default: '' }) private onicon!: string;
-  // officon (toggle): '' (default), 'x'
-  @Prop({ type: String, default: '' }) private officon!: string;
+  // on-icon (toggle): '' (default), 'x'
+  @Prop({ type: String, default: '' }) private onIcon!: string;
+  // off-icon (toggle): '' (default), 'x'
+  @Prop({ type: String, default: '' }) private offIcon!: string;
 
   @Emit('click')
   private fclick(e: MouseEvent) {

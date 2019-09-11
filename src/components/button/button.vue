@@ -1,11 +1,13 @@
 <template>
   <button
-    class="lbz-button"
     :class="[
+      'lbz-button',
       type ? `lbz-button--${ type }` : '',
-      ripple ? 'lbz-ripple' : '',
-      dense ? 'is-dense' : '',
-      type === 'contained' && unelevated ? 'is-unelevated': ''
+      {
+        'lbz-ripple': ripple,
+        'is-dense': dense,
+        'is-unelevated': type === 'contained' && unelevated
+      }
     ]"
     :disabled="disabled"
     @click="$emit('click', $event)"
