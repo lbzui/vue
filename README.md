@@ -1,6 +1,6 @@
 # @lbzui/vue
 
-> Material Design UI Components for Vue.js
+> Material Components for Vue.js
 
 ## Project setup
 ```

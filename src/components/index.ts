@@ -1,4 +1,5 @@
 import { default as _Vue, VueConstructor, PluginFunction } from 'vue';
+import '../assets/css/index.less';
 import Backdrop from './backdrop';
 import Button from './button';
 import Divider from './divider';
