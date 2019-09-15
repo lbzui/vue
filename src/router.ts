@@ -51,6 +51,11 @@ export default new Router({
       component: () => import('./views/components/Divider.vue'),
     },
     {
+      path: '/components/fab',
+      name: 'fab',
+      component: () => import('./views/components/Fab.vue'),
+    },
+    {
       path: '/components/icon',
       name: 'icon',
       component: () => import('./views/components/Icon.vue'),

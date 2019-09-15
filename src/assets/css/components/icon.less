@@ -4,12 +4,14 @@
 // disabled (color): true, false (default)
 
 .lbz-icon {
+  display: inline-block;
   font-size: 24px;
+  color: inherit;
   fill: currentColor;
 
   svg,
   img {
-    display: inline-block;
+    display: block;
     width: 24px;
     height: 24px;
   }
@@ -57,7 +59,7 @@
 
   // color
   &--light {
-    color: #lbz-theme-text.light[secondary];
+    color: #lbz-theme-text.light[medium-emphasis];
 
     // disabled
     &.is-disabled {
@@ -66,7 +68,7 @@
   }
 
   &--dark {
-    color: #lbz-theme-text.dark[secondary];
+    color: #lbz-theme-text.dark[medium-emphasis];
 
     &.is-disabled {
       color: #lbz-theme-text.dark[disabled];

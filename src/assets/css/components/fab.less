@@ -1,0 +1,108 @@
+// Fab
+// type: 'regular' (default), 'mini', 'extended'
+// background: 'primary', 'secondary' (default)
+
+.lbz-fab {
+  -webkit-appearance: none;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  right: var(--lbz-layout-grid-margin);
+  bottom: var(--lbz-layout-grid-margin);
+  .lbz-elevation--6();
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  vertical-align: middle;
+  color: var(--lbz-theme-on-secondary);
+  fill: currentColor;
+  background-color: var(--lbz-theme-secondary);
+  outline: none;
+  .lbz-shadow--6();
+  transition: box-shadow 280ms #lbz-motion.easing[standard];
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    z-index: 1;
+    border-radius: 50%;
+    width: 200%;
+    height: 200%;
+    background-color: var(--lbz-theme-on-secondary);
+    opacity: #lbz-state.primary[enabled];
+    transition: background-color 15ms linear, opacity 15ms linear;
+    content: "";
+    pointer-events: none;
+  }
+
+  & &__icon {
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+  }
+
+  &:focus {
+    .lbz-shadow--8();
+
+    &::before {
+      opacity: #lbz-state.primary[focus];
+    }
+  }
+
+  &:hover {
+    .lbz-shadow--8();
+
+    &::before {
+      opacity: #lbz-state.primary[hover];
+    }
+  }
+
+  &:active {
+    .lbz-shadow--12();
+
+    &::before {
+      opacity: #lbz-state.primary[active];
+    }
+  }
+
+  // background
+  && {
+    &--primary {
+      color: var(--lbz-theme-on-primary);
+      background-color: var(--lbz-theme-primary);
+
+      &::before {
+        background-color: var(--lbz-theme-on-primary);
+      }
+    }
+  }
+
+  // type
+  &&--mini {
+    width: 40px;
+    height: 40px;
+  }
+
+  &&--extended {
+    border-radius: 24px;
+    padding: 0 20px;
+    width: auto;
+    max-width: 100%;
+    height: 40px;
+    .lbz-typography--button();
+
+    .lbz-fab__icon {
+      margin: 0 12px 0 -8px;
+    }
+  }
+}

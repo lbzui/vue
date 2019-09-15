@@ -14,6 +14,7 @@
         <router-link to="/components/backdrop">Backdrop</router-link> |
         <router-link to="/components/button">Button</router-link> |
         <router-link to="/components/divider">Divider</router-link> |
+        <router-link to="/components/fab">Fab</router-link> |
         <router-link to="/components/icon">Icon</router-link> |
         <router-link to="/components/icon-button">Icon button</router-link> |
         <router-link to="/components/top-app-bar">Top app bar</router-link>

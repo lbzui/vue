@@ -60,7 +60,7 @@
   & &__center {
     flex: 1;
     overflow: hidden;
-    margin: auto 20px 8px;
+    margin: auto 20px 12px;
 
     .lbz-top-app-bar__title {
       margin: 0;
@@ -77,7 +77,6 @@
     background-size: 100% auto;
 
     .lbz-top-app-bar__center {
-      margin-bottom: 16px;
       transition: margin 200ms linear;
 
       .lbz-top-app-bar__title {
@@ -122,12 +121,7 @@
 
     &&--extended {
       &.is-dense {
-        padding: 0 12px;
         height: 96px;
-
-        .lbz-top-app-bar__center {
-          margin-bottom: 16px;
-        }
       }
     }
   }
@@ -137,12 +131,6 @@
       padding: 4px;
       height: 56px;
     }
-
-    &&--extended {
-      .lbz-top-app-bar__center {
-        margin-bottom: 12px;
-      }
-    }
   }
 }
 
@@ -150,5 +138,9 @@ html[theme="dark"] {
   .lbz-top-app-bar {
     color: var(--lbz-theme-on-surface);
     background-color: var(--lbz-theme-surface-4);
+
+    .lbz-icon-button::before {
+      background-color: var(--lbz-theme-on-surface);
+    }
   }
 }

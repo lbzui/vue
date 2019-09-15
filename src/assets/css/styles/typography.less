@@ -3,7 +3,7 @@
 //        `.lbz-typography--x` (x: font-family, h1, h2, h3, h4, h5, h6, subtitle1, subtitle2, body1, body2, button, caption, overline)
 
 .lbz-typography-letter-spacing (@tracking, @font-size) {
-  letter-spacing: (@tracking / (@font-size * 16) * 1em);
+  letter-spacing: (@tracking / @font-size * 1em);
 }
 
 .lbz-typography {
@@ -18,127 +18,127 @@
 
 .lbz-typography--h1 {
   display: block;
-  font-size: 6rem;
+  font-size: 96px;
   font-weight: 300;
-  line-height: 6rem;
+  line-height: 112px;
   text-decoration: inherit;
-  .lbz-typography-letter-spacing(-1.5, 6);
+  .lbz-typography-letter-spacing(-1.5, 96);
   text-transform: inherit;
 }
 
 .lbz-typography--h2 {
   display: block;
-  font-size: 3.75rem;
+  font-size: 60px;
   font-weight: 300;
-  line-height: 3.75rem;
+  line-height: 72px;
   text-decoration: inherit;
-  .lbz-typography-letter-spacing(-.5, 3.75);
+  .lbz-typography-letter-spacing(-.5, 60);
   text-transform: inherit;
 }
 
 .lbz-typography--h3 {
   display: block;
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: 400;
-  line-height: 3.125rem;
-  letter-spacing: 0;
+  line-height: 56px;
   text-decoration: inherit;
+  letter-spacing: 0;
   text-transform: inherit;
 }
 
 .lbz-typography--h4 {
   display: block;
-  font-size: 2.125rem;
+  font-size: 34px;
   font-weight: 400;
-  line-height: 2.5rem;
-  text-decoration: inherit;
-  .lbz-typography-letter-spacing(.25, 2.125);
-  text-transform: inherit;
-}
-
-.lbz-typography--h5 {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 2rem;
+  line-height: 36px;
   text-decoration: inherit;
   letter-spacing: 0;
   text-transform: inherit;
 }
 
+.lbz-typography--h5 {
+  display: block;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: inherit;
+  .lbz-typography-letter-spacing(.18, 24);
+  text-transform: inherit;
+}
+
 .lbz-typography--h6 {
   display: block;
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 2rem;
+  line-height: 24px;
   text-decoration: inherit;
-  .lbz-typography-letter-spacing(.15, 1.25);
+  .lbz-typography-letter-spacing(.15, 20);
   text-transform: inherit;
 }
 
 .lbz-typography--subtitle1 {
   display: block;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.75rem;
+  line-height: 24px;
   text-decoration: inherit;
-  .lbz-typography-letter-spacing(.15, 1);
+  .lbz-typography-letter-spacing(.15, 16);
   text-transform: inherit;
 }
 
 .lbz-typography--subtitle2 {
   display: block;
-  font-size: .875rem;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1.375rem;
+  line-height: 24px;
   text-decoration: inherit;
-  .lbz-typography-letter-spacing(.1, .875);
+  .lbz-typography-letter-spacing(.1, 14);
   text-transform: inherit;
 }
 
 .lbz-typography--body1 {
   display: block;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 24px;
   text-decoration: inherit;
-  .lbz-typography-letter-spacing(.5, 1);
+  .lbz-typography-letter-spacing(.5, 16);
   text-transform: inherit;
 }
 
 .lbz-typography--body2 {
   display: block;
-  font-size: .875rem;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.25rem;
+  line-height: 20px;
   text-decoration: inherit;
-  .lbz-typography-letter-spacing(.25, .875);
+  .lbz-typography-letter-spacing(.25, 14);
   text-transform: inherit;
 }
 
 .lbz-typography--button {
-  font-size: .875rem;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 2.25rem;
+  line-height: 16px;
   text-decoration: none;
-  .lbz-typography-letter-spacing(1.25, .875);
+  .lbz-typography-letter-spacing(1.25, 14);
   text-transform: uppercase;
 }
 
 .lbz-typography--caption {
-  font-size: .75rem;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1.25rem;
+  line-height: 16px;
   text-decoration: inherit;
-  .lbz-typography-letter-spacing(.4, .75);
+  .lbz-typography-letter-spacing(.4, 12);
   text-transform: inherit;
 }
 
 .lbz-typography--overline {
-  font-size: .625rem;
+  font-size: 10px;
   font-weight: 400;
-  line-height: 2rem;
+  line-height: 16px;
   text-decoration: none;
-  .lbz-typography-letter-spacing(1.5, .625);
+  .lbz-typography-letter-spacing(1.5, 10);
   text-transform: uppercase;
 }

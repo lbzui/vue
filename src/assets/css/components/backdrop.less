@@ -20,11 +20,15 @@
     align-items: stretch;
     width: 100%;
     height: calc(100% - 56px);
-    color: var(--lbz-theme-on-primary);
+    color: var(--lbz-theme-text-medium-emphasis-on-primary);
 
     &__header {
       flex: none;
       height: 64px;
+
+      .lbz-top-app-bar {
+        background-color: inherit;
+      }
     }
 
     &__content {
@@ -50,6 +54,7 @@
     border-top-right-radius: var(--lbz-shape-size-large);
     width: 100%;
     height: calc(100% - 64px);
+    color: var(--lbz-theme-text-medium-emphasis-on-surface);
     background-color: var(--lbz-theme-surface-1);
     transition: transform 250ms #lbz-motion.easing[accelerate];
     transform: translate3d(0, 64px, 0);
@@ -69,6 +74,7 @@
         margin: 0;
         .lbz-typography--subtitle1();
         .lbz-mixin--one-line();
+        color: var(--lbz-theme-text-high-emphasis-on-surface);
       }
 
       // icon
@@ -81,7 +87,7 @@
       .lbz-divider {
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: -1px;
         left: 0;
       }
     }
@@ -154,10 +160,10 @@
 
 html[theme="dark"] {
   .lbz-backdrop {
-    background-color: var(--lbz-theme-surface-4);
+    background-color: var(--lbz-theme-surface-0);
 
-    & &__back-layer {
-      color: var(--lbz-theme-on-surface);
+    .lbz-backdrop__back-layer {
+      color: var(--lbz-theme-text-medium-emphasis-on-surface);
     }
   }
 }

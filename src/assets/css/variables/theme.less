@@ -3,31 +3,6 @@
 
 @import "./_theme.less";
 
-// Typography and iconography colors
-#lbz-theme-text() {
-  // Light text on dark backgrounds
-  .light() {
-    primary: #fff;
-    secondary: rgba(255, 255, 255, .7);
-    disabled: rgba(255, 255, 255, .5);
-    hint: rgba(255, 255, 255, .5);
-  }
-
-  // Dark text on light backgrounds
-  .dark() {
-    primary: rgba(0, 0, 0, .87);
-    secondary: rgba(0, 0, 0, .54);
-    disabled: rgba(0, 0, 0, .38);
-    hint: rgba(0, 0, 0, .38);
-  }
-}
-
-// Divider colors
-#lbz-theme-divider() {
-  light: rgba(255, 255, 255, .12);
-  dark: rgba(0, 0, 0, .12);
-}
-
 :root {
   // Primary color
   --lbz-theme-primary: #lbz-theme.light[primary];
@@ -45,16 +20,16 @@
   // Surface, background, and error colors
   --lbz-theme-background: #lbz-theme.light[background];
   --lbz-theme-surface: #lbz-theme.light[surface];
-  --lbz-theme-surface-0: #lbz-theme.light[surface]; // Higher elevation, lighter surface
-  --lbz-theme-surface-1: #lbz-theme.light[surface];
-  --lbz-theme-surface-2: #lbz-theme.light[surface];
-  --lbz-theme-surface-3: #lbz-theme.light[surface];
-  --lbz-theme-surface-4: #lbz-theme.light[surface];
-  --lbz-theme-surface-6: #lbz-theme.light[surface];
-  --lbz-theme-surface-8: #lbz-theme.light[surface];
-  --lbz-theme-surface-12: #lbz-theme.light[surface];
-  --lbz-theme-surface-16: #lbz-theme.light[surface];
-  --lbz-theme-surface-24: #lbz-theme.light[surface];
+  --lbz-theme-surface-0: #fff; // Higher elevation, lighter surface
+  --lbz-theme-surface-1: #fff;
+  --lbz-theme-surface-2: #fff;
+  --lbz-theme-surface-3: #fff;
+  --lbz-theme-surface-4: #fff;
+  --lbz-theme-surface-6: #fff;
+  --lbz-theme-surface-8: #fff;
+  --lbz-theme-surface-12: #fff;
+  --lbz-theme-surface-16: #fff;
+  --lbz-theme-surface-24: #fff;
   --lbz-theme-error: #lbz-theme.light[error];
 
   // Typography and iconography colors
@@ -65,47 +40,36 @@
   --lbz-theme-on-error: #lbz-theme.light[on-error];
 
   // Dark text on light backgrounds
-  // --lbz-theme-text-primary-on-light: #lbz-theme-text.dark[primary];
-  // --lbz-theme-text-secondary-on-light: #lbz-theme-text.dark[secondary];
+  // --lbz-theme-text-high-emphasis-on-light: #lbz-theme-text.dark[high-emphasis];
+  // --lbz-theme-text-medium-emphasis-on-light: #lbz-theme-text.dark[medium-emphasis];
   // --lbz-theme-text-disabled-on-light: #lbz-theme-text.dark[disabled];
-  // --lbz-theme-text-hint-on-light: #lbz-theme-text.dark[hint];
 
   // Light text on dark backgrounds
-  // --lbz-theme-text-primary-on-dark: #lbz-theme-text.light[primary];
-  // --lbz-theme-text-secondary-on-dark: #lbz-theme-text.light[secondary];
+  // --lbz-theme-text-high-emphasis-on-dark: #lbz-theme-text.light[high-emphasis];
+  // --lbz-theme-text-medium-emphasis-on-dark: #lbz-theme-text.light[medium-emphasis];
   // --lbz-theme-text-disabled-on-dark: #lbz-theme-text.light[disabled];
-  // --lbz-theme-text-hint-on-dark: #lbz-theme-text.light[hint];
-
-  // Dark text on light backgrounds
-  // Light text on dark backgrounds
-  // --lbz-theme-text-emphasis-high: .87; // High-emphasis text
-  // --lbz-theme-text-emphasis-medium: .6; // Medium-emphasis text and hint text
-  // --lbz-theme-text-emphasis-disabled: .38; // Disabled text
 
   // Light text on primary backgrounds
-  --lbz-theme-text-primary-on-primary: if((#lbz-theme.light[on-primary] = #fff), #lbz-theme-text.light[primary], #lbz-theme-text.dark[primary]);
-  --lbz-theme-text-secondary-on-primary: if((#lbz-theme.light[on-primary] = #fff), #lbz-theme-text.light[secondary], #lbz-theme-text.dark[secondary]);
+  --lbz-theme-text-high-emphasis-on-primary: if((#lbz-theme.light[on-primary] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
+  --lbz-theme-text-medium-emphasis-on-primary: if((#lbz-theme.light[on-primary] = #fff), #lbz-theme-text.light[medium-emphasis], #lbz-theme-text.dark[medium-emphasis]);
   --lbz-theme-text-disabled-on-primary: if((#lbz-theme.light[on-primary] = #fff), #lbz-theme-text.light[disabled], #lbz-theme-text.dark[disabled]);
-  --lbz-theme-text-hint-on-primary: if((#lbz-theme.light[on-primary] = #fff), #lbz-theme-text.light[hint], #lbz-theme-text.dark[hint]);
 
   // Dark text on secondary backgrounds
-  --lbz-theme-text-primary-on-secondary: if((#lbz-theme.light[on-secondary] = #fff), #lbz-theme-text.light[primary], #lbz-theme-text.dark[primary]);
-  --lbz-theme-text-secondary-on-secondary: if((#lbz-theme.light[on-secondary] = #fff), #lbz-theme-text.light[secondary], #lbz-theme-text.dark[secondary]);
+  --lbz-theme-text-high-emphasis-on-secondary: if((#lbz-theme.light[on-secondary] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
+  --lbz-theme-text-medium-emphasis-on-secondary: if((#lbz-theme.light[on-secondary] = #fff), #lbz-theme-text.light[medium-emphasis], #lbz-theme-text.dark[medium-emphasis]);
   --lbz-theme-text-disabled-on-secondary: if((#lbz-theme.light[on-secondary] = #fff), #lbz-theme-text.light[disabled], #lbz-theme-text.dark[disabled]);
-  --lbz-theme-text-hint-on-secondary: if((#lbz-theme.light[on-secondary] = #fff), #lbz-theme-text.light[hint], #lbz-theme-text.dark[hint]);
 
   // Dark text on surface backgrounds
-  --lbz-theme-text-primary-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme-text.light[primary], #lbz-theme-text.dark[primary]);
-  --lbz-theme-text-secondary-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme-text.light[secondary], #lbz-theme-text.dark[secondary]);
+  --lbz-theme-text-high-emphasis-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
+  --lbz-theme-text-medium-emphasis-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme-text.light[medium-emphasis], #lbz-theme-text.dark[medium-emphasis]);
   --lbz-theme-text-disabled-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme-text.light[disabled], #lbz-theme-text.dark[disabled]);
-  --lbz-theme-text-hint-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme-text.light[hint], #lbz-theme-text.dark[hint]);
 
-  // Divider colors
-  --lbz-theme-divider-on-primary: if((#lbz-theme.light[on-primary] = #fff), #lbz-theme-divider[light], #lbz-theme-divider[dark]);
-  --lbz-theme-divider-on-secondary: if((#lbz-theme.light[on-secondary] = #fff), #lbz-theme-divider[light], #lbz-theme-divider[dark]);
-  --lbz-theme-divider-on-background: if((#lbz-theme.light[on-background] = #fff), #lbz-theme-divider[light], #lbz-theme-divider[dark]);
-  --lbz-theme-divider-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme-divider[light], #lbz-theme-divider[dark]);
-  --lbz-theme-divider-on-error: if((#lbz-theme.light[on-error] = #fff), #lbz-theme-divider[light], #lbz-theme-divider[dark]);
+  // Outline colors
+  --lbz-theme-outline-on-primary: if((#lbz-theme.light[on-primary] = #fff), #lbz-theme-outline[light], #lbz-theme-outline[dark]);
+  --lbz-theme-outline-on-secondary: if((#lbz-theme.light[on-secondary] = #fff), #lbz-theme-outline[light], #lbz-theme-outline[dark]);
+  --lbz-theme-outline-on-background: if((#lbz-theme.light[on-background] = #fff), #lbz-theme-outline[light], #lbz-theme-outline[dark]);
+  --lbz-theme-outline-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme-outline[light], #lbz-theme-outline[dark]);
+  --lbz-theme-outline-on-error: if((#lbz-theme.light[on-error] = #fff), #lbz-theme-outline[light], #lbz-theme-outline[dark]);
 }
 
 html[theme="dark"] {
@@ -125,16 +89,16 @@ html[theme="dark"] {
   // Surface, background, and error colors
   --lbz-theme-background: #lbz-theme.dark[background];
   --lbz-theme-surface: #lbz-theme.dark[surface];
-  --lbz-theme-surface-0: #lbz-theme.dark[surface]; // Higher elevation, lighter surface
-  --lbz-theme-surface-1: rgba(#lbz-theme.dark[surface], .05);
-  --lbz-theme-surface-2: rgba(#lbz-theme.dark[surface], .07);
-  --lbz-theme-surface-3: rgba(#lbz-theme.dark[surface], .08);
-  --lbz-theme-surface-4: rgba(#lbz-theme.dark[surface], .09);
-  --lbz-theme-surface-6: rgba(#lbz-theme.dark[surface], .11);
-  --lbz-theme-surface-8: rgba(#lbz-theme.dark[surface], .12);
-  --lbz-theme-surface-12: rgba(#lbz-theme.dark[surface], .14);
-  --lbz-theme-surface-16: rgba(#lbz-theme.dark[surface], .15);
-  --lbz-theme-surface-24: rgba(#lbz-theme.dark[surface], .16);
+  --lbz-theme-surface-0: #121212; // Higher elevation, lighter surface
+  --lbz-theme-surface-1: #1e1e1e; // rgba(18, 18, 18, .05)
+  --lbz-theme-surface-2: #222; // rgba(18, 18, 18, .07)
+  --lbz-theme-surface-3: #242424; // rgba(18, 18, 18, .08)
+  --lbz-theme-surface-4: #262626; // rgba(18, 18, 18, .09)
+  --lbz-theme-surface-6: #2c2c2c; // rgba(18, 18, 18, .11)
+  --lbz-theme-surface-8: #2e2e2e; // rgba(18, 18, 18, .12)
+  --lbz-theme-surface-12: #323232; // rgba(18, 18, 18, .14)
+  --lbz-theme-surface-16: #363636; // rgba(18, 18, 18, .15)
+  --lbz-theme-surface-24: #383838; // rgba(18, 18, 18, .16)
   --lbz-theme-error: #lbz-theme.dark[error];
 
   // Typography and iconography colors
@@ -145,27 +109,28 @@ html[theme="dark"] {
   --lbz-theme-on-error: #lbz-theme.dark[on-error];
 
   // Light text on primary backgrounds
-  --lbz-theme-text-primary-on-primary: if((#lbz-theme.dark[on-primary] = #fff), #lbz-theme-text.light[primary], #lbz-theme-text.dark[primary]);
-  --lbz-theme-text-secondary-on-primary: if((#lbz-theme.dark[on-primary] = #fff), #lbz-theme-text.light[secondary], #lbz-theme-text.dark[secondary]);
+  --lbz-theme-text-high-emphasis-on-primary: if((#lbz-theme.dark[on-primary] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
+  --lbz-theme-text-medium-emphasis-on-primary: if((#lbz-theme.dark[on-primary] = #fff), #lbz-theme-text.light[medium-emphasis], #lbz-theme-text.dark[medium-emphasis]);
   --lbz-theme-text-disabled-on-primary: if((#lbz-theme.dark[on-primary] = #fff), #lbz-theme-text.light[disabled], #lbz-theme-text.dark[disabled]);
-  --lbz-theme-text-hint-on-primary: if((#lbz-theme.dark[on-primary] = #fff), #lbz-theme-text.light[hint], #lbz-theme-text.dark[hint]);
 
   // Dark text on secondary backgrounds
-  --lbz-theme-text-primary-on-secondary: if((#lbz-theme.dark[on-secondary] = #fff), #lbz-theme-text.light[primary], #lbz-theme-text.dark[primary]);
-  --lbz-theme-text-secondary-on-secondary: if((#lbz-theme.dark[on-secondary] = #fff), #lbz-theme-text.light[secondary], #lbz-theme-text.dark[secondary]);
+  --lbz-theme-text-high-emphasis-on-secondary: if((#lbz-theme.dark[on-secondary] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
+  --lbz-theme-text-medium-emphasis-on-secondary: if((#lbz-theme.dark[on-secondary] = #fff), #lbz-theme-text.light[medium-emphasis], #lbz-theme-text.dark[medium-emphasis]);
   --lbz-theme-text-disabled-on-secondary: if((#lbz-theme.dark[on-secondary] = #fff), #lbz-theme-text.light[disabled], #lbz-theme-text.dark[disabled]);
-  --lbz-theme-text-hint-on-secondary: if((#lbz-theme.dark[on-secondary] = #fff), #lbz-theme-text.light[hint], #lbz-theme-text.dark[hint]);
 
   // Dark text on surface backgrounds
-  --lbz-theme-text-primary-on-surface: if((#lbz-theme.dark[on-surface] = #fff), #lbz-theme-text.light[primary], #lbz-theme-text.dark[primary]);
-  --lbz-theme-text-secondary-on-surface: if((#lbz-theme.dark[on-surface] = #fff), #lbz-theme-text.light[secondary], #lbz-theme-text.dark[secondary]);
+  --lbz-theme-text-high-emphasis-on-surface: if((#lbz-theme.dark[on-surface] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
+  --lbz-theme-text-medium-emphasis-on-surface: if((#lbz-theme.dark[on-surface] = #fff), #lbz-theme-text.light[medium-emphasis], #lbz-theme-text.dark[medium-emphasis]);
   --lbz-theme-text-disabled-on-surface: if((#lbz-theme.dark[on-surface] = #fff), #lbz-theme-text.light[disabled], #lbz-theme-text.dark[disabled]);
-  --lbz-theme-text-hint-on-surface: if((#lbz-theme.dark[on-surface] = #fff), #lbz-theme-text.light[hint], #lbz-theme-text.dark[hint]);
 
-  // Divider colors
-  --lbz-theme-divider-on-primary: if((#lbz-theme.dark[on-primary] = #fff), #lbz-theme-divider[light], #lbz-theme-divider[dark]);
-  --lbz-theme-divider-on-secondary: if((#lbz-theme.dark[on-secondary] = #fff), #lbz-theme-divider[light], #lbz-theme-divider[dark]);
-  --lbz-theme-divider-on-background: if((#lbz-theme.dark[on-background] = #fff), #lbz-theme-divider[light], #lbz-theme-divider[dark]);
-  --lbz-theme-divider-on-surface: if((#lbz-theme.dark[on-surface] = #fff), #lbz-theme-divider[light], #lbz-theme-divider[dark]);
-  --lbz-theme-divider-on-error: if((#lbz-theme.dark[on-error] = #fff), #lbz-theme-divider[light], #lbz-theme-divider[dark]);
+  // Outline colors
+  --lbz-theme-outline-on-primary: if((#lbz-theme.dark[on-primary] = #fff), #lbz-theme-outline[light], #lbz-theme-outline[dark]);
+  --lbz-theme-outline-on-secondary: if((#lbz-theme.dark[on-secondary] = #fff), #lbz-theme-outline[light], #lbz-theme-outline[dark]);
+  --lbz-theme-outline-on-background: if((#lbz-theme.dark[on-background] = #fff), #lbz-theme-outline[light], #lbz-theme-outline[dark]);
+  --lbz-theme-outline-on-surface: if((#lbz-theme.dark[on-surface] = #fff), #lbz-theme-outline[light], #lbz-theme-outline[dark]);
+  --lbz-theme-outline-on-error: if((#lbz-theme.dark[on-error] = #fff), #lbz-theme-outline[light], #lbz-theme-outline[dark]);
+}
+
+body {
+  background-color: var(--lbz-theme-surface);
 }

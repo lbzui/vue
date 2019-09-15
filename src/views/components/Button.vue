@@ -2,8 +2,8 @@
   <main>
     <p class="lbz-typography--body1">Text button</p>
     <lbz-button>Default</lbz-button>
-    <lbz-button dense>Dense</lbz-button>
     <lbz-button :ripple="false">No ripple</lbz-button>
+    <lbz-button dense>Dense</lbz-button>
     <lbz-button disabled>Disabled</lbz-button>
     <lbz-button icon="favorite">Icon</lbz-button>
     <lbz-button disabled icon="favorite">Disabled</lbz-button>
@@ -22,8 +22,8 @@
 
     <p class="lbz-typography--body1">Outlined button</p>
     <lbz-button type="outlined">Default</lbz-button>
-    <lbz-button type="outlined" dense>Dense</lbz-button>
     <lbz-button type="outlined" :ripple="false">No ripple</lbz-button>
+    <lbz-button type="outlined" dense>Dense</lbz-button>
     <lbz-button type="outlined" disabled>Disabled</lbz-button>
     <lbz-button type="outlined" icon="favorite">Icon</lbz-button>
     <lbz-button type="outlined" disabled icon="favorite">Disabled</lbz-button>
@@ -42,9 +42,9 @@
 
     <p class="lbz-typography--body1">Contained button</p>
     <lbz-button type="contained">Default</lbz-button>
+    <lbz-button type="contained" :ripple="false">No ripple</lbz-button>
     <lbz-button type="contained" dense>Dense</lbz-button>
     <lbz-button type="contained" unelevated>Unelevated</lbz-button>
-    <lbz-button type="contained" :ripple="false">No ripple</lbz-button>
     <lbz-button type="contained" disabled>Disabled</lbz-button>
     <lbz-button type="contained" icon="favorite">Icon</lbz-button>
     <lbz-button type="contained" disabled icon="favorite">Disabled</lbz-button>

@@ -1,4 +1,6 @@
 // Theme
+
+// Theme colors
 #lbz-theme() {
   // Light theme
   .light() {
@@ -45,4 +47,27 @@
     on-surface: #fff;
     on-error: #000;
   }
+}
+
+// Typography and iconography colors
+#lbz-theme-text() {
+  // Light text on dark backgrounds
+  .light() {
+    high-emphasis: #fff; // High-emphasis text
+    medium-emphasis: rgba(255, 255, 255, .74); // Medium-emphasis text and hint text
+    disabled: rgba(255, 255, 255, .38); // Disabled text
+  }
+
+  // Dark text on light backgrounds
+  .dark() {
+    high-emphasis: rgba(0, 0, 0, .87); // High-emphasis text
+    medium-emphasis: rgba(0, 0, 0, .6); // Medium-emphasis text and hint text
+    disabled: rgba(0, 0, 0, .38); // Disabled text
+  }
+}
+
+// Outline colors
+#lbz-theme-outline() {
+  light: rgba(255, 255, 255, .12);
+  dark: rgba(0, 0, 0, .12);
 }

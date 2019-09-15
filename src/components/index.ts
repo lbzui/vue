@@ -3,6 +3,7 @@ import '../assets/css/index.less';
 import Backdrop from './backdrop';
 import Button from './button';
 import Divider from './divider';
+import Fab from './fab';
 import Icon from './icon';
 import IconButton from './icon-button';
 import TopAppBar from './top-app-bar';
@@ -11,6 +12,7 @@ const components: any[] = [
   Backdrop,
   Button,
   Divider,
+  Fab,
   Icon,
   IconButton,
   TopAppBar,
@@ -43,6 +45,7 @@ export {
   Backdrop,
   Button,
   Divider,
+  Fab,
   Icon,
   IconButton,
   TopAppBar,
