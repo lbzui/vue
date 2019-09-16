@@ -51,6 +51,7 @@
     "babel-core": "7.0.0-bridge.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
+    "mem": "^5.1.1",
     "postcss-preset-env": "^6.7.0",
     "postcss-pxtorem": "^4.0.1",
     "ts-jest": "^23.0.0",

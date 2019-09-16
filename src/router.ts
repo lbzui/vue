@@ -46,6 +46,11 @@ export default new Router({
       component: () => import('./views/components/Button.vue'),
     },
     {
+      path: '/components/card',
+      name: 'card',
+      component: () => import('./views/components/Card.vue'),
+    },
+    {
       path: '/components/divider',
       name: 'divider',
       component: () => import('./views/components/Divider.vue'),

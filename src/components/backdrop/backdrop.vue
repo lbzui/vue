@@ -48,8 +48,8 @@ import { Component, PropSync, Prop, Emit, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Backdrop extends Vue {
-  // active: true, false (default)
-  @PropSync('active', { type: Boolean, default: false }) private cisActive !: boolean;
+  // active: true, false
+  @PropSync('active', { type: Boolean, required: true }) private cisActive !: boolean;
   // subtitle (front-layer): '' (default), 'x'
   @Prop({ type: String, default: '' }) private subtitle!: string;
   // icon (front-layer): true, false (default)

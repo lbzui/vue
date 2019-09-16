@@ -13,6 +13,7 @@
       <nav class="lbzui__nav" role="navigation">
         <router-link to="/components/backdrop">Backdrop</router-link> |
         <router-link to="/components/button">Button</router-link> |
+        <router-link to="/components/card">Card</router-link> |
         <router-link to="/components/divider">Divider</router-link> |
         <router-link to="/components/fab">Fab</router-link> |
         <router-link to="/components/icon">Icon</router-link> |

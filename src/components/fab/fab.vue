@@ -24,7 +24,7 @@ export default class Fab extends Vue {
   @Prop({ type: String, default: '' }) private background!: string;
   // ripple: true (default), false
   @Prop({ type: Boolean, default: true }) private ripple!: boolean;
-  // label: '' (default), 'x'
+  // label (type === 'extended'): '' (default), 'x'
   @Prop({ type: String, default: '' }) private label!: string;
 }
 </script>

@@ -2,6 +2,7 @@ import { default as _Vue, VueConstructor, PluginFunction } from 'vue';
 import '../assets/css/index.less';
 import Backdrop from './backdrop';
 import Button from './button';
+import Card from './card';
 import Divider from './divider';
 import Fab from './fab';
 import Icon from './icon';
@@ -11,6 +12,7 @@ import TopAppBar from './top-app-bar';
 const components: any[] = [
   Backdrop,
   Button,
+  Card,
   Divider,
   Fab,
   Icon,
@@ -44,6 +46,7 @@ export {
   install,
   Backdrop,
   Button,
+  Card,
   Divider,
   Fab,
   Icon,
