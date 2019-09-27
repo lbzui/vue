@@ -17,7 +17,6 @@
 }
 
 .lbz-typography--h1 {
-  display: block;
   font-size: 96px;
   font-weight: 300;
   line-height: 112px;
@@ -27,7 +26,6 @@
 }
 
 .lbz-typography--h2 {
-  display: block;
   font-size: 60px;
   font-weight: 300;
   line-height: 72px;
@@ -37,7 +35,6 @@
 }
 
 .lbz-typography--h3 {
-  display: block;
   font-size: 48px;
   font-weight: 400;
   line-height: 56px;
@@ -47,7 +44,6 @@
 }
 
 .lbz-typography--h4 {
-  display: block;
   font-size: 34px;
   font-weight: 400;
   line-height: 36px;
@@ -57,7 +53,6 @@
 }
 
 .lbz-typography--h5 {
-  display: block;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
@@ -67,7 +62,6 @@
 }
 
 .lbz-typography--h6 {
-  display: block;
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
@@ -77,7 +71,6 @@
 }
 
 .lbz-typography--subtitle1 {
-  display: block;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -87,7 +80,6 @@
 }
 
 .lbz-typography--subtitle2 {
-  display: block;
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
@@ -97,7 +89,6 @@
 }
 
 .lbz-typography--body1 {
-  display: block;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -107,7 +98,6 @@
 }
 
 .lbz-typography--body2 {
-  display: block;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -135,10 +125,13 @@
 }
 
 .lbz-typography--overline {
-  font-size: 10px;
+  display: inline-block;
+  font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   text-decoration: none;
   .lbz-typography-letter-spacing(1.5, 10);
   text-transform: uppercase;
+  transform: scale(10/16);
+  transform-origin: 0 0;
 }

@@ -1,6 +1,7 @@
-// Fab
-// type: 'regular' (default), 'mini', 'extended'
-// background: 'primary', 'secondary' (default)
+// FAB
+// type: 'standard' (default), 'mini', 'extended'
+// background: 'primary', 'primary-variant', 'secondary' (default)
+// exited: true, false (default)
 
 .lbz-fab {
   -webkit-appearance: none;
@@ -26,9 +27,16 @@
   background-color: var(--lbz-theme-secondary);
   outline: none;
   .lbz-shadow--6();
-  transition: box-shadow 280ms #lbz-motion.easing[standard];
+  transition: opacity 15ms linear 30ms, box-shadow 280ms #lbz-motion.easing[standard], transform 270ms #lbz-motion.easing[decelerate] 0ms;
   cursor: pointer;
   user-select: none;
+
+  // exited
+  &.is-exited {
+    opacity: 0;
+    transition: opacity 15ms linear 150ms, transform 180ms #lbz-motion.easing[accelerate] 0ms;
+    transform: scale(0);
+  }
 
   &::before {
     position: absolute;
@@ -51,40 +59,19 @@
     height: 24px;
   }
 
-  &:focus {
-    .lbz-shadow--8();
-
-    &::before {
-      opacity: #lbz-state.primary[focus];
-    }
-  }
-
-  &:hover {
-    .lbz-shadow--8();
-
-    &::before {
-      opacity: #lbz-state.primary[hover];
-    }
-  }
-
-  &:active {
-    .lbz-shadow--12();
-
-    &::before {
-      opacity: #lbz-state.primary[active];
-    }
-  }
-
   // background
-  && {
-    &--primary {
-      color: var(--lbz-theme-on-primary);
-      background-color: var(--lbz-theme-primary);
+  &&--primary,
+  &&--primary-variant {
+    color: var(--lbz-theme-on-primary);
+    background-color: var(--lbz-theme-primary);
 
-      &::before {
-        background-color: var(--lbz-theme-on-primary);
-      }
+    &::before {
+      background-color: var(--lbz-theme-on-primary);
     }
+  }
+
+  &&--primary-variant {
+    background-color: var(--lbz-theme-primary-variant);
   }
 
   // type
@@ -97,12 +84,36 @@
     border-radius: 24px;
     padding: 0 20px;
     width: auto;
-    max-width: 100%;
+    max-width: calc(100% - 2 * var(--lbz-layout-grid-margin));
     height: 40px;
     .lbz-typography--button();
 
     .lbz-fab__icon {
       margin: 0 12px 0 -8px;
+    }
+  }
+
+  &:hover {
+    .lbz-shadow--8();
+
+    &::before {
+      opacity: #lbz-state.primary[hover];
+    }
+  }
+
+  &:focus {
+    .lbz-shadow--8();
+
+    &::before {
+      opacity: #lbz-state.primary[focus];
+    }
+  }
+
+  &:active {
+    .lbz-shadow--12();
+
+    &::before {
+      opacity: #lbz-state.primary[active];
     }
   }
 }

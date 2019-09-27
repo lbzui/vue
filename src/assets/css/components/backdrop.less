@@ -1,11 +1,12 @@
 // Backdrop
-// active: true, false
+// active.sync: true, false (default)
 // icon (front-layer): true, false (default)
 // divider (front-layer): true, false (default)
 // horizontal (front-layer): true, false (default)
 // scrim (front-layer): true, false (default)
 
 .lbz-backdrop {
+  overflow: hidden;
   position: fixed;
   top: 0;
   right: 0;
@@ -33,9 +34,11 @@
 
     &__content {
       flex: 1;
-      visibility: hidden;
-      overflow: hidden;
+      overflow-x: hidden;
       overflow-y: auto;
+      opacity: 0;
+      transition: opacity 100ms linear;
+      overscroll-behavior-y: contain;
       -webkit-overflow-scrolling: touch;
     }
   }
@@ -45,17 +48,16 @@
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: stretch;
-    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    .lbz-elevation--1();
+    .lbz-elevation--2();
     border-top-left-radius: var(--lbz-shape-size-large);
     border-top-right-radius: var(--lbz-shape-size-large);
     width: 100%;
     height: calc(100% - 64px);
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
-    background-color: var(--lbz-theme-surface-1);
+    .lbz-surface--2();
     transition: transform 250ms #lbz-motion.easing[accelerate];
     transform: translate3d(0, 64px, 0);
 
@@ -73,7 +75,7 @@
         flex: 1;
         margin: 0;
         .lbz-typography--subtitle1();
-        .lbz-mixin--one-line();
+        .lbz-u-truncate--one-line();
         color: var(--lbz-theme-text-high-emphasis-on-surface);
       }
 
@@ -81,6 +83,7 @@
       &__icon {
         flex: none;
         display: none;
+        margin-right: -16px;
       }
 
       // divider
@@ -94,8 +97,9 @@
 
     &__content {
       flex: 1;
-      overflow: hidden;
+      overflow-x: hidden;
       overflow-y: auto;
+      overscroll-behavior: contain;
       -webkit-overflow-scrolling: touch;
 
       // horizontal
@@ -113,7 +117,7 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background-color: var(--lbz-theme-surface-1);
+      background-color: inherit;
       opacity: #lbz-state.surface[disabled];
     }
   }
@@ -122,7 +126,7 @@
   &.is-active {
     .lbz-backdrop__back-layer {
       &__content {
-        visibility: visible;
+        opacity: 1;
       }
     }
 
@@ -160,7 +164,7 @@
 
 html[theme="dark"] {
   .lbz-backdrop {
-    background-color: var(--lbz-theme-surface-0);
+    .lbz-surface--0();
 
     .lbz-backdrop__back-layer {
       color: var(--lbz-theme-text-medium-emphasis-on-surface);

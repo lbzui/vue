@@ -1,5 +1,6 @@
 // Button
 // type: 'text' (default), 'outlined', 'contained'
+// fluid-width: true, false (default)
 // dense: true, false (default)
 // unelevated (type === 'contained'): true, false (default)
 // disabled: true, false (default)
@@ -27,6 +28,16 @@
   outline: none;
   cursor: default;
   user-select: none;
+
+  // fluid-width
+  &.is-fluid-width {
+    width: 100%;
+
+    + .is-fluid-width {
+      margin-top: 8px;
+      margin-left: 0;
+    }
+  }
 
   // dense
   &.is-dense {
@@ -68,17 +79,17 @@
     }
   }
 
-  &:not(:disabled):focus {
-    &::before {
-      opacity: #lbz-state.primary[focus];
-    }
-  }
-
   &:not(:disabled):hover {
     cursor: pointer;
 
     &::before {
       opacity: #lbz-state.primary[hover];
+    }
+  }
+
+  &:not(:disabled):focus {
+    &::before {
+      opacity: #lbz-state.primary[focus];
     }
   }
 
@@ -120,8 +131,8 @@
       margin-left: -4px;
     }
 
-    &:not(.is-unelevated):not(:disabled):focus,
-    &:not(.is-unelevated):not(:disabled):hover {
+    &:not(.is-unelevated):not(:disabled):hover,
+    &:not(.is-unelevated):not(:disabled):focus {
       .lbz-shadow--4();
     }
 

@@ -58,7 +58,7 @@ export default new Router({
     {
       path: '/components/fab',
       name: 'fab',
-      component: () => import('./views/components/Fab.vue'),
+      component: () => import('./views/components/FAB.vue'),
     },
     {
       path: '/components/icon',

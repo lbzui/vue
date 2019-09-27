@@ -1,12 +1,6 @@
 <template>
-  <main class="home">
-    <img alt="Vue logo" src="../assets/img/logo.png">
-  </main>
+  <article>
+    <h2 class="lbz-typography--h5">@lbzui/vue</h2>
+    <p class="lbz-typography--body2">Material Components for Vue.js</p>
+  </article>
 </template>
-
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-
-@Component
-export default class Home extends Vue {}
-</script>

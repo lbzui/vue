@@ -1,5 +1,7 @@
 <template>
-  <main>
+  <article>
+    <h2 class="lbz-typography--h5"># Elevation</h2>
+
     <div class="square lbz-elevation--0">.lbz-elevation--0</div>
     <div class="square lbz-elevation--1">.lbz-elevation--1</div>
     <div class="square lbz-elevation--2">.lbz-elevation--2</div>
@@ -10,5 +12,5 @@
     <div class="square lbz-elevation--12">.lbz-elevation--12</div>
     <div class="square lbz-elevation--16">.lbz-elevation--16</div>
     <div class="square lbz-elevation--24">.lbz-elevation--24</div>
-  </main>
+  </article>
 </template>

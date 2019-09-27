@@ -5,19 +5,22 @@
       { 'is-active': cisActive }
     ]"
   >
-    <div class="lbz-backdrop__back-layer">
+    <section class="lbz-backdrop__back-layer">
       <div v-if="$slots['back-layer-header']" class="lbz-backdrop__back-layer__header">
         <slot name="back-layer-header"/>
       </div>
-      <main class="lbz-backdrop__back-layer__content">
+      <div class="lbz-backdrop__back-layer__content">
         <slot name="back-layer-content"/>
-      </main>
-    </div>
-    <div class="lbz-backdrop__front-layer">
-      <header class="lbz-backdrop__front-layer__header">
-        <h2 v-if="subtitle || $slots['front-layer-header']" class="lbz-backdrop__front-layer__header__title">
-          <template v-if="subtitle">{{ subtitle }}</template><slot v-else name="front-layer-header"/>
-        </h2>
+      </div>
+    </section>
+    <section class="lbz-backdrop__front-layer">
+      <header v-if="subtitle || $slots['front-layer-header'] || icon || divider" class="lbz-backdrop__front-layer__header">
+        <h2
+          v-if="subtitle"
+          v-html="subtitle"
+          class="lbz-backdrop__front-layer__header__title"
+        ></h2>
+        <slot v-if="$slots['front-layer-header']" name="front-layer-header"/>
         <lbz-icon-button
           v-if="icon"
           class="lbz-backdrop__front-layer__header__icon"
@@ -39,7 +42,7 @@
         class="lbz-backdrop__front-layer__scrim"
         @click.stop="fclick($event)"
       ></aside>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -48,7 +51,7 @@ import { Component, PropSync, Prop, Emit, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Backdrop extends Vue {
-  // active: true, false
+  // active.sync: true, false (default)
   @PropSync('active', { type: Boolean, required: true }) private cisActive !: boolean;
   // subtitle (front-layer): '' (default), 'x'
   @Prop({ type: String, default: '' }) private subtitle!: string;
@@ -62,7 +65,7 @@ export default class Backdrop extends Vue {
   @Prop({ type: Boolean, default: false }) private scrim!: boolean;
 
   @Emit('click')
-  private fclick(e: MouseEvent) {
+  public fclick(e: MouseEvent) {
     this.cisActive = !this.cisActive;
   }
 }

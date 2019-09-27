@@ -29,7 +29,7 @@ import { Component, PropSync, Prop, Emit, Vue } from 'vue-property-decorator';
 
 @Component
 export default class IconButton extends Vue {
-  // active: true, false (default)
+  // active.sync (toggle): true, false (default)
   @PropSync('active', { type: Boolean, default: false }) private cisActive !: boolean;
   // toggle: true, false (default)
   @Prop({ type: Boolean, default: false }) private toggle!: boolean;

@@ -3,18 +3,14 @@
     :class="[
       'lbz-card',
       type ? `lbz-card--${ type }` : '',
-      { 'is-elevated': elevated }
+      { 'lbz-ripple': ripple }
     ]"
+    @click="$emit('click', $event)"
   >
-    <div v-if="$slots.start" class="lbz-card__primary">
+    <div v-if="$slots.start" class="lbz-card__header">
       <slot name="start"/>
     </div>
-    <div
-      :class="[
-        'lbz-card__primary-action',
-        { 'lbz-ripple': ripple }
-      ]"
-    >
+    <div v-if="$slots.center || $slots.default" class="lbz-card__content">
       <slot name="center"/>
       <slot/>
     </div>
@@ -33,7 +29,5 @@ export default class Card extends Vue {
   @Prop({ type: String, default: '' }) private type!: string;
   // ripple: true (default), false
   @Prop({ type: Boolean, default: true }) private ripple!: boolean;
-  // elevated: true, false (default)
-  @Prop({ type: Boolean, default: false }) private elevated!: boolean;
 }
 </script>

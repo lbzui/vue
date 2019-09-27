@@ -1,5 +1,7 @@
 <template>
-  <main>
+  <article>
+    <h2 class="lbz-typography--h5"># Typography</h2>
+
     <p class="lbz-typography">.lbz-typography</p>
     <p class="lbz-typography--font-family">.lbz-typography--font-family</p>
     <h1 class="lbz-typography--h1">.lbz-typography--h1</h1>
@@ -21,5 +23,5 @@
     <div>
       <span class="lbz-typography--overline">.lbz-typography--overline</span>
     </div>
-  </main>
+  </article>
 </template>

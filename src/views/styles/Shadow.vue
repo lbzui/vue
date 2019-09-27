@@ -1,5 +1,7 @@
 <template>
-  <main>
+  <article>
+    <h2 class="lbz-typography--h5"># Shadow</h2>
+
     <div class="square lbz-shadow--0">.lbz-shadow--0</div>
     <div class="square lbz-shadow--1">.lbz-shadow--1</div>
     <div class="square lbz-shadow--2">.lbz-shadow--2</div>
@@ -25,5 +27,5 @@
     <div class="square lbz-shadow--22">.lbz-shadow--22</div>
     <div class="square lbz-shadow--23">.lbz-shadow--23</div>
     <div class="square lbz-shadow--24">.lbz-shadow--24</div>
-  </main>
+  </article>
 </template>

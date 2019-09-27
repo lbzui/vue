@@ -4,7 +4,7 @@ import Backdrop from './backdrop';
 import Button from './button';
 import Card from './card';
 import Divider from './divider';
-import Fab from './fab';
+import FAB from './fab';
 import Icon from './icon';
 import IconButton from './icon-button';
 import TopAppBar from './top-app-bar';
@@ -14,7 +14,7 @@ const components: any[] = [
   Button,
   Card,
   Divider,
-  Fab,
+  FAB,
   Icon,
   IconButton,
   TopAppBar,
@@ -48,7 +48,7 @@ export {
   Button,
   Card,
   Divider,
-  Fab,
+  FAB,
   Icon,
   IconButton,
   TopAppBar,

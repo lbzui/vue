@@ -1,0 +1,80 @@
+// Utility
+// usage: `.lbz-u-x`
+
+// Aspect Ratio (16:9, 3:2, 4:3, 1:1, 3:4, and 2:3)
+.lbz-u-aspect-ratio--16x9 {
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: (9 / 16) * 100%;
+  width: 100%;
+  height: 0;
+}
+
+.lbz-u-aspect-ratio--3x2 {
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: (2 / 3) * 100%;
+  width: 100%;
+  height: 0;
+}
+
+.lbz-u-aspect-ratio--4x3 {
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: (3 / 4) * 100%;
+  width: 100%;
+  height: 0;
+}
+
+.lbz-u-aspect-ratio--1x1 {
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: 100%;
+  width: 100%;
+  height: 0;
+}
+
+.lbz-u-aspect-ratio--3x4 {
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: (4 / 3) * 100%;
+  width: 100%;
+  height: 0;
+}
+
+.lbz-u-aspect-ratio--2x3 {
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: (3 / 2) * 100%;
+  width: 100%;
+  height: 0;
+}
+
+// Clearfix
+.lbz-u-clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+// Truncate
+.lbz-u-truncate--one-line {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.lbz-u-truncate--two-line {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

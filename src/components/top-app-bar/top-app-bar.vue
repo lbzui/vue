@@ -4,24 +4,33 @@
       'lbz-top-app-bar',
       type ? `lbz-top-app-bar--${ type }` : '',
       background ? `lbz-top-app-bar--${ background }` : '',
+      inactive ? `is-inactive--${ inactive }` : '',
       {
         'is-dense': dense,
-        'is-elevated': elevated,
-        'is-inactive': !active
+        'is-elevated': elevated
       }
     ]"
     :style="type === 'extended' && media ? { backgroundImage: `url(${ media })` } : {}"
   >
-    <section v-if="$slots.start" class="lbz-top-app-bar__start">
-      <slot name="start"/>
+    <section class="lbz-top-app-bar__wrapper">
+      <div v-if="$slots.start" class="lbz-top-app-bar__start">
+        <slot name="start"/>
+      </div>
+      <div v-if="title || $slots.center || $slots.default" class="lbz-top-app-bar__center">
+        <h1
+          v-if="title"
+          v-html="title"
+          class="lbz-top-app-bar__title"
+        ></h1>
+        <slot v-if="$slots.center" name="center"/>
+        <slot/>
+      </div>
+      <div v-if="$slots.end" class="lbz-top-app-bar__end">
+        <slot name="end"/>
+      </div>
     </section>
-    <section v-if="title || $slots.center" class="lbz-top-app-bar__center">
-      <h1 class="lbz-top-app-bar__title">
-        <template v-if="title">{{ title }}</template><slot v-else name="center"/>
-      </h1>
-    </section>
-    <section v-if="$slots.end" class="lbz-top-app-bar__end">
-      <slot name="end"/>
+    <section v-if="(['', 'standard'].includes(type)) && $slots.tab" class="lbz-top-app-bar__tab">
+      <slot name="tab"/>
     </section>
   </header>
 </template>
@@ -31,12 +40,12 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class TopAppBar extends Vue {
-  // active: true (default), false
-  @Prop({ type: Boolean, default: true }) private active!: boolean;
-  // type: 'regular' (default), 'extended', 'short'
+  // type: 'standard' (default), 'extended', 'short'
   @Prop({ type: String, default: '' }) private type!: string;
   // background: 'primary' (default), 'secondary', 'surface', 'transparent'
   @Prop({ type: String, default: '' }) private background!: string;
+  // inactive (type === 'standard'): '' (default), 'scroll-off', 'tab-fixed'
+  @Prop({ type: String, default: '' }) private inactive!: string;
   // dense (desktop only): true, false (default)
   @Prop({ type: Boolean, default: false }) private dense!: boolean;
   // elevated: true, false (default)

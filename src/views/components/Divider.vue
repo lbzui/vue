@@ -1,9 +1,9 @@
 <template>
-  <main>
-    <p class="lbz-typography--body1">Default</p>
+  <article>
+    <h2 class="lbz-typography--h5"># Divider</h2>
     <lbz-divider/>
 
-    <p class="lbz-typography--body1">Color</p>
+    <h3 class="lbz-typography--subtitle1">$ color: 'primary', 'secondary', 'background', 'surface' (default), 'error'</h3>
     <lbz-divider color="primary"/>
     <br>
     <lbz-divider color="secondary"/>
@@ -13,5 +13,5 @@
     <lbz-divider color="surface"/>
     <br>
     <lbz-divider color="error"/>
-  </main>
+  </article>
 </template>

@@ -1,5 +1,5 @@
 // Icon button
-// active: true, false (default)
+// active.sync (toggle): true, false (default)
 // toggle: true, false (default)
 // on-background: 'primary', 'secondary', 'surface' (default)
 // disabled: true, false (default)
@@ -16,7 +16,6 @@
   width: 48px;
   height: 48px;
   font-size: 24px;
-  vertical-align: middle;
   color: inherit;
   fill: currentColor;
   background-color: transparent;
@@ -80,17 +79,23 @@
     }
   }
 
+  &:not(:disabled):hover {
+    cursor: pointer;
+
+    &::before {
+      opacity: #lbz-state.surface[hover];
+    }
+  }
+
   &:not(:disabled):focus {
     &::before {
       opacity: #lbz-state.surface[focus];
     }
   }
 
-  &:not(:disabled):hover {
-    cursor: pointer;
-
+  &:not(:disabled):active {
     &::before {
-      opacity: #lbz-state.surface[hover];
+      opacity: #lbz-state.surface[active];
     }
   }
 
@@ -102,15 +107,21 @@
       opacity: #lbz-state.primary[enabled];
     }
 
+    &:not(:disabled):hover {
+      &::before {
+        opacity: #lbz-state.primary[hover];
+      }
+    }
+
     &:not(:disabled):focus {
       &::before {
         opacity: #lbz-state.primary[focus];
       }
     }
 
-    &:not(:disabled):hover {
+    &:not(:disabled):active {
       &::before {
-        opacity: #lbz-state.primary[hover];
+        opacity: #lbz-state.primary[active];
       }
     }
   }
