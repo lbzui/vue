@@ -6,7 +6,7 @@
       background ? `lbz-fab--${ background }` : '',
       {
         'lbz-ripple': ripple,
-        'is-exited': exited
+        'is-inactive': inactive
       }
     ]"
     @click="$emit('click', $event)"
@@ -27,8 +27,8 @@ export default class FAB extends Vue {
   @Prop({ type: String, default: '' }) private background!: string;
   // ripple: true (default), false
   @Prop({ type: Boolean, default: true }) private ripple!: boolean;
-  // exited: true, false (default)
-  @Prop({ type: Boolean, default: false }) private exited!: boolean;
+  // inactive: true, false (default)
+  @Prop({ type: Boolean, default: false }) private inactive!: boolean;
   // label (type === 'extended'): '' (default), 'x'
   @Prop({ type: String, default: '' }) private label!: string;
 }

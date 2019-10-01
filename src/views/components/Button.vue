@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="lbzui-components-button">
     <h2 class="lbz-typography--h5"># Text button</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'text' (default), 'outlined', 'contained'</h3>
@@ -8,11 +8,11 @@
 
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
     <lbz-button ripple>Ripple</lbz-button>
-    <lbz-button :ripple="false" icon="favorite">No ripple</lbz-button>
+    <lbz-button :ripple="false" icon="favorite">Ripple off</lbz-button>
 
-    <h3 class="lbz-typography--subtitle1">$ fluid-width: true, false (default)</h3>
-    <lbz-button fluid-width>Fluid-width</lbz-button>
-    <lbz-button fluid-width icon="favorite">Fluid-width</lbz-button>
+    <h3 class="lbz-typography--subtitle1">$ full-width: true, false (default)</h3>
+    <lbz-button full-width>Full-width</lbz-button>
+    <lbz-button full-width icon="favorite">Full-width</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ dense: true, false (default)</h3>
     <lbz-button dense>Dense</lbz-button>
@@ -49,11 +49,11 @@
 
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
     <lbz-button type="outlined" ripple>Ripple</lbz-button>
-    <lbz-button type="outlined" :ripple="false" icon="favorite">No ripple</lbz-button>
+    <lbz-button type="outlined" :ripple="false" icon="favorite">Ripple off</lbz-button>
 
-    <h3 class="lbz-typography--subtitle1">$ fluid-width: true, false (default)</h3>
-    <lbz-button type="outlined" fluid-width>Fluid-width</lbz-button>
-    <lbz-button type="outlined" fluid-width icon="favorite">Fluid-width</lbz-button>
+    <h3 class="lbz-typography--subtitle1">$ full-width: true, false (default)</h3>
+    <lbz-button type="outlined" full-width>Full-width</lbz-button>
+    <lbz-button type="outlined" full-width icon="favorite">Full-width</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ dense: true, false (default)</h3>
     <lbz-button type="outlined" dense>Dense</lbz-button>
@@ -90,11 +90,11 @@
 
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
     <lbz-button type="contained" ripple>Ripple</lbz-button>
-    <lbz-button type="contained" :ripple="false" icon="favorite">No ripple</lbz-button>
+    <lbz-button type="contained" :ripple="false" icon="favorite">Ripple off</lbz-button>
 
-    <h3 class="lbz-typography--subtitle1">$ fluid-width: true, false (default)</h3>
-    <lbz-button type="contained" fluid-width>Fluid-width</lbz-button>
-    <lbz-button type="contained" fluid-width icon="favorite">Fluid-width</lbz-button>
+    <h3 class="lbz-typography--subtitle1">$ full-width: true, false (default)</h3>
+    <lbz-button type="contained" full-width>Full-width</lbz-button>
+    <lbz-button type="contained" full-width icon="favorite">Full-width</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ dense: true, false (default)</h3>
     <lbz-button type="contained" dense>Dense</lbz-button>

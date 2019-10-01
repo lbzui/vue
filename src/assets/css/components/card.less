@@ -1,6 +1,4 @@
 // Card
-// type: 'elevated' (default), 'outlined'
-
 .lbz-card {
   display: inline-flex;
   flex-flow: column nowrap;
@@ -8,7 +6,7 @@
   align-items: stretch;
   overflow: hidden;
   position: relative;
-  border-radius: var(--lbz-shape-size-medium);
+  border-radius: var(--lbz-shape-absolute-size-medium);
   color: var(--lbz-theme-text-medium-emphasis-on-surface);
   .lbz-surface--1();
   .lbz-shadow--1();
@@ -37,18 +35,20 @@
   }
 
   & &__title {
+    display: block;
     margin: 0;
     .lbz-typography--h6();
-    .lbz-u-truncate--one-line();
     color: var(--lbz-theme-text-high-emphasis-on-surface);
   }
 
   & &__subtitle {
+    display: block;
     margin: 0;
     .lbz-typography--body2();
   }
 
   & &__media {
+    display: block;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -63,6 +63,7 @@
   }
 
   & &__supporting-text {
+    display: block;
     margin: 0;
     padding: 12px 16px;
   }

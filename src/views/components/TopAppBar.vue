@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="lbzui-components-top-app-bar">
     <h2 class="lbz-typography--h5"># Standard top app bar</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'extended', 'short'</h3>
@@ -296,3 +296,16 @@
     </lbz-top-app-bar>
   </article>
 </template>
+
+<style lang="less">
+.lbzui-components-top-app-bar {
+  .lbz-top-app-bar {
+    position: static;
+    margin-bottom: 16px;
+
+    &.lbz-top-app-bar--short {
+      margin-right: 16px;
+    }
+  }
+}
+</style>

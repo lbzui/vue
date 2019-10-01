@@ -7,6 +7,8 @@ import Divider from './divider';
 import FAB from './fab';
 import Icon from './icon';
 import IconButton from './icon-button';
+import List from './list';
+import ListItem from './list-item';
 import TopAppBar from './top-app-bar';
 
 const components: any[] = [
@@ -17,6 +19,8 @@ const components: any[] = [
   FAB,
   Icon,
   IconButton,
+  List,
+  ListItem,
   TopAppBar,
 ];
 const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any) => {
@@ -51,5 +55,7 @@ export {
   FAB,
   Icon,
   IconButton,
+  List,
+  ListItem,
   TopAppBar,
 };

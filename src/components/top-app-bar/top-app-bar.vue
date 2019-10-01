@@ -12,7 +12,7 @@
     ]"
     :style="type === 'extended' && media ? { backgroundImage: `url(${ media })` } : {}"
   >
-    <section class="lbz-top-app-bar__wrapper">
+    <section class="lbz-top-app-bar__container">
       <div v-if="$slots.start" class="lbz-top-app-bar__start">
         <slot name="start"/>
       </div>
@@ -22,7 +22,7 @@
           v-html="title"
           class="lbz-top-app-bar__title"
         ></h1>
-        <slot v-if="$slots.center" name="center"/>
+        <slot name="center"/>
         <slot/>
       </div>
       <div v-if="$slots.end" class="lbz-top-app-bar__end">

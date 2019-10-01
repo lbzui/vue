@@ -1,14 +1,14 @@
 <template>
-  <article>
+  <article class="lbzui-components-backdrop">
     <h2 class="lbz-typography--h5"># Backdrop</h2>
 
-    <h3 class="lbz-typography--subtitle1">$ active.sync: true, false (default)</h3>
-    <lbz-backdrop :active.sync="isActive" ref="backdrop">
+    <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
+    <lbz-backdrop :active.sync="vactive" ref="backdrop">
       <template #back-layer-header>
         <lbz-top-app-bar title="Page title">
           <template #start>
             <lbz-icon-button
-              :active.sync="isActive"
+              :active.sync="vactive"
               toggle
               on-background="primary"
               on-icon="close"
@@ -16,7 +16,10 @@
             />
           </template>
           <template #end>
-            <lbz-icon-button on-background="primary" @click.stop="$refs.backdrop.fclick();">more_vert</lbz-icon-button>
+            <lbz-icon-button
+              on-background="primary"
+              @click.stop="ftoggleActive()"
+            >more_vert</lbz-icon-button>
           </template>
         </lbz-top-app-bar>
       </template>
@@ -29,12 +32,12 @@
     </lbz-backdrop>
 
     <h3 class="lbz-typography--subtitle1">$ subtitle (front-layer): '' (default), 'x'</h3>
-    <lbz-backdrop :active.sync="isActive" subtitle="Subtitle">
+    <lbz-backdrop :active.sync="vactive" subtitle="Subtitle">
       <template #back-layer-header>
         <lbz-top-app-bar title="Page title">
           <template #start>
             <lbz-icon-button
-              :active.sync="isActive"
+              :active.sync="vactive"
               toggle
               on-background="primary"
               on-icon="close"
@@ -55,12 +58,12 @@
     </lbz-backdrop>
 
     <h3 class="lbz-typography--subtitle1">$ icon (front-layer): true, false (default)</h3>
-    <lbz-backdrop :active.sync="isActive" icon>
+    <lbz-backdrop :active.sync="vactive" icon>
       <template #back-layer-header>
         <lbz-top-app-bar title="Page title">
           <template #start>
             <lbz-icon-button
-              :active.sync="isActive"
+              :active.sync="vactive"
               toggle
               on-background="primary"
               on-icon="close"
@@ -81,12 +84,12 @@
     </lbz-backdrop>
 
     <h3 class="lbz-typography--subtitle1">$ divider (front-layer): true, false (default)</h3>
-    <lbz-backdrop :active.sync="isActive" divider>
+    <lbz-backdrop :active.sync="vactive" divider>
       <template #back-layer-header>
         <lbz-top-app-bar title="Page title">
           <template #start>
             <lbz-icon-button
-              :active.sync="isActive"
+              :active.sync="vactive"
               toggle
               on-background="primary"
               on-icon="close"
@@ -107,12 +110,12 @@
     </lbz-backdrop>
 
     <h3 class="lbz-typography--subtitle1">$ horizontal (front-layer): true, false (default)</h3>
-    <lbz-backdrop :active.sync="isActive" :horizontal="false">
+    <lbz-backdrop :active.sync="vactive" :horizontal="false">
       <template #back-layer-header>
         <lbz-top-app-bar title="Page title">
           <template #start>
             <lbz-icon-button
-              :active.sync="isActive"
+              :active.sync="vactive"
               toggle
               on-background="primary"
               on-icon="close"
@@ -131,12 +134,12 @@
         <article style="height: 1280px;">Front layer content</article>
       </template>
     </lbz-backdrop>
-    <lbz-backdrop :active.sync="isActive" horizontal>
+    <lbz-backdrop :active.sync="vactive" horizontal>
       <template #back-layer-header>
         <lbz-top-app-bar title="Page title">
           <template #start>
             <lbz-icon-button
-              :active.sync="isActive"
+              :active.sync="vactive"
               toggle
               on-background="primary"
               on-icon="close"
@@ -157,12 +160,12 @@
     </lbz-backdrop>
 
     <h3 class="lbz-typography--subtitle1">$ scrim (front-layer): true, false (default)</h3>
-    <lbz-backdrop :active.sync="isActive" scrim>
+    <lbz-backdrop :active.sync="vactive" scrim>
       <template #back-layer-header>
         <lbz-top-app-bar title="Page title">
           <template #start>
             <lbz-icon-button
-              :active.sync="isActive"
+              :active.sync="vactive"
               toggle
               on-background="primary"
               on-icon="close"
@@ -185,10 +188,35 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Ref, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Backdrop extends Vue {
-  private isActive: boolean = false;
+  @Ref('backdrop') private rbackdrop!: HTMLFormElement;
+
+  private vactive: boolean = false;
+
+  private ftoggleActive() {
+    this.rbackdrop.ftoggle();
+  }
 }
 </script>
+
+<style lang="less">
+@import "~@/assets/css/variables/theme.less";
+
+.lbzui-components-backdrop {
+  .lbz-backdrop {
+    display: inline-block;
+    position: relative;
+    margin-right: 16px;
+    border: 1px solid var(--lbz-theme-outline-on-surface);
+    width: 360px;
+    height: 614px;
+
+    .lbz-top-app-bar {
+      position: static;
+    }
+  }
+}
+</style>

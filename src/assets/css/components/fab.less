@@ -1,8 +1,4 @@
 // FAB
-// type: 'standard' (default), 'mini', 'extended'
-// background: 'primary', 'primary-variant', 'secondary' (default)
-// exited: true, false (default)
-
 .lbz-fab {
   -webkit-appearance: none;
   display: inline-flex;
@@ -17,7 +13,7 @@
   margin: 0;
   box-sizing: border-box;
   border: none;
-  border-radius: 50%;
+  border-radius: var(--lbz-shape-percentage-size-small);
   padding: 0;
   width: 56px;
   height: 56px;
@@ -31,8 +27,8 @@
   cursor: pointer;
   user-select: none;
 
-  // exited
-  &.is-exited {
+  // inactive
+  &.is-inactive {
     opacity: 0;
     transition: opacity 15ms linear 150ms, transform 180ms #lbz-motion.easing[accelerate] 0ms;
     transform: scale(0);

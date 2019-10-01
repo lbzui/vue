@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="lbzui-styles-typography">
     <h2 class="lbz-typography--h5"># Typography</h2>
 
     <p class="lbz-typography">.lbz-typography</p>

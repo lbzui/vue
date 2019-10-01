@@ -4,8 +4,8 @@
       'lbz-button',
       type ? `lbz-button--${ type }` : '',
       {
-        'lbz-ripple': ripple,
-        'is-fluid-width': fluidWidth,
+        'lbz-ripple': !disabled && ripple,
+        'is-full-width': fullWidth,
         'is-dense': dense,
         'is-unelevated': type === 'contained' && unelevated
       }
@@ -29,8 +29,8 @@ export default class Button extends Vue {
   @Prop({ type: String, default: '' }) private type!: string;
   // ripple: true (default), false
   @Prop({ type: Boolean, default: true }) private ripple!: boolean;
-  // fluid-width: true, false (default)
-  @Prop({ type: Boolean, default: false }) private fluidWidth!: boolean;
+  // full-width: true, false (default)
+  @Prop({ type: Boolean, default: false }) private fullWidth!: boolean;
   // dense: true, false (default)
   @Prop({ type: Boolean, default: false }) private dense!: boolean;
   // unelevated (type === 'contained'): true, false (default)

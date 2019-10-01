@@ -1,10 +1,4 @@
 // Backdrop
-// active.sync: true, false (default)
-// icon (front-layer): true, false (default)
-// divider (front-layer): true, false (default)
-// horizontal (front-layer): true, false (default)
-// scrim (front-layer): true, false (default)
-
 .lbz-backdrop {
   overflow: hidden;
   position: fixed;
@@ -48,12 +42,12 @@
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: stretch;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
     .lbz-elevation--2();
-    border-top-left-radius: var(--lbz-shape-size-large);
-    border-top-right-radius: var(--lbz-shape-size-large);
+    border-radius: 24px 24px 0 0;
     width: 100%;
     height: calc(100% - 64px);
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
@@ -71,6 +65,7 @@
       margin: 0 var(--lbz-layout-grid-margin);
       height: 56px;
 
+      // subtitle
       &__title {
         flex: 1;
         margin: 0;
@@ -117,8 +112,7 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background-color: inherit;
-      opacity: #lbz-state.surface[disabled];
+      background-color: rgba(0, 0, 0, .32);
     }
   }
 

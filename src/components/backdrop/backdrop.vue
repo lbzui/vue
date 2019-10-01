@@ -20,11 +20,11 @@
           v-html="subtitle"
           class="lbz-backdrop__front-layer__header__title"
         ></h2>
-        <slot v-if="$slots['front-layer-header']" name="front-layer-header"/>
+        <slot name="front-layer-header"/>
         <lbz-icon-button
           v-if="icon"
           class="lbz-backdrop__front-layer__header__icon"
-          @click.stop="fclick($event)"
+          @click.stop="fclose()"
         >expand_less</lbz-icon-button>
         <lbz-divider v-show="divider"/>
       </header>
@@ -40,19 +40,20 @@
       <aside
         v-if="scrim"
         class="lbz-backdrop__front-layer__scrim"
-        @click.stop="fclick($event)"
+        @click.stop="fclose()"
       ></aside>
     </section>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, PropSync, Prop, Emit, Vue } from 'vue-property-decorator';
+import { Component, PropSync, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Backdrop extends Vue {
-  // active.sync: true, false (default)
+  // [required]active.sync: true, false
   @PropSync('active', { type: Boolean, required: true }) private cisActive !: boolean;
+
   // subtitle (front-layer): '' (default), 'x'
   @Prop({ type: String, default: '' }) private subtitle!: string;
   // icon (front-layer): true, false (default)
@@ -64,9 +65,16 @@ export default class Backdrop extends Vue {
   // scrim (front-layer): true, false (default)
   @Prop({ type: Boolean, default: false }) private scrim!: boolean;
 
-  @Emit('click')
-  public fclick(e: MouseEvent) {
+  private ftoggle() {
     this.cisActive = !this.cisActive;
+  }
+
+  private fopen() {
+    this.cisActive = true;
+  }
+
+  private fclose() {
+    this.cisActive = false;
   }
 }
 </script>

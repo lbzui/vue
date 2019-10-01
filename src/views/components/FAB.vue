@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="lbzui-components-fab">
     <h2 class="lbz-typography--h5"># Standard FAB (floating action button)</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'mini', 'extended'</h3>
@@ -20,9 +20,9 @@
     <lbz-fab ripple>add</lbz-fab>
     <lbz-fab :ripple="false">add</lbz-fab>
 
-    <h3 class="lbz-typography--subtitle1">$ exited: true, false (default)</h3>
-    <lbz-button @click.stop="ftoggleExited()">Exited</lbz-button>
-    <lbz-fab :exited="isExited">add</lbz-fab>
+    <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
+    <lbz-button @click.stop="ftoggleInactive()">Inactive</lbz-button>
+    <lbz-fab :inactive="vinactive">add</lbz-fab>
 
     <h2 class="lbz-typography--h5"># Mini FAB</h2>
 
@@ -44,9 +44,9 @@
     <lbz-fab type="mini" ripple>add</lbz-fab>
     <lbz-fab type="mini" :ripple="false">add</lbz-fab>
 
-    <h3 class="lbz-typography--subtitle1">$ exited: true, false (default)</h3>
-    <lbz-button @click.stop="ftoggleExited()">Exited</lbz-button>
-    <lbz-fab type="mini" :exited="isExited">add</lbz-fab>
+    <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
+    <lbz-button @click.stop="ftoggleInactive()">Inactive</lbz-button>
+    <lbz-fab type="mini" :inactive="vinactive">add</lbz-fab>
 
     <h2 class="lbz-typography--h5"># Extended FAB</h2>
 
@@ -70,10 +70,10 @@
     <lbz-fab type="extended" ripple label="Create"/>
     <lbz-fab type="extended" :ripple="false" label="Create"/>
 
-    <h3 class="lbz-typography--subtitle1">$ exited: true, false (default)</h3>
-    <lbz-button @click.stop="ftoggleExited()">Exited</lbz-button>
-    <lbz-fab type="extended" :exited="isExited" label="Create"/>
-    <lbz-fab type="extended" :exited="isExited" label="Create">add</lbz-fab>
+    <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
+    <lbz-button @click.stop="ftoggleInactive()">Inactive</lbz-button>
+    <lbz-fab type="extended" :inactive="vinactive" label="Create"/>
+    <lbz-fab type="extended" :inactive="vinactive" label="Create">add</lbz-fab>
   </article>
 </template>
 
@@ -82,10 +82,21 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Fab extends Vue {
-  private isExited: boolean = false;
+  private vinactive: boolean = false;
 
-  private ftoggleExited() {
-    this.isExited = !this.isExited;
+  private ftoggleInactive() {
+    this.vinactive = !this.vinactive;
   }
 }
 </script>
+
+<style lang="less">
+.lbzui-components-fab {
+  .lbz-fab {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin-right: 16px;
+  }
+}
+</style>

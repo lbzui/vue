@@ -1,10 +1,4 @@
 // Top app bar
-// type: 'standard' (default), 'extended', 'short'
-// background: 'primary' (default), 'secondary', 'surface', 'transparent'
-// inactive (type === 'standard'): '' (default), 'scroll-off', 'tab-fixed'
-// dense (desktop only): true, false (default)
-// elevated: true, false (default)
-
 .lbz-top-app-bar {
   display: flex;
   flex-flow: column nowrap;
@@ -48,7 +42,7 @@
     transition: transform 200ms #lbz-motion.easing[accelerate];
     transform: translate3d(0, -64px, 0);
 
-    .lbz-top-app-bar__wrapper {
+    .lbz-top-app-bar__container {
       opacity: 0;
     }
   }
@@ -58,7 +52,7 @@
     .lbz-shadow--4();
   }
 
-  & &__wrapper {
+  & &__container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -82,6 +76,7 @@
     overflow: hidden;
     margin: auto 12px 12px;
 
+    // title
     .lbz-top-app-bar__title {
       flex: 1;
       margin: 0;
@@ -96,11 +91,12 @@
 
   // type
   &&--extended {
+    // media
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 100% auto;
 
-    .lbz-top-app-bar__wrapper {
+    .lbz-top-app-bar__container {
       height: 128px;
     }
 
@@ -143,21 +139,21 @@
         transform: translate3d(0, -48px, 0);
       }
 
-      .lbz-top-app-bar__wrapper {
+      .lbz-top-app-bar__container {
         padding: 0 4px;
         height: 48px;
       }
     }
 
     &&--extended.is-dense {
-      .lbz-top-app-bar__wrapper {
+      .lbz-top-app-bar__container {
         height: 96px;
       }
     }
   }
 
   @media (max-width: 719px) {
-    & &__wrapper {
+    & &__container {
       padding: 4px;
       height: 56px;
     }

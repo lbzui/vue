@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="lbzui-components-divider">
     <h2 class="lbz-typography--h5"># Divider</h2>
     <lbz-divider/>
 

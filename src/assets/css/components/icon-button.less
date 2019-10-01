@@ -1,9 +1,4 @@
 // Icon button
-// active.sync (toggle): true, false (default)
-// toggle: true, false (default)
-// on-background: 'primary', 'secondary', 'surface' (default)
-// disabled: true, false (default)
-
 .lbz-icon-button {
   -webkit-appearance: none;
   display: inline-block;
@@ -50,17 +45,19 @@
     height: 24px;
   }
 
+  // toggle
   & &__icon {
     position: absolute;
     top: 12px;
     left: 12px;
     transition: opacity 100ms linear;
 
-    // toggle
+    // on-icon
     &--on {
       opacity: 0;
     }
 
+    // off-icon
     &--off {
       opacity: 1;
     }

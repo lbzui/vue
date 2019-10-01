@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="lbzui-components-icon">
     <h2 class="lbz-typography--h5"># Icon</h2>
     <lbz-icon>favorite</lbz-icon>
     <lbz-icon>

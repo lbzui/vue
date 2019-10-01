@@ -1,16 +1,16 @@
 <template>
-  <article>
+  <article class="lbzui-components-card">
     <h2 class="lbz-typography--h5"># Elevated card</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'elevated' (default), 'outlined'</h3>
     <lbz-card>
       <template #start>
         <div class="lbz-card__header__center">
-          <h3 class="lbz-card__title">Title goes here</h3>
-          <h4 class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</h4>
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
         </div>
         <div class="lbz-card__header__end">
-          <div class="lbz-card__media lbz-u-aspect-ratio--1x1">
+          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
             <img src="../../assets/img/logo.png">
           </div>
         </div>
@@ -32,15 +32,15 @@
           <img class="lbz-card__avatar" src="../../assets/img/logo.png">
         </div>
         <div class="lbz-card__header__center">
-          <h3 class="lbz-card__title">Title goes here</h3>
-          <h4 class="lbz-card__subtitle">Secondary text</h4>
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary text</span>
         </div>
         <div class="lbz-card__header__end">
           <lbz-icon-button>more_vert</lbz-icon-button>
         </div>
       </template>
       <template #center>
-        <div class="lbz-card__media lbz-u-aspect-ratio--16x9">
+        <div class="lbz-u-aspect-ratio--16x9 lbz-card__media">
           <img src="../../assets/img/logo.png">
         </div>
         <p class="lbz-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
@@ -58,12 +58,12 @@
     </lbz-card>
     <lbz-card>
       <template #center>
-        <div class="lbz-card__media lbz-u-aspect-ratio--16x9">
+        <div class="lbz-u-aspect-ratio--16x9 lbz-card__media">
           <img src="../../assets/img/logo.png">
         </div>
         <div class="lbz-card__supporting-text">
-          <h3 class="lbz-card__title">Title goes here</h3>
-          <h4 class="lbz-card__subtitle">Secondary text</h4>
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary text</span>
           <lbz-divider/>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
         </div>
@@ -84,11 +84,11 @@
     <lbz-card ripple>
       <template #start>
         <div class="lbz-card__header__center">
-          <h3 class="lbz-card__title">Title goes here</h3>
-          <h4 class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</h4>
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
         </div>
         <div class="lbz-card__header__end">
-          <div class="lbz-card__media lbz-u-aspect-ratio--1x1">
+          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
             <img src="../../assets/img/logo.png">
           </div>
         </div>
@@ -107,11 +107,11 @@
     <lbz-card :ripple="false">
       <template #start>
         <div class="lbz-card__header__center">
-          <h3 class="lbz-card__title">Title goes here</h3>
-          <h4 class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</h4>
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
         </div>
         <div class="lbz-card__header__end">
-          <div class="lbz-card__media lbz-u-aspect-ratio--1x1">
+          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
             <img src="../../assets/img/logo.png">
           </div>
         </div>
@@ -135,11 +135,11 @@
       <template #start>
         <div class="lbz-card__header__center">
           <span class="lbz-typography--overline">Overline</span>
-          <h3 class="lbz-card__title">Title goes here</h3>
-          <h4 class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</h4>
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
         </div>
         <div class="lbz-card__header__end">
-          <div class="lbz-card__media lbz-u-aspect-ratio--1x1">
+          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
             <img src="../../assets/img/logo.png">
           </div>
         </div>
@@ -161,11 +161,11 @@
       <template #start>
         <div class="lbz-card__header__center">
           <span class="lbz-typography--overline">Overline</span>
-          <h3 class="lbz-card__title">Title goes here</h3>
-          <h4 class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</h4>
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
         </div>
         <div class="lbz-card__header__end">
-          <div class="lbz-card__media lbz-u-aspect-ratio--1x1">
+          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
             <img src="../../assets/img/logo.png">
           </div>
         </div>
@@ -185,11 +185,11 @@
       <template #start>
         <div class="lbz-card__header__center">
           <span class="lbz-typography--overline">Overline</span>
-          <h3 class="lbz-card__title">Title goes here</h3>
-          <h4 class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</h4>
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
         </div>
         <div class="lbz-card__header__end">
-          <div class="lbz-card__media lbz-u-aspect-ratio--1x1">
+          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
             <img src="../../assets/img/logo.png">
           </div>
         </div>
@@ -207,3 +207,16 @@
     </lbz-card>
   </article>
 </template>
+
+<style lang="less">
+.lbzui-components-card {
+  .lbz-card {
+    display: flex;
+    width: 344px;
+
+    + .lbz-card {
+      margin-top: 16px;
+    }
+  }
+}
+</style>

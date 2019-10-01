@@ -5,7 +5,7 @@
       'lbz-icon-button',
       onBackground ? `lbz-icon-button--${ onBackground }` : '',
       {
-        'lbz-ripple': ripple,
+        'lbz-ripple': !disabled && ripple,
         'is-active': toggle && cisActive
       }
     ]"
@@ -31,6 +31,7 @@ import { Component, PropSync, Prop, Emit, Vue } from 'vue-property-decorator';
 export default class IconButton extends Vue {
   // active.sync (toggle): true, false (default)
   @PropSync('active', { type: Boolean, default: false }) private cisActive !: boolean;
+
   // toggle: true, false (default)
   @Prop({ type: Boolean, default: false }) private toggle!: boolean;
   // on-background: 'primary', 'secondary', 'surface' (default)
