@@ -67,6 +67,10 @@ export default class App extends Vue {
       label: 'Divider',
     },
     {
+      path: '/components/empty-state',
+      label: 'Empty state',
+    },
+    {
       path: '/components/fab',
       label: 'FAB',
     },

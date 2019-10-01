@@ -56,6 +56,11 @@ export default new Router({
       component: () => import('./views/components/Divider.vue'),
     },
     {
+      path: '/components/empty-state',
+      name: 'EmptyState',
+      component: () => import('./views/components/EmptyState.vue'),
+    },
+    {
       path: '/components/fab',
       name: 'fab',
       component: () => import('./views/components/FAB.vue'),
