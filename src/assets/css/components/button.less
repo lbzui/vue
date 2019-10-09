@@ -7,7 +7,6 @@
   align-items: center;
   overflow: hidden;
   position: relative;
-  margin: 0;
   box-sizing: border-box;
   border: none;
   border-radius: var(--lbz-shape-absolute-size-small);
@@ -37,11 +36,6 @@
   &.is-dense {
     height: 32px;
     font-size: 13px;
-  }
-
-  // disabled
-  &:disabled {
-    color: var(--lbz-theme-text-disabled-on-surface);
   }
 
   &::before {
@@ -113,7 +107,6 @@
     }
 
     &:disabled {
-      color: var(--lbz-theme-text-disabled-on-surface);
       background-color: var(--lbz-theme-outline-on-surface);
       box-shadow: none;
     }
@@ -134,6 +127,11 @@
     &:not(.is-unelevated):not(:disabled):active {
       .lbz-shadow--8();
     }
+  }
+
+  // disabled
+  &:disabled {
+    color: var(--lbz-theme-text-disabled-on-surface);
   }
 
   & + & {

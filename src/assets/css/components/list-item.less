@@ -107,25 +107,6 @@
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
   }
 
-  // disabled
-  &.is-disabled {
-    color: var(--lbz-theme-text-disabled-on-surface);
-    cursor: default;
-
-    .lbz-list-item__center,
-    .lbz-list-item__subtitle,
-    .lbz-list-item__supporting-text {
-      color: var(--lbz-theme-text-disabled-on-surface);
-    }
-  }
-
-  // selected
-  &.is-selected {
-    &::before {
-      opacity: #lbz-state.surface[selected];
-    }
-  }
-
   // active
   &.is-active,
   &.router-link-exact-active {
@@ -143,7 +124,26 @@
     }
   }
 
-  &:not(.is-disabled):not(.is-selected):not(.is-active):not(.router-link-exact-active):hover {
+  // selected
+  &.is-selected {
+    &::before {
+      opacity: #lbz-state.surface[selected];
+    }
+  }
+
+  // disabled
+  &.is-disabled {
+    color: var(--lbz-theme-text-disabled-on-surface);
+    cursor: default;
+
+    .lbz-list-item__center,
+    .lbz-list-item__subtitle,
+    .lbz-list-item__supporting-text {
+      color: var(--lbz-theme-text-disabled-on-surface);
+    }
+  }
+
+  &:not(.is-active):not(.router-link-exact-active):not(.is-selected):not(.is-disabled):hover {
     &::before {
       opacity: #lbz-state.surface[hover];
     }

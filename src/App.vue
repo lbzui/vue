@@ -19,6 +19,25 @@
           class="lbz-list-item"
         >{{ item.label }}</router-link>
       </lbz-list>
+      <lbz-divider/>
+      <lbz-list dense subtitle="Choose theme">
+        <lbz-list-item>
+          <lbz-radio
+            v-model="vtheme"
+            id="light"
+            name="light"
+            value="light"
+            @change="fsetTheme"
+          >Light</lbz-radio>
+          <lbz-radio
+            v-model="vtheme"
+            id="dark"
+            name="dark"
+            value="dark"
+            @change="fsetTheme"
+          >Dark</lbz-radio>
+        </lbz-list-item>
+      </lbz-list>
     </aside>
     <main class="lbzui__main" role="main">
       <router-view class="lbzui__main__container"/>
@@ -87,10 +106,19 @@ export default class App extends Vue {
       label: 'List',
     },
     {
+      path: '/components/radio',
+      label: 'Radio',
+    },
+    {
       path: '/components/top-app-bar',
       label: 'Top app bar',
     },
   ];
+  private vtheme: string = 'light';
+
+  private fsetTheme(value) {
+    document.documentElement.setAttribute('theme', value);
+  }
 }
 </script>
 

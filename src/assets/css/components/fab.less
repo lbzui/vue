@@ -10,7 +10,6 @@
   right: var(--lbz-layout-grid-margin);
   bottom: var(--lbz-layout-grid-margin);
   .lbz-elevation--6();
-  margin: 0;
   box-sizing: border-box;
   border: none;
   border-radius: var(--lbz-shape-percentage-size-small);
@@ -23,14 +22,14 @@
   background-color: var(--lbz-theme-secondary);
   outline: none;
   .lbz-shadow--6();
-  transition: opacity 15ms linear 30ms, box-shadow 280ms #lbz-motion.easing[standard], transform 270ms #lbz-motion.easing[decelerate] 0ms;
+  transition: opacity 15ms linear 30ms, box-shadow 280ms #lbz-motion.easing[standard], transform 270ms #lbz-motion.easing[deceleration] 0ms;
   cursor: pointer;
   user-select: none;
 
   // inactive
   &.is-inactive {
     opacity: 0;
-    transition: opacity 15ms linear 150ms, transform 180ms #lbz-motion.easing[accelerate] 0ms;
+    transition: opacity 15ms linear 150ms, transform 180ms #lbz-motion.easing[acceleration] 0ms;
     transform: scale(0);
   }
 

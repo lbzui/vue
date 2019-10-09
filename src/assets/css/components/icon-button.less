@@ -4,7 +4,6 @@
   display: inline-block;
   overflow: hidden;
   position: relative;
-  margin: 0;
   box-sizing: border-box;
   border: none;
   padding: 12px;
@@ -17,11 +16,6 @@
   outline: none;
   cursor: default;
   user-select: none;
-
-  // disabled
-  &:disabled {
-    color: var(--lbz-theme-text-disabled-on-surface);
-  }
 
   &::before {
     position: absolute;
@@ -101,7 +95,6 @@
   &&--secondary {
     &::before {
       background-color: var(--lbz-theme-on-primary);
-      opacity: #lbz-state.primary[enabled];
     }
 
     &:not(:disabled):hover {
@@ -127,5 +120,10 @@
     &::before {
       background-color: var(--lbz-theme-on-secondary);
     }
+  }
+
+  // disabled
+  &:disabled {
+    color: var(--lbz-theme-text-disabled-on-surface);
   }
 }

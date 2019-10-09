@@ -10,6 +10,7 @@ import Icon from './icon';
 import IconButton from './icon-button';
 import List from './list';
 import ListItem from './list-item';
+import Radio from './radio';
 import TopAppBar from './top-app-bar';
 
 const components: any[] = [
@@ -23,6 +24,7 @@ const components: any[] = [
   IconButton,
   List,
   ListItem,
+  Radio,
   TopAppBar,
 ];
 const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any) => {
@@ -60,5 +62,6 @@ export {
   IconButton,
   List,
   ListItem,
+  Radio,
   TopAppBar,
 };

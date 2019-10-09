@@ -4,9 +4,9 @@
       'lbz-list-item',
       {
         'lbz-ripple': !disabled && ripple,
-        'is-disabled': disabled,
+        'is-active': active,
         'is-selected': selected,
-        'is-active': active
+        'is-disabled': disabled
       }
     ]"
     @click="disabled ? '' : $emit('click', $event)"
@@ -31,11 +31,11 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class ListItem extends Vue {
   // ripple: true (default), false
   @Prop({ type: Boolean, default: true }) private ripple!: boolean;
-  // disabled: true, false (default)
-  @Prop({ type: Boolean, default: false }) private disabled!: boolean;
-  // selected: true, false (default)
-  @Prop({ type: Boolean, default: false }) private selected!: boolean;
   // active: true, false (default)
   @Prop({ type: Boolean, default: false }) private active!: boolean;
+  // selected: true, false (default)
+  @Prop({ type: Boolean, default: false }) private selected!: boolean;
+  // disabled: true, false (default)
+  @Prop({ type: Boolean, default: false }) private disabled!: boolean;
 }
 </script>

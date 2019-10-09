@@ -31,7 +31,7 @@
       overflow-x: hidden;
       overflow-y: auto;
       opacity: 0;
-      transition: opacity 100ms linear;
+      transition: opacity 15ms linear;
       overscroll-behavior-y: contain;
       -webkit-overflow-scrolling: touch;
     }
@@ -52,7 +52,7 @@
     height: calc(100% - 64px);
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
     .lbz-surface--2();
-    transition: transform 250ms #lbz-motion.easing[accelerate];
+    transition: transform 250ms #lbz-motion.easing[standard];
     transform: translate3d(0, 64px, 0);
 
     &__header {
@@ -125,7 +125,7 @@
     }
 
     .lbz-backdrop__front-layer {
-      transition: transform 300ms #lbz-motion.easing[decelerate];
+      transition: transform 300ms #lbz-motion.easing[standard];
       transform: translate3d(0, calc(100% + 8px), 0); // (100% + 64px) - 56px, (100% + 56px) - 48px
       transform: translate3d(0, 100%, 0)\0;
 

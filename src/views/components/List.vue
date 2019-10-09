@@ -406,9 +406,9 @@
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
-    <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
-    <h3 class="lbz-typography--subtitle1">$ selected: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ active: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ selected: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-list placement="start">
       <lbz-list-item :ripple="false">
         <template #start>
@@ -422,12 +422,12 @@
           <lbz-icon-button>more_vert</lbz-icon-button>
         </template>
       </lbz-list-item>
-      <lbz-list-item disabled>
+      <lbz-list-item active>
         <template #start>
           <lbz-icon>favorite</lbz-icon>
         </template>
         <template #center>
-          <span class="lbz-list-item__title">Disabled</span>
+          <span class="lbz-list-item__title">Active</span>
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
@@ -446,12 +446,12 @@
           <lbz-icon-button>more_vert</lbz-icon-button>
         </template>
       </lbz-list-item>
-      <lbz-list-item active>
+      <lbz-list-item disabled>
         <template #start>
           <lbz-icon>favorite</lbz-icon>
         </template>
         <template #center>
-          <span class="lbz-list-item__title">Active</span>
+          <span class="lbz-list-item__title">Disabled</span>
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>

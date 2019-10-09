@@ -13,7 +13,7 @@
   width: 100%;
   color: var(--lbz-theme-on-primary);
   background-color: var(--lbz-theme-primary);
-  transition: width 300ms #lbz-motion.easing[standard], box-shadow 200ms linear, transform 250ms #lbz-motion.easing[decelerate];
+  transition: width 300ms #lbz-motion.easing[standard], box-shadow 200ms linear, transform 250ms #lbz-motion.easing[deceleration];
 
   // background
   &&--secondary {
@@ -34,12 +34,12 @@
   // inactive
   &.is-inactive--scroll-off {
     opacity: 0;
-    transition: transform 200ms #lbz-motion.easing[accelerate];
+    transition: transform 200ms #lbz-motion.easing[sharp];
     transform: translate3d(0, -100%, 0);
   }
 
   &.is-inactive--tab-fixed {
-    transition: transform 200ms #lbz-motion.easing[accelerate];
+    transition: transform 200ms #lbz-motion.easing[sharp];
     transform: translate3d(0, -64px, 0);
 
     .lbz-top-app-bar__container {
