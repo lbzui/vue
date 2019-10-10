@@ -82,6 +82,10 @@ export default class App extends Vue {
       label: 'Card',
     },
     {
+      path: '/components/dialog',
+      label: 'Dialog',
+    },
+    {
       path: '/components/divider',
       label: 'Divider',
     },

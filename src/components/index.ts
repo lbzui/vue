@@ -3,6 +3,7 @@ import '../assets/css/index.less';
 import Backdrop from './backdrop';
 import Button from './button';
 import Card from './card';
+import Dialog from './dialog';
 import Divider from './divider';
 import EmptyState from './empty-state';
 import FAB from './fab';
@@ -17,6 +18,7 @@ const components: any[] = [
   Backdrop,
   Button,
   Card,
+  Dialog,
   Divider,
   EmptyState,
   FAB,
@@ -55,6 +57,7 @@ export {
   Backdrop,
   Button,
   Card,
+  Dialog,
   Divider,
   EmptyState,
   FAB,
