@@ -2,7 +2,7 @@
   <hr
     :class="[
       'lbz-divider',
-      color ? `lbz-divider--${ color }` : ''
+      onBackground ? `lbz-divider--on-${ onBackground }` : ''
     ]"
   >
 </template>
@@ -12,7 +12,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Divider extends Vue {
-  // color: 'primary', 'secondary', 'background', 'surface' (default), 'error'
-  @Prop({ type: String, default: '' }) private color!: string;
+  // on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'
+  @Prop({ type: String, default: '' }) private onBackground!: string;
 }
 </script>

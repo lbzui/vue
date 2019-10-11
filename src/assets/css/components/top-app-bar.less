@@ -21,9 +21,29 @@
     background-color: var(--lbz-theme-secondary);
   }
 
+  &&--background {
+    color: var(--lbz-theme-on-background);
+    background-color: var(--lbz-theme-background);
+  }
+
   &&--surface {
     color: var(--lbz-theme-on-surface);
     .lbz-surface--0();
+  }
+
+  &&--light {
+    color: @black;
+    background-color: #lbz-theme-surface.light[0];
+  }
+
+  &&--dark {
+    color: @white;
+    background-color: #lbz-theme-surface.dark[0];
+
+    // elevated
+    &.is-elevated {
+      background-color: #lbz-theme-surface.dark[4];
+    }
   }
 
   &&--transparent {
@@ -170,7 +190,7 @@
 }
 
 html[theme="dark"] {
-  .lbz-top-app-bar {
+  .lbz-top-app-bar:not(.lbz-top-app-bar--light):not(.lbz-top-app-bar--dark) {
     color: var(--lbz-theme-on-surface);
     .lbz-surface--0();
 

@@ -11,10 +11,14 @@
       <img src="../../assets/img/logo.png">
     </lbz-icon-button>
 
-    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'</h3>
     <lbz-icon-button on-background="primary">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="secondary">favorite_border</lbz-icon-button>
+    <lbz-icon-button on-background="background">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="surface">favorite_border</lbz-icon-button>
+    <lbz-icon-button on-background="error">favorite_border</lbz-icon-button>
+    <lbz-icon-button on-background="light">favorite_border</lbz-icon-button>
+    <lbz-icon-button on-background="dark">favorite_border</lbz-icon-button>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
     <lbz-icon-button ripple>favorite_border</lbz-icon-button>
@@ -55,7 +59,7 @@
       </template>
     </lbz-icon-button>
 
-    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'</h3>
     <lbz-icon-button
       :active.sync="vactive"
       toggle
@@ -73,7 +77,35 @@
     <lbz-icon-button
       :active.sync="vactive"
       toggle
+      on-background="background"
+      on-icon="favorite"
+      off-icon="favorite_border"
+    />
+    <lbz-icon-button
+      :active.sync="vactive"
+      toggle
       on-background="surface"
+      on-icon="favorite"
+      off-icon="favorite_border"
+    />
+    <lbz-icon-button
+      :active.sync="vactive"
+      toggle
+      on-background="error"
+      on-icon="favorite"
+      off-icon="favorite_border"
+    />
+    <lbz-icon-button
+      :active.sync="vactive"
+      toggle
+      on-background="light"
+      on-icon="favorite"
+      off-icon="favorite_border"
+    />
+    <lbz-icon-button
+      :active.sync="vactive"
+      toggle
+      on-background="dark"
       on-icon="favorite"
       off-icon="favorite_border"
     />

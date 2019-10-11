@@ -1,0 +1,112 @@
+// Tab
+.lbz-tab {
+  & &__container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  // type
+  &&--scrollable {
+    .lbz-tab__container {
+      padding-left: 52px;
+    }
+
+    .lbz-tab-item {
+      flex: none;
+    }
+  }
+
+  // on-background
+  &&--on {
+    &-primary {
+      .lbz-tab-item {
+        color: var(--lbz-theme-text-medium-emphasis-on-primary);
+
+        &::before,
+        .lbz-tab-item__indicator {
+          background-color: var(--lbz-theme-on-primary);
+        }
+
+        &.is-active {
+          color: var(--lbz-theme-text-high-emphasis-on-primary);
+        }
+      }
+    }
+
+    &-secondary {
+      .lbz-tab-item {
+        color: var(--lbz-theme-text-medium-emphasis-on-secondary);
+
+        &::before,
+        .lbz-tab-item__indicator {
+          background-color: var(--lbz-theme-on-secondary);
+        }
+
+        &.is-active {
+          color: var(--lbz-theme-text-high-emphasis-on-secondary);
+        }
+      }
+    }
+
+    &-light {
+      .lbz-tab-item {
+        color: var(--lbz-theme-text-medium-emphasis-on-light);
+
+        &.is-active {
+          color: var(--lbz-theme-text-high-emphasis-on-light);
+        }
+      }
+    }
+
+    &-dark {
+      .lbz-tab-item {
+        color: var(--lbz-theme-text-medium-emphasis-on-dark);
+
+        &::before,
+        .lbz-tab-item__indicator {
+          background-color: @white;
+        }
+
+        &.is-active {
+          color: var(--lbz-theme-text-high-emphasis-on-dark);
+        }
+      }
+    }
+  }
+
+  // alignment
+  &&--left,
+  &&--center,
+  &&--right {
+    display: inline-flex;
+
+    .lbz-tab-item {
+      flex: none;
+    }
+  }
+
+  &&--center {
+    justify-content: center;
+  }
+
+  &&--right {
+    justify-content: flex-end;
+  }
+
+  // stacked
+  &.is-stacked {
+    .lbz-tab-item {
+      flex-direction: column;
+
+      .lbz-tab-item__icon + .lbz-tab-item__label {
+        margin-top: 8px;
+        margin-left: 0;
+      }
+    }
+  }
+}

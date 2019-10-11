@@ -47,7 +47,11 @@
           <slot name="end"/>
         </footer>
       </div>
-      <div v-if="type !== 'full-screen'" class="lbz-dialog__scrim" @click.stop="fclose()"></div>
+      <div
+        v-if="type !== 'full-screen'"
+        class="lbz-dialog__scrim"
+        @click.stop="fclose()"
+      ></div>
     </div>
   </transition>
 </template>
@@ -57,7 +61,7 @@ import { Component, PropSync, Prop, Watch, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Dialog extends Vue {
-  // active.sync: true, false
+  // [required]active.sync: true, false
   @PropSync('active', { type: Boolean, required: true }) private cisActive !: boolean;
 
   // type: 'alert' (default), 'simple', 'confirmation', 'full-screen (mobile only)'
@@ -80,7 +84,7 @@ export default class Dialog extends Vue {
   }
 
   @Watch('cisActive')
-  private factiveChanged(val: string, oldVal: string) {
+  private factiveChanged(val: boolean, oldVal: boolean) {
     this.$nextTick().then(() => {
       if (val) {
         this.$emit('open');

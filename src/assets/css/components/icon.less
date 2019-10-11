@@ -23,16 +23,6 @@
     }
   }
 
-  &&--24 {
-    font-size: 24px;
-
-    svg,
-    img {
-      width: 24px;
-      height: 24px;
-    }
-  }
-
   &&--36 {
     font-size: 36px;
 
@@ -54,6 +44,27 @@
   }
 
   // color
+  &&--primary {
+    color: var(--lbz-theme-primary);
+  }
+
+  &&--secondary {
+    color: var(--lbz-theme-secondary);
+  }
+
+  &&--error {
+    color: var(--lbz-theme-error);
+  }
+
+  &&--primary,
+  &&--secondary,
+  &&--error {
+    // disabled
+    &.is-disabled {
+      opacity: #lbz-state.surface[disabled];
+    }
+  }
+
   &&--light {
     color: #lbz-theme-text.light[medium-emphasis];
 

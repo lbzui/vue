@@ -3,6 +3,10 @@
 //        `#lbz-theme-text.x[y]`
 //        `#lbz-theme-outline.x`
 
+@white: #fff;
+@black: #000;
+@scrim: rgba(@black, .32);
+
 // Theme colors
 #lbz-theme() {
   // Light theme
@@ -16,16 +20,16 @@
     secondary-variant: #018786;
 
     // Surface, background, and error colors
-    background: #fff;
-    surface: #fff;
+    background: @white;
+    surface: @white;
     error: #b00020;
 
-    // Typography and iconography colors (#fff, #000)
-    on-primary: #fff;
-    on-secondary: #000;
-    on-background: #000;
-    on-surface: #000;
-    on-error: #fff;
+    // Typography and iconography colors
+    on-primary: @white;
+    on-secondary: @black;
+    on-background: @black;
+    on-surface: @black;
+    on-error: @white;
   }
 
   // Dark theme
@@ -43,12 +47,12 @@
     surface: #121212;
     error: #cf6679;
 
-    // Typography and iconography colors (#fff, #000)
-    on-primary: #000;
-    on-secondary: #000;
-    on-background: #fff;
-    on-surface: #fff;
-    on-error: #000;
+    // Typography and iconography colors
+    on-primary: @black;
+    on-secondary: @black;
+    on-background: @white;
+    on-surface: @white;
+    on-error: @black;
   }
 }
 
@@ -56,21 +60,50 @@
 #lbz-theme-text() {
   // Light text on dark backgrounds
   .light() {
-    high-emphasis: #fff; // High-emphasis text
-    medium-emphasis: rgba(255, 255, 255, .74); // Medium-emphasis text and hint text
-    disabled: rgba(255, 255, 255, .38); // Disabled text
+    high-emphasis: @white; // High-emphasis text
+    medium-emphasis: rgba(@white, .74); // Medium-emphasis text and hint text
+    disabled: rgba(@white, .38); // Disabled text
   }
 
   // Dark text on light backgrounds
   .dark() {
-    high-emphasis: rgba(0, 0, 0, .87); // High-emphasis text
-    medium-emphasis: rgba(0, 0, 0, .6); // Medium-emphasis text and hint text
-    disabled: rgba(0, 0, 0, .38); // Disabled text
+    high-emphasis: rgba(@black, .87); // High-emphasis text
+    medium-emphasis: rgba(@black, .6); // Medium-emphasis text and hint text
+    disabled: rgba(@black, .38); // Disabled text
   }
 }
 
 // Outline colors
 #lbz-theme-outline() {
-  light: rgba(255, 255, 255, .12);
-  dark: rgba(0, 0, 0, .12);
+  light: rgba(@white, .12);
+  dark: rgba(@black, .12);
+}
+
+// Higher elevation, lighter surface
+#lbz-theme-surface() {
+  .light() {
+    0: @white;
+    1: @white;
+    2: @white;
+    3: @white;
+    4: @white;
+    6: @white;
+    8: @white;
+    12: @white;
+    16: @white;
+    24: @white;
+  }
+
+  .dark() {
+    0: #121212;  // rgb(18, 18, 18)
+    1: #1e1e1e; // rgba(18, 18, 18, .05)
+    2: #222; // rgba(18, 18, 18, .07)
+    3: #242424; // rgba(18, 18, 18, .08)
+    4: #262626; // rgba(18, 18, 18, .09)
+    6: #2c2c2c; // rgba(18, 18, 18, .11)
+    8: #2e2e2e; // rgba(18, 18, 18, .12)
+    12: #323232; // rgba(18, 18, 18, .14)
+    16: #363636; // rgba(18, 18, 18, .15)
+    24: #383838; // rgba(18, 18, 18, .16)
+  }
 }

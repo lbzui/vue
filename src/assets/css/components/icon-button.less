@@ -93,10 +93,6 @@
   // on-background
   &&--primary,
   &&--secondary {
-    &::before {
-      background-color: var(--lbz-theme-on-primary);
-    }
-
     &:not(:disabled):hover {
       &::before {
         opacity: #lbz-state.primary[hover];
@@ -116,9 +112,39 @@
     }
   }
 
+  &&--primary {
+    &::before {
+      background-color: var(--lbz-theme-on-primary);
+    }
+  }
+
   &&--secondary {
     &::before {
       background-color: var(--lbz-theme-on-secondary);
+    }
+  }
+
+  &&--background {
+    &::before {
+      background-color: var(--lbz-theme-on-background);
+    }
+  }
+
+  &&--error {
+    &::before {
+      background-color: var(--lbz-theme-on-error);
+    }
+  }
+
+  &&--light {
+    &::before {
+      background-color: @black;
+    }
+  }
+
+  &&--dark {
+    &::before {
+      background-color: @white;
     }
   }
 

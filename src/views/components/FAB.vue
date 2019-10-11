@@ -11,10 +11,13 @@
       <img src="../../assets/img/logo.png">
     </lbz-fab>
 
-    <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'surface', 'light', 'dark'</h3>
     <lbz-fab background="primary">add</lbz-fab>
     <lbz-fab background="primary-variant">add</lbz-fab>
     <lbz-fab background="secondary">add</lbz-fab>
+    <lbz-fab background="surface">add</lbz-fab>
+    <lbz-fab background="light">add</lbz-fab>
+    <lbz-fab background="dark">add</lbz-fab>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
     <lbz-fab ripple>add</lbz-fab>
@@ -35,10 +38,13 @@
       <img src="../../assets/img/logo.png">
     </lbz-fab>
 
-    <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'surface', 'light', 'dark'</h3>
     <lbz-fab type="mini" background="primary">add</lbz-fab>
     <lbz-fab type="mini" background="primary-variant">add</lbz-fab>
     <lbz-fab type="mini" background="secondary">add</lbz-fab>
+    <lbz-fab type="mini" background="surface">add</lbz-fab>
+    <lbz-fab type="mini" background="light">add</lbz-fab>
+    <lbz-fab type="mini" background="dark">add</lbz-fab>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
     <lbz-fab type="mini" ripple>add</lbz-fab>
@@ -61,10 +67,13 @@
       <img src="../../assets/img/logo.png">
     </lbz-fab>
 
-    <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'surface', 'light', 'dark'</h3>
     <lbz-fab type="extended" background="primary" label="Create"/>
     <lbz-fab type="extended" background="primary-variant" label="Create"/>
     <lbz-fab type="extended" background="secondary" label="Create"/>
+    <lbz-fab type="extended" background="surface" label="Create"/>
+    <lbz-fab type="extended" background="light" label="Create"/>
+    <lbz-fab type="extended" background="dark" label="Create"/>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
     <lbz-fab type="extended" ripple label="Create"/>

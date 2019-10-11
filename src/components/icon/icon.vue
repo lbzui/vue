@@ -16,7 +16,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class Icon extends Vue {
   // size: 18, 24 (default), 36, 48
   @Prop({ type: Number }) private size!: number;
-  // color: '' (default), 'light', 'dark'
+  // color: '' (default), 'primary', 'secondary', 'error', light', 'dark'
   @Prop({ type: String, default: '' }) private color!: string;
   // disabled (color): true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;

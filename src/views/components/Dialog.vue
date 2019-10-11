@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="lbzui-components-dialog">
     <h2 class="lbz-typography--h5"># Alert dialog</h2>
 
     <h3 class="lbz-typography--subtitle1">$ active.sync: true, false</h3>
@@ -70,7 +70,7 @@
       title="Set backup account"
     >
       <template #center>
-        <lbz-list>
+        <lbz-list dense>
           <lbz-list-item
             v-for="(item, index) of vsimpleList"
             :key="index"
@@ -94,7 +94,7 @@
       title="Set backup account"
     >
       <template #center>
-        <lbz-list>
+        <lbz-list dense>
           <lbz-list-item
             v-for="(item, index) of vsimpleList"
             :key="index"
@@ -118,7 +118,7 @@
       content-height="360px"
     >
       <template #center>
-        <lbz-list>
+        <lbz-list dense>
           <lbz-list-item
             v-for="(item, index) of vsimpleList"
             :key="index"
@@ -177,7 +177,7 @@
       content-height="180px"
     >
       <template #center>
-        <lbz-list>
+        <lbz-list dense>
           <lbz-list-item
             v-for="item in 10"
             :key="item"

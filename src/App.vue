@@ -114,27 +114,23 @@ export default class App extends Vue {
       label: 'Radio',
     },
     {
+      path: '/components/tab',
+      label: 'Tab',
+    },
+    {
       path: '/components/top-app-bar',
       label: 'Top app bar',
     },
   ];
   private vtheme: string = 'light';
 
-  private fsetTheme(value) {
-    document.documentElement.setAttribute('theme', value);
+  private fsetTheme(val: boolean | number | string, e: MouseEvent) {
+    document.documentElement.setAttribute('theme', val);
   }
 }
 </script>
 
 <style lang="less">
-// variables (Less)
-@import "~@/assets/css/variables/_state.less";
-
-// variables (CSS)
-@import "~@/assets/css/variables/layout-grid.less";
-@import "~@/assets/css/variables/theme.less";
-
-// styles
 @import "~@/assets/css/styles/elevation.less";
 @import "~@/assets/css/styles/surface.less";
 @import "~@/assets/css/styles/typography.less";

@@ -3,15 +3,19 @@
     <h2 class="lbz-typography--h5"># Divider</h2>
     <lbz-divider/>
 
-    <h3 class="lbz-typography--subtitle1">$ color: 'primary', 'secondary', 'background', 'surface' (default), 'error'</h3>
-    <lbz-divider color="primary"/>
+    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'</h3>
+    <lbz-divider on-background="primary"/>
     <br>
-    <lbz-divider color="secondary"/>
+    <lbz-divider on-background="secondary"/>
     <br>
-    <lbz-divider color="background"/>
+    <lbz-divider on-background="background"/>
     <br>
-    <lbz-divider color="surface"/>
+    <lbz-divider on-background="surface"/>
     <br>
-    <lbz-divider color="error"/>
+    <lbz-divider on-background="error"/>
+    <br>
+    <lbz-divider on-background="light"/>
+    <br>
+    <lbz-divider on-background="dark"/>
   </article>
 </template>

@@ -203,8 +203,6 @@ export default class Backdrop extends Vue {
 </script>
 
 <style lang="less">
-@import "~@/assets/css/variables/theme.less";
-
 .lbzui-components-backdrop {
   .lbz-backdrop {
     display: inline-block;
@@ -213,10 +211,6 @@ export default class Backdrop extends Vue {
     border: 1px solid var(--lbz-theme-outline-on-surface);
     width: 360px;
     height: 614px;
-
-    .lbz-top-app-bar {
-      position: static;
-    }
   }
 }
 </style>

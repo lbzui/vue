@@ -15,11 +15,19 @@
     <lbz-icon :size="36">favorite</lbz-icon>
     <lbz-icon :size="48">favorite</lbz-icon>
 
-    <h3 class="lbz-typography--subtitle1">$ color: '' (default), 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ color: '' (default), 'primary', 'secondary', 'error', light', 'dark'</h3>
+    <lbz-icon>favorite</lbz-icon>
+    <lbz-icon color="primary">favorite</lbz-icon>
+    <lbz-icon color="secondary">favorite</lbz-icon>
+    <lbz-icon color="error">favorite</lbz-icon>
     <lbz-icon color="light">favorite</lbz-icon>
     <lbz-icon color="dark">favorite</lbz-icon>
 
     <h3 class="lbz-typography--subtitle1">$ disabled (color): true, false (default)</h3>
+    <lbz-icon disabled>favorite</lbz-icon>
+    <lbz-icon color="primary" disabled>favorite</lbz-icon>
+    <lbz-icon color="secondary" disabled>favorite</lbz-icon>
+    <lbz-icon color="error" disabled>favorite</lbz-icon>
     <lbz-icon color="light" disabled>favorite</lbz-icon>
     <lbz-icon color="dark" disabled>favorite</lbz-icon>
   </article>

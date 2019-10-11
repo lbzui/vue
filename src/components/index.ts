@@ -12,6 +12,8 @@ import IconButton from './icon-button';
 import List from './list';
 import ListItem from './list-item';
 import Radio from './radio';
+import Tab from './tab';
+import TabItem from './tab-item';
 import TopAppBar from './top-app-bar';
 
 const components: any[] = [
@@ -27,6 +29,8 @@ const components: any[] = [
   List,
   ListItem,
   Radio,
+  Tab,
+  TabItem,
   TopAppBar,
 ];
 const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any) => {
@@ -66,5 +70,7 @@ export {
   List,
   ListItem,
   Radio,
+  Tab,
+  TabItem,
   TopAppBar,
 };

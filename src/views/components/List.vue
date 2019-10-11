@@ -25,7 +25,7 @@
 
     <h2 class="lbz-typography--h5"># List item</h2>
 
-    <h3 class="lbz-typography--subtitle1">$ type (list item): 'one-line' (default), 'two-line', 'three-line'</h3>
+    <h3 class="lbz-typography--subtitle1">$ type: 'one-line' (default), 'two-line', 'three-line'</h3>
     <lbz-list type="one-line" subtitle="One line">
       <lbz-list-item>One-line item</lbz-list-item>
       <lbz-list-item>
@@ -215,7 +215,7 @@
       </lbz-list-item>
     </lbz-list>
 
-    <h3 class="lbz-typography--subtitle1">$ dense (list item): true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ dense: true, false (default)</h3>
     <lbz-list type="one-line" dense subtitle="One line">
       <lbz-list-item>One-line item</lbz-list-item>
       <lbz-list-item>
@@ -463,8 +463,6 @@
 </template>
 
 <style lang="less">
-@import "~@/assets/css/variables/theme.less";
-
 .lbzui-components-list {
   .lbz-list {
     border: 1px solid var(--lbz-theme-outline-on-surface);

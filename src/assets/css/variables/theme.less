@@ -20,16 +20,16 @@
   // Surface, background, and error colors
   --lbz-theme-background: #lbz-theme.light[background];
   --lbz-theme-surface: #lbz-theme.light[surface];
-  --lbz-theme-surface-0: #fff; // Higher elevation, lighter surface
-  --lbz-theme-surface-1: #fff;
-  --lbz-theme-surface-2: #fff;
-  --lbz-theme-surface-3: #fff;
-  --lbz-theme-surface-4: #fff;
-  --lbz-theme-surface-6: #fff;
-  --lbz-theme-surface-8: #fff;
-  --lbz-theme-surface-12: #fff;
-  --lbz-theme-surface-16: #fff;
-  --lbz-theme-surface-24: #fff;
+  --lbz-theme-surface-0: #lbz-theme-surface.light[0];
+  --lbz-theme-surface-1: #lbz-theme-surface.light[1];
+  --lbz-theme-surface-2: #lbz-theme-surface.light[2];
+  --lbz-theme-surface-3: #lbz-theme-surface.light[3];
+  --lbz-theme-surface-4: #lbz-theme-surface.light[4];
+  --lbz-theme-surface-6: #lbz-theme-surface.light[6];
+  --lbz-theme-surface-8: #lbz-theme-surface.light[8];
+  --lbz-theme-surface-12: #lbz-theme-surface.light[12];
+  --lbz-theme-surface-16: #lbz-theme-surface.light[16];
+  --lbz-theme-surface-24: #lbz-theme-surface.light[24];
   --lbz-theme-error: #lbz-theme.light[error];
 
   // Typography and iconography colors
@@ -38,16 +38,6 @@
   --lbz-theme-on-background: #lbz-theme.light[on-background];
   --lbz-theme-on-surface: #lbz-theme.light[on-surface];
   --lbz-theme-on-error: #lbz-theme.light[on-error];
-
-  // Dark text on light backgrounds
-  // --lbz-theme-text-high-emphasis-on-light: #lbz-theme-text.dark[high-emphasis];
-  // --lbz-theme-text-medium-emphasis-on-light: #lbz-theme-text.dark[medium-emphasis];
-  // --lbz-theme-text-disabled-on-light: #lbz-theme-text.dark[disabled];
-
-  // Light text on dark backgrounds
-  // --lbz-theme-text-high-emphasis-on-dark: #lbz-theme-text.light[high-emphasis];
-  // --lbz-theme-text-medium-emphasis-on-dark: #lbz-theme-text.light[medium-emphasis];
-  // --lbz-theme-text-disabled-on-dark: #lbz-theme-text.light[disabled];
 
   // Light text on primary backgrounds
   --lbz-theme-text-high-emphasis-on-primary: if((#lbz-theme.light[on-primary] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
@@ -63,6 +53,16 @@
   --lbz-theme-text-high-emphasis-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
   --lbz-theme-text-medium-emphasis-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme-text.light[medium-emphasis], #lbz-theme-text.dark[medium-emphasis]);
   --lbz-theme-text-disabled-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme-text.light[disabled], #lbz-theme-text.dark[disabled]);
+
+  // Dark text on light backgrounds
+  --lbz-theme-text-high-emphasis-on-light: #lbz-theme-text.dark[high-emphasis];
+  --lbz-theme-text-medium-emphasis-on-light: #lbz-theme-text.dark[medium-emphasis];
+  --lbz-theme-text-disabled-on-light: #lbz-theme-text.dark[disabled];
+
+  // Light text on dark backgrounds
+  --lbz-theme-text-high-emphasis-on-dark: #lbz-theme-text.light[high-emphasis];
+  --lbz-theme-text-medium-emphasis-on-dark: #lbz-theme-text.light[medium-emphasis];
+  --lbz-theme-text-disabled-on-dark: #lbz-theme-text.light[disabled];
 
   // Outline colors
   --lbz-theme-outline-on-primary: if((#lbz-theme.light[on-primary] = #fff), #lbz-theme-outline[light], #lbz-theme-outline[dark]);
@@ -89,16 +89,16 @@ html[theme="dark"] {
   // Surface, background, and error colors
   --lbz-theme-background: #lbz-theme.dark[background];
   --lbz-theme-surface: #lbz-theme.dark[surface];
-  --lbz-theme-surface-0: #121212; // Higher elevation, lighter surface
-  --lbz-theme-surface-1: #1e1e1e; // rgba(18, 18, 18, .05)
-  --lbz-theme-surface-2: #222; // rgba(18, 18, 18, .07)
-  --lbz-theme-surface-3: #242424; // rgba(18, 18, 18, .08)
-  --lbz-theme-surface-4: #262626; // rgba(18, 18, 18, .09)
-  --lbz-theme-surface-6: #2c2c2c; // rgba(18, 18, 18, .11)
-  --lbz-theme-surface-8: #2e2e2e; // rgba(18, 18, 18, .12)
-  --lbz-theme-surface-12: #323232; // rgba(18, 18, 18, .14)
-  --lbz-theme-surface-16: #363636; // rgba(18, 18, 18, .15)
-  --lbz-theme-surface-24: #383838; // rgba(18, 18, 18, .16)
+  --lbz-theme-surface-0: #lbz-theme-surface.dark[0];
+  --lbz-theme-surface-1: #lbz-theme-surface.dark[1];
+  --lbz-theme-surface-2: #lbz-theme-surface.dark[2];
+  --lbz-theme-surface-3: #lbz-theme-surface.dark[3];
+  --lbz-theme-surface-4: #lbz-theme-surface.dark[4];
+  --lbz-theme-surface-6: #lbz-theme-surface.dark[6];
+  --lbz-theme-surface-8: #lbz-theme-surface.dark[8];
+  --lbz-theme-surface-12: #lbz-theme-surface.dark[12];
+  --lbz-theme-surface-16: #lbz-theme-surface.dark[16];
+  --lbz-theme-surface-24: #lbz-theme-surface.dark[24];
   --lbz-theme-error: #lbz-theme.dark[error];
 
   // Typography and iconography colors
@@ -139,5 +139,5 @@ body {
 
 body {
   background-color: var(--lbz-theme-surface);
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }

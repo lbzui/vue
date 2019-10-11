@@ -54,21 +54,6 @@
     height: 24px;
   }
 
-  // background
-  &&--primary,
-  &&--primary-variant {
-    color: var(--lbz-theme-on-primary);
-    background-color: var(--lbz-theme-primary);
-
-    &::before {
-      background-color: var(--lbz-theme-on-primary);
-    }
-  }
-
-  &&--primary-variant {
-    background-color: var(--lbz-theme-primary-variant);
-  }
-
   // type
   &&--mini {
     width: 40px;
@@ -109,6 +94,73 @@
 
     &::before {
       opacity: #lbz-state.primary[active];
+    }
+  }
+
+  // background
+  &&--primary,
+  &&--primary-variant {
+    color: var(--lbz-theme-on-primary);
+
+    &::before {
+      background-color: var(--lbz-theme-on-primary);
+    }
+  }
+
+  &&--primary {
+    background-color: var(--lbz-theme-primary);
+  }
+
+  &&--primary-variant {
+    background-color: var(--lbz-theme-primary-variant);
+  }
+
+  &&--surface,
+  &&--light,
+  &&--dark {
+    &:hover {
+      &::before {
+        opacity: #lbz-state.surface[hover];
+      }
+    }
+
+    &:focus {
+      &::before {
+        opacity: #lbz-state.surface[focus];
+      }
+    }
+
+    &:active {
+      &::before {
+        opacity: #lbz-state.surface[active];
+      }
+    }
+  }
+
+  &&--surface {
+    color: var(--lbz-theme-on-surface);
+    .lbz-surface--6();
+
+    &::before {
+      background-color: var(--lbz-theme-on-surface);
+    }
+  }
+
+  &&--light {
+    color: @black;
+    background-color: #lbz-theme-surface.light[6];
+
+    &::before {
+      background-color: @black;
+    }
+  }
+
+  &&--dark {
+    color: @white;
+    background-color: #lbz-theme-surface.dark[6];
+
+    &::before {
+      background-color: @white;
     }
   }
 }

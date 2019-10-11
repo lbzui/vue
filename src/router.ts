@@ -91,6 +91,11 @@ export default new Router({
       component: () => import('./views/components/Radio.vue'),
     },
     {
+      path: '/components/tab',
+      name: 'tab',
+      component: () => import('./views/components/Tab.vue'),
+    },
+    {
       path: '/components/top-app-bar',
       name: 'top-app-bar',
       component: () => import('./views/components/TopAppBar.vue'),

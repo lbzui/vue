@@ -34,7 +34,7 @@ export default class IconButton extends Vue {
 
   // toggle: true, false (default)
   @Prop({ type: Boolean, default: false }) private toggle!: boolean;
-  // on-background: 'primary', 'secondary', 'surface' (default)
+  // on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
   // ripple: true (default), false
   @Prop({ type: Boolean, default: true }) private ripple!: boolean;

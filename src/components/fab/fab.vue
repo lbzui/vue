@@ -23,7 +23,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class FAB extends Vue {
   // type: 'standard' (default), 'mini', 'extended'
   @Prop({ type: String, default: '' }) private type!: string;
-  // background: 'primary', 'primary-variant', 'secondary' (default)
+  // background: 'primary', 'primary-variant', 'secondary' (default), 'surface', 'light', 'dark'
   @Prop({ type: String, default: '' }) private background!: string;
   // ripple: true (default), false
   @Prop({ type: Boolean, default: true }) private ripple!: boolean;

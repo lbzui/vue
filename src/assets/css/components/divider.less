@@ -2,28 +2,33 @@
 .lbz-divider {
   margin: 0;
   border: none;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: var(--lbz-theme-outline-on-surface);
+  border-bottom: 1px solid;
+  border-color: var(--lbz-theme-outline-on-surface);
 
-  // color
-  &&--primary {
-    border-bottom-color: var(--lbz-theme-outline-on-primary);
-  }
+  // on-background
+  &&--on {
+    &-primary {
+      border-color: var(--lbz-theme-outline-on-primary);
+    }
 
-  &&--secondary {
-    border-bottom-color: var(--lbz-theme-outline-on-secondary);
-  }
+    &-secondary {
+      border-color: var(--lbz-theme-outline-on-secondary);
+    }
 
-  &&--background {
-    border-bottom-color: var(--lbz-theme-outline-on-background);
-  }
+    &-background {
+      border-color: var(--lbz-theme-outline-on-background);
+    }
 
-  &&--surface {
-    border-bottom-color: var(--lbz-theme-outline-on-surface);
-  }
+    &-error {
+      border-color: var(--lbz-theme-outline-on-error);
+    }
 
-  &&--error {
-    border-bottom-color: var(--lbz-theme-outline-on-error);
+    &-light {
+      border-color: #lbz-theme-outline[dark];
+    }
+
+    &-dark {
+      border-color: #lbz-theme-outline[light];
+    }
   }
 }

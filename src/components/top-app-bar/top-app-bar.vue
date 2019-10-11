@@ -42,7 +42,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class TopAppBar extends Vue {
   // type: 'standard' (default), 'extended', 'short'
   @Prop({ type: String, default: '' }) private type!: string;
-  // background: 'primary' (default), 'secondary', 'surface', 'transparent'
+  // background: 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'
   @Prop({ type: String, default: '' }) private background!: string;
   // inactive (type === 'standard'): '' (default), 'scroll-off', 'tab-fixed'
   @Prop({ type: String, default: '' }) private inactive!: string;
