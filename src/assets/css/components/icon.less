@@ -56,15 +56,6 @@
     color: var(--lbz-theme-error);
   }
 
-  &&--primary,
-  &&--secondary,
-  &&--error {
-    // disabled
-    &.is-disabled {
-      opacity: #lbz-state.surface[disabled];
-    }
-  }
-
   &&--light {
     color: #lbz-theme-text.light[medium-emphasis];
 
@@ -80,5 +71,10 @@
     &.is-disabled {
       color: #lbz-theme-text.dark[disabled];
     }
+  }
+
+  // disabled
+  &.is-disabled {
+    color: var(--lbz-theme-text-disabled-on-surface);
   }
 }

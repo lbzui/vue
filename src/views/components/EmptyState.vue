@@ -38,6 +38,7 @@
 .lbzui-components-empty-state {
   .lbz-empty-state {
     border: 1px solid var(--lbz-theme-outline-on-surface);
+    width: 360px;
     height: 614px;
 
     + .lbz-empty-state {

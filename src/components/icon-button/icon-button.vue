@@ -3,7 +3,7 @@
     :class="[
       !toggle ? 'material-icons' : '',
       'lbz-icon-button',
-      onBackground ? `lbz-icon-button--${ onBackground }` : '',
+      onBackground ? `lbz-icon-button--on-${ onBackground }` : '',
       {
         'lbz-ripple': !disabled && ripple,
         'is-active': toggle && cisActive

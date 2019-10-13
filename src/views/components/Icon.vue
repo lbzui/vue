@@ -11,7 +11,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ size: 18, 24 (default), 36, 48</h3>
     <lbz-icon :size="18">favorite</lbz-icon>
-    <lbz-icon :size="24">favorite</lbz-icon>
+    <lbz-icon>favorite</lbz-icon>
     <lbz-icon :size="36">favorite</lbz-icon>
     <lbz-icon :size="48">favorite</lbz-icon>
 
@@ -23,7 +23,7 @@
     <lbz-icon color="light">favorite</lbz-icon>
     <lbz-icon color="dark">favorite</lbz-icon>
 
-    <h3 class="lbz-typography--subtitle1">$ disabled (color): true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-icon disabled>favorite</lbz-icon>
     <lbz-icon color="primary" disabled>favorite</lbz-icon>
     <lbz-icon color="secondary" disabled>favorite</lbz-icon>

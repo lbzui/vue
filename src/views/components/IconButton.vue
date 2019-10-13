@@ -3,7 +3,7 @@
     <h2 class="lbz-typography--h5"># Icon button</h2>
 
     <h3 class="lbz-typography--subtitle1">$ toggle: true, false (default)</h3>
-    <lbz-icon-button>favorite_border</lbz-icon-button>
+    <lbz-icon-button @click.stop="fclick">favorite_border</lbz-icon-button>
     <lbz-icon-button>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
     </lbz-icon-button>
@@ -15,17 +15,23 @@
     <lbz-icon-button on-background="primary">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="secondary">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="background">favorite_border</lbz-icon-button>
-    <lbz-icon-button on-background="surface">favorite_border</lbz-icon-button>
+    <lbz-icon-button>favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="error">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="light">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="dark">favorite_border</lbz-icon-button>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
-    <lbz-icon-button ripple>favorite_border</lbz-icon-button>
+    <lbz-icon-button>favorite_border</lbz-icon-button>
     <lbz-icon-button :ripple="false">favorite_border</lbz-icon-button>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
+    <lbz-icon-button on-background="primary" disabled>favorite_border</lbz-icon-button>
+    <lbz-icon-button on-background="secondary" disabled>favorite_border</lbz-icon-button>
+    <lbz-icon-button on-background="background" disabled>favorite_border</lbz-icon-button>
     <lbz-icon-button disabled>favorite_border</lbz-icon-button>
+    <lbz-icon-button on-background="error" disabled>favorite_border</lbz-icon-button>
+    <lbz-icon-button on-background="light" disabled>favorite_border</lbz-icon-button>
+    <lbz-icon-button on-background="dark" disabled>favorite_border</lbz-icon-button>
 
     <h2 class="lbz-typography--h5"># Toggle button</h2>
     <h3 class="lbz-typography--subtitle1">$ active.sync (toggle): true, false (default)</h3>
@@ -84,7 +90,6 @@
     <lbz-icon-button
       :active.sync="vactive"
       toggle
-      on-background="surface"
       on-icon="favorite"
       off-icon="favorite_border"
     />
@@ -114,7 +119,6 @@
     <lbz-icon-button
       :active.sync="vactive"
       toggle
-      ripple
       on-icon="favorite"
       off-icon="favorite_border"
     />
@@ -130,6 +134,54 @@
     <lbz-icon-button
       :active.sync="vactive"
       toggle
+      on-background="primary"
+      disabled
+      on-icon="favorite"
+      off-icon="favorite_border"
+    />
+    <lbz-icon-button
+      :active.sync="vactive"
+      toggle
+      on-background="secondary"
+      disabled
+      on-icon="favorite"
+      off-icon="favorite_border"
+    />
+    <lbz-icon-button
+      :active.sync="vactive"
+      toggle
+      on-background="background"
+      disabled
+      on-icon="favorite"
+      off-icon="favorite_border"
+    />
+    <lbz-icon-button
+      :active.sync="vactive"
+      toggle
+      disabled
+      on-icon="favorite"
+      off-icon="favorite_border"
+    />
+    <lbz-icon-button
+      :active.sync="vactive"
+      toggle
+      on-background="error"
+      disabled
+      on-icon="favorite"
+      off-icon="favorite_border"
+    />
+    <lbz-icon-button
+      :active.sync="vactive"
+      toggle
+      on-background="light"
+      disabled
+      on-icon="favorite"
+      off-icon="favorite_border"
+    />
+    <lbz-icon-button
+      :active.sync="vactive"
+      toggle
+      on-background="dark"
       disabled
       on-icon="favorite"
       off-icon="favorite_border"
@@ -143,5 +195,9 @@ import { Component, Vue } from 'vue-property-decorator';
 @Component
 export default class IconButton extends Vue {
   private vactive: boolean = false;
+
+  private fclick(e: MouseEvent) {
+    alert(e);
+  }
 }
 </script>

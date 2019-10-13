@@ -41,13 +41,14 @@ import { Component, Model, Prop, Emit, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Radio extends Vue {
+  // [required]v-model: true, false, x, 'x'
   @Model('change', { type: [Boolean, Number, String], required: true }) private model!: boolean | number | string;
 
   // id: true, false, x, '' (default), 'x'
   @Prop({ type: [Boolean, Number, String], default: '' }) private id!: boolean | number | string;
   // name: true, false, x, '' (default), 'x'
   @Prop({ type: [Boolean, Number, String], default: '' }) private name!: boolean | number | string;
-  // value: true, false, x, 'x'
+  // [required]value: true, false, x, 'x'
   @Prop({ type: [Boolean, Number, String], required: true }) private value!: boolean | number | string;
   // color: 'primary', 'secondary' (default)
   @Prop({ type: String, default: '' }) private color!: string;

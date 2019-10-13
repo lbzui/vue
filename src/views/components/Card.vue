@@ -3,7 +3,7 @@
     <h2 class="lbz-typography--h5"># Elevated card</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'elevated' (default), 'outlined'</h3>
-    <lbz-card>
+    <lbz-card @click.stop="fclick">
       <template #start>
         <div class="lbz-card__header__center">
           <span class="lbz-card__title">Title goes here</span>
@@ -60,6 +60,30 @@
       <template #center>
         <div class="lbz-u-aspect-ratio--16x9 lbz-card__media">
           <img src="../../assets/img/logo.png">
+          <div class="lbz-card__supporting-text">
+            <span class="lbz-card__title">Title goes here</span>
+            <span class="lbz-card__subtitle">Secondary text</span>
+          </div>
+        </div>
+        <div class="lbz-card__supporting-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+        </div>
+      </template>
+      <template #end>
+        <div class="lbz-card__actions__buttons">
+          <lbz-button>Action 1</lbz-button>
+          <lbz-button>Action 2</lbz-button>
+        </div>
+        <div class="lbz-card__actions__icons">
+          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>share</lbz-icon-button>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card>
+      <template #center>
+        <div class="lbz-u-aspect-ratio--16x9 lbz-card__media">
+          <img src="../../assets/img/logo.png">
         </div>
         <div class="lbz-card__supporting-text">
           <span class="lbz-card__title">Title goes here</span>
@@ -81,7 +105,7 @@
     </lbz-card>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
-    <lbz-card ripple>
+    <lbz-card>
       <template #start>
         <div class="lbz-card__header__center">
           <span class="lbz-card__title">Title goes here</span>
@@ -157,7 +181,7 @@
     </lbz-card>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
-    <lbz-card type="outlined" ripple>
+    <lbz-card type="outlined">
       <template #start>
         <div class="lbz-card__header__center">
           <span class="lbz-typography--overline">Overline</span>
@@ -207,6 +231,17 @@
     </lbz-card>
   </article>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class Card extends Vue {
+  private fclick(e: MouseEvent) {
+    alert(e);
+  }
+}
+</script>
 
 <style lang="less">
 .lbzui-components-card {

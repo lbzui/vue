@@ -3,15 +3,20 @@
   "version": "0.1.0",
   "description": "Material Components for Vue.js",
   "keywords": [
-    "lbzui",
+    "vue",
+    "less",
+    "postcss",
+    "typescript",
     "material-components",
     "material-components-vue",
-    "material-design"
+    "material-design",
+    "lbzui",
+    "lbzui-vue"
   ],
   "homepage": "https://github.com/lbzui/lbzui-vue#readme",
   "bugs": {
     "url": "https://github.com/lbzui/lbzui-vue/issues",
-    "email": "<lbz_ui@163.com>"
+    "email": "lbz_ui@163.com"
   },
   "license": "MIT",
   "author": "LAN Bizhong <bizhong_lan@163.com> (https://lanbizhong.com/)",

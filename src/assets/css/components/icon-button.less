@@ -91,60 +91,74 @@
   }
 
   // on-background
-  &&--primary,
-  &&--secondary {
-    &:not(:disabled):hover {
-      &::before {
-        opacity: #lbz-state.primary[hover];
+  &&--on {
+    &-primary,
+    &-secondary,
+    &-error,
+    &-dark {
+      &:not(:disabled):hover {
+        &::before {
+          opacity: #lbz-state.primary[hover];
+        }
+      }
+
+      &:not(:disabled):focus {
+        &::before {
+          opacity: #lbz-state.primary[focus];
+        }
+      }
+
+      &:not(:disabled):active {
+        &::before {
+          opacity: #lbz-state.primary[active];
+        }
       }
     }
 
-    &:not(:disabled):focus {
+    &-primary {
       &::before {
-        opacity: #lbz-state.primary[focus];
+        background-color: var(--lbz-theme-on-primary);
       }
     }
 
-    &:not(:disabled):active {
+    &-secondary {
       &::before {
-        opacity: #lbz-state.primary[active];
+        background-color: var(--lbz-theme-on-secondary);
       }
     }
-  }
 
-  &&--primary {
-    &::before {
-      background-color: var(--lbz-theme-on-primary);
+    &-background {
+      &::before {
+        background-color: var(--lbz-theme-on-background);
+      }
     }
-  }
 
-  &&--secondary {
-    &::before {
-      background-color: var(--lbz-theme-on-secondary);
+    &-error {
+      &::before {
+        background-color: var(--lbz-theme-on-error);
+      }
     }
-  }
 
-  &&--background {
-    &::before {
-      background-color: var(--lbz-theme-on-background);
+    &-light {
+      // disabled
+      &:disabled {
+        color: var(--lbz-theme-text-disabled-on-light);
+      }
+
+      &::before {
+        background-color: @black;
+      }
     }
-  }
 
-  &&--error {
-    &::before {
-      background-color: var(--lbz-theme-on-error);
-    }
-  }
+    &-dark {
+      // disabled
+      &:disabled {
+        color: var(--lbz-theme-text-disabled-on-dark);
+      }
 
-  &&--light {
-    &::before {
-      background-color: @black;
-    }
-  }
-
-  &&--dark {
-    &::before {
-      background-color: @white;
+      &::before {
+        background-color: @white;
+      }
     }
   }
 

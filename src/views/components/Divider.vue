@@ -10,7 +10,7 @@
     <br>
     <lbz-divider on-background="background"/>
     <br>
-    <lbz-divider on-background="surface"/>
+    <lbz-divider/>
     <br>
     <lbz-divider on-background="error"/>
     <br>

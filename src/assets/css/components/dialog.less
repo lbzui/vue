@@ -162,13 +162,21 @@
 
   &.lbz-dialog-enter,
   &.lbz-dialog-leave-to {
-    .lbz-dialog__container {
-      opacity: 0;
-      transform: scale(.8);
-    }
-
+    .lbz-dialog__container,
     .lbz-dialog__scrim {
       opacity: 0;
+    }
+
+    &:not(.lbz-dialog--full-screen) {
+      .lbz-dialog__container {
+        transform: scale(.8);
+      }
+    }
+
+    &.lbz-dialog--full-screen {
+      .lbz-dialog__container {
+        transform: translate3d(0, 30%, 0);
+      }
     }
   }
 }

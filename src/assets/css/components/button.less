@@ -88,10 +88,82 @@
     }
   }
 
+  // color
+  &&--secondary {
+    color: var(--lbz-theme-secondary);
+
+    &::before {
+      background-color: var(--lbz-theme-secondary);
+    }
+  }
+
+  &&--error {
+    color: var(--lbz-theme-error);
+
+    &::before {
+      background-color: var(--lbz-theme-error);
+    }
+  }
+
+  &&--light {
+    color: @white;
+
+    // disabled
+    &:not(.lbz-button--contained):disabled {
+      color: #lbz-theme-text.light[disabled];
+    }
+
+    &::before {
+      background-color: @white;
+    }
+
+    &:not(:disabled):hover {
+      &::before {
+        opacity: #lbz-state.surface[hover];
+      }
+    }
+
+    &:not(:disabled):focus {
+      &::before {
+        opacity: #lbz-state.surface[focus];
+      }
+    }
+
+    &:not(:disabled):active {
+      &::before {
+        opacity: #lbz-state.surface[active];
+      }
+    }
+  }
+
+  &&--dark {
+    color: @black;
+
+    // disabled
+    &:not(.lbz-button--contained):disabled {
+      color: #lbz-theme-text.dark[disabled];
+    }
+
+    &::before {
+      background-color: @black;
+    }
+  }
+
   // type
   &&--outlined {
     border: 1px solid var(--lbz-theme-outline-on-surface);
     padding: 0 15px;
+
+    // color
+    &.lbz-button {
+      &--light {
+        border-color: #lbz-theme-outline[light];
+      }
+
+      &--dark {
+        border-color: #lbz-theme-outline[dark];
+      }
+    }
   }
 
   &&--contained {
@@ -101,12 +173,52 @@
     .lbz-shadow--2();
     transition: box-shadow 280ms #lbz-motion.easing[standard];
 
+    // color
+    &.lbz-button {
+      &--secondary {
+        color: var(--lbz-theme-on-secondary);
+        background-color: var(--lbz-theme-secondary);
+
+        &::before {
+          background-color: var(--lbz-theme-on-secondary);
+        }
+      }
+
+      &--error {
+        color: var(--lbz-theme-on-error);
+        background-color: var(--lbz-theme-error);
+
+        &::before {
+          background-color: var(--lbz-theme-on-error);
+        }
+      }
+
+      &--light {
+        color: @black;
+        background-color: @white;
+
+        &::before {
+          background-color: @black;
+        }
+      }
+
+      &--dark {
+        color: @white;
+        background-color: @black;
+
+        &::before {
+          background-color: @white;
+        }
+      }
+    }
+
     // unelevated
     &.is-unelevated {
       box-shadow: none;
     }
 
     &:disabled {
+      color: var(--lbz-theme-text-disabled-on-surface);
       background-color: var(--lbz-theme-outline-on-surface);
       box-shadow: none;
     }

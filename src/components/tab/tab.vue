@@ -18,13 +18,14 @@ import EventBus from '@/utils/event-bus.ts';
 
 @Component
 export default class Tab extends Vue {
+  // [required]v-model: true, false, x, 'x'
   @Model('change', { type: [Boolean, Number, String], required: true }) private model!: boolean | number | string;
 
   // type: 'fixed' (default), 'scrollable'
   @Prop({ type: String, default: '' }) private type!: string;
   // on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
-  // alignment (type === 'fixed'): 'left', 'center', 'right'
+  // alignment (type === 'fixed'): '' (default), 'left', 'center', 'right'
   @Prop({ type: String, default: '' }) private alignment!: string;
   // stacked: true, false (default)
   @Prop({ type: Boolean, default: false }) private stacked!: boolean;
@@ -48,7 +49,6 @@ export default class Tab extends Vue {
   @Emit('change')
   private fvalueChanged(val: boolean | number | string, e: MouseEvent) {
     this.pmodel = val;
-    return val;
   }
 }
 </script>

@@ -4,7 +4,7 @@
       'material-icons lbz-icon',
       size ? `lbz-icon--${ size }` : '',
       color ? `lbz-icon--${ color }` : '',
-      { 'is-disabled': color && disabled }
+      { 'is-disabled': disabled }
     ]"
   ><slot/></i>
 </template>
@@ -18,7 +18,7 @@ export default class Icon extends Vue {
   @Prop({ type: Number }) private size!: number;
   // color: '' (default), 'primary', 'secondary', 'error', light', 'dark'
   @Prop({ type: String, default: '' }) private color!: string;
-  // disabled (color): true, false (default)
+  // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
 }
 </script>

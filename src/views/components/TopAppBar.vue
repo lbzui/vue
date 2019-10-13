@@ -22,7 +22,7 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'</h3>
-    <lbz-top-app-bar background="primary" title="Page title">
+    <lbz-top-app-bar title="Page title">
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
       </template>
@@ -54,12 +54,12 @@
     </lbz-top-app-bar>
     <lbz-top-app-bar background="surface" title="Page title">
       <template #start>
-        <lbz-icon-button on-background="surface">menu</lbz-icon-button>
+        <lbz-icon-button>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="surface">share</lbz-icon-button>
-        <lbz-icon-button on-background="surface">search</lbz-icon-button>
-        <lbz-icon-button on-background="surface" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button>share</lbz-icon-button>
+        <lbz-icon-button>search</lbz-icon-button>
+        <lbz-icon-button class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar background="light" title="Page title">
@@ -170,7 +170,7 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'</h3>
-    <lbz-top-app-bar type="extended" background="primary" title="Page title">
+    <lbz-top-app-bar type="extended" title="Page title">
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
       </template>
@@ -202,12 +202,12 @@
     </lbz-top-app-bar>
     <lbz-top-app-bar type="extended" background="surface" title="Page title">
       <template #start>
-        <lbz-icon-button on-background="surface">menu</lbz-icon-button>
+        <lbz-icon-button>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="surface">share</lbz-icon-button>
-        <lbz-icon-button on-background="surface">search</lbz-icon-button>
-        <lbz-icon-button on-background="surface" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button>share</lbz-icon-button>
+        <lbz-icon-button>search</lbz-icon-button>
+        <lbz-icon-button class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar type="extended" background="light" title="Page title">
@@ -266,11 +266,7 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ media (type === 'extended'): '' (default), 'x'</h3>
-    <lbz-top-app-bar
-      type="extended"
-      title="Page title"
-      :media="require('@/assets/img/logo.png')"
-    >
+    <lbz-top-app-bar type="extended" title="Page title" :media="require('@/assets/img/logo.png')">
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
       </template>
@@ -296,7 +292,7 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'</h3>
-    <lbz-top-app-bar type="short" background="primary" title="Page title">
+    <lbz-top-app-bar type="short" title="Page title">
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
       </template>
@@ -328,12 +324,12 @@
     </lbz-top-app-bar>
     <lbz-top-app-bar type="short" background="surface" title="Page title">
       <template #start>
-        <lbz-icon-button on-background="surface">menu</lbz-icon-button>
+        <lbz-icon-button>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="surface">share</lbz-icon-button>
-        <lbz-icon-button on-background="surface">search</lbz-icon-button>
-        <lbz-icon-button on-background="surface" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button>share</lbz-icon-button>
+        <lbz-icon-button>search</lbz-icon-button>
+        <lbz-icon-button class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar type="short" background="light" title="Page title">
@@ -405,8 +401,15 @@ export default class TopAppBar extends Vue {
 <style lang="less">
 .lbzui-components-top-app-bar {
   .lbz-top-app-bar {
-    position: static;
     margin-bottom: 16px;
+
+    &:not(.lbz-top-app-bar--short) {
+      width: 360px;
+
+      &.is-dense {
+        min-width: 720px;
+      }
+    }
 
     &.lbz-top-app-bar--short {
       margin-right: 16px;

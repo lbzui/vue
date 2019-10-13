@@ -2,32 +2,9 @@
   <article class="lbzui-components-list">
     <h2 class="lbz-typography--h5"># List</h2>
 
-    <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
-    <lbz-list>
-      <lbz-list-item>One-line item</lbz-list-item>
-    </lbz-list>
-    <lbz-list subtitle="Subtitle">
-      <lbz-list-item>One-line item</lbz-list-item>
-    </lbz-list>
-
-    <h3 class="lbz-typography--subtitle1">$ placement: 'start' (default), 'center'</h3>
-    <lbz-list subtitle="Subtitle" placement="start">
-      <lbz-list-item>One-line item</lbz-list-item>
-    </lbz-list>
-    <lbz-list subtitle="Subtitle" placement="center">
-      <lbz-list-item>
-        <template #start>
-          <lbz-icon>favorite</lbz-icon>
-        </template>
-        <template #center>One-line item</template>
-      </lbz-list-item>
-    </lbz-list>
-
-    <h2 class="lbz-typography--h5"># List item</h2>
-
     <h3 class="lbz-typography--subtitle1">$ type: 'one-line' (default), 'two-line', 'three-line'</h3>
-    <lbz-list type="one-line" subtitle="One line">
-      <lbz-list-item>One-line item</lbz-list-item>
+    <lbz-list subtitle="One line">
+      <lbz-list-item @click.stop="fclick">One-line item</lbz-list-item>
       <lbz-list-item>
         <template #center>One-line item</template>
         <template #end>
@@ -216,7 +193,7 @@
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ dense: true, false (default)</h3>
-    <lbz-list type="one-line" dense subtitle="One line">
+    <lbz-list dense subtitle="One line">
       <lbz-list-item>One-line item</lbz-list-item>
       <lbz-list-item>
         <template #center>One-line item</template>
@@ -405,11 +382,34 @@
       </lbz-list-item>
     </lbz-list>
 
+    <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
+    <lbz-list>
+      <lbz-list-item>One-line item</lbz-list-item>
+    </lbz-list>
+    <lbz-list subtitle="Subtitle">
+      <lbz-list-item>One-line item</lbz-list-item>
+    </lbz-list>
+
+    <h3 class="lbz-typography--subtitle1">$ placement: 'start' (default), 'center'</h3>
+    <lbz-list subtitle="Subtitle">
+      <lbz-list-item>One-line item</lbz-list-item>
+    </lbz-list>
+    <lbz-list subtitle="Subtitle" placement="center">
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>favorite</lbz-icon>
+        </template>
+        <template #center>One-line item</template>
+      </lbz-list-item>
+    </lbz-list>
+
+    <h2 class="lbz-typography--h5"># List item</h2>
+
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
     <h3 class="lbz-typography--subtitle1">$ active: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ selected: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
-    <lbz-list placement="start">
+    <lbz-list>
       <lbz-list-item :ripple="false">
         <template #start>
           <lbz-icon>favorite</lbz-icon>
@@ -462,10 +462,22 @@
   </article>
 </template>
 
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class List extends Vue {
+  private fclick(e: MouseEvent) {
+    alert(e);
+  }
+}
+</script>
+
 <style lang="less">
 .lbzui-components-list {
   .lbz-list {
     border: 1px solid var(--lbz-theme-outline-on-surface);
+    max-width: 600px;
 
     + .lbz-list {
       margin-top: 16px;

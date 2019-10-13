@@ -3,6 +3,7 @@
     :class="[
       'lbz-button',
       type ? `lbz-button--${ type }` : '',
+      color ? `lbz-button--${ color }` : '',
       {
         'lbz-ripple': !disabled && ripple,
         'is-full-width': fullWidth,
@@ -27,6 +28,8 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class Button extends Vue {
   // type: 'text' (default), 'outlined', 'contained'
   @Prop({ type: String, default: '' }) private type!: string;
+  // color: 'primary' (default), 'secondary', 'error', 'light', 'dark'
+  @Prop({ type: String, default: '' }) private color!: string;
   // ripple: true (default), false
   @Prop({ type: Boolean, default: true }) private ripple!: boolean;
   // full-width: true, false (default)

@@ -124,7 +124,7 @@ export default class App extends Vue {
   ];
   private vtheme: string = 'light';
 
-  private fsetTheme(val: boolean | number | string, e: MouseEvent) {
+  private fsetTheme(val: string, e: MouseEvent) {
     document.documentElement.setAttribute('theme', val);
   }
 }
@@ -146,27 +146,27 @@ export default class App extends Vue {
 }
 
 .lbzui {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
   width: 100%;
   height: 100%;
+  .lbz-typography--body1();
   color: var(--lbz-theme-text-medium-emphasis-on-surface);
 
   & &__drawer {
-    flex: none;
     overflow-x: hidden;
     overflow-y: auto;
-    position: relative;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
     .lbz-elevation--16();
+    box-sizing: border-box;
     border-right: 1px solid var(--lbz-theme-outline-on-surface);
     width: 256px;
     .lbz-surface--16();
 
     h1 {
       margin: 0;
-      padding: 14px var(--lbz-layout-grid-margin);
+      padding: 14px 16px;
       .lbz-typography--h4();
       color: var(--lbz-theme-text-high-emphasis-on-surface);
       cursor: pointer;
@@ -175,22 +175,34 @@ export default class App extends Vue {
     .lbz-list {
       margin: 0 8px;
 
+      .lbz-list__subtitle {
+        padding-right: 8px;
+        padding-left: 8px;
+        .lbz-typography--body2();
+      }
+
       .lbz-list-item {
         border-radius: 4px;
+        padding-right: 8px;
+        padding-left: 8px;
         .lbz-typography--subtitle2();
+
+        + .lbz-list-item {
+          margin-top: 8px;
+        }
       }
     }
   }
 
   & &__main {
-    flex: 1;
-    overflow: auto;
+    overflow-x: auto;
+    margin-left: 256px;
+    min-height: 100%;
 
     .lbzui__main__container {
       box-sizing: border-box;
       padding: var(--lbz-layout-grid-margin);
       min-width: calc(360px + 2 * var(--lbz-layout-grid-margin));
-      min-height: 100%;
     }
 
     .lbz-typography--h5 {

@@ -8,7 +8,7 @@
         'is-active': cisActive
       }
     ]"
-    :[vattributeName]="to"
+    :[vattrName]="to"
     @click.stop="fclick($event)"
   >
     <lbz-icon v-if="icon || $slots.icon" class="lbz-tab-item__icon">
@@ -25,10 +25,10 @@ import EventBus from '@/utils/event-bus.ts';
 
 @Component
 export default class TabItem extends Vue {
+  // [required]value: true, false, x, 'x'
+  @Prop({ type: [Boolean, Number, String], required: true }) private value!: boolean | number | string;
   // tag: '' (default), 'button', 'router-link', 'a', 'x'
   @Prop({ type: String, default: '' }) private tag!: string;
-  // value: true, false, x, 'x'
-  @Prop({ type: [Boolean, Number, String], required: true }) private value!: boolean | number | string;
   // to (tag === 'router-link'): '' (default), 'x'
   @Prop({ type: String, default: '' }) private to!: string;
   // icon: '' (default), 'x'
@@ -38,7 +38,7 @@ export default class TabItem extends Vue {
   @Inject() private ptag!: string;
   @Inject() private pripple!: boolean;
 
-  private vattributeName: string = this.ctagName === 'router-link' ? 'to' : '';
+  private vattrName: string = this.ctagName === 'router-link' ? 'to' : '';
 
   get ctagName() {
     return this.tag || this.ptag;
