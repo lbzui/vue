@@ -29,6 +29,8 @@
         <lbz-divider v-show="divider"/>
       </header>
       <main
+        v-scroll="fscroll"
+        ref="scroller"
         :class="[
           'lbz-backdrop__front-layer__content',
           { 'is-horizontal': horizontal }
@@ -47,7 +49,7 @@
 </template>
 
 <script lang="ts">
-import { Component, PropSync, Prop, Vue } from 'vue-property-decorator';
+import { Component, PropSync, Prop, Ref, Emit, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Backdrop extends Vue {
@@ -65,6 +67,8 @@ export default class Backdrop extends Vue {
   // scrim (front-layer): true, false (default)
   @Prop({ type: Boolean, default: false }) private scrim!: boolean;
 
+  @Ref('scroller') private scroller!: HTMLFormElement;
+
   private ftoggle() {
     this.cisActive = !this.cisActive;
   }
@@ -75,6 +79,11 @@ export default class Backdrop extends Vue {
 
   private fclose() {
     this.cisActive = false;
+  }
+
+  @Emit('scroll')
+  private fscroll(e: Event, position: object) {
+    return this.scroller;
   }
 }
 </script>

@@ -109,7 +109,7 @@
     </lbz-backdrop>
 
     <h3 class="lbz-typography--subtitle1">$ horizontal (front-layer): true, false (default)</h3>
-    <lbz-backdrop :active.sync="vactive" horizontal>
+    <lbz-backdrop :active.sync="vactive" horizontal @scroll="fscroll">
       <template #back-layer-header>
         <lbz-top-app-bar title="Page title">
           <template #start>
@@ -133,7 +133,7 @@
         <article style="width: 1280px; height: 100%;">Front layer content</article>
       </template>
     </lbz-backdrop>
-    <lbz-backdrop :active.sync="vactive">
+    <lbz-backdrop :active.sync="vactive" @scroll="fscroll">
       <template #back-layer-header>
         <lbz-top-app-bar title="Page title">
           <template #start>
@@ -197,6 +197,12 @@ export default class Backdrop extends Vue {
 
   private ftoggleActive() {
     this.rbackdrop.ftoggle();
+  }
+
+  private fscroll(el: object, e: Event, position: object) {
+    console.log((el as any).scrollHeight);
+    console.log(e);
+    alert(JSON.stringify(position));
   }
 }
 </script>

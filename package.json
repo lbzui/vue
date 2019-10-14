@@ -39,11 +39,11 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "normalize.css": "^8.0.1",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0",
-    "vue-router": "^3.0.3"
+    "vue-router": "^3.0.3",
+    "vue-scroll": "^2.1.12"
   },
   "devDependencies": {
     "@types/jest": "^23.1.4",
@@ -57,6 +57,7 @@
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "mem": "^5.1.1",
+    "normalize.css": "^8.0.1",
     "postcss-preset-env": "^6.7.0",
     "postcss-pxtorem": "^4.0.1",
     "ts-jest": "^23.0.0",
