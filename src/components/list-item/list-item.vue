@@ -1,15 +1,16 @@
 <template>
-  <li
+  <component
+    v-bind="cbind"
     :class="[
       'lbz-list-item',
       {
-        'lbz-ripple': !disabled && ripple,
+        'lbz-ripple': !cisDisabled && pripple,
         'is-active': active,
         'is-selected': selected,
-        'is-disabled': disabled
+        'is-disabled': cisDisabled
       }
     ]"
-    @click="disabled ? '' : $emit('click', $event)"
+    @click="cisDisabled ? '' : $emit('click', $event)"
   >
     <div v-if="$slots.start" class="lbz-list-item__start">
       <slot name="start"/>
@@ -21,21 +22,44 @@
     <div v-if="$slots.end" class="lbz-list-item__end">
       <slot name="end"/>
     </div>
-  </li>
+  </component>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Inject, Vue } from 'vue-property-decorator';
 
 @Component
 export default class ListItem extends Vue {
-  // ripple: true (default), false
-  @Prop({ type: Boolean, default: true }) private ripple!: boolean;
+  // router-link: true, false (default)
+  @Prop({ type: Boolean, default: false }) private routerLink!: boolean;
+  // tag: '' (default), li', 'a', 'x'
+  @Prop({ type: String, default: '' }) private tag!: string;
+  // to (router-link): '' (default), 'x', { x: x }
+  @Prop({ type: [String, Object], default: '' }) private to!: string;
   // active: true, false (default)
   @Prop({ type: Boolean, default: false }) private active!: boolean;
   // selected: true, false (default)
   @Prop({ type: Boolean, default: false }) private selected!: boolean;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
+
+  @Inject() private prouterLink!: boolean;
+  @Inject() private ptag!: string;
+  @Inject() private pripple!: boolean;
+  @Inject() private pdisabled!: boolean;
+
+  get cbind() {
+    return this.routerLink || this.prouterLink ? {
+      is: 'router-link',
+      tag: this.tag || this.ptag,
+      to: this.to,
+    } : {
+      is: this.tag || this.ptag,
+    };
+  }
+
+  get cisDisabled() {
+    return this.disabled || this.pdisabled;
+  }
 }
 </script>

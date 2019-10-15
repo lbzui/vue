@@ -6,6 +6,12 @@
     <lbz-button @click.stop="fclick">Text</lbz-button>
     <lbz-button icon="favorite">Text</lbz-button>
 
+    <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ to (router-link): '' (default), 'x', { x: x }</h3>
+    <lbz-button router-link tag="a" to="/components/button">Router-link</lbz-button>
+    <lbz-button tag="a" href="#/components/button" icon="favorite">Non router-link</lbz-button>
+
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'error', 'light', 'dark'</h3>
     <lbz-button>Primary</lbz-button>
     <lbz-button icon="favorite">Primary</lbz-button>
@@ -75,6 +81,12 @@
     <lbz-button type="outlined">Outlined</lbz-button>
     <lbz-button type="outlined" icon="favorite">Outlined</lbz-button>
 
+    <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ to (router-link): '' (default), 'x', { x: x }</h3>
+    <lbz-button type="outlined" router-link tag="a" to="/components/button">Router-link</lbz-button>
+    <lbz-button type="outlined" tag="a" href="#/components/button" icon="favorite">Non router-link</lbz-button>
+
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'error', 'light', 'dark'</h3>
     <lbz-button type="outlined">Primary</lbz-button>
     <lbz-button type="outlined" icon="favorite">Primary</lbz-button>
@@ -143,6 +155,12 @@
     <h3 class="lbz-typography--subtitle1">$ type: 'text' (default), 'outlined', 'contained'</h3>
     <lbz-button type="contained">Contained</lbz-button>
     <lbz-button type="contained" icon="favorite">Contained</lbz-button>
+
+    <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ to (router-link): '' (default), 'x', { x: x }</h3>
+    <lbz-button type="contained" router-link tag="a" to="/components/button">Router-link</lbz-button>
+    <lbz-button type="contained" tag="a" href="#/components/button" icon="favorite">Non router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'error', 'light', 'dark'</h3>
     <lbz-button type="contained">Primary</lbz-button>

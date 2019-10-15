@@ -36,7 +36,7 @@ export default class Radio extends Vue {
 
   private fchange(val: boolean | number | string, e: MouseEvent) {
     alert(val);
-    alert(e);
+    console.log(e);
   }
 }
 </script>

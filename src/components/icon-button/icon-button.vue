@@ -1,16 +1,17 @@
 <template>
-  <button
+  <component
+    v-bind="cbind"
     :class="[
       !toggle ? 'material-icons' : '',
       'lbz-icon-button',
       onBackground ? `lbz-icon-button--on-${ onBackground }` : '',
       {
         'lbz-ripple': !disabled && ripple,
-        'is-active': toggle && cisActive
+        'is-active': toggle && cisActive,
+        'is-disabled': disabled
       }
     ]"
-    :disabled="disabled"
-    @click="fclick($event)"
+    @click="disabled ? '' : fclick($event)"
   >
     <template v-if="toggle">
       <lbz-icon class="lbz-icon-button__icon lbz-icon-button__icon--on">
@@ -21,7 +22,7 @@
       </lbz-icon>
     </template>
     <template v-else><slot/></template>
-  </button>
+  </component>
 </template>
 
 <script lang="ts">
@@ -34,6 +35,12 @@ export default class IconButton extends Vue {
 
   // toggle: true, false (default)
   @Prop({ type: Boolean, default: false }) private toggle!: boolean;
+  // router-link (!toggle): true, false (default)
+  @Prop({ type: Boolean, default: false }) private routerLink!: boolean;
+  // tag: 'button' (default), 'a', 'x'
+  @Prop({ type: String, default: 'button' }) private tag!: string;
+  // to (!toggle && router-link): '' (default), 'x', { x: x }
+  @Prop({ type: [String, Object], default: '' }) private to!: string;
   // on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
   // ripple: true (default), false
@@ -44,6 +51,18 @@ export default class IconButton extends Vue {
   @Prop({ type: String, default: '' }) private onIcon!: string;
   // off-icon (toggle): '' (default), 'x'
   @Prop({ type: String, default: '' }) private offIcon!: string;
+
+  get cbind() {
+    return this.routerLink ? {
+      is: 'router-link',
+      tag: this.tag,
+      to: this.to,
+      disabled: this.tag === 'button' && this.disabled,
+    } : {
+      is: this.tag,
+      disabled: this.tag === 'button' && this.disabled,
+    };
+  }
 
   @Emit('click')
   private fclick(e: MouseEvent) {

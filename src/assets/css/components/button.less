@@ -68,7 +68,7 @@
     }
   }
 
-  &:not(:disabled):hover {
+  &:not(.is-disabled):hover {
     cursor: pointer;
 
     &::before {
@@ -76,13 +76,13 @@
     }
   }
 
-  &:not(:disabled):focus {
+  &:not(.is-disabled):focus {
     &::before {
       opacity: #lbz-state.primary[focus];
     }
   }
 
-  &:not(:disabled):active {
+  &:not(.is-disabled):active {
     &::before {
       opacity: #lbz-state.primary[active];
     }
@@ -109,7 +109,7 @@
     color: @white;
 
     // disabled
-    &:not(.lbz-button--contained):disabled {
+    &:not(.lbz-button--contained).is-disabled {
       color: #lbz-theme-text.light[disabled];
     }
 
@@ -117,19 +117,19 @@
       background-color: @white;
     }
 
-    &:not(:disabled):hover {
+    &:not(.is-disabled):hover {
       &::before {
         opacity: #lbz-state.surface[hover];
       }
     }
 
-    &:not(:disabled):focus {
+    &:not(.is-disabled):focus {
       &::before {
         opacity: #lbz-state.surface[focus];
       }
     }
 
-    &:not(:disabled):active {
+    &:not(.is-disabled):active {
       &::before {
         opacity: #lbz-state.surface[active];
       }
@@ -140,7 +140,7 @@
     color: @black;
 
     // disabled
-    &:not(.lbz-button--contained):disabled {
+    &:not(.lbz-button--contained).is-disabled {
       color: #lbz-theme-text.dark[disabled];
     }
 
@@ -217,7 +217,7 @@
       box-shadow: none;
     }
 
-    &:disabled {
+    &.is-disabled {
       color: var(--lbz-theme-text-disabled-on-surface);
       background-color: var(--lbz-theme-outline-on-surface);
       box-shadow: none;
@@ -231,18 +231,18 @@
       margin-left: -4px;
     }
 
-    &:not(.is-unelevated):not(:disabled):hover,
-    &:not(.is-unelevated):not(:disabled):focus {
+    &:not(.is-unelevated):not(.is-disabled):hover,
+    &:not(.is-unelevated):not(.is-disabled):focus {
       .lbz-shadow--4();
     }
 
-    &:not(.is-unelevated):not(:disabled):active {
+    &:not(.is-unelevated):not(.is-disabled):active {
       .lbz-shadow--8();
     }
   }
 
   // disabled
-  &:disabled {
+  &.is-disabled {
     color: var(--lbz-theme-text-disabled-on-surface);
   }
 

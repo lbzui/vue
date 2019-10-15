@@ -143,9 +143,23 @@
     }
   }
 
-  &:not(.is-active):not(.router-link-exact-active):not(.is-selected):not(.is-disabled):hover {
-    &::before {
-      opacity: #lbz-state.surface[hover];
+  &:not(.is-active):not(.router-link-exact-active):not(.is-selected):not(.is-disabled) {
+    &:hover {
+      &::before {
+        opacity: #lbz-state.surface[hover];
+      }
+    }
+
+    &:focus {
+      &::before {
+        opacity: #lbz-state.surface[focus];
+      }
+    }
+
+    &:active {
+      &::before {
+        opacity: #lbz-state.surface[active];
+      }
     }
   }
 }

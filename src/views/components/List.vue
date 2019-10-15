@@ -403,25 +403,49 @@
       </lbz-list-item>
     </lbz-list>
 
-    <h2 class="lbz-typography--h5"># List item</h2>
+    <h3 class="lbz-typography--subtitle1">$ tag: 'ul' (default), 'nav', 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ item-tag: 'li' (default), 'a', 'x'</h3>
+    <lbz-list subtitle="Default">
+      <lbz-list-item>One-line item</lbz-list-item>
+    </lbz-list>
+    <lbz-list tag="nav" subtitle="Router-link" router-link item-tag="a">
+      <lbz-list-item to="/components/icon-button">Icon button</lbz-list-item>
+      <lbz-list-item :to="{ name: 'list' }">List</lbz-list-item>
+    </lbz-list>
+    <lbz-list tag="nav" subtitle="Non router-link" item-tag="a">
+      <lbz-list-item href="#/components/icon-button">Icon button</lbz-list-item>
+      <lbz-list-item href="#/components/list">List</lbz-list-item>
+    </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
+    <lbz-list subtitle="Ripple off" :ripple="false">
+      <lbz-list-item>One-line item</lbz-list-item>
+    </lbz-list>
+
+    <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
+    <lbz-list subtitle="Disabled" disabled>
+      <lbz-list-item>One-line item</lbz-list-item>
+    </lbz-list>
+
+    <h2 class="lbz-typography--h5"># List item</h2>
+
+    <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ tag: '' (default), li', 'a', 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ to (router-link): '' (default), 'x', { x: x }</h3>
+    <lbz-list tag="nav" subtitle="Router-link">
+      <lbz-list-item router-link tag="a" to="/components/icon-button">Icon button</lbz-list-item>
+      <lbz-list-item router-link tag="a" :to="{ name: 'list' }">List</lbz-list-item>
+    </lbz-list>
+    <lbz-list tag="nav" subtitle="Non router-link">
+      <lbz-list-item tag="a" href="#/components/icon-button">Icon button</lbz-list-item>
+      <lbz-list-item tag="a" href="#/components/list">List</lbz-list-item>
+    </lbz-list>
+
     <h3 class="lbz-typography--subtitle1">$ active: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ selected: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-list>
-      <lbz-list-item :ripple="false">
-        <template #start>
-          <lbz-icon>favorite</lbz-icon>
-        </template>
-        <template #center>
-          <span class="lbz-list-item__title">Ripple off</span>
-          <span class="lbz-list-item__subtitle">Secondary text</span>
-        </template>
-        <template #end>
-          <lbz-icon-button>more_vert</lbz-icon-button>
-        </template>
-      </lbz-list-item>
       <lbz-list-item active>
         <template #start>
           <lbz-icon>favorite</lbz-icon>

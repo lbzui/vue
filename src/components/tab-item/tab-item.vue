@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="ctagName"
+    v-bind="cbind"
     :class="[
       'lbz-tab-item',
       {
@@ -8,7 +8,6 @@
         'is-active': cisActive
       }
     ]"
-    :[vattrName]="to"
     @click.stop="fclick($event)"
   >
     <lbz-icon v-if="icon || $slots.icon" class="lbz-tab-item__icon">
@@ -25,23 +24,30 @@ import EventBus from '@/utils/event-bus.ts';
 
 @Component
 export default class TabItem extends Vue {
+  // router-link: true, false (default)
+  @Prop({ type: Boolean, default: false }) private routerLink!: boolean;
+  // tag: '' (default), 'button', 'a', 'x'
+  @Prop({ type: String, default: '' }) private tag!: string;
+  // to (router-link): '' (default), 'x', { x: x }
+  @Prop({ type: [String, Object], default: '' }) private to!: string;
   // [required]value: true, false, x, 'x'
   @Prop({ type: [Boolean, Number, String], required: true }) private value!: boolean | number | string;
-  // tag: '' (default), 'button', 'router-link', 'a', 'x'
-  @Prop({ type: String, default: '' }) private tag!: string;
-  // to (tag === 'router-link'): '' (default), 'x'
-  @Prop({ type: String, default: '' }) private to!: string;
   // icon: '' (default), 'x'
   @Prop({ type: String, default: '' }) private icon!: string;
 
   @InjectReactive() private pmodel!: boolean | number | string;
+  @Inject() private prouterLink!: boolean;
   @Inject() private ptag!: string;
   @Inject() private pripple!: boolean;
 
-  private vattrName: string = this.ctagName === 'router-link' ? 'to' : '';
-
-  get ctagName() {
-    return this.tag || this.ptag;
+  get cbind() {
+    return this.routerLink || this.prouterLink ? {
+      is: 'router-link',
+      tag: this.tag || this.ptag,
+      to: this.to,
+    } : {
+      is: this.tag || this.ptag,
+    };
   }
 
   get cisActive() {

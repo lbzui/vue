@@ -104,6 +104,54 @@
       </template>
     </lbz-card>
 
+    <h3 class="lbz-typography--subtitle1">$ tag: 'div' (default), 'a', 'x'</h3>
+    <lbz-card>
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/logo.png">
+          </div>
+        </div>
+      </template>
+      <template #end>
+        <div class="lbz-card__actions__buttons">
+          <lbz-button>Action 1</lbz-button>
+          <lbz-button>Action 2</lbz-button>
+        </div>
+        <div class="lbz-card__actions__icons">
+          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>share</lbz-icon-button>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card tag="a" href="#/components/card">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/logo.png">
+          </div>
+        </div>
+      </template>
+      <template #end>
+        <div class="lbz-card__actions__buttons">
+          <lbz-button>Action 1</lbz-button>
+          <lbz-button>Action 2</lbz-button>
+        </div>
+        <div class="lbz-card__actions__icons">
+          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>share</lbz-icon-button>
+        </div>
+      </template>
+    </lbz-card>
+
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
     <lbz-card>
       <template #start>
@@ -156,6 +204,56 @@
 
     <h3 class="lbz-typography--subtitle1">$ type: 'elevated' (default), 'outlined'</h3>
     <lbz-card type="outlined">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/logo.png">
+          </div>
+        </div>
+      </template>
+      <template #end>
+        <div class="lbz-card__actions__buttons">
+          <lbz-button>Action 1</lbz-button>
+          <lbz-button>Action 2</lbz-button>
+        </div>
+        <div class="lbz-card__actions__icons">
+          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>share</lbz-icon-button>
+        </div>
+      </template>
+    </lbz-card>
+
+    <h3 class="lbz-typography--subtitle1">$ tag: 'div' (default), 'a', 'x'</h3>
+    <lbz-card type="outlined">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/logo.png">
+          </div>
+        </div>
+      </template>
+      <template #end>
+        <div class="lbz-card__actions__buttons">
+          <lbz-button>Action 1</lbz-button>
+          <lbz-button>Action 2</lbz-button>
+        </div>
+        <div class="lbz-card__actions__icons">
+          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>share</lbz-icon-button>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card type="outlined" tag="a" href="#/components/card">
       <template #start>
         <div class="lbz-card__header__center">
           <span class="lbz-typography--overline">Overline</span>

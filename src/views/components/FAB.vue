@@ -11,6 +11,10 @@
       <img src="../../assets/img/logo.png">
     </lbz-fab>
 
+    <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
+    <lbz-fab>add</lbz-fab>
+    <lbz-fab tag="a" href="#/components/fab">add</lbz-fab>
+
     <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'surface', 'light', 'dark'</h3>
     <lbz-fab background="primary">add</lbz-fab>
     <lbz-fab background="primary-variant">add</lbz-fab>
@@ -37,6 +41,10 @@
     <lbz-fab type="mini">
       <img src="../../assets/img/logo.png">
     </lbz-fab>
+
+    <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
+    <lbz-fab type="mini">add</lbz-fab>
+    <lbz-fab type="mini" tag="a" href="#/components/fab">add</lbz-fab>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'surface', 'light', 'dark'</h3>
     <lbz-fab type="mini" background="primary">add</lbz-fab>
@@ -66,6 +74,10 @@
     <lbz-fab type="extended" label="Create">
       <img src="../../assets/img/logo.png">
     </lbz-fab>
+
+    <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
+    <lbz-fab type="extended" label="Create"/>
+    <lbz-fab type="extended" tag="a" href="#/components/fab" label="Create"/>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'surface', 'light', 'dark'</h3>
     <lbz-fab type="extended" background="primary" label="Create"/>

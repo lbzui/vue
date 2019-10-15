@@ -2,25 +2,35 @@
   <div class="lbzui lbz-typography">
     <aside class="lbzui__drawer" role="navigation">
       <router-link tag="h1" to="/">@lbzui/vue</router-link>
-      <lbz-list dense subtitle="Styles">
-        <router-link
+      <lbz-list
+        tag="nav"
+        dense
+        subtitle="Styles"
+        router-link
+        item-tag="a"
+      >
+        <lbz-list-item
           v-for="item of vstyles"
           :key="item.path"
           :to="item.path"
-          class="lbz-list-item"
-        >{{ item.label }}</router-link>
+        >{{ item.label }}</lbz-list-item>
       </lbz-list>
       <lbz-divider/>
-      <lbz-list dense subtitle="Components">
-        <router-link
+      <lbz-list
+        tag="nav"
+        dense
+        subtitle="Components"
+        router-link
+        item-tag="a"
+      >
+        <lbz-list-item
           v-for="item of vcomponents"
           :key="item.path"
           :to="item.path"
-          class="lbz-list-item"
-        >{{ item.label }}</router-link>
+        >{{ item.label }}</lbz-list-item>
       </lbz-list>
       <lbz-divider/>
-      <lbz-list dense subtitle="Choose theme">
+      <lbz-list dense subtitle="Choose theme" disabled>
         <lbz-list-item>
           <lbz-radio
             v-model="vtheme"

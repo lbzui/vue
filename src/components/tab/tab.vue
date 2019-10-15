@@ -1,5 +1,6 @@
 <template>
-  <nav
+  <component
+    :is="tag"
     :class="[
       'lbz-tab',
       type ? `lbz-tab--${ type }` : '',
@@ -9,7 +10,7 @@
     ]"
   >
     <div class="lbz-tab__container"><slot/></div>
-  </nav>
+  </component>
 </template>
 
 <script lang="ts">
@@ -23,19 +24,24 @@ export default class Tab extends Vue {
 
   // type: 'fixed' (default), 'scrollable'
   @Prop({ type: String, default: '' }) private type!: string;
+  // tag: 'nav' (default), 'x'
+  @Prop({ type: String, default: 'nav' }) private tag!: string;
   // on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
   // alignment (type === 'fixed'): '' (default), 'left', 'center', 'right'
   @Prop({ type: String, default: '' }) private alignment!: string;
   // stacked: true, false (default)
   @Prop({ type: Boolean, default: false }) private stacked!: boolean;
-  // tag: 'button' (default), 'router-link', 'a', 'x'
-  @Prop({ type: String, default: 'button' }) private tag!: string;
+  // router-link: true, false (default)
+  @Prop({ type: Boolean, default: false }) private routerLink!: boolean;
+  // item-tag: 'button' (default), 'a', 'x'
+  @Prop({ type: String, default: 'button' }) private itemTag!: string;
   // ripple: true (default), false
   @Prop({ type: Boolean, default: true }) private ripple!: boolean;
 
   @ProvideReactive() private pmodel: boolean | number | string = this.model;
-  @Provide() private ptag: string = this.tag;
+  @Provide() private prouterLink: boolean = this.routerLink;
+  @Provide() private ptag: string = this.itemTag;
   @Provide() private pripple: boolean = this.ripple;
 
   private created() {

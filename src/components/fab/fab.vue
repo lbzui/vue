@@ -1,5 +1,6 @@
 <template>
-  <button
+  <component
+    :is="tag"
     :class="[
       'lbz-fab',
       type ? `lbz-fab--${ type }` : '',
@@ -13,7 +14,7 @@
   >
     <lbz-icon v-if="$slots.default" class="lbz-fab__icon"><slot/></lbz-icon>
     <span v-if="type === 'extended'" class="lbz-fab__label">{{ label }}</span>
-  </button>
+  </component>
 </template>
 
 <script lang="ts">
@@ -23,6 +24,8 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class FAB extends Vue {
   // type: 'standard' (default), 'mini', 'extended'
   @Prop({ type: String, default: '' }) private type!: string;
+  // tag: 'button' (default), 'a', 'x'
+  @Prop({ type: String, default: 'button' }) private tag!: string;
   // background: 'primary', 'primary-variant', 'secondary' (default), 'surface', 'light', 'dark'
   @Prop({ type: String, default: '' }) private background!: string;
   // ripple: true (default), false
