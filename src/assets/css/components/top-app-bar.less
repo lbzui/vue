@@ -33,6 +33,11 @@
   &&--light {
     color: @black;
     background-color: #lbz-theme-surface.light[0];
+
+    // elevated
+    &.is-elevated {
+      background-color: #lbz-theme-surface.light[4];
+    }
   }
 
   &&--dark {
@@ -201,6 +206,19 @@ html[theme="dark"] {
 
     .lbz-icon-button::before {
       background-color: var(--lbz-theme-on-surface);
+    }
+
+    .lbz-tab .lbz-tab-item {
+      color: var(--lbz-theme-text-medium-emphasis-on-surface);
+
+      &::before,
+      .lbz-tab-item__indicator {
+        background-color: var(--lbz-theme-on-surface);
+      }
+
+      &.is-active {
+        color: var(--lbz-theme-text-high-emphasis-on-surface);
+      }
     }
   }
 }

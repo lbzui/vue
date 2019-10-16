@@ -1,0 +1,213 @@
+// Drawer
+.lbz-drawer {
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  .lbz-elevation--16();
+  width: auto;
+  height: 100%;
+
+  & &__container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    border-right: 1px solid var(--lbz-theme-outline-on-surface);
+    width: 256px;
+    .lbz-surface--16();
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  & &__header {
+    flex: none;
+    box-sizing: border-box;
+    padding: 0 16px 4px;
+    min-height: 64px;
+  }
+
+  .lbz-top-app-bar {
+    flex: none;
+    min-height: 64px;
+    background-color: transparent !important;
+  }
+
+  // title
+  & &__title {
+    margin: 0 0 -16px;
+    .lbz-typography--h6();
+    line-height: 56px;
+    color: var(--lbz-theme-text-high-emphasis-on-surface);
+  }
+
+  // subtitle
+  & &__subtitle {
+    margin: 0;
+    .lbz-typography--body2();
+    color: var(--lbz-theme-text-medium-emphasis-on-surface);
+  }
+
+  & &__content {
+    flex: 1;
+    .lbz-typography--body2();
+    color: var(--lbz-theme-text-medium-emphasis-on-surface);
+  }
+
+  .lbz-list {
+    .lbz-list__subtitle {
+      padding-top: 8px;
+      padding-bottom: 0;
+      .lbz-typography--body2();
+    }
+  }
+
+  .lbz-list-item {
+    margin: 8px;
+    border-radius: 4px;
+    padding: 0 8px;
+    min-height: 40px;
+    .lbz-typography--subtitle2();
+
+    &:first-child {
+      margin-top: 2px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .lbz-list-item__center {
+      .lbz-u-truncate--one-line();
+    }
+  }
+
+  .lbz-divider {
+    margin: 3px 0 4px;
+  }
+
+  & &__scrim {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: @scrim;
+  }
+
+  // type
+  &&--modal {
+    position: fixed;
+    right: 0;
+
+    .lbz-drawer__container {
+      border-top-right-radius: var(--lbz-shape-absolute-size-large);
+      border-bottom-right-radius: var(--lbz-shape-absolute-size-large);
+      .lbz-shadow--16();
+    }
+  }
+
+  &&--bottom {
+    position: fixed;
+    right: 0;
+
+    .lbz-drawer__container {
+      overflow-y: hidden;
+      top: auto;
+      right: 0;
+      border-right: none;
+      border-top-left-radius: var(--lbz-shape-absolute-size-large);
+      border-top-right-radius: var(--lbz-shape-absolute-size-large);
+      width: 100%;
+      max-height: 62.5%;
+      .lbz-shadow--16();
+    }
+
+    // full-screen
+    &.is-full-screen {
+      .lbz-drawer__container {
+        top: 0;
+        border-radius: 0;
+        height: 100%;
+        max-height: 100%;
+      }
+
+      .lbz-drawer__content {
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+  }
+
+  @media (max-width: 719px) {
+    &:not(.lbz-drawer--modal):not(.lbz-drawer--bottom) {
+      position: fixed;
+      right: 0;
+
+      .lbz-drawer__container {
+        border-top-right-radius: var(--lbz-shape-absolute-size-large);
+        border-bottom-right-radius: var(--lbz-shape-absolute-size-large);
+        .lbz-shadow--16();
+      }
+
+      .lbz-drawer__scrim {
+        display: block !important;
+      }
+    }
+  }
+
+  // active
+  &.lbz-drawer-enter-active {
+    transition: opacity 250ms linear;
+
+    .lbz-drawer__container {
+      transition: transform 250ms #lbz-motion.easing[deceleration];
+    }
+
+    .lbz-drawer__scrim {
+      transition: opacity 250ms linear;
+    }
+  }
+
+  &.lbz-drawer-leave-active {
+    transition: opacity 200ms linear;
+
+    .lbz-drawer__container {
+      transition: transform 200ms #lbz-motion.easing[sharp];
+    }
+
+    .lbz-drawer__scrim {
+      transition: opacity 200ms linear;
+    }
+  }
+
+  &.lbz-drawer-enter,
+  &.lbz-drawer-leave-to {
+    &:not(.lbz-drawer--bottom) {
+      .lbz-drawer__container {
+        transform: translate3d(-100%, 0, 0);
+      }
+    }
+
+    &.lbz-drawer--bottom {
+      .lbz-drawer__container {
+        transform: translate3d(0, 100%, 0);
+      }
+    }
+
+    .lbz-drawer__scrim {
+      opacity: 0;
+    }
+  }
+}

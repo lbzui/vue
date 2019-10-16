@@ -61,6 +61,11 @@ export default new Router({
       component: () => import('./views/components/Divider.vue'),
     },
     {
+      path: '/components/drawer',
+      name: 'drawer',
+      component: () => import('./views/components/Drawer.vue'),
+    },
+    {
       path: '/components/empty-state',
       name: 'EmptyState',
       component: () => import('./views/components/EmptyState.vue'),

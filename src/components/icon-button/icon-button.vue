@@ -53,7 +53,7 @@ export default class IconButton extends Vue {
   @Prop({ type: String, default: '' }) private offIcon!: string;
 
   get cbind() {
-    return this.routerLink ? {
+    return !this.toggle && this.routerLink ? {
       is: 'router-link',
       tag: this.tag,
       to: this.to,

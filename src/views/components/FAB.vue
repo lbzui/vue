@@ -28,7 +28,7 @@
     <lbz-fab :ripple="false">add</lbz-fab>
 
     <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
-    <lbz-button @click.stop="ftoggleInactive()">Inactive</lbz-button>
+    <lbz-button @click.stop="ftoggleInactive()">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
     <lbz-fab :inactive="vinactive">add</lbz-fab>
 
     <h2 class="lbz-typography--h5"># Mini FAB</h2>
@@ -59,7 +59,7 @@
     <lbz-fab type="mini" :ripple="false">add</lbz-fab>
 
     <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
-    <lbz-button @click.stop="ftoggleInactive()">Inactive</lbz-button>
+    <lbz-button @click.stop="ftoggleInactive()">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
     <lbz-fab type="mini" :inactive="vinactive">add</lbz-fab>
 
     <h2 class="lbz-typography--h5"># Extended FAB</h2>
@@ -92,7 +92,7 @@
     <lbz-fab type="extended" :ripple="false" label="Create"/>
 
     <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
-    <lbz-button @click.stop="ftoggleInactive()">Inactive</lbz-button>
+    <lbz-button @click.stop="ftoggleInactive()">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
     <lbz-fab type="extended" :inactive="vinactive" label="Create"/>
     <lbz-fab type="extended" :inactive="vinactive" label="Create">add</lbz-fab>
   </article>

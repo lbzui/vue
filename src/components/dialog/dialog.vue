@@ -7,7 +7,7 @@
         type ? `lbz-dialog--${ type }` : '',
         {
           'is-scrollable': type === 'confirmation' && scrollable,
-          'is-stacked': !['simple', 'full-screen'].includes(type) && stacked
+          'is-stacked': cisAlertAndConfirmation && stacked
         }
       ]"
     >
@@ -43,7 +43,7 @@
           <slot name="center"/>
           <slot/>
         </div>
-        <footer v-if="!['simple', 'full-screen'].includes(type) && $slots.end" class="lbz-dialog__actions">
+        <footer v-if="cisAlertAndConfirmation && $slots.end" class="lbz-dialog__actions">
           <slot name="end"/>
         </footer>
       </div>
@@ -70,12 +70,16 @@ export default class Dialog extends Vue {
   @Prop({ type: Boolean, default: false }) private appendToBody!: boolean;
   // scrollable (type === 'confirmation'): true, false (default)
   @Prop({ type: Boolean, default: false }) private scrollable!: boolean;
-  // stacked (type === 'alert', 'confirmation'): true, false (default)
+  // stacked (['', 'alert', 'confirmation'].includes(type)): true, false (default)
   @Prop({ type: Boolean, default: false }) private stacked!: boolean;
   // title: '' (default), 'x'
   @Prop({ type: String, default: '' }) private title!: string;
   // content-height (type !== 'full-screen'): '' (default), 'x'
   @Prop({ type: String, default: '' }) private contentHeight!: string;
+
+  get cisAlertAndConfirmation() {
+    return ['', 'alert', 'confirmation'].includes(this.type);
+  }
 
   private mounted() {
     if (this.appendToBody) {

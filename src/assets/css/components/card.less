@@ -6,6 +6,7 @@
   align-items: stretch;
   overflow: hidden;
   position: relative;
+  .lbz-elevation--1();
   border-radius: var(--lbz-shape-absolute-size-medium);
   text-decoration: none;
   color: var(--lbz-theme-text-medium-emphasis-on-surface);
@@ -149,6 +150,7 @@
   }
 
   &:hover {
+    .lbz-elevation--4();
     cursor: pointer;
     .lbz-shadow--4();
 
@@ -158,6 +160,7 @@
   }
 
   &:focus {
+    .lbz-elevation--4();
     .lbz-shadow--4();
 
     &::before {
@@ -166,6 +169,7 @@
   }
 
   &:active {
+    .lbz-elevation--8();
     .lbz-shadow--8();
 
     &::before {

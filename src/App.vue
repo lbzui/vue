@@ -1,37 +1,39 @@
 <template>
   <div class="lbzui lbz-typography">
-    <aside class="lbzui__drawer" role="navigation">
-      <router-link tag="h1" to="/">@lbzui/vue</router-link>
-      <lbz-list
-        tag="nav"
-        dense
-        subtitle="Styles"
-        router-link
-        item-tag="a"
-      >
-        <lbz-list-item
-          v-for="item of vstyles"
-          :key="item.path"
-          :to="item.path"
-        >{{ item.label }}</lbz-list-item>
-      </lbz-list>
-      <lbz-divider/>
-      <lbz-list
-        tag="nav"
-        dense
-        subtitle="Components"
-        router-link
-        item-tag="a"
-      >
-        <lbz-list-item
-          v-for="item of vcomponents"
-          :key="item.path"
-          :to="item.path"
-        >{{ item.label }}</lbz-list-item>
-      </lbz-list>
-      <lbz-divider/>
-      <lbz-list dense subtitle="Choose theme" disabled>
-        <lbz-list-item>
+    <lbz-drawer
+      :active.sync="vactive"
+      subtitle="Material Components for Vue.js"
+      class="lbzui__drawer"
+      role="navigation"
+    >
+      <template #start>
+        <router-link
+          tag="h1"
+          to="/"
+          class="lbz-drawer__title"
+        >@lbzui/vue</router-link>
+      </template>
+      <template #center>
+        <lbz-list tag="nav" item-tag="a">
+          <lbz-divider/>
+          <span class="lbz-list__subtitle">Styles</span>
+          <lbz-list-item
+            v-for="item of vstyles"
+            :key="item.path"
+            router-link
+            :to="item.path"
+          >{{ item.label }}</lbz-list-item>
+          <lbz-divider/>
+          <span class="lbz-list__subtitle">Components</span>
+          <lbz-list-item
+            v-for="item of vcomponents"
+            :key="item.path"
+            router-link
+            :to="item.path"
+          >{{ item.label }}</lbz-list-item>
+          <lbz-divider/>
+          <span class="lbz-list__subtitle">Choose theme</span>
+          <lbz-list-item tag="span" disabled>
           <lbz-radio
             v-model="vtheme"
             id="light"
@@ -47,16 +49,18 @@
             @change="fsetTheme"
           >Dark</lbz-radio>
         </lbz-list-item>
-      </lbz-list>
-    </aside>
+        </lbz-list>
+      </template>
+    </lbz-drawer>
     <main class="lbzui__main" role="main">
       <router-view class="lbzui__main__container"/>
     </main>
+    <lbz-fab class="lbzui__fab" @click.stop="vactive = true">menu</lbz-fab>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Watch, Vue } from 'vue-property-decorator';
 
 @Component
 export default class App extends Vue {
@@ -100,6 +104,10 @@ export default class App extends Vue {
       label: 'Divider',
     },
     {
+      path: '/components/drawer',
+      label: 'Drawer',
+    },
+    {
       path: '/components/empty-state',
       label: 'Empty state',
     },
@@ -132,10 +140,36 @@ export default class App extends Vue {
       label: 'Top app bar',
     },
   ];
+  private vwidth: number = 0;
+  private vactive: boolean = true;
   private vtheme: string = 'light';
+
+  private mounted() {
+    this.fresize(document.body.clientWidth);
+    window.onresize = () => {
+      this.fresize(document.body.clientWidth);
+    };
+  }
+
+  @Watch('$route.name')
+  private frouteChanged(val: string, oldVal: string) {
+    this.fcloseDrawer();
+  }
+
+  private fresize(val: number) {
+    this.vwidth = val;
+    this.vactive = val > 719;
+  }
+
+  private fcloseDrawer() {
+    if (this.vwidth <= 719) {
+      this.vactive = false;
+    }
+  }
 
   private fsetTheme(val: string, e: MouseEvent) {
     document.documentElement.setAttribute('theme', val);
+    this.fcloseDrawer();
   }
 }
 </script>
@@ -155,6 +189,14 @@ export default class App extends Vue {
   .lbz-surface--1();
 }
 
+.lbzui-rectangle {
+  display: inline-block;
+  margin-right: 16px;
+  border: 1px solid var(--lbz-theme-outline-on-surface);
+  width: 360px;
+  height: 614px;
+}
+
 .lbzui {
   width: 100%;
   height: 100%;
@@ -162,45 +204,11 @@ export default class App extends Vue {
   color: var(--lbz-theme-text-medium-emphasis-on-surface);
 
   & &__drawer {
-    overflow-x: hidden;
-    overflow-y: auto;
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    .lbz-elevation--16();
-    box-sizing: border-box;
-    border-right: 1px solid var(--lbz-theme-outline-on-surface);
     width: 256px;
-    .lbz-surface--16();
 
-    h1 {
-      margin: 0;
-      padding: 14px 16px;
-      .lbz-typography--h4();
-      color: var(--lbz-theme-text-high-emphasis-on-surface);
+    .lbz-drawer__title {
       cursor: pointer;
-    }
-
-    .lbz-list {
-      margin: 0 8px;
-
-      .lbz-list__subtitle {
-        padding-right: 8px;
-        padding-left: 8px;
-        .lbz-typography--body2();
-      }
-
-      .lbz-list-item {
-        border-radius: 4px;
-        padding-right: 8px;
-        padding-left: 8px;
-        .lbz-typography--subtitle2();
-
-        + .lbz-list-item {
-          margin-top: 8px;
-        }
-      }
     }
   }
 
@@ -217,6 +225,26 @@ export default class App extends Vue {
 
     .lbz-typography--h5 {
       color: var(--lbz-theme-text-high-emphasis-on-surface);
+    }
+  }
+
+  & &__fab {
+    display: none;
+  }
+
+  @media (max-width: 719px) {
+    .lbzui {
+      &__drawer {
+        width: 100%;
+      }
+
+      &__main {
+        margin-left: 0;
+      }
+
+      &__fab {
+        display: inline-flex;
+      }
     }
   }
 }

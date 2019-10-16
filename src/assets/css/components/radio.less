@@ -95,9 +95,21 @@
   }
 
   &.is-checked {
-    .lbz-radio__container {
+    &:not(.is-disabled) .lbz-radio__container {
       &::before {
         background-color: var(--lbz-theme-secondary);
+      }
+
+      &:hover {
+        &::before {
+          opacity: #lbz-state.primary[hover];
+        }
+      }
+
+      &:focus {
+        &::before {
+          opacity: #lbz-state.primary[focus];
+        }
       }
     }
 
@@ -111,24 +123,10 @@
         transform: scale(.5);
       }
     }
-
-    &:not(.is-disabled) .lbz-radio__container {
-      &:hover {
-        &::before {
-          opacity: #lbz-state.primary[hover];
-        }
-      }
-
-      &:focus {
-        &::before {
-          opacity: #lbz-state.primary[focus];
-        }
-      }
-    }
   }
 
   // color
-  &&--primary.is-checked {
+  &&--primary.is-checked:not(.is-disabled) {
     .lbz-radio__container::before {
       background-color: var(--lbz-theme-primary);
     }
@@ -141,16 +139,9 @@
 
   // disabled
   &.is-disabled {
-    &:not(.is-checked) {
-      .lbz-radio__circle {
-        border-color: var(--lbz-theme-text-disabled-on-surface);
-      }
-    }
-
-    &.is-checked {
-      .lbz-radio__container {
-        opacity: #lbz-state.surface[disabled];
-      }
+    .lbz-radio__circle,
+    .lbz-radio__circle::after {
+      border-color: var(--lbz-theme-text-disabled-on-surface);
     }
 
     .lbz-radio__label {
