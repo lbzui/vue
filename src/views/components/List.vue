@@ -501,6 +501,7 @@ export default class List extends Vue {
 .lbzui-components-list {
   .lbz-list {
     border: 1px solid var(--lbz-theme-outline-on-surface);
+    width: 100%;
     max-width: 600px;
 
     + .lbz-list {

@@ -345,7 +345,8 @@ export default class Card extends Vue {
 .lbzui-components-card {
   .lbz-card {
     display: flex;
-    width: 344px;
+    width: 100%;
+    max-width: 344px;
 
     + .lbz-card {
       margin-top: 16px;

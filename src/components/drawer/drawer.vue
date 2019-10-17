@@ -39,11 +39,7 @@
           <slot/>
         </div>
       </div>
-      <div
-        v-show="cisActive && type === 'modal' || (type === 'bottom' && !fullScreen)"
-        class="lbz-drawer__scrim"
-        @click.stop="fclose()"
-      ></div>
+      <div class="lbz-drawer__scrim" @click.stop="fclose()"></div>
     </aside>
   </transition>
 </template>

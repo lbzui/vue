@@ -1,42 +1,23 @@
 {
   "name": "@lbzui/vue",
   "version": "0.1.0",
+  "private": false,
   "description": "Material Components for Vue.js",
-  "keywords": [
-    "vue",
-    "less",
-    "postcss",
-    "typescript",
-    "material-components",
-    "material-components-vue",
-    "material-design",
-    "lbzui",
-    "lbzui-vue"
-  ],
-  "homepage": "https://github.com/lbzui/lbzui-vue#readme",
-  "bugs": {
-    "url": "https://github.com/lbzui/lbzui-vue/issues",
-    "email": "lbz_ui@163.com"
-  },
-  "license": "MIT",
   "author": "LAN Bizhong <bizhong_lan@163.com> (https://lanbizhong.com/)",
+  "scripts": {
+    "serve": "vue-cli-service serve --open",
+    "lint": "vue-cli-service lint",
+    "build:doc": "vue-cli-service build",
+    "build:lib": "vue-cli-service build --target lib --name lbzui --dest lib src/components/index.ts",
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "main": "lib/lbzui.common.js",
+  "unpkg": "lib/lbzui.umd.min.js",
   "files": [
     "lib",
     "src"
   ],
-  "main": "lib/lbzui.common.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lbzui/lbzui-vue.git"
-  },
-  "scripts": {
-    "serve": "vue-cli-service serve --open",
-    "build:app": "vue-cli-service build",
-    "build:lib": "vue-cli-service build --target lib --name lbzui --dest lib src/components/index.ts",
-    "lint": "vue-cli-service lint",
-    "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit"
-  },
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
@@ -60,11 +41,12 @@
     "normalize.css": "^8.0.1",
     "postcss-preset-env": "^6.7.0",
     "postcss-pxtorem": "^4.0.1",
+    "style-resources-loader": "^1.2.1",
     "ts-jest": "^23.0.0",
     "typescript": "^3.4.3",
+    "vue-cli-plugin-style-resources-loader": "^0.1.3",
     "vue-template-compiler": "^2.6.10"
   },
-  "private": false,
   "postcss": {
     "plugins": {
       "postcss-preset-env": {
@@ -133,5 +115,31 @@
         "babelConfig": true
       }
     }
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/lbzui/lbzui-vue/issues",
+    "email": "lbz_ui@163.com"
+  },
+  "engines": {
+    "node": ">=8.11.0"
+  },
+  "homepage": "https://github.com/lbzui/lbzui-vue#readme",
+  "keywords": [
+    "vue",
+    "less",
+    "postcss",
+    "typescript",
+    "material-components",
+    "material-components-vue",
+    "material-design",
+    "lbzui",
+    "lbzui-vue"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lbzui/lbzui-vue.git"
+  },
+  "style": "lib/lbzui.css",
+  "umd:main": "lib/lbzui.umd.js"
 }

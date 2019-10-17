@@ -95,6 +95,7 @@
   }
 
   & &__scrim {
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -113,6 +114,10 @@
       border-top-right-radius: var(--lbz-shape-absolute-size-large);
       border-bottom-right-radius: var(--lbz-shape-absolute-size-large);
       .lbz-shadow--16();
+    }
+
+    .lbz-drawer__scrim {
+      display: block;
     }
   }
 
@@ -148,6 +153,10 @@
         -webkit-overflow-scrolling: touch;
       }
     }
+
+    &:not(.is-full-screen) .lbz-drawer__scrim {
+      display: block;
+    }
   }
 
   @media (max-width: 719px) {
@@ -162,7 +171,7 @@
       }
 
       .lbz-drawer__scrim {
-        display: block !important;
+        display: block;
       }
     }
   }

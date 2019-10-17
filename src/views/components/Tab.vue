@@ -297,7 +297,8 @@ export default class Tab extends Vue {
 <style lang="less">
 .lbzui-components-tab {
   .lbz-tab {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
 
     &.lbz-tab--on {
       &-primary {
@@ -309,11 +310,11 @@ export default class Tab extends Vue {
       }
 
       &-light {
-        background-color: #fff;
+        background-color: @white;
       }
 
       &-dark {
-        background-color: #000;
+        background-color: @black;
       }
     }
 

@@ -40,12 +40,7 @@
 <style lang="less">
 .lbzui-components-empty-state {
   .lbzui-rectangle {
-    display: block;
-    margin-right: 0;
-
-    + .lbzui-rectangle {
-      margin-top: 16px;
-    }
+    margin-bottom: 16px;
   }
 }
 </style>

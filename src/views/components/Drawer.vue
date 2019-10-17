@@ -475,7 +475,7 @@ export default class Drawer extends Vue {
 .lbzui-components-drawer {
   .lbz-button {
     display: flex;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
 
   .lbz-drawer {

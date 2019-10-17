@@ -33,7 +33,11 @@
           >{{ item.label }}</lbz-list-item>
           <lbz-divider/>
           <span class="lbz-list__subtitle">Choose theme</span>
-          <lbz-list-item tag="span" disabled>
+          <lbz-list-item
+            tag="span"
+            disabled
+            style="padding: 0;"
+          >
           <lbz-radio
             v-model="vtheme"
             id="light"
@@ -168,20 +172,24 @@ export default class App extends Vue {
   }
 
   private fsetTheme(val: string, e: MouseEvent) {
+    const isDark: boolean = val === 'dark';
+
     document.documentElement.setAttribute('theme', val);
+    document.querySelector('meta[name=apple-mobile-web-app-status-bar-style]')!
+      .setAttribute('content', isDark ? 'black' : 'default');
+    document.querySelector('meta[name=theme-color]')!
+      .setAttribute('content', isDark ? '#000' : '#3700b3');
     this.fcloseDrawer();
   }
 }
 </script>
 
 <style lang="less">
-@import "~@/assets/css/styles/elevation.less";
-@import "~@/assets/css/styles/surface.less";
-@import "~@/assets/css/styles/typography.less";
-
 .lbzui-square {
   display: inline-block;
   margin: 0 16px 16px 0;
+  box-sizing: border-box;
+  border: 1px solid var(--lbz-theme-outline-on-surface);
   width: 180px;
   height: 180px;
   line-height: 180px;
@@ -192,8 +200,10 @@ export default class App extends Vue {
 .lbzui-rectangle {
   display: inline-block;
   margin-right: 16px;
+  box-sizing: border-box;
   border: 1px solid var(--lbz-theme-outline-on-surface);
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
   height: 614px;
 }
 
@@ -213,14 +223,14 @@ export default class App extends Vue {
   }
 
   & &__main {
-    overflow-x: auto;
     margin-left: 256px;
-    min-height: 100%;
+    height: 100%;
 
     .lbzui__main__container {
       box-sizing: border-box;
       padding: var(--lbz-layout-grid-margin);
-      min-width: calc(360px + 2 * var(--lbz-layout-grid-margin));
+      width: 100%;
+      height: 100%;
     }
 
     .lbz-typography--h5 {
@@ -233,6 +243,14 @@ export default class App extends Vue {
   }
 
   @media (max-width: 719px) {
+    .lbzui-rectangle {
+      margin-right: 0;
+
+      + .lbzui-rectangle {
+        margin-top: 16px;
+      }
+    }
+
     .lbzui {
       &__drawer {
         width: 100%;

@@ -401,18 +401,17 @@ export default class TopAppBar extends Vue {
 <style lang="less">
 .lbzui-components-top-app-bar {
   .lbz-top-app-bar {
-    margin-bottom: 16px;
-
     &:not(.lbz-top-app-bar--short) {
-      width: 360px;
+      width: 100%;
+      max-width: 360px;
 
-      &.is-dense {
-        min-width: 720px;
+      + .lbz-top-app-bar {
+        margin-top: 16px;
       }
     }
 
     &.lbz-top-app-bar--short {
-      margin-right: 16px;
+      margin: 0 16px 16px 0;
     }
   }
 }

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
+import NotFound from './views/404.vue';
 
 Vue.use(Router);
 
@@ -104,6 +105,13 @@ export default new Router({
       path: '/components/top-app-bar',
       name: 'top-app-bar',
       component: () => import('./views/components/TopAppBar.vue'),
+    },
+
+    // 404
+    {
+      path: '*',
+      name: '404',
+      component: NotFound,
     },
   ],
   scrollBehavior(to, from, savedPosition) {

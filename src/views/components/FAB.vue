@@ -117,11 +117,15 @@ export default class FAB extends Vue {
 
 <style lang="less">
 .lbzui-components-fab {
+  .lbz-button {
+    margin: 0 16px 16px 0;
+  }
+
   .lbz-fab {
     position: relative;
     right: 0;
     bottom: 0;
-    margin-right: 16px;
+    margin: 0 16px 16px 0;
   }
 }
 </style>
