@@ -7,7 +7,7 @@
     <div class="lbzui-rectangle">
       <lbz-empty-state title="Your lab, everywhere">
         <template #start>
-          <img src="../../assets/img/logo.png">
+          <img src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #end>
           <lbz-button type="contained">Get started</lbz-button>
@@ -17,7 +17,7 @@
     <div class="lbzui-rectangle">
       <lbz-empty-state subtitle="Find experiments happening nearby.">
         <template #start>
-          <img src="../../assets/img/logo.png">
+          <img src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #end>
           <lbz-button type="contained">Get started</lbz-button>
@@ -27,7 +27,7 @@
     <div class="lbzui-rectangle">
       <lbz-empty-state title="Your lab, everywhere" subtitle="Find experiments happening nearby.">
         <template #start>
-          <img src="../../assets/img/logo.png">
+          <img src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #end>
           <lbz-button type="contained">Get started</lbz-button>
@@ -36,11 +36,3 @@
     </div>
   </article>
 </template>
-
-<style lang="less">
-.lbzui-components-empty-state {
-  .lbzui-rectangle {
-    margin-bottom: 16px;
-  }
-}
-</style>

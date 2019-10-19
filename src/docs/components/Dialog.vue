@@ -35,7 +35,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
     <lbz-button @click.stop="valertFour = true">Alert</lbz-button>
-    <lbz-dialog :active.sync="valertFour" title="Title">
+    <lbz-dialog :active.sync="valertFour" title="Title goes here">
       <template #center>Discard draft?</template>
       <template #end>
         <lbz-button @click.stop="valertFour = false">Cancel</lbz-button>
@@ -178,7 +178,7 @@
     <h3 class="lbz-typography--subtitle1">$ type: 'alert' (default), 'simple', 'confirmation', 'full-screen (mobile only)'</h3>
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
     <lbz-button @click.stop="vfullScreenOne = true">Full-screen</lbz-button>
-    <lbz-dialog :active.sync="vfullScreenOne" type="full-screen" title="Page title">
+    <lbz-dialog :active.sync="vfullScreenOne" type="full-screen" title="Title goes here">
       <template #start>
         <!-- Save, Send, Share, Update, or Create -->
         <lbz-button @click.stop="vfullScreenOne = false">Action</lbz-button>
@@ -188,7 +188,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
     <lbz-button @click.stop="vfullScreenTwo = true">Full-screen</lbz-button>
-    <lbz-dialog :active.sync="vfullScreenTwo" type="full-screen" append-to-body title="Page title">
+    <lbz-dialog :active.sync="vfullScreenTwo" type="full-screen" append-to-body title="Title goes here">
       <template #start>
         <!-- Save, Send, Share, Update, or Create -->
         <lbz-button @click.stop="vfullScreenTwo = false">Action</lbz-button>

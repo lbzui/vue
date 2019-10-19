@@ -266,14 +266,14 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ media (type === 'extended'): '' (default), 'x'</h3>
-    <lbz-top-app-bar type="extended" title="Page title" :media="require('@/assets/img/logo.png')">
+    <lbz-top-app-bar type="extended" background="light" title="Page title" :media="require('@/assets/img/placeholder@3x2.png')">
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="light">menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="light">share</lbz-icon-button>
+        <lbz-icon-button on-background="light">search</lbz-icon-button>
+        <lbz-icon-button on-background="light" class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 

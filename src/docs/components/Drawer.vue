@@ -96,7 +96,7 @@
       </lbz-drawer>
     </div>
     <div class="lbzui-rectangle">
-      <lbz-drawer :active.sync="vactiveOne" title="Title" subtitle="subtext">
+      <lbz-drawer :active.sync="vactiveOne" title="Title" subtitle="Subtitle">
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
@@ -207,7 +207,7 @@
       </lbz-drawer>
     </div>
     <div class="lbzui-rectangle">
-      <lbz-drawer :active.sync="vactiveTwo" type="modal" title="Title" subtitle="subtext">
+      <lbz-drawer :active.sync="vactiveTwo" type="modal" title="Title" subtitle="Subtitle">
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
@@ -354,7 +354,7 @@
       </lbz-drawer>
     </div>
     <div class="lbzui-rectangle">
-      <lbz-drawer :active.sync="vactiveThree" type="bottom" title="Title" subtitle="subtext">
+      <lbz-drawer :active.sync="vactiveThree" type="bottom" title="Title" subtitle="Subtitle">
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item

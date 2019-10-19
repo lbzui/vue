@@ -75,12 +75,12 @@
     <lbz-tab v-model="vtab" stacked>
       <lbz-tab-item :value="0" icon="phone">Item</lbz-tab-item>
       <lbz-tab-item :value="1" icon="favorite">Item</lbz-tab-item>
-      <lbz-tab-item :value="2" icon="room">Item</lbz-tab-item>
+      <lbz-tab-item :value="2" icon="place">Item</lbz-tab-item>
     </lbz-tab>
     <lbz-tab v-model="vtab">
       <lbz-tab-item :value="0" icon="phone">Item</lbz-tab-item>
       <lbz-tab-item :value="1" icon="favorite">Item</lbz-tab-item>
-      <lbz-tab-item :value="2" icon="room">Item</lbz-tab-item>
+      <lbz-tab-item :value="2" icon="place">Item</lbz-tab-item>
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
@@ -88,11 +88,6 @@
       <lbz-tab-item :value="0" to="/components/tab">Router-link</lbz-tab-item>
       <lbz-tab-item :value="1" :to="{ name: 'backdrop' }">Router-link</lbz-tab-item>
       <lbz-tab-item :value="2" :to="{ name: 'button' }">Router-link</lbz-tab-item>
-    </lbz-tab>
-    <lbz-tab v-model="vtab">
-      <lbz-tab-item :value="0">Item</lbz-tab-item>
-      <lbz-tab-item :value="1">Item</lbz-tab-item>
-      <lbz-tab-item :value="2">Item</lbz-tab-item>
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ item-tag: 'button' (default), 'a', 'x'</h3>
@@ -196,7 +191,7 @@
     <lbz-tab v-model="vtab" type="scrollable" stacked>
       <lbz-tab-item :value="0" icon="phone">Item</lbz-tab-item>
       <lbz-tab-item :value="1" icon="favorite">Item</lbz-tab-item>
-      <lbz-tab-item :value="2" icon="room">Item</lbz-tab-item>
+      <lbz-tab-item :value="2" icon="place">Item</lbz-tab-item>
       <lbz-tab-item :value="3" icon="bluetooth">Item</lbz-tab-item>
       <lbz-tab-item :value="4" icon="keyboard_voice">Item</lbz-tab-item>
       <lbz-tab-item :value="5" icon="flight">Item</lbz-tab-item>
@@ -204,7 +199,7 @@
     <lbz-tab v-model="vtab" type="scrollable">
       <lbz-tab-item :value="0" icon="phone">Item</lbz-tab-item>
       <lbz-tab-item :value="1" icon="favorite">Item</lbz-tab-item>
-      <lbz-tab-item :value="2" icon="room">Item</lbz-tab-item>
+      <lbz-tab-item :value="2" icon="place">Item</lbz-tab-item>
       <lbz-tab-item :value="3" icon="bluetooth">Item</lbz-tab-item>
       <lbz-tab-item :value="4" icon="keyboard_voice">Item</lbz-tab-item>
       <lbz-tab-item :value="5" icon="flight">Item</lbz-tab-item>
@@ -218,14 +213,6 @@
       <lbz-tab-item :value="3" :to="{ name: 'card' }">Router-link</lbz-tab-item>
       <lbz-tab-item :value="4" :to="{ name: 'dialog' }">Router-link</lbz-tab-item>
       <lbz-tab-item :value="5" :to="{ name: 'divider' }">Router-link</lbz-tab-item>
-    </lbz-tab>
-    <lbz-tab v-model="vtab" type="scrollable">
-      <lbz-tab-item :value="0">Item</lbz-tab-item>
-      <lbz-tab-item :value="1">Item</lbz-tab-item>
-      <lbz-tab-item :value="2">Item</lbz-tab-item>
-      <lbz-tab-item :value="3">Item</lbz-tab-item>
-      <lbz-tab-item :value="4">Item</lbz-tab-item>
-      <lbz-tab-item :value="5">Item</lbz-tab-item>
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ item-tag: 'button' (default), 'a', 'x'</h3>

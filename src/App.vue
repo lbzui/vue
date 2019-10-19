@@ -16,6 +16,8 @@
       <template #center>
         <lbz-list tag="nav" item-tag="a">
           <lbz-divider/>
+          <lbz-list-item router-link to="/">Getting started</lbz-list-item>
+          <lbz-divider/>
           <span class="lbz-list__subtitle">Styles</span>
           <lbz-list-item
             v-for="item of vstyles"
@@ -31,6 +33,17 @@
             router-link
             :to="item.path"
           >{{ item.label }}</lbz-list-item>
+          <lbz-divider/>
+          <span class="lbz-list__subtitle">Useful links</span>
+          <lbz-list-item
+            v-for="item of vlinks"
+            :key="item.path"
+            :href="item.path"
+            target="_blank"
+          >
+            <template #center>{{ item.label }}</template>
+            <template #end><lbz-icon>open_in_new</lbz-icon></template>
+          </lbz-list-item>
           <lbz-divider/>
           <span class="lbz-list__subtitle">Choose theme</span>
           <lbz-list-item
@@ -144,6 +157,44 @@ export default class App extends Vue {
       label: 'Top app bar',
     },
   ];
+  private vlinks: any[] = [
+    {
+      path: 'https://github.com/lbzui/lbzui-vue',
+      label: 'Open source code',
+    },
+    {
+      path: 'https://github.com/lbzui/lbzui-vue/tree/master/src/docs',
+      label: 'Docs sample code',
+    },
+    {
+      path: 'https://github.com/orgs/lbzui/projects/1',
+      label: 'LBZUI board',
+    },
+    {
+      path: 'https://github.com/lbzui/lbzui-vue/projects/1',
+      label: '@lbzui/vue board',
+    },
+    {
+      path: 'https://github.com/lbzui/lbzui-vue/blob/master/CHANGELOG.md',
+      label: 'Changelog',
+    },
+    {
+      path: 'https://github.com/lbzui/lbzui-vue/issues',
+      label: 'Issues',
+    },
+    {
+      path: 'https://material.io/',
+      label: 'Material design',
+    },
+    {
+      path: 'https://material.io/resources/color/',
+      label: 'Material color tool',
+    },
+    {
+      path: 'https://material.io/resources/icons/',
+      label: 'Material icons',
+    },
+  ];
   private vwidth: number = 0;
   private vactive: boolean = true;
   private vtheme: string = 'light';
@@ -199,12 +250,12 @@ export default class App extends Vue {
 
 .lbzui-rectangle {
   display: inline-block;
-  margin-right: 16px;
+  margin: 0 16px 16px 0;
   box-sizing: border-box;
   border: 1px solid var(--lbz-theme-outline-on-surface);
   width: 100%;
   max-width: 360px;
-  height: 614px;
+  height: 640px;
 }
 
 .lbzui {
@@ -223,14 +274,17 @@ export default class App extends Vue {
   }
 
   & &__main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    align-items: stretch;
     margin-left: 256px;
-    height: 100%;
+    min-height: 100%;
 
     .lbzui__main__container {
+      flex: 1;
       box-sizing: border-box;
       padding: var(--lbz-layout-grid-margin);
-      width: 100%;
-      height: 100%;
     }
 
     .lbz-typography--h5 {
@@ -245,10 +299,6 @@ export default class App extends Vue {
   @media (max-width: 719px) {
     .lbzui-rectangle {
       margin-right: 0;
-
-      + .lbzui-rectangle {
-        margin-top: 16px;
-      }
     }
 
     .lbzui {

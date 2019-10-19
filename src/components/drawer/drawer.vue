@@ -16,7 +16,7 @@
             background="transparent"
             :title="title"
           >
-            <template #end>
+            <template #start>
               <lbz-icon-button @click.stop="fclose()">close</lbz-icon-button>
             </template>
           </lbz-top-app-bar>

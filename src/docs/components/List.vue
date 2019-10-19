@@ -28,7 +28,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <img class="lbz-list-item__avatar" src="../../assets/img/logo.png">
+          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>One-line item</template>
         <template #end>
@@ -38,7 +38,7 @@
       <lbz-list-item>
         <template #start>
           <div class="lbz-list-item__media lbz-list-item__media--square">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </template>
         <template #center>One-line item</template>
@@ -49,7 +49,7 @@
       <lbz-list-item style="padding-left: 0;">
         <template #start>
           <div class="lbz-list-item__media lbz-list-item__media--rectangle">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@16x9.png">
           </div>
         </template>
         <template #center>One-line item</template>
@@ -85,7 +85,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <img class="lbz-list-item__avatar" src="../../assets/img/logo.png">
+          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>
           <span class="lbz-list-item__title">Two-line item</span>
@@ -98,7 +98,7 @@
       <lbz-list-item>
         <template #start>
           <div class="lbz-list-item__media lbz-list-item__media--square">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </template>
         <template #center>
@@ -112,7 +112,7 @@
       <lbz-list-item style="padding-left: 0;">
         <template #start>
           <div class="lbz-list-item__media lbz-list-item__media--rectangle">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@16x9.png">
           </div>
         </template>
         <template #center>
@@ -152,7 +152,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <img class="lbz-list-item__avatar" src="../../assets/img/logo.png">
+          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
@@ -165,7 +165,7 @@
       <lbz-list-item>
         <template #start>
           <div class="lbz-list-item__media lbz-list-item__media--square">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </template>
         <template #center>
@@ -179,7 +179,7 @@
       <lbz-list-item style="padding-left: 0;">
         <template #start>
           <div class="lbz-list-item__media lbz-list-item__media--rectangle">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@16x9.png">
           </div>
         </template>
         <template #center>
@@ -218,7 +218,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <img class="lbz-list-item__avatar" src="../../assets/img/logo.png">
+          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>One-line item</template>
         <template #end>
@@ -228,7 +228,7 @@
       <lbz-list-item>
         <template #start>
           <div class="lbz-list-item__media lbz-list-item__media--square">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </template>
         <template #center>One-line item</template>
@@ -239,7 +239,7 @@
       <lbz-list-item style="padding-left: 0;">
         <template #start>
           <div class="lbz-list-item__media lbz-list-item__media--rectangle">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@16x9.png">
           </div>
         </template>
         <template #center>One-line item</template>
@@ -275,7 +275,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <img class="lbz-list-item__avatar" src="../../assets/img/logo.png">
+          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>
           <span class="lbz-list-item__title">Two-line item</span>
@@ -288,7 +288,7 @@
       <lbz-list-item>
         <template #start>
           <div class="lbz-list-item__media lbz-list-item__media--square">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </template>
         <template #center>
@@ -302,7 +302,7 @@
       <lbz-list-item style="padding-left: 0;">
         <template #start>
           <div class="lbz-list-item__media lbz-list-item__media--rectangle">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@16x9.png">
           </div>
         </template>
         <template #center>
@@ -342,7 +342,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <img class="lbz-list-item__avatar" src="../../assets/img/logo.png">
+          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
@@ -355,7 +355,7 @@
       <lbz-list-item>
         <template #start>
           <div class="lbz-list-item__media lbz-list-item__media--square">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </template>
         <template #center>
@@ -369,7 +369,7 @@
       <lbz-list-item style="padding-left: 0;">
         <template #start>
           <div class="lbz-list-item__media lbz-list-item__media--rectangle">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@16x9.png">
           </div>
         </template>
         <template #center>
@@ -383,23 +383,19 @@
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
-    <lbz-list>
-      <lbz-list-item>One-line item</lbz-list-item>
-    </lbz-list>
-    <lbz-list subtitle="Subtitle">
-      <lbz-list-item>One-line item</lbz-list-item>
-    </lbz-list>
-
     <h3 class="lbz-typography--subtitle1">$ placement: 'start' (default), 'center'</h3>
+    <lbz-list>
+      <lbz-list-item>Item</lbz-list-item>
+    </lbz-list>
     <lbz-list subtitle="Subtitle">
-      <lbz-list-item>One-line item</lbz-list-item>
+      <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
     <lbz-list subtitle="Subtitle" placement="center">
       <lbz-list-item>
         <template #start>
           <lbz-icon>favorite</lbz-icon>
         </template>
-        <template #center>One-line item</template>
+        <template #center>Item</template>
       </lbz-list-item>
     </lbz-list>
 
@@ -407,25 +403,25 @@
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ item-tag: 'li' (default), 'a', 'x'</h3>
     <lbz-list subtitle="Default">
-      <lbz-list-item>One-line item</lbz-list-item>
+      <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
     <lbz-list tag="nav" subtitle="Router-link" router-link item-tag="a">
-      <lbz-list-item to="/components/icon-button">Icon button</lbz-list-item>
-      <lbz-list-item :to="{ name: 'list' }">List</lbz-list-item>
+      <lbz-list-item to="/components/icon-button">Router-link</lbz-list-item>
+      <lbz-list-item :to="{ name: 'list' }">Router-link</lbz-list-item>
     </lbz-list>
     <lbz-list tag="nav" subtitle="Non router-link" item-tag="a">
-      <lbz-list-item href="#/components/icon-button">Icon button</lbz-list-item>
-      <lbz-list-item href="#/components/list">List</lbz-list-item>
+      <lbz-list-item href="#/components/icon-button">A</lbz-list-item>
+      <lbz-list-item href="#/components/list">A</lbz-list-item>
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
     <lbz-list subtitle="Ripple off" :ripple="false">
-      <lbz-list-item>One-line item</lbz-list-item>
+      <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-list subtitle="Disabled" disabled>
-      <lbz-list-item>One-line item</lbz-list-item>
+      <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
 
     <h2 class="lbz-typography--h5"># List item</h2>
@@ -434,12 +430,12 @@
     <h3 class="lbz-typography--subtitle1">$ tag: '' (default), li', 'a', 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ to (router-link): '' (default), 'x', { x: x }</h3>
     <lbz-list tag="nav" subtitle="Router-link">
-      <lbz-list-item router-link tag="a" to="/components/icon-button">Icon button</lbz-list-item>
-      <lbz-list-item router-link tag="a" :to="{ name: 'list' }">List</lbz-list-item>
+      <lbz-list-item router-link tag="a" to="/components/icon-button">Router-link</lbz-list-item>
+      <lbz-list-item router-link tag="a" :to="{ name: 'list' }">Router-link</lbz-list-item>
     </lbz-list>
     <lbz-list tag="nav" subtitle="Non router-link">
-      <lbz-list-item tag="a" href="#/components/icon-button">Icon button</lbz-list-item>
-      <lbz-list-item tag="a" href="#/components/list">List</lbz-list-item>
+      <lbz-list-item tag="a" href="#/components/icon-button">A</lbz-list-item>
+      <lbz-list-item tag="a" href="#/components/list">A</lbz-list-item>
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ active: true, false (default)</h3>

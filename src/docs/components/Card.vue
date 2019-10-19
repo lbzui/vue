@@ -11,7 +11,7 @@
         </div>
         <div class="lbz-card__header__end">
           <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </div>
       </template>
@@ -21,7 +21,7 @@
           <lbz-button>Action 2</lbz-button>
         </div>
         <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>favorite_border</lbz-icon-button>
           <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
@@ -29,7 +29,7 @@
     <lbz-card>
       <template #start>
         <div class="lbz-card__header__start">
-          <img class="lbz-card__avatar" src="../../assets/img/logo.png">
+          <img class="lbz-card__avatar" src="../../assets/img/placeholder@1x1.png">
         </div>
         <div class="lbz-card__header__center">
           <span class="lbz-card__title">Title goes here</span>
@@ -41,7 +41,7 @@
       </template>
       <template #center>
         <div class="lbz-u-aspect-ratio--16x9 lbz-card__media">
-          <img src="../../assets/img/logo.png">
+          <img src="../../assets/img/placeholder@16x9.png">
         </div>
         <p class="lbz-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
       </template>
@@ -51,7 +51,7 @@
           <lbz-button>Action 2</lbz-button>
         </div>
         <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>favorite_border</lbz-icon-button>
           <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
@@ -59,7 +59,7 @@
     <lbz-card>
       <template #center>
         <div class="lbz-u-aspect-ratio--16x9 lbz-card__media">
-          <img src="../../assets/img/logo.png">
+          <img src="../../assets/img/placeholder@16x9.png">
           <div class="lbz-card__supporting-text">
             <span class="lbz-card__title">Title goes here</span>
             <span class="lbz-card__subtitle">Secondary text</span>
@@ -75,7 +75,7 @@
           <lbz-button>Action 2</lbz-button>
         </div>
         <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>favorite_border</lbz-icon-button>
           <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
@@ -83,7 +83,7 @@
     <lbz-card>
       <template #center>
         <div class="lbz-u-aspect-ratio--16x9 lbz-card__media">
-          <img src="../../assets/img/logo.png">
+          <img src="../../assets/img/placeholder@16x9.png">
         </div>
         <div class="lbz-card__supporting-text">
           <span class="lbz-card__title">Title goes here</span>
@@ -98,7 +98,7 @@
           <lbz-button>Action 2</lbz-button>
         </div>
         <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>favorite_border</lbz-icon-button>
           <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
@@ -113,7 +113,7 @@
         </div>
         <div class="lbz-card__header__end">
           <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </div>
       </template>
@@ -123,7 +123,7 @@
           <lbz-button>Action 2</lbz-button>
         </div>
         <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>favorite_border</lbz-icon-button>
           <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
@@ -136,7 +136,7 @@
         </div>
         <div class="lbz-card__header__end">
           <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </div>
       </template>
@@ -146,7 +146,7 @@
           <lbz-button>Action 2</lbz-button>
         </div>
         <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>favorite_border</lbz-icon-button>
           <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
@@ -161,7 +161,7 @@
         </div>
         <div class="lbz-card__header__end">
           <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </div>
       </template>
@@ -171,7 +171,7 @@
           <lbz-button>Action 2</lbz-button>
         </div>
         <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>favorite_border</lbz-icon-button>
           <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
@@ -184,7 +184,7 @@
         </div>
         <div class="lbz-card__header__end">
           <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </div>
       </template>
@@ -194,7 +194,7 @@
           <lbz-button>Action 2</lbz-button>
         </div>
         <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>favorite_border</lbz-icon-button>
           <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
@@ -212,7 +212,7 @@
         </div>
         <div class="lbz-card__header__end">
           <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </div>
       </template>
@@ -222,7 +222,7 @@
           <lbz-button>Action 2</lbz-button>
         </div>
         <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>favorite_border</lbz-icon-button>
           <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
@@ -238,7 +238,7 @@
         </div>
         <div class="lbz-card__header__end">
           <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </div>
       </template>
@@ -248,7 +248,7 @@
           <lbz-button>Action 2</lbz-button>
         </div>
         <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>favorite_border</lbz-icon-button>
           <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
@@ -262,7 +262,7 @@
         </div>
         <div class="lbz-card__header__end">
           <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </div>
       </template>
@@ -272,7 +272,7 @@
           <lbz-button>Action 2</lbz-button>
         </div>
         <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>favorite_border</lbz-icon-button>
           <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
@@ -288,7 +288,7 @@
         </div>
         <div class="lbz-card__header__end">
           <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </div>
       </template>
@@ -298,7 +298,7 @@
           <lbz-button>Action 2</lbz-button>
         </div>
         <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>favorite_border</lbz-icon-button>
           <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
@@ -312,7 +312,7 @@
         </div>
         <div class="lbz-card__header__end">
           <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
-            <img src="../../assets/img/logo.png">
+            <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </div>
       </template>
@@ -322,7 +322,7 @@
           <lbz-button>Action 2</lbz-button>
         </div>
         <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite</lbz-icon-button>
+          <lbz-icon-button>favorite_border</lbz-icon-button>
           <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
