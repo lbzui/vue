@@ -179,10 +179,6 @@ export default class App extends Vue {
       label: 'Changelog',
     },
     {
-      path: 'https://github.com/lbzui/lbzui-vue/issues',
-      label: 'Issues',
-    },
-    {
       path: 'https://material.io/',
       label: 'Material design',
     },

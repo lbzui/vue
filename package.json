@@ -57,7 +57,7 @@
           "grid": "autoplace"
         },
         "preserve": true,
-        "importFrom": []
+        "importFrom": ["src/assets/css/variables/variables.css"]
       },
       "postcss-pxtorem": {
         "rootValue": 16,
