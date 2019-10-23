@@ -87,6 +87,10 @@ export default class App extends Vue {
       label: 'Elevation',
     },
     {
+      path: '/styles/layout-grid',
+      label: 'Layout grid',
+    },
+    {
       path: '/styles/shadow',
       label: 'Shadow',
     },
@@ -174,10 +178,14 @@ export default class App extends Vue {
       path: 'https://github.com/lbzui/lbzui-vue/projects/1',
       label: '@lbzui/vue board',
     },
-    {
-      path: 'https://github.com/lbzui/lbzui-vue/blob/master/CHANGELOG.md',
-      label: 'Changelog',
-    },
+    // {
+    //   path: 'https://github.com/lbzui/lbzui-vue/issues',
+    //   label: 'Issues',
+    // },
+    // {
+    //   path: 'https://github.com/lbzui/lbzui-vue/blob/master/CHANGELOG.md',
+    //   label: 'Changelog',
+    // },
     {
       path: 'https://material.io/',
       label: 'Material design',
@@ -241,6 +249,7 @@ export default class App extends Vue {
   height: 180px;
   line-height: 180px;
   text-align: center;
+  vertical-align: top;
   .lbz-surface--1();
 }
 
@@ -252,6 +261,7 @@ export default class App extends Vue {
   width: 100%;
   max-width: 360px;
   height: 640px;
+  vertical-align: top;
 }
 
 .lbzui {
@@ -292,7 +302,7 @@ export default class App extends Vue {
     display: none;
   }
 
-  @media (max-width: 719px) {
+  @media #lbz-layout-grid.media[max719] {
     .lbzui-rectangle {
       margin-right: 0;
     }

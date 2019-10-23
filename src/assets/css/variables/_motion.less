@@ -1,12 +1,12 @@
 // Motion
-// usage: `#lbz-motion.easing[x]` (x: standard, deceleration, acceleration, sharp)
+// usage: `#lbz-motion.x[y]`
 
 #lbz-motion() {
   // Easing (timing-function)
-  .easing() {
-    standard: cubic-bezier(.4, 0, .2, 1); // Standard curve
-    deceleration: cubic-bezier(0, 0, .2, 1); // Deceleration curve
-    acceleration: cubic-bezier(.4, 0, 1, 1); // Acceleration curve
-    sharp: cubic-bezier(.4, 0, .6, 1); // Sharp curve
+  .curve() {
+    standard: cubic-bezier(.4, 0, .2, 1);
+    deceleration: cubic-bezier(0, 0, .2, 1);
+    acceleration: cubic-bezier(.4, 0, 1, 1);
+    sharp: cubic-bezier(.4, 0, .6, 1);
   }
 }

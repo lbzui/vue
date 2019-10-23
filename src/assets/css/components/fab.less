@@ -23,14 +23,14 @@
   background-color: var(--lbz-theme-secondary);
   outline: none;
   .lbz-shadow--6();
-  transition: opacity 15ms linear 30ms, box-shadow 280ms #lbz-motion.easing[standard], transform 270ms #lbz-motion.easing[deceleration] 0ms;
+  transition: opacity 15ms linear 30ms, box-shadow 280ms #lbz-motion.curve[standard], transform 270ms #lbz-motion.curve[deceleration] 0ms;
   cursor: pointer;
   user-select: none;
 
   // inactive
   &.is-inactive {
     opacity: 0;
-    transition: opacity 15ms linear 150ms, transform 180ms #lbz-motion.easing[acceleration] 0ms;
+    transition: opacity 15ms linear 150ms, transform 180ms #lbz-motion.curve[acceleration] 0ms;
     transform: scale(0);
   }
 

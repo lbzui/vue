@@ -23,7 +23,7 @@
     .lbz-surface--24();
     .lbz-shadow--24();
 
-    @media (min-width: 720px) {
+    @media #lbz-layout-grid.media[min720] {
       width: 560px;
     }
   }
@@ -81,7 +81,7 @@
     bottom: 0;
     left: 0;
     z-index: -1;
-    background-color: @scrim;
+    background-color: #lbz-theme[scrim];
   }
 
   // scrollable
@@ -134,7 +134,7 @@
       padding: 64px 0 0;
       height: 100%;
 
-      @media (max-width: 719px) {
+      @media #lbz-layout-grid.media[max719] {
         padding-top: 56px;
       }
     }
@@ -145,7 +145,7 @@
     transition: opacity 150ms linear;
 
     .lbz-dialog__container {
-      transition: opacity 75ms linear, transform 150ms #lbz-motion.easing[deceleration];
+      transition: opacity 75ms linear, transform 150ms #lbz-motion.curve[deceleration];
     }
 
     .lbz-dialog__scrim {

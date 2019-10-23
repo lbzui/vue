@@ -2,26 +2,29 @@
 // usage: `var(--lbz-layout-grid-x)` (x: column, gutter, margin)
 
 :root {
-  // min-width: 840px
-  --lbz-layout-grid-column: 12;
-  --lbz-layout-grid-gutter: 24px;
-  --lbz-layout-grid-margin: 24px;
+  // width >= 840px
+  --lbz-layout-grid-column: #lbz-layout-grid.large[column];
+  --lbz-layout-grid-gutter: #lbz-layout-grid.large[gutter];
+  --lbz-layout-grid-margin: #lbz-layout-grid.large[margin];
 
-  @media (min-width: 720px) and (max-width: 839px) {
-    --lbz-layout-grid-column: 8;
-    --lbz-layout-grid-gutter: 24px;
-    --lbz-layout-grid-margin: 24px;
+  // 720px <= width < 840px
+  @media #lbz-layout-grid.medium[media] {
+    --lbz-layout-grid-column: #lbz-layout-grid.medium[column];
+    --lbz-layout-grid-gutter: #lbz-layout-grid.medium[gutter];
+    --lbz-layout-grid-margin: #lbz-layout-grid.medium[margin];
   }
 
-  @media (min-width: 600px) and (max-width: 719px) {
-    --lbz-layout-grid-column: 8;
-    --lbz-layout-grid-gutter: 16px;
-    --lbz-layout-grid-margin: 16px;
+  // 600px <= width < 720px
+  @media #lbz-layout-grid.xmedium[media] {
+    --lbz-layout-grid-column: #lbz-layout-grid.xmedium[column];
+    --lbz-layout-grid-gutter: #lbz-layout-grid.xmedium[gutter];
+    --lbz-layout-grid-margin: #lbz-layout-grid.xmedium[margin];
   }
 
-  @media (max-width: 599px) {
-    --lbz-layout-grid-column: 4;
-    --lbz-layout-grid-gutter: 16px;
-    --lbz-layout-grid-margin: 16px;
+  // width < 600px
+  @media #lbz-layout-grid.small[media] {
+    --lbz-layout-grid-column: #lbz-layout-grid.small[column];
+    --lbz-layout-grid-gutter: #lbz-layout-grid.small[gutter];
+    --lbz-layout-grid-margin: #lbz-layout-grid.small[margin];
   }
 }

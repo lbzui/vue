@@ -54,7 +54,7 @@
         "features": {},
         "autoprefixer": {
           "flexbox": "no-2009",
-          "grid": "autoplace"
+          "grid": "no-autoplace"
         },
         "preserve": true,
         "importFrom": ["src/assets/css/variables/variables.css"]

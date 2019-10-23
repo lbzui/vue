@@ -1,0 +1,129 @@
+// Layout grid
+// usage: `.lbz-layout-grid`
+//        `.lbz-layout-grid__cell`
+//        `.startx` (x: 1-12)
+//        `.spanx` (x: 1-12)
+//        `.endx` (x: 2-13)
+//        `.align-x` (x: start, center, end, stretch)
+
+@import "../mixins/_layout-grid.less";
+
+.lbz-layout-grid {
+  display: grid;
+  /* autoprefixer: ignore next */
+  grid-template: repeat(auto-fill, minmax(0, auto)) ~'/' repeat(#lbz-layout-grid.large[column], minmax(0, 1fr));
+  gap: #lbz-layout-grid.large[gutter];
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 var(--lbz-layout-grid-margin);
+
+  & &__cell {
+    place-self: stretch stretch;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  each(range(12), {
+    @next-value: @value + 1;
+
+    .start@{value} {
+      .lbz-layout-grid-grid-column-start(@value);
+    }
+
+    .span@{value} {
+      .lbz-layout-grid-grid-column-end(span @value);
+    }
+
+    .end@{next-value} {
+      .lbz-layout-grid-grid-column-end(@next-value);
+    }
+  });
+
+  @aligns: start, center, end, stretch;
+
+  each(@aligns, {
+    .align-@{value} {
+      align-self: @value;
+    }
+  });
+
+  @media #lbz-layout-grid.medium[media] {
+    /* autoprefixer: ignore next */
+    grid-template: repeat(auto-fill, minmax(0, auto)) ~'/' repeat(#lbz-layout-grid.medium[column], minmax(0, 1fr));
+    gap: #lbz-layout-grid.medium[gutter];
+
+    @starts: 9, 10, 11, 12;
+
+    each(@starts, {
+      @next-value: @value + 1;
+
+      .start@{value} {
+        .lbz-layout-grid-grid-column-start(@value - 8);
+      }
+
+      .span@{value} {
+        .lbz-layout-grid-grid-column-end(span 8);
+      }
+
+      .end@{next-value} {
+        .lbz-layout-grid-grid-column-end(@next-value - 8);
+      }
+    });
+  }
+
+  @media #lbz-layout-grid.xmedium[media] {
+    /* autoprefixer: ignore next */
+    grid-template: repeat(auto-fill, minmax(0, auto)) ~'/' repeat(#lbz-layout-grid.xmedium[column], minmax(0, 1fr));
+    gap: #lbz-layout-grid.xmedium[gutter];
+
+    @starts: 9, 10, 11, 12;
+
+    each(@starts, {
+      @next-value: @value + 1;
+
+      .start@{value} {
+        .lbz-layout-grid-grid-column-start(@value - 8);
+      }
+
+      .span@{value} {
+        .lbz-layout-grid-grid-column-end(span 8);
+      }
+
+      .end@{next-value} {
+        .lbz-layout-grid-grid-column-end(@next-value - 8);
+      }
+    });
+  }
+
+  @media #lbz-layout-grid.small[media] {
+    /* autoprefixer: ignore next */
+    grid-template: repeat(auto-fill, minmax(0, auto)) ~'/' repeat(#lbz-layout-grid.small[column], minmax(0, 1fr));
+    gap: #lbz-layout-grid.small[gutter];
+
+    @starts: 5, 6, 7, 8, 9, 10, 11, 12;
+
+    each(@starts, {
+      @next-value: @value + 1;
+
+      .start@{value} when (@value <= 8) {
+        .lbz-layout-grid-grid-column-start(@value - 4);
+      }
+
+      .start@{value} when (@value > 8) {
+        .lbz-layout-grid-grid-column-start(@value - 8);
+      }
+
+      .span@{value} {
+        .lbz-layout-grid-grid-column-end(span 4);
+      }
+
+      .end@{next-value} when (@next-value <= 8) {
+        .lbz-layout-grid-grid-column-end(@next-value - 4);
+      }
+
+      .end@{next-value} when (@next-value > 8) {
+        .lbz-layout-grid-grid-column-end(@next-value - 8);
+      }
+    });
+  }
+}

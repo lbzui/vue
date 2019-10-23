@@ -20,6 +20,11 @@ export default new Router({
       component: () => import('./docs/styles/Elevation.vue'),
     },
     {
+      path: '/styles/layout-grid',
+      name: 'layout-grid',
+      component: () => import('./docs/styles/LayoutGrid.vue'),
+    },
+    {
       path: '/styles/shadow',
       name: 'shadow',
       component: () => import('./docs/styles/Shadow.vue'),
