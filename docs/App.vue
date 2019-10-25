@@ -45,7 +45,7 @@
             <template #end><lbz-icon>open_in_new</lbz-icon></template>
           </lbz-list-item>
           <lbz-divider/>
-          <span class="lbz-list__subtitle">Choose theme</span>
+          <span class="lbz-list__subtitle">Choose theme (IE not supported)</span>
           <lbz-list-item
             tag="span"
             disabled

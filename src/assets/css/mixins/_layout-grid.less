@@ -2,22 +2,30 @@
 // usage: `.lbz-layout-grid-x();`
 
 .lbz-layout-grid-grid-column-start(@start) {
-  /* autoprefixer: ignore next */
   grid-column-start: @start;
 }
 
+.lbz-layout-grid-grid-column-span(@end) {
+  -ms-grid-column-span: @end;
+  grid-column-end: span @end;
+}
+
 .lbz-layout-grid-grid-column-end(@end) {
-  /* autoprefixer: ignore next */
+  -ms-grid-column-span: @end;
   grid-column-end: @end;
 }
 
 .lbz-layout-grid-grid-row-start(@start) {
-  /* autoprefixer: ignore next */
   grid-row-start: @start;
 }
 
+.lbz-layout-grid-grid-row-span(@end) {
+  -ms-grid-row-span: @end;
+  grid-row-end: span @end;
+}
+
 .lbz-layout-grid-grid-row-end(@end) {
-  /* autoprefixer: ignore next */
+  -ms-grid-row-span: @end;
   grid-row-end: @end;
 }
 

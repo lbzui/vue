@@ -3,4 +3,4 @@ declare module '*.vue' {
   export default Vue;
 }
 
-declare module 'vue-scroll'
+declare module 'vue-scroll';

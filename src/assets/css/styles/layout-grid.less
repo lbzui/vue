@@ -1,17 +1,19 @@
 // Layout grid
 // usage: `.lbz-layout-grid`
 //        `.lbz-layout-grid__cell`
-//        `.startx` (x: 1-12)
-//        `.spanx` (x: 1-12)
-//        `.endx` (x: 2-13)
-//        `.align-x` (x: start, center, end, stretch)
+//        `.lbz-layout-grid__cell.startx` (x: 1-12)
+//        `.lbz-layout-grid__cell.spanx` (x: 1-12)
+//        `.lbz-layout-grid__cell.endx` (x: 2-13)
+//        `.lbz-layout-grid__cell.align-x` (x: start, center, end, stretch)
 
 @import "../mixins/_layout-grid.less";
 
 .lbz-layout-grid {
   display: grid;
+  grid-template-columns: repeat(#lbz-layout-grid.large[column], minmax(0, 1fr));
   /* autoprefixer: ignore next */
-  grid-template: repeat(auto-fill, minmax(0, auto)) ~'/' repeat(#lbz-layout-grid.large[column], minmax(0, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(0, auto));
+  /* autoprefixer: ignore next */
   gap: #lbz-layout-grid.large[gutter];
   overflow: hidden;
   box-sizing: border-box;
@@ -31,7 +33,7 @@
     }
 
     .span@{value} {
-      .lbz-layout-grid-grid-column-end(span @value);
+      .lbz-layout-grid-grid-column-span(@value);
     }
 
     .end@{next-value} {
@@ -48,8 +50,10 @@
   });
 
   @media #lbz-layout-grid.medium[media] {
+    grid-template-columns: repeat(#lbz-layout-grid.medium[column], minmax(0, 1fr));
     /* autoprefixer: ignore next */
-    grid-template: repeat(auto-fill, minmax(0, auto)) ~'/' repeat(#lbz-layout-grid.medium[column], minmax(0, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(0, auto));
+    /* autoprefixer: ignore next */
     gap: #lbz-layout-grid.medium[gutter];
 
     @starts: 9, 10, 11, 12;
@@ -72,8 +76,10 @@
   }
 
   @media #lbz-layout-grid.xmedium[media] {
+    grid-template-columns: repeat(#lbz-layout-grid.xmedium[column], minmax(0, 1fr));
     /* autoprefixer: ignore next */
-    grid-template: repeat(auto-fill, minmax(0, auto)) ~'/' repeat(#lbz-layout-grid.xmedium[column], minmax(0, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(0, auto));
+    /* autoprefixer: ignore next */
     gap: #lbz-layout-grid.xmedium[gutter];
 
     @starts: 9, 10, 11, 12;
@@ -96,8 +102,10 @@
   }
 
   @media #lbz-layout-grid.small[media] {
+    grid-template-columns: repeat(#lbz-layout-grid.small[column], minmax(0, 1fr));
     /* autoprefixer: ignore next */
-    grid-template: repeat(auto-fill, minmax(0, auto)) ~'/' repeat(#lbz-layout-grid.small[column], minmax(0, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(0, auto));
+    /* autoprefixer: ignore next */
     gap: #lbz-layout-grid.small[gutter];
 
     @starts: 5, 6, 7, 8, 9, 10, 11, 12;

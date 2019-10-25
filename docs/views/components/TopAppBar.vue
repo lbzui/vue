@@ -266,7 +266,7 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ media (type === 'extended'): '' (default), 'x'</h3>
-    <lbz-top-app-bar type="extended" background="light" title="Page title" :media="require('@/assets/img/placeholder@3x2.png')">
+    <lbz-top-app-bar type="extended" background="light" title="Page title" :media="require('../../assets/img/placeholder@3x2.png')">
       <template #start>
         <lbz-icon-button on-background="light">menu</lbz-icon-button>
       </template>
