@@ -1,6 +1,6 @@
 <template>
   <component
-    v-bind="cbind"
+    v-bind="cattrs"
     :class="[
       !toggle ? 'material-icons' : '',
       'lbz-icon-button',
@@ -52,7 +52,7 @@ export default class IconButton extends Vue {
   // off-icon (toggle): '' (default), 'x'
   @Prop({ type: String, default: '' }) private offIcon!: string;
 
-  get cbind() {
+  get cattrs() {
     return !this.toggle && this.routerLink ? {
       is: 'router-link',
       tag: this.tag,

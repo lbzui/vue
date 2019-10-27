@@ -397,22 +397,3 @@ export default class TopAppBar extends Vue {
   private vtab: number = 0;
 }
 </script>
-
-<style lang="less">
-.lbzui-components-top-app-bar {
-  .lbz-top-app-bar {
-    &:not(.lbz-top-app-bar--short) {
-      width: 100%;
-      max-width: 360px;
-
-      + .lbz-top-app-bar {
-        margin-top: 16px;
-      }
-    }
-
-    &.lbz-top-app-bar--short {
-      margin: 0 16px 16px 0;
-    }
-  }
-}
-</style>

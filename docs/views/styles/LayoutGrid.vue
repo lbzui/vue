@@ -24,24 +24,3 @@
     </div>
   </article>
 </template>
-
-<style lang="less">
-.lbzui-styles-layout-grid {
-  .lbz-layout-grid {
-    border: 1px solid var(--lbz-theme-outline-on-surface);
-
-    .lbz-layout-grid__cell {
-      height: 180px;
-      background-color: var(--lbz-theme-outline-on-surface);
-    }
-
-    .lbzui-cell {
-      height: 90px;
-    }
-
-    + .lbz-layout-grid {
-      margin-top: 16px;
-    }
-  }
-}
-</style>

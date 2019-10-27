@@ -340,17 +340,3 @@ export default class Card extends Vue {
   }
 }
 </script>
-
-<style lang="less">
-.lbzui-components-card {
-  .lbz-card {
-    display: flex;
-    width: 100%;
-    max-width: 344px;
-
-    + .lbz-card {
-      margin-top: 16px;
-    }
-  }
-}
-</style>

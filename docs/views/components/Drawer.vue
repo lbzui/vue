@@ -470,17 +470,3 @@ export default class Drawer extends Vue {
   }
 }
 </script>
-
-<style lang="less">
-.lbzui-components-drawer {
-  .lbz-button {
-    display: flex;
-    margin-bottom: 16px;
-  }
-
-  .lbz-drawer {
-    position: relative !important;
-    z-index: 0;
-  }
-}
-</style>

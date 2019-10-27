@@ -241,11 +241,3 @@ export default class Button extends Vue {
   }
 }
 </script>
-
-<style lang="less">
-.lbzui-components-button {
-  .lbz-button {
-    margin: 0 8px 12px 0 !important;
-  }
-}
-</style>

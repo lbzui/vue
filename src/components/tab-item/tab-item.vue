@@ -1,6 +1,6 @@
 <template>
   <component
-    v-bind="cbind"
+    v-bind="cattrs"
     :class="[
       'lbz-tab-item',
       {
@@ -40,7 +40,7 @@ export default class TabItem extends Vue {
   @Inject() private ptag!: string;
   @Inject() private pripple!: boolean;
 
-  get cbind() {
+  get cattrs() {
     return this.routerLink || this.prouterLink ? {
       is: 'router-link',
       tag: this.tag || this.ptag,

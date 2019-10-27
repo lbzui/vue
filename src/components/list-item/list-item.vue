@@ -1,6 +1,6 @@
 <template>
   <component
-    v-bind="cbind"
+    v-bind="cattrs"
     :class="[
       'lbz-list-item',
       {
@@ -48,7 +48,7 @@ export default class ListItem extends Vue {
   @Inject() private pripple!: boolean;
   @Inject() private pdisabled!: boolean;
 
-  get cbind() {
+  get cattrs() {
     return this.routerLink || this.prouterLink ? {
       is: 'router-link',
       tag: this.tag || this.ptag,

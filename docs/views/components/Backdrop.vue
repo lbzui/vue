@@ -217,13 +217,3 @@ export default class Backdrop extends Vue {
   }
 }
 </script>
-
-<style lang="less">
-.lbzui-components-backdrop {
-  .lbz-backdrop {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-}
-</style>

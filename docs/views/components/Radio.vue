@@ -40,11 +40,3 @@ export default class Radio extends Vue {
   }
 }
 </script>
-
-<style lang="less">
-.lbzui-components-radio {
-  .lbz-radio {
-    margin: 0 8px 0 0 !important;
-  }
-}
-</style>

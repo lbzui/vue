@@ -280,34 +280,3 @@ export default class Tab extends Vue {
   }
 }
 </script>
-
-<style lang="less">
-.lbzui-components-tab {
-  .lbz-tab {
-    width: 100%;
-    max-width: 360px;
-
-    &.lbz-tab--on {
-      &-primary {
-        background-color: var(--lbz-theme-primary);
-      }
-
-      &-secondary {
-        background-color: var(--lbz-theme-secondary);
-      }
-
-      &-light {
-        background-color: @white;
-      }
-
-      &-dark {
-        background-color: @black;
-      }
-    }
-
-    + .lbz-tab {
-      margin-top: 16px;
-    }
-  }
-}
-</style>
