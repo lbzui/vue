@@ -5,7 +5,7 @@
     <h3 class="lbz-typography--subtitle1">$ active.sync: true (default), false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'modal', 'bottom (mobile only)'</h3>
     <lbz-button type="contained" @click.stop="ftoggle">{{ vactiveOne ? 'Inactive' : 'Active' }}</lbz-button>
-    <div class="lbzui-rectangle">
+    <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactiveOne" ref="drawer" @open="fopen" @close="fclose">
         <template #center>
           <lbz-list tag="nav" item-tag="a">
@@ -24,7 +24,7 @@
         </template>
       </lbz-drawer>
     </div>
-    <div class="lbzui-rectangle">
+    <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactiveOne">
         <template #center>
           <lbz-list tag="nav" item-tag="a">
@@ -61,7 +61,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
-    <div class="lbzui-rectangle">
+    <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactiveOne" title="Title">
         <template #center>
           <lbz-list tag="nav" item-tag="a">
@@ -95,7 +95,7 @@
         </template>
       </lbz-drawer>
     </div>
-    <div class="lbzui-rectangle">
+    <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactiveOne" title="Title" subtitle="Subtitle">
         <template #center>
           <lbz-list tag="nav" item-tag="a">
@@ -135,7 +135,7 @@
     <h3 class="lbz-typography--subtitle1">$ active.sync: true (default), false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'modal', 'bottom (mobile only)'</h3>
     <lbz-button type="contained" @click.stop="vactiveTwo = !vactiveTwo">{{ vactiveTwo ? 'Inactive' : 'Active' }}</lbz-button>
-    <div class="lbzui-rectangle">
+    <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactiveTwo" type="modal">
         <template #center>
           <lbz-list tag="nav" item-tag="a">
@@ -172,7 +172,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
-    <div class="lbzui-rectangle">
+    <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactiveTwo" type="modal" title="Title">
         <template #center>
           <lbz-list tag="nav" item-tag="a">
@@ -206,7 +206,7 @@
         </template>
       </lbz-drawer>
     </div>
-    <div class="lbzui-rectangle">
+    <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactiveTwo" type="modal" title="Title" subtitle="Subtitle">
         <template #center>
           <lbz-list tag="nav" item-tag="a">
@@ -246,7 +246,7 @@
     <h3 class="lbz-typography--subtitle1">$ active.sync: true (default), false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'modal', 'bottom (mobile only)'</h3>
     <lbz-button type="contained" @click.stop="vactiveThree = !vactiveThree">{{ vactiveThree ? 'Inactive' : 'Active' }}</lbz-button>
-    <div class="lbzui-rectangle">
+    <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactiveThree" type="bottom">
         <template #center>
           <lbz-list tag="nav" item-tag="a">
@@ -282,7 +282,7 @@
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ full-screen (type === 'bottom'): true, false (default)</h3>
-    <div class="lbzui-rectangle">
+    <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactiveThree" type="bottom" full-screen title="Title">
         <template #center>
           <lbz-list tag="nav" item-tag="a">
@@ -319,7 +319,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
-    <div class="lbzui-rectangle">
+    <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactiveThree" type="bottom" title="Title">
         <template #center>
           <lbz-list tag="nav" item-tag="a">
@@ -353,7 +353,7 @@
         </template>
       </lbz-drawer>
     </div>
-    <div class="lbzui-rectangle">
+    <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactiveThree" type="bottom" title="Title" subtitle="Subtitle">
         <template #center>
           <lbz-list tag="nav" item-tag="a">

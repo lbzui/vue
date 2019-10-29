@@ -59,7 +59,9 @@
 <script lang="ts">
 import { Component, PropSync, Prop, Watch, Vue } from 'vue-property-decorator';
 
-@Component
+@Component({
+  name: 'lbz-dialog',
+})
 export default class Dialog extends Vue {
   // [required]active.sync: true, false
   @PropSync('active', { type: Boolean, required: true }) private cisActive !: boolean;
@@ -90,11 +92,9 @@ export default class Dialog extends Vue {
   @Watch('cisActive')
   private factiveChanged(val: boolean, oldVal: boolean) {
     this.$nextTick().then(() => {
-      if (val) {
-        this.$emit('open');
-      } else {
-        this.$emit('close');
-      }
+      val
+        ? this.$emit('open')
+        : this.$emit('close');
     });
   }
 

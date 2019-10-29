@@ -24,7 +24,9 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component
+@Component({
+  name: 'lbz-card',
+})
 export default class Card extends Vue {
   // type: 'elevated' (default), 'outlined'
   @Prop({ type: String, default: '' }) private type!: string;

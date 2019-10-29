@@ -17,7 +17,9 @@
 import { Component, Model, Prop, ProvideReactive, Provide, Emit, Vue } from 'vue-property-decorator';
 import EventBus from '@/utils/event-bus.ts';
 
-@Component
+@Component({
+  name: 'lbz-tab',
+})
 export default class Tab extends Vue {
   // [required]v-model: true, false, x, 'x'
   @Model('change', { type: [Boolean, Number, String], required: true }) private model!: boolean | number | string;
@@ -38,11 +40,14 @@ export default class Tab extends Vue {
   @Prop({ type: String, default: 'button' }) private itemTag!: string;
   // ripple: true (default), false
   @Prop({ type: Boolean, default: true }) private ripple!: boolean;
+  // on-content: true, false (default)
+  @Prop({ type: Boolean, default: false }) private onContent!: boolean;
 
   @ProvideReactive() private pmodel: boolean | number | string = this.model;
   @Provide() private prouterLink: boolean = this.routerLink;
   @Provide() private ptag: string = this.itemTag;
   @Provide() private pripple: boolean = this.ripple;
+  @Provide() private ponContent: boolean = this.onContent;
 
   private created() {
     EventBus.$on('setValue', this.fvalueChanged);

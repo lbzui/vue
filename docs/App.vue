@@ -14,15 +14,14 @@
         >@lbzui/vue</router-link>
       </template>
       <template #center>
-        <lbz-list tag="nav" item-tag="a">
+        <lbz-list router-link tag="nav" item-tag="a">
           <lbz-divider/>
-          <lbz-list-item router-link to="/">Getting started</lbz-list-item>
+          <lbz-list-item to="/">Getting started</lbz-list-item>
           <lbz-divider/>
           <span class="lbz-list__subtitle">Styles</span>
           <lbz-list-item
             v-for="item of vstyles"
             :key="item.path"
-            router-link
             :to="item.path"
           >{{ item.label }}</lbz-list-item>
           <lbz-divider/>
@@ -30,7 +29,6 @@
           <lbz-list-item
             v-for="item of vcomponents"
             :key="item.path"
-            router-link
             :to="item.path"
           >{{ item.label }}</lbz-list-item>
           <lbz-divider/>
@@ -38,6 +36,7 @@
           <lbz-list-item
             v-for="item of vlinks"
             :key="item.path"
+            :router-link="false"
             :href="item.path"
             target="_blank"
           >
@@ -47,6 +46,7 @@
           <lbz-divider/>
           <span class="lbz-list__subtitle">Choose theme (IE not supported)</span>
           <lbz-list-item
+            :router-link="false"
             tag="span"
             disabled
             style="padding: 0;"
@@ -167,7 +167,7 @@ export default class App extends Vue {
       label: 'Open source code',
     },
     {
-      path: 'https://github.com/lbzui/lbzui-vue/tree/master/src/docs',
+      path: 'https://github.com/lbzui/lbzui-vue/tree/master/docs/views',
       label: 'Docs sample code',
     },
     {

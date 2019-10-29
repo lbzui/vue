@@ -2,20 +2,15 @@
 .lbz-tab-item {
   flex: 1;
   -webkit-appearance: none;
-  display: inline-flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
   border: none;
-  padding: 12px 16px;
+  padding: 0 16px;
   min-width: 90px;
   max-width: 360px;
-  min-height: 48px;
-  vertical-align: middle;
   .lbz-typography--button();
+  text-align: center;
   color: var(--lbz-theme-text-medium-emphasis-on-surface);
   fill: currentColor;
   background-color: transparent;
@@ -35,6 +30,18 @@
     opacity: #lbz-state.primary[enabled];
     transition: background-color 15ms linear, opacity 15ms linear;
     content: "";
+    pointer-events: none;
+  }
+
+  & &__content {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    min-height: 48px;
     pointer-events: none;
   }
 

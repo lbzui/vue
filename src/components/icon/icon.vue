@@ -12,7 +12,9 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component
+@Component({
+  name: 'lbz-icon',
+})
 export default class Icon extends Vue {
   // size: 18, 24 (default), 36, 48
   @Prop({ type: Number }) private size!: number;

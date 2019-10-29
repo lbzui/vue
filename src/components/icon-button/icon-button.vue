@@ -28,7 +28,9 @@
 <script lang="ts">
 import { Component, PropSync, Prop, Emit, Vue } from 'vue-property-decorator';
 
-@Component
+@Component({
+  name: 'lbz-icon-button',
+})
 export default class IconButton extends Vue {
   // active.sync (toggle): true, false (default)
   @PropSync('active', { type: Boolean, default: false }) private cisActive !: boolean;
@@ -53,15 +55,16 @@ export default class IconButton extends Vue {
   @Prop({ type: String, default: '' }) private offIcon!: string;
 
   get cattrs() {
-    return !this.toggle && this.routerLink ? {
-      is: 'router-link',
-      tag: this.tag,
-      to: this.to,
-      disabled: this.tag === 'button' && this.disabled,
-    } : {
-      is: this.tag,
-      disabled: this.tag === 'button' && this.disabled,
-    };
+    return !this.toggle && this.routerLink
+      ? {
+        is: 'router-link',
+        tag: this.tag,
+        to: this.to,
+        disabled: this.tag === 'button' && this.disabled,
+      } : {
+        is: this.tag,
+        disabled: this.tag === 'button' && this.disabled,
+      };
   }
 
   @Emit('click')

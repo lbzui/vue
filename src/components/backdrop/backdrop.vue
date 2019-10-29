@@ -51,20 +51,22 @@
 <script lang="ts">
 import { Component, PropSync, Prop, Ref, Emit, Vue } from 'vue-property-decorator';
 
-@Component
+@Component({
+  name: 'lbz-backdrop',
+})
 export default class Backdrop extends Vue {
   // [required]active.sync: true, false
   @PropSync('active', { type: Boolean, required: true }) private cisActive !: boolean;
 
-  // subtitle (front-layer): '' (default), 'x'
+  // subtitle: '' (default), 'x'
   @Prop({ type: String, default: '' }) private subtitle!: string;
-  // icon (front-layer): true, false (default)
+  // icon: true, false (default)
   @Prop({ type: Boolean, default: false }) private icon!: boolean;
-  // divider (front-layer): true, false (default)
+  // divider: true, false (default)
   @Prop({ type: Boolean, default: false }) private divider!: boolean;
-  // horizontal (front-layer): true, false (default)
+  // horizontal: true, false (default)
   @Prop({ type: Boolean, default: false }) private horizontal!: boolean;
-  // scrim (front-layer): true, false (default)
+  // scrim: true, false (default)
   @Prop({ type: Boolean, default: false }) private scrim!: boolean;
 
   @Ref('scroller') private scroller!: HTMLFormElement;

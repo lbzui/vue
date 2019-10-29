@@ -10,7 +10,9 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component
+@Component({
+  name: 'lbz-divider',
+})
 export default class Divider extends Vue {
   // on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;

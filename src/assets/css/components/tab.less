@@ -109,7 +109,7 @@
   &&--center,
   &&--right {
     .lbz-tab-item {
-      flex: none;
+      flex: 0 0 0%;
     }
   }
 
@@ -128,11 +128,24 @@
   // stacked
   &.is-stacked {
     .lbz-tab-item {
-      flex-direction: column;
+      .lbz-tab-item {
+        &__content {
+          flex-direction: column;
+        }
 
-      .lbz-tab-item__icon + .lbz-tab-item__label {
-        margin-top: 8px;
-        margin-left: 0;
+        &__icon {
+          margin-top: 12px;
+
+           + .lbz-tab-item__label {
+            margin-top: 4px;
+            margin-left: 0;
+          }
+        }
+
+        &__label {
+          margin-bottom: 16px;
+          max-width: 100%;
+        }
       }
     }
   }

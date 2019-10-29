@@ -20,7 +20,9 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component
+@Component({
+  name: 'lbz-fab',
+})
 export default class FAB extends Vue {
   // type: 'standard' (default), 'mini', 'extended'
   @Prop({ type: String, default: '' }) private type!: string;

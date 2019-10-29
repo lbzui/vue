@@ -3,8 +3,8 @@
     <h2 class="lbz-typography--h5"># Backdrop</h2>
 
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
-    <h3 class="lbz-typography--subtitle1">$ subtitle (front-layer): '' (default), 'x'</h3>
-    <div class="lbzui-rectangle">
+    <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
+    <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" ref="backdrop">
         <template #back-layer-header>
           <lbz-top-app-bar title="Page title">
@@ -30,7 +30,7 @@
         </template>
       </lbz-backdrop>
     </div>
-    <div class="lbzui-rectangle">
+    <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" subtitle="Subtitle">
         <template #back-layer-header>
           <lbz-top-app-bar title="Page title">
@@ -57,8 +57,8 @@
       </lbz-backdrop>
     </div>
 
-    <h3 class="lbz-typography--subtitle1">$ icon (front-layer): true, false (default)</h3>
-    <div class="lbzui-rectangle">
+    <h3 class="lbz-typography--subtitle1">$ icon: true, false (default)</h3>
+    <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" icon>
         <template #back-layer-header>
           <lbz-top-app-bar title="Page title">
@@ -85,8 +85,8 @@
       </lbz-backdrop>
     </div>
 
-    <h3 class="lbz-typography--subtitle1">$ divider (front-layer): true, false (default)</h3>
-    <div class="lbzui-rectangle">
+    <h3 class="lbz-typography--subtitle1">$ divider: true, false (default)</h3>
+    <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" divider>
         <template #back-layer-header>
           <lbz-top-app-bar title="Page title">
@@ -113,8 +113,8 @@
       </lbz-backdrop>
     </div>
 
-    <h3 class="lbz-typography--subtitle1">$ horizontal (front-layer): true, false (default)</h3>
-    <div class="lbzui-rectangle">
+    <h3 class="lbz-typography--subtitle1">$ horizontal: true, false (default)</h3>
+    <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" horizontal @scroll="fscroll">
         <template #back-layer-header>
           <lbz-top-app-bar title="Page title">
@@ -140,7 +140,7 @@
         </template>
       </lbz-backdrop>
     </div>
-    <div class="lbzui-rectangle">
+    <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" @scroll="fscroll">
         <template #back-layer-header>
           <lbz-top-app-bar title="Page title">
@@ -167,8 +167,8 @@
       </lbz-backdrop>
     </div>
 
-    <h3 class="lbz-typography--subtitle1">$ scrim (front-layer): true, false (default)</h3>
-    <div class="lbzui-rectangle">
+    <h3 class="lbz-typography--subtitle1">$ scrim: true, false (default)</h3>
+    <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" scrim>
         <template #back-layer-header>
           <lbz-top-app-bar title="Page title">

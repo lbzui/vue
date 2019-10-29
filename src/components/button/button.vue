@@ -25,7 +25,9 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component
+@Component({
+  name: 'lbz-button',
+})
 export default class Button extends Vue {
   // type: 'text' (default), 'outlined', 'contained'
   @Prop({ type: String, default: '' }) private type!: string;
@@ -51,15 +53,16 @@ export default class Button extends Vue {
   @Prop({ type: String, default: '' }) private icon!: string;
 
   get cattrs() {
-    return this.routerLink ? {
-      is: 'router-link',
-      tag: this.tag,
-      to: this.to,
-      disabled: this.tag === 'button' && this.disabled,
-    } : {
-      is: this.tag,
-      disabled: this.tag === 'button' && this.disabled,
-    };
+    return this.routerLink
+      ? {
+        is: 'router-link',
+        tag: this.tag,
+        to: this.to,
+        disabled: this.tag === 'button' && this.disabled,
+      } : {
+        is: this.tag,
+        disabled: this.tag === 'button' && this.disabled,
+      };
   }
 }
 </script>

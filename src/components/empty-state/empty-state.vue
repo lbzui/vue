@@ -28,7 +28,9 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component
+@Component({
+  name: 'lbz-empty-state',
+})
 export default class EmptyState extends Vue {
   // title: '' (default), 'x'
   @Prop({ type: String, default: '' }) private title!: string;

@@ -3,7 +3,7 @@
     <h2 class="lbz-typography--h5"># List</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'one-line' (default), 'two-line', 'three-line'</h3>
-    <lbz-list subtitle="One line">
+    <lbz-list subtitle="One line" class="lbzui-u-rectangle">
       <lbz-list-item @click.stop="fclick">One-line item</lbz-list-item>
       <lbz-list-item>
         <template #center>One-line item</template>
@@ -58,7 +58,7 @@
         </template>
       </lbz-list-item>
     </lbz-list>
-    <lbz-list type="two-line" subtitle="Two line">
+    <lbz-list type="two-line" subtitle="Two line" class="lbzui-u-rectangle">
       <lbz-list-item>
         <template #center>
           <span class="lbz-list-item__title">Two-line item</span>
@@ -124,7 +124,7 @@
         </template>
       </lbz-list-item>
     </lbz-list>
-    <lbz-list type="three-line" subtitle="Three line">
+    <lbz-list type="three-line" subtitle="Three line" class="lbzui-u-rectangle">
       <lbz-list-item>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
@@ -193,7 +193,7 @@
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ dense: true, false (default)</h3>
-    <lbz-list dense subtitle="One line">
+    <lbz-list dense subtitle="One line" class="lbzui-u-rectangle">
       <lbz-list-item>One-line item</lbz-list-item>
       <lbz-list-item>
         <template #center>One-line item</template>
@@ -248,7 +248,7 @@
         </template>
       </lbz-list-item>
     </lbz-list>
-    <lbz-list type="two-line" dense subtitle="Two line">
+    <lbz-list type="two-line" dense subtitle="Two line" class="lbzui-u-rectangle">
       <lbz-list-item>
         <template #center>
           <span class="lbz-list-item__title">Two-line item</span>
@@ -314,7 +314,7 @@
         </template>
       </lbz-list-item>
     </lbz-list>
-    <lbz-list type="three-line" dense subtitle="Three line">
+    <lbz-list type="three-line" dense subtitle="Three line" class="lbzui-u-rectangle">
       <lbz-list-item>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
@@ -384,13 +384,13 @@
 
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ placement: 'start' (default), 'center'</h3>
-    <lbz-list>
+    <lbz-list class="lbzui-u-rectangle">
       <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
-    <lbz-list subtitle="Subtitle">
+    <lbz-list subtitle="Subtitle" class="lbzui-u-rectangle">
       <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
-    <lbz-list subtitle="Subtitle" placement="center">
+    <lbz-list subtitle="Subtitle" placement="center" class="lbzui-u-rectangle">
       <lbz-list-item>
         <template #start>
           <lbz-icon>favorite</lbz-icon>
@@ -402,46 +402,46 @@
     <h3 class="lbz-typography--subtitle1">$ tag: 'ul' (default), 'nav', 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ item-tag: 'li' (default), 'a', 'x'</h3>
-    <lbz-list subtitle="Default">
+    <lbz-list subtitle="Default" class="lbzui-u-rectangle">
       <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
-    <lbz-list tag="nav" subtitle="Router-link" router-link item-tag="a">
+    <lbz-list tag="nav" subtitle="Router-link" router-link item-tag="a" class="lbzui-u-rectangle">
       <lbz-list-item to="/components/icon-button">Router-link</lbz-list-item>
       <lbz-list-item :to="{ name: 'list' }">Router-link</lbz-list-item>
     </lbz-list>
-    <lbz-list tag="nav" subtitle="Non router-link" item-tag="a">
+    <lbz-list tag="nav" subtitle="Non router-link" item-tag="a" class="lbzui-u-rectangle">
       <lbz-list-item href="#/components/icon-button">A</lbz-list-item>
       <lbz-list-item href="#/components/list">A</lbz-list-item>
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
-    <lbz-list subtitle="Ripple off" :ripple="false">
+    <lbz-list subtitle="Ripple off" :ripple="false" class="lbzui-u-rectangle">
       <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
-    <lbz-list subtitle="Disabled" disabled>
+    <lbz-list subtitle="Disabled" disabled class="lbzui-u-rectangle">
       <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
 
     <h2 class="lbz-typography--h5"># List item</h2>
 
-    <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ router-link: true, false, undefined (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: '' (default), li', 'a', 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ to (router-link): '' (default), 'x', { x: x }</h3>
-    <lbz-list tag="nav" subtitle="Router-link">
+    <lbz-list tag="nav" subtitle="Router-link" class="lbzui-u-rectangle">
       <lbz-list-item router-link tag="a" to="/components/icon-button">Router-link</lbz-list-item>
       <lbz-list-item router-link tag="a" :to="{ name: 'list' }">Router-link</lbz-list-item>
     </lbz-list>
-    <lbz-list tag="nav" subtitle="Non router-link">
+    <lbz-list tag="nav" subtitle="Non router-link" class="lbzui-u-rectangle">
       <lbz-list-item tag="a" href="#/components/icon-button">A</lbz-list-item>
       <lbz-list-item tag="a" href="#/components/list">A</lbz-list-item>
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ active: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ selected: true, false (default)</h3>
-    <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
-    <lbz-list>
+    <h3 class="lbz-typography--subtitle1">$ disabled: true, false, undefined (default)</h3>
+    <lbz-list class="lbzui-u-rectangle">
       <lbz-list-item active>
         <template #start>
           <lbz-icon>favorite</lbz-icon>
