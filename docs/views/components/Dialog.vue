@@ -203,7 +203,7 @@ import { Component, Ref, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Dialog extends Vue {
-  @Ref('dialog') private dialog!: HTMLFormElement;
+  @Ref('dialog') private rdialog!: HTMLFormElement;
 
   private valertOne: boolean = false;
   private valertTwo: boolean = false;
@@ -247,7 +247,7 @@ export default class Dialog extends Vue {
   }
 
   private fcancel() {
-    this.dialog.fclose();
+    this.rdialog.fclose();
   }
 }
 </script>

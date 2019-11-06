@@ -6,8 +6,8 @@
     <h3 class="lbz-typography--subtitle1">$ id: true, false, x, '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ name: true, false, x, '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ [required]value: true, false, x, 'x'</h3>
-    <lbz-radio v-model="vradioOne" id="true" name="true" :value="true" @change="fchange">True</lbz-radio>
-    <lbz-radio v-model="vradioOne" id="false" name="false" :value="false" @change="fchange">False</lbz-radio>
+    <lbz-radio v-model="vradioOne" :id="true" :name="true" :value="true" @change="fchange">True</lbz-radio>
+    <lbz-radio v-model="vradioOne" :id="false" :name="false" :value="false" @change="fchange">False</lbz-radio>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary', 'secondary' (default)</h3>
     <lbz-radio v-model="vradioTwo" value="primary" color="primary">Primary</lbz-radio>

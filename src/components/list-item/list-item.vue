@@ -1,6 +1,6 @@
 <template>
   <component
-    v-bind="cattrs"
+    v-bind="cgetAttrs"
     :class="[
       'lbz-list-item',
       {
@@ -45,12 +45,12 @@ export default class ListItem extends Vue {
   // disabled: true, false, undefined (default)
   @Prop({ type: Boolean, default: undefined }) private disabled!: boolean;
 
-  @Inject() private prouterLink!: boolean;
-  @Inject() private ptag!: string;
-  @Inject() private pripple!: boolean;
-  @Inject() private pdisabled!: boolean;
+  @Inject('router-link') private prouterLink!: boolean;
+  @Inject('tag') private ptag!: string;
+  @Inject('ripple') private pripple!: boolean;
+  @Inject('disabled') private pdisabled!: boolean;
 
-  get cattrs() {
+  get cgetAttrs() {
     return this.cisRouterLink
       ? {
         is: 'router-link',

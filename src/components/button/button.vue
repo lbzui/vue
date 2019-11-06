@@ -1,6 +1,6 @@
 <template>
   <component
-    v-bind="cattrs"
+    v-bind="cgetAttrs"
     :class="[
       'lbz-button',
       type ? `lbz-button--${ type }` : '',
@@ -52,7 +52,7 @@ export default class Button extends Vue {
   // icon: '' (default), 'x'
   @Prop({ type: String, default: '' }) private icon!: string;
 
-  get cattrs() {
+  get cgetAttrs() {
     return this.routerLink
       ? {
         is: 'router-link',

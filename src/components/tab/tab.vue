@@ -22,7 +22,7 @@ import EventBus from '@/utils/event-bus.ts';
 })
 export default class Tab extends Vue {
   // [required]v-model: true, false, x, 'x'
-  @Model('change', { type: [Boolean, Number, String], required: true }) private model!: boolean | number | string;
+  @Model('change', { type: [Boolean, Number, String], required: true }) private mvalue!: boolean | number | string;
 
   // type: 'fixed' (default), 'scrollable'
   @Prop({ type: String, default: '' }) private type!: string;
@@ -43,23 +43,23 @@ export default class Tab extends Vue {
   // on-content: true, false (default)
   @Prop({ type: Boolean, default: false }) private onContent!: boolean;
 
-  @ProvideReactive() private pmodel: boolean | number | string = this.model;
-  @Provide() private prouterLink: boolean = this.routerLink;
-  @Provide() private ptag: string = this.itemTag;
-  @Provide() private pripple: boolean = this.ripple;
-  @Provide() private ponContent: boolean = this.onContent;
+  @ProvideReactive('value') private prvalue: boolean | number | string = this.mvalue;
+  @Provide('router-link') private prouterLink: boolean = this.routerLink;
+  @Provide('tag') private ptag: string = this.itemTag;
+  @Provide('ripple') private pripple: boolean = this.ripple;
+  @Provide('on-content') private ponContent: boolean = this.onContent;
 
   private created() {
-    EventBus.$on('setValue', this.fvalueChanged);
+    EventBus.$on('change', this.fvalueChanged);
   }
 
   private beforeDestroy() {
-    EventBus.$off('setValue', this.fvalueChanged);
+    EventBus.$off('change', this.fvalueChanged);
   }
 
   @Emit('change')
   private fvalueChanged(val: boolean | number | string, e: MouseEvent) {
-    this.pmodel = val;
+    this.prvalue = val;
   }
 }
 </script>

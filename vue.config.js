@@ -5,9 +5,6 @@ function resolve (dir) {
 }
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/lbzui-vue/'
-    : '/',
   pages: {
     index: 'docs/main.ts'
   },

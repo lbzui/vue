@@ -69,7 +69,7 @@ export default class Backdrop extends Vue {
   // scrim: true, false (default)
   @Prop({ type: Boolean, default: false }) private scrim!: boolean;
 
-  @Ref('scroller') private scroller!: HTMLFormElement;
+  @Ref('scroller') private rscroller!: HTMLFormElement;
 
   private ftoggle() {
     this.cisActive = !this.cisActive;
@@ -85,7 +85,7 @@ export default class Backdrop extends Vue {
 
   @Emit('scroll')
   private fscroll(e: Event, position: object) {
-    return this.scroller;
+    return this.rscroller;
   }
 }
 </script>

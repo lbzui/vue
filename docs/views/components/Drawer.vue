@@ -395,7 +395,7 @@ import { Component, Ref, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Drawer extends Vue {
-  @Ref('drawer') private drawer!: HTMLFormElement;
+  @Ref('drawer') private rdrawer!: HTMLFormElement;
 
   private vprimaryDestinations: any[] = [
     {
@@ -458,7 +458,7 @@ export default class Drawer extends Vue {
   private vactiveThree: boolean = true;
 
   private ftoggle() {
-    this.drawer.ftoggle();
+    this.rdrawer.ftoggle();
   }
 
   private fopen() {

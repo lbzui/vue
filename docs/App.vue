@@ -1,5 +1,5 @@
 <template>
-  <div class="lbzui lbz-typography">
+  <div class="lbzui">
     <lbz-drawer
       :active.sync="vactive"
       subtitle="Material Components for Vue.js"
@@ -44,7 +44,7 @@
             <template #end><lbz-icon>open_in_new</lbz-icon></template>
           </lbz-list-item>
           <lbz-divider/>
-          <span class="lbz-list__subtitle">Choose theme (IE not supported)</span>
+          <span class="lbz-list__subtitle">Choose theme (non-IE)</span>
           <lbz-list-item
             :router-link="false"
             tag="span"
@@ -164,11 +164,11 @@ export default class App extends Vue {
   private vlinks: any[] = [
     {
       path: 'https://github.com/lbzui/lbzui-vue',
-      label: 'Open source code',
+      label: 'GitHub repo',
     },
     {
       path: 'https://github.com/lbzui/lbzui-vue/tree/master/docs/views',
-      label: 'Docs sample code',
+      label: 'Code examples',
     },
     {
       path: 'https://github.com/orgs/lbzui/projects/1',

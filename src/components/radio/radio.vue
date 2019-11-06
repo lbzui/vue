@@ -19,8 +19,8 @@
       <input
         type="radio"
         v-bind="{
-          id,
-          name,
+          id: `${id}`,
+          name: `${name}`,
           value,
           checked: cisSelected,
           disabled
@@ -30,7 +30,7 @@
     </button>
     <label
       v-if="$slots.default"
-      :for="id"
+      :for="`${id}`"
       class="lbz-radio__label"
     ><slot/></label>
   </div>
@@ -44,7 +44,7 @@ import { Component, Model, Prop, Emit, Vue } from 'vue-property-decorator';
 })
 export default class Radio extends Vue {
   // [required]v-model: true, false, x, 'x'
-  @Model('change', { type: [Boolean, Number, String], required: true }) private model!: boolean | number | string;
+  @Model('change', { type: [Boolean, Number, String], required: true }) private mchecked!: boolean | number | string;
 
   // id: true, false, x, '' (default), 'x'
   @Prop({ type: [Boolean, Number, String], default: '' }) private id!: boolean | number | string;
@@ -60,7 +60,7 @@ export default class Radio extends Vue {
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
 
   get cisSelected() {
-    return this.model === this.value;
+    return this.mchecked === this.value;
   }
 
   @Emit('change')

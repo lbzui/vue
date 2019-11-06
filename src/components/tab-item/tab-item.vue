@@ -1,6 +1,6 @@
 <template>
   <component
-    v-bind="cattrs"
+    v-bind="cgetAttrs"
     :class="[
       'lbz-tab-item',
       {
@@ -40,13 +40,13 @@ export default class TabItem extends Vue {
   // icon: '' (default), 'x'
   @Prop({ type: String, default: '' }) private icon!: string;
 
-  @InjectReactive() private pmodel!: boolean | number | string;
-  @Inject() private prouterLink!: boolean;
-  @Inject() private ptag!: string;
-  @Inject() private pripple!: boolean;
-  @Inject() private ponContent!: boolean;
+  @InjectReactive('value') private prvalue!: boolean | number | string;
+  @Inject('router-link') private prouterLink!: boolean;
+  @Inject('tag') private ptag!: string;
+  @Inject('ripple') private pripple!: boolean;
+  @Inject('on-content') private ponContent!: boolean;
 
-  get cattrs() {
+  get cgetAttrs() {
     return this.cisRouterLink
       ? {
         is: 'router-link',
@@ -64,11 +64,11 @@ export default class TabItem extends Vue {
   }
 
   get cisActive() {
-    return this.pmodel === this.value;
+    return this.prvalue === this.value;
   }
 
   private fclick(e: MouseEvent) {
-    EventBus.$emit('setValue', this.value, e);
+    EventBus.$emit('change', this.value, e);
   }
 }
 </script>

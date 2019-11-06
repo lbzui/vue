@@ -45,9 +45,9 @@ export default class List extends Vue {
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
 
-  @Provide() private prouterLink: boolean = this.routerLink;
-  @Provide() private ptag: string = this.itemTag;
-  @Provide() private pripple: boolean = this.ripple;
-  @Provide() private pdisabled: boolean = this.disabled;
+  @Provide('router-link') private prouterLink: boolean = this.routerLink;
+  @Provide('tag') private ptag: string = this.itemTag;
+  @Provide('ripple') private pripple: boolean = this.ripple;
+  @Provide('disabled') private pdisabled: boolean = this.disabled;
 }
 </script>
