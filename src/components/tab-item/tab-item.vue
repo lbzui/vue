@@ -29,12 +29,12 @@ import EventBus from '@/utils/event-bus.ts';
   name: 'lbz-tab-item',
 })
 export default class TabItem extends Vue {
-  // router-link: true, false, undefined (default)
-  @Prop({ type: Boolean, default: undefined }) private routerLink!: boolean;
+  // router-link: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private routerLink!: undefined | boolean;
   // tag: '' (default), 'button', 'a', 'x'
   @Prop({ type: String, default: '' }) private tag!: string;
   // to (router-link): '' (default), 'x', { x: x }
-  @Prop({ type: [String, Object], default: '' }) private to!: string;
+  @Prop({ type: [String, Object], default: '' }) private to!: string | object;
   // [required]value: true, false, x, 'x'
   @Prop({ type: [Boolean, Number, String], required: true }) private value!: boolean | number | string;
   // icon: '' (default), 'x'
@@ -46,7 +46,7 @@ export default class TabItem extends Vue {
   @Inject('ripple') private pripple!: boolean;
   @Inject('on-content') private ponContent!: boolean;
 
-  get cgetAttrs() {
+  get cgetAttrs(): object {
     return this.cisRouterLink
       ? {
         is: 'router-link',
@@ -57,17 +57,17 @@ export default class TabItem extends Vue {
       };
   }
 
-  get cisRouterLink() {
+  get cisRouterLink(): boolean {
     return this.routerLink === undefined
       ? this.prouterLink
       : this.routerLink;
   }
 
-  get cisActive() {
+  get cisActive(): boolean {
     return this.prvalue === this.value;
   }
 
-  private fclick(e: MouseEvent) {
+  private fclick(e: MouseEvent): void {
     EventBus.$emit('change', this.value, e);
   }
 }

@@ -32,25 +32,25 @@ import { Component, Prop, Inject, Vue } from 'vue-property-decorator';
   name: 'lbz-list-item',
 })
 export default class ListItem extends Vue {
-  // router-link: true, false, undefined (default)
-  @Prop({ type: Boolean, default: undefined }) private routerLink!: boolean;
+  // router-link: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private routerLink!: undefined | boolean;
   // tag: '' (default), li', 'a', 'x'
   @Prop({ type: String, default: '' }) private tag!: string;
   // to (router-link): '' (default), 'x', { x: x }
-  @Prop({ type: [String, Object], default: '' }) private to!: string;
+  @Prop({ type: [String, Object], default: '' }) private to!: string | object;
   // active: true, false (default)
   @Prop({ type: Boolean, default: false }) private active!: boolean;
   // selected: true, false (default)
   @Prop({ type: Boolean, default: false }) private selected!: boolean;
-  // disabled: true, false, undefined (default)
-  @Prop({ type: Boolean, default: undefined }) private disabled!: boolean;
+  // disabled: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private disabled!: undefined | boolean;
 
   @Inject('router-link') private prouterLink!: boolean;
   @Inject('tag') private ptag!: string;
   @Inject('ripple') private pripple!: boolean;
   @Inject('disabled') private pdisabled!: boolean;
 
-  get cgetAttrs() {
+  get cgetAttrs(): object {
     return this.cisRouterLink
       ? {
         is: 'router-link',
@@ -61,13 +61,13 @@ export default class ListItem extends Vue {
       };
   }
 
-  get cisRouterLink() {
+  get cisRouterLink(): boolean {
     return this.routerLink === undefined
       ? this.prouterLink
       : this.routerLink;
   }
 
-  get cisDisabled() {
+  get cisDisabled(): boolean {
     return this.disabled === undefined
       ? this.pdisabled
       : this.disabled;

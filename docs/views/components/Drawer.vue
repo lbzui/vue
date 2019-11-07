@@ -457,15 +457,15 @@ export default class Drawer extends Vue {
   private vactiveTwo: boolean = true;
   private vactiveThree: boolean = true;
 
-  private ftoggle() {
+  private ftoggle(): void {
     this.rdrawer.ftoggle();
   }
 
-  private fopen() {
+  private fopen(): void {
     alert('Open');
   }
 
-  private fclose() {
+  private fclose(): void {
     alert('Close');
   }
 }

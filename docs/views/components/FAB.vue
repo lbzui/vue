@@ -105,11 +105,11 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class FAB extends Vue {
   private vinactive: boolean = false;
 
-  private fclick(e: MouseEvent) {
+  private fclick(e: MouseEvent): void {
     alert(e);
   }
 
-  private ftoggleInactive() {
+  private ftoggleInactive(): void {
     this.vinactive = !this.vinactive;
   }
 }

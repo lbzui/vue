@@ -238,15 +238,15 @@ export default class Dialog extends Vue {
   private vfullScreenOne: boolean = false;
   private vfullScreenTwo: boolean = false;
 
-  private fopen() {
+  private fopen(): void {
     alert('Open');
   }
 
-  private fclose() {
+  private fclose(): void {
     alert('Close');
   }
 
-  private fcancel() {
+  private fcancel(): void {
     this.rdialog.fclose();
   }
 }

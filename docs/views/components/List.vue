@@ -426,7 +426,7 @@
 
     <h2 class="lbz-typography--h5"># List item</h2>
 
-    <h3 class="lbz-typography--subtitle1">$ router-link: true, false, undefined (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ router-link: undefined (default), true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: '' (default), li', 'a', 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ to (router-link): '' (default), 'x', { x: x }</h3>
     <lbz-list tag="nav" subtitle="Router-link" class="lbzui-u-rectangle">
@@ -440,7 +440,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ active: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ selected: true, false (default)</h3>
-    <h3 class="lbz-typography--subtitle1">$ disabled: true, false, undefined (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ disabled: undefined (default), true, false</h3>
     <lbz-list class="lbzui-u-rectangle">
       <lbz-list-item active>
         <template #start>
@@ -487,7 +487,7 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class List extends Vue {
-  private fclick(e: MouseEvent) {
+  private fclick(e: MouseEvent): void {
     alert(e);
   }
 }

@@ -49,16 +49,16 @@ export default class Tab extends Vue {
   @Provide('ripple') private pripple: boolean = this.ripple;
   @Provide('on-content') private ponContent: boolean = this.onContent;
 
-  private created() {
+  private created(): void {
     EventBus.$on('change', this.fvalueChanged);
   }
 
-  private beforeDestroy() {
+  private beforeDestroy(): void {
     EventBus.$off('change', this.fvalueChanged);
   }
 
   @Emit('change')
-  private fvalueChanged(val: boolean | number | string, e: MouseEvent) {
+  private fvalueChanged(val: boolean | number | string, e: MouseEvent): void {
     this.prvalue = val;
   }
 }

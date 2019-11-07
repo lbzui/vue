@@ -36,7 +36,7 @@ export default class Button extends Vue {
   // tag: 'button' (default), 'a', 'x'
   @Prop({ type: String, default: 'button' }) private tag!: string;
   // to (router-link): '' (default), 'x', { x: x }
-  @Prop({ type: [String, Object], default: '' }) private to!: string;
+  @Prop({ type: [String, Object], default: '' }) private to!: string | object;
   // color: 'primary' (default), 'secondary', 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private color!: string;
   // ripple: true (default), false
@@ -52,7 +52,7 @@ export default class Button extends Vue {
   // icon: '' (default), 'x'
   @Prop({ type: String, default: '' }) private icon!: string;
 
-  get cgetAttrs() {
+  get cgetAttrs(): object {
     return this.routerLink
       ? {
         is: 'router-link',

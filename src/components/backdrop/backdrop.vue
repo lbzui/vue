@@ -56,7 +56,7 @@ import { Component, PropSync, Prop, Ref, Emit, Vue } from 'vue-property-decorato
 })
 export default class Backdrop extends Vue {
   // [required]active.sync: true, false
-  @PropSync('active', { type: Boolean, required: true }) private cisActive !: boolean;
+  @PropSync('active', { type: Boolean, required: true }) private cisActive!: boolean;
 
   // subtitle: '' (default), 'x'
   @Prop({ type: String, default: '' }) private subtitle!: string;
@@ -71,15 +71,15 @@ export default class Backdrop extends Vue {
 
   @Ref('scroller') private rscroller!: HTMLFormElement;
 
-  private ftoggle() {
+  private ftoggle(): void {
     this.cisActive = !this.cisActive;
   }
 
-  private fopen() {
+  private fopen(): void {
     this.cisActive = true;
   }
 
-  private fclose() {
+  private fclose(): void {
     this.cisActive = false;
   }
 

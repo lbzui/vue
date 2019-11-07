@@ -33,7 +33,7 @@ import { Component, PropSync, Prop, Emit, Vue } from 'vue-property-decorator';
 })
 export default class IconButton extends Vue {
   // active.sync (toggle): true, false (default)
-  @PropSync('active', { type: Boolean, default: false }) private cisActive !: boolean;
+  @PropSync('active', { type: Boolean, default: false }) private cisActive!: boolean;
 
   // toggle: true, false (default)
   @Prop({ type: Boolean, default: false }) private toggle!: boolean;
@@ -42,7 +42,7 @@ export default class IconButton extends Vue {
   // tag: 'button' (default), 'a', 'x'
   @Prop({ type: String, default: 'button' }) private tag!: string;
   // to (!toggle && router-link): '' (default), 'x', { x: x }
-  @Prop({ type: [String, Object], default: '' }) private to!: string;
+  @Prop({ type: [String, Object], default: '' }) private to!: string | object;
   // on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
   // ripple: true (default), false
@@ -54,7 +54,7 @@ export default class IconButton extends Vue {
   // off-icon (toggle): '' (default), 'x'
   @Prop({ type: String, default: '' }) private offIcon!: string;
 
-  get cgetAttrs() {
+  get cgetAttrs(): object {
     return !this.toggle && this.routerLink
       ? {
         is: 'router-link',
@@ -68,7 +68,7 @@ export default class IconButton extends Vue {
   }
 
   @Emit('click')
-  private fclick(e: MouseEvent) {
+  private fclick(e: MouseEvent): void {
     if (this.toggle) {
       this.cisActive = !this.cisActive;
     }

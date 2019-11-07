@@ -52,7 +52,7 @@ import { Component, PropSync, Prop, Watch, Vue } from 'vue-property-decorator';
 })
 export default class Drawer extends Vue {
   // active.sync: true (default), false
-  @PropSync('active', { type: Boolean, default: true }) private cisActive !: boolean;
+  @PropSync('active', { type: Boolean, default: true }) private cisActive!: boolean;
 
   // type: 'standard' (default), 'modal', 'bottom (mobile only)'
   @Prop({ type: String, default: '' }) private type!: string;
@@ -63,12 +63,12 @@ export default class Drawer extends Vue {
   // subtitle: '' (default), 'x'
   @Prop({ type: String, default: '' }) private subtitle!: string;
 
-  get cisFullScreen() {
+  get cisFullScreen(): boolean {
     return this.type === 'bottom' && this.fullScreen;
   }
 
   @Watch('cisActive')
-  private factiveChanged(val: boolean, oldVal: boolean) {
+  private factiveChanged(val: boolean, oldVal: boolean): void {
     this.$nextTick().then(() => {
       val
         ? this.$emit('open')
@@ -76,15 +76,15 @@ export default class Drawer extends Vue {
     });
   }
 
-  private ftoggle() {
+  private ftoggle(): void {
     this.cisActive = !this.cisActive;
   }
 
-  private fopen() {
+  private fopen(): void {
     this.cisActive = true;
   }
 
-  private fclose() {
+  private fclose(): void {
     this.cisActive = false;
   }
 }

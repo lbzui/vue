@@ -236,7 +236,7 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Button extends Vue {
-  private fclick(e: MouseEvent) {
+  private fclick(e: MouseEvent): void {
     alert(e);
   }
 }

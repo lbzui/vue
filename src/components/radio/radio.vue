@@ -59,7 +59,7 @@ export default class Radio extends Vue {
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
 
-  get cisSelected() {
+  get cisSelected(): boolean {
     return this.mchecked === this.value;
   }
 

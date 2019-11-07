@@ -206,11 +206,11 @@ export default class Backdrop extends Vue {
 
   private vactive: boolean = false;
 
-  private ftoggleActive() {
+  private ftoggleActive(): void {
     this.rbackdrop.ftoggle();
   }
 
-  private fscroll(el: object, e: Event, position: object) {
+  private fscroll(el: object, e: Event, position: object): void {
     console.log((el as any).scrollHeight);
     console.log(e);
     alert(JSON.stringify(position));

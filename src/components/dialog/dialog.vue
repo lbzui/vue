@@ -64,7 +64,7 @@ import { Component, PropSync, Prop, Watch, Vue } from 'vue-property-decorator';
 })
 export default class Dialog extends Vue {
   // [required]active.sync: true, false
-  @PropSync('active', { type: Boolean, required: true }) private cisActive !: boolean;
+  @PropSync('active', { type: Boolean, required: true }) private cisActive!: boolean;
 
   // type: 'alert' (default), 'simple', 'confirmation', 'full-screen (mobile only)'
   @Prop({ type: String, default: '' }) private type!: string;
@@ -79,18 +79,18 @@ export default class Dialog extends Vue {
   // content-height (type !== 'full-screen'): '' (default), 'x'
   @Prop({ type: String, default: '' }) private contentHeight!: string;
 
-  get cisAlertAndConfirmation() {
+  get cisAlertAndConfirmation(): boolean {
     return ['', 'alert', 'confirmation'].includes(this.type);
   }
 
-  private mounted() {
+  private mounted(): void {
     if (this.appendToBody) {
       document.body.appendChild(this.$el);
     }
   }
 
   @Watch('cisActive')
-  private factiveChanged(val: boolean, oldVal: boolean) {
+  private factiveChanged(val: boolean, oldVal: boolean): void {
     this.$nextTick().then(() => {
       val
         ? this.$emit('open')
@@ -98,15 +98,15 @@ export default class Dialog extends Vue {
     });
   }
 
-  private ftoggle() {
+  private ftoggle(): void {
     this.cisActive = !this.cisActive;
   }
 
-  private fopen() {
+  private fopen(): void {
     this.cisActive = true;
   }
 
-  private fclose() {
+  private fclose(): void {
     this.cisActive = false;
   }
 }

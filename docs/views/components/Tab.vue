@@ -283,7 +283,7 @@
 
     <h2 class="lbz-typography--h5"># Tab item</h2>
 
-    <h3 class="lbz-typography--subtitle1">$ router-link: true, false, undefined (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ router-link: undefined (default), true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: '' (default), 'button', 'a', 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ to (router-link): '' (default), 'x', { x: x }</h3>
     <h3 class="lbz-typography--subtitle1">$ [required]value: true, false, x, 'x'</h3>
@@ -310,7 +310,7 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class Tab extends Vue {
   private vtab: number = 0;
 
-  private fchange(val: boolean | number | string, e: MouseEvent) {
+  private fchange(val: boolean | number | string, e: MouseEvent): void {
     alert(val);
     console.log(e);
   }

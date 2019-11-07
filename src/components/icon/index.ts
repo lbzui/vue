@@ -2,7 +2,7 @@ import { default as _Vue, PluginFunction } from 'vue';
 import { LBZComponent } from '..';
 import Icon from './icon.vue';
 
-const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any) => {
+const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any): void => {
   Vue.component('lbz-icon', Icon);
 };
 const LBZIcon: LBZComponent<typeof Icon> = {

@@ -36,7 +36,7 @@ const components: any[] = [
   TabItem,
   TopAppBar,
 ];
-const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any) => {
+const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any): void => {
   components.map((Component) => {
     Vue.use(Component.install);
   });

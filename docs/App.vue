@@ -203,30 +203,30 @@ export default class App extends Vue {
   private vactive: boolean = true;
   private vtheme: string = 'light';
 
-  private mounted() {
+  private mounted(): void {
     this.fresize(document.body.clientWidth);
-    window.onresize = () => {
+    window.onresize = (): void => {
       this.fresize(document.body.clientWidth);
     };
   }
 
   @Watch('$route.name')
-  private frouteChanged(val: string, oldVal: string) {
+  private frouteChanged(val: string, oldVal: string): void {
     this.fcloseDrawer();
   }
 
-  private fresize(val: number) {
+  private fresize(val: number): void {
     this.vwidth = val;
     this.vactive = val > 719;
   }
 
-  private fcloseDrawer() {
+  private fcloseDrawer(): void {
     if (this.vwidth <= 719) {
       this.vactive = false;
     }
   }
 
-  private fsetTheme(val: string, e: MouseEvent) {
+  private fsetTheme(val: string, e: MouseEvent): void {
     const isDark: boolean = val === 'dark';
 
     document.documentElement.setAttribute('theme', val);

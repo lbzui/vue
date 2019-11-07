@@ -211,7 +211,7 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class IconButton extends Vue {
   private vactive: boolean = false;
 
-  private fclick(e: MouseEvent) {
+  private fclick(e: MouseEvent): void {
     alert(e);
   }
 }

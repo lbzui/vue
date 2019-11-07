@@ -34,7 +34,7 @@ export default class Radio extends Vue {
   private vradioThree: number = 1;
   private vradioFour: string = 'selected';
 
-  private fchange(val: boolean | number | string, e: MouseEvent) {
+  private fchange(val: boolean | number | string, e: MouseEvent): void {
     alert(val);
     console.log(e);
   }
