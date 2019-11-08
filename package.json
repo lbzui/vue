@@ -81,6 +81,13 @@
     "url": "https://github.com/lbzui/lbzui-vue/issues",
     "email": "lbz_ui@163.com"
   },
+  "directories": {
+    "lib": "lib",
+    "src": "src",
+    "doc": "docs",
+    "example": "docs/views",
+    "test": "tests"
+  },
   "engines": {
     "node": ">=8.11.0"
   },

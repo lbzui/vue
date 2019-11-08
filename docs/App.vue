@@ -14,7 +14,11 @@
         >@lbzui/vue</router-link>
       </template>
       <template #center>
-        <lbz-list router-link tag="nav" item-tag="a">
+        <lbz-list
+          router-link
+          tag="nav"
+          item-tag="a"
+        >
           <lbz-divider/>
           <lbz-list-item to="/">Getting started</lbz-list-item>
           <lbz-divider/>

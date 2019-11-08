@@ -73,4 +73,40 @@
       min-height: 76px;
     }
   }
+
+  &.is-nav {
+    .lbz-list__subtitle {
+      padding-top: 8px;
+      padding-bottom: 0;
+      .lbz-typography--body2();
+    }
+
+    .lbz-list-item {
+      margin: 8px;
+      border-radius: 4px;
+      padding: 8px;
+      min-height: 40px;
+      .lbz-typography--subtitle2();
+
+      &:first-child {
+        margin-top: 2px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .lbz-list-item__start > .lbz-icon {
+        margin: 0;
+      }
+
+      .lbz-list-item__center {
+        .lbz-u-truncate--one();
+      }
+    }
+
+    .lbz-divider {
+      margin: 3px 0 4px;
+    }
+  }
 }
