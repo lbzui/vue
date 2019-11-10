@@ -59,9 +59,7 @@
 <script lang="ts">
 import { Component, PropSync, Prop, Watch, Vue } from 'vue-property-decorator';
 
-@Component({
-  name: 'lbz-dialog',
-})
+@Component
 export default class Dialog extends Vue {
   // [required]active.sync: true, false
   @PropSync('active', { type: Boolean, required: true }) private cisActive!: boolean;

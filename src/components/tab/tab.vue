@@ -15,11 +15,9 @@
 
 <script lang="ts">
 import { Component, Model, Prop, ProvideReactive, Provide, Emit, Vue } from 'vue-property-decorator';
-import EventBus from '@/utils/event-bus.ts';
+import EventBus from '../../utils/event-bus';
 
-@Component({
-  name: 'lbz-tab',
-})
+@Component
 export default class Tab extends Vue {
   // [required]v-model: true, false, x, 'x'
   @Model('change', { type: [Boolean, Number, String], required: true }) private mvalue!: boolean | number | string;

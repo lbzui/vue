@@ -1,13 +1,8 @@
-import { default as _Vue, PluginFunction } from 'vue';
-import { LBZComponent } from '..';
+import { default as _Vue } from 'vue';
 import Card from './card.vue';
 
-const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any): void => {
+(Card as any).install = (Vue: typeof _Vue, opts?: any): void => {
   Vue.component('lbz-card', Card);
 };
-const LBZCard: LBZComponent<typeof Card> = {
-  component: Card,
-  install,
-};
 
-export default LBZCard;
+export default Card;

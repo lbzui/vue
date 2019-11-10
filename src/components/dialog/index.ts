@@ -1,13 +1,8 @@
-import { default as _Vue, PluginFunction } from 'vue';
-import { LBZComponent } from '..';
+import { default as _Vue } from 'vue';
 import Dialog from './dialog.vue';
 
-const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any): void => {
+(Dialog as any).install = (Vue: typeof _Vue, opts?: any): void => {
   Vue.component('lbz-dialog', Dialog);
 };
-const LBZDialog: LBZComponent<typeof Dialog> = {
-  component: Dialog,
-  install,
-};
 
-export default LBZDialog;
+export default Dialog;

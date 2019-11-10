@@ -51,9 +51,7 @@
 <script lang="ts">
 import { Component, PropSync, Prop, Ref, Emit, Vue } from 'vue-property-decorator';
 
-@Component({
-  name: 'lbz-backdrop',
-})
+@Component
 export default class Backdrop extends Vue {
   // [required]active.sync: true, false
   @PropSync('active', { type: Boolean, required: true }) private cisActive!: boolean;

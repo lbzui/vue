@@ -14,7 +14,7 @@ echo 'lbzui-vue.lanbizhong.com' > CNAME
 
 git init
 git add -A
-git commit -m 'Initial commit'
+git commit -m '0.1.0'
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:lbzui/lbzui-vue.git master:gh-pages

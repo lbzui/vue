@@ -39,9 +39,7 @@
 <script lang="ts">
 import { Component, Model, Prop, Emit, Vue } from 'vue-property-decorator';
 
-@Component({
-  name: 'lbz-radio',
-})
+@Component
 export default class Radio extends Vue {
   // [required]v-model: true, false, x, 'x'
   @Model('change', { type: [Boolean, Number, String], required: true }) private mchecked!: boolean | number | string;

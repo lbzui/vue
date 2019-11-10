@@ -47,9 +47,7 @@
 <script lang="ts">
 import { Component, PropSync, Prop, Watch, Vue } from 'vue-property-decorator';
 
-@Component({
-  name: 'lbz-drawer',
-})
+@Component
 export default class Drawer extends Vue {
   // active.sync: true (default), false
   @PropSync('active', { type: Boolean, default: true }) private cisActive!: boolean;

@@ -1,4 +1,5 @@
 import { default as _Vue, VueConstructor, PluginFunction } from 'vue';
+import VueScroll from 'vue-scroll';
 import 'normalize.css';
 import '../assets/css/index.less';
 import Backdrop from './backdrop';
@@ -17,6 +18,8 @@ import Radio from './radio';
 import Tab from './tab';
 import TabItem from './tab-item';
 import TopAppBar from './top-app-bar';
+
+_Vue.use(VueScroll, { debounce: 100 });
 
 const components: any[] = [
   Backdrop,
@@ -52,14 +55,8 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 
-export interface LBZComponent<Component> {
-  component: Component;
-  install: PluginFunction<any>;
-}
-
-export default install;
-
-export {
+export default {
+  version: '0.1.2',
   install,
   Backdrop,
   Button,

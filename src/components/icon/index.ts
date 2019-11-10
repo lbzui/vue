@@ -1,13 +1,8 @@
-import { default as _Vue, PluginFunction } from 'vue';
-import { LBZComponent } from '..';
+import { default as _Vue } from 'vue';
 import Icon from './icon.vue';
 
-const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any): void => {
+(Icon as any).install = (Vue: typeof _Vue, opts?: any): void => {
   Vue.component('lbz-icon', Icon);
 };
-const LBZIcon: LBZComponent<typeof Icon> = {
-  component: Icon,
-  install,
-};
 
-export default LBZIcon;
+export default Icon;

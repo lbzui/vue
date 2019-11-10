@@ -38,9 +38,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component({
-  name: 'lbz-top-app-bar',
-})
+@Component
 export default class TopAppBar extends Vue {
   // type: 'standard' (default), 'extended', 'short'
   @Prop({ type: String, default: '' }) private type!: string;

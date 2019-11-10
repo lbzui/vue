@@ -25,9 +25,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component({
-  name: 'lbz-button',
-})
+@Component
 export default class Button extends Vue {
   // type: 'text' (default), 'outlined', 'contained'
   @Prop({ type: String, default: '' }) private type!: string;

@@ -28,9 +28,7 @@
 <script lang="ts">
 import { Component, Prop, Inject, Vue } from 'vue-property-decorator';
 
-@Component({
-  name: 'lbz-list-item',
-})
+@Component
 export default class ListItem extends Vue {
   // router-link: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private routerLink!: undefined | boolean;

@@ -23,11 +23,9 @@
 
 <script lang="ts">
 import { Component, Prop, InjectReactive, Inject, Vue } from 'vue-property-decorator';
-import EventBus from '@/utils/event-bus.ts';
+import EventBus from '../../utils/event-bus';
 
-@Component({
-  name: 'lbz-tab-item',
-})
+@Component
 export default class TabItem extends Vue {
   // router-link: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private routerLink!: undefined | boolean;

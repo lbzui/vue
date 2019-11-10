@@ -207,7 +207,7 @@ export default class App extends Vue {
   private vactive: boolean = true;
   private vtheme: string = 'light';
 
-  private mounted(): void {
+  private created(): void {
     this.fresize(document.body.clientWidth);
     window.onresize = (): void => {
       this.fresize(document.body.clientWidth);
