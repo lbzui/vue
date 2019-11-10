@@ -50,8 +50,15 @@
 
 <script lang="ts">
 import { Component, PropSync, Prop, Ref, Emit, Vue } from 'vue-property-decorator';
+import LbzDivider from '../divider/divider.vue';
+import LbzIconButton from '../icon-button/icon-button.vue';
 
-@Component
+@Component({
+  components: {
+    LbzDivider,
+    LbzIconButton,
+  },
+})
 export default class Backdrop extends Vue {
   // [required]active.sync: true, false
   @PropSync('active', { type: Boolean, required: true }) private cisActive!: boolean;

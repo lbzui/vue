@@ -27,8 +27,13 @@
 
 <script lang="ts">
 import { Component, PropSync, Prop, Emit, Vue } from 'vue-property-decorator';
+import LbzIcon from '../icon/icon.vue';
 
-@Component
+@Component({
+  components: {
+    LbzIcon,
+  },
+})
 export default class IconButton extends Vue {
   // active.sync (toggle): true, false (default)
   @PropSync('active', { type: Boolean, default: false }) private cisActive!: boolean;

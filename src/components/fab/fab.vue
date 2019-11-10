@@ -19,8 +19,13 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import LbzIcon from '../icon/icon.vue';
 
-@Component
+@Component({
+  components: {
+    LbzIcon,
+  },
+})
 export default class FAB extends Vue {
   // type: 'standard' (default), 'mini', 'extended'
   @Prop({ type: String, default: '' }) private type!: string;

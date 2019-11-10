@@ -46,8 +46,15 @@
 
 <script lang="ts">
 import { Component, PropSync, Prop, Watch, Vue } from 'vue-property-decorator';
+import LbzIconButton from '../icon-button/icon-button.vue';
+import LbzTopAppBar from '../top-app-bar/top-app-bar.vue';
 
-@Component
+@Component({
+  components: {
+    LbzIconButton,
+    LbzTopAppBar,
+  },
+})
 export default class Drawer extends Vue {
   // active.sync: true (default), false
   @PropSync('active', { type: Boolean, default: true }) private cisActive!: boolean;
