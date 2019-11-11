@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
 
+# run commands
+# chmod 777 deploy.sh (if "Permission denied")
+# ./deploy.sh
+
 # abort on errors
 set -e
 

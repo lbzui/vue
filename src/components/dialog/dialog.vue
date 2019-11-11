@@ -75,6 +75,8 @@ export default class Dialog extends Vue {
   @Prop({ type: String, default: '' }) private type!: string;
   // append-to-body: true, false (default)
   @Prop({ type: Boolean, default: false }) private appendToBody!: boolean;
+  // lock-scroll: true (default), false
+  @Prop({ type: Boolean, default: true }) private lockScroll!: boolean;
   // scrollable (type === 'confirmation'): true, false (default)
   @Prop({ type: Boolean, default: false }) private scrollable!: boolean;
   // stacked (['', 'alert', 'confirmation'].includes(type)): true, false (default)
@@ -100,6 +102,9 @@ export default class Dialog extends Vue {
       val
         ? this.$emit('open')
         : this.$emit('close');
+      if (this.lockScroll) {
+        this.flockScroll(val);
+      }
     });
   }
 
@@ -113,6 +118,12 @@ export default class Dialog extends Vue {
 
   private fclose(): void {
     this.cisActive = false;
+  }
+
+  private flockScroll(val: boolean = false): void {
+    document.body.style.overflow = val
+      ? 'hidden'
+      : '';
   }
 }
 </script>

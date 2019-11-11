@@ -214,14 +214,30 @@ export default class App extends Vue {
     };
   }
 
+  @Watch('vactive')
+  private factiveChanged(val: boolean, oldVal: boolean): void {
+    this.flockScroll(this.vwidth <= 719 && val);
+  }
+
   @Watch('$route.name')
   private frouteChanged(val: string, oldVal: string): void {
     this.fcloseDrawer();
   }
 
+  private flockScroll(val: boolean = false): void {
+    document.body.style.overflow = val
+      ? 'hidden'
+      : '';
+  }
+
   private fresize(val: number): void {
+    const isGt719: boolean = val > 719;
+
+    if (isGt719 && this.vactive) {
+      this.flockScroll(!isGt719);
+    }
     this.vwidth = val;
-    this.vactive = val > 719;
+    this.vactive = isGt719;
   }
 
   private fcloseDrawer(): void {

@@ -21,8 +21,13 @@
 
 <script lang="ts">
 import { Component, Prop, Provide, Vue } from 'vue-property-decorator';
+import LbzListItem from '../list-item/list-item.vue';
 
-@Component
+@Component({
+  components: {
+    LbzListItem,
+  },
+})
 export default class List extends Vue {
   // type: 'one-line' (default), 'two-line', 'three-line'
   @Prop({ type: String, default: '' }) private type!: string;

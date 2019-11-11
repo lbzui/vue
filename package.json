@@ -1,6 +1,6 @@
 {
   "name": "@lbzui/vue",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "description": "Material Components for Vue.js",
   "author": "LAN Bizhong <bizhong_lan@163.com> (https://lanbizhong.com/)",
@@ -9,7 +9,6 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "deploy": "chmod 777 deploy.sh & ./deploy.sh",
     "build:app": "vue-cli-service build",
     "build:lib": "vue-cli-service build --target lib --name lbzui --dest lib --inline-vue src/components/index.ts"
   },
