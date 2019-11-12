@@ -1,7 +1,7 @@
 const path = require('path')
 
 function resolve (dir) {
-  return path.join(__dirname, dir)
+  return path.resolve(__dirname, dir)
 }
 
 process.env.VUE_APP_SITE_URL = 'https://lbzui-vue.lanbizhong.com/'

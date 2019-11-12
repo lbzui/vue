@@ -21,6 +21,6 @@ git add -A
 git commit -m '0.1.0'
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:lbzui/lbzui-vue.git master:gh-pages
+git push -f git@github.com:lbzui/vue.git master:gh-pages
 
 cd -

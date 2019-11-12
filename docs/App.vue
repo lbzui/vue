@@ -167,11 +167,11 @@ export default class App extends Vue {
   ];
   private vlinks: any[] = [
     {
-      path: 'https://github.com/lbzui/lbzui-vue',
+      path: 'https://github.com/lbzui/vue',
       label: 'GitHub repo',
     },
     {
-      path: 'https://github.com/lbzui/lbzui-vue/tree/master/docs/views',
+      path: 'https://github.com/lbzui/vue/tree/master/docs/views',
       label: 'Code examples',
     },
     {
@@ -179,15 +179,15 @@ export default class App extends Vue {
       label: 'LBZUI board',
     },
     {
-      path: 'https://github.com/lbzui/lbzui-vue/projects/1',
+      path: 'https://github.com/lbzui/vue/projects/1',
       label: '@lbzui/vue board',
     },
     // {
-    //   path: 'https://github.com/lbzui/lbzui-vue/issues',
+    //   path: 'https://github.com/lbzui/vue/issues',
     //   label: 'Issues',
     // },
     // {
-    //   path: 'https://github.com/lbzui/lbzui-vue/blob/master/CHANGELOG.md',
+    //   path: 'https://github.com/lbzui/vue/blob/master/CHANGELOG.md',
     //   label: 'Changelog',
     // },
     {

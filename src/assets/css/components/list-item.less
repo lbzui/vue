@@ -108,8 +108,7 @@
   }
 
   // active
-  &.is-active,
-  &.is-exact-active {
+  &.is-active {
     color: var(--lbz-theme-primary);
 
     &::before {
@@ -143,7 +142,7 @@
     }
   }
 
-  &:not(.is-active):not(.is-exact-active):not(.is-selected):not(.is-disabled) {
+  &:not(.is-active):not(.is-selected):not(.is-disabled) {
     &:hover {
       &::before {
         opacity: #lbz-state.surface[hover];
