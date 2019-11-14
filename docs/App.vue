@@ -74,7 +74,11 @@
       </template>
     </lbz-drawer>
     <main class="lbzui__main" role="main">
-      <router-view class="lbzui__main__container"/>
+      <transition name="lbzui__main__container">
+        <keep-alive>
+          <router-view class="lbzui__main__container"/>
+        </keep-alive>
+      </transition>
     </main>
     <lbz-fab class="lbzui__fab" @click.stop="vactive = true">menu</lbz-fab>
   </div>
@@ -225,9 +229,7 @@ export default class App extends Vue {
   }
 
   private flockScroll(val: boolean = false): void {
-    document.body.style.overflow = val
-      ? 'hidden'
-      : '';
+    document.body.classList[val ? 'add' : 'remove']('lbz-body--lock-scroll');
   }
 
   private fresize(val: number): void {

@@ -61,6 +61,19 @@
       flex: 1;
       box-sizing: border-box;
       padding: var(--lbz-layout-grid-margin);
+
+      &.lbzui__main__container-enter-active {
+        transition: opacity 200ms linear;
+      }
+
+      &.lbzui__main__container-leave-active {
+        transition: opacity 150ms linear;
+      }
+
+      &.lbzui__main__container-enter,
+      &.lbzui__main__container-leave-to {
+        opacity: 0;
+      }
     }
 
     .lbz-typography--h5 {

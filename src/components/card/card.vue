@@ -3,8 +3,8 @@
     :is="tag"
     :class="[
       'lbz-card',
-      type ? `lbz-card--${ type }` : '',
-      { 'lbz-ripple': ripple }
+      type && `lbz-card--${ type }`,
+      ripple && 'lbz-ripple'
     ]"
     @click="$emit('click', $event)"
   >

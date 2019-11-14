@@ -3,8 +3,8 @@
     v-bind="cgetAttrs"
     :class="[
       'lbz-button',
-      type ? `lbz-button--${ type }` : '',
-      color ? `lbz-button--${ color }` : '',
+      type && `lbz-button--${ type }`,
+      color && `lbz-button--${ color }`,
       {
         'lbz-ripple': !disabled && ripple,
         'is-full-width': fullWidth,
@@ -13,7 +13,7 @@
         'is-disabled': disabled
       }
     ]"
-    @click="disabled ? '' : $emit('click', $event)"
+    @click="!disabled && $emit('click', $event)"
   >
     <lbz-icon v-if="icon || $slots.icon" class="lbz-button__icon">
       <template v-if="icon">{{ icon }}</template><slot v-else name="icon"/>
@@ -36,10 +36,22 @@ export default class Button extends Vue {
   @Prop({ type: String, default: '' }) private type!: string;
   // router-link: true, false (default)
   @Prop({ type: Boolean, default: false }) private routerLink!: boolean;
+  // router-link-props (router-link): {
+  //   to: '' (default) || 'x' || { x: x },
+  //   replace: true || false (default),
+  //   append: true || false (default),
+  //   exact: true || false (default),
+  //   event: 'click' (default) || 'x' || ['x']
+  // }
+  @Prop({ type: Object, default: () => ({
+    to: '',
+    replace: false,
+    append: false,
+    exact: false,
+    event: 'click',
+  }) }) private routerLinkProps!: object;
   // tag: 'button' (default), 'a', 'x'
   @Prop({ type: String, default: 'button' }) private tag!: string;
-  // to (router-link): '' (default), 'x', { x: x }
-  @Prop({ type: [String, Object], default: '' }) private to!: string | object;
   // color: 'primary' (default), 'secondary', 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private color!: string;
   // ripple: true (default), false
@@ -56,15 +68,29 @@ export default class Button extends Vue {
   @Prop({ type: String, default: '' }) private icon!: string;
 
   get cgetAttrs(): object {
+    const {
+      to,
+      replace,
+      append,
+      exact,
+      event,
+    }: any = (this.routerLinkProps as any);
+    const tag: string = this.tag;
+    const disabled: boolean = tag === 'button' && this.disabled;
+
     return this.routerLink
       ? {
         is: 'router-link',
-        tag: this.tag,
-        to: this.to,
-        disabled: this.tag === 'button' && this.disabled,
+        to,
+        replace,
+        append,
+        tag,
+        exact,
+        event,
+        disabled,
       } : {
-        is: this.tag,
-        disabled: this.tag === 'button' && this.disabled,
+        is: tag,
+        disabled,
       };
   }
 }

@@ -1,10 +1,5 @@
 <template>
-  <div
-    :class="[
-      'lbz-backdrop',
-      { 'is-active': cisActive }
-    ]"
-  >
+  <div :class="['lbz-backdrop', cisActive && 'is-active']">
     <section class="lbz-backdrop__back-layer">
       <div v-if="$slots['back-layer-header']" class="lbz-backdrop__back-layer__header">
         <slot name="back-layer-header"/>
@@ -14,7 +9,10 @@
       </div>
     </section>
     <section class="lbz-backdrop__front-layer">
-      <header v-if="subtitle || $slots['front-layer-header'] || icon || divider" class="lbz-backdrop__front-layer__header">
+      <header
+        v-if="subtitle || $slots['front-layer-header'] || icon || divider"
+        class="lbz-backdrop__front-layer__header"
+      >
         <h2
           v-if="subtitle"
           v-html="subtitle"
@@ -31,10 +29,7 @@
       <main
         v-scroll="fscroll"
         ref="scroller"
-        :class="[
-          'lbz-backdrop__front-layer__content',
-          { 'is-horizontal': horizontal }
-        ]"
+        :class="['lbz-backdrop__front-layer__content', horizontal && 'is-horizontal']"
       >
         <slot name="front-layer-content"/>
         <slot/>

@@ -84,10 +84,11 @@
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
-    <lbz-tab v-model="vtab" router-link>
-      <lbz-tab-item :value="0" to="/components/tab">Router-link</lbz-tab-item>
-      <lbz-tab-item :value="1" :to="{ name: 'backdrop' }">Router-link</lbz-tab-item>
-      <lbz-tab-item :value="2" :to="{ name: 'button' }">Router-link</lbz-tab-item>
+    <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
+    <lbz-tab v-model="vtab" router-link :router-link-props="{ replace: true }">
+      <lbz-tab-item :value="0" to="/components/icon-button">Router-link</lbz-tab-item>
+      <lbz-tab-item :value="1" :to="{ name: 'list' }">Router-link</lbz-tab-item>
+      <lbz-tab-item :value="2" :to="{ name: 'radio' }">Router-link</lbz-tab-item>
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ item-tag: 'button' (default), 'a', 'x'</h3>
@@ -218,13 +219,14 @@
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
-    <lbz-tab v-model="vtab" type="scrollable" router-link>
-      <lbz-tab-item :value="0" to="/components/tab">Router-link</lbz-tab-item>
-      <lbz-tab-item :value="1" :to="{ name: 'backdrop' }">Router-link</lbz-tab-item>
-      <lbz-tab-item :value="2" :to="{ name: 'button' }">Router-link</lbz-tab-item>
-      <lbz-tab-item :value="3" :to="{ name: 'card' }">Router-link</lbz-tab-item>
-      <lbz-tab-item :value="4" :to="{ name: 'dialog' }">Router-link</lbz-tab-item>
-      <lbz-tab-item :value="5" :to="{ name: 'divider' }">Router-link</lbz-tab-item>
+    <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
+    <lbz-tab v-model="vtab" type="scrollable" router-link :router-link-props="{ replace: true }">
+      <lbz-tab-item :value="0" to="/components/empty-state">Router-link</lbz-tab-item>
+      <lbz-tab-item :value="1" :to="{ name: 'fab' }">Router-link</lbz-tab-item>
+      <lbz-tab-item :value="2" :to="{ name: 'icon' }">Router-link</lbz-tab-item>
+      <lbz-tab-item :value="3" :to="{ name: 'icon-button' }">Router-link</lbz-tab-item>
+      <lbz-tab-item :value="4" :to="{ name: 'list' }">Router-link</lbz-tab-item>
+      <lbz-tab-item :value="5" :to="{ name: 'radio' }">Router-link</lbz-tab-item>
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ item-tag: 'button' (default), 'a', 'x'</h3>
@@ -290,8 +292,8 @@
 
     <lbz-tab v-model="vtab">
       <lbz-tab-item :value="0">Button</lbz-tab-item>
-      <lbz-tab-item router-link tag="a" :to="{ name: 'tab' }" :value="1">Router-link</lbz-tab-item>
-      <lbz-tab-item tag="a" href="#/components/tab" :value="2">A</lbz-tab-item>
+      <lbz-tab-item router-link tag="a" :to="{ name: 'list' }" :value="1">Router-link</lbz-tab-item>
+      <lbz-tab-item tag="a" href="#/components/radio" :value="2">A</lbz-tab-item>
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ icon: '' (default), 'x'</h3>

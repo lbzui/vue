@@ -3,10 +3,10 @@
     :is="tag"
     :class="[
       'lbz-tab',
-      type ? `lbz-tab--${ type }` : '',
-      onBackground ? `lbz-tab--on-${ onBackground }` : '',
-      type !== 'scrollable' && alignment ? `lbz-tab--${ alignment }` : '',
-      { 'is-stacked': stacked }
+      type && `lbz-tab--${ type }`,
+      onBackground && `lbz-tab--on-${ onBackground }`,
+      type !== 'scrollable' && alignment && `lbz-tab--${ alignment }`,
+      stacked && 'is-stacked'
     ]"
   >
     <div class="lbz-tab__container"><slot/></div>
@@ -34,6 +34,18 @@ export default class Tab extends Vue {
   @Prop({ type: Boolean, default: false }) private stacked!: boolean;
   // router-link: true, false (default)
   @Prop({ type: Boolean, default: false }) private routerLink!: boolean;
+  // router-link-props (router-link): {
+  //   replace: true || false (default),
+  //   append: true || false (default),
+  //   exact: true || false (default),
+  //   event: 'click' (default) || 'x' || ['x']
+  // }
+  @Prop({ type: Object, default: () => ({
+    replace: false,
+    append: false,
+    exact: false,
+    event: 'click',
+  }) }) private routerLinkProps!: object;
   // item-tag: 'button' (default), 'a', 'x'
   @Prop({ type: String, default: 'button' }) private itemTag!: string;
   // ripple: true (default), false
@@ -43,6 +55,7 @@ export default class Tab extends Vue {
 
   @ProvideReactive('value') private prvalue: boolean | number | string = this.mvalue;
   @Provide('router-link') private prouterLink: boolean = this.routerLink;
+  @Provide('router-link-props') private prouterLinkProps: object = this.routerLinkProps;
   @Provide('tag') private ptag: string = this.itemTag;
   @Provide('ripple') private pripple: boolean = this.ripple;
   @Provide('on-content') private ponContent: boolean = this.onContent;

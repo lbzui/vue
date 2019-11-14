@@ -4,8 +4,8 @@
       v-show="cisActive"
       :class="[
         'lbz-drawer',
-        type ? `lbz-drawer--${ type }` : '',
-        { 'is-full-screen': cisFullScreen },
+        type && `lbz-drawer--${ type }`,
+        cisFullScreen && 'is-full-screen',
         cisActive ? 'is-active' : 'is-inactive'
       ]"
     >
@@ -75,9 +75,7 @@ export default class Drawer extends Vue {
   @Watch('cisActive')
   private factiveChanged(val: boolean, oldVal: boolean): void {
     this.$nextTick().then(() => {
-      val
-        ? this.$emit('open')
-        : this.$emit('close');
+      this.$emit(val ? 'open' : 'close');
     });
   }
 

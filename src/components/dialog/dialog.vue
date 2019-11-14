@@ -4,7 +4,7 @@
       v-if="cisActive"
       :class="[
         'lbz-dialog',
-        type ? `lbz-dialog--${ type }` : '',
+        type && `lbz-dialog--${ type }`,
         {
           'is-scrollable': type === 'confirmation' && scrollable,
           'is-stacked': cisAlertAndConfirmation && stacked
@@ -99,9 +99,7 @@ export default class Dialog extends Vue {
   @Watch('cisActive')
   private factiveChanged(val: boolean, oldVal: boolean): void {
     this.$nextTick().then(() => {
-      val
-        ? this.$emit('open')
-        : this.$emit('close');
+      this.$emit(val ? 'open' : 'close');
       if (this.lockScroll) {
         this.flockScroll(val);
       }
@@ -121,9 +119,7 @@ export default class Dialog extends Vue {
   }
 
   private flockScroll(val: boolean = false): void {
-    document.body.style.overflow = val
-      ? 'hidden'
-      : '';
+    document.body.classList[val ? 'add' : 'remove']('lbz-body--lock-scroll');
   }
 }
 </script>

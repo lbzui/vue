@@ -2,13 +2,11 @@
   <header
     :class="[
       'lbz-top-app-bar',
-      type ? `lbz-top-app-bar--${ type }` : '',
-      background ? `lbz-top-app-bar--${ background }` : '',
-      inactive ? `is-inactive--${ inactive }` : '',
-      {
-        'is-dense': dense,
-        'is-elevated': elevated
-      }
+      type && `lbz-top-app-bar--${ type }`,
+      background && `lbz-top-app-bar--${ background }`,
+      inactive && `is-inactive--${ inactive }`,
+      dense && 'is-dense',
+      elevated && 'is-elevated'
     ]"
     :style="type === 'extended' && media ? { backgroundImage: `url(${ media })` } : {}"
   >

@@ -7,10 +7,10 @@
     <lbz-button icon="favorite">Text</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { to: '' (default) || 'x' || { x: x }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
-    <h3 class="lbz-typography--subtitle1">$ to (router-link): '' (default), 'x', { x: x }</h3>
-    <lbz-button router-link tag="a" to="/components/button">Router-link</lbz-button>
-    <lbz-button tag="a" href="#/components/button" icon="favorite">Non router-link</lbz-button>
+    <lbz-button router-link :router-link-props="{ to: '/components/backdrop', replace: true, event: 'dblclick' }" tag="a">Router-link</lbz-button>
+    <lbz-button tag="a" icon="favorite" href="#/components/button">Non router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'error', 'light', 'dark'</h3>
     <lbz-button>Primary</lbz-button>
@@ -82,10 +82,10 @@
     <lbz-button type="outlined" icon="favorite">Outlined</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { to: '' (default) || 'x' || { x: x }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
-    <h3 class="lbz-typography--subtitle1">$ to (router-link): '' (default), 'x', { x: x }</h3>
-    <lbz-button type="outlined" router-link tag="a" to="/components/button">Router-link</lbz-button>
-    <lbz-button type="outlined" tag="a" href="#/components/button" icon="favorite">Non router-link</lbz-button>
+    <lbz-button type="outlined" router-link :router-link-props="{ to: '/components/backdrop', replace: true, event: 'dblclick' }" tag="a">Router-link</lbz-button>
+    <lbz-button type="outlined" tag="a" icon="favorite" href="#/components/button">Non router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'error', 'light', 'dark'</h3>
     <lbz-button type="outlined">Primary</lbz-button>
@@ -157,10 +157,10 @@
     <lbz-button type="contained" icon="favorite">Contained</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { to: '' (default) || 'x' || { x: x }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
-    <h3 class="lbz-typography--subtitle1">$ to (router-link): '' (default), 'x', { x: x }</h3>
-    <lbz-button type="contained" router-link tag="a" to="/components/button">Router-link</lbz-button>
-    <lbz-button type="contained" tag="a" href="#/components/button" icon="favorite">Non router-link</lbz-button>
+    <lbz-button type="contained" router-link :router-link-props="{ to: '/components/backdrop', replace: true, event: 'dblclick' }" tag="a">Router-link</lbz-button>
+    <lbz-button type="contained" tag="a" icon="favorite" href="#/components/button">Non router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'error', 'light', 'dark'</h3>
     <lbz-button type="contained">Primary</lbz-button>

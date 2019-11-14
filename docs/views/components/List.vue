@@ -401,11 +401,13 @@
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'ul' (default), 'nav', 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
     <h3 class="lbz-typography--subtitle1">$ item-tag: 'li' (default), 'a', 'x'</h3>
+
     <lbz-list subtitle="Default" class="lbzui-u-rectangle">
       <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
-    <lbz-list tag="nav" subtitle="Router-link" router-link item-tag="a" class="lbzui-u-rectangle">
+    <lbz-list tag="nav" subtitle="Router-link" router-link :router-link-props="{ replace: true, event: 'dblclick' }" item-tag="a" class="lbzui-u-rectangle">
       <lbz-list-item to="/components/icon-button">Router-link</lbz-list-item>
       <lbz-list-item :to="{ name: 'list' }">Router-link</lbz-list-item>
     </lbz-list>

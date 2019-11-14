@@ -10,7 +10,7 @@
         'is-disabled': cisDisabled
       }
     ]"
-    @click="cisDisabled ? '' : $emit('click', $event)"
+    @click="!cisDisabled && $emit('click', $event)"
   >
     <div v-if="$slots.start" class="lbz-list-item__start">
       <slot name="start"/>
@@ -44,18 +44,31 @@ export default class ListItem extends Vue {
   @Prop({ type: Boolean, default: undefined }) private disabled!: undefined | boolean;
 
   @Inject('router-link') private prouterLink!: boolean;
+  @Inject('router-link-props') private prouterLinkProps!: object;
   @Inject('tag') private ptag!: string;
   @Inject('ripple') private pripple!: boolean;
   @Inject('disabled') private pdisabled!: boolean;
 
   get cgetAttrs(): object {
+    const {
+      replace,
+      append,
+      exact,
+      event,
+    }: any = (this.prouterLinkProps as any);
+    const tag: string = this.tag || this.ptag;
+
     return this.cisRouterLink
       ? {
         is: 'router-link',
-        tag: this.tag || this.ptag,
         to: this.to,
+        replace,
+        append,
+        tag,
+        exact,
+        event,
       } : {
-        is: this.tag || this.ptag,
+        is: tag,
       };
   }
 

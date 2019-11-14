@@ -12,10 +12,10 @@
     </lbz-icon-button>
 
     <h3 class="lbz-typography--subtitle1">$ router-link (!toggle): true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ router-link-props (!toggle && router-link): { to: '' (default) || 'x' || { x: x }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
-    <h3 class="lbz-typography--subtitle1">$ to (!toggle && router-link): '' (default), 'x', { x: x }</h3>
-    <lbz-icon-button router-link tag="a" to="/components/icon-button">favorite_border</lbz-icon-button>
-    <lbz-icon-button tag="a" href="#/components/icon">favorite_border</lbz-icon-button>
+    <lbz-icon-button router-link :router-link-props="{ to: '/components/icon', replace: true, event: 'dblclick' }" tag="a">favorite_border</lbz-icon-button>
+    <lbz-icon-button tag="a" href="#/components/icon-button">favorite_border</lbz-icon-button>
 
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'</h3>
     <lbz-icon-button on-background="primary">favorite_border</lbz-icon-button>

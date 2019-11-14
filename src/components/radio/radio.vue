@@ -2,20 +2,13 @@
   <div
     :class="[
       'lbz-radio',
-      color ? `lbz-radio--${ color }` : '',
-      {
-        'is-checked': cisSelected,
-        'is-disabled': disabled
-      }
+      color && `lbz-radio--${ color }`,
+      cisSelected && 'is-checked',
+      disabled && 'is-disabled'
     ]"
-    @click.stop="disabled ? '' : fclick($event)"
+    @click.stop="!disabled && fclick($event)"
   >
-    <button
-      :class="[
-        'lbz-radio__container',
-        { 'lbz-ripple': !disabled && ripple }
-      ]"
-    >
+    <button :class="['lbz-radio__container', { 'lbz-ripple': !disabled && ripple }]">
       <input
         type="radio"
         v-bind="{
