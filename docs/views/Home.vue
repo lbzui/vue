@@ -36,12 +36,12 @@
     <h2 class="lbz-typography--h5"># Quick start</h2>
     <p class="lbz-typography--body1"><a href="https://github.com/lbzui/vue#quick-start" target="_blank">Read how to use @lbzui/vue in your own project on GitHub README.md</a><lbz-icon>open_in_new</lbz-icon>.</p>
 
-    <h2 class="lbz-typography--h5"># Browser Support</h2>
-    <p class="lbz-typography--body1">@lbzui/vue supports <a href="https://browserl.ist/?q=%3E%3D+1%25" target="_blank">all modern browsers</a><lbz-icon>open_in_new</lbz-icon> and IE10+ (Layout grid works unfriendly, and dark theme does not supported).</p>
+    <h2 class="lbz-typography--h5"># Browser support</h2>
+    <p class="lbz-typography--body1">@lbzui/vue supports <a href="https://browserl.ist/?q=%3E%3D+1%25" target="_blank">all modern browsers</a><lbz-icon>open_in_new</lbz-icon> and IE10+ (<strong>Layout grid</strong> works unfriendly, and <strong>dark theme</strong> does not supported).</p>
     <p class="lbz-typography--body1">May work in other browsers but it's untested.</p>
 
     <h2 class="lbz-typography--h5"># Changelog</h2>
-    <p class="lbz-typography--body1">Recently Updated? Please read the <a href="https://github.com/lbzui/vue/blob/master/CHANGELOG.md" target="_blank">changelog</a><lbz-icon>open_in_new</lbz-icon>.</p>
+    <p class="lbz-typography--body1">Recently updated? Please read the <a href="https://github.com/lbzui/vue/blob/master/CHANGELOG.md" target="_blank">changelog</a><lbz-icon>open_in_new</lbz-icon>.</p>
 
     <h2 class="lbz-typography--h5"># LICENSE</h2>
     <p class="lbz-typography--body1"><a href="https://github.com/lbzui/vue/blob/master/LICENSE" target="_blank">MIT</a><lbz-icon>open_in_new</lbz-icon></p>

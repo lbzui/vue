@@ -1,11 +1,11 @@
 # @lbzui/vue
 
-> Material Components for Vue.js
-
 [![npm version](https://img.shields.io/npm/v/@lbzui/vue)](https://www.npmjs.com/package/@lbzui/vue)
 [![npm monthly downloads](https://img.shields.io/npm/dm/@lbzui/vue)](https://www.npmjs.com/package/@lbzui/vue)
 [![npm downloads](https://img.shields.io/npm/dt/@lbzui/vue)](https://www.npmjs.com/package/@lbzui/vue)
 [![npm license](https://img.shields.io/npm/l/@lbzui/vue)](https://github.com/lbzui/vue/blob/master/LICENSE)
+
+> Material Components for Vue.js
 
 @lbzui/vue is available in a [public beta](https://github.com/lbzui/vue/projects/1) now, but you can read in more depth on [library list](https://github.com/orgs/lbzui/projects/1) and [documentation website](https://lbzui-vue.lanbizhong.com/) to develop.
 
@@ -120,11 +120,11 @@ export default class Button extends Vue {
 </script>
 ```
 
-All examples? Please view [Code examples](/tree/master/docs/views) for detail.
+All examples? Please view [code examples](/tree/master/docs/views) for detail.
 
-4. Build a Material theme
+4. Build a material theme
 
-> NOTE: Create your own Material theme by customizing values for [layout grid](https://material.io/design/layout/responsive-layout-grid.html), [shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), and [theme](https://material.io/resources/color/).
+> NOTE: Create your own material theme by customizing values for [layout grid](https://material.io/design/layout/responsive-layout-grid.html), [shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), and [theme](https://material.io/resources/color/).
 
 Install devDependencies through npm or yarn:
 
@@ -152,7 +152,7 @@ yarn add postcss-pxtorem --dev
 vue add style-resources-loader
 ```
 
-Import library in `main.ts` or `main.js`:
+Import source code in `main.ts` or `main.js`:
 
 ```js
 // src/main.ts or src/main.js
@@ -225,7 +225,7 @@ Vue.use(TabItem);
 Vue.use(TopAppBar);
 ```
 
-Prepends `variables` and `mixins` to all `less` files in `vue.config.js`:
+Prepend variables and mixins to all less files in `vue.config.js`:
 
 ```js
 // vue.config.js
@@ -261,7 +261,7 @@ module.exports = {
 }
 ```
 
-Use `PostCSS` plugins to convert CSS in `package.json` or `postcss.config.js`:
+Use PostCSS plugins to convert CSS in `package.json` or `postcss.config.js`:
 
 ```json
 // package.json (if you prefer placing config in package.json)
@@ -274,8 +274,7 @@ Use `PostCSS` plugins to convert CSS in `package.json` or `postcss.config.js`:
         "grid": "no-autoplace"
       },
       "importFrom": [
-        // "node_modules/@lbzui/vue/src/assets/css/variables/variables.css"
-        "src/assets/css/lbzui/variables.css" // your custom CSS Variables
+        "src/assets/css/lbzui/variables.css"
       ]
     },
     "postcss-pxtorem": {
@@ -323,15 +322,15 @@ module.exports = {
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons">
 ```
 
-## Browser Support
+## Browser support
 
-@lbzui/vue supports all [modern browsers](https://browserl.ist/?q=%3E%3D+1%25) and IE10+ (Layout grid works unfriendly, and dark theme does not supported).
+@lbzui/vue supports all [modern browsers](https://browserl.ist/?q=%3E%3D+1%25) and IE10+ (**Layout grid** works unfriendly, and **dark theme** does not supported).
 
 May work in other browsers but it's untested.
 
 ## Changelog
 
-Recently Updated? Please read the [changelog](/CHANGELOG.md).
+Recently updated? Please read the [changelog](/CHANGELOG.md).
 
 ## LICENSE
 
