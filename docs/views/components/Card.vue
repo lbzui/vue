@@ -253,7 +253,11 @@
         </div>
       </template>
     </lbz-card>
-    <lbz-card type="outlined" tag="a" href="#/components/card">
+    <lbz-card
+      type="outlined"
+      tag="a"
+      href="#/components/card"
+    >
       <template #start>
         <div class="lbz-card__header__center">
           <span class="lbz-typography--overline">Overline</span>

@@ -32,10 +32,10 @@ import { Component, Prop, Inject, Vue } from 'vue-property-decorator';
 export default class ListItem extends Vue {
   // router-link: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private routerLink!: undefined | boolean;
-  // tag: '' (default), li', 'a', 'x'
-  @Prop({ type: String, default: '' }) private tag!: string;
   // to (router-link): '' (default), 'x', { x: x }
   @Prop({ type: [String, Object], default: '' }) private to!: string | object;
+  // tag: '' (default), li', 'a', 'x'
+  @Prop({ type: String, default: '' }) private tag!: string;
   // active: true, false (default)
   @Prop({ type: Boolean, default: false }) private active!: boolean;
   // selected: true, false (default)

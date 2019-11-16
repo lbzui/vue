@@ -5,7 +5,11 @@
         <img src="../assets/img/placeholder@1x1.png">
       </template>
       <template #end>
-        <lbz-button type="contained" tag="a" href="#/">Back Home</lbz-button>
+        <lbz-button
+          type="contained"
+          tag="a"
+          href="#/"
+        >Back Home</lbz-button>
       </template>
     </lbz-empty-state>
   </article>

@@ -32,10 +32,10 @@ import EventBus from '../../utils/event-bus';
 export default class TabItem extends Vue {
   // router-link: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private routerLink!: undefined | boolean;
-  // tag: '' (default), 'button', 'a', 'x'
-  @Prop({ type: String, default: '' }) private tag!: string;
   // to (router-link): '' (default), 'x', { x: x }
   @Prop({ type: [String, Object], default: '' }) private to!: string | object;
+  // tag: '' (default), 'button', 'a', 'x'
+  @Prop({ type: String, default: '' }) private tag!: string;
   // [required]value: true, false, x, 'x'
   @Prop({ type: [Boolean, Number, String], required: true }) private value!: boolean | number | string;
   // icon: '' (default), 'x'

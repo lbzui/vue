@@ -4,62 +4,67 @@
 
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'alert' (default), 'simple', 'confirmation', 'full-screen (mobile only)'</h3>
-    <lbz-button @click.stop="valertOne = true">Alert</lbz-button>
-    <lbz-dialog :active.sync="valertOne" ref="dialog" @open="fopen" @close="fclose">
+    <lbz-button @click.stop="valert0 = true">Alert</lbz-button>
+    <lbz-dialog
+      :active.sync="valert0"
+      ref="dialog"
+      @open="fopen"
+      @close="fclose"
+    >
       <template #center>Discard draft?</template>
       <template #end>
         <lbz-button @click.stop="fcancel()">Cancel</lbz-button>
-        <lbz-button @click.stop="valertOne = false">Discard</lbz-button>
+        <lbz-button @click.stop="valert0 = false">Discard</lbz-button>
       </template>
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
-    <lbz-button @click.stop="valertTwo = true">Alert</lbz-button>
-    <lbz-dialog :active.sync="valertTwo" append-to-body>
+    <lbz-button @click.stop="valert1 = true">Alert</lbz-button>
+    <lbz-dialog :active.sync="valert1" append-to-body>
       <template #center>Discard draft?</template>
       <template #end>
-        <lbz-button @click.stop="valertTwo = false">Cancel</lbz-button>
-        <lbz-button @click.stop="valertTwo = false">Discard</lbz-button>
+        <lbz-button @click.stop="valert1 = false">Cancel</lbz-button>
+        <lbz-button @click.stop="valert1 = false">Discard</lbz-button>
       </template>
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
-    <lbz-button @click.stop="valertThree = true">Alert</lbz-button>
-    <lbz-dialog :active.sync="valertThree" :lock-scroll="false">
+    <lbz-button @click.stop="valert2 = true">Alert</lbz-button>
+    <lbz-dialog :active.sync="valert2" :lock-scroll="false">
       <template #center>Discard draft?</template>
       <template #end>
-        <lbz-button @click.stop="valertThree = false">Cancel</lbz-button>
-        <lbz-button @click.stop="valertThree = false">Discard</lbz-button>
+        <lbz-button @click.stop="valert2 = false">Cancel</lbz-button>
+        <lbz-button @click.stop="valert2 = false">Discard</lbz-button>
       </template>
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ stacked (['', 'alert', 'confirmation'].includes(type)): true, false (default)</h3>
-    <lbz-button @click.stop="valertFour = true">Alert</lbz-button>
-    <lbz-dialog :active.sync="valertFour" stacked>
+    <lbz-button @click.stop="valert3 = true">Alert</lbz-button>
+    <lbz-dialog :active.sync="valert3" stacked>
       <template #center>Discard draft?</template>
       <template #end>
-        <lbz-button @click.stop="valertFour = false">Cancel</lbz-button>
-        <lbz-button @click.stop="valertFour = false">Discard</lbz-button>
+        <lbz-button @click.stop="valert3 = false">Cancel</lbz-button>
+        <lbz-button @click.stop="valert3 = false">Discard</lbz-button>
       </template>
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
-    <lbz-button @click.stop="valertFive = true">Alert</lbz-button>
-    <lbz-dialog :active.sync="valertFive" title="Title goes here">
+    <lbz-button @click.stop="valert4 = true">Alert</lbz-button>
+    <lbz-dialog :active.sync="valert4" title="Title goes here">
       <template #center>Discard draft?</template>
       <template #end>
-        <lbz-button @click.stop="valertFive = false">Cancel</lbz-button>
-        <lbz-button @click.stop="valertFive = false">Discard</lbz-button>
+        <lbz-button @click.stop="valert4 = false">Cancel</lbz-button>
+        <lbz-button @click.stop="valert4 = false">Discard</lbz-button>
       </template>
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ content-height (type !== 'full-screen'): '' (default), 'x'</h3>
-    <lbz-button @click.stop="valertSix = true">Alert</lbz-button>
-    <lbz-dialog :active.sync="valertSix" content-height="180px">
+    <lbz-button @click.stop="valert5 = true">Alert</lbz-button>
+    <lbz-dialog :active.sync="valert5" content-height="180px">
       <template #center>Discard draft?</template>
       <template #end>
-        <lbz-button @click.stop="valertSix = false">Cancel</lbz-button>
-        <lbz-button @click.stop="valertSix = false">Discard</lbz-button>
+        <lbz-button @click.stop="valert5 = false">Cancel</lbz-button>
+        <lbz-button @click.stop="valert5 = false">Discard</lbz-button>
       </template>
     </lbz-dialog>
 
@@ -68,14 +73,18 @@
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'alert' (default), 'simple', 'confirmation', 'full-screen (mobile only)'</h3>
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
-    <lbz-button @click.stop="vsimpleOne = true">Simple</lbz-button>
-    <lbz-dialog :active.sync="vsimpleOne" type="simple" title="Set backup account">
+    <lbz-button @click.stop="vsimple0 = true">Simple</lbz-button>
+    <lbz-dialog
+      :active.sync="vsimple0"
+      type="simple"
+      title="Set backup account"
+    >
       <template #center>
         <lbz-list dense>
           <lbz-list-item
             v-for="(item, index) of vsimpleList"
             :key="index"
-            @click.stop="vsimpleOne = false"
+            @click.stop="vsimple0 = false"
           >
             <template #start>
               <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -87,14 +96,19 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
-    <lbz-button @click.stop="vsimpleTwo = true">Simple</lbz-button>
-    <lbz-dialog :active.sync="vsimpleTwo" type="simple" append-to-body title="Set backup account">
+    <lbz-button @click.stop="vsimple1 = true">Simple</lbz-button>
+    <lbz-dialog
+      :active.sync="vsimple1"
+      type="simple"
+      append-to-body
+      title="Set backup account"
+    >
       <template #center>
         <lbz-list dense>
           <lbz-list-item
             v-for="(item, index) of vsimpleList"
             :key="index"
-            @click.stop="vsimpleTwo = false"
+            @click.stop="vsimple1 = false"
           >
             <template #start>
               <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -106,14 +120,19 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
-    <lbz-button @click.stop="vsimpleThree = true">Simple</lbz-button>
-    <lbz-dialog :active.sync="vsimpleThree" type="simple" :lock-scroll="false" title="Set backup account">
+    <lbz-button @click.stop="vsimple2 = true">Simple</lbz-button>
+    <lbz-dialog
+      :active.sync="vsimple2"
+      type="simple"
+      :lock-scroll="false"
+      title="Set backup account"
+    >
       <template #center>
         <lbz-list dense>
           <lbz-list-item
             v-for="(item, index) of vsimpleList"
             :key="index"
-            @click.stop="vsimpleThree = false"
+            @click.stop="vsimple2 = false"
           >
             <template #start>
               <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -125,14 +144,19 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ content-height (type !== 'full-screen'): '' (default), 'x'</h3>
-    <lbz-button @click.stop="vsimpleFour = true">Simple</lbz-button>
-    <lbz-dialog :active.sync="vsimpleFour" type="simple" title="Set backup account" content-height="360px">
+    <lbz-button @click.stop="vsimple3 = true">Simple</lbz-button>
+    <lbz-dialog
+      :active.sync="vsimple3"
+      type="simple"
+      title="Set backup account"
+      content-height="360px"
+    >
       <template #center>
         <lbz-list dense>
           <lbz-list-item
             v-for="(item, index) of vsimpleList"
             :key="index"
-            @click.stop="vsimpleFour = false"
+            @click.stop="vsimple3 = false"
           >
             <template #start>
               <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -148,39 +172,59 @@
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'alert' (default), 'simple', 'confirmation', 'full-screen (mobile only)'</h3>
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
-    <lbz-button @click.stop="vconfirmationOne = true">Confirmation</lbz-button>
-    <lbz-dialog :active.sync="vconfirmationOne" type="confirmation" title="Title goes here">
+    <lbz-button @click.stop="vconfirmation0 = true">Confirmation</lbz-button>
+    <lbz-dialog
+      :active.sync="vconfirmation0"
+      type="confirmation"
+      title="Title goes here"
+    >
       <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</template>
       <template #end>
-        <lbz-button @click.stop="vconfirmationOne = false">Cancel</lbz-button>
-        <lbz-button @click.stop="vconfirmationOne = false">OK</lbz-button>
+        <lbz-button @click.stop="vconfirmation0 = false">Cancel</lbz-button>
+        <lbz-button @click.stop="vconfirmation0 = false">OK</lbz-button>
       </template>
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
-    <lbz-button @click.stop="vconfirmationTwo = true">Confirmation</lbz-button>
-    <lbz-dialog :active.sync="vconfirmationTwo" type="confirmation" append-to-body title="Title goes here">
+    <lbz-button @click.stop="vconfirmation1 = true">Confirmation</lbz-button>
+    <lbz-dialog
+      :active.sync="vconfirmation1"
+      type="confirmation"
+      append-to-body
+      title="Title goes here"
+    >
       <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</template>
       <template #end>
-        <lbz-button @click.stop="vconfirmationTwo = false">Cancel</lbz-button>
-        <lbz-button @click.stop="vconfirmationTwo = false">OK</lbz-button>
+        <lbz-button @click.stop="vconfirmation1 = false">Cancel</lbz-button>
+        <lbz-button @click.stop="vconfirmation1 = false">OK</lbz-button>
       </template>
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
-    <lbz-button @click.stop="vconfirmationThree = true">Confirmation</lbz-button>
-    <lbz-dialog :active.sync="vconfirmationThree" type="confirmation" :lock-scroll="false" title="Title goes here">
+    <lbz-button @click.stop="vconfirmation2 = true">Confirmation</lbz-button>
+    <lbz-dialog
+      :active.sync="vconfirmation2"
+      type="confirmation"
+      :lock-scroll="false"
+      title="Title goes here"
+    >
       <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</template>
       <template #end>
-        <lbz-button @click.stop="vconfirmationThree = false">Cancel</lbz-button>
-        <lbz-button @click.stop="vconfirmationThree = false">OK</lbz-button>
+        <lbz-button @click.stop="vconfirmation2 = false">Cancel</lbz-button>
+        <lbz-button @click.stop="vconfirmation2 = false">OK</lbz-button>
       </template>
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ scrollable (type === 'confirmation'): true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ content-height (type !== 'full-screen'): '' (default), 'x'</h3>
-    <lbz-button @click.stop="vconfirmationFour = true">Confirmation</lbz-button>
-    <lbz-dialog :active.sync="vconfirmationFour" type="confirmation" scrollable title="Title goes here" content-height="180px">
+    <lbz-button @click.stop="vconfirmation3 = true">Confirmation</lbz-button>
+    <lbz-dialog
+      :active.sync="vconfirmation3"
+      type="confirmation"
+      scrollable
+      title="Title goes here"
+      content-height="180px"
+    >
       <template #center>
         <lbz-list dense>
           <lbz-list-item
@@ -196,18 +240,23 @@
         </lbz-list>
       </template>
       <template #end>
-        <lbz-button @click.stop="vconfirmationFour = false">Cancel</lbz-button>
-        <lbz-button @click.stop="vconfirmationFour = false">OK</lbz-button>
+        <lbz-button @click.stop="vconfirmation3 = false">Cancel</lbz-button>
+        <lbz-button @click.stop="vconfirmation3 = false">OK</lbz-button>
       </template>
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ stacked (['', 'alert', 'confirmation'].includes(type)): true, false (default)</h3>
-    <lbz-button @click.stop="vconfirmationFive = true">Confirmation</lbz-button>
-    <lbz-dialog :active.sync="vconfirmationFive" type="confirmation" stacked title="Title goes here">
+    <lbz-button @click.stop="vconfirmation4 = true">Confirmation</lbz-button>
+    <lbz-dialog
+      :active.sync="vconfirmation4"
+      type="confirmation"
+      stacked
+      title="Title goes here"
+    >
       <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</template>
       <template #end>
-        <lbz-button @click.stop="vconfirmationFive = false">Turn on speed boost</lbz-button>
-        <lbz-button @click.stop="vconfirmationFive = false">No thanks</lbz-button>
+        <lbz-button @click.stop="vconfirmation4 = false">Turn on speed boost</lbz-button>
+        <lbz-button @click.stop="vconfirmation4 = false">No thanks</lbz-button>
       </template>
     </lbz-dialog>
 
@@ -216,31 +265,45 @@
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'alert' (default), 'simple', 'confirmation', 'full-screen (mobile only)'</h3>
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
-    <lbz-button @click.stop="vfullScreenOne = true">Full-screen</lbz-button>
-    <lbz-dialog :active.sync="vfullScreenOne" type="full-screen" title="Title goes here">
+    <lbz-button @click.stop="vfullScreen0 = true">Full-screen</lbz-button>
+    <lbz-dialog
+      :active.sync="vfullScreen0"
+      type="full-screen"
+      title="Title goes here"
+    >
       <template #start>
         <!-- Save, Send, Share, Update, or Create -->
-        <lbz-button @click.stop="vfullScreenOne = false">Action</lbz-button>
+        <lbz-button @click.stop="vfullScreen0 = false">Action</lbz-button>
       </template>
       <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</template>
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
-    <lbz-button @click.stop="vfullScreenTwo = true">Full-screen</lbz-button>
-    <lbz-dialog :active.sync="vfullScreenTwo" type="full-screen" append-to-body title="Title goes here">
+    <lbz-button @click.stop="vfullScreen1 = true">Full-screen</lbz-button>
+    <lbz-dialog
+      :active.sync="vfullScreen1"
+      type="full-screen"
+      append-to-body
+      title="Title goes here"
+    >
       <template #start>
         <!-- Save, Send, Share, Update, or Create -->
-        <lbz-button @click.stop="vfullScreenTwo = false">Action</lbz-button>
+        <lbz-button @click.stop="vfullScreen1 = false">Action</lbz-button>
       </template>
       <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</template>
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
-    <lbz-button @click.stop="vfullScreenThree = true">Full-screen</lbz-button>
-    <lbz-dialog :active.sync="vfullScreenThree" type="full-screen" :lock-scroll="false" title="Title goes here">
+    <lbz-button @click.stop="vfullScreen2 = true">Full-screen</lbz-button>
+    <lbz-dialog
+      :active.sync="vfullScreen2"
+      type="full-screen"
+      :lock-scroll="false"
+      title="Title goes here"
+    >
       <template #start>
         <!-- Save, Send, Share, Update, or Create -->
-        <lbz-button @click.stop="vfullScreenThree = false">Action</lbz-button>
+        <lbz-button @click.stop="vfullScreen2 = false">Action</lbz-button>
       </template>
       <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</template>
     </lbz-dialog>
@@ -254,17 +317,17 @@ import { Component, Ref, Vue } from 'vue-property-decorator';
 export default class Dialog extends Vue {
   @Ref('dialog') private rdialog!: HTMLFormElement;
 
-  private valertOne: boolean = false;
-  private valertTwo: boolean = false;
-  private valertThree: boolean = false;
-  private valertFour: boolean = false;
-  private valertFive: boolean = false;
-  private valertSix: boolean = false;
+  private valert0: boolean = false;
+  private valert1: boolean = false;
+  private valert2: boolean = false;
+  private valert3: boolean = false;
+  private valert4: boolean = false;
+  private valert5: boolean = false;
 
-  private vsimpleOne: boolean = false;
-  private vsimpleTwo: boolean = false;
-  private vsimpleThree: boolean = false;
-  private vsimpleFour: boolean = false;
+  private vsimple0: boolean = false;
+  private vsimple1: boolean = false;
+  private vsimple2: boolean = false;
+  private vsimple3: boolean = false;
   private vsimpleList: any[] = [
     {
       icon: 'account_circle',
@@ -280,16 +343,16 @@ export default class Dialog extends Vue {
     },
   ];
 
-  private vconfirmationOne: boolean = false;
-  private vconfirmationTwo: boolean = false;
-  private vconfirmationThree: boolean = false;
-  private vconfirmationFour: boolean = false;
+  private vconfirmation0: boolean = false;
+  private vconfirmation1: boolean = false;
+  private vconfirmation2: boolean = false;
+  private vconfirmation3: boolean = false;
   private vradio: number = 0;
-  private vconfirmationFive: boolean = false;
+  private vconfirmation4: boolean = false;
 
-  private vfullScreenOne: boolean = false;
-  private vfullScreenTwo: boolean = false;
-  private vfullScreenThree: boolean = false;
+  private vfullScreen0: boolean = false;
+  private vfullScreen1: boolean = false;
+  private vfullScreen2: boolean = false;
 
   private fopen(): void {
     alert('Open');

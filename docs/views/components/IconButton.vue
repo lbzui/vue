@@ -5,7 +5,10 @@
     <h3 class="lbz-typography--subtitle1">$ toggle: true, false (default)</h3>
     <lbz-icon-button @click.stop="fclick">favorite_border</lbz-icon-button>
     <lbz-icon-button>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path fill="none" d="M0 0h24v24H0V0z"/>
+        <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+      </svg>
     </lbz-icon-button>
     <lbz-icon-button>
       <img src="../../assets/img/logo.png">
@@ -14,7 +17,15 @@
     <h3 class="lbz-typography--subtitle1">$ router-link (!toggle): true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ router-link-props (!toggle && router-link): { to: '' (default) || 'x' || { x: x }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
-    <lbz-icon-button router-link :router-link-props="{ to: '/components/icon', replace: true, event: 'dblclick' }" tag="a">favorite_border</lbz-icon-button>
+    <lbz-icon-button
+      router-link
+      :router-link-props="{
+        to: '/components/icon',
+        replace: true,
+        event: 'dblclick'
+      }"
+      tag="a"
+    >favorite_border</lbz-icon-button>
     <lbz-icon-button tag="a" href="#/components/icon-button">favorite_border</lbz-icon-button>
 
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'</h3>
@@ -56,10 +67,16 @@
     </lbz-icon-button>
     <lbz-icon-button :active.sync="vactive" toggle>
       <template #on-icon>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7.77 6.76L6.23 5.48.82 12l5.41 6.52 1.54-1.28L3.42 12l4.35-5.24zM7 13h2v-2H7v2zm10-2h-2v2h2v-2zm-6 2h2v-2h-2v2zm6.77-7.52l-1.54 1.28L20.58 12l-4.35 5.24 1.54 1.28L23.18 12l-5.41-6.52z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M7.77 6.76L6.23 5.48.82 12l5.41 6.52 1.54-1.28L3.42 12l4.35-5.24zM7 13h2v-2H7v2zm10-2h-2v2h2v-2zm-6 2h2v-2h-2v2zm6.77-7.52l-1.54 1.28L20.58 12l-4.35 5.24 1.54 1.28L23.18 12l-5.41-6.52z"/>
+        </svg>
       </template>
       <template #off-icon>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="none" d="M0 0h24v24H0V0z"/>
+          <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+        </svg>
       </template>
     </lbz-icon-button>
     <lbz-icon-button :active.sync="vactive" toggle>

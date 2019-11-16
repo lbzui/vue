@@ -5,7 +5,10 @@
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'mini', 'extended'</h3>
     <lbz-fab @click.stop="fclick">add</lbz-fab>
     <lbz-fab>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path fill="none" d="M0 0h24v24H0V0z"/>
+        <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+      </svg>
     </lbz-fab>
     <lbz-fab>
       <img src="../../assets/img/logo.png">
@@ -36,7 +39,10 @@
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'mini', 'extended'</h3>
     <lbz-fab type="mini">add</lbz-fab>
     <lbz-fab type="mini">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path fill="none" d="M0 0h24v24H0V0z"/>
+        <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+      </svg>
     </lbz-fab>
     <lbz-fab type="mini">
       <img src="../../assets/img/logo.png">
@@ -44,7 +50,11 @@
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
     <lbz-fab type="mini">add</lbz-fab>
-    <lbz-fab type="mini" tag="a" href="#/components/fab">add</lbz-fab>
+    <lbz-fab
+      type="mini"
+      tag="a"
+      href="#/components/fab"
+    >add</lbz-fab>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'surface', 'light', 'dark'</h3>
     <lbz-fab type="mini" background="primary">add</lbz-fab>
@@ -69,7 +79,10 @@
     <lbz-fab type="extended" label="Create"/>
     <lbz-fab type="extended" label="Create">add</lbz-fab>
     <lbz-fab type="extended" label="Create">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path fill="none" d="M0 0h24v24H0V0z"/>
+        <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+      </svg>
     </lbz-fab>
     <lbz-fab type="extended" label="Create">
       <img src="../../assets/img/logo.png">
@@ -77,24 +90,61 @@
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
     <lbz-fab type="extended" label="Create"/>
-    <lbz-fab type="extended" tag="a" href="#/components/fab" label="Create"/>
+    <lbz-fab
+      type="extended"
+      tag="a"
+      label="Create"
+      href="#/components/fab"
+    />
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'surface', 'light', 'dark'</h3>
-    <lbz-fab type="extended" background="primary" label="Create"/>
-    <lbz-fab type="extended" background="primary-variant" label="Create"/>
+    <lbz-fab
+      type="extended"
+      background="primary"
+      label="Create"
+    />
+    <lbz-fab
+      type="extended"
+      background="primary-variant"
+      label="Create"
+    />
     <lbz-fab type="extended" label="Create"/>
-    <lbz-fab type="extended" background="surface" label="Create"/>
-    <lbz-fab type="extended" background="light" label="Create"/>
-    <lbz-fab type="extended" background="dark" label="Create"/>
+    <lbz-fab
+      type="extended"
+      background="surface"
+      label="Create"
+    />
+    <lbz-fab
+      type="extended"
+      background="light"
+      label="Create"
+    />
+    <lbz-fab
+      type="extended"
+      background="dark"
+      label="Create"
+    />
 
     <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
     <lbz-fab type="extended" label="Create"/>
-    <lbz-fab type="extended" :ripple="false" label="Create"/>
+    <lbz-fab
+      type="extended"
+      :ripple="false"
+      label="Create"
+    />
 
     <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
     <lbz-button @click.stop="ftoggleInactive()">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
-    <lbz-fab type="extended" :inactive="vinactive" label="Create"/>
-    <lbz-fab type="extended" :inactive="vinactive" label="Create">add</lbz-fab>
+    <lbz-fab
+      type="extended"
+      :inactive="vinactive"
+      label="Create"
+    />
+    <lbz-fab
+      type="extended"
+      :inactive="vinactive"
+      label="Create"
+    >add</lbz-fab>
   </article>
 </template>
 

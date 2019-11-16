@@ -180,7 +180,11 @@
         <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
-    <lbz-top-app-bar type="extended" background="secondary" title="Page title">
+    <lbz-top-app-bar
+      type="extended"
+      background="secondary"
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button on-background="secondary">menu</lbz-icon-button>
       </template>
@@ -190,7 +194,11 @@
         <lbz-icon-button on-background="secondary" class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
-    <lbz-top-app-bar type="extended" background="background" title="Page title">
+    <lbz-top-app-bar
+      type="extended"
+      background="background"
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button on-background="background">menu</lbz-icon-button>
       </template>
@@ -200,7 +208,11 @@
         <lbz-icon-button on-background="background" class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
-    <lbz-top-app-bar type="extended" background="surface" title="Page title">
+    <lbz-top-app-bar
+      type="extended"
+      background="surface"
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button>menu</lbz-icon-button>
       </template>
@@ -210,7 +222,11 @@
         <lbz-icon-button class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
-    <lbz-top-app-bar type="extended" background="light" title="Page title">
+    <lbz-top-app-bar
+      type="extended"
+      background="light"
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button on-background="light">menu</lbz-icon-button>
       </template>
@@ -220,7 +236,11 @@
         <lbz-icon-button on-background="light" class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
-    <lbz-top-app-bar type="extended" background="dark" title="Page title">
+    <lbz-top-app-bar
+      type="extended"
+      background="dark"
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button on-background="dark">menu</lbz-icon-button>
       </template>
@@ -230,7 +250,11 @@
         <lbz-icon-button on-background="dark" class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
-    <lbz-top-app-bar type="extended" background="transparent" title="Page title">
+    <lbz-top-app-bar
+      type="extended"
+      background="transparent"
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button>menu</lbz-icon-button>
       </template>
@@ -242,7 +266,11 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ dense (desktop only): true, false (default)</h3>
-    <lbz-top-app-bar type="extended" dense title="Page title">
+    <lbz-top-app-bar
+      type="extended"
+      dense
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
       </template>
@@ -254,7 +282,11 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ elevated: true, false (default)</h3>
-    <lbz-top-app-bar type="extended" elevated title="Page title">
+    <lbz-top-app-bar
+      type="extended"
+      elevated
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
       </template>
@@ -266,7 +298,12 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ media (type === 'extended'): '' (default), 'x'</h3>
-    <lbz-top-app-bar type="extended" background="light" title="Page title" :media="require('../../assets/img/placeholder@3x2.png')">
+    <lbz-top-app-bar
+      type="extended"
+      background="light"
+      title="Page title"
+      :media="require('../../assets/img/placeholder@3x2.png')"
+    >
       <template #start>
         <lbz-icon-button on-background="light">menu</lbz-icon-button>
       </template>
@@ -302,7 +339,11 @@
         <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
-    <lbz-top-app-bar type="short" background="secondary" title="Page title">
+    <lbz-top-app-bar
+      type="short"
+      background="secondary"
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button on-background="secondary">menu</lbz-icon-button>
       </template>
@@ -312,7 +353,11 @@
         <lbz-icon-button on-background="secondary" class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
-    <lbz-top-app-bar type="short" background="background" title="Page title">
+    <lbz-top-app-bar
+      type="short"
+      background="background"
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button on-background="background">menu</lbz-icon-button>
       </template>
@@ -322,7 +367,11 @@
         <lbz-icon-button on-background="background" class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
-    <lbz-top-app-bar type="short" background="surface" title="Page title">
+    <lbz-top-app-bar
+      type="short"
+      background="surface"
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button>menu</lbz-icon-button>
       </template>
@@ -332,7 +381,11 @@
         <lbz-icon-button class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
-    <lbz-top-app-bar type="short" background="light" title="Page title">
+    <lbz-top-app-bar
+      type="short"
+      background="light"
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button on-background="light">menu</lbz-icon-button>
       </template>
@@ -342,7 +395,11 @@
         <lbz-icon-button on-background="light" class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
-    <lbz-top-app-bar type="short" background="dark" title="Page title">
+    <lbz-top-app-bar
+      type="short"
+      background="dark"
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button on-background="dark">menu</lbz-icon-button>
       </template>
@@ -352,7 +409,11 @@
         <lbz-icon-button on-background="dark" class="is-short-action">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
-    <lbz-top-app-bar type="short" background="transparent" title="Page title">
+    <lbz-top-app-bar
+      type="short"
+      background="transparent"
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button>menu</lbz-icon-button>
       </template>
@@ -364,7 +425,11 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ dense (desktop only): true, false (default)</h3>
-    <lbz-top-app-bar type="short" dense title="Page title">
+    <lbz-top-app-bar
+      type="short"
+      dense
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
       </template>
@@ -376,7 +441,11 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ elevated: true, false (default)</h3>
-    <lbz-top-app-bar type="short" elevated title="Page title">
+    <lbz-top-app-bar
+      type="short"
+      elevated
+      title="Page title"
+    >
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
       </template>

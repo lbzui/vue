@@ -8,15 +8,17 @@
     >
       <template #start>
         <router-link
-          tag="h1"
           to="/"
+          tag="h1"
+          exact
           class="lbz-drawer__title"
         >@lbzui/vue</router-link>
       </template>
       <template #center>
         <lbz-list
-          router-link
           tag="nav"
+          router-link
+          :router-link-props="{ exact: true }"
           item-tag="a"
         >
           <lbz-divider/>
@@ -74,11 +76,9 @@
       </template>
     </lbz-drawer>
     <main class="lbzui__main" role="main">
-      <transition name="lbzui__main__container">
-        <keep-alive>
-          <router-view class="lbzui__main__container"/>
-        </keep-alive>
-      </transition>
+      <keep-alive>
+        <router-view class="lbzui__main__container"/>
+      </keep-alive>
     </main>
     <lbz-fab class="lbzui__fab" @click.stop="vactive = true">menu</lbz-fab>
   </div>
@@ -196,15 +196,15 @@ export default class App extends Vue {
     // },
     {
       path: 'https://material.io/',
-      label: 'Material design',
+      label: 'Material Design',
     },
     {
       path: 'https://material.io/resources/color/',
-      label: 'Material color tool',
+      label: 'Material Color Tool',
     },
     {
       path: 'https://material.io/resources/icons/',
-      label: 'Material icons',
+      label: 'Material Icons',
     },
   ];
   private vwidth: number = 0;

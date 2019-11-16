@@ -115,7 +115,11 @@
 
     <h3 class="lbz-typography--subtitle1">$ horizontal: true, false (default)</h3>
     <div class="lbzui-u-app">
-      <lbz-backdrop :active.sync="vactive" horizontal @scroll="fscroll">
+      <lbz-backdrop
+        :active.sync="vactive"
+        horizontal
+        @scroll="fscroll"
+      >
         <template #back-layer-header>
           <lbz-top-app-bar title="Page title">
             <template #start>

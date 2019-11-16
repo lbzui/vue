@@ -1,6 +1,6 @@
 {
   "name": "@lbzui/vue",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": false,
   "description": "Material Components for Vue.js",
   "author": "LAN Bizhong <bizhong_lan@163.com> (https://lanbizhong.com/)",
@@ -65,9 +65,9 @@
   "homepage": "https://lbzui-vue.lanbizhong.com/",
   "keywords": [
     "vue",
+    "typescript",
     "less",
     "postcss",
-    "typescript",
     "material-components",
     "material-components-vue",
     "material-design",
