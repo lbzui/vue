@@ -441,8 +441,8 @@
       item-tag="a"
       class="lbzui-u-rectangle"
     >
-      <lbz-list-item to="/components/icon-button">Router-link</lbz-list-item>
-      <lbz-list-item :to="{ name: 'list' }">Router-link</lbz-list-item>
+      <lbz-list-item to="">Router-link</lbz-list-item>
+      <lbz-list-item :to="{ path: '/404' }">Router-link</lbz-list-item>
     </lbz-list>
     <lbz-list
       tag="nav"
@@ -450,7 +450,7 @@
       item-tag="a"
       class="lbzui-u-rectangle"
     >
-      <lbz-list-item href="#/components/icon-button">A</lbz-list-item>
+      <lbz-list-item href="#/components/list">A</lbz-list-item>
       <lbz-list-item href="#/components/list">A</lbz-list-item>
     </lbz-list>
 
@@ -484,12 +484,12 @@
     >
       <lbz-list-item
         router-link
-        to="/components/icon-button"
+        to=""
         tag="a"
       >Router-link</lbz-list-item>
       <lbz-list-item
         router-link
-        :to="{ name: 'list' }"
+        :to="{ path: '/404' }"
         tag="a"
       >Router-link</lbz-list-item>
     </lbz-list>
@@ -498,7 +498,7 @@
       subtitle="Non router-link"
       class="lbzui-u-rectangle"
     >
-      <lbz-list-item tag="a" href="#/components/icon-button">A</lbz-list-item>
+      <lbz-list-item tag="a" href="#/components/list">A</lbz-list-item>
       <lbz-list-item tag="a" href="#/components/list">A</lbz-list-item>
     </lbz-list>
 

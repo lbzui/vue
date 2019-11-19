@@ -17,13 +17,13 @@ If you have any questions, ideas or you want to discuss with it, [create an issu
 - Support [light](https://material.io/design/color/the-color-system.html) and [dark](https://material.io/design/color/dark-theme.html) theme
 - Customize [layout grid](https://material.io/design/layout/responsive-layout-grid.html), [shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), and [theme](https://material.io/resources/color/)
 - Fit responsive web design
-- Use [Vue](https://vuejs.org/) (2.6.0+), [TypeScript](http://www.typescriptlang.org/), [Less](http://lesscss.org/) (3.5.0+), [PostCSS](https://postcss.org/), etc features
+- Use [Vue](https://vuejs.org/) (2.6.0+), [TypeScript](http://www.typescriptlang.org/), [Less](http://lesscss.org/) (3.5.0+), [PostCSS](https://postcss.org/), etc. features
 
 ## Quick start
 
 ### Using via CDN
 
-Require the stylesheet and script in your HTML
+#### Require the stylesheet and script in your HTML
 
 ```html
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ Require the stylesheet and script in your HTML
   <head>
     <meta charset="utf-8">
     <title>lbzui-vue-demo</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons&display=block">
     <link rel="stylesheet" href="https://unpkg.com/@lbzui/vue/lib/lbzui.css">
   </head>
   <body>
@@ -54,7 +54,7 @@ Require the stylesheet and script in your HTML
 
 ### Using via NPM
 
-1. Create a new project via [Vue CLI](https://cli.vuejs.org/)
+#### Step 1: Create a new project via [Vue CLI](https://cli.vuejs.org/)
 
 ```bash
 # with npm
@@ -68,7 +68,7 @@ yarn global add @vue/cli
 vue add lbzui-vue-demo
 ```
 
-2. Install @lbzui/vue through npm or yarn
+#### Step 2: Install @lbzui/vue through npm or yarn
 
 ```bash
 # with npm
@@ -78,7 +78,7 @@ npm i @lbzui/vue -S
 yarn add @lbzui/vue
 ```
 
-3. Import @lbzui/vue in your code
+#### Step 3: Import @lbzui/vue in your code
 
 ```js
 // src/shims-vue.d.ts (if you use TS)
@@ -100,31 +100,11 @@ import { Button } from '@lbzui/vue';
 Vue.use(Button);
 ```
 
-Use `lbz-button` component like this:
+#### Step 4: Build a Material theme
 
-```vue
-<!-- .vue -->
-<template>
-  <lbz-button @click.stop="fclick">Click me</lbz-button>
-</template>
+> NOTE: If you just want to use the compiled CSS, you can skip to [Step 5](#step-5-use-lbz-button-component).
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-
-@Component
-export default class Button extends Vue {
-  private fclick(e: MouseEvent): void {
-    alert('Hello @lbzui/vue!');
-  }
-}
-</script>
-```
-
-All examples? Please view [code examples](/tree/master/docs/views) for detail.
-
-4. Build a material theme
-
-> NOTE: Create your own material theme by customizing values for [layout grid](https://material.io/design/layout/responsive-layout-grid.html), [shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), and [theme](https://material.io/resources/color/).
+Create your own Material theme by customizing values for [layout grid](https://material.io/design/layout/responsive-layout-grid.html), [shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), and [theme](https://material.io/resources/color/).
 
 Install devDependencies through npm or yarn:
 
@@ -156,7 +136,6 @@ Import source code in `main.ts` or `main.js`:
 
 ```js
 // src/main.ts or src/main.js
-import 'normalize.css';
 
 // all styles and components
 // import '@lbzui/vue/src/assets/css/index.less';
@@ -316,15 +295,37 @@ module.exports = {
 }
 ````
 
-5. Optionally import [Roboto font](https://fonts.google.com/?query=roboto) and [Material icons](https://material.io/resources/icons/) from Google CDN
+#### Step 5: Use `lbz-button` component
+
+```vue
+<!-- .vue -->
+<template>
+  <lbz-button @click.stop="fclick">Click me</lbz-button>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class Button extends Vue {
+  private fclick(e: MouseEvent): void {
+    alert('Hello @lbzui/vue!');
+  }
+}
+</script>
+```
+
+All examples? Please view [code examples](/tree/master/docs/views) for details.
+
+#### Step 6: Optionally import [Roboto font](https://fonts.google.com/specimen/Roboto) and [Material Icons](https://material.io/resources/icons/) from Google CDN
 
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons&display=block">
 ```
 
 ## Browser support
 
-@lbzui/vue supports all [modern browsers](https://browserl.ist/?q=%3E%3D+1%25) and IE10+ (**Layout grid** works unfriendly, and **dark theme** does not supported).
+@lbzui/vue supports all [modern browsers](https://browserl.ist/?q=%3E%3D+1%25) and IE 10+ (**Layout grid** works unfriendly, and **dark theme** does not supported).
 
 May work in other browsers but it's untested.
 

@@ -4,16 +4,40 @@
 
 #lbz-shape() {
   .size() {
-    // Small Components
+    // Small Components (rounded: 0-28px/0-50%, cut: 0-28px/0-50%, default: rounded 4px):
+    // Button                             - rounded: 0-20px/0-50%, cut: 0-6px/0-50%, default: rounded 4px
+    // Chip                               - rounded: 0-16px/0-50%, cut: 0-0px/0-0%, default: rounded 50%*
+    // Expanding bottom sheet (collapsed) - rounded: 0-24px/0-50%, cut: 0-12px/0-50%, default: rounded 24px 24px 0 0*
+    // Extended floating action button    - rounded: 0-28px/0-50%, cut: 0-28px/0-50%, default: rounded 50%*
+    // Floating action button             - rounded: 12-28px/20-50%, cut: 12-28px/20-50%, default: rounded 50%*
+    // Filled text field                  - rounded: 0-20px/0-50%, cut: 0-12px/0-50%, default: rounded 4px 4px 0 0
+    // Outlined text field                - rounded: 0-20px/0-50%, cut: 0-12px/0-50%, default: rounded 4px
+    // Snackbar                           - rounded: 0-24px/0-50%, cut: 0-12px/0-50%, default: rounded 4px
+    // Tooltip                            - rounded: 0-16px/0-50%, cut: 0-0px/0-0%, default: rounded 4px
     .small() {
       absolute: 4px;
       percentage: 50%;
     }
 
-    // Medium Components
+    // Medium Components (rounded: 0-36px, cut: 0-16px, default: rounded 4px):
+    // Card            - rounded: 0-24px, cut: 0-16px, default: rounded 4px
+    // Dialog          - rounded: 0-36px, cut: 0-16px, default: rounded 4px
+    // Image list item - rounded: 0-24px, cut: 0-16px, default: rounded 0px*
+    // Menu            - rounded: 0-20px, cut: 0-12px, default: rounded 4px
     medium: 4px; // absolute size
 
-    // Large Components
+    // Large Components (rounded: 0-36px, cut: 0-24px, default: rounded 0px):
+    // Backdrop                                            - rounded: 0-36px, cut: 0-24px, default: rounded 24px 24px 0 0*
+    // Data table                                          - rounded: 0-20px, cut: 0-12px, default: rounded 4px*
+    // Expanding bottom sheet (expanded / full-screen)     - rounded: 0-0px, cut: 0-0px, default: rounded 0
+    // Modal bottom sheet (collapsed)                      - rounded: 0-24px, cut: 0-12px, default: rounded 0px 0px 0 0
+    // Modal bottom sheet (expanded / full-screen)         - rounded: 0-0px, cut: 0-0px, default: rounded 0
+    // Navigation drawer (bottom - collapsed)              - rounded: 0-24px, cut: 0-12px, default: rounded 0px 0px 0 0
+    // Navigation drawer (bottom - expanded / full-screen) - rounded: 0-0px, cut: 0-0px, default: rounded 0
+    // Navigation drawer (side)                            - rounded: 0-36px, cut: 0-18px, default: rounded 0px
+    // Side sheet                                          - rounded: 0-36px, cut: 0-18px, default: rounded 0px
+    // Standard bottom sheet (collapsed)                   - rounded: 0-24px, cut: 0-12px, default: rounded 0px 0px 0 0
+    // Standard bottom sheet (expanded / full-screen)      - rounded: 0-0px, cut: 0-0px, default: rounded 0
     large: 0; // absolute size
   }
 }

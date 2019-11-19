@@ -90,9 +90,9 @@
       router-link
       :router-link-props="{ replace: true }"
     >
-      <lbz-tab-item to="/components/icon-button" :value="0">Router-link</lbz-tab-item>
-      <lbz-tab-item :to="{ name: 'list' }" :value="1">Router-link</lbz-tab-item>
-      <lbz-tab-item :to="{ name: 'radio' }" :value="2">Router-link</lbz-tab-item>
+      <lbz-tab-item to="/404" :value="0">Router-link</lbz-tab-item>
+      <lbz-tab-item :to="{ path: '/404' }" :value="1">Router-link</lbz-tab-item>
+      <lbz-tab-item :to="{ path: '/404' }" :value="2">Router-link</lbz-tab-item>
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ item-tag: 'button' (default), 'a', 'x'</h3>
@@ -254,12 +254,12 @@
       router-link
       :router-link-props="{ replace: true }"
     >
-      <lbz-tab-item to="/components/empty-state" :value="0">Router-link</lbz-tab-item>
-      <lbz-tab-item :to="{ name: 'fab' }" :value="1">Router-link</lbz-tab-item>
-      <lbz-tab-item :to="{ name: 'icon' }" :value="2">Router-link</lbz-tab-item>
-      <lbz-tab-item :to="{ name: 'icon-button' }" :value="3">Router-link</lbz-tab-item>
-      <lbz-tab-item :to="{ name: 'list' }" :value="4">Router-link</lbz-tab-item>
-      <lbz-tab-item :to="{ name: 'radio' }" :value="5">Router-link</lbz-tab-item>
+      <lbz-tab-item to="/404" :value="0">Router-link</lbz-tab-item>
+      <lbz-tab-item :to="{ path: '/404' }" :value="1">Router-link</lbz-tab-item>
+      <lbz-tab-item :to="{ path: '/404' }" :value="2">Router-link</lbz-tab-item>
+      <lbz-tab-item :to="{ path: '/404' }" :value="3">Router-link</lbz-tab-item>
+      <lbz-tab-item :to="{ path: '/404' }" :value="4">Router-link</lbz-tab-item>
+      <lbz-tab-item :to="{ path: '/404' }" :value="5">Router-link</lbz-tab-item>
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ item-tag: 'button' (default), 'a', 'x'</h3>
@@ -339,14 +339,14 @@
       <lbz-tab-item :value="0">Button</lbz-tab-item>
       <lbz-tab-item
         router-link
-        :to="{ name: 'list' }"
+        :to="{ path: '/404' }"
         tag="a"
         :value="1"
       >Router-link</lbz-tab-item>
       <lbz-tab-item
         tag="a"
         :value="2"
-        href="#/components/radio"
+        href="#/components/tab"
       >A</lbz-tab-item>
     </lbz-tab>
 

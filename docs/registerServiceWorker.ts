@@ -17,8 +17,11 @@ if (process.env.NODE_ENV === 'production') {
     updatefound() {
       console.log('New content is downloading.');
     },
-    updated() {
+    updated(registration) {
       console.log('New content is available; please refresh.');
+      registration.update().then(() => {
+        window.location.reload();
+      });
     },
     offline() {
       console.log('No internet connection found. @lbzui/vue is running in offline mode.');

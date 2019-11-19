@@ -16,9 +16,9 @@
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
               v-for="item of vprimaryDestinations"
-              :key="item.path"
-              router-link
-              :to="item.path"
+              :key="item.label"
+              :active="item.label === vlabel"
+              @click.stop="vlabel = item.label"
             >{{ item.label }}</lbz-list-item>
             <lbz-divider/>
             <span class="lbz-list__subtitle">Labels</span>
@@ -35,9 +35,9 @@
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
               v-for="item of vprimaryDestinations"
-              :key="item.path"
-              router-link
-              :to="item.path"
+              :key="item.label"
+              :active="item.label === vlabel"
+              @click.stop="vlabel = item.label"
             >
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -72,9 +72,9 @@
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
               v-for="item of vprimaryDestinations"
-              :key="item.path"
-              router-link
-              :to="item.path"
+              :key="item.label"
+              :active="item.label === vlabel"
+              @click.stop="vlabel = item.label"
             >
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -110,9 +110,9 @@
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
               v-for="item of vprimaryDestinations"
-              :key="item.path"
-              router-link
-              :to="item.path"
+              :key="item.label"
+              :active="item.label === vlabel"
+              @click.stop="vlabel = item.label"
             >
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -150,9 +150,9 @@
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
               v-for="item of vprimaryDestinations"
-              :key="item.path"
-              router-link
-              :to="item.path"
+              :key="item.label"
+              :active="item.label === vlabel"
+              @click.stop="vlabel = item.label"
             >
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -191,9 +191,9 @@
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
               v-for="item of vprimaryDestinations"
-              :key="item.path"
-              router-link
-              :to="item.path"
+              :key="item.label"
+              :active="item.label === vlabel"
+              @click.stop="vlabel = item.label"
             >
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -230,9 +230,9 @@
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
               v-for="item of vprimaryDestinations"
-              :key="item.path"
-              router-link
-              :to="item.path"
+              :key="item.label"
+              :active="item.label === vlabel"
+              @click.stop="vlabel = item.label"
             >
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -270,9 +270,9 @@
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
               v-for="item of vprimaryDestinations"
-              :key="item.path"
-              router-link
-              :to="item.path"
+              :key="item.label"
+              :active="item.label === vlabel"
+              @click.stop="vlabel = item.label"
             >
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -311,9 +311,9 @@
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
               v-for="item of vprimaryDestinations"
-              :key="item.path"
-              router-link
-              :to="item.path"
+              :key="item.label"
+              :active="item.label === vlabel"
+              @click.stop="vlabel = item.label"
             >
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -352,9 +352,9 @@
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
               v-for="item of vprimaryDestinations"
-              :key="item.path"
-              router-link
-              :to="item.path"
+              :key="item.label"
+              :active="item.label === vlabel"
+              @click.stop="vlabel = item.label"
             >
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -391,9 +391,9 @@
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
               v-for="item of vprimaryDestinations"
-              :key="item.path"
-              router-link
-              :to="item.path"
+              :key="item.label"
+              :active="item.label === vlabel"
+              @click.stop="vlabel = item.label"
             >
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -431,32 +431,26 @@ export default class Drawer extends Vue {
 
   private vprimaryDestinations: any[] = [
     {
-      path: '/components/backdrop',
       icon: 'inbox',
       label: 'Inbox',
     },
     {
-      path: '/components/button',
       icon: 'send',
       label: 'Outbox',
     },
     {
-      path: '/components/card',
       icon: 'favorite',
       label: 'Favorites',
     },
     {
-      path: '/components/dialog',
       icon: 'archive',
       label: 'Archive',
     },
     {
-      path: '/components/divider',
       icon: 'delete',
       label: 'Trash',
     },
     {
-      path: '/components/drawer',
       icon: 'report',
       label: 'Spam',
     },
@@ -485,6 +479,7 @@ export default class Drawer extends Vue {
       label: 'Help & feedback',
     },
   ];
+  private vlabel: string = 'Inbox';
   private vactive0: boolean = true;
   private vactive1: boolean = true;
   private vactive2: boolean = true;

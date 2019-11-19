@@ -1,6 +1,5 @@
 import { default as _Vue, VueConstructor, PluginFunction } from 'vue';
 import VueScroll from 'vue-scroll';
-import 'normalize.css';
 import '../assets/css/index.less';
 import Backdrop from './backdrop';
 import Button from './button';
@@ -56,7 +55,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '0.1.6',
+  version: '0.1.7',
   install,
   Backdrop,
   Button,

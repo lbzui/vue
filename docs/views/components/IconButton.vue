@@ -20,7 +20,7 @@
     <lbz-icon-button
       router-link
       :router-link-props="{
-        to: '/components/icon',
+        to: '/404',
         replace: true,
         event: 'dblclick'
       }"

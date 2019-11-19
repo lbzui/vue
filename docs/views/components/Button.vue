@@ -12,7 +12,7 @@
     <lbz-button
       router-link
       :router-link-props="{
-        to: '/components/backdrop',
+        to: '/404',
         replace: true,
         event: 'dblclick'
       }"
@@ -119,7 +119,7 @@
       type="outlined"
       router-link
       :router-link-props="{
-        to: '/components/backdrop',
+        to: '/404',
         replace: true,
         event: 'dblclick'
       }"
@@ -279,7 +279,7 @@
       type="contained"
       router-link
       :router-link-props="{
-        to: '/components/backdrop',
+        to: '/404',
         replace: true,
         event: 'dblclick'
       }"
