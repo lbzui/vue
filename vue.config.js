@@ -4,7 +4,9 @@ function resolve (dir) {
   return path.resolve(__dirname, dir)
 }
 
-process.env.VUE_APP_SITE_URL = 'https://lbzui-vue.lanbizhong.com/'
+process.env.VUE_APP_SITE_URL = process.env.NODE_ENV === 'production'
+  ? 'https://lbzui-vue.lanbizhong.com/'
+  : '/'
 
 module.exports = {
   pages: {
@@ -16,6 +18,10 @@ module.exports = {
     }
   },
   pwa: {
+    workboxPluginMode: 'InjectManifest',
+    workboxOptions: {
+      swSrc: 'docs/service-worker.js'
+    },
     themeColor: '#3700b3',
     msTileColor: '#6200ee',
     appleMobileWebAppCapable: 'yes',

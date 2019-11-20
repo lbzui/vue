@@ -4,7 +4,7 @@ if (process.env.NODE_ENV === 'production') {
   register(`${process.env.BASE_URL}service-worker.js`, {
     ready() {
       console.log(
-        '@lbzui/vue is being served from cache by a service worker.\n' +
+        'App is being served from cache by a service worker.\n' +
         'For more details, visit https://goo.gl/AFskqB',
       );
     },
@@ -19,12 +19,12 @@ if (process.env.NODE_ENV === 'production') {
     },
     updated(registration) {
       console.log('New content is available; please refresh.');
-      registration.update().then(() => {
-        window.location.reload();
+      registration.waiting.postMessage({
+        type: 'SKIP_WAITING',
       });
     },
     offline() {
-      console.log('No internet connection found. @lbzui/vue is running in offline mode.');
+      console.log('No internet connection found. App is running in offline mode.');
     },
     error(error) {
       console.error('Error during service worker registration:', error);
