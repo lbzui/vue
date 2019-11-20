@@ -7,7 +7,6 @@ self.addEventListener('message', (event) => {
 });
 
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
-workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 // Cache the Google Fonts stylesheets with a stale while revalidate strategy
