@@ -7,7 +7,6 @@
 
   & &__container {
     -webkit-appearance: none;
-    overflow: hidden;
     position: relative;
     box-sizing: border-box;
     border: none;
@@ -16,34 +15,17 @@
     height: 40px;
     background-color: transparent;
     outline: none;
-    cursor: default;
+  }
 
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      border-radius: 50%;
-      width: 100%;
-      height: 100%;
-      background-color: var(--lbz-theme-on-surface);
-      opacity: #lbz-state.surface[enabled];
-      transition: background-color 15ms linear, opacity 15ms linear;
-      content: "";
-      pointer-events: none;
-    }
-
-    input {
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      cursor: inherit;
-    }
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
   }
 
   & &__circle {
@@ -72,43 +54,28 @@
     }
   }
 
+  .lbz-state {
+    &::before,
+    &::after {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   & &__label {
     margin-left: 4px;
     .lbz-typography--body2();
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
   }
 
-  &:not(.is-disabled) .lbz-radio__container {
-    &:hover {
-      cursor: pointer;
-
-      &::before {
-        opacity: #lbz-state.surface[hover];
-      }
-    }
-
-    &:focus {
-      &::before {
-        opacity: #lbz-state.surface[focus];
-      }
-    }
-  }
-
   &.is-checked {
-    &:not(.is-disabled) .lbz-radio__container {
-      &::before {
-        background-color: var(--lbz-theme-secondary);
-      }
-
-      &:hover {
-        &::before {
-          opacity: #lbz-state.primary[hover];
-        }
-      }
-
-      &:focus {
-        &::before {
-          opacity: #lbz-state.primary[focus];
+    &:not(.is-disabled) {
+      .lbz-state {
+        &::before,
+        &::after {
+          background-color: var(--lbz-theme-secondary);
         }
       }
     }
@@ -127,13 +94,16 @@
 
   // color
   &&--primary.is-checked:not(.is-disabled) {
-    .lbz-radio__container::before {
-      background-color: var(--lbz-theme-primary);
-    }
-
     .lbz-radio__circle,
     .lbz-radio__circle::after {
       border-color: var(--lbz-theme-primary);
+    }
+
+    .lbz-state {
+      &::before,
+      &::after {
+        background-color: var(--lbz-theme-primary);
+      }
     }
   }
 

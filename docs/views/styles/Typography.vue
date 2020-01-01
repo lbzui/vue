@@ -25,3 +25,10 @@
     </div>
   </article>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class StylesTypography extends Vue {}
+</script>

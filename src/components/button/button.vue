@@ -6,9 +6,8 @@
       type && `lbz-button--${ type }`,
       color && `lbz-button--${ color }`,
       {
-        'lbz-ripple': !disabled && ripple,
         'is-full-width': fullWidth,
-        'is-dense': dense,
+        'is-dense': cisDense,
         'is-unelevated': type === 'contained' && unelevated,
         'is-disabled': disabled
       }
@@ -19,47 +18,51 @@
       <template v-if="icon">{{ icon }}</template><slot v-else name="icon"/>
     </lbz-icon>
     <span class="lbz-button__label"><slot/></span>
+    <lbz-state v-if="!disabled" v-bind="cgetStateAttrs"/>
   </component>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import LbzIcon from '../icon/icon.vue';
+import LbzState from '../state/state.vue';
 
 @Component({
   components: {
     LbzIcon,
+    LbzState,
   },
 })
-export default class Button extends Vue {
+export default class LbzButton extends Vue {
   // type: 'text' (default), 'outlined', 'contained'
   @Prop({ type: String, default: '' }) private type!: string;
   // router-link: true, false (default)
   @Prop({ type: Boolean, default: false }) private routerLink!: boolean;
   // router-link-props (router-link): {
-  //   to: '' (default) || 'x' || { x: x },
+  //   to: '' (default) || 'x' || { x: y },
   //   replace: true || false (default),
   //   append: true || false (default),
   //   exact: true || false (default),
   //   event: 'click' (default) || 'x' || ['x']
   // }
-  @Prop({ type: Object, default: () => ({
-    to: '',
-    replace: false,
-    append: false,
-    exact: false,
-    event: 'click',
-  }) }) private routerLinkProps!: object;
+  @Prop({
+    type: Object,
+    default: () => ({
+      to: '',
+      replace: false,
+      append: false,
+      exact: false,
+      event: 'click',
+    }),
+  }) private routerLinkProps!: object;
   // tag: 'button' (default), 'a', 'x'
   @Prop({ type: String, default: 'button' }) private tag!: string;
   // color: 'primary' (default), 'secondary', 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private color!: string;
-  // ripple: true (default), false
-  @Prop({ type: Boolean, default: true }) private ripple!: boolean;
   // full-width: true, false (default)
   @Prop({ type: Boolean, default: false }) private fullWidth!: boolean;
-  // dense: true, false (default)
-  @Prop({ type: Boolean, default: false }) private dense!: boolean;
+  // dense: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private dense!: undefined | boolean;
   // unelevated (type === 'contained'): true, false (default)
   @Prop({ type: Boolean, default: false }) private unelevated!: boolean;
   // disabled: true, false (default)
@@ -74,7 +77,7 @@ export default class Button extends Vue {
       append,
       exact,
       event,
-    }: any = (this.routerLinkProps as any);
+    }: any = this.routerLinkProps;
     const tag: string = this.tag;
     const disabled: boolean = tag === 'button' && this.disabled;
 
@@ -92,6 +95,18 @@ export default class Button extends Vue {
         is: tag,
         disabled,
       };
+  }
+
+  get cisDense(): boolean {
+    return this.dense === undefined
+      ? this.$LBZUI.dense
+      : this.dense;
+  }
+
+  get cgetStateAttrs(): object {
+    return {
+      type: this.color === 'light' ? '' : 'primary',
+    };
   }
 }
 </script>

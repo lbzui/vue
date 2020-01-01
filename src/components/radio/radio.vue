@@ -8,32 +8,38 @@
     ]"
     @click.stop="!disabled && fclick($event)"
   >
-    <button :class="['lbz-radio__container', { 'lbz-ripple': !disabled && ripple }]">
+    <button class="lbz-radio__container">
       <input
-        type="radio"
         v-bind="{
           id: `${id}`,
           name: `${name}`,
+          type: 'radio',
           value,
           checked: cisSelected,
           disabled
         }"
       >
       <div class="lbz-radio__circle"></div>
+      <lbz-state v-if="!disabled" v-bind="cgetStateAttrs"/>
     </button>
     <label
       v-if="$slots.default"
-      :for="`${id}`"
       class="lbz-radio__label"
+      :for="`${id}`"
     ><slot/></label>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Model, Prop, Emit, Vue } from 'vue-property-decorator';
+import LbzState from '../state/state.vue';
 
-@Component
-export default class Radio extends Vue {
+@Component({
+  components: {
+    LbzState,
+  },
+})
+export default class LbzRadio extends Vue {
   // [required]v-model: true, false, x, 'x'
   @Model('change', { type: [Boolean, Number, String], required: true }) private mchecked!: boolean | number | string;
 
@@ -45,13 +51,17 @@ export default class Radio extends Vue {
   @Prop({ type: [Boolean, Number, String], required: true }) private value!: boolean | number | string;
   // color: 'primary', 'secondary' (default)
   @Prop({ type: String, default: '' }) private color!: string;
-  // ripple: true (default), false
-  @Prop({ type: Boolean, default: true }) private ripple!: boolean;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
 
   get cisSelected(): boolean {
     return this.mchecked === this.value;
+  }
+
+  get cgetStateAttrs(): object {
+    return {
+      type: this.cisSelected ? 'primary' : '',
+    };
   }
 
   @Emit('change')

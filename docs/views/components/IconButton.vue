@@ -15,7 +15,7 @@
     </lbz-icon-button>
 
     <h3 class="lbz-typography--subtitle1">$ router-link (!toggle): true, false (default)</h3>
-    <h3 class="lbz-typography--subtitle1">$ router-link-props (!toggle && router-link): { to: '' (default) || 'x' || { x: x }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
+    <h3 class="lbz-typography--subtitle1">$ router-link-props (!toggle && router-link): { to: '' (default) || 'x' || { x: y }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
     <lbz-icon-button
       router-link
@@ -36,10 +36,6 @@
     <lbz-icon-button on-background="error">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="light">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="dark">favorite_border</lbz-icon-button>
-
-    <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
-    <lbz-icon-button>favorite_border</lbz-icon-button>
-    <lbz-icon-button :ripple="false">favorite_border</lbz-icon-button>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-icon-button on-background="primary" disabled>favorite_border</lbz-icon-button>
@@ -147,21 +143,6 @@
       off-icon="favorite_border"
     />
 
-    <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
-    <lbz-icon-button
-      :active.sync="vactive"
-      toggle
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
-    <lbz-icon-button
-      :active.sync="vactive"
-      toggle
-      :ripple="false"
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
-
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-icon-button
       :active.sync="vactive"
@@ -225,7 +206,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class IconButton extends Vue {
+export default class ComponentsIconButton extends Vue {
   private vactive: boolean = false;
 
   private fclick(e: MouseEvent): void {

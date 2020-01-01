@@ -15,9 +15,9 @@
         <template v-if="title || $slots.start">
           <lbz-top-app-bar
             v-if="type === 'full-screen'"
+            class="lbz-dialog__header"
             elevated
             :title="title"
-            class="lbz-dialog__header"
           >
             <template #start>
               <lbz-icon-button on-background="primary" @click.stop="fclose()">close</lbz-icon-button>
@@ -29,8 +29,8 @@
           <header v-else class="lbz-dialog__header">
             <h2
               v-if="title"
-              v-html="title"
               class="lbz-dialog__title"
+              v-html="title"
             ></h2>
             <slot name="start"/>
           </header>
@@ -67,7 +67,7 @@ import LbzTopAppBar from '../top-app-bar/top-app-bar.vue';
     LbzTopAppBar,
   },
 })
-export default class Dialog extends Vue {
+export default class LbzDialog extends Vue {
   // [required]active.sync: true, false
   @PropSync('active', { type: Boolean, required: true }) private cisActive!: boolean;
 
@@ -90,12 +90,6 @@ export default class Dialog extends Vue {
     return ['', 'alert', 'confirmation'].includes(this.type);
   }
 
-  private mounted(): void {
-    if (this.appendToBody) {
-      document.body.appendChild(this.$el);
-    }
-  }
-
   @Watch('cisActive')
   private factiveChanged(val: boolean, oldVal: boolean): void {
     this.$nextTick().then(() => {
@@ -104,6 +98,16 @@ export default class Dialog extends Vue {
         this.flockScroll(val);
       }
     });
+  }
+
+  private mounted(): void {
+    if (this.appendToBody) {
+      document.body.appendChild(this.$el);
+    }
+  }
+
+  private flockScroll(val: boolean = false): void {
+    document.body.classList[val ? 'add' : 'remove']('lbz-body--lock-scroll');
   }
 
   private ftoggle(): void {
@@ -116,10 +120,6 @@ export default class Dialog extends Vue {
 
   private fclose(): void {
     this.cisActive = false;
-  }
-
-  private flockScroll(val: boolean = false): void {
-    document.body.classList[val ? 'add' : 'remove']('lbz-body--lock-scroll');
   }
 }
 </script>

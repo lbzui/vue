@@ -19,7 +19,6 @@
   fill: currentColor;
   background-color: transparent;
   outline: none;
-  cursor: default;
   user-select: none;
 
   // full-width
@@ -38,21 +37,6 @@
     font-size: 13px;
   }
 
-  &::before {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    z-index: 1;
-    border-radius: 50%;
-    width: 200%;
-    height: 200%;
-    background-color: var(--lbz-theme-primary);
-    opacity: #lbz-state.primary[enabled];
-    transition: background-color 15ms linear, opacity 15ms linear;
-    content: "";
-    pointer-events: none;
-  }
-
   // icon
   & &__icon {
     overflow: hidden;
@@ -68,23 +52,10 @@
     }
   }
 
-  &:not(.is-disabled):hover {
-    cursor: pointer;
-
-    &::before {
-      opacity: #lbz-state.primary[hover];
-    }
-  }
-
-  &:not(.is-disabled):focus {
-    &::before {
-      opacity: #lbz-state.primary[focus];
-    }
-  }
-
-  &:not(.is-disabled):active {
-    &::before {
-      opacity: #lbz-state.primary[active];
+  .lbz-state {
+    &::before,
+    &::after {
+      background-color: var(--lbz-theme-primary);
     }
   }
 
@@ -92,16 +63,22 @@
   &&--secondary {
     color: var(--lbz-theme-secondary);
 
-    &::before {
-      background-color: var(--lbz-theme-secondary);
+    .lbz-state {
+      &::before,
+      &::after {
+        background-color: var(--lbz-theme-secondary);
+      }
     }
   }
 
   &&--error {
     color: var(--lbz-theme-error);
 
-    &::before {
-      background-color: var(--lbz-theme-error);
+    .lbz-state {
+      &::before,
+      &::after {
+        background-color: var(--lbz-theme-error);
+      }
     }
   }
 
@@ -113,25 +90,10 @@
       color: #lbz-theme-text.light[disabled];
     }
 
-    &::before {
-      background-color: @white;
-    }
-
-    &:not(.is-disabled):hover {
-      &::before {
-        opacity: #lbz-state.surface[hover];
-      }
-    }
-
-    &:not(.is-disabled):focus {
-      &::before {
-        opacity: #lbz-state.surface[focus];
-      }
-    }
-
-    &:not(.is-disabled):active {
-      &::before {
-        opacity: #lbz-state.surface[active];
+    .lbz-state {
+      &::before,
+      &::after {
+        background-color: @white;
       }
     }
   }
@@ -144,8 +106,11 @@
       color: #lbz-theme-text.dark[disabled];
     }
 
-    &::before {
-      background-color: @black;
+    .lbz-state {
+      &::before,
+      &::after {
+        background-color: @black;
+      }
     }
   }
 
@@ -179,8 +144,11 @@
         color: var(--lbz-theme-on-secondary);
         background-color: var(--lbz-theme-secondary);
 
-        &::before {
-          background-color: var(--lbz-theme-on-secondary);
+        .lbz-state {
+          &::before,
+          &::after {
+            background-color: var(--lbz-theme-on-secondary);
+          }
         }
       }
 
@@ -188,8 +156,11 @@
         color: var(--lbz-theme-on-error);
         background-color: var(--lbz-theme-error);
 
-        &::before {
-          background-color: var(--lbz-theme-on-error);
+        .lbz-state {
+          &::before,
+          &::after {
+            background-color: var(--lbz-theme-on-error);
+          }
         }
       }
 
@@ -197,17 +168,23 @@
         color: @black;
         background-color: #lbz-theme-surface.light[2];
 
-        &::before {
-          background-color: @black;
+        .lbz-state {
+          &::before,
+          &::after {
+            background-color: @black;
+          }
         }
       }
 
       &--dark {
         color: @white;
-        background-color: #lbz-theme-surface.dark[2];
+        background: #lbz-theme-surface.dark[2];
 
-        &::before {
-          background-color: @white;
+        .lbz-state {
+          &::before,
+          &::after {
+            background-color: @white;
+          }
         }
       }
     }
@@ -223,12 +200,15 @@
       box-shadow: none;
     }
 
-    &::before {
-      background-color: var(--lbz-theme-on-primary);
-    }
-
     .lbz-button__icon {
       margin-left: -4px;
+    }
+
+    .lbz-state {
+      &::before,
+      &::after {
+        background-color: var(--lbz-theme-on-primary);
+      }
     }
 
     &:not(.is-unelevated):not(.is-disabled):hover,

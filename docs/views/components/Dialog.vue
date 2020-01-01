@@ -6,8 +6,8 @@
     <h3 class="lbz-typography--subtitle1">$ type: 'alert' (default), 'simple', 'confirmation', 'full-screen (mobile only)'</h3>
     <lbz-button @click.stop="valert0 = true">Alert</lbz-button>
     <lbz-dialog
-      :active.sync="valert0"
       ref="dialog"
+      :active.sync="valert0"
       @open="fopen"
       @close="fclose"
     >
@@ -82,7 +82,7 @@
       <template #center>
         <lbz-list dense>
           <lbz-list-item
-            v-for="(item, index) of vsimpleList"
+            v-for="(item, index) of SIMPLELIST"
             :key="index"
             @click.stop="vsimple0 = false"
           >
@@ -106,7 +106,7 @@
       <template #center>
         <lbz-list dense>
           <lbz-list-item
-            v-for="(item, index) of vsimpleList"
+            v-for="(item, index) of SIMPLELIST"
             :key="index"
             @click.stop="vsimple1 = false"
           >
@@ -130,7 +130,7 @@
       <template #center>
         <lbz-list dense>
           <lbz-list-item
-            v-for="(item, index) of vsimpleList"
+            v-for="(item, index) of SIMPLELIST"
             :key="index"
             @click.stop="vsimple2 = false"
           >
@@ -154,7 +154,7 @@
       <template #center>
         <lbz-list dense>
           <lbz-list-item
-            v-for="(item, index) of vsimpleList"
+            v-for="(item, index) of SIMPLELIST"
             :key="index"
             @click.stop="vsimple3 = false"
           >
@@ -314,21 +314,10 @@
 import { Component, Ref, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Dialog extends Vue {
+export default class ComponentsDialog extends Vue {
   @Ref('dialog') private rdialog!: HTMLFormElement;
 
-  private valert0: boolean = false;
-  private valert1: boolean = false;
-  private valert2: boolean = false;
-  private valert3: boolean = false;
-  private valert4: boolean = false;
-  private valert5: boolean = false;
-
-  private vsimple0: boolean = false;
-  private vsimple1: boolean = false;
-  private vsimple2: boolean = false;
-  private vsimple3: boolean = false;
-  private vsimpleList: any[] = [
+  private SIMPLELIST: object[] = [
     {
       icon: 'account_circle',
       label: 'user1@example.com',
@@ -342,6 +331,18 @@ export default class Dialog extends Vue {
       label: 'Add account',
     },
   ];
+
+  private valert0: boolean = false;
+  private valert1: boolean = false;
+  private valert2: boolean = false;
+  private valert3: boolean = false;
+  private valert4: boolean = false;
+  private valert5: boolean = false;
+
+  private vsimple0: boolean = false;
+  private vsimple1: boolean = false;
+  private vsimple2: boolean = false;
+  private vsimple3: boolean = false;
 
   private vconfirmation0: boolean = false;
   private vconfirmation1: boolean = false;

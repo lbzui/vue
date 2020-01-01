@@ -39,6 +39,16 @@ const components: any[] = [
   TopAppBar,
 ];
 const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any): void => {
+  const {
+    ripple,
+    dense,
+  }: any = opts || {};
+
+  Vue.prototype.$LBZUI = {
+    ripple: ripple === undefined ? true : ripple,
+    dense: dense || false,
+  };
+
   components.map((Component) => {
     Vue.use(Component.install);
   });

@@ -29,14 +29,6 @@
     >Primary</lbz-radio>
     <lbz-radio v-model="vradio1" value="primary">Secondary</lbz-radio>
 
-    <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
-    <lbz-radio v-model="vradio2" :value="1">1</lbz-radio>
-    <lbz-radio
-      v-model="vradio2"
-      :value="0"
-      :ripple="false"
-    >0</lbz-radio>
-
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-radio
       v-model="vradio3"
@@ -61,7 +53,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Radio extends Vue {
+export default class ComponentsRadio extends Vue {
   private vradio0: boolean = true;
   private vradio1: string = 'primary';
   private vradio2: number = 1;

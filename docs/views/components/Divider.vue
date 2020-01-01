@@ -19,3 +19,10 @@
     <lbz-divider on-background="dark"/>
   </article>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class ComponentsDivider extends Vue {}
+</script>

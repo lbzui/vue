@@ -1,17 +1,17 @@
 <template>
   <div class="lbzui">
     <lbz-drawer
-      :active.sync="vactive"
-      subtitle="Material Components for Vue.js"
       class="lbzui__drawer"
+      :active.sync="vactive"
       role="navigation"
+      subtitle="Material Components for Vue.js"
     >
       <template #start>
         <router-link
+          class="lbz-drawer__title"
           to="/"
           tag="h1"
           exact
-          class="lbz-drawer__title"
         >@lbzui/vue</router-link>
       </template>
       <template #center>
@@ -26,21 +26,21 @@
           <lbz-divider/>
           <span class="lbz-list__subtitle">Styles</span>
           <lbz-list-item
-            v-for="item of vstyles"
+            v-for="item of NAV.styles"
             :key="item.path"
             :to="item.path"
           >{{ item.label }}</lbz-list-item>
           <lbz-divider/>
           <span class="lbz-list__subtitle">Components</span>
           <lbz-list-item
-            v-for="item of vcomponents"
+            v-for="item of NAV.components"
             :key="item.path"
             :to="item.path"
           >{{ item.label }}</lbz-list-item>
           <lbz-divider/>
           <span class="lbz-list__subtitle">Useful links</span>
           <lbz-list-item
-            v-for="item of vlinks"
+            v-for="item of NAV.links"
             :key="item.path"
             :router-link="false"
             :href="item.path"
@@ -58,17 +58,17 @@
             style="padding: 0;"
           >
           <lbz-radio
-            v-model="vtheme"
-            id="light"
-            name="light"
-            value="light"
+            v-model="visDark"
+            id="light-theme"
+            name="light-theme"
+            :value="false"
             @change="fsetTheme"
           >Light</lbz-radio>
           <lbz-radio
-            v-model="vtheme"
-            id="dark"
-            name="dark"
-            value="dark"
+            v-model="visDark"
+            id="dark-theme"
+            name="dark-theme"
+            :value="true"
             @change="fsetTheme"
           >Dark</lbz-radio>
         </lbz-list-item>
@@ -89,133 +89,134 @@ import { Component, Watch, Vue } from 'vue-property-decorator';
 
 @Component
 export default class App extends Vue {
-  private vstyles: any[] = [
-    {
-      path: '/styles/elevation',
-      label: 'Elevation',
-    },
-    {
-      path: '/styles/layout-grid',
-      label: 'Layout grid',
-    },
-    {
-      path: '/styles/shadow',
-      label: 'Shadow',
-    },
-    {
-      path: '/styles/surface',
-      label: 'Surface',
-    },
-    {
-      path: '/styles/typography',
-      label: 'Typography',
-    },
-  ];
-  private vcomponents: any[] = [
-    {
-      path: '/components/backdrop',
-      label: 'Backdrop',
-    },
-    {
-      path: '/components/button',
-      label: 'Button',
-    },
-    {
-      path: '/components/card',
-      label: 'Card',
-    },
-    {
-      path: '/components/dialog',
-      label: 'Dialog',
-    },
-    {
-      path: '/components/divider',
-      label: 'Divider',
-    },
-    {
-      path: '/components/drawer',
-      label: 'Drawer',
-    },
-    {
-      path: '/components/empty-state',
-      label: 'Empty state',
-    },
-    {
-      path: '/components/fab',
-      label: 'FAB',
-    },
-    {
-      path: '/components/icon',
-      label: 'Icon',
-    },
-    {
-      path: '/components/icon-button',
-      label: 'Icon button',
-    },
-    {
-      path: '/components/list',
-      label: 'List',
-    },
-    {
-      path: '/components/radio',
-      label: 'Radio',
-    },
-    {
-      path: '/components/tab',
-      label: 'Tab',
-    },
-    {
-      path: '/components/top-app-bar',
-      label: 'Top app bar',
-    },
-  ];
-  private vlinks: any[] = [
-    {
-      path: 'https://github.com/lbzui/vue',
-      label: 'GitHub repo',
-    },
-    {
-      path: 'https://github.com/lbzui/vue/tree/master/docs/views',
-      label: 'Code examples',
-    },
-    {
-      path: 'https://github.com/orgs/lbzui/projects/1',
-      label: 'LBZUI board',
-    },
-    {
-      path: 'https://github.com/lbzui/vue/projects/1',
-      label: '@lbzui/vue board',
-    },
-    // {
-    //   path: 'https://github.com/lbzui/vue/issues',
-    //   label: 'Issues',
-    // },
-    // {
-    //   path: 'https://github.com/lbzui/vue/blob/master/CHANGELOG.md',
-    //   label: 'Changelog',
-    // },
-    {
-      path: 'https://material.io/',
-      label: 'Material Design',
-    },
-    {
-      path: 'https://material.io/resources/color/',
-      label: 'Material Color Tool',
-    },
-    {
-      path: 'https://material.io/resources/icons/',
-      label: 'Material Icons',
-    },
-  ];
+  private NAV: object = {
+    styles: [
+      {
+        path: '/styles/elevation',
+        label: 'Elevation',
+      },
+      {
+        path: '/styles/layout-grid',
+        label: 'Layout grid',
+      },
+      {
+        path: '/styles/shadow',
+        label: 'Shadow',
+      },
+      {
+        path: '/styles/surface',
+        label: 'Surface',
+      },
+      {
+        path: '/styles/typography',
+        label: 'Typography',
+      },
+    ],
+    components: [
+      {
+        path: '/components/backdrop',
+        label: 'Backdrop',
+      },
+      {
+        path: '/components/button',
+        label: 'Button',
+      },
+      {
+        path: '/components/card',
+        label: 'Card',
+      },
+      {
+        path: '/components/dialog',
+        label: 'Dialog',
+      },
+      {
+        path: '/components/divider',
+        label: 'Divider',
+      },
+      {
+        path: '/components/drawer',
+        label: 'Drawer',
+      },
+      {
+        path: '/components/empty-state',
+        label: 'Empty state',
+      },
+      {
+        path: '/components/fab',
+        label: 'FAB',
+      },
+      {
+        path: '/components/icon',
+        label: 'Icon',
+      },
+      {
+        path: '/components/icon-button',
+        label: 'Icon button',
+      },
+      {
+        path: '/components/list',
+        label: 'List',
+      },
+      {
+        path: '/components/radio',
+        label: 'Radio',
+      },
+      {
+        path: '/components/tab',
+        label: 'Tab',
+      },
+      {
+        path: '/components/top-app-bar',
+        label: 'Top app bar',
+      },
+    ],
+    links: [
+      {
+        path: 'https://github.com/lbzui/vue',
+        label: 'GitHub repo',
+      },
+      {
+        path: 'https://github.com/lbzui/vue/tree/master/docs/views',
+        label: 'Code examples',
+      },
+      {
+        path: 'https://github.com/orgs/lbzui/projects/1',
+        label: 'LBZUI board',
+      },
+      {
+        path: 'https://github.com/lbzui/vue/projects/1',
+        label: '@lbzui/vue board',
+      },
+      // {
+      //   path: 'https://github.com/lbzui/vue/issues',
+      //   label: 'Issues',
+      // },
+      // {
+      //   path: 'https://github.com/lbzui/vue/blob/master/CHANGELOG.md',
+      //   label: 'Changelog',
+      // },
+      {
+        path: 'https://material.io/',
+        label: 'Material Design',
+      },
+      {
+        path: 'https://material.io/resources/color/',
+        label: 'Material Color Tool',
+      },
+      {
+        path: 'https://material.io/resources/icons/',
+        label: 'Material Icons',
+      },
+    ],
+  };
+
+  private visDark: boolean = false;
   private vwidth: number = 0;
   private vactive: boolean = true;
-  private vtheme: string = 'light';
 
-  private created(): void {
-    this.fresize(document.body.clientWidth);
-    window.onresize = (): void => {
-      this.fresize(document.body.clientWidth);
-    };
+  @Watch('$route.name')
+  private frouteChanged(val: string, oldVal: string): void {
+    this.fcloseDrawer();
   }
 
   @Watch('vactive')
@@ -223,13 +224,33 @@ export default class App extends Vue {
     this.flockScroll(this.vwidth <= 719 && val);
   }
 
-  @Watch('$route.name')
-  private frouteChanged(val: string, oldVal: string): void {
-    this.fcloseDrawer();
+  private created(): void {
+    this.fchangeMode();
+    this.fresize(document.body.clientWidth);
+
+    window.matchMedia('(prefers-color-scheme: dark)').onchange = (): void => {
+      this.fchangeMode();
+    };
+    window.onresize = (): void => {
+      this.fresize(document.body.clientWidth);
+    };
+  }
+
+  private fcloseDrawer(): void {
+    if (this.vwidth <= 719) {
+      this.vactive = false;
+    }
   }
 
   private flockScroll(val: boolean = false): void {
     document.body.classList[val ? 'add' : 'remove']('lbz-body--lock-scroll');
+  }
+
+  private fchangeMode(): void {
+    const isDarkModeEnabled: boolean = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    this.visDark = isDarkModeEnabled;
+    this.fsetTheme(isDarkModeEnabled);
   }
 
   private fresize(val: number): void {
@@ -242,20 +263,12 @@ export default class App extends Vue {
     this.vactive = isGt719;
   }
 
-  private fcloseDrawer(): void {
-    if (this.vwidth <= 719) {
-      this.vactive = false;
-    }
-  }
-
-  private fsetTheme(val: string, e: MouseEvent): void {
-    const isDark: boolean = val === 'dark';
-
-    document.documentElement.setAttribute('theme', val);
-    document.querySelector('meta[name=apple-mobile-web-app-status-bar-style]')!
-      .setAttribute('content', isDark ? 'black' : 'default');
+  private fsetTheme(val: boolean, e?: MouseEvent): void {
+    document.documentElement.setAttribute('theme', val ? 'dark' : 'light');
     document.querySelector('meta[name=theme-color]')!
-      .setAttribute('content', isDark ? '#000' : '#3700b3');
+      .setAttribute('content', val ? '#000' : '#3700b3');
+    document.querySelector('meta[name=apple-mobile-web-app-status-bar-style]')!
+      .setAttribute('content', val ? 'black' : 'default');
     this.fcloseDrawer();
   }
 }

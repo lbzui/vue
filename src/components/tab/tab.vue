@@ -18,9 +18,12 @@ import { Component, Model, Prop, ProvideReactive, Provide, Emit, Vue } from 'vue
 import EventBus from '../../utils/event-bus';
 
 @Component
-export default class Tab extends Vue {
-  // [required]v-model: true, false, x, 'x'
-  @Model('change', { type: [Boolean, Number, String], required: true }) private mvalue!: boolean | number | string;
+export default class LbzTab extends Vue {
+  // v-model: undefined (default), true, false, x, 'x'
+  @Model('change', {
+    type: [Boolean, Number, String],
+    default: undefined,
+  }) private mvalue!: undefined | boolean | number | string;
 
   // type: 'fixed' (default), 'scrollable'
   @Prop({ type: String, default: '' }) private type!: string;
@@ -40,24 +43,25 @@ export default class Tab extends Vue {
   //   exact: true || false (default),
   //   event: 'click' (default) || 'x' || ['x']
   // }
-  @Prop({ type: Object, default: () => ({
-    replace: false,
-    append: false,
-    exact: false,
-    event: 'click',
-  }) }) private routerLinkProps!: object;
+  @Prop({
+    type: Object,
+    default: () => ({
+      replace: false,
+      append: false,
+      exact: false,
+      event: 'click',
+    }),
+  }) private routerLinkProps!: object;
   // item-tag: 'button' (default), 'a', 'x'
   @Prop({ type: String, default: 'button' }) private itemTag!: string;
-  // ripple: true (default), false
-  @Prop({ type: Boolean, default: true }) private ripple!: boolean;
   // on-content: true, false (default)
   @Prop({ type: Boolean, default: false }) private onContent!: boolean;
 
-  @ProvideReactive('value') private prvalue: boolean | number | string = this.mvalue;
+  @ProvideReactive('value') private prvalue: undefined | boolean | number | string = this.mvalue;
+  @Provide('on-background') private ponBackground: string = this.onBackground;
   @Provide('router-link') private prouterLink: boolean = this.routerLink;
   @Provide('router-link-props') private prouterLinkProps: object = this.routerLinkProps;
   @Provide('tag') private ptag: string = this.itemTag;
-  @Provide('ripple') private pripple: boolean = this.ripple;
   @Provide('on-content') private ponContent: boolean = this.onContent;
 
   private created(): void {

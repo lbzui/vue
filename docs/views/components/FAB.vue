@@ -26,10 +26,6 @@
     <lbz-fab background="light">add</lbz-fab>
     <lbz-fab background="dark">add</lbz-fab>
 
-    <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
-    <lbz-fab>add</lbz-fab>
-    <lbz-fab :ripple="false">add</lbz-fab>
-
     <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
     <lbz-button @click.stop="ftoggleInactive()">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
     <lbz-fab :inactive="vinactive">add</lbz-fab>
@@ -64,10 +60,6 @@
     <lbz-fab type="mini" background="light">add</lbz-fab>
     <lbz-fab type="mini" background="dark">add</lbz-fab>
 
-    <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
-    <lbz-fab type="mini">add</lbz-fab>
-    <lbz-fab type="mini" :ripple="false">add</lbz-fab>
-
     <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
     <lbz-button @click.stop="ftoggleInactive()">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
     <lbz-fab type="mini" :inactive="vinactive">add</lbz-fab>
@@ -93,8 +85,8 @@
     <lbz-fab
       type="extended"
       tag="a"
-      label="Create"
       href="#/components/fab"
+      label="Create"
     />
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'surface', 'light', 'dark'</h3>
@@ -125,14 +117,6 @@
       label="Create"
     />
 
-    <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
-    <lbz-fab type="extended" label="Create"/>
-    <lbz-fab
-      type="extended"
-      :ripple="false"
-      label="Create"
-    />
-
     <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
     <lbz-button @click.stop="ftoggleInactive()">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
     <lbz-fab
@@ -152,7 +136,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class FAB extends Vue {
+export default class ComponentsFAB extends Vue {
   private vinactive: boolean = false;
 
   private fclick(e: MouseEvent): void {

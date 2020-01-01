@@ -5,7 +5,7 @@
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
     <div class="lbzui-u-app">
-      <lbz-backdrop :active.sync="vactive" ref="backdrop">
+      <lbz-backdrop ref="backdrop" :active.sync="vactive">
         <template #back-layer-header>
           <lbz-top-app-bar title="Page title">
             <template #start>
@@ -205,7 +205,7 @@
 import { Component, Ref, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Backdrop extends Vue {
+export default class ComponentsBackdrop extends Vue {
   @Ref('backdrop') private rbackdrop!: HTMLFormElement;
 
   private vactive: boolean = false;

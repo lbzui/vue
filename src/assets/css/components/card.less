@@ -4,7 +4,6 @@
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: stretch;
-  overflow: hidden;
   position: relative;
   .lbz-elevation--1();
   box-sizing: border-box;
@@ -14,21 +13,6 @@
   .lbz-surface--1();
   .lbz-shadow--1();
   transition: box-shadow 280ms #lbz-motion.curve[standard];
-
-  &::before {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    z-index: 1;
-    border-radius: 50%;
-    width: 200%;
-    height: 200%;
-    background-color: var(--lbz-theme-on-surface);
-    opacity: #lbz-state.surface[enabled];
-    transition: background-color 15ms linear, opacity 15ms linear;
-    content: "";
-    pointer-events: none;
-  }
 
   & &__avatar {
     display: block;
@@ -150,31 +134,14 @@
     box-shadow: none;
   }
 
-  &:hover {
-    .lbz-elevation--4();
-    cursor: pointer;
-    .lbz-shadow--4();
-
-    &::before {
-      opacity: #lbz-state.surface[hover];
-    }
-  }
-
+  &:hover,
   &:focus {
     .lbz-elevation--4();
     .lbz-shadow--4();
-
-    &::before {
-      opacity: #lbz-state.surface[focus];
-    }
   }
 
   &:active {
     .lbz-elevation--8();
     .lbz-shadow--8();
-
-    &::before {
-      opacity: #lbz-state.surface[active];
-    }
   }
 }

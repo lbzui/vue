@@ -4,13 +4,13 @@
     :class="[
       'lbz-list',
       type && `lbz-list--${ type }`,
-      dense && 'is-dense'
+      cisDense && 'is-dense'
     ]"
   >
     <span
       v-if="subtitle"
-      v-html="subtitle"
       :class="['lbz-list__subtitle', placement && `lbz-list__subtitle--${ placement }`]"
+      v-html="subtitle"
     ></span>
     <slot/>
   </component>
@@ -20,17 +20,11 @@
 import { Component, Prop, Provide, Vue } from 'vue-property-decorator';
 
 @Component
-export default class List extends Vue {
+export default class LbzList extends Vue {
   // type: 'one-line' (default), 'two-line', 'three-line'
   @Prop({ type: String, default: '' }) private type!: string;
   // tag: 'ul' (default), 'nav', 'x'
   @Prop({ type: String, default: 'ul' }) private tag!: string;
-  // dense: true, false (default)
-  @Prop({ type: Boolean, default: false }) private dense!: boolean;
-  // subtitle: '' (default), 'x'
-  @Prop({ type: String, default: '' }) private subtitle!: string;
-  // placement: 'start' (default), 'center'
-  @Prop({ type: String, default: '' }) private placement!: string;
   // router-link: true, false (default)
   @Prop({ type: Boolean, default: false }) private routerLink!: boolean;
   // router-link-props (router-link): {
@@ -39,23 +33,35 @@ export default class List extends Vue {
   //   exact: true || false (default),
   //   event: 'click' (default) || 'x' || ['x']
   // }
-  @Prop({ type: Object, default: () => ({
-    replace: false,
-    append: false,
-    exact: false,
-    event: 'click',
-  }) }) private routerLinkProps!: object;
+  @Prop({
+    type: Object,
+    default: () => ({
+      replace: false,
+      append: false,
+      exact: false,
+      event: 'click',
+    }),
+  }) private routerLinkProps!: object;
   // item-tag: 'li' (default), 'a', 'x'
   @Prop({ type: String, default: 'li' }) private itemTag!: string;
-  // ripple: true (default), false
-  @Prop({ type: Boolean, default: true }) private ripple!: boolean;
+  // dense: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private dense!: undefined | boolean;
+  // placement: 'start' (default), 'center'
+  @Prop({ type: String, default: '' }) private placement!: string;
+  // subtitle: '' (default), 'x'
+  @Prop({ type: String, default: '' }) private subtitle!: string;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
 
   @Provide('router-link') private prouterLink: boolean = this.routerLink;
   @Provide('router-link-props') private prouterLinkProps: object = this.routerLinkProps;
   @Provide('tag') private ptag: string = this.itemTag;
-  @Provide('ripple') private pripple: boolean = this.ripple;
   @Provide('disabled') private pdisabled: boolean = this.disabled;
+
+  get cisDense(): boolean {
+    return this.dense === undefined
+      ? this.$LBZUI.dense
+      : this.dense;
+  }
 }
 </script>

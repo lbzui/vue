@@ -7,7 +7,7 @@
     <lbz-button icon="favorite">Text</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
-    <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { to: '' (default) || 'x' || { x: x }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
+    <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { to: '' (default) || 'x' || { x: y }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
     <lbz-button
       router-link
@@ -20,9 +20,9 @@
     >Router-link</lbz-button>
     <lbz-button
       tag="a"
-      icon="favorite"
       href="#/components/button"
-    >Non router-link</lbz-button>
+      icon="favorite"
+    >Non-Router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'error', 'light', 'dark'</h3>
     <lbz-button>Primary</lbz-button>
@@ -40,17 +40,13 @@
     <lbz-button color="dark">Dark</lbz-button>
     <lbz-button color="dark" icon="favorite">Dark</lbz-button>
 
-    <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
-    <lbz-button>Ripple</lbz-button>
-    <lbz-button :ripple="false" icon="favorite">Ripple off</lbz-button>
-
     <h3 class="lbz-typography--subtitle1">$ full-width: true, false (default)</h3>
     <lbz-button full-width>Full-width</lbz-button>
     <lbz-button full-width icon="favorite">Full-width</lbz-button>
 
-    <h3 class="lbz-typography--subtitle1">$ dense: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ dense: undefined (default), true, false</h3>
     <lbz-button dense>Dense</lbz-button>
-    <lbz-button dense icon="favorite">Dense</lbz-button>
+    <lbz-button :dense="false" icon="favorite">Non-Dense</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-button disabled>Primary</lbz-button>
@@ -113,7 +109,7 @@
     <lbz-button type="outlined" icon="favorite">Outlined</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
-    <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { to: '' (default) || 'x' || { x: x }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
+    <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { to: '' (default) || 'x' || { x: y }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
     <lbz-button
       type="outlined"
@@ -128,9 +124,9 @@
     <lbz-button
       type="outlined"
       tag="a"
-      icon="favorite"
       href="#/components/button"
-    >Non router-link</lbz-button>
+      icon="favorite"
+    >Non-Router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'error', 'light', 'dark'</h3>
     <lbz-button type="outlined">Primary</lbz-button>
@@ -164,14 +160,6 @@
       icon="favorite"
     >Dark</lbz-button>
 
-    <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
-    <lbz-button type="outlined">Ripple</lbz-button>
-    <lbz-button
-      type="outlined"
-      :ripple="false"
-      icon="favorite"
-    >Ripple off</lbz-button>
-
     <h3 class="lbz-typography--subtitle1">$ full-width: true, false (default)</h3>
     <lbz-button type="outlined" full-width>Full-width</lbz-button>
     <lbz-button
@@ -180,13 +168,13 @@
       icon="favorite"
     >Full-width</lbz-button>
 
-    <h3 class="lbz-typography--subtitle1">$ dense: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ dense: undefined (default), true, false</h3>
     <lbz-button type="outlined" dense>Dense</lbz-button>
     <lbz-button
       type="outlined"
-      dense
+      :dense="false"
       icon="favorite"
-    >Dense</lbz-button>
+    >Non-Dense</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-button type="outlined" disabled>Primary</lbz-button>
@@ -273,7 +261,7 @@
     <lbz-button type="contained" icon="favorite">Contained</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
-    <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { to: '' (default) || 'x' || { x: x }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
+    <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { to: '' (default) || 'x' || { x: y }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
     <lbz-button
       type="contained"
@@ -288,9 +276,9 @@
     <lbz-button
       type="contained"
       tag="a"
-      icon="favorite"
       href="#/components/button"
-    >Non router-link</lbz-button>
+      icon="favorite"
+    >Non-Router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'error', 'light', 'dark'</h3>
     <lbz-button type="contained">Primary</lbz-button>
@@ -324,14 +312,6 @@
       icon="favorite"
     >Dark</lbz-button>
 
-    <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
-    <lbz-button type="contained">Ripple</lbz-button>
-    <lbz-button
-      type="contained"
-      :ripple="false"
-      icon="favorite"
-    >Ripple off</lbz-button>
-
     <h3 class="lbz-typography--subtitle1">$ full-width: true, false (default)</h3>
     <lbz-button type="contained" full-width>Full-width</lbz-button>
     <lbz-button
@@ -340,13 +320,13 @@
       icon="favorite"
     >Full-width</lbz-button>
 
-    <h3 class="lbz-typography--subtitle1">$ dense: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ dense: undefined (default), true, false</h3>
     <lbz-button type="contained" dense>Dense</lbz-button>
     <lbz-button
       type="contained"
-      dense
+      :dense="false"
       icon="favorite"
-    >Dense</lbz-button>
+    >Non-Dense</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ unelevated (type === 'contained'): true, false (default)</h3>
     <lbz-button type="contained" unelevated>Unelevated</lbz-button>
@@ -440,7 +420,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Button extends Vue {
+export default class ComponentsButton extends Vue {
   private fclick(e: MouseEvent): void {
     alert(e);
   }

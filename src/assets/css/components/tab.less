@@ -29,8 +29,9 @@
       .lbz-tab-item {
         color: var(--lbz-theme-text-medium-emphasis-on-primary);
 
-        &::before,
-        .lbz-tab-item__indicator {
+        .lbz-tab-item__indicator,
+        .lbz-state::before,
+        .lbz-state::after {
           background-color: var(--lbz-theme-on-primary);
         }
 
@@ -44,8 +45,9 @@
       .lbz-tab-item {
         color: var(--lbz-theme-text-medium-emphasis-on-secondary);
 
-        &::before,
-        .lbz-tab-item__indicator {
+        .lbz-tab-item__indicator,
+        .lbz-state::before,
+        .lbz-state::after {
           background-color: var(--lbz-theme-on-secondary);
         }
 
@@ -59,31 +61,14 @@
       .lbz-tab-item {
         color: var(--lbz-theme-text-medium-emphasis-on-light);
 
-        &::before,
-        .lbz-tab-item__indicator {
+        .lbz-tab-item__indicator,
+        .lbz-state::before,
+        .lbz-state::after {
           background-color: @black;
         }
 
         &.is-active {
           color: var(--lbz-theme-text-high-emphasis-on-light);
-        }
-
-        &:hover {
-          &::before {
-            opacity: #lbz-state.surface[hover];
-          }
-        }
-
-        &:focus {
-          &::before {
-            opacity: #lbz-state.surface[focus];
-          }
-        }
-
-        &:active {
-          &::before {
-            opacity: #lbz-state.surface[active];
-          }
         }
       }
     }
@@ -92,8 +77,9 @@
       .lbz-tab-item {
         color: var(--lbz-theme-text-medium-emphasis-on-dark);
 
-        &::before,
-        .lbz-tab-item__indicator {
+        .lbz-tab-item__indicator,
+        .lbz-state::before,
+        .lbz-state::after {
           background-color: @white;
         }
 

@@ -13,7 +13,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Icon extends Vue {
+export default class LbzIcon extends Vue {
   // size: 18, 24 (default), 36, 48
   @Prop({ type: Number }) private size!: number;
   // color: '' (default), 'primary', 'secondary', 'error', light', 'dark'

@@ -3,7 +3,7 @@
     <h2 class="lbz-typography--h5"># List</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'one-line' (default), 'two-line', 'three-line'</h3>
-    <lbz-list subtitle="One line" class="lbzui-u-rectangle">
+    <lbz-list class="lbzui-u-rectangle" subtitle="One line">
       <lbz-list-item @click.stop="fclick">One-line item</lbz-list-item>
       <lbz-list-item>
         <template #center>One-line item</template>
@@ -59,9 +59,9 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
+      class="lbzui-u-rectangle"
       type="two-line"
       subtitle="Two line"
-      class="lbzui-u-rectangle"
     >
       <lbz-list-item>
         <template #center>
@@ -129,9 +129,9 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
+      class="lbzui-u-rectangle"
       type="three-line"
       subtitle="Three line"
-      class="lbzui-u-rectangle"
     >
       <lbz-list-item>
         <template #center>
@@ -200,11 +200,40 @@
       </lbz-list-item>
     </lbz-list>
 
-    <h3 class="lbz-typography--subtitle1">$ dense: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ tag: 'ul' (default), 'nav', 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
+    <h3 class="lbz-typography--subtitle1">$ item-tag: 'li' (default), 'a', 'x'</h3>
+
+    <lbz-list class="lbzui-u-rectangle" subtitle="Default">
+      <lbz-list-item>Item</lbz-list-item>
+    </lbz-list>
     <lbz-list
-      dense
-      subtitle="One line"
       class="lbzui-u-rectangle"
+      tag="nav"
+      router-link
+      :router-link-props="{ replace: true, event: 'dblclick' }"
+      item-tag="a"
+      subtitle="Router-link"
+    >
+      <lbz-list-item to="">Router-link</lbz-list-item>
+      <lbz-list-item :to="{ path: '/404' }">Router-link</lbz-list-item>
+    </lbz-list>
+    <lbz-list
+      class="lbzui-u-rectangle"
+      tag="nav"
+      item-tag="a"
+      subtitle="Non-Router-link"
+    >
+      <lbz-list-item href="#/components/list">A</lbz-list-item>
+      <lbz-list-item href="#/components/list">A</lbz-list-item>
+    </lbz-list>
+
+    <h3 class="lbz-typography--subtitle1">$ dense: undefined (default), true, false</h3>
+    <lbz-list
+      class="lbzui-u-rectangle"
+      dense
+      subtitle="Dense one line"
     >
       <lbz-list-item>One-line item</lbz-list-item>
       <lbz-list-item>
@@ -261,10 +290,69 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
+      class="lbzui-u-rectangle"
+      :dense="false"
+      subtitle="Non-Dense one line"
+    >
+      <lbz-list-item>One-line item</lbz-list-item>
+      <lbz-list-item>
+        <template #center>One-line item</template>
+        <template #end>
+          <lbz-icon>info</lbz-icon>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>favorite</lbz-icon>
+        </template>
+        <template #center>One-line item</template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>favorite</lbz-icon>
+        </template>
+        <template #center>One-line item</template>
+        <template #end>
+          <lbz-icon>info</lbz-icon>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
+        </template>
+        <template #center>One-line item</template>
+        <template #end>
+          <lbz-icon-button>more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <div class="lbz-list-item__media lbz-list-item__media--square">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </template>
+        <template #center>One-line item</template>
+        <template #end>
+          <lbz-icon-button>more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item style="padding-left: 0;">
+        <template #start>
+          <div class="lbz-list-item__media lbz-list-item__media--rectangle">
+            <img src="../../assets/img/placeholder@16x9.png">
+          </div>
+        </template>
+        <template #center>One-line item</template>
+        <template #end>
+          <lbz-icon-button>more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+    </lbz-list>
+    <lbz-list
+      class="lbzui-u-rectangle"
       type="two-line"
       dense
-      subtitle="Two line"
-      class="lbzui-u-rectangle"
+      subtitle="Dense two line"
     >
       <lbz-list-item>
         <template #center>
@@ -332,10 +420,153 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
+      class="lbzui-u-rectangle"
+      type="two-line"
+      :dense="false"
+      subtitle="Non-Dense two line"
+    >
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <span class="lbz-typography--caption">caption</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-list-item__title">Two-line item</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>favorite</lbz-icon>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <lbz-icon-button>more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <div class="lbz-list-item__media lbz-list-item__media--square">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <lbz-icon-button>more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item style="padding-left: 0;">
+        <template #start>
+          <div class="lbz-list-item__media lbz-list-item__media--rectangle">
+            <img src="../../assets/img/placeholder@16x9.png">
+          </div>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <lbz-icon-button>more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+    </lbz-list>
+    <lbz-list
+      class="lbzui-u-rectangle"
       type="three-line"
       dense
-      subtitle="Three line"
+      subtitle="Dense three line"
+    >
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-list-item__title">Three-line item</span>
+          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+        </template>
+        <template #end>
+          <span class="lbz-typography--caption">caption</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-list-item__title">Three-line item</span>
+          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>favorite</lbz-icon>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Three-line item</span>
+          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Three-line item</span>
+          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+        </template>
+        <template #end>
+          <lbz-icon-button>more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <div class="lbz-list-item__media lbz-list-item__media--square">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Three-line item</span>
+          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+        </template>
+        <template #end>
+          <lbz-icon-button>more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item style="padding-left: 0;">
+        <template #start>
+          <div class="lbz-list-item__media lbz-list-item__media--rectangle">
+            <img src="../../assets/img/placeholder@16x9.png">
+          </div>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Three-line item</span>
+          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+        </template>
+        <template #end>
+          <lbz-icon-button>more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+    </lbz-list>
+    <lbz-list
       class="lbzui-u-rectangle"
+      type="three-line"
+      :dense="false"
+      subtitle="Non-Dense three line"
     >
       <lbz-list-item>
         <template #center>
@@ -404,18 +635,18 @@
       </lbz-list-item>
     </lbz-list>
 
-    <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ placement: 'start' (default), 'center'</h3>
+    <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
     <lbz-list class="lbzui-u-rectangle">
       <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
-    <lbz-list subtitle="Subtitle" class="lbzui-u-rectangle">
+    <lbz-list class="lbzui-u-rectangle" subtitle="Subtitle">
       <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
     <lbz-list
-      subtitle="Subtitle"
-      placement="center"
       class="lbzui-u-rectangle"
+      placement="center"
+      subtitle="Subtitle"
     >
       <lbz-list-item>
         <template #start>
@@ -425,49 +656,11 @@
       </lbz-list-item>
     </lbz-list>
 
-    <h3 class="lbz-typography--subtitle1">$ tag: 'ul' (default), 'nav', 'x'</h3>
-    <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
-    <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
-    <h3 class="lbz-typography--subtitle1">$ item-tag: 'li' (default), 'a', 'x'</h3>
-
-    <lbz-list subtitle="Default" class="lbzui-u-rectangle">
-      <lbz-list-item>Item</lbz-list-item>
-    </lbz-list>
-    <lbz-list
-      tag="nav"
-      subtitle="Router-link"
-      router-link
-      :router-link-props="{ replace: true, event: 'dblclick' }"
-      item-tag="a"
-      class="lbzui-u-rectangle"
-    >
-      <lbz-list-item to="">Router-link</lbz-list-item>
-      <lbz-list-item :to="{ path: '/404' }">Router-link</lbz-list-item>
-    </lbz-list>
-    <lbz-list
-      tag="nav"
-      subtitle="Non router-link"
-      item-tag="a"
-      class="lbzui-u-rectangle"
-    >
-      <lbz-list-item href="#/components/list">A</lbz-list-item>
-      <lbz-list-item href="#/components/list">A</lbz-list-item>
-    </lbz-list>
-
-    <h3 class="lbz-typography--subtitle1">$ ripple: true (default), false</h3>
-    <lbz-list
-      subtitle="Ripple off"
-      :ripple="false"
-      class="lbzui-u-rectangle"
-    >
-      <lbz-list-item>Item</lbz-list-item>
-    </lbz-list>
-
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-list
+      class="lbzui-u-rectangle"
       subtitle="Disabled"
       disabled
-      class="lbzui-u-rectangle"
     >
       <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
@@ -475,12 +668,12 @@
     <h2 class="lbz-typography--h5"># List item</h2>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: undefined (default), true, false</h3>
-    <h3 class="lbz-typography--subtitle1">$ to (router-link): '' (default), 'x', { x: x }</h3>
+    <h3 class="lbz-typography--subtitle1">$ to (router-link): '' (default), 'x', { x: y }</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: '' (default), li', 'a', 'x'</h3>
     <lbz-list
+      class="lbzui-u-rectangle"
       tag="nav"
       subtitle="Router-link"
-      class="lbzui-u-rectangle"
     >
       <lbz-list-item
         router-link
@@ -494,9 +687,9 @@
       >Router-link</lbz-list-item>
     </lbz-list>
     <lbz-list
-      tag="nav"
-      subtitle="Non router-link"
       class="lbzui-u-rectangle"
+      tag="nav"
+      subtitle="Non-Router-link"
     >
       <lbz-list-item tag="a" href="#/components/list">A</lbz-list-item>
       <lbz-list-item tag="a" href="#/components/list">A</lbz-list-item>
@@ -550,7 +743,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class List extends Vue {
+export default class ComponentsList extends Vue {
   private fclick(e: MouseEvent): void {
     alert(e);
   }

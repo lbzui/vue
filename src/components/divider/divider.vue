@@ -6,7 +6,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Divider extends Vue {
+export default class LbzDivider extends Vue {
   // on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
 }

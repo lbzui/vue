@@ -4,7 +4,10 @@ import './registerServiceWorker';
 import router from './router';
 import LBZUI from '@/components';
 
-Vue.use(LBZUI);
+Vue.use(LBZUI, {
+  ripple: true,
+  dense: false,
+});
 
 Vue.config.productionTip = false;
 

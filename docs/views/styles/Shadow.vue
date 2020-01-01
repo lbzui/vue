@@ -29,3 +29,10 @@
     <div class="lbzui-u-square lbz-shadow--24">.lbz-shadow--24</div>
   </article>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class StylesShadow extends Vue {}
+</script>

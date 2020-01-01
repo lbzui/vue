@@ -15,8 +15,8 @@
       >
         <h2
           v-if="subtitle"
-          v-html="subtitle"
           class="lbz-backdrop__front-layer__header__title"
+          v-html="subtitle"
         ></h2>
         <slot name="front-layer-header"/>
         <lbz-icon-button
@@ -27,8 +27,8 @@
         <lbz-divider v-show="divider"/>
       </header>
       <main
-        v-scroll="fscroll"
         ref="scroller"
+        v-scroll="fscroll"
         :class="['lbz-backdrop__front-layer__content', horizontal && 'is-horizontal']"
       >
         <slot name="front-layer-content"/>
@@ -54,7 +54,7 @@ import LbzIconButton from '../icon-button/icon-button.vue';
     LbzIconButton,
   },
 })
-export default class Backdrop extends Vue {
+export default class LbzBackdrop extends Vue {
   // [required]active.sync: true, false
   @PropSync('active', { type: Boolean, required: true }) private cisActive!: boolean;
 

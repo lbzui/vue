@@ -7,24 +7,24 @@
     <lbz-button type="contained" @click.stop="ftoggle">{{ vactive0 ? 'Inactive' : 'Active' }}</lbz-button>
     <div class="lbzui-u-app">
       <lbz-drawer
-        :active.sync="vactive0"
         ref="drawer"
+        :active.sync="vactive0"
         @open="fopen"
         @close="fclose"
       >
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
-              v-for="item of vprimaryDestinations"
+              v-for="item of DESTINATIONS.primary"
               :key="item.label"
               :active="item.label === vlabel"
               @click.stop="vlabel = item.label"
             >{{ item.label }}</lbz-list-item>
             <lbz-divider/>
             <span class="lbz-list__subtitle">Labels</span>
-            <lbz-list-item v-for="item of vsecondaryDestinations" :key="item.label">{{ item.label }}</lbz-list-item>
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">{{ item.label }}</lbz-list-item>
             <lbz-divider/>
-            <lbz-list-item v-for="item of vunrelatedDestinations" :key="item.label">{{ item.label }}</lbz-list-item>
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">{{ item.label }}</lbz-list-item>
           </lbz-list>
         </template>
       </lbz-drawer>
@@ -34,7 +34,7 @@
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
-              v-for="item of vprimaryDestinations"
+              v-for="item of DESTINATIONS.primary"
               :key="item.label"
               :active="item.label === vlabel"
               @click.stop="vlabel = item.label"
@@ -46,14 +46,14 @@
             </lbz-list-item>
             <lbz-divider/>
             <span class="lbz-list__subtitle">Labels</span>
-            <lbz-list-item v-for="item of vsecondaryDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <lbz-list-item v-for="item of vunrelatedDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
@@ -71,7 +71,7 @@
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
-              v-for="item of vprimaryDestinations"
+              v-for="item of DESTINATIONS.primary"
               :key="item.label"
               :active="item.label === vlabel"
               @click.stop="vlabel = item.label"
@@ -83,14 +83,14 @@
             </lbz-list-item>
             <lbz-divider/>
             <span class="lbz-list__subtitle">Labels</span>
-            <lbz-list-item v-for="item of vsecondaryDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <lbz-list-item v-for="item of vunrelatedDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
@@ -109,7 +109,7 @@
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
-              v-for="item of vprimaryDestinations"
+              v-for="item of DESTINATIONS.primary"
               :key="item.label"
               :active="item.label === vlabel"
               @click.stop="vlabel = item.label"
@@ -121,14 +121,14 @@
             </lbz-list-item>
             <lbz-divider/>
             <span class="lbz-list__subtitle">Labels</span>
-            <lbz-list-item v-for="item of vsecondaryDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <lbz-list-item v-for="item of vunrelatedDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
@@ -149,7 +149,7 @@
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
-              v-for="item of vprimaryDestinations"
+              v-for="item of DESTINATIONS.primary"
               :key="item.label"
               :active="item.label === vlabel"
               @click.stop="vlabel = item.label"
@@ -161,14 +161,14 @@
             </lbz-list-item>
             <lbz-divider/>
             <span class="lbz-list__subtitle">Labels</span>
-            <lbz-list-item v-for="item of vsecondaryDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <lbz-list-item v-for="item of vunrelatedDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
@@ -190,7 +190,7 @@
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
-              v-for="item of vprimaryDestinations"
+              v-for="item of DESTINATIONS.primary"
               :key="item.label"
               :active="item.label === vlabel"
               @click.stop="vlabel = item.label"
@@ -202,14 +202,14 @@
             </lbz-list-item>
             <lbz-divider/>
             <span class="lbz-list__subtitle">Labels</span>
-            <lbz-list-item v-for="item of vsecondaryDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <lbz-list-item v-for="item of vunrelatedDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
@@ -229,7 +229,7 @@
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
-              v-for="item of vprimaryDestinations"
+              v-for="item of DESTINATIONS.primary"
               :key="item.label"
               :active="item.label === vlabel"
               @click.stop="vlabel = item.label"
@@ -241,14 +241,14 @@
             </lbz-list-item>
             <lbz-divider/>
             <span class="lbz-list__subtitle">Labels</span>
-            <lbz-list-item v-for="item of vsecondaryDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <lbz-list-item v-for="item of vunrelatedDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
@@ -269,7 +269,7 @@
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
-              v-for="item of vprimaryDestinations"
+              v-for="item of DESTINATIONS.primary"
               :key="item.label"
               :active="item.label === vlabel"
               @click.stop="vlabel = item.label"
@@ -281,14 +281,14 @@
             </lbz-list-item>
             <lbz-divider/>
             <span class="lbz-list__subtitle">Labels</span>
-            <lbz-list-item v-for="item of vsecondaryDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <lbz-list-item v-for="item of vunrelatedDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
@@ -310,7 +310,7 @@
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
-              v-for="item of vprimaryDestinations"
+              v-for="item of DESTINATIONS.primary"
               :key="item.label"
               :active="item.label === vlabel"
               @click.stop="vlabel = item.label"
@@ -322,14 +322,14 @@
             </lbz-list-item>
             <lbz-divider/>
             <span class="lbz-list__subtitle">Labels</span>
-            <lbz-list-item v-for="item of vsecondaryDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <lbz-list-item v-for="item of vunrelatedDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
@@ -351,7 +351,7 @@
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
-              v-for="item of vprimaryDestinations"
+              v-for="item of DESTINATIONS.primary"
               :key="item.label"
               :active="item.label === vlabel"
               @click.stop="vlabel = item.label"
@@ -363,14 +363,14 @@
             </lbz-list-item>
             <lbz-divider/>
             <span class="lbz-list__subtitle">Labels</span>
-            <lbz-list-item v-for="item of vsecondaryDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <lbz-list-item v-for="item of vunrelatedDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
@@ -390,7 +390,7 @@
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
-              v-for="item of vprimaryDestinations"
+              v-for="item of DESTINATIONS.primary"
               :key="item.label"
               :active="item.label === vlabel"
               @click.stop="vlabel = item.label"
@@ -402,14 +402,14 @@
             </lbz-list-item>
             <lbz-divider/>
             <span class="lbz-list__subtitle">Labels</span>
-            <lbz-list-item v-for="item of vsecondaryDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <lbz-list-item v-for="item of vunrelatedDestinations" :key="item.label">
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
               </template>
@@ -426,59 +426,62 @@
 import { Component, Ref, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Drawer extends Vue {
+export default class ComponentsDrawer extends Vue {
   @Ref('drawer') private rdrawer!: HTMLFormElement;
 
-  private vprimaryDestinations: any[] = [
-    {
-      icon: 'inbox',
-      label: 'Inbox',
-    },
-    {
-      icon: 'send',
-      label: 'Outbox',
-    },
-    {
-      icon: 'favorite',
-      label: 'Favorites',
-    },
-    {
-      icon: 'archive',
-      label: 'Archive',
-    },
-    {
-      icon: 'delete',
-      label: 'Trash',
-    },
-    {
-      icon: 'report',
-      label: 'Spam',
-    },
-  ];
-  private vsecondaryDestinations: any[] = [
-    {
-      icon: 'bookmark',
-      label: 'Family',
-    },
-    {
-      icon: 'bookmark',
-      label: 'Friends',
-    },
-    {
-      icon: 'bookmark',
-      label: 'Work',
-    },
-  ];
-  private vunrelatedDestinations: any[] = [
-    {
-      icon: 'settings',
-      label: 'Settings & account',
-    },
-    {
-      icon: 'feedback',
-      label: 'Help & feedback',
-    },
-  ];
+  private DESTINATIONS: object = {
+    primary: [
+      {
+        icon: 'inbox',
+        label: 'Inbox',
+      },
+      {
+        icon: 'send',
+        label: 'Outbox',
+      },
+      {
+        icon: 'favorite',
+        label: 'Favorites',
+      },
+      {
+        icon: 'archive',
+        label: 'Archive',
+      },
+      {
+        icon: 'delete',
+        label: 'Trash',
+      },
+      {
+        icon: 'report',
+        label: 'Spam',
+      },
+    ],
+    secondary: [
+      {
+        icon: 'bookmark',
+        label: 'Family',
+      },
+      {
+        icon: 'bookmark',
+        label: 'Friends',
+      },
+      {
+        icon: 'bookmark',
+        label: 'Work',
+      },
+    ],
+    unrelated: [
+      {
+        icon: 'settings',
+        label: 'Settings & account',
+      },
+      {
+        icon: 'feedback',
+        label: 'Help & feedback',
+      },
+    ],
+  };
+
   private vlabel: string = 'Inbox';
   private vactive0: boolean = true;
   private vactive1: boolean = true;

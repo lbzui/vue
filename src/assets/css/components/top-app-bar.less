@@ -4,7 +4,6 @@
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: stretch;
-  overflow: hidden;
   position: relative;
   top: 0;
   left: 0;
@@ -42,11 +41,11 @@
 
   &&--dark {
     color: @white;
-    background-color: #lbz-theme-surface.dark[0];
+    background: #lbz-theme-surface.dark[0];
 
     // elevated
     &.is-elevated {
-      background-color: #lbz-theme-surface.dark[4];
+      background: #lbz-theme-surface.dark[4];
     }
   }
 
@@ -93,17 +92,18 @@
 
   & &__center {
     flex: 1;
+    align-self: stretch;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: flex-end;
     overflow: hidden;
-    margin: auto 12px 12px;
+    margin: 0 12px;
 
     // title
     .lbz-top-app-bar__title {
       flex: 1;
-      margin: 0;
+      margin: 0 0 12px;
       .lbz-typography--h6();
       .lbz-u-truncate--one();
     }
@@ -204,15 +204,22 @@ html[theme="dark"] {
       .lbz-surface--4();
     }
 
-    .lbz-icon-button::before {
-      background-color: var(--lbz-theme-on-surface);
+    .lbz-icon-button {
+      .lbz-state {
+        &::before,
+        &::after {
+          background-color: var(--lbz-theme-on-surface);
+        }
+      }
     }
+
 
     .lbz-tab .lbz-tab-item {
       color: var(--lbz-theme-text-medium-emphasis-on-surface);
 
-      &::before,
-      .lbz-tab-item__indicator {
+      .lbz-tab-item__indicator,
+      .lbz-state::before,
+      .lbz-state::after {
         background-color: var(--lbz-theme-on-surface);
       }
 

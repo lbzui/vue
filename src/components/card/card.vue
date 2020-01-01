@@ -1,13 +1,10 @@
 <template>
   <component
     :is="tag"
-    :class="[
-      'lbz-card',
-      type && `lbz-card--${ type }`,
-      ripple && 'lbz-ripple'
-    ]"
+    :class="['lbz-card', type && `lbz-card--${ type }`]"
     @click="$emit('click', $event)"
   >
+    <lbz-state/>
     <div v-if="$slots.start" class="lbz-card__header">
       <slot name="start"/>
     </div>
@@ -23,14 +20,17 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import LbzState from '../state/state.vue';
 
-@Component
-export default class Card extends Vue {
+@Component({
+  components: {
+    LbzState,
+  },
+})
+export default class LbzCard extends Vue {
   // type: 'elevated' (default), 'outlined'
   @Prop({ type: String, default: '' }) private type!: string;
   // tag: 'div' (default), 'a', 'x'
   @Prop({ type: String, default: 'div' }) private tag!: string;
-  // ripple: true (default), false
-  @Prop({ type: Boolean, default: true }) private ripple!: boolean;
 }
 </script>

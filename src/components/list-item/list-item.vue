@@ -4,7 +4,6 @@
     :class="[
       'lbz-list-item',
       {
-        'lbz-ripple': !cisDisabled && pripple,
         'is-active': active,
         'is-selected': selected,
         'is-disabled': cisDisabled
@@ -12,6 +11,7 @@
     ]"
     @click="!cisDisabled && $emit('click', $event)"
   >
+    <lbz-state v-if="!cisDisabled"/>
     <div v-if="$slots.start" class="lbz-list-item__start">
       <slot name="start"/>
     </div>
@@ -27,12 +27,17 @@
 
 <script lang="ts">
 import { Component, Prop, Inject, Vue } from 'vue-property-decorator';
+import LbzState from '../state/state.vue';
 
-@Component
-export default class ListItem extends Vue {
+@Component({
+  components: {
+    LbzState,
+  },
+})
+export default class LbzListItem extends Vue {
   // router-link: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private routerLink!: undefined | boolean;
-  // to (router-link): '' (default), 'x', { x: x }
+  // to (router-link): '' (default), 'x', { x: y }
   @Prop({ type: [String, Object], default: '' }) private to!: string | object;
   // tag: '' (default), li', 'a', 'x'
   @Prop({ type: String, default: '' }) private tag!: string;
@@ -46,7 +51,6 @@ export default class ListItem extends Vue {
   @Inject('router-link') private prouterLink!: boolean;
   @Inject('router-link-props') private prouterLinkProps!: object;
   @Inject('tag') private ptag!: string;
-  @Inject('ripple') private pripple!: boolean;
   @Inject('disabled') private pdisabled!: boolean;
 
   get cgetAttrs(): object {
@@ -55,7 +59,7 @@ export default class ListItem extends Vue {
       append,
       exact,
       event,
-    }: any = (this.prouterLinkProps as any);
+    }: any = this.prouterLinkProps;
     const tag: string = this.tag || this.ptag;
 
     return this.cisRouterLink

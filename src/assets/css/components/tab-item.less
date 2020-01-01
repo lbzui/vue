@@ -16,22 +16,6 @@
   background-color: transparent;
   outline: none;
   transition: color 150ms linear;
-  cursor: pointer;
-
-  &::before {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    z-index: 1;
-    border-radius: 50%;
-    width: 200%;
-    height: 200%;
-    background-color: var(--lbz-theme-primary);
-    opacity: #lbz-state.primary[enabled];
-    transition: background-color 15ms linear, opacity 15ms linear;
-    content: "";
-    pointer-events: none;
-  }
 
   & &__content {
     display: inline-flex;
@@ -80,6 +64,13 @@
     pointer-events: none;
   }
 
+  .lbz-state {
+    &::before,
+    &::after {
+      background-color: var(--lbz-theme-primary);
+    }
+  }
+
   &.is-active {
     color: var(--lbz-theme-primary);
 
@@ -89,24 +80,6 @@
 
     .lbz-tab-item__indicator {
       opacity: 1;
-    }
-  }
-
-  &:hover {
-    &::before {
-      opacity: #lbz-state.primary[hover];
-    }
-  }
-
-  &:focus {
-    &::before {
-      opacity: #lbz-state.primary[focus];
-    }
-  }
-
-  &:active {
-    &::before {
-      opacity: #lbz-state.primary[active];
     }
   }
 }

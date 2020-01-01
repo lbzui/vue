@@ -16,23 +16,7 @@
   fill: currentColor;
   background-color: transparent;
   outline: none;
-  cursor: default;
   user-select: none;
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    background-color: var(--lbz-theme-on-surface);
-    opacity: #lbz-state.surface[enabled];
-    transition: background-color 15ms linear, opacity 15ms linear;
-    content: "";
-    pointer-events: none;
-  }
 
   svg,
   img {
@@ -59,6 +43,16 @@
     }
   }
 
+  .lbz-state {
+    &::before,
+    &::after {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   // active
   &.is-active {
     .lbz-icon-button__icon {
@@ -72,72 +66,41 @@
     }
   }
 
-  &:not(.is-disabled):hover {
-    cursor: pointer;
-
-    &::before {
-      opacity: #lbz-state.surface[hover];
-    }
-  }
-
-  &:not(.is-disabled):focus {
-    &::before {
-      opacity: #lbz-state.surface[focus];
-    }
-  }
-
-  &:not(.is-disabled):active {
-    &::before {
-      opacity: #lbz-state.surface[active];
-    }
-  }
-
   // on-background
   &&--on {
-    &-primary,
-    &-secondary,
-    &-error,
-    &-dark {
-      &:not(.is-disabled):hover {
-        &::before {
-          opacity: #lbz-state.primary[hover];
-        }
-      }
-
-      &:not(.is-disabled):focus {
-        &::before {
-          opacity: #lbz-state.primary[focus];
-        }
-      }
-
-      &:not(.is-disabled):active {
-        &::before {
-          opacity: #lbz-state.primary[active];
-        }
-      }
-    }
-
     &-primary {
-      &::before {
-        background-color: var(--lbz-theme-on-primary);
+      .lbz-state {
+        &::before,
+        &::after {
+          background-color: var(--lbz-theme-on-primary);
+        }
       }
     }
 
     &-secondary {
-      &::before {
-        background-color: var(--lbz-theme-on-secondary);
+      .lbz-state {
+        &::before,
+        &::after {
+          background-color: var(--lbz-theme-on-secondary);
+        }
       }
     }
 
     &-background {
-      &::before {
-        background-color: var(--lbz-theme-on-background);
+      .lbz-state {
+        &::before,
+        &::after {
+          background-color: var(--lbz-theme-on-background);
+        }
       }
     }
 
     &-error {
-      &::before {
-        background-color: var(--lbz-theme-on-error);
+      .lbz-state {
+        &::before,
+        &::after {
+          background-color: var(--lbz-theme-on-error);
+        }
       }
     }
 
@@ -147,8 +110,11 @@
         color: var(--lbz-theme-text-disabled-on-light);
       }
 
-      &::before {
-        background-color: @black;
+      .lbz-state {
+        &::before,
+        &::after {
+          background-color: @black;
+        }
       }
     }
 
@@ -158,8 +124,11 @@
         color: var(--lbz-theme-text-disabled-on-dark);
       }
 
-      &::before {
-        background-color: @white;
+      .lbz-state {
+        &::before,
+        &::after {
+          background-color: @white;
+        }
       }
     }
   }

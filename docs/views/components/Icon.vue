@@ -35,3 +35,10 @@
     <lbz-icon color="dark" disabled>favorite</lbz-icon>
   </article>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class ComponentsIcon extends Vue {}
+</script>

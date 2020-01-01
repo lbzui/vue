@@ -1,12 +1,12 @@
 const path = require('path')
 
-function resolve (dir) {
-  return path.resolve(__dirname, dir)
-}
-
 process.env.VUE_APP_SITE_URL = process.env.NODE_ENV === 'production'
   ? 'https://lbzui-vue.lanbizhong.com/'
   : '/'
+
+function resolve (dir) {
+  return path.resolve(__dirname, dir)
+}
 
 module.exports = {
   pages: {
@@ -26,11 +26,9 @@ module.exports = {
     msTileColor: '#6200ee',
     appleMobileWebAppCapable: 'yes',
     manifestOptions: {
-      dir: 'ltr',
       lang: 'en',
+      dir: 'ltr',
       description: 'Material Components for Vue.js',
-      background_color: '#fff',
-      orientation: 'any',
       icons: [
         {
           src: './img/logo/pwa/192x192.png',
@@ -42,7 +40,9 @@ module.exports = {
           sizes: '512x512',
           type: 'image/png'
         }
-      ]
+      ],
+      orientation: 'any',
+      background_color: '#fff'
     },
     iconPaths: {
       favicon32: 'img/logo/favicon/32x32.png',

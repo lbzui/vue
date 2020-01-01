@@ -23,7 +23,7 @@
       </a>
     </p>
 
-    <p class="lbz-typography--body1">@lbzui/vue is available in a <a href="https://github.com/lbzui/vue/projects/1" target="_blank">public beta</a><lbz-icon>open_in_new</lbz-icon> now, but you can read in more depth on <a href="https://github.com/orgs/lbzui/projects/1" target="_blank">library list</a><lbz-icon>open_in_new</lbz-icon> and this documentation website to develop.</p>
+    <p class="lbz-typography--body1">@lbzui/vue is available in a <a href="https://github.com/lbzui/vue/projects/1" target="_blank">public beta</a><lbz-icon>open_in_new</lbz-icon> now, but you can read in more depth on <a href="https://github.com/orgs/lbzui/projects/1" target="_blank">component library</a><lbz-icon>open_in_new</lbz-icon> and this documentation website to develop.</p>
     <p class="lbz-typography--body1">If you have any questions, ideas or you want to discuss with it, <a href="https://github.com/lbzui/vue/issues/new" target="_blank">create an issue</a><lbz-icon>open_in_new</lbz-icon> or email to <a href="mailto:lbz_ui@163.com">lbz_ui@163.com</a>.</p>
 
     <h2 class="lbz-typography--h5"># Features</h2>
@@ -48,3 +48,10 @@
     <p class="lbz-typography--body1">Copyright (c) 2019-present <a href="https://lanbizhong.com/" target="_blank">LAN Bizhong</a><lbz-icon>open_in_new</lbz-icon></p>
   </article>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class Home extends Vue {}
+</script>

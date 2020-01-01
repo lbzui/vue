@@ -7,7 +7,7 @@
 
 > Material Components for Vue.js
 
-@lbzui/vue is available in a [public beta](https://github.com/lbzui/vue/projects/1) now, but you can read in more depth on [library list](https://github.com/orgs/lbzui/projects/1) and [documentation website](https://lbzui-vue.lanbizhong.com/) to develop.
+@lbzui/vue is available in a [public beta](https://github.com/lbzui/vue/projects/1) now, but you can read in more depth on [component library](https://github.com/orgs/lbzui/projects/1) and [documentation website](https://lbzui-vue.lanbizhong.com/) to develop.
 
 If you have any questions, ideas or you want to discuss with it, [create an issue](https://github.com/lbzui/vue/issues/new) or email to lbz_ui@163.com.
 
@@ -81,14 +81,17 @@ yarn add @lbzui/vue
 #### Step 3: Import @lbzui/vue in your code
 
 ```js
-// src/shims-vue.d.ts (if you use TS)
+// src/modules.d.ts (if you use TS)
 declare module '@lbzui/vue';
 
 // src/main.ts or src/main.js
 import '@lbzui/vue/lib/lbzui.css';
 import LBZUI from '@lbzui/vue';
 
-Vue.use(LBZUI);
+Vue.use(LBZUI, {
+  ripple: true,
+  dense: false,
+});
 ```
 
 Or use individual components:
@@ -96,6 +99,11 @@ Or use individual components:
 ```js
 import '@lbzui/vue/lib/lbzui.css';
 import { Button } from '@lbzui/vue';
+
+Vue.prototype.$LBZUI = {
+  ripple: true,
+  dense: false,
+};
 
 Vue.use(Button);
 ```
@@ -150,6 +158,7 @@ import '@lbzui/vue/src/assets/css/styles/surface.less';
 import '@lbzui/vue/src/assets/css/styles/typography.less';
 import '@lbzui/vue/src/assets/css/styles/utility.less';
 
+import '@lbzui/vue/src/assets/css/components/state.less';
 import '@lbzui/vue/src/assets/css/components/backdrop.less';
 import '@lbzui/vue/src/assets/css/components/button.less';
 import '@lbzui/vue/src/assets/css/components/card.less';
@@ -186,6 +195,11 @@ import {
   TopAppBar,
 } from '@lbzui/vue';
 
+Vue.prototype.$LBZUI = {
+  ripple: true,
+  dense: false,
+};
+
 Vue.use(Backdrop);
 Vue.use(Button);
 Vue.use(Card);
@@ -209,7 +223,8 @@ Prepend variables and mixins to all less files in `vue.config.js`:
 ```js
 // vue.config.js
 const path = require('path')
-const lbzuiCSSPath = 'node_modules/@lbzui/vue/src/assets/css/'
+
+const LBZUI_CSS_PATH = 'node_modules/@lbzui/vue/src/assets/css/'
 
 function resolve (dir) {
   return path.resolve(__dirname, dir)
@@ -221,19 +236,19 @@ module.exports = {
       preProcessor: 'less',
       patterns: [
         // variables
-        // resolve(`${lbzuiCSSPath}variables/_*.less`),
+        // resolve(`${LBZUI_CSS_PATH}variables/_*.less`),
 
-        // resolve(`${lbzuiCSSPath}variables/_layout-grid.less`),
+        // resolve(`${LBZUI_CSS_PATH}variables/_layout-grid.less`),
         resolve('src/assets/css/lbzui/_layout-grid.less'), // your custom layout grid
-        resolve(`${lbzuiCSSPath}variables/_motion.less`),
-        // resolve(`${lbzuiCSSPath}variables/_shape.less`),
+        resolve(`${LBZUI_CSS_PATH}variables/_motion.less`),
+        // resolve(`${LBZUI_CSS_PATH}variables/_shape.less`),
         resolve('src/assets/css/lbzui/_shape.less'), // your custom shape
-        resolve(`${lbzuiCSSPath}variables/_state.less`),
-        // resolve(`${lbzuiCSSPath}variables/_theme.less`),
+        resolve(`${LBZUI_CSS_PATH}variables/_state.less`),
+        // resolve(`${LBZUI_CSS_PATH}variables/_theme.less`),
         resolve('src/assets/css/lbzui/_theme.less'), // your custom theme
 
         // mixins
-        resolve(`${lbzuiCSSPath}mixins/*.less`)
+        resolve(`${LBZUI_CSS_PATH}mixins/*.less`)
       ]
     }
   }

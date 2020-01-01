@@ -14,3 +14,10 @@
     <div class="lbzui-u-square lbz-elevation--24">.lbz-elevation--24</div>
   </article>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class StylesElevation extends Vue {}
+</script>

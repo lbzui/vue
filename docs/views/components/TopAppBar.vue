@@ -17,7 +17,7 @@
       <template #end>
         <lbz-icon-button on-background="primary">share</lbz-icon-button>
         <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
@@ -29,7 +29,7 @@
       <template #end>
         <lbz-icon-button on-background="primary">share</lbz-icon-button>
         <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar background="secondary" title="Page title">
@@ -39,7 +39,7 @@
       <template #end>
         <lbz-icon-button on-background="secondary">share</lbz-icon-button>
         <lbz-icon-button on-background="secondary">search</lbz-icon-button>
-        <lbz-icon-button on-background="secondary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="secondary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar background="background" title="Page title">
@@ -49,7 +49,7 @@
       <template #end>
         <lbz-icon-button on-background="background">share</lbz-icon-button>
         <lbz-icon-button on-background="background">search</lbz-icon-button>
-        <lbz-icon-button on-background="background" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="background">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar background="surface" title="Page title">
@@ -69,7 +69,7 @@
       <template #end>
         <lbz-icon-button on-background="light">share</lbz-icon-button>
         <lbz-icon-button on-background="light">search</lbz-icon-button>
-        <lbz-icon-button on-background="light" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="light">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar background="dark" title="Page title">
@@ -79,7 +79,7 @@
       <template #end>
         <lbz-icon-button on-background="dark">share</lbz-icon-button>
         <lbz-icon-button on-background="dark">search</lbz-icon-button>
-        <lbz-icon-button on-background="dark" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="dark">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar background="transparent" title="Page title">
@@ -101,7 +101,7 @@
       <template #end>
         <lbz-icon-button on-background="primary">share</lbz-icon-button>
         <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <div style="overflow: hidden;">
@@ -112,7 +112,7 @@
         <template #end>
           <lbz-icon-button on-background="primary">share</lbz-icon-button>
           <lbz-icon-button on-background="primary">search</lbz-icon-button>
-          <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
+          <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
         </template>
         <template #tab>
           <lbz-tab v-model="vtab" on-background="primary">
@@ -124,7 +124,7 @@
       </lbz-top-app-bar>
     </div>
 
-    <h3 class="lbz-typography--subtitle1">$ dense (desktop only): true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ dense (desktop only): undefined (default), true, false</h3>
     <lbz-top-app-bar dense title="Page title">
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
@@ -132,7 +132,17 @@
       <template #end>
         <lbz-icon-button on-background="primary">share</lbz-icon-button>
         <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
+      </template>
+    </lbz-top-app-bar>
+    <lbz-top-app-bar :dense="false" title="Page title">
+      <template #start>
+        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+      </template>
+      <template #end>
+        <lbz-icon-button on-background="primary">share</lbz-icon-button>
+        <lbz-icon-button on-background="primary">search</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
@@ -144,7 +154,7 @@
       <template #end>
         <lbz-icon-button on-background="primary">share</lbz-icon-button>
         <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
@@ -165,7 +175,7 @@
       <template #end>
         <lbz-icon-button on-background="primary">share</lbz-icon-button>
         <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
@@ -177,7 +187,7 @@
       <template #end>
         <lbz-icon-button on-background="primary">share</lbz-icon-button>
         <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -191,7 +201,7 @@
       <template #end>
         <lbz-icon-button on-background="secondary">share</lbz-icon-button>
         <lbz-icon-button on-background="secondary">search</lbz-icon-button>
-        <lbz-icon-button on-background="secondary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="secondary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -205,7 +215,7 @@
       <template #end>
         <lbz-icon-button on-background="background">share</lbz-icon-button>
         <lbz-icon-button on-background="background">search</lbz-icon-button>
-        <lbz-icon-button on-background="background" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="background">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -233,7 +243,7 @@
       <template #end>
         <lbz-icon-button on-background="light">share</lbz-icon-button>
         <lbz-icon-button on-background="light">search</lbz-icon-button>
-        <lbz-icon-button on-background="light" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="light">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -247,7 +257,7 @@
       <template #end>
         <lbz-icon-button on-background="dark">share</lbz-icon-button>
         <lbz-icon-button on-background="dark">search</lbz-icon-button>
-        <lbz-icon-button on-background="dark" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="dark">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -265,7 +275,7 @@
       </template>
     </lbz-top-app-bar>
 
-    <h3 class="lbz-typography--subtitle1">$ dense (desktop only): true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ dense (desktop only): undefined (default), true, false</h3>
     <lbz-top-app-bar
       type="extended"
       dense
@@ -277,7 +287,21 @@
       <template #end>
         <lbz-icon-button on-background="primary">share</lbz-icon-button>
         <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
+      </template>
+    </lbz-top-app-bar>
+    <lbz-top-app-bar
+      type="extended"
+      :dense="false"
+      title="Page title"
+    >
+      <template #start>
+        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+      </template>
+      <template #end>
+        <lbz-icon-button on-background="primary">share</lbz-icon-button>
+        <lbz-icon-button on-background="primary">search</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
@@ -293,7 +317,7 @@
       <template #end>
         <lbz-icon-button on-background="primary">share</lbz-icon-button>
         <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
@@ -301,8 +325,8 @@
     <lbz-top-app-bar
       type="extended"
       background="light"
-      title="Page title"
       :media="require('../../assets/img/placeholder@3x2.png')"
+      title="Page title"
     >
       <template #start>
         <lbz-icon-button on-background="light">menu</lbz-icon-button>
@@ -310,7 +334,7 @@
       <template #end>
         <lbz-icon-button on-background="light">share</lbz-icon-button>
         <lbz-icon-button on-background="light">search</lbz-icon-button>
-        <lbz-icon-button on-background="light" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="light">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
@@ -324,7 +348,7 @@
       <template #end>
         <lbz-icon-button on-background="primary">share</lbz-icon-button>
         <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
@@ -336,7 +360,7 @@
       <template #end>
         <lbz-icon-button on-background="primary">share</lbz-icon-button>
         <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -350,7 +374,7 @@
       <template #end>
         <lbz-icon-button on-background="secondary">share</lbz-icon-button>
         <lbz-icon-button on-background="secondary">search</lbz-icon-button>
-        <lbz-icon-button on-background="secondary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="secondary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -364,7 +388,7 @@
       <template #end>
         <lbz-icon-button on-background="background">share</lbz-icon-button>
         <lbz-icon-button on-background="background">search</lbz-icon-button>
-        <lbz-icon-button on-background="background" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="background">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -392,7 +416,7 @@
       <template #end>
         <lbz-icon-button on-background="light">share</lbz-icon-button>
         <lbz-icon-button on-background="light">search</lbz-icon-button>
-        <lbz-icon-button on-background="light" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="light">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -406,7 +430,7 @@
       <template #end>
         <lbz-icon-button on-background="dark">share</lbz-icon-button>
         <lbz-icon-button on-background="dark">search</lbz-icon-button>
-        <lbz-icon-button on-background="dark" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="dark">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -424,7 +448,7 @@
       </template>
     </lbz-top-app-bar>
 
-    <h3 class="lbz-typography--subtitle1">$ dense (desktop only): true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ dense (desktop only): undefined (default), true, false</h3>
     <lbz-top-app-bar
       type="short"
       dense
@@ -436,7 +460,21 @@
       <template #end>
         <lbz-icon-button on-background="primary">share</lbz-icon-button>
         <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
+      </template>
+    </lbz-top-app-bar>
+    <lbz-top-app-bar
+      type="short"
+      :dense="false"
+      title="Page title"
+    >
+      <template #start>
+        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+      </template>
+      <template #end>
+        <lbz-icon-button on-background="primary">share</lbz-icon-button>
+        <lbz-icon-button on-background="primary">search</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
@@ -452,7 +490,7 @@
       <template #end>
         <lbz-icon-button on-background="primary">share</lbz-icon-button>
         <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary" class="is-short-action">more_vert</lbz-icon-button>
+        <lbz-icon-button class="is-short-action" on-background="primary">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
   </article>
@@ -462,7 +500,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class TopAppBar extends Vue {
+export default class ComponentsTopAppBar extends Vue {
   private vtab: number = 0;
 }
 </script>

@@ -14,3 +14,10 @@
     <div class="lbzui-u-square lbz-surface--24">.lbz-surface--24</div>
   </article>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class StylesSurface extends Vue {}
+</script>

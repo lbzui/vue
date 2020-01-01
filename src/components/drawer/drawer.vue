@@ -24,13 +24,13 @@
             <slot name="start"/>
             <h3
               v-if="title"
-              v-html="title"
               class="lbz-drawer__title"
+              v-html="title"
             ></h3>
             <p
               v-if="subtitle"
-              v-html="subtitle"
               class="lbz-drawer__subtitle"
+              v-html="subtitle"
             ></p>
           </header>
         </template>
@@ -55,7 +55,7 @@ import LbzTopAppBar from '../top-app-bar/top-app-bar.vue';
     LbzTopAppBar,
   },
 })
-export default class Drawer extends Vue {
+export default class LbzDrawer extends Vue {
   // active.sync: true (default), false
   @PropSync('active', { type: Boolean, default: true }) private cisActive!: boolean;
 

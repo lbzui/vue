@@ -7,13 +7,13 @@
       <figcaption>
         <h3
           v-if="title"
-          v-html="title"
           class="lbz-empty-state__title"
+          v-html="title"
         ></h3>
         <p
           v-if="subtitle"
-          v-html="subtitle"
           class="lbz-empty-state__subtitle"
+          v-html="subtitle"
         ></p>
         <slot name="center"/>
         <slot/>
@@ -29,7 +29,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class EmptyState extends Vue {
+export default class LbzEmptyState extends Vue {
   // title: '' (default), 'x'
   @Prop({ type: String, default: '' }) private title!: string;
   // subtitle: '' (default), 'x'
