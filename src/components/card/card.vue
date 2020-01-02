@@ -4,7 +4,7 @@
     :class="['lbz-card', type && `lbz-card--${ type }`]"
     @click="$emit('click', $event)"
   >
-    <lbz-state/>
+    <lbz-state class='lbz-card__state'/>
     <div v-if="$slots.start" class="lbz-card__header">
       <slot name="start"/>
     </div>

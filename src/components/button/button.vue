@@ -105,7 +105,9 @@ export default class LbzButton extends Vue {
 
   get cgetStateAttrs(): object {
     return {
+      class: 'lbz-button__state',
       type: this.color === 'light' ? '' : 'primary',
+      background: `${(this.type === 'contained' ? 'on-' : '') + (this.color || 'primary')}`,
     };
   }
 }

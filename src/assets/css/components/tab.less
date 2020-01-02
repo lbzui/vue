@@ -29,9 +29,7 @@
       .lbz-tab-item {
         color: var(--lbz-theme-text-medium-emphasis-on-primary);
 
-        .lbz-tab-item__indicator,
-        .lbz-state::before,
-        .lbz-state::after {
+        .lbz-tab-item__indicator {
           background-color: var(--lbz-theme-on-primary);
         }
 
@@ -45,9 +43,7 @@
       .lbz-tab-item {
         color: var(--lbz-theme-text-medium-emphasis-on-secondary);
 
-        .lbz-tab-item__indicator,
-        .lbz-state::before,
-        .lbz-state::after {
+        .lbz-tab-item__indicator {
           background-color: var(--lbz-theme-on-secondary);
         }
 
@@ -61,9 +57,7 @@
       .lbz-tab-item {
         color: var(--lbz-theme-text-medium-emphasis-on-light);
 
-        .lbz-tab-item__indicator,
-        .lbz-state::before,
-        .lbz-state::after {
+        .lbz-tab-item__indicator {
           background-color: @black;
         }
 
@@ -77,9 +71,7 @@
       .lbz-tab-item {
         color: var(--lbz-theme-text-medium-emphasis-on-dark);
 
-        .lbz-tab-item__indicator,
-        .lbz-state::before,
-        .lbz-state::after {
+        .lbz-tab-item__indicator {
           background-color: @white;
         }
 
@@ -99,16 +91,12 @@
     }
   }
 
-  &&--center {
-    .lbz-tab__container {
-      justify-content: center;
-    }
+  &&--center .lbz-tab__container {
+    justify-content: center;
   }
 
-  &&--right {
-    .lbz-tab__container {
-      justify-content: flex-end;
-    }
+  &&--right .lbz-tab__container {
+    justify-content: flex-end;
   }
 
   // stacked

@@ -60,7 +60,10 @@ export default class LbzRadio extends Vue {
 
   get cgetStateAttrs(): object {
     return {
+      class: 'lbz-radio__state',
       type: this.cisSelected ? 'primary' : '',
+      background: this.color || 'secondary',
+      unscalable: true,
     };
   }
 

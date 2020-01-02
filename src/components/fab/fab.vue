@@ -40,7 +40,9 @@ export default class LbzFAB extends Vue {
 
   get cgetStateAttrs(): object {
     return {
+      class: 'lbz-fab__state',
       type: ['surface', 'light'].includes(this.background) ? '' : 'primary',
+      background: `on-${this.background || 'secondary'}`,
     };
   }
 }

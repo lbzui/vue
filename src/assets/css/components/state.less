@@ -1,13 +1,14 @@
 // State
 .lbz-state {
-  --lbz-state-top: 0;
-  --lbz-state-left: 0;
+  // --lbz-state-top: 0;
+  // --lbz-state-left: 0;
   --lbz-state-size: 0;
   --lbz-state-opacity: #lbz-state.surface[pressed];
   --lbz-state-translate-start: 0;
   --lbz-state-translate-end: 0;
   --lbz-state-scale: 1;
 
+  display: block;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -47,6 +48,17 @@
     transform-origin: center center;
   }
 
+  // unscalable
+  &.is-unscalable {
+    &::before,
+    &::after {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   &:hover {
     cursor: pointer;
 
@@ -55,87 +67,90 @@
     }
   }
 
-  &:focus {
-    &::before {
-      opacity: #lbz-state.surface[focus];
-    }
+  &:focus::before {
+    opacity: #lbz-state.surface[focus];
   }
 
-  &:active {
-    &::before {
-      opacity: #lbz-state.surface[active];
-    }
+  &:active::before {
+    opacity: #lbz-state.surface[active];
   }
 
   // type
   &&--primary {
     --lbz-state-opacity: #lbz-state.primary[pressed];
 
-    &:hover {
-      &::before {
-        opacity: #lbz-state.primary[hover];
-      }
+    &:hover::before {
+      opacity: #lbz-state.primary[hover];
     }
 
-    &:focus {
-      &::before {
-        opacity: #lbz-state.primary[focus];
-      }
+    &:focus::before {
+      opacity: #lbz-state.primary[focus];
     }
 
-    &:active {
-      &::before {
-        opacity: #lbz-state.primary[active];
-      }
+    &:active::before {
+      opacity: #lbz-state.primary[active];
     }
   }
 
   &&--image {
     --lbz-state-opacity: #lbz-state.image[pressed];
 
-    &:hover {
-      &::before {
-        opacity: #lbz-state.image[hover];
-      }
+    &:hover::before {
+      opacity: #lbz-state.image[hover];
     }
 
-    &:focus {
-      &::before {
-        opacity: #lbz-state.image[focus];
-      }
+    &:focus::before {
+      opacity: #lbz-state.image[focus];
     }
 
-    &:active {
-      &::before {
-        opacity: #lbz-state.image[active];
-      }
+    &:active::before {
+      opacity: #lbz-state.image[active];
     }
   }
-}
 
-.js-ripple {
-  &::before {
-    transform: scale(var(--lbz-state-scale, 1));
+  // background
+  @backgrounds: {
+    primary: var(--lbz-theme-primary);
+    primary-variant: var(--lbz-theme-primary-variant);
+    secondary: var(--lbz-theme-secondary);
+    secondary-variant: var(--lbz-theme-secondary-variant);
+    background: var(--lbz-theme-background);
+    surface: var(--lbz-theme-surface);
+    error: var(--lbz-theme-error);
+    light: @white;
+    dark: @black;
+
+    on-primary: var(--lbz-theme-on-primary);
+    on-primary-variant: var(--lbz-theme-on-primary);
+    on-secondary: var(--lbz-theme-on-secondary);
+    on-secondary-variant: var(--lbz-theme-on-secondary);
+    on-background: var(--lbz-theme-on-background);
+    on-error: var(--lbz-theme-on-error);
+    on-light: @black;
+    on-dark: @white;
+  };
+
+  each(@backgrounds, {
+    &&-background--@{key} {
+      &::before,
+      &::after {
+        background-color: @value;
+      }
+    }
+  });
+
+  // ripple
+  &.lbz-ripple-enter::after {
+    animation: lbz-ripple-opacity-in 75ms forwards, lbz-ripple-radius-in 225ms forwards;
   }
 
-  &::after {
-    top: 0;
-    left: 0;
-    transform: scale(0);
-    transform-origin: center center;
-  }
-
-  &&--enter::after {
-    animation: js-ripple-opacity-in 75ms forwards, js-ripple-radius-in 225ms forwards;
-  }
-
-  &&--leave::after {
+  &.lbz-ripple-leave::after {
     transform: translate(var(--lbz-state-translate-end, 0)) scale(var(--lbz-state-scale, 1));
-    animation: js-ripple-opacity-out 150ms;
+    animation: lbz-ripple-opacity-out 150ms;
   }
 }
 
-@keyframes js-ripple-radius-in {
+@keyframes lbz-ripple-radius-in {
   from {
     transform: translate(var(--lbz-state-translate-start, 0)) scale(1);
     animation-timing-function: #lbz-motion.curve[standard];
@@ -146,7 +161,7 @@
   }
 }
 
-@keyframes js-ripple-opacity-in {
+@keyframes lbz-ripple-opacity-in {
   from {
     opacity: 0;
     animation-timing-function: linear;
@@ -157,7 +172,7 @@
   }
 }
 
-@keyframes js-ripple-opacity-out {
+@keyframes lbz-ripple-opacity-out {
   from {
     opacity: var(--lbz-state-opacity, 0);
     animation-timing-function: linear;

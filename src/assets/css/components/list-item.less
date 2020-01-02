@@ -94,11 +94,9 @@
   &.is-active {
     color: var(--lbz-theme-primary);
 
-    > .lbz-state {
-      &::before {
-        background-color: var(--lbz-theme-primary);
-        opacity: #lbz-state.primary[active];
-      }
+    .lbz-list-item__state::before {
+      background-color: var(--lbz-theme-primary);
+      opacity: #lbz-state.primary[active];
     }
 
     .lbz-list-item__center,
@@ -109,12 +107,8 @@
   }
 
   // selected
-  &.is-selected {
-    > .lbz-state {
-      &::before {
-        opacity: #lbz-state.surface[selected];
-      }
-    }
+  &.is-selected .lbz-list-item__state::before {
+    opacity: #lbz-state.surface[selected];
   }
 
   // disabled

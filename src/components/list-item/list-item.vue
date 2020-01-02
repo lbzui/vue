@@ -11,7 +11,7 @@
     ]"
     @click="!cisDisabled && $emit('click', $event)"
   >
-    <lbz-state v-if="!cisDisabled"/>
+    <lbz-state v-if="!cisDisabled" class="lbz-list-item__state"/>
     <div v-if="$slots.start" class="lbz-list-item__start">
       <slot name="start"/>
     </div>

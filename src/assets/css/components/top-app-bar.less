@@ -204,22 +204,18 @@ html[theme="dark"] {
       .lbz-surface--4();
     }
 
-    .lbz-icon-button {
-      .lbz-state {
-        &::before,
-        &::after {
-          background-color: var(--lbz-theme-on-surface);
-        }
+    .lbz-icon-button__state,
+    .lbz-tab-item__state {
+      &::before,
+      &::after {
+        background-color: var(--lbz-theme-on-surface);
       }
     }
-
 
     .lbz-tab .lbz-tab-item {
       color: var(--lbz-theme-text-medium-emphasis-on-surface);
 
-      .lbz-tab-item__indicator,
-      .lbz-state::before,
-      .lbz-state::after {
+      .lbz-tab-item__indicator {
         background-color: var(--lbz-theme-on-surface);
       }
 

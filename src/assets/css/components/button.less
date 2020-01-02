@@ -52,34 +52,13 @@
     }
   }
 
-  .lbz-state {
-    &::before,
-    &::after {
-      background-color: var(--lbz-theme-primary);
-    }
-  }
-
   // color
   &&--secondary {
     color: var(--lbz-theme-secondary);
-
-    .lbz-state {
-      &::before,
-      &::after {
-        background-color: var(--lbz-theme-secondary);
-      }
-    }
   }
 
   &&--error {
     color: var(--lbz-theme-error);
-
-    .lbz-state {
-      &::before,
-      &::after {
-        background-color: var(--lbz-theme-error);
-      }
-    }
   }
 
   &&--light {
@@ -89,13 +68,6 @@
     &:not(.lbz-button--contained).is-disabled {
       color: #lbz-theme-text.light[disabled];
     }
-
-    .lbz-state {
-      &::before,
-      &::after {
-        background-color: @white;
-      }
-    }
   }
 
   &&--dark {
@@ -104,13 +76,6 @@
     // disabled
     &:not(.lbz-button--contained).is-disabled {
       color: #lbz-theme-text.dark[disabled];
-    }
-
-    .lbz-state {
-      &::before,
-      &::after {
-        background-color: @black;
-      }
     }
   }
 
@@ -143,49 +108,21 @@
       &--secondary {
         color: var(--lbz-theme-on-secondary);
         background-color: var(--lbz-theme-secondary);
-
-        .lbz-state {
-          &::before,
-          &::after {
-            background-color: var(--lbz-theme-on-secondary);
-          }
-        }
       }
 
       &--error {
         color: var(--lbz-theme-on-error);
         background-color: var(--lbz-theme-error);
-
-        .lbz-state {
-          &::before,
-          &::after {
-            background-color: var(--lbz-theme-on-error);
-          }
-        }
       }
 
       &--light {
         color: @black;
         background-color: #lbz-theme-surface.light[2];
-
-        .lbz-state {
-          &::before,
-          &::after {
-            background-color: @black;
-          }
-        }
       }
 
       &--dark {
         color: @white;
         background: #lbz-theme-surface.dark[2];
-
-        .lbz-state {
-          &::before,
-          &::after {
-            background-color: @white;
-          }
-        }
       }
     }
 
@@ -204,20 +141,15 @@
       margin-left: -4px;
     }
 
-    .lbz-state {
-      &::before,
-      &::after {
-        background-color: var(--lbz-theme-on-primary);
+    &:not(.is-unelevated):not(.is-disabled) {
+      &:hover,
+      &:focus {
+        .lbz-shadow--4();
       }
-    }
 
-    &:not(.is-unelevated):not(.is-disabled):hover,
-    &:not(.is-unelevated):not(.is-disabled):focus {
-      .lbz-shadow--4();
-    }
-
-    &:not(.is-unelevated):not(.is-disabled):active {
-      .lbz-shadow--8();
+      &:active {
+        .lbz-shadow--8();
+      }
     }
   }
 

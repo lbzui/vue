@@ -86,7 +86,9 @@ export default class LbzTabItem extends Vue {
 
   get cgetStateAttrs(): object {
     return {
+      class: 'lbz-tab-item__state',
       type: this.ponBackground === 'light' ? '' : 'primary',
+      background: ['', 'surface'].includes(this.ponBackground) ? 'primary' : `on-${this.ponBackground}`,
     };
   }
 
