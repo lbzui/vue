@@ -14,15 +14,15 @@
     <h6 class="lbz-typography--subtitle2">.lbz-typography--subtitle2</h6>
     <p class="lbz-typography--body1">.lbz-typography--body1</p>
     <p class="lbz-typography--body2">.lbz-typography--body2</p>
-    <div>
+    <p>
       <span class="lbz-typography--button">.lbz-typography--button</span>
-    </div>
-    <div>
+    </p>
+    <p>
       <span class="lbz-typography--caption">.lbz-typography--caption</span>
-    </div>
-    <div>
+    </p>
+    <p>
       <span class="lbz-typography--overline">.lbz-typography--overline</span>
-    </div>
+    </p>
   </article>
 </template>
 

@@ -1,5 +1,10 @@
 // Surface
-// usage: `.lbz-surface--x();` (x: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24)
+// usage: `.lbz-surface(x, y);`
+//        `.lbz-surface--x();` (x: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24)
+
+.lbz-surface(@theme: light; @value: 0) {
+  background: if((@theme = dark), #lbz-theme-surface.dark[@@value], #lbz-theme-surface.light[@@value]);
+}
 
 .lbz-surface--0() {
   background: var(--lbz-theme-surface-0);

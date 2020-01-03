@@ -1,42 +1,10 @@
 // Elevation
 // usage: `.lbz-elevation--x` (x: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24)
 
-.lbz-elevation--0 {
-  .lbz-elevation--0();
-}
+@lbz-elevation: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24;
 
-.lbz-elevation--1 {
-  .lbz-elevation--1();
-}
-
-.lbz-elevation--2 {
-  .lbz-elevation--2();
-}
-
-.lbz-elevation--3 {
-  .lbz-elevation--3();
-}
-
-.lbz-elevation--4 {
-  .lbz-elevation--4();
-}
-
-.lbz-elevation--6 {
-  .lbz-elevation--6();
-}
-
-.lbz-elevation--8 {
-  .lbz-elevation--8();
-}
-
-.lbz-elevation--12 {
-  .lbz-elevation--12();
-}
-
-.lbz-elevation--16 {
-  .lbz-elevation--16();
-}
-
-.lbz-elevation--24 {
-  .lbz-elevation--24();
-}
+each(@lbz-elevation, {
+  .lbz-elevation--@{value} {
+    .lbz-elevation(@value);
+  }
+});

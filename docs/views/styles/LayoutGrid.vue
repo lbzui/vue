@@ -7,20 +7,20 @@
       <div class="lbz-layout-grid__cell">.lbz-layout-grid__cell</div>
     </div>
     <div class="lbzui-u-rectangle lbz-layout-grid">
-      <div class="lbz-layout-grid__cell align-start lbzui-cell">.align-start</div>
-      <div class="lbz-layout-grid__cell align-center lbzui-cell">.align-center</div>
-      <div class="lbz-layout-grid__cell align-end lbzui-cell">.align-end</div>
-      <div class="lbz-layout-grid__cell align-stretch">.align-stretch</div>
+      <div class="lbz-layout-grid__cell align--start lbzui-cell">.align--start</div>
+      <div class="lbz-layout-grid__cell align--center lbzui-cell">.align--center</div>
+      <div class="lbz-layout-grid__cell align--end lbzui-cell">.align--end</div>
+      <div class="lbz-layout-grid__cell align--stretch">.align--stretch</div>
     </div>
     <div class="lbzui-u-rectangle lbz-layout-grid">
-      <div class="lbz-layout-grid__cell span1">.span1</div>
-      <div class="lbz-layout-grid__cell span3">.span3</div>
-      <div class="lbz-layout-grid__cell span8">.span8</div>
+      <div class="lbz-layout-grid__cell span--1">.span--1</div>
+      <div class="lbz-layout-grid__cell span--3">.span--3</div>
+      <div class="lbz-layout-grid__cell span--8">.span--8</div>
     </div>
     <div class="lbzui-u-rectangle lbz-layout-grid">
-      <div class="lbz-layout-grid__cell start1">.start1</div>
-      <div class="lbz-layout-grid__cell start2 span8">.start2.span8</div>
-      <div class="lbz-layout-grid__cell start10 end13">.start10.end13</div>
+      <div class="lbz-layout-grid__cell start--1">.start--1</div>
+      <div class="lbz-layout-grid__cell start--2 span--8">.start--2.span--8</div>
+      <div class="lbz-layout-grid__cell start--10 end--13">.start--10.end--13</div>
     </div>
   </article>
 </template>

@@ -9,7 +9,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  .lbz-elevation--24();
+  .lbz-elevation(24);
   overscroll-behavior-y: contain;
 
   & &__container {
@@ -19,7 +19,7 @@
     width: 280px;
     max-height: calc(100% - 32px);
     .lbz-surface--24();
-    .lbz-shadow--24();
+    .lbz-shadow(24);
 
     @media #lbz-layout-grid.media[min720] {
       width: 560px;
@@ -32,7 +32,7 @@
     // title
     .lbz-dialog__title {
       margin: 0;
-      .lbz-typography--h6();
+      .lbz-typography(h6);
       color: var(--lbz-theme-text-high-emphasis-on-surface);
     }
 
@@ -45,7 +45,7 @@
     overflow: auto;
     box-sizing: border-box;
     padding: 20px 24px;
-    .lbz-typography--body1();
+    .lbz-typography(body1);
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
     -webkit-overflow-scrolling: touch;
 

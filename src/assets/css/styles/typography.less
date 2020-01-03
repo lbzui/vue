@@ -2,62 +2,21 @@
 // usage: `.lbz-typography`
 //        `.lbz-typography--x`
 
+@lbz-typography:
+  font-family,
+  h1, h2, h3, h4, h5, h6,
+  subtitle1, subtitle2,
+  body1, body2,
+  button,
+  caption,
+  overline;
+
 .lbz-typography {
   .lbz-typography();
 }
 
-.lbz-typography--font-family {
-  .lbz-typography--font-family();
-}
-
-.lbz-typography--h1 {
-  .lbz-typography--h1();
-}
-
-.lbz-typography--h2 {
-  .lbz-typography--h2();
-}
-
-.lbz-typography--h3 {
-  .lbz-typography--h3();
-}
-
-.lbz-typography--h4 {
-  .lbz-typography--h4();
-}
-
-.lbz-typography--h5 {
-  .lbz-typography--h5();
-}
-
-.lbz-typography--h6 {
-  .lbz-typography--h6();
-}
-
-.lbz-typography--subtitle1 {
-  .lbz-typography--subtitle1();
-}
-
-.lbz-typography--subtitle2 {
-  .lbz-typography--subtitle2();
-}
-
-.lbz-typography--body1 {
-  .lbz-typography--body1();
-}
-
-.lbz-typography--body2 {
-  .lbz-typography--body2();
-}
-
-.lbz-typography--button {
-  .lbz-typography--button();
-}
-
-.lbz-typography--caption {
-  .lbz-typography--caption();
-}
-
-.lbz-typography--overline {
-  .lbz-typography--overline();
-}
+each(@lbz-typography, {
+  .lbz-typography--@{value} {
+    .lbz-typography(@value);
+  }
+});

@@ -1,7 +1,7 @@
 // Layout grid
-// usage: `.lbz-layout-grid-x();`
+// usage: `.lbz-layout-grid-x(y, ...);`
 
-.lbz-layout-grid-grid-column-start(@start) {
+.lbz-layout-grid-grid-column-start(@start: 1) {
   grid-column-start: @start;
 }
 
@@ -15,7 +15,7 @@
   grid-column-end: @end;
 }
 
-.lbz-layout-grid-grid-row-start(@start) {
+.lbz-layout-grid-grid-row-start(@start: 1) {
   grid-row-start: @start;
 }
 
@@ -29,10 +29,10 @@
   grid-row-end: @end;
 }
 
-.lbz-layout-grid-grid-column(@start; @end) {
+.lbz-layout-grid-grid-column(@start: 1; @end) {
   grid-column: ~'@{start} / @{end}';
 }
 
-.lbz-layout-grid-grid-row(@start; @end) {
+.lbz-layout-grid-grid-row(@start: 1; @end) {
   grid-row: ~'@{start} / @{end}';
 }

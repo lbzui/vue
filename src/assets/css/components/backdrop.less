@@ -1,6 +1,5 @@
 // Backdrop
 .lbz-backdrop {
-  overflow: hidden;
   position: fixed;
   top: 0;
   right: 0;
@@ -38,11 +37,10 @@
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: stretch;
-    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    .lbz-elevation--2();
+    .lbz-elevation(2);
     border-radius: 24px 24px 0 0;
     width: 100%;
     height: calc(100% - 64px);
@@ -51,6 +49,11 @@
     transition: transform 250ms #lbz-motion.curve[standard];
     transform: translate3d(0, 64px, 0);
 
+    > :first-child {
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+    }
+
     &__header {
       flex: none;
       display: flex;
@@ -58,15 +61,15 @@
       justify-content: flex-end;
       align-items: center;
       position: relative;
-      margin: 0 var(--lbz-layout-grid-margin);
+      padding: 0 var(--lbz-layout-grid-margin);
       height: 56px;
 
       // subtitle
       &__title {
         flex: 1;
         margin: 0;
-        .lbz-typography--subtitle1();
-        .lbz-u-truncate--one();
+        .lbz-typography(subtitle1);
+        .lbz-u-truncate(1);
         color: var(--lbz-theme-text-high-emphasis-on-surface);
       }
 
@@ -80,9 +83,9 @@
       // divider
       .lbz-divider {
         position: absolute;
-        right: 0;
+        right: var(--lbz-layout-grid-margin);
         bottom: -1px;
-        left: 0;
+        left: var(--lbz-layout-grid-margin);
       }
     }
 
@@ -108,6 +111,7 @@
       right: 0;
       bottom: 0;
       left: 0;
+      border-radius: inherit;
       background-color: #lbz-theme[scrim];
     }
   }

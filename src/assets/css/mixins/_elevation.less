@@ -1,68 +1,18 @@
 // Elevation
-// usage: `.lbz-elevation--x();` (x: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24)
+// usage: `.lbz-elevation(x);` (x: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24)
 
-// Top app bar (resting elevation)
-// Text button
-// Standard side sheet
-.lbz-elevation--0() {
-  z-index: 0;
-}
+//  0: Top app bar (resting elevation), Text button, Standard side sheet
+//  1: Search bar (resting elevation), Card (resting elevation), Switch
+//  2: Contained button (resting elevation)
+//  3: Refresh indicator, Search bar (scrolled state)
+//  4: Top app bar (scrolled state), Top app bar (resting elevation)
+//  6: Floating action button (FAB - resting elevation), Snackbar
+//  8: Standard bottom sheet, Standard side sheet, Bottom navigation bar, Bottom app bar,
+//     Menus and sub menus, Card (when picked up), Contained button (pressed state)
+// 12: Floating action button (FAB - pressed)
+// 16: Modal bottom sheet, Modal side sheet, Navigation drawer
+// 24: Dialog, Picker
 
-// Search bar (resting elevation)
-// Card (resting elevation)
-// Switch
-.lbz-elevation--1() {
-  z-index: 1;
-}
-
-// Contained button (resting elevation)
-.lbz-elevation--2() {
-  z-index: 2;
-}
-
-// Refresh indicator
-// Search bar (scrolled state)
-.lbz-elevation--3() {
-  z-index: 3;
-}
-
-// Top app bar (scrolled state)
-// Top app bar (resting elevation)
-.lbz-elevation--4() {
-  z-index: 4;
-}
-
-// Floating action button (FAB - resting elevation)
-// Snackbar
-.lbz-elevation--6() {
-  z-index: 6;
-}
-
-// Standard bottom sheet
-// Standard side sheet
-// Bottom navigation bar
-// Bottom app bar
-// Menus and sub menus
-// Card (when picked up)
-// Contained button (pressed state)
-.lbz-elevation--8() {
-  z-index: 8;
-}
-
-// Floating action button (FAB - pressed)
-.lbz-elevation--12() {
-  z-index: 12;
-}
-
-// Modal bottom sheet
-// Modal side sheet
-// Navigation drawer
-.lbz-elevation--16() {
-  z-index: 16;
-}
-
-// Dialog
-// Picker
-.lbz-elevation--24() {
-  z-index: 24;
+.lbz-elevation(@value: 0) {
+  z-index: @value;
 }
