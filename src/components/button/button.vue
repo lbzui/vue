@@ -57,7 +57,7 @@ export default class LbzButton extends Vue {
   }) private routerLinkProps!: object;
   // tag: 'button' (default), 'a', 'x'
   @Prop({ type: String, default: 'button' }) private tag!: string;
-  // color: 'primary' (default), 'secondary', 'error', 'light', 'dark'
+  // color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private color!: string;
   // full-width: true, false (default)
   @Prop({ type: Boolean, default: false }) private fullWidth!: boolean;
@@ -104,10 +104,12 @@ export default class LbzButton extends Vue {
   }
 
   get cgetStateAttrs(): object {
+    const isOn: boolean = this.type === 'contained' || ['background', 'surface'].includes(this.color);
+
     return {
       class: 'lbz-button__state',
       type: this.color === 'light' ? '' : 'primary',
-      background: `${(this.type === 'contained' ? 'on-' : '') + (this.color || 'primary')}`,
+      background: `${(isOn ? 'on-' : '') + (this.color || 'primary')}`,
     };
   }
 }

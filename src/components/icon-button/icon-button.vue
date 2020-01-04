@@ -102,7 +102,7 @@ export default class LbzIconButton extends Vue {
   get cgetStateAttrs(): object {
     return {
       class: 'lbz-icon-button__state',
-      type: ['primary', 'secondary', 'error', 'dark'].includes(this.onBackground) ? 'primary' : '',
+      type: this.onBackground === 'light' ? '' : 'primary',
       background: this.onBackground ? `on-${this.onBackground}` : '',
       unscalable: true,
     };

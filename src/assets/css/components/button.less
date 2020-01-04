@@ -57,6 +57,14 @@
     color: var(--lbz-theme-secondary);
   }
 
+  &&--background {
+    color: var(--lbz-theme-on-background);
+  }
+
+  &&--surface {
+    color: var(--lbz-theme-on-surface);
+  }
+
   &&--error {
     color: var(--lbz-theme-error);
   }
@@ -110,6 +118,21 @@
         background-color: var(--lbz-theme-secondary);
       }
 
+      &--background {
+        color: var(--lbz-theme-on-background);
+        background-color: var(--lbz-theme-background);
+      }
+
+      &--surface {
+        color: var(--lbz-theme-on-surface);
+        .lbz-surface--2();
+
+        // unelevated
+        &.is-unelevated {
+          .lbz-surface--0();
+        }
+      }
+
       &--error {
         color: var(--lbz-theme-on-error);
         background-color: var(--lbz-theme-error);
@@ -118,11 +141,21 @@
       &--light {
         color: @black;
         .lbz-surface(light, 2);
+
+        // unelevated
+        &.is-unelevated {
+          .lbz-surface(light, 0);
+        }
       }
 
       &--dark {
         color: @white;
         .lbz-surface(dark, 2);
+
+        // unelevated
+        &.is-unelevated {
+          .lbz-surface(dark, 0);
+        }
       }
     }
 

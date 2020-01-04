@@ -31,7 +31,7 @@ export default class LbzFAB extends Vue {
   @Prop({ type: String, default: '' }) private type!: string;
   // tag: 'button' (default), 'a', 'x'
   @Prop({ type: String, default: 'button' }) private tag!: string;
-  // background: 'primary', 'primary-variant', 'secondary' (default), 'surface', 'light', 'dark'
+  // background: 'primary', 'primary-variant', 'secondary' (default), 'background', 'surface', 'light', 'dark'
   @Prop({ type: String, default: '' }) private background!: string;
   // inactive: true, false (default)
   @Prop({ type: Boolean, default: false }) private inactive!: boolean;
@@ -41,7 +41,7 @@ export default class LbzFAB extends Vue {
   get cgetStateAttrs(): object {
     return {
       class: 'lbz-fab__state',
-      type: ['surface', 'light'].includes(this.background) ? '' : 'primary',
+      type: this.background === 'light' ? '' : 'primary',
       background: `on-${this.background || 'secondary'}`,
     };
   }

@@ -27,6 +27,11 @@
   &&--surface {
     color: var(--lbz-theme-on-surface);
     .lbz-surface--0();
+
+    // elevated
+    &.is-elevated {
+      .lbz-surface--4();
+    }
   }
 
   &&--light {
@@ -196,7 +201,7 @@
 }
 
 html[theme="dark"] {
-  .lbz-top-app-bar:not(.lbz-top-app-bar--light):not(.lbz-top-app-bar--dark) {
+  .lbz-top-app-bar:not(.lbz-top-app-bar--surface):not(.lbz-top-app-bar--light):not(.lbz-top-app-bar--dark) {
     color: var(--lbz-theme-on-surface);
     .lbz-surface--0();
 

@@ -18,10 +18,11 @@
     <lbz-fab>add</lbz-fab>
     <lbz-fab tag="a" href="#/components/fab">add</lbz-fab>
 
-    <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'surface', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'background', 'surface', 'light', 'dark'</h3>
     <lbz-fab background="primary">add</lbz-fab>
     <lbz-fab background="primary-variant">add</lbz-fab>
     <lbz-fab>add</lbz-fab>
+    <lbz-fab background="background">add</lbz-fab>
     <lbz-fab background="surface">add</lbz-fab>
     <lbz-fab background="light">add</lbz-fab>
     <lbz-fab background="dark">add</lbz-fab>
@@ -52,10 +53,11 @@
       href="#/components/fab"
     >add</lbz-fab>
 
-    <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'surface', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'background', 'surface', 'light', 'dark'</h3>
     <lbz-fab type="mini" background="primary">add</lbz-fab>
     <lbz-fab type="mini" background="primary-variant">add</lbz-fab>
     <lbz-fab type="mini">add</lbz-fab>
+    <lbz-fab type="mini" background="background">add</lbz-fab>
     <lbz-fab type="mini" background="surface">add</lbz-fab>
     <lbz-fab type="mini" background="light">add</lbz-fab>
     <lbz-fab type="mini" background="dark">add</lbz-fab>
@@ -89,7 +91,7 @@
       label="Create"
     />
 
-    <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'surface', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'background', 'surface', 'light', 'dark'</h3>
     <lbz-fab
       type="extended"
       background="primary"
@@ -101,6 +103,11 @@
       label="Create"
     />
     <lbz-fab type="extended" label="Create"/>
+    <lbz-fab
+      type="extended"
+      background="background"
+      label="Create"
+    />
     <lbz-fab
       type="extended"
       background="surface"

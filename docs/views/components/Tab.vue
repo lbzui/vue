@@ -22,13 +22,18 @@
       <lbz-tab-item :value="2">Item</lbz-tab-item>
     </lbz-tab>
 
-    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'background', 'surface' (default), 'light', 'dark'</h3>
     <lbz-tab v-model="vtab0" on-background="primary">
       <lbz-tab-item :value="0">Item</lbz-tab-item>
       <lbz-tab-item :value="1">Item</lbz-tab-item>
       <lbz-tab-item :value="2">Item</lbz-tab-item>
     </lbz-tab>
     <lbz-tab v-model="vtab0" on-background="secondary">
+      <lbz-tab-item :value="0">Item</lbz-tab-item>
+      <lbz-tab-item :value="1">Item</lbz-tab-item>
+      <lbz-tab-item :value="2">Item</lbz-tab-item>
+    </lbz-tab>
+    <lbz-tab v-model="vtab0" on-background="background">
       <lbz-tab-item :value="0">Item</lbz-tab-item>
       <lbz-tab-item :value="1">Item</lbz-tab-item>
       <lbz-tab-item :value="2">Item</lbz-tab-item>
@@ -150,7 +155,7 @@
       <lbz-tab-item :value="5">Item</lbz-tab-item>
     </lbz-tab>
 
-    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'background', 'surface' (default), 'light', 'dark'</h3>
     <lbz-tab
       v-model="vtab1"
       type="scrollable"
@@ -167,6 +172,18 @@
       v-model="vtab1"
       type="scrollable"
       on-background="secondary"
+    >
+      <lbz-tab-item :value="0">Item</lbz-tab-item>
+      <lbz-tab-item :value="1">Item</lbz-tab-item>
+      <lbz-tab-item :value="2">Item</lbz-tab-item>
+      <lbz-tab-item :value="3">Item</lbz-tab-item>
+      <lbz-tab-item :value="4">Item</lbz-tab-item>
+      <lbz-tab-item :value="5">Item</lbz-tab-item>
+    </lbz-tab>
+    <lbz-tab
+      v-model="vtab1"
+      type="scrollable"
+      on-background="background"
     >
       <lbz-tab-item :value="0">Item</lbz-tab-item>
       <lbz-tab-item :value="1">Item</lbz-tab-item>

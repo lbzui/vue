@@ -2,7 +2,7 @@
   <span :class="[
     'lbz-state',
     type && `lbz-state--${ type }`,
-    background && `lbz-state-background--${ background }`,
+    background && `lbz-state-bg--${ background }`,
     unscalable && 'is-unscalable'
   ]"></span>
 </template>

@@ -24,12 +24,18 @@
       icon="favorite"
     >Non-Router-link</lbz-button>
 
-    <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'error', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
     <lbz-button>Primary</lbz-button>
     <lbz-button icon="favorite">Primary</lbz-button>
     <br>
     <lbz-button color="secondary">Secondary</lbz-button>
     <lbz-button color="secondary" icon="favorite">Secondary</lbz-button>
+    <br>
+    <lbz-button color="background">Background</lbz-button>
+    <lbz-button color="background" icon="favorite">Background</lbz-button>
+    <br>
+    <lbz-button color="surface">Surface</lbz-button>
+    <lbz-button color="surface" icon="favorite">Surface</lbz-button>
     <br>
     <lbz-button color="error">Error</lbz-button>
     <lbz-button color="error" icon="favorite">Error</lbz-button>
@@ -58,6 +64,20 @@
       disabled
       icon="favorite"
     >Secondary</lbz-button>
+    <br>
+    <lbz-button color="background" disabled>Background</lbz-button>
+    <lbz-button
+      color="background"
+      disabled
+      icon="favorite"
+    >Background</lbz-button>
+    <br>
+    <lbz-button color="surface" disabled>Surface</lbz-button>
+    <lbz-button
+      color="surface"
+      disabled
+      icon="favorite"
+    >Surface</lbz-button>
     <br>
     <lbz-button color="error" disabled>Error</lbz-button>
     <lbz-button
@@ -128,7 +148,7 @@
       icon="favorite"
     >Non-Router-link</lbz-button>
 
-    <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'error', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
     <lbz-button type="outlined">Primary</lbz-button>
     <lbz-button type="outlined" icon="favorite">Primary</lbz-button>
     <br>
@@ -138,6 +158,20 @@
       color="secondary"
       icon="favorite"
     >Secondary</lbz-button>
+    <br>
+    <lbz-button type="outlined" color="background">Background</lbz-button>
+    <lbz-button
+      type="outlined"
+      color="background"
+      icon="favorite"
+    >Background</lbz-button>
+    <br>
+    <lbz-button type="outlined" color="surface">Surface</lbz-button>
+    <lbz-button
+      type="outlined"
+      color="surface"
+      icon="favorite"
+    >Surface</lbz-button>
     <br>
     <lbz-button type="outlined" color="error">Error</lbz-button>
     <lbz-button
@@ -195,6 +229,30 @@
       disabled
       icon="favorite"
     >Secondary</lbz-button>
+    <br>
+    <lbz-button
+      type="outlined"
+      color="background"
+      disabled
+    >Background</lbz-button>
+    <lbz-button
+      type="outlined"
+      color="background"
+      disabled
+      icon="favorite"
+    >Background</lbz-button>
+    <br>
+    <lbz-button
+      type="outlined"
+      color="surface"
+      disabled
+    >Surface</lbz-button>
+    <lbz-button
+      type="outlined"
+      color="surface"
+      disabled
+      icon="favorite"
+    >Surface</lbz-button>
     <br>
     <lbz-button
       type="outlined"
@@ -280,7 +338,7 @@
       icon="favorite"
     >Non-Router-link</lbz-button>
 
-    <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'error', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
     <lbz-button type="contained">Primary</lbz-button>
     <lbz-button type="contained" icon="favorite">Primary</lbz-button>
     <br>
@@ -290,6 +348,20 @@
       color="secondary"
       icon="favorite"
     >Secondary</lbz-button>
+    <br>
+    <lbz-button type="contained" color="background">Background</lbz-button>
+    <lbz-button
+      type="contained"
+      color="background"
+      icon="favorite"
+    >Background</lbz-button>
+    <br>
+    <lbz-button type="contained" color="surface">Surface</lbz-button>
+    <lbz-button
+      type="contained"
+      color="surface"
+      icon="favorite"
+    >Surface</lbz-button>
     <br>
     <lbz-button type="contained" color="error">Error</lbz-button>
     <lbz-button
@@ -355,6 +427,30 @@
       disabled
       icon="favorite"
     >Secondary</lbz-button>
+    <br>
+    <lbz-button
+      type="contained"
+      color="background"
+      disabled
+    >Background</lbz-button>
+    <lbz-button
+      type="contained"
+      color="background"
+      disabled
+      icon="favorite"
+    >Background</lbz-button>
+    <br>
+    <lbz-button
+      type="contained"
+      color="surface"
+      disabled
+    >Surface</lbz-button>
+    <lbz-button
+      type="contained"
+      color="surface"
+      disabled
+      icon="favorite"
+    >Surface</lbz-button>
     <br>
     <lbz-button
       type="contained"

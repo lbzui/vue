@@ -1,5 +1,11 @@
 <template>
-  <div :class="['lbz-backdrop', cisActive && 'is-active']">
+  <div
+    :class="[
+      'lbz-backdrop',
+      background && `lbz-backdrop--${ background }`,
+      cisActive && 'is-active'
+    ]"
+  >
     <section class="lbz-backdrop__back-layer">
       <div v-if="$slots['back-layer-header']" class="lbz-backdrop__back-layer__header">
         <slot name="back-layer-header"/>
@@ -58,6 +64,8 @@ export default class LbzBackdrop extends Vue {
   // [required]active.sync: true, false
   @PropSync('active', { type: Boolean, required: true }) private cisActive!: boolean;
 
+  // background: 'primary' (default), 'secondary', 'dark'
+  @Prop({ type: String, default: '' }) private background!: string;
   // subtitle: '' (default), 'x'
   @Prop({ type: String, default: '' }) private subtitle!: string;
   // icon: true, false (default)
