@@ -1,47 +1,47 @@
 // Surface
-// usage: `.lbz-surface(x, y);`
-//        `.lbz-surface--x();` (x: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24)
+// usage: `.lbz-surface(x);` (x: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24)
+//        `.lbz-surface(x, y);`
 
-.lbz-surface(@theme: light; @value: 0) {
-  background: if((@theme = dark), #lbz-theme-surface.dark[@@value], #lbz-theme-surface.light[@@value]);
-}
-
-.lbz-surface--0() {
+.lbz-surface(@value: 0) when (@value = 0) {
   background: var(--lbz-theme-surface-0);
 }
 
-.lbz-surface--1() {
+.lbz-surface(@value: 0) when (@value = 1) {
   background: var(--lbz-theme-surface-1);
 }
 
-.lbz-surface--2() {
+.lbz-surface(@value: 0) when (@value = 2) {
   background: var(--lbz-theme-surface-2);
 }
 
-.lbz-surface--3() {
+.lbz-surface(@value: 0) when (@value = 3) {
   background: var(--lbz-theme-surface-3);
 }
 
-.lbz-surface--4() {
+.lbz-surface(@value: 0) when (@value = 4) {
   background: var(--lbz-theme-surface-4);
 }
 
-.lbz-surface--6() {
+.lbz-surface(@value: 0) when (@value = 6) {
   background: var(--lbz-theme-surface-6);
 }
 
-.lbz-surface--8() {
+.lbz-surface(@value: 0) when (@value = 8) {
   background: var(--lbz-theme-surface-8);
 }
 
-.lbz-surface--12() {
+.lbz-surface(@value: 0) when (@value = 12) {
   background: var(--lbz-theme-surface-12);
 }
 
-.lbz-surface--16() {
+.lbz-surface(@value: 0) when (@value = 16) {
   background: var(--lbz-theme-surface-16);
 }
 
-.lbz-surface--24() {
+.lbz-surface(@value: 0) when (@value = 24) {
   background: var(--lbz-theme-surface-24);
+}
+
+.lbz-surface(@theme: 'light'; @value: 0) when (isstring(@theme)) {
+  background: if((@theme = 'dark'), #lbz-theme-surface.dark[@@value], #lbz-theme-surface.light[@@value]);
 }
