@@ -1,5 +1,5 @@
 html body {
-  .lbz-surface(3);
+  .lbz-surface(1);
 }
 
 .lbzui-u-square {
@@ -203,12 +203,12 @@ html body {
 
       &-light {
         color: @black;
-        background-color: @white;
+        .lbz-surface('light', 0);
       }
 
       &-dark {
         color: @white;
-        background-color: @black;
+        .lbz-surface('dark', 0);
       }
     }
 
@@ -234,11 +234,11 @@ html body {
         }
 
         &-light {
-          background-color: @white;
+          .lbz-surface('light', 0);
         }
 
         &-dark {
-          background-color: @black;
+          .lbz-surface('dark', 0);
         }
       }
 
