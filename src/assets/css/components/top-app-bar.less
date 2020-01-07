@@ -120,6 +120,13 @@
     .lbz-button {
       margin-top: 6px;
       color: inherit;
+
+      .lbz-button__state {
+        &::before,
+        &::after {
+          background-color: var(--lbz-theme-on-primary);
+        }
+      }
     }
   }
 
@@ -209,6 +216,7 @@ html[theme="dark"] {
       .lbz-surface('dark', 4);
     }
 
+    .lbz-button__state,
     .lbz-icon-button__state,
     .lbz-tab-item__state {
       &::before,
