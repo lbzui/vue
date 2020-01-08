@@ -14,6 +14,7 @@ import IconButton from './icon-button';
 import List from './list';
 import ListItem from './list-item';
 import Radio from './radio';
+import State from './state';
 import Tab from './tab';
 import TabItem from './tab-item';
 import TopAppBar from './top-app-bar';
@@ -34,6 +35,7 @@ const components: any[] = [
   List,
   ListItem,
   Radio,
+  State,
   Tab,
   TabItem,
   TopAppBar,
@@ -65,7 +67,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '0.1.7',
+  version: '0.2.0',
   install,
   Backdrop,
   Button,
@@ -80,6 +82,7 @@ export default {
   List,
   ListItem,
   Radio,
+  State,
   Tab,
   TabItem,
   TopAppBar,

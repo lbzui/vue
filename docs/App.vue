@@ -62,6 +62,7 @@
             id="light-theme"
             name="light-theme"
             :value="false"
+            :disabled="!vsupportsCssVariables"
             @change="fsetTheme"
           >Light</lbz-radio>
           <lbz-radio
@@ -69,6 +70,7 @@
             id="dark-theme"
             name="dark-theme"
             :value="true"
+            :disabled="!vsupportsCssVariables"
             @change="fsetTheme"
           >Dark</lbz-radio>
         </lbz-list-item>
@@ -86,6 +88,7 @@
 
 <script lang="ts">
 import { Component, Watch, Vue } from 'vue-property-decorator';
+import { supportsCssVariables, isDarkModeEnabled, registerChangeModeHandler } from '@/utils/funcs';
 
 @Component
 export default class App extends Vue {
@@ -210,6 +213,7 @@ export default class App extends Vue {
     ],
   };
 
+  private vsupportsCssVariables: boolean = supportsCssVariables();
   private visDark: boolean = false;
   private vwidth: number = 0;
   private vactive: boolean = true;
@@ -226,11 +230,11 @@ export default class App extends Vue {
 
   private created(): void {
     this.fchangeMode();
-    this.fresize(document.body.clientWidth);
-
-    window.matchMedia('(prefers-color-scheme: dark)').onchange = (): void => {
+    registerChangeModeHandler((): void => {
       this.fchangeMode();
-    };
+    });
+
+    this.fresize(document.body.clientWidth);
     window.onresize = (): void => {
       this.fresize(document.body.clientWidth);
     };
@@ -247,10 +251,14 @@ export default class App extends Vue {
   }
 
   private fchangeMode(): void {
-    const isDarkModeEnabled: boolean = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (!this.vsupportsCssVariables) {
+      return;
+    }
 
-    this.visDark = isDarkModeEnabled;
-    this.fsetTheme(isDarkModeEnabled);
+    const isDark: boolean = isDarkModeEnabled();
+
+    this.visDark = isDark;
+    this.fsetTheme(isDark);
   }
 
   private fresize(val: number): void {
@@ -269,6 +277,7 @@ export default class App extends Vue {
       .setAttribute('content', val ? '#000' : '#3700b3');
     document.querySelector('meta[name=apple-mobile-web-app-status-bar-style]')!
       .setAttribute('content', val ? 'black' : 'default');
+
     this.fcloseDrawer();
   }
 }

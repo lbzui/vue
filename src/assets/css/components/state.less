@@ -1,13 +1,5 @@
 // State
 .lbz-state {
-  // --lbz-state-top: 0;
-  // --lbz-state-left: 0;
-  --lbz-state-size: 0;
-  --lbz-state-opacity: #lbz-state.surface[pressed];
-  --lbz-state-translate-start: 0;
-  --lbz-state-translate-end: 0;
-  --lbz-state-scale: 1;
-
   display: block;
   overflow: hidden;
   position: absolute;
@@ -36,16 +28,6 @@
     width: 200%;
     height: 200%;
     transition: background-color 15ms linear, opacity 15ms linear;
-    transform: scale(var(--lbz-state-scale, 1));
-  }
-
-  &::after {
-    top: 0;
-    left: 0;
-    width: var(--lbz-state-size, 100%);
-    height: var(--lbz-state-size, 100%);
-    transform: scale(0);
-    transform-origin: center center;
   }
 
   // unscalable
@@ -77,8 +59,6 @@
 
   // type
   &&--primary {
-    --lbz-state-opacity: #lbz-state.primary[pressed];
-
     &:hover::before {
       opacity: #lbz-state.primary[hover];
     }
@@ -93,8 +73,6 @@
   }
 
   &&--image {
-    --lbz-state-opacity: #lbz-state.image[pressed];
-
     &:hover::before {
       opacity: #lbz-state.image[hover];
     }
@@ -138,26 +116,55 @@
       }
     }
   });
+}
 
-  // ripple
+// ripple
+.lbz-ripple {
+  --lbz-ripple-size: 0;
+  --lbz-ripple-opacity: #lbz-state.surface[pressed];
+  --lbz-ripple-translate-start: 0;
+  --lbz-ripple-translate-end: 0;
+  --lbz-ripple-scale: 1;
+
+  &.lbz-state--primary {
+    --lbz-ripple-opacity: #lbz-state.primary[pressed];
+  }
+
+  &.lbz-state--image {
+    --lbz-ripple-opacity: #lbz-state.image[pressed];
+  }
+
+  &::before {
+    transform: scale(var(--lbz-ripple-scale, 1));
+  }
+
+  &::after {
+    top: 0;
+    left: 0;
+    width: var(--lbz-ripple-size, 100%);
+    height: var(--lbz-ripple-size, 100%);
+    transform: scale(0);
+    transform-origin: center center;
+  }
+
   &.lbz-ripple-enter::after {
     animation: lbz-ripple-opacity-in 75ms forwards, lbz-ripple-radius-in 225ms forwards;
   }
 
   &.lbz-ripple-leave::after {
-    transform: translate(var(--lbz-state-translate-end, 0)) scale(var(--lbz-state-scale, 1));
+    transform: translate(var(--lbz-ripple-translate-end, 0)) scale(var(--lbz-ripple-scale, 1));
     animation: lbz-ripple-opacity-out 150ms;
   }
 }
 
 @keyframes lbz-ripple-radius-in {
   from {
-    transform: translate(var(--lbz-state-translate-start, 0)) scale(1);
+    transform: translate(var(--lbz-ripple-translate-start, 0)) scale(1);
     animation-timing-function: #lbz-motion.curve[standard];
   }
 
   to {
-    transform: translate(var(--lbz-state-translate-end, 0)) scale(var(--lbz-state-scale, 1));
+    transform: translate(var(--lbz-ripple-translate-end, 0)) scale(var(--lbz-ripple-scale, 1));
   }
 }
 
@@ -168,13 +175,13 @@
   }
 
   to {
-    opacity: var(--lbz-state-opacity, 0);
+    opacity: var(--lbz-ripple-opacity, 0);
   }
 }
 
 @keyframes lbz-ripple-opacity-out {
   from {
-    opacity: var(--lbz-state-opacity, 0);
+    opacity: var(--lbz-ripple-opacity, 0);
     animation-timing-function: linear;
   }
 

@@ -158,7 +158,6 @@ import '@lbzui/vue/src/assets/css/styles/surface.less';
 import '@lbzui/vue/src/assets/css/styles/typography.less';
 import '@lbzui/vue/src/assets/css/styles/utility.less';
 
-import '@lbzui/vue/src/assets/css/components/state.less';
 import '@lbzui/vue/src/assets/css/components/backdrop.less';
 import '@lbzui/vue/src/assets/css/components/button.less';
 import '@lbzui/vue/src/assets/css/components/card.less';
@@ -172,6 +171,7 @@ import '@lbzui/vue/src/assets/css/components/icon-button.less';
 import '@lbzui/vue/src/assets/css/components/list.less';
 import '@lbzui/vue/src/assets/css/components/list-item.less';
 import '@lbzui/vue/src/assets/css/components/radio.less';
+import '@lbzui/vue/src/assets/css/components/state.less';
 import '@lbzui/vue/src/assets/css/components/tab.less';
 import '@lbzui/vue/src/assets/css/components/tab-item.less';
 import '@lbzui/vue/src/assets/css/components/top-app-bar.less';
@@ -190,6 +190,7 @@ import {
   List,
   ListItem,
   Radio,
+  State,
   Tab,
   TabItem,
   TopAppBar,
@@ -213,6 +214,7 @@ Vue.use(IconButton);
 Vue.use(List);
 Vue.use(ListItem);
 Vue.use(Radio);
+Vue.use(State);
 Vue.use(Tab);
 Vue.use(TabItem);
 Vue.use(TopAppBar);
