@@ -7,11 +7,11 @@
       unscalable && 'is-unscalable',
       cisRipple && 'lbz-ripple'
     ]"
-    @touchstart="ftouchstart($event)"
-    @touchmove="ftouchmove($event)"
-    @touchend="ftouchend($event)"
-    @mousedown="fmousedown($event)"
-    @mouseup="fmouseup($event)"
+    @touchstart.passive="ftouchstart($event)"
+    @touchmove.passive="ftouchmove($event)"
+    @touchend.passive="ftouchend($event)"
+    @mousedown.passive="fmousedown($event)"
+    @mouseup.passive="fmouseup($event)"
   ></span>
 </template>
 
@@ -31,9 +31,10 @@ export default class LbzState extends Vue {
   // unscalable: true, false (default)
   @Prop({ type: Boolean, default: false }) private unscalable!: boolean;
 
-  private frameTimer = 0;
-  private enterTimer = 0;
-  private leaveTimer = 0;
+  private visTouch: boolean = false;
+  private vframeTimer: any = 0;
+  private venterTimer: any = 0;
+  private vleaveTimer: any = 0;
 
   get cisRipple(): boolean {
     return this.$LBZUI.ripple && supportsCssVars();
@@ -41,9 +42,9 @@ export default class LbzState extends Vue {
 
   private beforeDestroy(): void {
     if (this.cisRipple) {
-      window.cancelAnimationFrame(this.frameTimer);
-      clearTimeout(this.enterTimer);
-      clearTimeout(this.leaveTimer);
+      window.cancelAnimationFrame(this.vframeTimer);
+      clearTimeout(this.venterTimer);
+      clearTimeout(this.vleaveTimer);
     }
   }
 
@@ -52,8 +53,7 @@ export default class LbzState extends Vue {
       return;
     }
 
-    e.preventDefault();
-
+    this.visTouch = true;
     this.fenter(e);
   }
 
@@ -61,16 +61,12 @@ export default class LbzState extends Vue {
     if (!this.cisRipple) {
       return;
     }
-
-    e.preventDefault();
   }
 
   private ftouchend(e: TouchEvent): void {
     if (!this.cisRipple) {
       return;
     }
-
-    e.preventDefault();
 
     this.fleave(e);
   }
@@ -80,7 +76,9 @@ export default class LbzState extends Vue {
       return;
     }
 
-    this.fenter(e);
+    if (!this.visTouch) {
+      this.fenter(e);
+    }
   }
 
   private fmouseup(e: MouseEvent): void {
@@ -88,7 +86,10 @@ export default class LbzState extends Vue {
       return;
     }
 
-    this.fleave(e);
+    if (!this.visTouch) {
+      this.visTouch = false;
+      this.fleave(e);
+    }
   }
 
   private fenter(e: Event): void {
@@ -114,7 +115,7 @@ export default class LbzState extends Vue {
     target.style.setProperty('--lbz-ripple-translate-end', `${translateEnd.x}px, ${translateEnd.y}px`);
     target.style.setProperty('--lbz-ripple-scale', `${radius / size}`);
 
-    this.frameTimer = window.requestAnimationFrame((): void => {
+    this.vframeTimer = window.requestAnimationFrame((): void => {
       target.classList.add('lbz-ripple-enter');
     });
   }
@@ -122,11 +123,11 @@ export default class LbzState extends Vue {
   private fleave(e: Event): void {
     const target = (e as any).target;
 
-    this.enterTimer = setTimeout((): void => {
+    this.venterTimer = setTimeout((): void => {
       target.classList.remove('lbz-ripple-enter');
       target.classList.add('lbz-ripple-leave');
 
-      this.leaveTimer = setTimeout((): void => {
+      this.vleaveTimer = setTimeout((): void => {
         target.classList.remove('lbz-ripple-leave');
       }, 225);
     }, 150);
