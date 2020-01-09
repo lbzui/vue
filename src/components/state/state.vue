@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { supportsCssVariables } from '../../utils/funcs';
+import { supportsCssVars } from '../../utils/funcs';
 
 @Component
 export default class LbzState extends Vue {
@@ -36,7 +36,7 @@ export default class LbzState extends Vue {
   private leaveTimer = 0;
 
   get cisRipple(): boolean {
-    return this.$LBZUI.ripple && supportsCssVariables();
+    return this.$LBZUI.ripple && supportsCssVars();
   }
 
   private beforeDestroy(): void {
@@ -52,6 +52,8 @@ export default class LbzState extends Vue {
       return;
     }
 
+    e.preventDefault();
+
     this.fenter(e);
   }
 
@@ -59,12 +61,16 @@ export default class LbzState extends Vue {
     if (!this.cisRipple) {
       return;
     }
+
+    e.preventDefault();
   }
 
   private ftouchend(e: TouchEvent): void {
     if (!this.cisRipple) {
       return;
     }
+
+    e.preventDefault();
 
     this.fleave(e);
   }

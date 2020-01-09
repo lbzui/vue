@@ -62,7 +62,7 @@
             id="light-theme"
             name="light-theme"
             :value="false"
-            :disabled="!vsupportsCssVariables"
+            :disabled="!vsupportsCssVars"
             @change="fsetTheme"
           >Light</lbz-radio>
           <lbz-radio
@@ -70,7 +70,7 @@
             id="dark-theme"
             name="dark-theme"
             :value="true"
-            :disabled="!vsupportsCssVariables"
+            :disabled="!vsupportsCssVars"
             @change="fsetTheme"
           >Dark</lbz-radio>
         </lbz-list-item>
@@ -88,7 +88,14 @@
 
 <script lang="ts">
 import { Component, Watch, Vue } from 'vue-property-decorator';
-import { supportsCssVariables, isDarkModeEnabled, registerChangeModeHandler } from '@/utils/funcs';
+import {
+  supportsCssVars,
+  isDarkModeEnabled,
+  changeModeHandler,
+  setModeAttrs,
+  cancelContextmenu,
+  lockBodyScroll,
+} from '@/utils/funcs';
 
 @Component
 export default class App extends Vue {
@@ -213,7 +220,7 @@ export default class App extends Vue {
     ],
   };
 
-  private vsupportsCssVariables: boolean = supportsCssVariables();
+  private vsupportsCssVars: boolean = supportsCssVars();
   private visDark: boolean = false;
   private vwidth: number = 0;
   private vactive: boolean = true;
@@ -225,19 +232,23 @@ export default class App extends Vue {
 
   @Watch('vactive')
   private factiveChanged(val: boolean, oldVal: boolean): void {
-    this.flockScroll(this.vwidth <= 719 && val);
+    lockBodyScroll(this.vwidth <= 719 && val);
   }
 
   private created(): void {
-    this.fchangeMode();
-    registerChangeModeHandler((): void => {
+    cancelContextmenu();
+
+    if (this.vsupportsCssVars) {
       this.fchangeMode();
-    });
+      changeModeHandler((): void => {
+        this.fchangeMode();
+      });
+    }
 
     this.fresize(document.body.clientWidth);
-    window.onresize = (): void => {
+    window.addEventListener('resize', (): void => {
       this.fresize(document.body.clientWidth);
-    };
+    });
   }
 
   private fcloseDrawer(): void {
@@ -246,15 +257,7 @@ export default class App extends Vue {
     }
   }
 
-  private flockScroll(val: boolean = false): void {
-    document.body.classList[val ? 'add' : 'remove']('lbz-body--lock-scroll');
-  }
-
   private fchangeMode(): void {
-    if (!this.vsupportsCssVariables) {
-      return;
-    }
-
     const isDark: boolean = isDarkModeEnabled();
 
     this.visDark = isDark;
@@ -265,19 +268,17 @@ export default class App extends Vue {
     const isGt719: boolean = val > 719;
 
     if (isGt719 && this.vactive) {
-      this.flockScroll(!isGt719);
+      lockBodyScroll(!isGt719);
     }
     this.vwidth = val;
     this.vactive = isGt719;
   }
 
   private fsetTheme(val: boolean, e?: MouseEvent): void {
-    document.documentElement.setAttribute('theme', val ? 'dark' : 'light');
-    document.querySelector('meta[name=theme-color]')!
-      .setAttribute('content', val ? '#000' : '#3700b3');
-    document.querySelector('meta[name=apple-mobile-web-app-status-bar-style]')!
-      .setAttribute('content', val ? 'black' : 'default');
-
+    setModeAttrs(val, {
+      light: '#3700b3',
+      dark: '#000',
+    });
     this.fcloseDrawer();
   }
 }

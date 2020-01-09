@@ -18,9 +18,9 @@
 
 <script lang="ts">
 import { Component, InjectReactive, Inject, Prop, Vue } from 'vue-property-decorator';
+import EventBus from '../../utils/event-bus';
 import LbzIcon from '../icon/icon.vue';
 import LbzState from '../state/state.vue';
-import EventBus from '../../utils/event-bus';
 
 @Component({
   components: {

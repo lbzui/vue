@@ -118,6 +118,13 @@
   });
 }
 
+// NOTE: `:hover, :focus and :active` will not work,
+// mainly applied in Card, List and List item
+.lbz-state-no-before--descendant .lbz-state::before,
+.lbz-state-no-before--child > .lbz-state::before {
+  content: normal;
+}
+
 // ripple
 .lbz-ripple {
   --lbz-ripple-size: 0;

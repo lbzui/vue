@@ -58,6 +58,7 @@
 
 <script lang="ts">
 import { Component, PropSync, Prop, Watch, Vue } from 'vue-property-decorator';
+import { lockBodyScroll } from '../../utils/funcs';
 import LbzIconButton from '../icon-button/icon-button.vue';
 import LbzTopAppBar from '../top-app-bar/top-app-bar.vue';
 
@@ -95,7 +96,7 @@ export default class LbzDialog extends Vue {
     this.$nextTick().then(() => {
       this.$emit(val ? 'open' : 'close');
       if (this.lockScroll) {
-        this.flockScroll(val);
+        lockBodyScroll(val);
       }
     });
   }
@@ -104,10 +105,6 @@ export default class LbzDialog extends Vue {
     if (this.appendToBody) {
       document.body.appendChild(this.$el);
     }
-  }
-
-  private flockScroll(val: boolean = false): void {
-    document.body.classList[val ? 'add' : 'remove']('lbz-body--lock-scroll');
   }
 
   private ftoggle(): void {

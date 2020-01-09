@@ -9,7 +9,7 @@
   position: fixed;
   right: var(--lbz-layout-grid-margin);
   bottom: var(--lbz-layout-grid-margin);
-  .lbz-elevation(6);
+  .lbz-elevation(12);
   box-sizing: border-box;
   border: none;
   border-radius: var(--lbz-shape-percentage-size-small);
@@ -31,12 +31,6 @@
     opacity: 0;
     transition: opacity 15ms linear 150ms, transform 180ms #lbz-motion.curve[acceleration] 0ms;
     transform: scale(0);
-  }
-
-  & &__icon {
-    overflow: hidden;
-    width: 24px;
-    height: 24px;
   }
 
   // type
@@ -94,12 +88,10 @@
 
   &:hover,
   &:focus {
-    .lbz-elevation(8);
     .lbz-shadow(8);
   }
 
   &:active {
-    .lbz-elevation(12);
     .lbz-shadow(12);
   }
 }
