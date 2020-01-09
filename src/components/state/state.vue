@@ -7,9 +7,9 @@
       unscalable && 'is-unscalable',
       cisRipple && 'lbz-ripple'
     ]"
-    @touchstart.prevent="ftouchstart($event)"
-    @touchmove.prevent="ftouchmove($event)"
-    @touchend.prevent="ftouchend($event)"
+    @touchstart="ftouchstart($event)"
+    @touchmove="ftouchmove($event)"
+    @touchend="ftouchend($event)"
     @mousedown="fmousedown($event)"
     @mouseup="fmouseup($event)"
   ></span>
@@ -52,6 +52,8 @@ export default class LbzState extends Vue {
       return;
     }
 
+    e.preventDefault();
+
     this.fenter(e);
   }
 
@@ -59,12 +61,16 @@ export default class LbzState extends Vue {
     if (!this.cisRipple) {
       return;
     }
+
+    e.preventDefault();
   }
 
   private ftouchend(e: TouchEvent): void {
     if (!this.cisRipple) {
       return;
     }
+
+    e.preventDefault();
 
     this.fleave(e);
   }
