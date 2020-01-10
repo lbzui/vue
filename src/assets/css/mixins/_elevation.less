@@ -1,5 +1,5 @@
 // Elevation
-// usage: `.lbz-elevation(x);` (x: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24)
+// usage: `.lbz-elevation(@value: 0);` (@value: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24)
 
 //  0: Top app bar (resting elevation), Text button, Standard side sheet
 //  1: Search bar (resting elevation), Card (resting elevation), Switch
@@ -12,7 +12,6 @@
 // 12: Floating action button (FAB - pressed)
 // 16: Modal bottom sheet, Modal side sheet, Navigation drawer
 // 24: Dialog, Picker
-
 .lbz-elevation(@value: 0) {
   z-index: @value;
 }

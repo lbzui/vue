@@ -15,32 +15,28 @@
   }
 
   // Columns, gutters, and margins
-  // width >= 840px
-  .large() {
+  .large() { // width >= 840px
     media: ~'(min-width: 840px)';
     column: 12;
     gutter: 24px;
     margin: 24px;
   }
 
-  // 720px <= width < 840px
-  .medium() {
+  .medium() { // 720px <= width < 840px
     media: ~'(min-width: 720px) and (max-width: 839px)';
     column: 8;
     gutter: 24px;
     margin: 24px;
   }
 
-  // 600px <= width < 720px
-  .xmedium() {
+  .xmedium() { // 600px <= width < 720px
     media: ~'(min-width: 600px) and (max-width: 719px)';
     column: 8;
     gutter: 16px;
     margin: 16px;
   }
 
-  // width < 600px
-  .small() {
+  .small() { // width < 600px
     media: ~'(max-width: 599px)';
     column: 4;
     gutter: 16px;

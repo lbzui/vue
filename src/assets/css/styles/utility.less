@@ -1,29 +1,31 @@
 // Utility
-// usage: `.lbz-u-x`
+// usage: `.lbz-u-aspect-ratio--x` (x: 16x9, 3x2, 4x3, 1x1, 3x4, 2x3)
+//        `.lbz-u-clearfix`
+//        `.lbz-u-truncate--x` (x: 1, 2, 3)
 
-// Aspect Ratio (16:9, 3:2, 4:3, 1:1, 3:4, and 2:3)
+// Aspect Ratio
 .lbz-u-aspect-ratio--16x9 {
-  .lbz-u-aspect-ratio(16, 9);
+  .lbz-u-aspect-ratio(16; 9);
 }
 
 .lbz-u-aspect-ratio--3x2 {
-  .lbz-u-aspect-ratio(3, 2);
+  .lbz-u-aspect-ratio(3; 2);
 }
 
 .lbz-u-aspect-ratio--4x3 {
-  .lbz-u-aspect-ratio(4, 3);
+  .lbz-u-aspect-ratio(4; 3);
 }
 
 .lbz-u-aspect-ratio--1x1 {
-  .lbz-u-aspect-ratio(1, 1);
+  .lbz-u-aspect-ratio(1; 1);
 }
 
 .lbz-u-aspect-ratio--3x4 {
-  .lbz-u-aspect-ratio(3, 4);
+  .lbz-u-aspect-ratio(3; 4);
 }
 
 .lbz-u-aspect-ratio--2x3 {
-  .lbz-u-aspect-ratio(2, 3);
+  .lbz-u-aspect-ratio(2; 3);
 }
 
 // Clearfix
@@ -31,7 +33,7 @@
   .lbz-u-clearfix();
 }
 
-// Truncate (1, 2, 3)
+// Truncate
 each(range(3), {
   .lbz-u-truncate--@{value} {
     .lbz-u-truncate(@value);
