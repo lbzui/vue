@@ -61,7 +61,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '0.2.1',
+  version: '0.2.2',
   install,
   Backdrop,
   Button,
