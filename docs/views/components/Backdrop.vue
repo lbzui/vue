@@ -268,8 +268,8 @@ export default class ComponentsBackdrop extends Vue {
     this.rbackdrop.ftoggle();
   }
 
-  private fscroll(el: object, e: Event, position: object): void {
-    console.log((el as any).scrollHeight);
+  private fscroll(el: HTMLElement, e: Event, position: VueScrollPosition): void {
+    console.log(el.scrollHeight);
     console.log(e);
     alert(JSON.stringify(position));
   }

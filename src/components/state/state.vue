@@ -19,6 +19,11 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { supportsCssVars } from '../../utils/funcs';
 
+interface Point {
+  x: number;
+  y: number;
+}
+
 @Component
 export default class LbzState extends Vue {
   // type: 'surface' (default), 'primary', 'image'
@@ -92,20 +97,20 @@ export default class LbzState extends Vue {
     }
   }
 
-  private fenter(e: Event): void {
-    const target = (e as any).target;
-    const { offsetWidth, offsetHeight } = target;
-    const clientRect = target.getBoundingClientRect();
-    const radius = Math.sqrt(Math.pow(offsetWidth, 2) + Math.pow(offsetHeight, 2)) + 10;
-    const size = Math.floor(Math.max(offsetWidth, offsetHeight) * .6);
-    const touch = e.type === 'touchstart'
+  private fenter(e: TouchEvent | MouseEvent): void {
+    const target: HTMLSpanElement = (e as any).target;
+    const { offsetWidth, offsetHeight }: any = target;
+    const clientRect: ClientRect = target.getBoundingClientRect();
+    const radius: number = Math.sqrt(Math.pow(offsetWidth, 2) + Math.pow(offsetHeight, 2)) + 10;
+    const size: number = Math.floor(Math.max(offsetWidth, offsetHeight) * .6);
+    const touch: any = e.type === 'touchstart'
       ? (e as TouchEvent).changedTouches[0]
       : (e as MouseEvent);
-    const translateStart = {
+    const translateStart: Point = {
       x: (touch.pageX - (window.pageXOffset + clientRect.left)) - size / 2,
       y: (touch.pageY - (window.pageYOffset + clientRect.top)) - size / 2,
     };
-    const translateEnd = {
+    const translateEnd: Point = {
       x: (offsetWidth - size) / 2,
       y: (offsetHeight - size) / 2,
     };
@@ -120,8 +125,8 @@ export default class LbzState extends Vue {
     });
   }
 
-  private fleave(e: Event): void {
-    const target = (e as any).target;
+  private fleave(e: TouchEvent | MouseEvent): void {
+    const target: HTMLSpanElement = (e as any).target;
 
     this.venterTimer = setTimeout((): void => {
       target.classList.remove('lbz-ripple-enter');

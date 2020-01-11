@@ -1,4 +1,4 @@
-import { default as _Vue, VueConstructor, PluginFunction } from 'vue';
+import { default as _Vue, PluginFunction } from 'vue';
 import VueScroll from 'vue-scroll';
 import '../assets/css/index.less';
 import Backdrop from './backdrop';
@@ -40,7 +40,7 @@ const components: any[] = [
   TabItem,
   TopAppBar,
 ];
-const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any): void => {
+const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: LbzUI): void => {
   const {
     ripple,
     dense,
@@ -55,12 +55,6 @@ const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: any): void => {
     Vue.use(Component.install);
   });
 };
-
-declare global {
-  interface Window {
-    Vue?: VueConstructor;
-  }
-}
 
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);

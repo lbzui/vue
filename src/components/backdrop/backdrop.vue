@@ -77,7 +77,7 @@ export default class LbzBackdrop extends Vue {
   // scrim: true, false (default)
   @Prop({ type: Boolean, default: false }) private scrim!: boolean;
 
-  @Ref('scroller') private rscroller!: HTMLFormElement;
+  @Ref('scroller') private rscroller!: HTMLElement;
 
   private ftoggle(): void {
     this.cisActive = !this.cisActive;
@@ -92,7 +92,7 @@ export default class LbzBackdrop extends Vue {
   }
 
   @Emit('scroll')
-  private fscroll(e: Event, position: object) {
+  private fscroll(e: Event, position: VueScrollPosition) {
     return this.rscroller;
   }
 }
