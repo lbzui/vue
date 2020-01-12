@@ -22,5 +22,6 @@ declare global {
     scrollLeft: number;
   }
 
+  // tslint:disable no-empty-interface
   interface LbzUI extends LBZUI {}
 }

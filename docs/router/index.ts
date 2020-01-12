@@ -102,6 +102,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "radio" */ '../views/components/Radio.vue'),
   },
   {
+    path: '/components/state',
+    name: 'state',
+    component: () => import(/* webpackChunkName: "state" */ '../views/components/State.vue'),
+  },
+  {
     path: '/components/tab',
     name: 'tab',
     component: () => import(/* webpackChunkName: "tab" */ '../views/components/Tab.vue'),

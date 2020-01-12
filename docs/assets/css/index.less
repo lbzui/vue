@@ -222,6 +222,59 @@ html body {
       margin: 0 8px 0 0 !important;
     }
 
+    &-state .lbzui-u-square {
+      user-select: none;
+
+      &.primary {
+        color: var(--lbz-theme-on-primary);
+        background-color: var(--lbz-theme-primary);
+      }
+
+      &.primary-variant {
+        color: var(--lbz-theme-on-primary);
+        background-color: var(--lbz-theme-primary-variant);
+      }
+
+      &.secondary {
+        color: var(--lbz-theme-on-secondary);
+        background-color: var(--lbz-theme-secondary);
+      }
+
+      &.secondary-variant {
+        color: var(--lbz-theme-on-secondary);
+        background-color: var(--lbz-theme-secondary-variant);
+      }
+
+      &.background {
+        color: var(--lbz-theme-on-background);
+        background-color: var(--lbz-theme-background);
+      }
+
+      &.surface {
+        color: var(--lbz-theme-on-surface);
+        background-color: var(--lbz-theme-surface);
+      }
+
+      &.error {
+        color: var(--lbz-theme-on-error);
+        background-color: var(--lbz-theme-error);
+      }
+
+      &.light {
+        color: @black;
+        .lbz-surface('light'; 0);
+      }
+
+      &.dark {
+        color: @white;
+        .lbz-surface('dark'; 0);
+      }
+
+      &:last-child {
+        border-radius: 50%;
+      }
+    }
+
     &-tab .lbz-tab {
       width: 100%;
       max-width: 360px;
