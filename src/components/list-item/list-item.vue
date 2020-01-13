@@ -11,7 +11,7 @@
     ]"
     @click="!cisDisabled && $emit('click', $event)"
   >
-    <lbz-state v-if="!cisDisabled" class="lbz-list-item__state"/>
+    <lbz-state v-if="!cisDisabled" v-bind="cgetStateAttrs"/>
     <div v-if="$slots.start" class="lbz-list-item__start">
       <slot name="start"/>
     </div>
@@ -36,7 +36,7 @@ import LbzState from '../state/state.vue';
 })
 export default class LbzListItem extends Vue {
   // router-link: undefined (default), true, false
-  @Prop({ type: Boolean, default: undefined }) private routerLink!: undefined | boolean;
+  @Prop({ type: Boolean, default: undefined }) private routerLink!: boolean;
   // to (router-link): '' (default), 'x', { x: y }
   @Prop({ type: [String, Object], default: '' }) private to!: string | object;
   // tag: '' (default), li', 'a', 'x'
@@ -46,14 +46,14 @@ export default class LbzListItem extends Vue {
   // selected: true, false (default)
   @Prop({ type: Boolean, default: false }) private selected!: boolean;
   // disabled: undefined (default), true, false
-  @Prop({ type: Boolean, default: undefined }) private disabled!: undefined | boolean;
+  @Prop({ type: Boolean, default: undefined }) private disabled!: boolean;
 
   @Inject('router-link') private prouterLink!: boolean;
   @Inject('router-link-props') private prouterLinkProps!: object;
   @Inject('tag') private ptag!: string;
   @Inject('disabled') private pdisabled!: boolean;
 
-  get cgetAttrs(): object {
+  get cgetAttrs(): ComponentAttributes {
     const {
       replace,
       append,
@@ -86,6 +86,12 @@ export default class LbzListItem extends Vue {
     return this.disabled === undefined
       ? this.pdisabled
       : this.disabled;
+  }
+
+  get cgetStateAttrs(): StateAttributes {
+    return {
+      class: 'lbz-list-item__state',
+    };
   }
 }
 </script>

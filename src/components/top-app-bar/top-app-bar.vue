@@ -45,7 +45,7 @@ export default class LbzTopAppBar extends Vue {
   // inactive (type === 'standard'): '' (default), 'scroll-off', 'tab-fixed'
   @Prop({ type: String, default: '' }) private inactive!: string;
   // dense (desktop only): undefined (default), true, false
-  @Prop({ type: Boolean, default: undefined }) private dense!: undefined | boolean;
+  @Prop({ type: Boolean, default: undefined }) private dense!: boolean;
   // elevated: true, false (default)
   @Prop({ type: Boolean, default: false }) private elevated!: boolean;
   // media (type === 'extended'): '' (default), 'x'

@@ -23,7 +23,7 @@ export default class LbzTab extends Vue {
   @Model('change', {
     type: [Boolean, Number, String],
     default: undefined,
-  }) private mvalue!: undefined | boolean | number | string;
+  }) private mvalue!: boolean | number | string;
 
   // type: 'fixed' (default), 'scrollable'
   @Prop({ type: String, default: '' }) private type!: string;
@@ -57,7 +57,7 @@ export default class LbzTab extends Vue {
   // on-content: true, false (default)
   @Prop({ type: Boolean, default: false }) private onContent!: boolean;
 
-  @ProvideReactive('value') private prvalue: undefined | boolean | number | string = this.mvalue;
+  @ProvideReactive('value') private prvalue: boolean | number | string = this.mvalue;
   @Provide('on-background') private ponBackground: string = this.onBackground;
   @Provide('router-link') private prouterLink: boolean = this.routerLink;
   @Provide('router-link-props') private prouterLinkProps: object = this.routerLinkProps;

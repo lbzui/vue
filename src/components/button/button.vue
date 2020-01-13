@@ -62,7 +62,7 @@ export default class LbzButton extends Vue {
   // full-width: true, false (default)
   @Prop({ type: Boolean, default: false }) private fullWidth!: boolean;
   // dense: undefined (default), true, false
-  @Prop({ type: Boolean, default: undefined }) private dense!: undefined | boolean;
+  @Prop({ type: Boolean, default: undefined }) private dense!: boolean;
   // unelevated (type === 'contained'): true, false (default)
   @Prop({ type: Boolean, default: false }) private unelevated!: boolean;
   // disabled: true, false (default)
@@ -70,7 +70,7 @@ export default class LbzButton extends Vue {
   // icon: '' (default), 'x'
   @Prop({ type: String, default: '' }) private icon!: string;
 
-  get cgetAttrs(): object {
+  get cgetAttrs(): ComponentAttributes {
     const {
       to,
       replace,
@@ -103,7 +103,7 @@ export default class LbzButton extends Vue {
       : this.dense;
   }
 
-  get cgetStateAttrs(): object {
+  get cgetStateAttrs(): StateAttributes {
     const isOn: boolean = this.type === 'contained' || ['background', 'surface'].includes(this.color);
 
     return {

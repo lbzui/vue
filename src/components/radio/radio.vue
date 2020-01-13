@@ -58,7 +58,7 @@ export default class LbzRadio extends Vue {
     return this.mchecked === this.value;
   }
 
-  get cgetStateAttrs(): object {
+  get cgetStateAttrs(): StateAttributes {
     return {
       class: 'lbz-radio__state',
       type: this.cisSelected ? 'primary' : '',

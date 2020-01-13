@@ -45,7 +45,7 @@ export default class LbzList extends Vue {
   // item-tag: 'li' (default), 'a', 'x'
   @Prop({ type: String, default: 'li' }) private itemTag!: string;
   // dense: undefined (default), true, false
-  @Prop({ type: Boolean, default: undefined }) private dense!: undefined | boolean;
+  @Prop({ type: Boolean, default: undefined }) private dense!: boolean;
   // placement: 'start' (default), 'center'
   @Prop({ type: String, default: '' }) private placement!: string;
   // subtitle: '' (default), 'x'

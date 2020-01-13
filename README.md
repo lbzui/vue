@@ -119,7 +119,7 @@ Install devDependencies through npm or yarn:
 ```bash
 # with npm
 ## upgrade Less to 3.5.0+
-npm i less -D
+npm i less@latest -D
 
 ## CSS resets
 npm i normalize.css -D

@@ -19,7 +19,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { supportsCssVars } from '../../utils/funcs';
 
-interface Point {
+interface RippleTranslate {
   x: number;
   y: number;
 }
@@ -106,11 +106,11 @@ export default class LbzState extends Vue {
     const touch: any = e.type === 'touchstart'
       ? (e as TouchEvent).changedTouches[0]
       : (e as MouseEvent);
-    const translateStart: Point = {
+    const translateStart: RippleTranslate = {
       x: (touch.pageX - (window.pageXOffset + clientRect.left)) - size / 2,
       y: (touch.pageY - (window.pageYOffset + clientRect.top)) - size / 2,
     };
-    const translateEnd: Point = {
+    const translateEnd: RippleTranslate = {
       x: (offsetWidth - size) / 2,
       y: (offsetHeight - size) / 2,
     };

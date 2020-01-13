@@ -40,7 +40,7 @@ const components: any[] = [
   TabItem,
   TopAppBar,
 ];
-const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: LbzUI): void => {
+const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: InstallOptions): void => {
   const {
     ripple,
     dense,

@@ -4,7 +4,7 @@
     :class="['lbz-card', type && `lbz-card--${ type }`]"
     @click="$emit('click', $event)"
   >
-    <lbz-state class='lbz-card__state'/>
+    <lbz-state v-bind="cgetStateAttrs"/>
     <div v-if="$slots.start" class="lbz-card__header">
       <slot name="start"/>
     </div>
@@ -32,5 +32,11 @@ export default class LbzCard extends Vue {
   @Prop({ type: String, default: '' }) private type!: string;
   // tag: 'div' (default), 'a', 'x'
   @Prop({ type: String, default: 'div' }) private tag!: string;
+
+  get cgetStateAttrs(): StateAttributes {
+    return {
+      class: 'lbz-card__state',
+    };
+  }
 }
 </script>

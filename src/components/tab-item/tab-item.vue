@@ -29,7 +29,7 @@ import LbzState from '../state/state.vue';
   },
 })
 export default class LbzTabItem extends Vue {
-  @InjectReactive('value') private prvalue!: undefined | boolean | number | string;
+  @InjectReactive('value') private prvalue!: boolean | number | string;
   @Inject('on-background') private ponBackground!: string;
   @Inject('router-link') private prouterLink!: boolean;
   @Inject('router-link-props') private prouterLinkProps!: object;
@@ -37,17 +37,17 @@ export default class LbzTabItem extends Vue {
   @Inject('on-content') private ponContent!: boolean;
 
   // router-link: undefined (default), true, false
-  @Prop({ type: Boolean, default: undefined }) private routerLink!: undefined | boolean;
+  @Prop({ type: Boolean, default: undefined }) private routerLink!: boolean;
   // to (router-link): '' (default), 'x', { x: y }
   @Prop({ type: [String, Object], default: '' }) private to!: string | object;
   // tag: '' (default), 'button', 'a', 'x'
   @Prop({ type: String, default: '' }) private tag!: string;
   // value: undefined (default), true, false, x, 'x'
-  @Prop({ type: [Boolean, Number, String], default: undefined }) private value!: undefined | boolean | number | string;
+  @Prop({ type: [Boolean, Number, String], default: undefined }) private value!: boolean | number | string;
   // icon: '' (default), 'x'
   @Prop({ type: String, default: '' }) private icon!: string;
 
-  get cgetAttrs(): object {
+  get cgetAttrs(): ComponentAttributes {
     const {
       replace,
       append,
@@ -84,7 +84,7 @@ export default class LbzTabItem extends Vue {
     return this.prvalue === this.value;
   }
 
-  get cgetStateAttrs(): object {
+  get cgetStateAttrs(): StateAttributes {
     return {
       class: 'lbz-tab-item__state',
       type: this.ponBackground === 'light' ? '' : 'primary',

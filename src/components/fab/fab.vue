@@ -38,7 +38,7 @@ export default class LbzFAB extends Vue {
   // label (type === 'extended'): '' (default), 'x'
   @Prop({ type: String, default: '' }) private label!: string;
 
-  get cgetStateAttrs(): object {
+  get cgetStateAttrs(): StateAttributes {
     return {
       class: 'lbz-fab__state',
       type: this.background === 'light' ? '' : 'primary',

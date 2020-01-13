@@ -72,7 +72,7 @@ export default class LbzIconButton extends Vue {
   // off-icon (toggle): '' (default), 'x'
   @Prop({ type: String, default: '' }) private offIcon!: string;
 
-  get cgetAttrs(): object {
+  get cgetAttrs(): ComponentAttributes {
     const {
       to,
       replace,
@@ -99,7 +99,7 @@ export default class LbzIconButton extends Vue {
       };
   }
 
-  get cgetStateAttrs(): object {
+  get cgetStateAttrs(): StateAttributes {
     return {
       class: 'lbz-icon-button__state',
       type: this.onBackground === 'light' ? '' : 'primary',
