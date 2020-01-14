@@ -1,6 +1,6 @@
 import Vue, { VueConstructor } from 'vue';
 
-interface LBZUI {
+interface InstallOptions {
   ripple: boolean;
   dense: boolean;
   [propName: string]: any;
@@ -8,7 +8,7 @@ interface LBZUI {
 
 declare module 'vue/types/vue' {
   interface Vue {
-    $LBZUI: LBZUI;
+    $lbzui: InstallOptions;
   }
 }
 
@@ -24,7 +24,7 @@ declare global {
   }
 
   // tslint:disable no-empty-interface
-  interface InstallOptions extends LBZUI {}
+  interface LbzuiOptions extends InstallOptions {}
 
   interface ComponentAttributes {
     is: string;

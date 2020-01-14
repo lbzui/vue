@@ -120,16 +120,14 @@ html body {
   }
 
   &-styles {
-    &-layout-grid {
-      .lbz-layout-grid {
-        .lbz-layout-grid__cell {
-          height: 180px;
-          background-color: var(--lbz-theme-outline-on-surface);
-        }
+    &-layout-grid .lbz-layout-grid {
+      .lbz-layout-grid__cell {
+        height: 180px;
+        background-color: var(--lbz-theme-outline-on-surface);
+      }
 
-        .lbzui-cell {
-          height: 90px;
-        }
+      .lbzui-cell {
+        height: 90px;
       }
     }
 
@@ -138,6 +136,13 @@ html body {
       h5 {
         color: inherit !important;
       }
+    }
+
+    &-utility .lbzui-aspect-ratio {
+      margin: 0 16px 16px 0;
+      box-sizing: border-box;
+      border: 1px solid var(--lbz-theme-outline-on-surface);
+      width: 180px;
     }
   }
 

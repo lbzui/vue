@@ -3,7 +3,7 @@ interface ThemeColor {
   dark: string;
 }
 
-export function supportsCssVars(): boolean {
+export function supportsCssVariables(): boolean {
   const { CSS }: any = window;
 
   if (!(CSS && typeof CSS.supports === 'function')) {
@@ -25,7 +25,7 @@ export function changeModeHandler(handler: () => void): void {
   });
 }
 
-export function setModeAttrs(isDark: boolean, themeColor: ThemeColor): void {
+export function setModeAttributes(isDark: boolean, themeColor: ThemeColor): void {
   document.documentElement.setAttribute('theme', isDark ? 'dark' : 'light');
 
   if (document.querySelector('meta[name=theme-color]')) {

@@ -40,13 +40,13 @@ const components: any[] = [
   TabItem,
   TopAppBar,
 ];
-const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: InstallOptions): void => {
+const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: LbzuiOptions): void => {
   const {
     ripple,
     dense,
   }: any = opts || {};
 
-  Vue.prototype.$LBZUI = {
+  Vue.prototype.$lbzui = {
     ripple: ripple === undefined ? true : ripple,
     dense: dense || false,
   };

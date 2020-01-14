@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { supportsCssVars } from '../../utils/funcs';
+import { supportsCssVariables } from '../../utils/funcs';
 
 interface RippleTranslate {
   x: number;
@@ -42,7 +42,7 @@ export default class LbzState extends Vue {
   private vleaveTimer: any = 0;
 
   get cisRipple(): boolean {
-    return this.$LBZUI.ripple && supportsCssVars();
+    return this.$lbzui.ripple && supportsCssVariables();
   }
 
   private beforeDestroy(): void {

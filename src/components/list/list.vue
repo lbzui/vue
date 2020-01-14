@@ -60,7 +60,7 @@ export default class LbzList extends Vue {
 
   get cisDense(): boolean {
     return this.dense === undefined
-      ? this.$LBZUI.dense
+      ? this.$lbzui.dense
       : this.dense;
   }
 }

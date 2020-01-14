@@ -39,6 +39,11 @@ const routes = [
     name: 'typography',
     component: () => import(/* webpackChunkName: "typography" */ '../views/styles/Typography.vue'),
   },
+  {
+    path: '/styles/utility',
+    name: 'utility',
+    component: () => import(/* webpackChunkName: "utility" */ '../views/styles/Utility.vue'),
+  },
 
   // Components
   {

@@ -89,10 +89,10 @@
 <script lang="ts">
 import { Component, Watch, Vue } from 'vue-property-decorator';
 import {
-  supportsCssVars,
+  supportsCssVariables,
   isDarkModeEnabled,
   changeModeHandler,
-  setModeAttrs,
+  setModeAttributes,
   cancelContextmenu,
   lockBodyScroll,
 } from '@/utils/funcs';
@@ -120,6 +120,10 @@ export default class App extends Vue {
       {
         path: '/styles/typography',
         label: 'Typography',
+      },
+      {
+        path: '/styles/utility',
+        label: 'Utility',
       },
     ],
     components: [
@@ -224,7 +228,7 @@ export default class App extends Vue {
     ],
   };
 
-  private vsupportsCssVars: boolean = supportsCssVars();
+  private vsupportsCssVars: boolean = supportsCssVariables();
   private visDark: boolean = false;
   private vwidth: number = 0;
   private vactive: boolean = true;
@@ -279,7 +283,7 @@ export default class App extends Vue {
   }
 
   private fsetTheme(val: boolean, e?: MouseEvent): void {
-    setModeAttrs(val, {
+    setModeAttributes(val, {
       light: '#3700b3',
       dark: '#000',
     });

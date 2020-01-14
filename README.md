@@ -100,7 +100,7 @@ Or use individual components:
 import '@lbzui/vue/lib/lbzui.css';
 import { Button } from '@lbzui/vue';
 
-Vue.prototype.$LBZUI = {
+Vue.prototype.$lbzui = {
   ripple: true,
   dense: false,
 };
@@ -196,7 +196,7 @@ import {
   TopAppBar,
 } from '@lbzui/vue';
 
-Vue.prototype.$LBZUI = {
+Vue.prototype.$lbzui = {
   ripple: true,
   dense: false,
 };
