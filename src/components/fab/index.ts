@@ -1,8 +1,8 @@
-import { default as _Vue } from 'vue';
+import Vue from 'vue';
 import FAB from './fab.vue';
 
-(FAB as any).install = (Vue: typeof _Vue, opts?: any): void => {
-  Vue.component('lbz-fab', FAB);
+(FAB as any).install = (v: typeof Vue, opts?: any): void => {
+  v.component('lbz-fab', FAB);
 };
 
 export default FAB;

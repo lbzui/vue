@@ -1,8 +1,8 @@
-import { default as _Vue } from 'vue';
+import Vue from 'vue';
 import Icon from './icon.vue';
 
-(Icon as any).install = (Vue: typeof _Vue, opts?: any): void => {
-  Vue.component('lbz-icon', Icon);
+(Icon as any).install = (v: typeof Vue, opts?: any): void => {
+  v.component('lbz-icon', Icon);
 };
 
 export default Icon;

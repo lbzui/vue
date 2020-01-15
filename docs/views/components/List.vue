@@ -223,7 +223,7 @@
       class="lbzui-u-rectangle"
       tag="nav"
       item-tag="a"
-      subtitle="Non-Router-link"
+      subtitle="Non-router-link"
     >
       <lbz-list-item href="#/components/list">A</lbz-list-item>
       <lbz-list-item href="#/components/list">A</lbz-list-item>
@@ -292,7 +292,7 @@
     <lbz-list
       class="lbzui-u-rectangle"
       :dense="false"
-      subtitle="Non-Dense one line"
+      subtitle="Non-dense one line"
     >
       <lbz-list-item>One-line item</lbz-list-item>
       <lbz-list-item>
@@ -423,7 +423,7 @@
       class="lbzui-u-rectangle"
       type="two-line"
       :dense="false"
-      subtitle="Non-Dense two line"
+      subtitle="Non-dense two line"
     >
       <lbz-list-item>
         <template #center>
@@ -566,7 +566,7 @@
       class="lbzui-u-rectangle"
       type="three-line"
       :dense="false"
-      subtitle="Non-Dense three line"
+      subtitle="Non-dense three line"
     >
       <lbz-list-item>
         <template #center>
@@ -689,7 +689,7 @@
     <lbz-list
       class="lbzui-u-rectangle"
       tag="nav"
-      subtitle="Non-Router-link"
+      subtitle="Non-router-link"
     >
       <lbz-list-item tag="a" href="#/components/list">A</lbz-list-item>
       <lbz-list-item tag="a" href="#/components/list">A</lbz-list-item>

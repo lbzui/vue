@@ -1,6 +1,6 @@
 interface ThemeColor {
-  light: string;
-  dark: string;
+  readonly light: string;
+  readonly dark: string;
 }
 
 export function supportsCssVariables(): boolean {

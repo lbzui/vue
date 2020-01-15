@@ -1,8 +1,8 @@
-import { default as _Vue } from 'vue';
+import Vue from 'vue';
 import Drawer from './drawer.vue';
 
-(Drawer as any).install = (Vue: typeof _Vue, opts?: any): void => {
-  Vue.component('lbz-drawer', Drawer);
+(Drawer as any).install = (v: typeof Vue, opts?: any): void => {
+  v.component('lbz-drawer', Drawer);
 };
 
 export default Drawer;

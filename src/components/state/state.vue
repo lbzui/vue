@@ -20,8 +20,8 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import { supportsCssVariables } from '../../utils/funcs';
 
 interface RippleTranslate {
-  x: number;
-  y: number;
+  readonly x: number;
+  readonly y: number;
 }
 
 @Component

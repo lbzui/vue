@@ -58,7 +58,7 @@ If you have any questions, ideas or you want to discuss with it, [create an issu
 
 ```bash
 # with npm
-npm install -g @vue/cli
+npm i -g @vue/cli
 
 # with yarn
 yarn global add @vue/cli
@@ -81,9 +81,6 @@ yarn add @lbzui/vue
 #### Step 3: Import @lbzui/vue in your code
 
 ```js
-// src/modules.d.ts (if you use TS)
-declare module '@lbzui/vue';
-
 // src/main.ts or src/main.js
 import '@lbzui/vue/lib/lbzui.css';
 import LBZUI from '@lbzui/vue';

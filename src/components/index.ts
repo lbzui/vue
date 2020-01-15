@@ -1,4 +1,4 @@
-import { default as _Vue, PluginFunction } from 'vue';
+import Vue, { PluginFunction } from 'vue';
 import VueScroll from 'vue-scroll';
 import '../assets/css/index.less';
 import Backdrop from './backdrop';
@@ -19,7 +19,7 @@ import Tab from './tab';
 import TabItem from './tab-item';
 import TopAppBar from './top-app-bar';
 
-_Vue.use(VueScroll, { debounce: 100 });
+Vue.use(VueScroll, { debounce: 100 });
 
 const components: any[] = [
   Backdrop,
@@ -40,19 +40,19 @@ const components: any[] = [
   TabItem,
   TopAppBar,
 ];
-const install: PluginFunction<any> = (Vue: typeof _Vue, opts?: LbzuiOptions): void => {
+const install: PluginFunction<any> = (v: typeof Vue, opts?: LbzuiOptions): void => {
   const {
     ripple,
     dense,
   }: any = opts || {};
 
-  Vue.prototype.$lbzui = {
+  v.prototype.$lbzui = {
     ripple: ripple === undefined ? true : ripple,
     dense: dense || false,
   };
 
   components.map((Component) => {
-    Vue.use(Component.install);
+    v.use(Component.install);
   });
 };
 

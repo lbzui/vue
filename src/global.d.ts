@@ -1,30 +1,20 @@
 import Vue, { VueConstructor } from 'vue';
-
-interface InstallOptions {
-  ripple: boolean;
-  dense: boolean;
-  [propName: string]: any;
-}
-
-declare module 'vue/types/vue' {
-  interface Vue {
-    $lbzui: InstallOptions;
-  }
-}
+import {
+  LbzuiOptions as Options,
+  VueScrollPosition as ScrollPosition,
+} from '../types';
 
 declare global {
+  // tslint:disable no-empty-interface
+  interface LbzuiOptions extends Options {}
+
   // vue-scroll
-  interface VueScrollPosition {
-    scrollTop: number;
-    scrollLeft: number;
-  }
+  // tslint:disable no-empty-interface
+  interface VueScrollPosition extends ScrollPosition {}
 
   interface Window {
     Vue?: VueConstructor;
   }
-
-  // tslint:disable no-empty-interface
-  interface LbzuiOptions extends InstallOptions {}
 
   interface ComponentAttributes {
     is: string;
@@ -35,7 +25,7 @@ declare global {
     exact?: boolean;
     event?: string | string[];
     disabled?: boolean;
-    [propName: string]: any;
+    [key: string]: any;
   }
 
   interface StateAttributes {

@@ -16,7 +16,8 @@
   "unpkg": "lib/lbzui.umd.min.js",
   "files": [
     "lib",
-    "src"
+    "src",
+    "types"
   ],
   "dependencies": {
     "core-js": "^3.4.4",
@@ -80,5 +81,6 @@
     "url": "https://github.com/lbzui/vue.git"
   },
   "style": "lib/lbzui.css",
+  "types": "types/index.d.ts",
   "umd:main": "lib/lbzui.umd.js"
 }

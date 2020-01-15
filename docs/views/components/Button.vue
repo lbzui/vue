@@ -22,7 +22,7 @@
       tag="a"
       href="#/components/button"
       icon="favorite"
-    >Non-Router-link</lbz-button>
+    >Non-router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
     <lbz-button>Primary</lbz-button>
@@ -52,7 +52,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ dense: undefined (default), true, false</h3>
     <lbz-button dense>Dense</lbz-button>
-    <lbz-button :dense="false" icon="favorite">Non-Dense</lbz-button>
+    <lbz-button :dense="false" icon="favorite">Non-dense</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-button disabled>Primary</lbz-button>
@@ -146,7 +146,7 @@
       tag="a"
       href="#/components/button"
       icon="favorite"
-    >Non-Router-link</lbz-button>
+    >Non-router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
     <lbz-button type="outlined">Primary</lbz-button>
@@ -208,7 +208,7 @@
       type="outlined"
       :dense="false"
       icon="favorite"
-    >Non-Dense</lbz-button>
+    >Non-dense</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-button type="outlined" disabled>Primary</lbz-button>
@@ -336,7 +336,7 @@
       tag="a"
       href="#/components/button"
       icon="favorite"
-    >Non-Router-link</lbz-button>
+    >Non-router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
     <lbz-button type="contained">Primary</lbz-button>
@@ -398,7 +398,7 @@
       type="contained"
       :dense="false"
       icon="favorite"
-    >Non-Dense</lbz-button>
+    >Non-dense</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ unelevated (type === 'contained'): true, false (default)</h3>
     <lbz-button type="contained" unelevated>Unelevated</lbz-button>

@@ -1,8 +1,8 @@
-import { default as _Vue } from 'vue';
+import Vue from 'vue';
 import Divider from './divider.vue';
 
-(Divider as any).install = (Vue: typeof _Vue, opts?: any): void => {
-  Vue.component('lbz-divider', Divider);
+(Divider as any).install = (v: typeof Vue, opts?: any): void => {
+  v.component('lbz-divider', Divider);
 };
 
 export default Divider;
