@@ -15,7 +15,7 @@ If you have any questions, ideas or you want to discuss with it, [create an issu
 
 - Follow the principles of [Material Design](https://material.io/)
 - Support [light](https://material.io/design/color/the-color-system.html) and [dark](https://material.io/design/color/dark-theme.html) theme
-- Customize [layout grid](https://material.io/design/layout/responsive-layout-grid.html), [shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), and [theme](https://material.io/resources/color/)
+- Customize [layout grid](https://material.io/design/layout/responsive-layout-grid.html), [shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), [theme](https://material.io/resources/color/), and more
 - Fit responsive web design
 - Use [Vue](https://vuejs.org/) (2.6.0+), [TypeScript](http://www.typescriptlang.org/), [Less](http://lesscss.org/) (3.5.0+), [PostCSS](https://postcss.org/), etc. features
 
@@ -23,7 +23,7 @@ If you have any questions, ideas or you want to discuss with it, [create an issu
 
 ### Using via CDN
 
-#### Require the stylesheet and script in your HTML
+#### Require the stylesheets and scripts in your HTML
 
 ```html
 <!DOCTYPE html>
@@ -44,7 +44,9 @@ If you have any questions, ideas or you want to discuss with it, [create an issu
       new Vue({
         el: '#app',
         methods: {
-          fclick(e) { alert('Hello @lbzui/vue!'); }
+          fclick(e) {
+            alert('Hello @lbzui/vue!');
+          }
         }
       })
     </script>
@@ -58,7 +60,7 @@ If you have any questions, ideas or you want to discuss with it, [create an issu
 
 ```bash
 # with npm
-npm i -g @vue/cli
+npm i @vue/cli -g
 
 # with yarn
 yarn global add @vue/cli
@@ -81,7 +83,7 @@ yarn add @lbzui/vue
 #### Step 3: Import @lbzui/vue in your code
 
 ```js
-// src/main.ts or src/main.js
+// src/main.ts(.js)
 import '@lbzui/vue/lib/lbzui.css';
 import LBZUI from '@lbzui/vue';
 
@@ -95,84 +97,6 @@ Or use individual components:
 
 ```js
 import '@lbzui/vue/lib/lbzui.css';
-import { Button } from '@lbzui/vue';
-
-Vue.prototype.$lbzui = {
-  ripple: true,
-  dense: false,
-};
-
-Vue.use(Button);
-```
-
-#### Step 4: Build a Material theme
-
-> NOTE: If you just want to use the compiled CSS, you can skip to [Step 5](#step-5-use-lbz-button-component).
-
-Create your own Material theme by customizing values for [layout grid](https://material.io/design/layout/responsive-layout-grid.html), [shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), and [theme](https://material.io/resources/color/).
-
-Install devDependencies through npm or yarn:
-
-```bash
-# with npm
-## upgrade Less to 3.5.0+
-npm i less@latest -D
-
-## CSS resets
-npm i normalize.css -D
-
-## convert modern CSS
-npm i postcss-preset-env -D
-
-## convert pixel units to rem units (optional)
-npm i postcss-pxtorem -D
-
-# with yarn
-yarn add less --dev
-yarn add normalize.css --dev
-yarn add postcss-preset-env --dev
-yarn add postcss-pxtorem --dev
-
-# in Windows, run `winpty vue.cmd add style-resources-loader`
-vue add style-resources-loader
-```
-
-Import source code in `main.ts` or `main.js`:
-
-```js
-// src/main.ts or src/main.js
-
-// all styles and components
-// import '@lbzui/vue/src/assets/css/index.less';
-
-// or individual styles and components
-import '@lbzui/vue/src/assets/css/base.less';
-
-import '@lbzui/vue/src/assets/css/styles/elevation.less';
-import '@lbzui/vue/src/assets/css/styles/layout-grid.less';
-import '@lbzui/vue/src/assets/css/styles/shadow.less';
-import '@lbzui/vue/src/assets/css/styles/surface.less';
-import '@lbzui/vue/src/assets/css/styles/typography.less';
-import '@lbzui/vue/src/assets/css/styles/utility.less';
-
-import '@lbzui/vue/src/assets/css/components/backdrop.less';
-import '@lbzui/vue/src/assets/css/components/button.less';
-import '@lbzui/vue/src/assets/css/components/card.less';
-import '@lbzui/vue/src/assets/css/components/dialog.less';
-import '@lbzui/vue/src/assets/css/components/divider.less';
-import '@lbzui/vue/src/assets/css/components/drawer.less';
-import '@lbzui/vue/src/assets/css/components/empty-state.less';
-import '@lbzui/vue/src/assets/css/components/fab.less';
-import '@lbzui/vue/src/assets/css/components/icon.less';
-import '@lbzui/vue/src/assets/css/components/icon-button.less';
-import '@lbzui/vue/src/assets/css/components/list.less';
-import '@lbzui/vue/src/assets/css/components/list-item.less';
-import '@lbzui/vue/src/assets/css/components/radio.less';
-import '@lbzui/vue/src/assets/css/components/state.less';
-import '@lbzui/vue/src/assets/css/components/tab.less';
-import '@lbzui/vue/src/assets/css/components/tab-item.less';
-import '@lbzui/vue/src/assets/css/components/top-app-bar.less';
-
 import {
   Backdrop,
   Button,
@@ -215,6 +139,75 @@ Vue.use(State);
 Vue.use(Tab);
 Vue.use(TabItem);
 Vue.use(TopAppBar);
+```
+
+#### Step 4: Build a Material theme
+
+> NOTE: If you just want to use the compiled CSS, you can skip to [Step 5](#step-5-use-lbz-button-component).
+
+Create your own Material theme by customizing values for [layout grid](https://material.io/design/layout/responsive-layout-grid.html), [shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), [theme](https://material.io/resources/color/), and more.
+
+Install devDependencies through npm or yarn:
+
+```bash
+# with npm
+## upgrade Less to 3.5.0+
+npm i less@latest -D
+
+## CSS resets
+npm i normalize.css -D
+
+## convert modern CSS
+npm i postcss-preset-env -D
+
+## convert pixel units to rem units (optional)
+npm i postcss-pxtorem -D
+
+# with yarn
+yarn add less --dev
+yarn add normalize.css --dev
+yarn add postcss-preset-env --dev
+yarn add postcss-pxtorem --dev
+
+# in Windows, run `winpty vue.cmd add style-resources-loader`
+vue add style-resources-loader
+```
+
+Import CSS source code in `main.ts(.js)`:
+
+```js
+// src/main.ts(.js)
+
+// all CSS:
+// import '@lbzui/vue/src/assets/css/index.less';
+
+// or individual CSS:
+import '@lbzui/vue/src/assets/css/base.less';
+
+import '@lbzui/vue/src/assets/css/styles/elevation.less';
+import '@lbzui/vue/src/assets/css/styles/layout-grid.less';
+import '@lbzui/vue/src/assets/css/styles/shadow.less';
+import '@lbzui/vue/src/assets/css/styles/surface.less';
+import '@lbzui/vue/src/assets/css/styles/typography.less';
+import '@lbzui/vue/src/assets/css/styles/utility.less';
+
+import '@lbzui/vue/src/assets/css/components/backdrop.less';
+import '@lbzui/vue/src/assets/css/components/button.less';
+import '@lbzui/vue/src/assets/css/components/card.less';
+import '@lbzui/vue/src/assets/css/components/dialog.less';
+import '@lbzui/vue/src/assets/css/components/divider.less';
+import '@lbzui/vue/src/assets/css/components/drawer.less';
+import '@lbzui/vue/src/assets/css/components/empty-state.less';
+import '@lbzui/vue/src/assets/css/components/fab.less';
+import '@lbzui/vue/src/assets/css/components/icon.less';
+import '@lbzui/vue/src/assets/css/components/icon-button.less';
+import '@lbzui/vue/src/assets/css/components/list.less';
+import '@lbzui/vue/src/assets/css/components/list-item.less';
+import '@lbzui/vue/src/assets/css/components/radio.less';
+import '@lbzui/vue/src/assets/css/components/state.less';
+import '@lbzui/vue/src/assets/css/components/tab.less';
+import '@lbzui/vue/src/assets/css/components/tab-item.less';
+import '@lbzui/vue/src/assets/css/components/top-app-bar.less';
 ```
 
 Prepend variables and mixins to all less files in `vue.config.js`:
@@ -283,7 +276,7 @@ Use PostCSS plugins to convert CSS in `package.json` or `postcss.config.js`:
 ```
 
 ```js
-// or postcss.config.js (if you prefer placing config in dedicated config files)
+// postcss.config.js (if you prefer placing config in dedicated config files)
 module.exports = {
   plugins: {
     'postcss-preset-env': {
@@ -309,10 +302,9 @@ module.exports = {
 }
 ````
 
-#### Step 5: Use `lbz-button` component
+#### Step 5: Use components like `lbz-button`
 
 ```vue
-<!-- .vue -->
 <template>
   <lbz-button @click.stop="fclick">Click me</lbz-button>
 </template>
@@ -321,7 +313,7 @@ module.exports = {
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Button extends Vue {
+export default class Demo extends Vue {
   private fclick(e: MouseEvent): void {
     alert('Hello @lbzui/vue!');
   }

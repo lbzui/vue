@@ -77,13 +77,11 @@ export default class LbzState extends Vue {
   }
 
   private fmousedown(e: MouseEvent): void {
-    if (!this.cisRipple) {
+    if (!this.cisRipple || this.visTouch) {
       return;
     }
 
-    if (!this.visTouch) {
-      this.fenter(e);
-    }
+    this.fenter(e);
   }
 
   private fmouseup(e: MouseEvent): void {
@@ -91,10 +89,9 @@ export default class LbzState extends Vue {
       return;
     }
 
-    if (!this.visTouch) {
-      this.visTouch = false;
-      this.fleave(e);
-    }
+    this.visTouch
+      ? this.visTouch = false
+      : this.fleave(e);
   }
 
   private fenter(e: TouchEvent | MouseEvent): void {
