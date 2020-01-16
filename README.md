@@ -173,15 +173,13 @@ yarn add postcss-pxtorem --dev
 vue add style-resources-loader
 ```
 
-Import CSS source code in `main.ts(.js)`:
+Import CSS source code in `src/main.ts(.js)`:
 
 ```js
-// src/main.ts(.js)
-
-// all CSS:
+// all:
 // import '@lbzui/vue/src/assets/css/index.less';
 
-// or individual CSS:
+// or individual (recommended):
 import '@lbzui/vue/src/assets/css/base.less';
 
 import '@lbzui/vue/src/assets/css/styles/elevation.less';
@@ -213,7 +211,6 @@ import '@lbzui/vue/src/assets/css/components/top-app-bar.less';
 Prepend variables and mixins to all less files in `vue.config.js`:
 
 ```js
-// vue.config.js
 const path = require('path')
 
 const LBZUI_CSS_PATH = 'node_modules/@lbzui/vue/src/assets/css/'
