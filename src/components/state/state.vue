@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { supportsCssVariables } from '../../utils/funcs';
+import { supportsTouch, supportsCssVariables } from '../../utils/funcs';
 
 interface RippleTranslate {
   readonly x: number;
@@ -36,7 +36,7 @@ export default class LbzState extends Vue {
   // unscalable: true, false (default)
   @Prop({ type: Boolean, default: false }) private unscalable!: boolean;
 
-  private visTouch: boolean = false;
+  private vsupportsTouch: boolean = supportsTouch();
   private vframeTimer: any = 0;
   private venterTimer: any = 0;
   private vleaveTimer: any = 0;
@@ -58,7 +58,6 @@ export default class LbzState extends Vue {
       return;
     }
 
-    this.visTouch = true;
     this.fenter(e);
   }
 
@@ -77,7 +76,7 @@ export default class LbzState extends Vue {
   }
 
   private fmousedown(e: MouseEvent): void {
-    if (!this.cisRipple || this.visTouch) {
+    if (!this.cisRipple || this.vsupportsTouch) {
       return;
     }
 
@@ -85,13 +84,11 @@ export default class LbzState extends Vue {
   }
 
   private fmouseup(e: MouseEvent): void {
-    if (!this.cisRipple) {
+    if (!this.cisRipple || this.vsupportsTouch) {
       return;
     }
 
-    this.visTouch
-      ? this.visTouch = false
-      : this.fleave(e);
+    this.fleave(e);
   }
 
   private fenter(e: TouchEvent | MouseEvent): void {

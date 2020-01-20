@@ -3,6 +3,10 @@ interface ThemeColor {
   readonly dark: string;
 }
 
+export function supportsTouch(): boolean {
+  return 'ontouchstart' in window || navigator.msMaxTouchPoints > 0;
+}
+
 export function supportsCssVariables(): boolean {
   const { CSS }: any = window;
 

@@ -4,40 +4,40 @@
 #lbz-layout-grid() {
   // Breakpoints (@media)
   .media() {
-    xlarge: ~'(min-width: 1920px)';
-    large: ~'(min-width: 1440px) and (max-width: 1919px)';
-    medium: ~'(min-width: 1024px) and (max-width: 1439px)';
-    small: ~'(min-width: 600px) and (max-width: 1023px)';
-    xsmall: ~'(max-width: 599px)';
+    xlarge: ~"(min-width: 1920px)";
+    large: ~"(min-width: 1440px) and (max-width: 1919px)";
+    medium: ~"(min-width: 1024px) and (max-width: 1439px)";
+    small: ~"(min-width: 600px) and (max-width: 1023px)";
+    xsmall: ~"(max-width: 599px)";
 
-    min720: ~'(min-width: 720px)';
-    max719: ~'(max-width: 719px)';
+    min720: ~"(min-width: 720px)";
+    max719: ~"(max-width: 719px)";
   }
 
   // Columns, gutters, and margins
   .large() { // width >= 840px
-    media: ~'(min-width: 840px)';
+    media: ~"(min-width: 840px)";
     column: 12;
     gutter: 24px;
     margin: 24px;
   }
 
   .medium() { // 720px <= width < 840px
-    media: ~'(min-width: 720px) and (max-width: 839px)';
+    media: ~"(min-width: 720px) and (max-width: 839px)";
     column: 8;
     gutter: 24px;
     margin: 24px;
   }
 
   .xmedium() { // 600px <= width < 720px
-    media: ~'(min-width: 600px) and (max-width: 719px)';
+    media: ~"(min-width: 600px) and (max-width: 719px)";
     column: 8;
     gutter: 16px;
     margin: 16px;
   }
 
   .small() { // width < 600px
-    media: ~'(max-width: 599px)';
+    media: ~"(max-width: 599px)";
     column: 4;
     gutter: 16px;
     margin: 16px;

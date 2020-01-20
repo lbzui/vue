@@ -1,6 +1,6 @@
 // Surface
 // usage: `.lbz-surface(@value: 0);` (@value: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24)
-//        `.lbz-surface(@theme: 'light'; @value: 0);` (@theme: 'light', 'dark'; @value: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24)
+//        `.lbz-surface(@theme: "light"; @value: 0);` (@theme: "light", "dark"; @value: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24)
 
 .lbz-surface(@value: 0) when (@value = 0) {
   background: var(--lbz-theme-surface-0);
@@ -42,6 +42,6 @@
   background: var(--lbz-theme-surface-24);
 }
 
-.lbz-surface(@theme: 'light'; @value: 0) when (isstring(@theme)) {
-  background: if((@theme = 'dark'), #lbz-theme-surface.dark[@@value], #lbz-theme-surface.light[@@value]);
+.lbz-surface(@theme: "light"; @value: 0) when (isstring(@theme)) {
+  background: if((@theme = "dark"), #lbz-theme-surface.dark[@@value], #lbz-theme-surface.light[@@value]);
 }

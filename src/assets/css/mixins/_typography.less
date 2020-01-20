@@ -1,7 +1,7 @@
 // Typography
 // usage: `.lbz-typography-letter-spacing(@tracking; @font-size);`
 //        `.lbz-typography();`
-//        `.lbz-typography(@value);` (@value: 'font-family', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'body1', 'body2', 'button', 'caption', 'overline')
+//        `.lbz-typography(@value);` (@value: "font-family", "h1", "h2", "h3", "h4", "h5", "h6", "subtitle1", "subtitle2", "body1", "body2", "button", "caption", "overline")
 
 .lbz-typography-letter-spacing(@tracking; @font-size) {
   letter-spacing: (@tracking / @font-size * 1em);
@@ -13,11 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.lbz-typography(@value) when (@value = 'font-family') {
+.lbz-typography(@value) when (@value = "font-family") {
   font-family: Roboto, sans-serif;
 }
 
-.lbz-typography(@value) when (@value = 'h1') {
+.lbz-typography(@value) when (@value = "h1") {
   font-size: 96px;
   font-weight: 300;
   line-height: 112px;
@@ -26,7 +26,7 @@
   text-transform: inherit;
 }
 
-.lbz-typography(@value) when (@value = 'h2') {
+.lbz-typography(@value) when (@value = "h2") {
   font-size: 60px;
   font-weight: 300;
   line-height: 72px;
@@ -35,7 +35,7 @@
   text-transform: inherit;
 }
 
-.lbz-typography(@value) when (@value = 'h3') {
+.lbz-typography(@value) when (@value = "h3") {
   font-size: 48px;
   font-weight: 400;
   line-height: 56px;
@@ -44,7 +44,7 @@
   text-transform: inherit;
 }
 
-.lbz-typography(@value) when (@value = 'h4') {
+.lbz-typography(@value) when (@value = "h4") {
   font-size: 34px;
   font-weight: 400;
   line-height: 36px;
@@ -53,7 +53,7 @@
   text-transform: inherit;
 }
 
-.lbz-typography(@value) when (@value = 'h5') {
+.lbz-typography(@value) when (@value = "h5") {
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
@@ -62,7 +62,7 @@
   text-transform: inherit;
 }
 
-.lbz-typography(@value) when (@value = 'h6') {
+.lbz-typography(@value) when (@value = "h6") {
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
@@ -71,7 +71,7 @@
   text-transform: inherit;
 }
 
-.lbz-typography(@value) when (@value = 'subtitle1') {
+.lbz-typography(@value) when (@value = "subtitle1") {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -80,7 +80,7 @@
   text-transform: inherit;
 }
 
-.lbz-typography(@value) when (@value = 'subtitle2') {
+.lbz-typography(@value) when (@value = "subtitle2") {
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
@@ -89,7 +89,7 @@
   text-transform: inherit;
 }
 
-.lbz-typography(@value) when (@value = 'body1') {
+.lbz-typography(@value) when (@value = "body1") {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -98,7 +98,7 @@
   text-transform: inherit;
 }
 
-.lbz-typography(@value) when (@value = 'body2') {
+.lbz-typography(@value) when (@value = "body2") {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -107,7 +107,7 @@
   text-transform: inherit;
 }
 
-.lbz-typography(@value) when (@value = 'button') {
+.lbz-typography(@value) when (@value = "button") {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
@@ -116,7 +116,7 @@
   text-transform: uppercase;
 }
 
-.lbz-typography(@value) when (@value = 'caption') {
+.lbz-typography(@value) when (@value = "caption") {
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -125,7 +125,7 @@
   text-transform: inherit;
 }
 
-.lbz-typography(@value) when (@value = 'overline') {
+.lbz-typography(@value) when (@value = "overline") {
   display: block;
   font-size: 16px;
   font-weight: 400;

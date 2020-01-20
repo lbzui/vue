@@ -57,23 +57,23 @@
             disabled
             style="padding: 0;"
           >
-          <lbz-radio
-            v-model="visDark"
-            id="light-theme"
-            name="light-theme"
-            :value="false"
-            :disabled="!vsupportsCssVars"
-            @change="fsetTheme"
-          >Light</lbz-radio>
-          <lbz-radio
-            v-model="visDark"
-            id="dark-theme"
-            name="dark-theme"
-            :value="true"
-            :disabled="!vsupportsCssVars"
-            @change="fsetTheme"
-          >Dark</lbz-radio>
-        </lbz-list-item>
+            <lbz-radio
+              v-model="visDark"
+              id="light-theme"
+              name="light-theme"
+              :value="false"
+              :disabled="!vsupportsCssVars"
+              @change="fsetTheme"
+            >Light</lbz-radio>
+            <lbz-radio
+              v-model="visDark"
+              id="dark-theme"
+              name="dark-theme"
+              :value="true"
+              :disabled="!vsupportsCssVars"
+              @change="fsetTheme"
+            >Dark</lbz-radio>
+          </lbz-list-item>
         </lbz-list>
       </template>
     </lbz-drawer>
