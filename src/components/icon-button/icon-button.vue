@@ -104,7 +104,8 @@ export default class LbzIconButton extends Vue {
       class: 'lbz-icon-button__state',
       type: this.onBackground === 'light' ? '' : 'primary',
       background: this.onBackground ? `on-${this.onBackground}` : '',
-      unscalable: true,
+      unbounded: true,
+      centered: true,
     };
   }
 

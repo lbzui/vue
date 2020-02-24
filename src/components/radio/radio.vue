@@ -63,7 +63,8 @@ export default class LbzRadio extends Vue {
       class: 'lbz-radio__state',
       type: this.cisSelected ? 'primary' : '',
       background: this.color || 'secondary',
-      unscalable: true,
+      unbounded: true,
+      centered: true,
     };
   }
 

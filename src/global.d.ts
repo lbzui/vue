@@ -32,6 +32,7 @@ declare global {
     class: string;
     type?: string;
     background?: string;
-    unscalable?: boolean;
+    unbounded?: boolean;
+    centered?: boolean;
   }
 }

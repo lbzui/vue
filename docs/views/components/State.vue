@@ -90,10 +90,16 @@
       <lbz-state background="on-dark"></lbz-state>
     </div>
 
-    <h3 class="lbz-typography--subtitle1">$ unscalable: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ unbounded: true, false (default)</h3>
+    <div class="lbzui-u-square lbz-state-no-before--descendant" style="overflow: visible;">
+      unbounded
+      <lbz-state unbounded></lbz-state>
+    </div>
+
+    <h3 class="lbz-typography--subtitle1">$ centered: true, false (default)</h3>
     <div class="lbzui-u-square">
-      unscalable
-      <lbz-state unscalable></lbz-state>
+      centered
+      <lbz-state centered></lbz-state>
     </div>
   </article>
 </template>

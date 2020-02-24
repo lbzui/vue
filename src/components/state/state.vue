@@ -4,8 +4,8 @@
       'lbz-state',
       type && `lbz-state--${ type }`,
       background && `lbz-state-bg--${ background }`,
-      unscalable && 'is-unscalable',
-      cisRipple && 'lbz-ripple'
+      cisRipple && 'lbz-ripple',
+      cisRipple && unbounded && 'lbz-ripple--unbounded'
     ]"
     @touchstart.passive="ftouchstart($event)"
     @touchmove.passive="ftouchmove($event)"
@@ -18,6 +18,11 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { supportsTouch, supportsCssVariables } from '../../utils/funcs';
+
+interface RippleCoordinate {
+  readonly top: number;
+  readonly left: number;
+}
 
 interface RippleTranslate {
   readonly x: number;
@@ -33,8 +38,10 @@ export default class LbzState extends Vue {
   //             'on-primary', 'on-primary-variant', 'on-secondary', 'on-secondary-variant',
   //             'on-background', 'on-surface' (default), 'on-error', 'on-light', 'on-dark'
   @Prop({ type: String, default: '' }) private background!: string;
-  // unscalable: true, false (default)
-  @Prop({ type: Boolean, default: false }) private unscalable!: boolean;
+  // unbounded: true, false (default)
+  @Prop({ type: Boolean, default: false }) private unbounded!: boolean;
+  // centered: true, false (default)
+  @Prop({ type: Boolean, default: false }) private centered!: boolean;
 
   private vsupportsTouch: boolean = supportsTouch();
   private vframeTimer: any = 0;
@@ -94,25 +101,43 @@ export default class LbzState extends Vue {
   private fenter(e: TouchEvent | MouseEvent): void {
     const target: HTMLSpanElement = (e as any).target;
     const { offsetWidth, offsetHeight }: any = target;
-    const clientRect: ClientRect = target.getBoundingClientRect();
-    const radius: number = Math.sqrt(Math.pow(offsetWidth, 2) + Math.pow(offsetHeight, 2)) + 10;
-    const size: number = Math.floor(Math.max(offsetWidth, offsetHeight) * .6);
-    const touch: any = e.type === 'touchstart'
-      ? (e as TouchEvent).changedTouches[0]
-      : (e as MouseEvent);
-    const translateStart: RippleTranslate = {
-      x: (touch.pageX - (window.pageXOffset + clientRect.left)) - size / 2,
-      y: (touch.pageY - (window.pageYOffset + clientRect.top)) - size / 2,
-    };
-    const translateEnd: RippleTranslate = {
-      x: (offsetWidth - size) / 2,
-      y: (offsetHeight - size) / 2,
-    };
+    const maxRadius: number = Math.max(offsetWidth, offsetHeight);
+    const initialSize: number = Math.floor(maxRadius * .6);
+    const radius: number = this.centered
+      ? maxRadius
+      : Math.sqrt(Math.pow(offsetWidth, 2) + Math.pow(offsetHeight, 2)) + 10;
+    const size: number = this.centered && initialSize % 2 !== 0
+      ? initialSize - 1
+      : initialSize;
 
     target.style.setProperty('--lbz-ripple-size', `${size}px`);
-    target.style.setProperty('--lbz-ripple-translate-start', `${translateStart.x}px, ${translateStart.y}px`);
-    target.style.setProperty('--lbz-ripple-translate-end', `${translateEnd.x}px, ${translateEnd.y}px`);
     target.style.setProperty('--lbz-ripple-scale', `${radius / size}`);
+
+    if (this.centered) {
+      const coordinate: RippleCoordinate = {
+        top: Math.round((offsetHeight - size) / 2),
+        left: Math.round((offsetWidth - size) / 2),
+      };
+
+      target.style.setProperty('--lbz-ripple-top', `${coordinate.top}px`);
+      target.style.setProperty('--lbz-ripple-left', `${coordinate.left}px`);
+    } else {
+      const clientRect: ClientRect = target.getBoundingClientRect();
+      const touch: any = e.type === 'touchstart'
+        ? (e as TouchEvent).changedTouches[0]
+        : (e as MouseEvent);
+      const translateStart: RippleTranslate = {
+        x: (touch.pageX - (window.pageXOffset + clientRect.left)) - size / 2,
+        y: (touch.pageY - (window.pageYOffset + clientRect.top)) - size / 2,
+      };
+      const translateEnd: RippleTranslate = {
+        x: (offsetWidth - size) / 2,
+        y: (offsetHeight - size) / 2,
+      };
+
+      target.style.setProperty('--lbz-ripple-translate-start', `${translateStart.x}px, ${translateStart.y}px`);
+      target.style.setProperty('--lbz-ripple-translate-end', `${translateEnd.x}px, ${translateEnd.y}px`);
+    }
 
     this.vframeTimer = window.requestAnimationFrame((): void => {
       target.classList.add('lbz-ripple-enter');
