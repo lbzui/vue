@@ -2,8 +2,8 @@
   <i
     :class="[
       'material-icons lbz-icon',
-      size && `lbz-icon--${ size }`,
-      color && `lbz-icon--${ color }`,
+      size && `lbz-icon--${size}`,
+      color && `lbz-icon--${color}`,
       disabled && 'is-disabled'
     ]"
   ><slot/></i>

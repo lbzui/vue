@@ -35,6 +35,7 @@ declare module '@lbzui/vue' {
   export class ListItem extends LbzuiComponent {}
   export class Radio extends LbzuiComponent {}
   export class State extends LbzuiComponent {}
+  export class Switch extends LbzuiComponent {}
   export class Tab extends LbzuiComponent {}
   export class TabItem extends LbzuiComponent {}
   export class TopAppBar extends LbzuiComponent {}

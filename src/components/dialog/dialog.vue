@@ -4,7 +4,7 @@
       v-if="cisActive"
       :class="[
         'lbz-dialog',
-        type && `lbz-dialog--${ type }`,
+        type && `lbz-dialog--${type}`,
         {
           'is-scrollable': type === 'confirmation' && scrollable,
           'is-stacked': cisAlertAndConfirmation && stacked

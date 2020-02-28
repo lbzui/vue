@@ -4,101 +4,101 @@
 
     <h3 class="lbz-typography--subtitle1">$ type: 'surface' (default), 'primary', 'image'</h3>
     <div class="lbzui-u-square">
-      surface
+      Surface
       <lbz-state></lbz-state>
     </div>
     <div class="lbzui-u-square">
-      primary
+      Primary
       <lbz-state type="primary"></lbz-state>
     </div>
     <div class="lbzui-u-square">
-      image
+      Image
       <lbz-state type="image"></lbz-state>
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary', 'secondary-variant', 'background', 'surface', 'error', 'light', 'dark', 'on-primary', 'on-primary-variant', 'on-secondary', 'on-secondary-variant', 'on-background', 'on-surface' (default), 'on-error', 'on-light', 'on-dark'</h3>
     <div class="lbzui-u-square">
-      primary
+      Primary
       <lbz-state background="primary"></lbz-state>
     </div>
     <div class="lbzui-u-square">
-      primary-variant
+      Primary-variant
       <lbz-state background="primary-variant"></lbz-state>
     </div>
     <div class="lbzui-u-square">
-      secondary
+      Secondary
       <lbz-state background="secondary"></lbz-state>
     </div>
     <div class="lbzui-u-square">
-      secondary-variant
+      Secondary-variant
       <lbz-state background="secondary-variant"></lbz-state>
     </div>
     <div class="lbzui-u-square">
-      background
+      Background
       <lbz-state background="background"></lbz-state>
     </div>
     <div class="lbzui-u-square">
-      surface
+      Surface
       <lbz-state background="surface"></lbz-state>
     </div>
     <div class="lbzui-u-square">
-      error
+      Error
       <lbz-state background="error"></lbz-state>
     </div>
     <div class="lbzui-u-square">
-      light
+      Light
       <lbz-state background="light"></lbz-state>
     </div>
     <div class="lbzui-u-square">
-      dark
+      Dark
       <lbz-state background="dark"></lbz-state>
     </div>
     <div class="lbzui-u-square primary">
-      on-primary
+      On-primary
       <lbz-state background="on-primary"></lbz-state>
     </div>
     <div class="lbzui-u-square primary-variant">
-      on-primary-variant
+      On-primary-variant
       <lbz-state background="on-primary-variant"></lbz-state>
     </div>
     <div class="lbzui-u-square secondary">
-      on-secondary
+      On-secondary
       <lbz-state background="on-secondary"></lbz-state>
     </div>
     <div class="lbzui-u-square secondary-variant">
-      on-secondary-variant
+      On-secondary-variant
       <lbz-state background="on-secondary-variant"></lbz-state>
     </div>
     <div class="lbzui-u-square background">
-      on-background
+      On-background
       <lbz-state background="on-background"></lbz-state>
     </div>
     <div class="lbzui-u-square surface">
-      on-surface
+      On-surface
       <lbz-state></lbz-state>
     </div>
     <div class="lbzui-u-square error">
-      on-error
+      On-error
       <lbz-state background="on-error"></lbz-state>
     </div>
     <div class="lbzui-u-square light">
-      on-light
+      On-light
       <lbz-state background="on-light"></lbz-state>
     </div>
     <div class="lbzui-u-square dark">
-      on-dark
+      On-dark
       <lbz-state background="on-dark"></lbz-state>
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ unbounded: true, false (default)</h3>
     <div class="lbzui-u-square lbz-state-no-before--descendant" style="overflow: visible;">
-      unbounded
+      Unbounded
       <lbz-state unbounded></lbz-state>
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ centered: true, false (default)</h3>
     <div class="lbzui-u-square">
-      centered
+      Centered
       <lbz-state centered></lbz-state>
     </div>
   </article>

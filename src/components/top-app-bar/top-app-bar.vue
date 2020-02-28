@@ -2,13 +2,13 @@
   <header
     :class="[
       'lbz-top-app-bar',
-      type && `lbz-top-app-bar--${ type }`,
-      background && `lbz-top-app-bar--${ background }`,
-      inactive && `is-inactive--${ inactive }`,
+      type && `lbz-top-app-bar--${type}`,
+      background && `lbz-top-app-bar--${background}`,
+      inactive && `is-inactive--${inactive}`,
       cisDense && 'is-dense',
       elevated && 'is-elevated'
     ]"
-    :style="type === 'extended' && media ? { backgroundImage: `url(${ media })` } : {}"
+    :style="type === 'extended' && media ? { backgroundImage: `url(${media})` } : {}"
   >
     <section class="lbz-top-app-bar__container">
       <div v-if="$slots.start" class="lbz-top-app-bar__start">

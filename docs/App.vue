@@ -60,7 +60,7 @@
             <lbz-radio
               v-model="visDark"
               id="light-theme"
-              name="light-theme"
+              name="visDark"
               :value="false"
               :disabled="!vsupportsCssVars"
               @change="fsetTheme"
@@ -68,7 +68,7 @@
             <lbz-radio
               v-model="visDark"
               id="dark-theme"
-              name="dark-theme"
+              name="visDark"
               :value="true"
               :disabled="!vsupportsCssVars"
               @change="fsetTheme"
@@ -178,6 +178,10 @@ export default class App extends Vue {
       {
         path: '/components/state',
         label: 'State',
+      },
+      {
+        path: '/components/switch',
+        label: 'Switch',
       },
       {
         path: '/components/tab',

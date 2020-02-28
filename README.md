@@ -112,6 +112,7 @@ import {
   ListItem,
   Radio,
   State,
+  Switch,
   Tab,
   TabItem,
   TopAppBar,
@@ -136,6 +137,7 @@ Vue.use(List);
 Vue.use(ListItem);
 Vue.use(Radio);
 Vue.use(State);
+Vue.use(Switch);
 Vue.use(Tab);
 Vue.use(TabItem);
 Vue.use(TopAppBar);
@@ -203,6 +205,7 @@ import '@lbzui/vue/src/assets/css/components/list.less';
 import '@lbzui/vue/src/assets/css/components/list-item.less';
 import '@lbzui/vue/src/assets/css/components/radio.less';
 import '@lbzui/vue/src/assets/css/components/state.less';
+import '@lbzui/vue/src/assets/css/components/switch.less';
 import '@lbzui/vue/src/assets/css/components/tab.less';
 import '@lbzui/vue/src/assets/css/components/tab-item.less';
 import '@lbzui/vue/src/assets/css/components/top-app-bar.less';

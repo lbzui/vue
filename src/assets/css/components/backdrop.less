@@ -170,10 +170,8 @@
       transform: translate3d(0, calc(100% - 74px), 0); // (100% + 56px) - 130px
     }
   }
-}
 
-html[theme="dark"] {
-  .lbz-backdrop:not(.lbz-backdrop--dark) {
+  html[theme="dark"] &:not(.lbz-backdrop--dark) {
     .lbz-surface("dark"; 0);
 
     .lbz-backdrop__back-layer {

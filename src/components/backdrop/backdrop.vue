@@ -2,7 +2,7 @@
   <div
     :class="[
       'lbz-backdrop',
-      background && `lbz-backdrop--${ background }`,
+      background && `lbz-backdrop--${background}`,
       cisActive && 'is-active'
     ]"
   >

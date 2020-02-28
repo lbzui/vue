@@ -1,7 +1,7 @@
 <template>
   <component
     :is="tag"
-    :class="['lbz-card', type && `lbz-card--${ type }`]"
+    :class="['lbz-card', type && `lbz-card--${type}`]"
     @click="$emit('click', $event)"
   >
     <lbz-state v-bind="cgetStateAttrs"/>

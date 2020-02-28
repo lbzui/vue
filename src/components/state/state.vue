@@ -2,8 +2,8 @@
   <span
     :class="[
       'lbz-state',
-      type && `lbz-state--${ type }`,
-      background && `lbz-state-bg--${ background }`,
+      type && `lbz-state--${type}`,
+      background && `lbz-state-bg--${background}`,
       cisRipple && 'lbz-ripple',
       cisRipple && unbounded && 'lbz-ripple--unbounded'
     ]"

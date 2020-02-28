@@ -3,8 +3,8 @@
     v-bind="cgetAttrs"
     :class="[
       'lbz-button',
-      type && `lbz-button--${ type }`,
-      color && `lbz-button--${ color }`,
+      type && `lbz-button--${type}`,
+      color && `lbz-button--${color}`,
       {
         'is-full-width': fullWidth,
         'is-dense': cisDense,

@@ -4,7 +4,7 @@
     :class="[
       !toggle && 'material-icons',
       'lbz-icon-button',
-      onBackground && `lbz-icon-button--on-${ onBackground }`,
+      onBackground && `lbz-icon-button--on-${onBackground}`,
       {
         'is-active': toggle && cisActive,
         'is-disabled': disabled

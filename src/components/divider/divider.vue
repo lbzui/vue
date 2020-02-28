@@ -1,5 +1,5 @@
 <template>
-  <hr :class="['lbz-divider', onBackground && `lbz-divider--on-${ onBackground }`]">
+  <hr :class="['lbz-divider', onBackground && `lbz-divider--on-${onBackground}`]">
 </template>
 
 <script lang="ts">

@@ -3,13 +3,13 @@
     :is="tag"
     :class="[
       'lbz-list',
-      type && `lbz-list--${ type }`,
+      type && `lbz-list--${type}`,
       cisDense && 'is-dense'
     ]"
   >
     <span
       v-if="subtitle"
-      :class="['lbz-list__subtitle', placement && `lbz-list__subtitle--${ placement }`]"
+      :class="['lbz-list__subtitle', placement && `lbz-list__subtitle--${placement}`]"
       v-html="subtitle"
     ></span>
     <slot/>

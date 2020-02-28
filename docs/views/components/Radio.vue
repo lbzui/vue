@@ -3,20 +3,20 @@
     <h2 class="lbz-typography--h5"># Radio</h2>
 
     <h3 class="lbz-typography--subtitle1">$ [required]v-model: true, false, x, 'x'</h3>
-    <h3 class="lbz-typography--subtitle1">$ id: true, false, x, '' (default), 'x'</h3>
-    <h3 class="lbz-typography--subtitle1">$ name: true, false, x, '' (default), 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ id: '' (default), 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ name: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ [required]value: true, false, x, 'x'</h3>
     <lbz-radio
       v-model="vradio0"
-      :id="true"
-      :name="true"
+      id="vradio0-true"
+      name="vradio0"
       :value="true"
       @change="fchange"
     >True</lbz-radio>
     <lbz-radio
       v-model="vradio0"
-      :id="false"
-      :name="false"
+      id="vradio0-false"
+      name="vradio0"
       :value="false"
       @change="fchange"
     >False</lbz-radio>
@@ -24,28 +24,28 @@
     <h3 class="lbz-typography--subtitle1">$ color: 'primary', 'secondary' (default)</h3>
     <lbz-radio
       v-model="vradio1"
-      value="primary"
+      :value="1"
       color="primary"
     >Primary</lbz-radio>
-    <lbz-radio v-model="vradio1" value="primary">Secondary</lbz-radio>
+    <lbz-radio v-model="vradio1" :value="0">Secondary</lbz-radio>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-radio
-      v-model="vradio3"
+      v-model="vradio2"
       value="selected"
       color="primary"
       disabled
-    >Selected & Disabled</lbz-radio>
+    >Primary & Selected</lbz-radio>
     <lbz-radio
-      v-model="vradio3"
+      v-model="vradio2"
       value="selected"
       disabled
-    >Selected & Disabled</lbz-radio>
+    >Selected</lbz-radio>
     <lbz-radio
-      v-model="vradio3"
+      v-model="vradio2"
       value="deselected"
       disabled
-    >Deselected & Disabled</lbz-radio>
+    >Deselected</lbz-radio>
   </article>
 </template>
 
@@ -55,9 +55,8 @@ import { Component, Vue } from 'vue-property-decorator';
 @Component
 export default class ComponentsRadio extends Vue {
   private vradio0: boolean = true;
-  private vradio1: string = 'primary';
-  private vradio2: number = 1;
-  private vradio3: string = 'selected';
+  private vradio1: number = 1;
+  private vradio2: string = 'selected';
 
   private fchange(val: boolean | number | string, e: MouseEvent): void {
     alert(val);

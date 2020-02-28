@@ -3,8 +3,8 @@
     :is="tag"
     :class="[
       'lbz-fab',
-      type && `lbz-fab--${ type }`,
-      background && `lbz-fab--${ background }`,
+      type && `lbz-fab--${type}`,
+      background && `lbz-fab--${background}`,
       inactive && 'is-inactive'
     ]"
     @click="$emit('click', $event)"

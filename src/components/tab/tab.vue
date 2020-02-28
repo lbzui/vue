@@ -3,9 +3,9 @@
     :is="tag"
     :class="[
       'lbz-tab',
-      type && `lbz-tab--${ type }`,
-      onBackground && `lbz-tab--on-${ onBackground }`,
-      type !== 'scrollable' && alignment && `lbz-tab--${ alignment }`,
+      type && `lbz-tab--${type}`,
+      onBackground && `lbz-tab--on-${onBackground}`,
+      type !== 'scrollable' && alignment && `lbz-tab--${alignment}`,
       stacked && 'is-stacked'
     ]"
   >

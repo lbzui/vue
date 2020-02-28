@@ -15,6 +15,7 @@ import List from './list';
 import ListItem from './list-item';
 import Radio from './radio';
 import State from './state';
+import Switch from './switch';
 import Tab from './tab';
 import TabItem from './tab-item';
 import TopAppBar from './top-app-bar';
@@ -36,6 +37,7 @@ const components: any[] = [
   ListItem,
   Radio,
   State,
+  Switch,
   Tab,
   TabItem,
   TopAppBar,
@@ -77,6 +79,7 @@ export default {
   ListItem,
   Radio,
   State,
+  Switch,
   Tab,
   TabItem,
   TopAppBar,

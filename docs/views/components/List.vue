@@ -3,7 +3,7 @@
     <h2 class="lbz-typography--h5"># List</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'one-line' (default), 'two-line', 'three-line'</h3>
-    <lbz-list class="lbzui-u-rectangle" subtitle="One line">
+    <lbz-list class="lbzui-u-rectangle" subtitle="One-line">
       <lbz-list-item @click.stop="fclick">One-line item</lbz-list-item>
       <lbz-list-item>
         <template #center>One-line item</template>
@@ -61,7 +61,7 @@
     <lbz-list
       class="lbzui-u-rectangle"
       type="two-line"
-      subtitle="Two line"
+      subtitle="Two-line"
     >
       <lbz-list-item>
         <template #center>
@@ -131,7 +131,7 @@
     <lbz-list
       class="lbzui-u-rectangle"
       type="three-line"
-      subtitle="Three line"
+      subtitle="Three-line"
     >
       <lbz-list-item>
         <template #center>
@@ -233,7 +233,7 @@
     <lbz-list
       class="lbzui-u-rectangle"
       dense
-      subtitle="Dense one line"
+      subtitle="Dense one-line"
     >
       <lbz-list-item>One-line item</lbz-list-item>
       <lbz-list-item>
@@ -292,7 +292,7 @@
     <lbz-list
       class="lbzui-u-rectangle"
       :dense="false"
-      subtitle="Non-dense one line"
+      subtitle="Non-dense one-line"
     >
       <lbz-list-item>One-line item</lbz-list-item>
       <lbz-list-item>
@@ -352,7 +352,7 @@
       class="lbzui-u-rectangle"
       type="two-line"
       dense
-      subtitle="Dense two line"
+      subtitle="Dense two-line"
     >
       <lbz-list-item>
         <template #center>
@@ -423,7 +423,7 @@
       class="lbzui-u-rectangle"
       type="two-line"
       :dense="false"
-      subtitle="Non-dense two line"
+      subtitle="Non-dense two-line"
     >
       <lbz-list-item>
         <template #center>
@@ -494,7 +494,7 @@
       class="lbzui-u-rectangle"
       type="three-line"
       dense
-      subtitle="Dense three line"
+      subtitle="Dense three-line"
     >
       <lbz-list-item>
         <template #center>
@@ -566,7 +566,7 @@
       class="lbzui-u-rectangle"
       type="three-line"
       :dense="false"
-      subtitle="Non-dense three line"
+      subtitle="Non-dense three-line"
     >
       <lbz-list-item>
         <template #center>

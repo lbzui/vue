@@ -112,6 +112,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "state" */ '../views/components/State.vue'),
   },
   {
+    path: '/components/switch',
+    name: 'switch',
+    component: () => import(/* webpackChunkName: "switch" */ '../views/components/Switch.vue'),
+  },
+  {
     path: '/components/tab',
     name: 'tab',
     component: () => import(/* webpackChunkName: "tab" */ '../views/components/Tab.vue'),

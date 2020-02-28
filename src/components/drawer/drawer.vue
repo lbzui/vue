@@ -4,7 +4,7 @@
       v-show="cisActive"
       :class="[
         'lbz-drawer',
-        type && `lbz-drawer--${ type }`,
+        type && `lbz-drawer--${type}`,
         cisFullScreen && 'is-full-screen',
         cisActive ? 'is-active' : 'is-inactive'
       ]"
