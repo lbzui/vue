@@ -176,6 +176,10 @@ export default class App extends Vue {
         label: 'Radio',
       },
       {
+        path: '/components/snackbar',
+        label: 'Snackbar',
+      },
+      {
         path: '/components/state',
         label: 'State',
       },

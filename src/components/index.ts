@@ -14,6 +14,7 @@ import IconButton from './icon-button';
 import List from './list';
 import ListItem from './list-item';
 import Radio from './radio';
+import Snackbar from './snackbar';
 import State from './state';
 import Switch from './switch';
 import Tab from './tab';
@@ -36,6 +37,7 @@ const components: any[] = [
   List,
   ListItem,
   Radio,
+  Snackbar,
   State,
   Switch,
   Tab,
@@ -63,7 +65,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '0.3.0',
+  version: '0.4.0',
   install,
   Backdrop,
   Button,
@@ -78,6 +80,7 @@ export default {
   List,
   ListItem,
   Radio,
+  Snackbar,
   State,
   Switch,
   Tab,
