@@ -10,7 +10,7 @@
       ]"
     >
       <div class="lbz-drawer__container">
-        <template v-if="title || subtitle || $slots.start">
+        <template v-if="$slots.start || title || subtitle">
           <lbz-top-app-bar
             v-if="cisFullScreen"
             background="transparent"

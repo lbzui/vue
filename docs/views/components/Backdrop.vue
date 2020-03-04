@@ -6,7 +6,7 @@
     <h3 class="lbz-typography--subtitle1">$ background: 'primary' (default), 'secondary', 'dark'</h3>
     <div class="lbzui-u-app">
       <lbz-backdrop ref="backdrop" :active.sync="vactive">
-        <template #back-layer-header>
+        <template #back-start>
           <lbz-top-app-bar title="Page title">
             <template #start>
               <lbz-icon-button
@@ -22,17 +22,17 @@
             </template>
           </lbz-top-app-bar>
         </template>
-        <template #back-layer-content>
+        <template #back-center>
           <div>Back layer content</div>
         </template>
-        <template #front-layer-content>
+        <template #front-center>
           <article>Front layer content</article>
         </template>
       </lbz-backdrop>
     </div>
     <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" background="secondary">
-        <template #back-layer-header>
+        <template #back-start>
           <lbz-top-app-bar background="secondary" title="Page title">
             <template #start>
               <lbz-icon-button
@@ -48,17 +48,17 @@
             </template>
           </lbz-top-app-bar>
         </template>
-        <template #back-layer-content>
+        <template #back-center>
           <div>Back layer content</div>
         </template>
-        <template #front-layer-content>
+        <template #front-center>
           <article>Front layer content</article>
         </template>
       </lbz-backdrop>
     </div>
     <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" background="dark">
-        <template #back-layer-header>
+        <template #back-start>
           <lbz-top-app-bar background="dark" title="Page title">
             <template #start>
               <lbz-icon-button
@@ -74,10 +74,10 @@
             </template>
           </lbz-top-app-bar>
         </template>
-        <template #back-layer-content>
+        <template #back-center>
           <div>Back layer content</div>
         </template>
-        <template #front-layer-content>
+        <template #front-center>
           <article>Front layer content</article>
         </template>
       </lbz-backdrop>
@@ -86,7 +86,7 @@
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
     <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" subtitle="Subtitle">
-        <template #back-layer-header>
+        <template #back-start>
           <lbz-top-app-bar title="Page title">
             <template #start>
               <lbz-icon-button
@@ -102,10 +102,10 @@
             </template>
           </lbz-top-app-bar>
         </template>
-        <template #back-layer-content>
+        <template #back-center>
           <div>Back layer content</div>
         </template>
-        <template #front-layer-content>
+        <template #front-center>
           <article>Front layer content</article>
         </template>
       </lbz-backdrop>
@@ -114,7 +114,7 @@
     <h3 class="lbz-typography--subtitle1">$ icon: true, false (default)</h3>
     <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" icon>
-        <template #back-layer-header>
+        <template #back-start>
           <lbz-top-app-bar title="Page title">
             <template #start>
               <lbz-icon-button
@@ -130,10 +130,10 @@
             </template>
           </lbz-top-app-bar>
         </template>
-        <template #back-layer-content>
+        <template #back-center>
           <div>Back layer content</div>
         </template>
-        <template #front-layer-content>
+        <template #front-center>
           <article>Front layer content</article>
         </template>
       </lbz-backdrop>
@@ -142,7 +142,7 @@
     <h3 class="lbz-typography--subtitle1">$ divider: true, false (default)</h3>
     <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" divider>
-        <template #back-layer-header>
+        <template #back-start>
           <lbz-top-app-bar title="Page title">
             <template #start>
               <lbz-icon-button
@@ -158,10 +158,10 @@
             </template>
           </lbz-top-app-bar>
         </template>
-        <template #back-layer-content>
+        <template #back-center>
           <div>Back layer content</div>
         </template>
-        <template #front-layer-content>
+        <template #front-center>
           <article>Front layer content</article>
         </template>
       </lbz-backdrop>
@@ -174,7 +174,7 @@
         horizontal
         @scroll="fscroll"
       >
-        <template #back-layer-header>
+        <template #back-start>
           <lbz-top-app-bar title="Page title">
             <template #start>
               <lbz-icon-button
@@ -190,17 +190,17 @@
             </template>
           </lbz-top-app-bar>
         </template>
-        <template #back-layer-content>
+        <template #back-center>
           <div style="height: 1280px;">Back layer content</div>
         </template>
-        <template #front-layer-content>
+        <template #front-center>
           <article style="width: 1280px; height: 100%;">Front layer content</article>
         </template>
       </lbz-backdrop>
     </div>
     <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" @scroll="fscroll">
-        <template #back-layer-header>
+        <template #back-start>
           <lbz-top-app-bar title="Page title">
             <template #start>
               <lbz-icon-button
@@ -216,10 +216,10 @@
             </template>
           </lbz-top-app-bar>
         </template>
-        <template #back-layer-content>
+        <template #back-center>
           <div style="height: 1280px;">Back layer content</div>
         </template>
-        <template #front-layer-content>
+        <template #front-center>
           <article style="height: 1280px;">Front layer content</article>
         </template>
       </lbz-backdrop>
@@ -228,7 +228,7 @@
     <h3 class="lbz-typography--subtitle1">$ scrim: true, false (default)</h3>
     <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" scrim>
-        <template #back-layer-header>
+        <template #back-start>
           <lbz-top-app-bar title="Page title">
             <template #start>
               <lbz-icon-button
@@ -244,10 +244,10 @@
             </template>
           </lbz-top-app-bar>
         </template>
-        <template #back-layer-content>
+        <template #back-center>
           <div>Back layer content</div>
         </template>
-        <template #front-layer-content>
+        <template #front-center>
           <article>Front layer content</article>
         </template>
       </lbz-backdrop>

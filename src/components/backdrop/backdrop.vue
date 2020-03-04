@@ -7,16 +7,16 @@
     ]"
   >
     <section class="lbz-backdrop__back-layer">
-      <div v-if="$slots['back-layer-header']" class="lbz-backdrop__back-layer__header">
-        <slot name="back-layer-header"/>
+      <div v-if="$slots['back-start']" class="lbz-backdrop__back-layer__header">
+        <slot name="back-start"/>
       </div>
       <div class="lbz-backdrop__back-layer__content">
-        <slot name="back-layer-content"/>
+        <slot name="back-center"/>
       </div>
     </section>
     <section class="lbz-backdrop__front-layer">
       <header
-        v-if="subtitle || $slots['front-layer-header'] || icon || divider"
+        v-if="subtitle || $slots['front-start'] || icon || divider"
         class="lbz-backdrop__front-layer__header"
       >
         <h2
@@ -24,7 +24,7 @@
           class="lbz-backdrop__front-layer__header__title"
           v-html="subtitle"
         ></h2>
-        <slot name="front-layer-header"/>
+        <slot name="front-start"/>
         <lbz-icon-button
           v-if="icon"
           class="lbz-backdrop__front-layer__header__icon"
@@ -37,7 +37,7 @@
         v-scroll="fscroll"
         :class="['lbz-backdrop__front-layer__content', horizontal && 'is-horizontal']"
       >
-        <slot name="front-layer-content"/>
+        <slot name="front-center"/>
         <slot/>
       </main>
       <aside
