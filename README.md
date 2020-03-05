@@ -17,7 +17,7 @@ If you have any questions, ideas or you want to discuss with it, [create an issu
 - Support [light](https://material.io/design/color/the-color-system.html) and [dark](https://material.io/design/color/dark-theme.html) theme
 - Customize [layout grid](https://material.io/design/layout/responsive-layout-grid.html), [shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), [theme](https://material.io/resources/color/), and more
 - Fit responsive web design
-- Use [Vue](https://vuejs.org/) (2.6.0+), [TypeScript](http://www.typescriptlang.org/), [Less](http://lesscss.org/) (3.5.0+), [PostCSS](https://postcss.org/), etc. features
+- Use [Vue](https://vuejs.org/) (2.6.0+), [TypeScript](http://www.typescriptlang.org/), [Less](http://lesscss.org/) (3.5.0+), [PostCSS](https://postcss.org/), etc
 
 ## Quick start
 
@@ -305,7 +305,7 @@ module.exports = {
 }
 ````
 
-#### Step 5: Use components like `lbz-button`
+#### Step 5: Use components like Button
 
 ```vue
 <template>
@@ -377,11 +377,11 @@ const router = new VueRouter({
 
 ### Are there any extra featured CSS Classes?
 
-| CSS Class | Description |
-| --- | --- |
-| `.lbz-list.is-nav` | Convert List into Navigation. |
-| `.lbz-state-no-before--descendant` | `:hover`, `:focus`, and `:active` will not work in any descendant of elements, mainly applied in Card, List, and List item. |
-| `.lbz-state-no-before--child` | `:hover`, `:focus`, and `:active` will not work in any direct children of elements, mainly applied in Card, List, and List item. |
+| Component | CSS Class | Description |
+| --- | --- | --- |
+| List | `.lbz-list.is-nav` | Convert List into Navigation. |
+| State | `.lbz-state-no-before--child` | `:hover`, `:focus`, and `:active` will not work in any direct children of elements, mainly applied in Card, List, and List item. |
+| State | `.lbz-state-no-before--descendant` | `:hover`, `:focus`, and `:active` will not work in any descendant of elements, mainly applied in Card, List, and List item. |
 
 ## Browser support
 
