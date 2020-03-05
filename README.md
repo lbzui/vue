@@ -82,7 +82,7 @@ yarn add @lbzui/vue
 
 #### Step 3: Import @lbzui/vue in your code
 
-```js
+```ts
 // src/main.ts(.js)
 import '@lbzui/vue/lib/lbzui.css';
 import LBZUI from '@lbzui/vue';
@@ -95,7 +95,7 @@ Vue.use(LBZUI, {
 
 Or use individual components:
 
-```js
+```ts
 import '@lbzui/vue/lib/lbzui.css';
 import {
   Backdrop,
@@ -179,7 +179,7 @@ vue add style-resources-loader
 
 Import CSS source code in `src/main.ts(.js)`:
 
-```js
+```ts
 // all:
 // import '@lbzui/vue/src/assets/css/index.less';
 
@@ -331,6 +331,57 @@ All examples? Please view [code examples](/tree/master/docs/views) for details.
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons&display=block">
 ```
+
+## FAQ
+
+### What CSS Classes can I declare?
+
+To avoid style overrides, please do not use `--lbz-x (x: ...)` CSS Variables and CSS Classes:
+
+```less
+.align--x (x: start, center, end, stretch)
+.end--x (x: 2-13)
+.is-active
+.is-checked
+.is-dense
+.is-disabled
+.is-elevated
+.is-full-screen
+.is-full-width
+.is-horizontal
+.is-inactive
+.is-inactive--x (x: scroll-off, tab-fixed)
+.is-nav
+.is-scrollable
+.is-selected
+.is-stacked
+.is-unelevated
+.lbz-x (x: ...)
+.material-icons
+.span--x (x: 1-12)
+.start--x (x: 1-12)
+```
+
+### Why doesn’t `<router-link>` active class work?
+
+Globally configure `<router-link>` default active class for exact matches:
+
+```ts
+// router/index.ts(.js)
+const router = new VueRouter({
+  // 'router-link-exact-active' => 'is-active'
+  linkExactActiveClass: 'is-active',
+  // ...
+});
+```
+
+### Are there any extra featured CSS Classes?
+
+| CSS Class | Description |
+| --- | --- |
+| `.lbz-list.is-nav` | Convert List into Navigation. |
+| `.lbz-state-no-before--descendant` | `:hover`, `:focus`, and `:active` will not work in any descendant of elements, mainly applied in Card, List, and List item. |
+| `.lbz-state-no-before--child` | `:hover`, `:focus`, and `:active` will not work in any direct children of elements, mainly applied in Card, List, and List item. |
 
 ## Browser support
 
