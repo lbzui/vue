@@ -354,6 +354,7 @@ To avoid style overrides, please do not use `--lbz-x (x: ...)` CSS Variables and
 .is-nav
 .is-scrollable
 .is-selected
+.is-short-action
 .is-stacked
 .is-unelevated
 .lbz-x (x: ...)

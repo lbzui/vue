@@ -17,7 +17,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="item.label === vlabel"
+              :active="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >{{ item.label }}</lbz-list-item>
             <lbz-divider/>
@@ -36,7 +36,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="item.label === vlabel"
+              :active="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -73,7 +73,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="item.label === vlabel"
+              :active="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -104,14 +104,17 @@
       <lbz-drawer
         :active.sync="vactive0"
         title="Title"
-        subtitle="Subtitle"
+        subtitle="subtext"
       >
+        <template #start>
+          <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
+        </template>
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="item.label === vlabel"
+              :active="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -151,7 +154,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="item.label === vlabel"
+              :active="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -192,7 +195,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="item.label === vlabel"
+              :active="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -224,14 +227,17 @@
         :active.sync="vactive1"
         type="modal"
         title="Title"
-        subtitle="Subtitle"
+        subtitle="subtext"
       >
+        <template #start>
+          <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
+        </template>
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="item.label === vlabel"
+              :active="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -271,7 +277,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="item.label === vlabel"
+              :active="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -307,12 +313,15 @@
         full-screen
         title="Title"
       >
+        <template #start>
+          <lbz-icon-button>search</lbz-icon-button>
+        </template>
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="item.label === vlabel"
+              :active="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -353,7 +362,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="item.label === vlabel"
+              :active="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -385,14 +394,14 @@
         :active.sync="vactive2"
         type="bottom"
         title="Title"
-        subtitle="Subtitle"
+        subtitle="subtext"
       >
         <template #center>
           <lbz-list tag="nav" item-tag="a">
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="item.label === vlabel"
+              :active="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -432,7 +441,7 @@ export default class ComponentsDrawer extends Vue {
   private DESTINATIONS: object = {
     primary: [
       {
-        icon: 'inbox',
+        icon: 'mail',
         label: 'Inbox',
       },
       {

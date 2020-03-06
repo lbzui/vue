@@ -14,7 +14,7 @@
       :true-value="true"
       :false-value="false"
       @change="fchange"
-    >{{ vswitch0 ? 'True': 'False' }}</lbz-switch>
+    />
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary', 'secondary' (default)</h3>
     <lbz-switch

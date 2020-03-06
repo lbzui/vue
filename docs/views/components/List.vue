@@ -4,33 +4,24 @@
 
     <h3 class="lbz-typography--subtitle1">$ type: 'one-line' (default), 'two-line', 'three-line'</h3>
     <lbz-list class="lbzui-u-rectangle" subtitle="One-line">
-      <lbz-list-item @click.stop="fclick">One-line item</lbz-list-item>
-      <lbz-list-item>
-        <template #center>One-line item</template>
+      <lbz-list-item @click.stop="fclick">
+        <template #center>Single-line item</template>
         <template #end>
           <lbz-icon>info</lbz-icon>
         </template>
       </lbz-list-item>
+      <lbz-list-item>Single-line item longer text</lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <lbz-icon>favorite</lbz-icon>
+          <lbz-icon>bluetooth</lbz-icon>
         </template>
-        <template #center>One-line item</template>
-      </lbz-list-item>
-      <lbz-list-item>
-        <template #start>
-          <lbz-icon>favorite</lbz-icon>
-        </template>
-        <template #center>One-line item</template>
-        <template #end>
-          <lbz-icon>info</lbz-icon>
-        </template>
+        <template #center>Single-line item</template>
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
           <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
-        <template #center>One-line item</template>
+        <template #center>Single-line item</template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
         </template>
@@ -41,7 +32,7 @@
             <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </template>
-        <template #center>One-line item</template>
+        <template #center>Single-line item</template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
         </template>
@@ -52,7 +43,7 @@
             <img src="../../assets/img/placeholder@16x9.png">
           </div>
         </template>
-        <template #center>One-line item</template>
+        <template #center>Single-line item</template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
         </template>
@@ -69,7 +60,7 @@
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
-          <span class="lbz-typography--caption">caption</span>
+          <span class="lbz-typography--caption">meta</span>
         </template>
       </lbz-list-item>
       <lbz-list-item>
@@ -80,7 +71,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <lbz-icon>favorite</lbz-icon>
+          <lbz-icon>bluetooth</lbz-icon>
         </template>
         <template #center>
           <span class="lbz-list-item__title">Two-line item</span>
@@ -136,26 +127,26 @@
       <lbz-list-item>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         </template>
         <template #end>
-          <span class="lbz-typography--caption">caption</span>
+          <span class="lbz-typography--caption">meta</span>
         </template>
       </lbz-list-item>
       <lbz-list-item>
         <template #center>
           <span class="lbz-typography--overline">Overline</span>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text Lorem ipsum dolor sit amet</span>
         </template>
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <lbz-icon>favorite</lbz-icon>
+          <lbz-icon>bluetooth</lbz-icon>
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         </template>
       </lbz-list-item>
       <lbz-list-item>
@@ -164,7 +155,7 @@
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text lorem ipsum dapibus, neque id cursus faucibus</span>
         </template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
@@ -178,7 +169,7 @@
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text lorem ipsum dapibus, neque id cursus faucibus</span>
         </template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
@@ -192,7 +183,7 @@
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text lorem ipsum dapibus, neque</span>
         </template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
@@ -235,33 +226,24 @@
       dense
       subtitle="Dense one-line"
     >
-      <lbz-list-item>One-line item</lbz-list-item>
       <lbz-list-item>
-        <template #center>One-line item</template>
+        <template #center>Single-line item</template>
         <template #end>
           <lbz-icon>info</lbz-icon>
         </template>
       </lbz-list-item>
+      <lbz-list-item>Single-line item longer text</lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <lbz-icon>favorite</lbz-icon>
+          <lbz-icon>bluetooth</lbz-icon>
         </template>
-        <template #center>One-line item</template>
-      </lbz-list-item>
-      <lbz-list-item>
-        <template #start>
-          <lbz-icon>favorite</lbz-icon>
-        </template>
-        <template #center>One-line item</template>
-        <template #end>
-          <lbz-icon>info</lbz-icon>
-        </template>
+        <template #center>Single-line item</template>
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
           <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
-        <template #center>One-line item</template>
+        <template #center>Single-line item</template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
         </template>
@@ -272,7 +254,7 @@
             <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </template>
-        <template #center>One-line item</template>
+        <template #center>Single-line item</template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
         </template>
@@ -283,7 +265,7 @@
             <img src="../../assets/img/placeholder@16x9.png">
           </div>
         </template>
-        <template #center>One-line item</template>
+        <template #center>Single-line item</template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
         </template>
@@ -294,33 +276,24 @@
       :dense="false"
       subtitle="Non-dense one-line"
     >
-      <lbz-list-item>One-line item</lbz-list-item>
       <lbz-list-item>
-        <template #center>One-line item</template>
+        <template #center>Single-line item</template>
         <template #end>
           <lbz-icon>info</lbz-icon>
         </template>
       </lbz-list-item>
+      <lbz-list-item>Single-line item longer text</lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <lbz-icon>favorite</lbz-icon>
+          <lbz-icon>bluetooth</lbz-icon>
         </template>
-        <template #center>One-line item</template>
-      </lbz-list-item>
-      <lbz-list-item>
-        <template #start>
-          <lbz-icon>favorite</lbz-icon>
-        </template>
-        <template #center>One-line item</template>
-        <template #end>
-          <lbz-icon>info</lbz-icon>
-        </template>
+        <template #center>Single-line item</template>
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
           <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
-        <template #center>One-line item</template>
+        <template #center>Single-line item</template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
         </template>
@@ -331,7 +304,7 @@
             <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </template>
-        <template #center>One-line item</template>
+        <template #center>Single-line item</template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
         </template>
@@ -342,7 +315,7 @@
             <img src="../../assets/img/placeholder@16x9.png">
           </div>
         </template>
-        <template #center>One-line item</template>
+        <template #center>Single-line item</template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
         </template>
@@ -360,7 +333,7 @@
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
-          <span class="lbz-typography--caption">caption</span>
+          <span class="lbz-typography--caption">meta</span>
         </template>
       </lbz-list-item>
       <lbz-list-item>
@@ -371,7 +344,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <lbz-icon>favorite</lbz-icon>
+          <lbz-icon>bluetooth</lbz-icon>
         </template>
         <template #center>
           <span class="lbz-list-item__title">Two-line item</span>
@@ -431,7 +404,7 @@
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
-          <span class="lbz-typography--caption">caption</span>
+          <span class="lbz-typography--caption">meta</span>
         </template>
       </lbz-list-item>
       <lbz-list-item>
@@ -442,7 +415,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <lbz-icon>favorite</lbz-icon>
+          <lbz-icon>bluetooth</lbz-icon>
         </template>
         <template #center>
           <span class="lbz-list-item__title">Two-line item</span>
@@ -499,26 +472,26 @@
       <lbz-list-item>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         </template>
         <template #end>
-          <span class="lbz-typography--caption">caption</span>
+          <span class="lbz-typography--caption">meta</span>
         </template>
       </lbz-list-item>
       <lbz-list-item>
         <template #center>
           <span class="lbz-typography--overline">Overline</span>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text Lorem ipsum dolor sit amet</span>
         </template>
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <lbz-icon>favorite</lbz-icon>
+          <lbz-icon>bluetooth</lbz-icon>
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         </template>
       </lbz-list-item>
       <lbz-list-item>
@@ -527,7 +500,7 @@
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text lorem ipsum dapibus, neque id cursus faucibus</span>
         </template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
@@ -541,7 +514,7 @@
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text lorem ipsum dapibus, neque id cursus faucibus</span>
         </template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
@@ -555,7 +528,7 @@
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text lorem ipsum dapibus, neque</span>
         </template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
@@ -571,26 +544,26 @@
       <lbz-list-item>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         </template>
         <template #end>
-          <span class="lbz-typography--caption">caption</span>
+          <span class="lbz-typography--caption">meta</span>
         </template>
       </lbz-list-item>
       <lbz-list-item>
         <template #center>
           <span class="lbz-typography--overline">Overline</span>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text Lorem ipsum dolor sit amet</span>
         </template>
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <lbz-icon>favorite</lbz-icon>
+          <lbz-icon>bluetooth</lbz-icon>
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         </template>
       </lbz-list-item>
       <lbz-list-item>
@@ -599,7 +572,7 @@
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text lorem ipsum dapibus, neque id cursus faucibus</span>
         </template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
@@ -613,7 +586,7 @@
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text lorem ipsum dapibus, neque id cursus faucibus</span>
         </template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
@@ -627,7 +600,7 @@
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
-          <span class="lbz-list-item__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text lorem ipsum dapibus, neque</span>
         </template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
@@ -650,7 +623,7 @@
     >
       <lbz-list-item>
         <template #start>
-          <lbz-icon>favorite</lbz-icon>
+          <lbz-icon>bluetooth</lbz-icon>
         </template>
         <template #center>Item</template>
       </lbz-list-item>
@@ -701,7 +674,7 @@
     <lbz-list class="lbzui-u-rectangle">
       <lbz-list-item active>
         <template #start>
-          <lbz-icon>favorite</lbz-icon>
+          <lbz-icon>bluetooth</lbz-icon>
         </template>
         <template #center>
           <span class="lbz-list-item__title">Active</span>
@@ -713,7 +686,7 @@
       </lbz-list-item>
       <lbz-list-item selected>
         <template #start>
-          <lbz-icon>favorite</lbz-icon>
+          <lbz-icon>bluetooth</lbz-icon>
         </template>
         <template #center>
           <span class="lbz-list-item__title">Selected</span>
@@ -725,7 +698,7 @@
       </lbz-list-item>
       <lbz-list-item disabled>
         <template #start>
-          <lbz-icon>favorite</lbz-icon>
+          <lbz-icon>bluetooth</lbz-icon>
         </template>
         <template #center>
           <span class="lbz-list-item__title">Disabled</span>

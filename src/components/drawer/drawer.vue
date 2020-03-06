@@ -19,6 +19,9 @@
             <template #start>
               <lbz-icon-button @click.stop="fclose()">close</lbz-icon-button>
             </template>
+            <template #end>
+              <slot name="start"/>
+            </template>
           </lbz-top-app-bar>
           <header v-else class="lbz-drawer__header">
             <slot name="start"/>

@@ -50,7 +50,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
     <lbz-button @click.stop="valert4 = true">Alert</lbz-button>
-    <lbz-dialog :active.sync="valert4" title="Title goes here">
+    <lbz-dialog :active.sync="valert4" title="Dialog header">
       <template #center>Discard draft?</template>
       <template #end>
         <lbz-button @click.stop="valert4 = false">Cancel</lbz-button>
@@ -77,7 +77,7 @@
     <lbz-dialog
       :active.sync="vsimple0"
       type="simple"
-      title="Set backup account"
+      title="Dialog header"
     >
       <template #center>
         <lbz-list dense>
@@ -101,7 +101,7 @@
       :active.sync="vsimple1"
       type="simple"
       append-to-body
-      title="Set backup account"
+      title="Dialog header"
     >
       <template #center>
         <lbz-list dense>
@@ -125,7 +125,7 @@
       :active.sync="vsimple2"
       type="simple"
       :lock-scroll="false"
-      title="Set backup account"
+      title="Dialog header"
     >
       <template #center>
         <lbz-list dense>
@@ -148,7 +148,7 @@
     <lbz-dialog
       :active.sync="vsimple3"
       type="simple"
-      title="Set backup account"
+      title="Dialog header"
       content-height="360px"
     >
       <template #center>
@@ -176,12 +176,12 @@
     <lbz-dialog
       :active.sync="vconfirmation0"
       type="confirmation"
-      title="Title goes here"
+      title="Two-line dialog header"
     >
-      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</template>
+      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
       <template #end>
-        <lbz-button @click.stop="vconfirmation0 = false">Cancel</lbz-button>
-        <lbz-button @click.stop="vconfirmation0 = false">OK</lbz-button>
+        <lbz-button @click.stop="vconfirmation0 = false">Action 1</lbz-button>
+        <lbz-button @click.stop="vconfirmation0 = false">Action 2</lbz-button>
       </template>
     </lbz-dialog>
 
@@ -191,12 +191,12 @@
       :active.sync="vconfirmation1"
       type="confirmation"
       append-to-body
-      title="Title goes here"
+      title="Two-line dialog header"
     >
-      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</template>
+      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
       <template #end>
-        <lbz-button @click.stop="vconfirmation1 = false">Cancel</lbz-button>
-        <lbz-button @click.stop="vconfirmation1 = false">OK</lbz-button>
+        <lbz-button @click.stop="vconfirmation1 = false">Action 1</lbz-button>
+        <lbz-button @click.stop="vconfirmation1 = false">Action 2</lbz-button>
       </template>
     </lbz-dialog>
 
@@ -206,12 +206,12 @@
       :active.sync="vconfirmation2"
       type="confirmation"
       :lock-scroll="false"
-      title="Title goes here"
+      title="Two-line dialog header"
     >
-      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</template>
+      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
       <template #end>
-        <lbz-button @click.stop="vconfirmation2 = false">Cancel</lbz-button>
-        <lbz-button @click.stop="vconfirmation2 = false">OK</lbz-button>
+        <lbz-button @click.stop="vconfirmation2 = false">Action 1</lbz-button>
+        <lbz-button @click.stop="vconfirmation2 = false">Action 2</lbz-button>
       </template>
     </lbz-dialog>
 
@@ -222,26 +222,26 @@
       :active.sync="vconfirmation3"
       type="confirmation"
       scrollable
-      title="Title goes here"
+      title="Dialog header"
       content-height="180px"
     >
       <template #center>
         <lbz-list dense>
           <lbz-list-item
-            v-for="item in 10"
-            :key="item"
-            @click.stop="vradio = item"
+            v-for="(item, index) of 10"
+            :key="index"
+            @click.stop="vradio = index"
           >
             <template #start>
-              <lbz-radio v-model="vradio" :value="item"></lbz-radio>
+              <lbz-radio v-model="vradio" :value="index"></lbz-radio>
             </template>
             <template #center>Item {{ item }}</template>
           </lbz-list-item>
         </lbz-list>
       </template>
       <template #end>
-        <lbz-button @click.stop="vconfirmation3 = false">Cancel</lbz-button>
-        <lbz-button @click.stop="vconfirmation3 = false">OK</lbz-button>
+        <lbz-button @click.stop="vconfirmation3 = false">Action 1</lbz-button>
+        <lbz-button @click.stop="vconfirmation3 = false">Action 2</lbz-button>
       </template>
     </lbz-dialog>
 
@@ -251,9 +251,9 @@
       :active.sync="vconfirmation4"
       type="confirmation"
       stacked
-      title="Title goes here"
+      title="Two-line dialog header"
     >
-      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</template>
+      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
       <template #end>
         <lbz-button @click.stop="vconfirmation4 = false">Turn on speed boost</lbz-button>
         <lbz-button @click.stop="vconfirmation4 = false">No thanks</lbz-button>
@@ -269,13 +269,13 @@
     <lbz-dialog
       :active.sync="vfullScreen0"
       type="full-screen"
-      title="Title goes here"
+      title="Page title"
     >
       <template #start>
         <!-- Save, Send, Share, Update, or Create -->
         <lbz-button @click.stop="vfullScreen0 = false">Action</lbz-button>
       </template>
-      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</template>
+      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
@@ -284,13 +284,13 @@
       :active.sync="vfullScreen1"
       type="full-screen"
       append-to-body
-      title="Title goes here"
+      title="Page title"
     >
       <template #start>
         <!-- Save, Send, Share, Update, or Create -->
         <lbz-button @click.stop="vfullScreen1 = false">Action</lbz-button>
       </template>
-      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</template>
+      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
@@ -299,13 +299,13 @@
       :active.sync="vfullScreen2"
       type="full-screen"
       :lock-scroll="false"
-      title="Title goes here"
+      title="Page title"
     >
       <template #start>
         <!-- Save, Send, Share, Update, or Create -->
         <lbz-button @click.stop="vfullScreen2 = false">Action</lbz-button>
       </template>
-      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</template>
+      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
     </lbz-dialog>
   </article>
 </template>
@@ -320,11 +320,11 @@ export default class ComponentsDialog extends Vue {
   private SIMPLELIST: object[] = [
     {
       icon: 'account_circle',
-      label: 'user1@example.com',
+      label: 'user1@gmail.com',
     },
     {
       icon: 'account_circle',
-      label: 'user2@example.com',
+      label: 'user2@gmail.com',
     },
     {
       icon: 'add_circle',
@@ -348,7 +348,7 @@ export default class ComponentsDialog extends Vue {
   private vconfirmation1: boolean = false;
   private vconfirmation2: boolean = false;
   private vconfirmation3: boolean = false;
-  private vradio: number = 0;
+  private vradio: number = -1;
   private vconfirmation4: boolean = false;
 
   private vfullScreen0: boolean = false;

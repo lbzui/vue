@@ -4,7 +4,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ type: 'text' (default), 'outlined', 'contained'</h3>
     <lbz-button @click.stop="fclick">Text</lbz-button>
-    <lbz-button icon="favorite">Text</lbz-button>
+    <lbz-button icon="add">Text</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { to: '' (default) || 'x' || { x: y }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
@@ -21,89 +21,89 @@
     <lbz-button
       tag="a"
       href="#/components/button"
-      icon="favorite"
+      icon="add"
     >Non-router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
     <lbz-button>Primary</lbz-button>
-    <lbz-button icon="favorite">Primary</lbz-button>
+    <lbz-button icon="add">Primary</lbz-button>
     <br>
     <lbz-button color="secondary">Secondary</lbz-button>
-    <lbz-button color="secondary" icon="favorite">Secondary</lbz-button>
+    <lbz-button color="secondary" icon="add">Secondary</lbz-button>
     <br>
     <lbz-button color="background">Background</lbz-button>
-    <lbz-button color="background" icon="favorite">Background</lbz-button>
+    <lbz-button color="background" icon="add">Background</lbz-button>
     <br>
     <lbz-button color="surface">Surface</lbz-button>
-    <lbz-button color="surface" icon="favorite">Surface</lbz-button>
+    <lbz-button color="surface" icon="add">Surface</lbz-button>
     <br>
     <lbz-button color="error">Error</lbz-button>
-    <lbz-button color="error" icon="favorite">Error</lbz-button>
+    <lbz-button color="error" icon="add">Error</lbz-button>
     <br>
     <lbz-button color="light">Light</lbz-button>
-    <lbz-button color="light" icon="favorite">Light</lbz-button>
+    <lbz-button color="light" icon="add">Light</lbz-button>
     <br>
     <lbz-button color="dark">Dark</lbz-button>
-    <lbz-button color="dark" icon="favorite">Dark</lbz-button>
+    <lbz-button color="dark" icon="add">Dark</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ full-width: true, false (default)</h3>
     <lbz-button full-width>Full-width</lbz-button>
-    <lbz-button full-width icon="favorite">Full-width</lbz-button>
+    <lbz-button full-width icon="add">Full-width</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ dense: undefined (default), true, false</h3>
     <lbz-button dense>Dense</lbz-button>
-    <lbz-button :dense="false" icon="favorite">Non-dense</lbz-button>
+    <lbz-button :dense="false" icon="add">Non-dense</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-button disabled>Primary</lbz-button>
-    <lbz-button disabled icon="favorite">Primary</lbz-button>
+    <lbz-button disabled icon="add">Primary</lbz-button>
     <br>
     <lbz-button color="secondary" disabled>Secondary</lbz-button>
     <lbz-button
       color="secondary"
       disabled
-      icon="favorite"
+      icon="add"
     >Secondary</lbz-button>
     <br>
     <lbz-button color="background" disabled>Background</lbz-button>
     <lbz-button
       color="background"
       disabled
-      icon="favorite"
+      icon="add"
     >Background</lbz-button>
     <br>
     <lbz-button color="surface" disabled>Surface</lbz-button>
     <lbz-button
       color="surface"
       disabled
-      icon="favorite"
+      icon="add"
     >Surface</lbz-button>
     <br>
     <lbz-button color="error" disabled>Error</lbz-button>
     <lbz-button
       color="error"
       disabled
-      icon="favorite"
+      icon="add"
     >Error</lbz-button>
     <br>
     <lbz-button color="light" disabled>Light</lbz-button>
     <lbz-button
       color="light"
       disabled
-      icon="favorite"
+      icon="add"
     >Light</lbz-button>
     <br>
     <lbz-button color="dark" disabled>Dark</lbz-button>
     <lbz-button
       color="dark"
       disabled
-      icon="favorite"
+      icon="add"
     >Dark</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ icon: '' (default), 'x'</h3>
-    <lbz-button icon="favorite">Icon</lbz-button>
+    <lbz-button icon="add">Icon</lbz-button>
     <lbz-button>
-      <template #icon>favorite</template>
+      <template #icon>add</template>
       Icon
     </lbz-button>
     <lbz-button>
@@ -126,7 +126,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ type: 'text' (default), 'outlined', 'contained'</h3>
     <lbz-button type="outlined">Outlined</lbz-button>
-    <lbz-button type="outlined" icon="favorite">Outlined</lbz-button>
+    <lbz-button type="outlined" icon="add">Outlined</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { to: '' (default) || 'x' || { x: y }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
@@ -145,53 +145,53 @@
       type="outlined"
       tag="a"
       href="#/components/button"
-      icon="favorite"
+      icon="add"
     >Non-router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
     <lbz-button type="outlined">Primary</lbz-button>
-    <lbz-button type="outlined" icon="favorite">Primary</lbz-button>
+    <lbz-button type="outlined" icon="add">Primary</lbz-button>
     <br>
     <lbz-button type="outlined" color="secondary">Secondary</lbz-button>
     <lbz-button
       type="outlined"
       color="secondary"
-      icon="favorite"
+      icon="add"
     >Secondary</lbz-button>
     <br>
     <lbz-button type="outlined" color="background">Background</lbz-button>
     <lbz-button
       type="outlined"
       color="background"
-      icon="favorite"
+      icon="add"
     >Background</lbz-button>
     <br>
     <lbz-button type="outlined" color="surface">Surface</lbz-button>
     <lbz-button
       type="outlined"
       color="surface"
-      icon="favorite"
+      icon="add"
     >Surface</lbz-button>
     <br>
     <lbz-button type="outlined" color="error">Error</lbz-button>
     <lbz-button
       type="outlined"
       color="error"
-      icon="favorite"
+      icon="add"
     >Error</lbz-button>
     <br>
     <lbz-button type="outlined" color="light">Light</lbz-button>
     <lbz-button
       type="outlined"
       color="light"
-      icon="favorite"
+      icon="add"
     >Light</lbz-button>
     <br>
     <lbz-button type="outlined" color="dark">Dark</lbz-button>
     <lbz-button
       type="outlined"
       color="dark"
-      icon="favorite"
+      icon="add"
     >Dark</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ full-width: true, false (default)</h3>
@@ -199,7 +199,7 @@
     <lbz-button
       type="outlined"
       full-width
-      icon="favorite"
+      icon="add"
     >Full-width</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ dense: undefined (default), true, false</h3>
@@ -207,7 +207,7 @@
     <lbz-button
       type="outlined"
       :dense="false"
-      icon="favorite"
+      icon="add"
     >Non-dense</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
@@ -215,7 +215,7 @@
     <lbz-button
       type="outlined"
       disabled
-      icon="favorite"
+      icon="add"
     >Primary</lbz-button>
     <br>
     <lbz-button
@@ -227,7 +227,7 @@
       type="outlined"
       color="secondary"
       disabled
-      icon="favorite"
+      icon="add"
     >Secondary</lbz-button>
     <br>
     <lbz-button
@@ -239,7 +239,7 @@
       type="outlined"
       color="background"
       disabled
-      icon="favorite"
+      icon="add"
     >Background</lbz-button>
     <br>
     <lbz-button
@@ -251,7 +251,7 @@
       type="outlined"
       color="surface"
       disabled
-      icon="favorite"
+      icon="add"
     >Surface</lbz-button>
     <br>
     <lbz-button
@@ -263,7 +263,7 @@
       type="outlined"
       color="error"
       disabled
-      icon="favorite"
+      icon="add"
     >Error</lbz-button>
     <br>
     <lbz-button
@@ -275,7 +275,7 @@
       type="outlined"
       color="light"
       disabled
-      icon="favorite"
+      icon="add"
     >Light</lbz-button>
     <br>
     <lbz-button
@@ -287,13 +287,13 @@
       type="outlined"
       color="dark"
       disabled
-      icon="favorite"
+      icon="add"
     >Dark</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ icon: '' (default), 'x'</h3>
-    <lbz-button type="outlined" icon="favorite">Icon</lbz-button>
+    <lbz-button type="outlined" icon="add">Icon</lbz-button>
     <lbz-button type="outlined">
-      <template #icon>favorite</template>
+      <template #icon>add</template>
       Icon
     </lbz-button>
     <lbz-button type="outlined">
@@ -316,7 +316,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ type: 'text' (default), 'outlined', 'contained'</h3>
     <lbz-button type="contained">Contained</lbz-button>
-    <lbz-button type="contained" icon="favorite">Contained</lbz-button>
+    <lbz-button type="contained" icon="add">Contained</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { to: '' (default) || 'x' || { x: y }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
@@ -335,53 +335,53 @@
       type="contained"
       tag="a"
       href="#/components/button"
-      icon="favorite"
+      icon="add"
     >Non-router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
     <lbz-button type="contained">Primary</lbz-button>
-    <lbz-button type="contained" icon="favorite">Primary</lbz-button>
+    <lbz-button type="contained" icon="add">Primary</lbz-button>
     <br>
     <lbz-button type="contained" color="secondary">Secondary</lbz-button>
     <lbz-button
       type="contained"
       color="secondary"
-      icon="favorite"
+      icon="add"
     >Secondary</lbz-button>
     <br>
     <lbz-button type="contained" color="background">Background</lbz-button>
     <lbz-button
       type="contained"
       color="background"
-      icon="favorite"
+      icon="add"
     >Background</lbz-button>
     <br>
     <lbz-button type="contained" color="surface">Surface</lbz-button>
     <lbz-button
       type="contained"
       color="surface"
-      icon="favorite"
+      icon="add"
     >Surface</lbz-button>
     <br>
     <lbz-button type="contained" color="error">Error</lbz-button>
     <lbz-button
       type="contained"
       color="error"
-      icon="favorite"
+      icon="add"
     >Error</lbz-button>
     <br>
     <lbz-button type="contained" color="light">Light</lbz-button>
     <lbz-button
       type="contained"
       color="light"
-      icon="favorite"
+      icon="add"
     >Light</lbz-button>
     <br>
     <lbz-button type="contained" color="dark">Dark</lbz-button>
     <lbz-button
       type="contained"
       color="dark"
-      icon="favorite"
+      icon="add"
     >Dark</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ full-width: true, false (default)</h3>
@@ -389,7 +389,7 @@
     <lbz-button
       type="contained"
       full-width
-      icon="favorite"
+      icon="add"
     >Full-width</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ dense: undefined (default), true, false</h3>
@@ -397,7 +397,7 @@
     <lbz-button
       type="contained"
       :dense="false"
-      icon="favorite"
+      icon="add"
     >Non-dense</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ unelevated (type === 'contained'): true, false (default)</h3>
@@ -405,7 +405,7 @@
     <lbz-button
       type="contained"
       unelevated
-      icon="favorite"
+      icon="add"
     >Unelevated</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
@@ -413,7 +413,7 @@
     <lbz-button
       type="contained"
       disabled
-      icon="favorite"
+      icon="add"
     >Primary</lbz-button>
     <br>
     <lbz-button
@@ -425,7 +425,7 @@
       type="contained"
       color="secondary"
       disabled
-      icon="favorite"
+      icon="add"
     >Secondary</lbz-button>
     <br>
     <lbz-button
@@ -437,7 +437,7 @@
       type="contained"
       color="background"
       disabled
-      icon="favorite"
+      icon="add"
     >Background</lbz-button>
     <br>
     <lbz-button
@@ -449,7 +449,7 @@
       type="contained"
       color="surface"
       disabled
-      icon="favorite"
+      icon="add"
     >Surface</lbz-button>
     <br>
     <lbz-button
@@ -461,7 +461,7 @@
       type="contained"
       color="error"
       disabled
-      icon="favorite"
+      icon="add"
     >Error</lbz-button>
     <br>
     <lbz-button
@@ -473,7 +473,7 @@
       type="contained"
       color="light"
       disabled
-      icon="favorite"
+      icon="add"
     >Light</lbz-button>
     <br>
     <lbz-button
@@ -485,13 +485,13 @@
       type="contained"
       color="dark"
       disabled
-      icon="favorite"
+      icon="add"
     >Dark</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ icon: '' (default), 'x'</h3>
-    <lbz-button type="contained" icon="favorite">Icon</lbz-button>
+    <lbz-button type="contained" icon="add">Icon</lbz-button>
     <lbz-button type="contained">
-      <template #icon>favorite</template>
+      <template #icon>add</template>
       Icon
     </lbz-button>
     <lbz-button type="contained">

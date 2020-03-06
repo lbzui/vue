@@ -20,10 +20,6 @@
           <lbz-button>Action 1</lbz-button>
           <lbz-button>Action 2</lbz-button>
         </div>
-        <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite_border</lbz-icon-button>
-          <lbz-icon-button>share</lbz-icon-button>
-        </div>
       </template>
     </lbz-card>
     <lbz-card>
@@ -51,7 +47,7 @@
           <lbz-button>Action 2</lbz-button>
         </div>
         <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite_border</lbz-icon-button>
+          <lbz-icon-button>favorite</lbz-icon-button>
           <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
@@ -75,8 +71,7 @@
           <lbz-button>Action 2</lbz-button>
         </div>
         <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite_border</lbz-icon-button>
-          <lbz-icon-button>share</lbz-icon-button>
+          <lbz-icon-button>more_vert</lbz-icon-button>
         </div>
       </template>
     </lbz-card>
@@ -86,7 +81,7 @@
           <img src="../../assets/img/placeholder@16x9.png">
         </div>
         <div class="lbz-card__supporting-text">
-          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__title">Title</span>
           <span class="lbz-card__subtitle">Secondary text</span>
           <lbz-divider/>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
@@ -95,11 +90,6 @@
       <template #end>
         <div class="lbz-card__actions__buttons">
           <lbz-button>Action 1</lbz-button>
-          <lbz-button>Action 2</lbz-button>
-        </div>
-        <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite_border</lbz-icon-button>
-          <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
     </lbz-card>
@@ -121,10 +111,6 @@
         <div class="lbz-card__actions__buttons">
           <lbz-button>Action 1</lbz-button>
           <lbz-button>Action 2</lbz-button>
-        </div>
-        <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite_border</lbz-icon-button>
-          <lbz-icon-button>share</lbz-icon-button>
         </div>
       </template>
     </lbz-card>
@@ -145,10 +131,6 @@
           <lbz-button>Action 1</lbz-button>
           <lbz-button>Action 2</lbz-button>
         </div>
-        <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite_border</lbz-icon-button>
-          <lbz-icon-button>share</lbz-icon-button>
-        </div>
       </template>
     </lbz-card>
 
@@ -159,8 +141,8 @@
       <template #start>
         <div class="lbz-card__header__center">
           <span class="lbz-typography--overline">Overline</span>
-          <span class="lbz-card__title">Title goes here</span>
-          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
         </div>
         <div class="lbz-card__header__end">
           <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
@@ -170,12 +152,8 @@
       </template>
       <template #end>
         <div class="lbz-card__actions__buttons">
-          <lbz-button>Action 1</lbz-button>
-          <lbz-button>Action 2</lbz-button>
-        </div>
-        <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite_border</lbz-icon-button>
-          <lbz-icon-button>share</lbz-icon-button>
+          <lbz-button>Button</lbz-button>
+          <lbz-button>Button</lbz-button>
         </div>
       </template>
     </lbz-card>
@@ -185,8 +163,8 @@
       <template #start>
         <div class="lbz-card__header__center">
           <span class="lbz-typography--overline">Overline</span>
-          <span class="lbz-card__title">Title goes here</span>
-          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
         </div>
         <div class="lbz-card__header__end">
           <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
@@ -196,12 +174,8 @@
       </template>
       <template #end>
         <div class="lbz-card__actions__buttons">
-          <lbz-button>Action 1</lbz-button>
-          <lbz-button>Action 2</lbz-button>
-        </div>
-        <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite_border</lbz-icon-button>
-          <lbz-icon-button>share</lbz-icon-button>
+          <lbz-button>Button</lbz-button>
+          <lbz-button>Button</lbz-button>
         </div>
       </template>
     </lbz-card>
@@ -213,8 +187,8 @@
       <template #start>
         <div class="lbz-card__header__center">
           <span class="lbz-typography--overline">Overline</span>
-          <span class="lbz-card__title">Title goes here</span>
-          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
         </div>
         <div class="lbz-card__header__end">
           <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
@@ -224,12 +198,8 @@
       </template>
       <template #end>
         <div class="lbz-card__actions__buttons">
-          <lbz-button>Action 1</lbz-button>
-          <lbz-button>Action 2</lbz-button>
-        </div>
-        <div class="lbz-card__actions__icons">
-          <lbz-icon-button>favorite_border</lbz-icon-button>
-          <lbz-icon-button>share</lbz-icon-button>
+          <lbz-button>Button</lbz-button>
+          <lbz-button>Button</lbz-button>
         </div>
       </template>
     </lbz-card>
