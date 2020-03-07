@@ -168,7 +168,9 @@
       &__end {
         margin-right: 8px;
 
-        .lbz-icon-button:not(.is-short-action) {
+        // NOTE: When transforming into short top app bar,
+        // place the most-used action
+        .lbz-icon-button:not(.is-most-used) {
           display: none;
         }
       }
@@ -206,7 +208,7 @@
     }
   }
 
-  html[theme="dark"] &:not(.lbz-top-app-bar--surface):not(.lbz-top-app-bar--light):not(.lbz-top-app-bar--dark) {
+  html[theme="dark"] &:not(.lbz-top-app-bar--light):not(.lbz-top-app-bar--dark) {
     color: @white;
     .lbz-surface("dark"; 0);
 
@@ -215,23 +217,10 @@
     }
 
     .lbz-button__state,
-    .lbz-icon-button__state,
-    .lbz-tab-item__state {
+    .lbz-icon-button__state {
       &::before,
       &::after {
         background-color: @white;
-      }
-    }
-
-    .lbz-tab .lbz-tab-item {
-      color: #lbz-theme-text.light[medium-emphasis];
-
-      .lbz-tab-item__indicator {
-        background-color: @white;
-      }
-
-      &.is-active {
-        color: #lbz-theme-text.light[high-emphasis];
       }
     }
   }

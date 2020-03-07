@@ -158,13 +158,9 @@ html body {
     }
 
     &-card .lbz-card {
-      display: flex;
+      margin: 0 16px 16px 0;
       width: 100%;
       max-width: 344px;
-
-      + .lbz-card {
-        margin-top: 16px;
-      }
     }
 
     &-drawer {
@@ -274,6 +270,10 @@ html body {
         color: @white;
         .lbz-surface("dark"; 0);
       }
+    }
+
+    &-switch .lbz-switch {
+      margin-right: 8px;
     }
 
     &-tab .lbz-tab {

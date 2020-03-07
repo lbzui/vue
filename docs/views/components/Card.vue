@@ -22,6 +22,7 @@
         </div>
       </template>
     </lbz-card>
+    <br>
     <lbz-card>
       <template #start>
         <div class="lbz-card__header__start">
@@ -52,6 +53,7 @@
         </div>
       </template>
     </lbz-card>
+    <br>
     <lbz-card>
       <template #center>
         <div class="lbz-u-aspect-ratio--16x9 lbz-card__media">
@@ -75,6 +77,7 @@
         </div>
       </template>
     </lbz-card>
+    <br>
     <lbz-card>
       <template #center>
         <div class="lbz-u-aspect-ratio--16x9 lbz-card__media">

@@ -136,4 +136,27 @@
       }
     }
   }
+
+  html[theme="dark"] &:not(.lbz-tab--on-light):not(.lbz-tab--on-dark) {
+    background-color: transparent;
+
+    .lbz-tab-item {
+      color: #lbz-theme-text.light[medium-emphasis];
+
+      .lbz-tab-item__indicator {
+        background-color: @white;
+      }
+
+      .lbz-tab-item__state {
+        &::before,
+        &::after {
+          background-color: @white;
+        }
+      }
+
+      &.is-active {
+        color: #lbz-theme-text.light[high-emphasis];
+      }
+    }
+  }
 }

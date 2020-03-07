@@ -28,7 +28,7 @@
       >Div {{ item }}</lbz-tab-item>
     </lbz-tab>
 
-    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'background', 'surface' (default), 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
     <lbz-tab v-model="vtab0" on-background="primary">
       <lbz-tab-item
         v-for="(item, index) of 3"
@@ -37,13 +37,6 @@
       >Item {{ item }}</lbz-tab-item>
     </lbz-tab>
     <lbz-tab v-model="vtab0" on-background="secondary">
-      <lbz-tab-item
-        v-for="(item, index) of 3"
-        :key="index"
-        :value="index"
-      >Item {{ item }}</lbz-tab-item>
-    </lbz-tab>
-    <lbz-tab v-model="vtab0" on-background="background">
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
@@ -187,7 +180,7 @@
       >Div {{ item }}</lbz-tab-item>
     </lbz-tab>
 
-    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'background', 'surface' (default), 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
     <lbz-tab
       v-model="vtab1"
       type="scrollable"
@@ -203,17 +196,6 @@
       v-model="vtab1"
       type="scrollable"
       on-background="secondary"
-    >
-      <lbz-tab-item
-        v-for="(item, index) of 6"
-        :key="index"
-        :value="index"
-      >Item {{ item }}</lbz-tab-item>
-    </lbz-tab>
-    <lbz-tab
-      v-model="vtab1"
-      type="scrollable"
-      on-background="background"
     >
       <lbz-tab-item
         v-for="(item, index) of 6"

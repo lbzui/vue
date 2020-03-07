@@ -686,14 +686,24 @@
       </lbz-list-item>
       <lbz-list-item selected>
         <template #start>
-          <lbz-icon>bluetooth</lbz-icon>
+          <lbz-radio
+            v-model="vradio"
+            id="vradio-true"
+            name="vradio"
+            :value="true"
+          />
         </template>
         <template #center>
           <span class="lbz-list-item__title">Selected</span>
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
-          <lbz-icon-button>more_vert</lbz-icon-button>
+          <lbz-radio
+            v-model="vradio"
+            id="vradio-false"
+            name="vradio"
+            :value="false"
+          />
         </template>
       </lbz-list-item>
       <lbz-list-item disabled>
@@ -705,7 +715,14 @@
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
-          <lbz-icon-button>more_vert</lbz-icon-button>
+          <lbz-switch
+            v-model="vswitch"
+            id="vswitch"
+            name="vswitch"
+            :true-value="true"
+            :false-value="false"
+            disabled
+          />
         </template>
       </lbz-list-item>
     </lbz-list>
@@ -717,6 +734,9 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class ComponentsList extends Vue {
+  private vradio: boolean = true;
+  private vswitch: boolean = true;
+
   private fclick(e: MouseEvent): void {
     alert(e);
   }

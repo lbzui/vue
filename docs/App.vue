@@ -50,29 +50,25 @@
             <template #end><lbz-icon>open_in_new</lbz-icon></template>
           </lbz-list-item>
           <lbz-divider/>
-          <span class="lbz-list__subtitle">Choose theme (non-IE)</span>
+          <span class="lbz-list__subtitle">Settings</span>
           <lbz-list-item
+            class="lbz-state-no-before--child"
             :router-link="false"
             tag="span"
-            disabled
-            style="padding: 0;"
+            :disabled="!vsupportsCssVars"
           >
-            <lbz-radio
-              v-model="visDark"
-              id="light-theme"
-              name="visDark"
-              :value="false"
-              :disabled="!vsupportsCssVars"
-              @change="fsetTheme"
-            >Light</lbz-radio>
-            <lbz-radio
-              v-model="visDark"
-              id="dark-theme"
-              name="visDark"
-              :value="true"
-              :disabled="!vsupportsCssVars"
-              @change="fsetTheme"
-            >Dark</lbz-radio>
+            <template #center>Dark theme (non-IE)</template>
+            <template #end>
+              <lbz-switch
+                v-model="visDark"
+                id="visDark"
+                name="visDark"
+                :true-value="true"
+                :false-value="false"
+                :disabled="!vsupportsCssVars"
+                @change="fsetTheme"
+              />
+            </template>
           </lbz-list-item>
         </lbz-list>
       </template>

@@ -17,7 +17,7 @@
     padding-right: 16px;
     min-width: 56px;
 
-    > .lbz-icon {
+    > .lbz-icon:not(.lbz-list-item__avatar) {
       display: block;
       margin: 4px 0;
     }
@@ -36,11 +36,6 @@
     > .lbz-icon {
       display: block;
     }
-
-    .lbz-icon-button {
-      display: block;
-      margin: -12px;
-    }
   }
 
   & &__avatar {
@@ -49,6 +44,13 @@
     border-radius: 50%;
     width: 40px;
     height: 40px;
+
+    &.lbz-icon {
+      line-height: 40px;
+      text-align: center;
+      color: @white;
+      background-color: var(--lbz-theme-text-disabled-on-surface);
+    }
   }
 
   & &__media {
@@ -89,6 +91,17 @@
     margin: -4px 0 0;
     .lbz-typography("body2");
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
+  }
+
+  .lbz-icon-button {
+    display: block;
+    margin: -12px;
+  }
+
+  .lbz-radio,
+  .lbz-switch {
+    display: flex;
+    margin: -8px;
   }
 
   // active

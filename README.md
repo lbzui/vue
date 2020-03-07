@@ -351,10 +351,10 @@ To avoid style overrides, please do not use `--lbz-x (x: ...)` CSS Variables and
 .is-horizontal
 .is-inactive
 .is-inactive--x (x: scroll-off, tab-fixed)
+.is-most-used
 .is-nav
 .is-scrollable
 .is-selected
-.is-short-action
 .is-stacked
 .is-unelevated
 .lbz-x (x: ...)
@@ -383,6 +383,7 @@ const router = new VueRouter({
 | List | `.lbz-list.is-nav` | Convert List into Navigation. |
 | State | `.lbz-state-no-before--child` | `:hover`, `:focus`, and `:active` will not work in any direct children of elements, mainly applied in Card, List, and List item. |
 | State | `.lbz-state-no-before--descendant` | `:hover`, `:focus`, and `:active` will not work in any descendant of elements, mainly applied in Card, List, and List item. |
+| Top app bar | `.lbz-icon-button.is-most-used` | When transforming into short top app bar, place the most-used action. |
 
 ## Browser support
 

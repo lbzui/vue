@@ -29,7 +29,7 @@ export default class LbzTab extends Vue {
   @Prop({ type: String, default: '' }) private type!: string;
   // tag: 'nav' (default), 'x'
   @Prop({ type: String, default: 'nav' }) private tag!: string;
-  // on-background: 'primary', 'secondary', 'background', 'surface' (default), 'light', 'dark'
+  // on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
   // alignment (type === 'fixed'): '' (default), 'left', 'center', 'right'
   @Prop({ type: String, default: '' }) private alignment!: string;
