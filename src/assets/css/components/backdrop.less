@@ -112,7 +112,7 @@
       bottom: 0;
       left: 0;
       border-radius: inherit;
-      background-color: #lbz-theme[scrim];
+      background-color: #lbz-theme-scrim[light];
     }
   }
 
@@ -171,11 +171,17 @@
     }
   }
 
-  html[theme="dark"] &:not(.lbz-backdrop--dark) {
-    .lbz-surface("dark"; 0);
+  html[theme="dark"] & {
+    &:not(.lbz-backdrop--dark) {
+      .lbz-surface("dark"; 0);
 
-    .lbz-backdrop__back-layer {
-      color: #lbz-theme-text.light[medium-emphasis];
+      .lbz-backdrop__back-layer {
+        color: #lbz-theme-text.light[medium-emphasis];
+      }
+    }
+
+    .lbz-backdrop__front-layer__scrim {
+      background-color: #lbz-theme-scrim[dark];
     }
   }
 }

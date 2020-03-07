@@ -1,8 +1,8 @@
 // Theme
 // usage: `#lbz-theme.x[y]`
-//        `#lbz-theme[scrim]`
 //        `#lbz-theme-text.x[y]`
 //        `#lbz-theme-outline[x]`
+//        `#lbz-theme-scrim[x]`
 //        `#lbz-theme-surface.x[y]`
 
 @white: #fff;
@@ -65,9 +65,6 @@
     on-surface: @white;
     on-error: @black;
   }
-
-  // Scrim background color
-  scrim: rgba(@black, .32);
 }
 
 // Typography and iconography colors
@@ -91,6 +88,12 @@
 #lbz-theme-outline() {
   light: rgba(@white, .12);
   dark: rgba(@black, .12);
+}
+
+// Scrim background colors
+#lbz-theme-scrim() {
+  light: rgba(@white, .32);
+  dark: rgba(@black, .32);
 }
 
 // Higher elevation, lighter surface
