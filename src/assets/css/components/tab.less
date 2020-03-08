@@ -143,15 +143,10 @@
     .lbz-tab-item {
       color: #lbz-theme-text.light[medium-emphasis];
 
-      .lbz-tab-item__indicator {
+      .lbz-tab-item__indicator,
+      .lbz-tab-item__state::before,
+      .lbz-tab-item__state::after {
         background-color: @white;
-      }
-
-      .lbz-tab-item__state {
-        &::before,
-        &::after {
-          background-color: @white;
-        }
       }
 
       &.is-active {
