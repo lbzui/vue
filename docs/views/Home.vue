@@ -30,7 +30,7 @@
     <p class="lbz-typography--body1">- Follow the principles of <a href="https://material.io/" target="_blank">Material Design</a><lbz-icon>open_in_new</lbz-icon></p>
     <p class="lbz-typography--body1">- Support <a href="https://material.io/design/color/the-color-system.html" target="_blank">light</a><lbz-icon>open_in_new</lbz-icon> and <a href="https://material.io/design/color/dark-theme.html" target="_blank">dark</a><lbz-icon>open_in_new</lbz-icon> theme</p>
     <p class="lbz-typography--body1">- Customize <a href="https://material.io/design/layout/responsive-layout-grid.html" target="_blank">layout grid</a><lbz-icon>open_in_new</lbz-icon>, <a href="https://material.io/design/shape/about-shape.html#shape-customization-tool" target="_blank">shape</a><lbz-icon>open_in_new</lbz-icon>, <a href="https://material.io/resources/color/" target="_blank">theme</a><lbz-icon>open_in_new</lbz-icon>, and more</p>
-    <p class="lbz-typography--body1">- Fit responsive web design</p>
+    <p class="lbz-typography--body1">- Fit responsive web design (desktop first)</p>
     <p class="lbz-typography--body1">- Use <a href="https://vuejs.org/" target="_blank">Vue</a><lbz-icon>open_in_new</lbz-icon> (2.6.0+), <a href="http://www.typescriptlang.org/" target="_blank">TypeScript</a><lbz-icon>open_in_new</lbz-icon>, <a href="http://lesscss.org/" target="_blank">Less</a><lbz-icon>open_in_new</lbz-icon> (3.5.0+), <a href="https://postcss.org/" target="_blank">PostCSS</a><lbz-icon>open_in_new</lbz-icon>, etc</p>
 
     <h2 class="lbz-typography--h5"># Quick start</h2>

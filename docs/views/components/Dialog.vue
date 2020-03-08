@@ -260,7 +260,7 @@
       </template>
     </lbz-dialog>
 
-    <h2 class="lbz-typography--h5"># Full-screen dialog</h2>
+    <h2 class="lbz-typography--h5"># Full-screen dialog (mobile only)</h2>
 
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'alert' (default), 'simple', 'confirmation', 'full-screen (mobile only)'</h3>

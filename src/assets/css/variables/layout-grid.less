@@ -3,28 +3,21 @@
 
 :root {
   // width >= 840px
-  --lbz-layout-grid-column: #lbz-layout-grid.large[column];
-  --lbz-layout-grid-gutter: #lbz-layout-grid.large[gutter];
-  --lbz-layout-grid-margin: #lbz-layout-grid.large[margin];
+  --lbz-layout-grid-column: #lbz-layout-grid.desktop[column];
+  --lbz-layout-grid-gutter: #lbz-layout-grid.desktop[gutter];
+  --lbz-layout-grid-margin: #lbz-layout-grid.desktop[margin];
 
-  // 720px <= width < 840px
-  @media #lbz-layout-grid.medium[media] {
-    --lbz-layout-grid-column: #lbz-layout-grid.medium[column];
-    --lbz-layout-grid-gutter: #lbz-layout-grid.medium[gutter];
-    --lbz-layout-grid-margin: #lbz-layout-grid.medium[margin];
-  }
-
-  // 600px <= width < 720px
-  @media #lbz-layout-grid.xmedium[media] {
-    --lbz-layout-grid-column: #lbz-layout-grid.xmedium[column];
-    --lbz-layout-grid-gutter: #lbz-layout-grid.xmedium[gutter];
-    --lbz-layout-grid-margin: #lbz-layout-grid.xmedium[margin];
+  // 600px <= width < 840px
+  @media #lbz-layout-grid.tablet[media] {
+    --lbz-layout-grid-column: #lbz-layout-grid.tablet[column];
+    --lbz-layout-grid-gutter: #lbz-layout-grid.tablet[gutter];
+    --lbz-layout-grid-margin: #lbz-layout-grid.tablet[margin];
   }
 
   // width < 600px
-  @media #lbz-layout-grid.small[media] {
-    --lbz-layout-grid-column: #lbz-layout-grid.small[column];
-    --lbz-layout-grid-gutter: #lbz-layout-grid.small[gutter];
-    --lbz-layout-grid-margin: #lbz-layout-grid.small[margin];
+  @media #lbz-layout-grid.mobile[media] {
+    --lbz-layout-grid-column: #lbz-layout-grid.mobile[column];
+    --lbz-layout-grid-gutter: #lbz-layout-grid.mobile[gutter];
+    --lbz-layout-grid-margin: #lbz-layout-grid.mobile[margin];
   }
 }

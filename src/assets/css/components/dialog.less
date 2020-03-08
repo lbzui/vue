@@ -16,13 +16,13 @@
     overflow-x: hidden;
     overflow-y: auto;
     border-radius: var(--lbz-shape-absolute-size-medium);
-    width: 280px;
+    width: 560px;
     max-height: calc(100% - 32px);
     .lbz-surface(24);
     .lbz-shadow(24);
 
-    @media #lbz-layout-grid.media[min720] {
-      width: 560px;
+    @media #lbz-layout-grid.media[xsmall] {
+      width: 280px;
     }
   }
 
@@ -137,7 +137,7 @@
       padding: 64px 0 0;
       height: 100%;
 
-      @media #lbz-layout-grid.media[max719] {
+      @media #lbz-layout-grid.media[xsmall] {
         padding-top: 56px;
       }
     }

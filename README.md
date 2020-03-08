@@ -16,7 +16,7 @@ If you have any questions, ideas or you want to discuss with it, [create an issu
 - Follow the principles of [Material Design](https://material.io/)
 - Support [light](https://material.io/design/color/the-color-system.html) and [dark](https://material.io/design/color/dark-theme.html) theme
 - Customize [layout grid](https://material.io/design/layout/responsive-layout-grid.html), [shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), [theme](https://material.io/resources/color/), and more
-- Fit responsive web design
+- Fit responsive web design (desktop first)
 - Use [Vue](https://vuejs.org/) (2.6.0+), [TypeScript](http://www.typescriptlang.org/), [Less](http://lesscss.org/) (3.5.0+), [PostCSS](https://postcss.org/), etc
 
 ## Quick start
