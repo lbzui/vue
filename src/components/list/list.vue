@@ -4,6 +4,7 @@
     :class="[
       'lbz-list',
       type && `lbz-list--${type}`,
+      onBackground && `lbz-list--on-${onBackground}`,
       cisDense && 'is-dense'
     ]"
   >
@@ -44,6 +45,8 @@ export default class LbzList extends Vue {
   }) private routerLinkProps!: object;
   // item-tag: 'li' (default), 'a', 'x'
   @Prop({ type: String, default: 'li' }) private itemTag!: string;
+  // on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'
+  @Prop({ type: String, default: '' }) private onBackground!: string;
   // dense: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private dense!: boolean;
   // placement: 'start' (default), 'center'
@@ -56,6 +59,7 @@ export default class LbzList extends Vue {
   @Provide('router-link') private prouterLink: boolean = this.routerLink;
   @Provide('router-link-props') private prouterLinkProps: object = this.routerLinkProps;
   @Provide('tag') private ptag: string = this.itemTag;
+  @Provide('on-background') private ponBackground: string = this.onBackground;
   @Provide('disabled') private pdisabled: boolean = this.disabled;
 
   get cisDense(): boolean {

@@ -5,14 +5,12 @@
     <h3 class="lbz-typography--subtitle1">$ [required]v-model: true, false, x, 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ id: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ name: '' (default), 'x'</h3>
-    <h3 class="lbz-typography--subtitle1">$ [required]true-value: true, false, x, 'x'</h3>
-    <h3 class="lbz-typography--subtitle1">$ [required]false-value: true, false, x, 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ true-value: true (default), false, x, 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ false-value: true, false (default), x, 'x'</h3>
     <lbz-switch
       v-model="vswitch0"
       id="vswitch0"
       name="vswitch0"
-      :true-value="true"
-      :false-value="false"
       @change="fchange"
     />
 

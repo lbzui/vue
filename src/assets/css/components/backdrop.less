@@ -144,6 +144,7 @@
       transform: translate3d(0, calc(100% - 66px), 0); // (100% + 64px) - 130px
       transform: translate3d(0, 90%, 0)\9\0;
 
+      // icon, scrim
       &__header__icon,
       &__scrim {
         display: block;
@@ -172,6 +173,7 @@
   }
 
   html[theme="dark"] & {
+    // background
     &:not(.lbz-backdrop--dark) {
       .lbz-surface("dark"; 0);
 
@@ -180,6 +182,7 @@
       }
     }
 
+    // scrim
     .lbz-backdrop__front-layer__scrim {
       background-color: #lbz-theme-scrim[dark];
     }

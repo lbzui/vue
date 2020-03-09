@@ -23,7 +23,24 @@
           </lbz-top-app-bar>
         </template>
         <template #back-center>
-          <div>Back layer content</div>
+          <lbz-list
+            class="is-nav"
+            tag="nav"
+            item-tag="a"
+            on-background="primary"
+          >
+            <lbz-list-item
+              v-for="(item, index) of NAV"
+              :key="index"
+              :active="vindex === index"
+              @click.stop="vindex = index"
+            >
+              <template #start>
+                <lbz-icon>{{ item }}</lbz-icon>
+              </template>
+              <template #center>Item {{ index + 1 }}</template>
+            </lbz-list-item>
+          </lbz-list>
         </template>
         <template #front-center>
           <article>Front layer content</article>
@@ -49,7 +66,24 @@
           </lbz-top-app-bar>
         </template>
         <template #back-center>
-          <div>Back layer content</div>
+          <lbz-list
+            class="is-nav"
+            tag="nav"
+            item-tag="a"
+            on-background="secondary"
+          >
+            <lbz-list-item
+              v-for="(item, index) of NAV"
+              :key="index"
+              :active="vindex === index"
+              @click.stop="vindex = index"
+            >
+              <template #start>
+                <lbz-icon>{{ item }}</lbz-icon>
+              </template>
+              <template #center>Item {{ index + 1 }}</template>
+            </lbz-list-item>
+          </lbz-list>
         </template>
         <template #front-center>
           <article>Front layer content</article>
@@ -75,7 +109,24 @@
           </lbz-top-app-bar>
         </template>
         <template #back-center>
-          <div>Back layer content</div>
+          <lbz-list
+            class="is-nav"
+            tag="nav"
+            item-tag="a"
+            on-background="dark"
+          >
+            <lbz-list-item
+              v-for="(item, index) of NAV"
+              :key="index"
+              :active="vindex === index"
+              @click.stop="vindex = index"
+            >
+              <template #start>
+                <lbz-icon>{{ item }}</lbz-icon>
+              </template>
+              <template #center>Item {{ index + 1 }}</template>
+            </lbz-list-item>
+          </lbz-list>
         </template>
         <template #front-center>
           <article>Front layer content</article>
@@ -262,7 +313,22 @@ import { Component, Ref, Vue } from 'vue-property-decorator';
 export default class ComponentsBackdrop extends Vue {
   @Ref('backdrop') private rbackdrop!: HTMLFormElement;
 
+  private NAV: string[] = [
+    'mail',
+    'bookmark',
+    'speaker_notes',
+    'note',
+    'place',
+    'data_usage',
+    'backup',
+    'favorite',
+    'chrome_reader_mode',
+    'event',
+    'blur_on',
+  ];
+
   private vactive: boolean = false;
+  private vindex: number = 0;
 
   private ftoggleActive(): void {
     this.rbackdrop.ftoggle();

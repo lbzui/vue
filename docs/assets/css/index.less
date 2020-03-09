@@ -53,6 +53,7 @@ html body {
     position: fixed;
     width: 256px;
 
+    // title
     .lbz-drawer__title {
       cursor: pointer;
     }
@@ -188,6 +189,7 @@ html body {
       }
     }
 
+    // on-background
     &-icon-button .lbz-icon-button--on {
       &-primary {
         color: var(--lbz-theme-on-primary);
@@ -217,6 +219,25 @@ html body {
 
     &-list .lbz-list {
       max-width: 600px;
+
+      // on-background
+      &.lbz-list--on {
+        &-primary {
+          background-color: var(--lbz-theme-primary);
+        }
+
+        &-secondary {
+          background-color: var(--lbz-theme-secondary);
+        }
+
+        &-light {
+          .lbz-surface("light"; 0);
+        }
+
+        &-dark {
+          .lbz-surface("dark"; 0);
+        }
+      }
     }
 
     &-radio .lbz-radio {
@@ -226,6 +247,7 @@ html body {
     &-state .lbzui-u-square {
       user-select: none;
 
+      // background
       &.primary {
         color: var(--lbz-theme-on-primary);
         background-color: var(--lbz-theme-primary);
@@ -280,6 +302,7 @@ html body {
       width: 100%;
       max-width: 360px;
 
+      // on-background
       &.lbz-tab--on {
         &-primary {
           background-color: var(--lbz-theme-primary);
@@ -304,6 +327,7 @@ html body {
     }
 
     &-top-app-bar .lbz-top-app-bar {
+      // type
       &:not(.lbz-top-app-bar--short) {
         width: 100%;
         max-width: 360px;

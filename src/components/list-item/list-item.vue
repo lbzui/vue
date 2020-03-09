@@ -26,7 +26,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Inject, Vue } from 'vue-property-decorator';
+import { Component, Inject, Prop, Vue } from 'vue-property-decorator';
 import LbzState from '../state/state.vue';
 
 @Component({
@@ -35,6 +35,12 @@ import LbzState from '../state/state.vue';
   },
 })
 export default class LbzListItem extends Vue {
+  @Inject('router-link') private prouterLink!: boolean;
+  @Inject('router-link-props') private prouterLinkProps!: object;
+  @Inject('tag') private ptag!: string;
+  @Inject('on-background') private ponBackground!: string;
+  @Inject('disabled') private pdisabled!: boolean;
+
   // router-link: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private routerLink!: boolean;
   // to (router-link): '' (default), 'x', { x: y }
@@ -47,11 +53,6 @@ export default class LbzListItem extends Vue {
   @Prop({ type: Boolean, default: false }) private selected!: boolean;
   // disabled: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private disabled!: boolean;
-
-  @Inject('router-link') private prouterLink!: boolean;
-  @Inject('router-link-props') private prouterLinkProps!: object;
-  @Inject('tag') private ptag!: string;
-  @Inject('disabled') private pdisabled!: boolean;
 
   get cgetAttrs(): ComponentAttributes {
     const {
@@ -91,6 +92,8 @@ export default class LbzListItem extends Vue {
   get cgetStateAttrs(): StateAttributes {
     return {
       class: 'lbz-list-item__state',
+      // type: this.ponBackground === 'light' ? '' : 'primary',
+      // background: this.ponBackground ? `on-${this.ponBackground}` : '',
     };
   }
 }

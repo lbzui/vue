@@ -50,10 +50,10 @@ export default class LbzSwitch extends Vue {
   @Prop({ type: String, default: '' }) private id!: string;
   // name: '' (default), 'x'
   @Prop({ type: String, default: '' }) private name!: string;
-  // [required]true-value: true, false, x, 'x'
-  @Prop({ type: [Boolean, Number, String], required: true }) private trueValue!: boolean | number | string;
-  // [required]false-value: true, false, x, 'x'
-  @Prop({ type: [Boolean, Number, String], required: true }) private falseValue!: boolean | number | string;
+  // true-value: true (default), false, x, 'x'
+  @Prop({ type: [Boolean, Number, String], default: true }) private trueValue!: boolean | number | string;
+  // false-value: true, false (default), x, 'x'
+  @Prop({ type: [Boolean, Number, String], default: false }) private falseValue!: boolean | number | string;
   // color: 'primary', 'secondary' (default)
   @Prop({ type: String, default: '' }) private color!: string;
   // disabled: true, false (default)

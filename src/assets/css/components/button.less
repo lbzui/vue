@@ -65,7 +65,7 @@
   &&--light {
     color: @white;
 
-    // disabled
+    // type, disabled
     &:not(.lbz-button--contained).is-disabled {
       color: #lbz-theme-text.light[disabled];
     }
@@ -74,7 +74,7 @@
   &&--dark {
     color: @black;
 
-    // disabled
+    // type, disabled
     &:not(.lbz-button--contained).is-disabled {
       color: #lbz-theme-text.dark[disabled];
     }
@@ -157,12 +157,14 @@
       box-shadow: none;
     }
 
+    // disabled
     &.is-disabled {
       color: var(--lbz-theme-text-disabled-on-surface);
       background-color: var(--lbz-theme-outline-on-surface);
       box-shadow: none;
     }
 
+    // icon
     .lbz-button__icon {
       margin-left: -4px;
     }

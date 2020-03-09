@@ -63,8 +63,6 @@
                 v-model="visDark"
                 id="visDark"
                 name="visDark"
-                :true-value="true"
-                :false-value="false"
                 :disabled="!vsupportsCssVars"
                 @change="fsetTheme"
               />

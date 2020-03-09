@@ -220,6 +220,147 @@
       <lbz-list-item href="#/components/list">A</lbz-list-item>
     </lbz-list>
 
+    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+    <lbz-list
+      class="lbzui-u-rectangle"
+      type="two-line"
+      on-background="primary"
+      subtitle="Primary"
+    >
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-list-item__title">Two-line item</span>
+        </template>
+        <template #end>
+          <span class="lbz-typography--caption">meta</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>bluetooth</lbz-icon>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+    </lbz-list>
+    <lbz-list
+      class="lbzui-u-rectangle"
+      type="two-line"
+      on-background="secondary"
+      subtitle="Secondary"
+    >
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-list-item__title">Two-line item</span>
+        </template>
+        <template #end>
+          <span class="lbz-typography--caption">meta</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>bluetooth</lbz-icon>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <lbz-icon-button on-background="secondary">more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+    </lbz-list>
+    <lbz-list
+      class="lbzui-u-rectangle"
+      type="two-line"
+      subtitle="Surface"
+    >
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-list-item__title">Two-line item</span>
+        </template>
+        <template #end>
+          <span class="lbz-typography--caption">meta</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>bluetooth</lbz-icon>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <lbz-icon-button>more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+    </lbz-list>
+    <lbz-list
+      class="lbzui-u-rectangle"
+      type="two-line"
+      on-background="light"
+      subtitle="Light"
+    >
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-list-item__title">Two-line item</span>
+        </template>
+        <template #end>
+          <span class="lbz-typography--caption">meta</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>bluetooth</lbz-icon>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <lbz-icon-button on-background="light">more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+    </lbz-list>
+    <lbz-list
+      class="lbzui-u-rectangle"
+      type="two-line"
+      on-background="dark"
+      subtitle="Dark"
+    >
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-list-item__title">Two-line item</span>
+        </template>
+        <template #end>
+          <span class="lbz-typography--caption">meta</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>bluetooth</lbz-icon>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <lbz-icon-button on-background="dark">more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+    </lbz-list>
+
     <h3 class="lbz-typography--subtitle1">$ dense: undefined (default), true, false</h3>
     <lbz-list
       class="lbzui-u-rectangle"
@@ -719,8 +860,6 @@
             v-model="vswitch"
             id="vswitch"
             name="vswitch"
-            :true-value="true"
-            :false-value="false"
             disabled
           />
         </template>
