@@ -4,8 +4,8 @@
     :class="[
       'lbz-list-item',
       {
-        'is-active': active,
         'is-selected': selected,
+        'is-activated': activated,
         'is-disabled': cisDisabled
       }
     ]"
@@ -47,10 +47,10 @@ export default class LbzListItem extends Vue {
   @Prop({ type: [String, Object], default: '' }) private to!: string | object;
   // tag: '' (default), li', 'a', 'x'
   @Prop({ type: String, default: '' }) private tag!: string;
-  // active: true, false (default)
-  @Prop({ type: Boolean, default: false }) private active!: boolean;
   // selected: true, false (default)
   @Prop({ type: Boolean, default: false }) private selected!: boolean;
+  // activated: true, false (default)
+  @Prop({ type: Boolean, default: false }) private activated!: boolean;
   // disabled: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private disabled!: boolean;
 
@@ -92,8 +92,10 @@ export default class LbzListItem extends Vue {
   get cgetStateAttrs(): StateAttributes {
     return {
       class: 'lbz-list-item__state',
-      // type: this.ponBackground === 'light' ? '' : 'primary',
-      // background: this.ponBackground ? `on-${this.ponBackground}` : '',
+      type: this.ponBackground === 'light' ? '' : 'primary',
+      background: this.activated ? 'primary' : (this.ponBackground ? `on-${this.ponBackground}` : ''),
+      selected: this.selected,
+      activated: this.activated,
     };
   }
 }

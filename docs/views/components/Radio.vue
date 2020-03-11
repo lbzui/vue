@@ -32,20 +32,20 @@
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-radio
       v-model="vradio2"
-      value="selected"
+      value="checked"
       color="primary"
       disabled
-    >Primary & Selected</lbz-radio>
+    >Primary & Checked</lbz-radio>
     <lbz-radio
       v-model="vradio2"
-      value="selected"
+      value="checked"
       disabled
-    >Selected</lbz-radio>
+    >Checked</lbz-radio>
     <lbz-radio
       v-model="vradio2"
-      value="deselected"
+      value="unchecked"
       disabled
-    >Deselected</lbz-radio>
+    >Unchecked</lbz-radio>
   </article>
 </template>
 
@@ -56,7 +56,7 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class ComponentsRadio extends Vue {
   private vradio0: boolean = true;
   private vradio1: number = 1;
-  private vradio2: string = 'selected';
+  private vradio2: string = 'checked';
 
   private fchange(val: boolean | number | string, e: MouseEvent): void {
     alert(val);

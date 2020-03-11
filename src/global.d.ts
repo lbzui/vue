@@ -32,6 +32,8 @@ declare global {
     class: string;
     type?: string;
     background?: string;
+    selected?: boolean;
+    activated?: boolean;
     unbounded?: boolean;
     centered?: boolean;
   }

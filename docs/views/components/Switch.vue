@@ -30,23 +30,23 @@
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
     <lbz-switch
       v-model="vswitch2"
-      true-value="selected"
-      false-value="deselected"
+      true-value="checked"
+      false-value="unchecked"
       color="primary"
       disabled
-    >Primary & Selected</lbz-switch>
+    >Primary & Checked</lbz-switch>
     <lbz-switch
       v-model="vswitch2"
-      true-value="selected"
-      false-value="deselected"
+      true-value="checked"
+      false-value="unchecked"
       disabled
-    >Selected</lbz-switch>
+    >Checked</lbz-switch>
     <lbz-switch
       v-model="vswitch3"
-      true-value="selected"
-      false-value="deselected"
+      true-value="checked"
+      false-value="unchecked"
       disabled
-    >Deselected</lbz-switch>
+    >Unchecked</lbz-switch>
   </article>
 </template>
 
@@ -57,8 +57,8 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class ComponentsSwitch extends Vue {
   private vswitch0: boolean = true;
   private vswitch1: number = 0;
-  private vswitch2: string = 'selected';
-  private vswitch3: string = 'deselected';
+  private vswitch2: string = 'checked';
+  private vswitch3: string = 'unchecked';
 
   private fchange(val: boolean | number | string, e: MouseEvent): void {
     alert(val);

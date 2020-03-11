@@ -45,7 +45,9 @@ export function setModeAttributes(isDark: boolean, themeColor: ThemeColor): void
 
 export function cancelContextmenu(): void {
   document.addEventListener('contextmenu', (e: MouseEvent): void => {
-    e.preventDefault();
+    if (['INPUT', 'TEXTAREA'].indexOf((e as any).target.tagName.toUpperCase()) < 0) {
+      e.preventDefault();
+    }
   });
 }
 

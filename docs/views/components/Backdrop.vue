@@ -32,7 +32,7 @@
             <lbz-list-item
               v-for="(item, index) of NAV"
               :key="index"
-              :active="vindex === index"
+              :activated="vindex === index"
               @click.stop="vindex = index"
             >
               <template #start>
@@ -75,7 +75,7 @@
             <lbz-list-item
               v-for="(item, index) of NAV"
               :key="index"
-              :active="vindex === index"
+              :activated="vindex === index"
               @click.stop="vindex = index"
             >
               <template #start>
@@ -118,7 +118,7 @@
             <lbz-list-item
               v-for="(item, index) of NAV"
               :key="index"
-              :active="vindex === index"
+              :activated="vindex === index"
               @click.stop="vindex = index"
             >
               <template #start>

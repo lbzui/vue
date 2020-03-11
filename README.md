@@ -341,6 +341,7 @@ To avoid style overrides, please do not use `--lbz-x (x: ...)` CSS Variables and
 ```less
 .align--x (x: start, center, end, stretch)
 .end--x (x: 2-13)
+.is-activated
 .is-active
 .is-checked
 .is-dense
@@ -370,8 +371,8 @@ Globally configure `<router-link>` default active class for exact matches:
 ```ts
 // router/index.ts(.js)
 const router = new VueRouter({
-  // 'router-link-exact-active' => 'is-active'
-  linkExactActiveClass: 'is-active',
+  // 'router-link-exact-active' => 'is-activated'
+  linkExactActiveClass: 'is-activated',
   // ...
 });
 ```

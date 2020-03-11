@@ -3,7 +3,7 @@
     :class="[
       'lbz-radio',
       color && `lbz-radio--${color}`,
-      cisSelected && 'is-checked',
+      cisChecked && 'is-checked',
       disabled && 'is-disabled'
     ]"
     @click.stop="!disabled && fclick($event)"
@@ -15,7 +15,7 @@
           name: `${name}`,
           type: 'radio',
           value,
-          checked: cisSelected,
+          checked: cisChecked,
           disabled
         }"
       >
@@ -54,15 +54,15 @@ export default class LbzRadio extends Vue {
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
 
-  get cisSelected(): boolean {
+  get cisChecked(): boolean {
     return this.mchecked === this.value;
   }
 
   get cgetStateAttrs(): StateAttributes {
     return {
       class: 'lbz-radio__state',
-      type: this.cisSelected ? 'primary' : '',
-      background: this.cisSelected ? (this.color || 'secondary') : '',
+      type: this.cisChecked ? 'primary' : '',
+      background: this.cisChecked ? (this.color || 'secondary') : '',
       unbounded: true,
       centered: true,
     };

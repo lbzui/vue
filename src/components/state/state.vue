@@ -4,6 +4,8 @@
       'lbz-state',
       type && `lbz-state--${type}`,
       background && `lbz-state-bg--${background}`,
+      selected && 'is-selected',
+      activated && 'is-activated',
       cisRipple && 'lbz-ripple',
       cisRipple && unbounded && 'lbz-ripple--unbounded'
     ]"
@@ -38,6 +40,10 @@ export default class LbzState extends Vue {
   //             'on-primary', 'on-primary-variant', 'on-secondary', 'on-secondary-variant',
   //             'on-background', 'on-surface' (default), 'on-error', 'on-light', 'on-dark'
   @Prop({ type: String, default: '' }) private background!: string;
+  // selected: true, false (default)
+  @Prop({ type: Boolean, default: false }) private selected!: boolean;
+  // activated: true, false (default)
+  @Prop({ type: Boolean, default: false }) private activated!: boolean;
   // unbounded: true, false (default)
   @Prop({ type: Boolean, default: false }) private unbounded!: boolean;
   // centered: true, false (default)

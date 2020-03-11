@@ -142,7 +142,7 @@ const routes = [
 
 const router = new VueRouter({
   routes,
-  linkExactActiveClass: 'is-active',
+  linkExactActiveClass: 'is-activated',
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition;

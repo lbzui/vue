@@ -105,25 +105,15 @@
     margin: -8px;
   }
 
-  // active
-  &.is-active {
+  // activated
+  &.is-activated {
     color: var(--lbz-theme-primary);
-
-    .lbz-list-item__state::before {
-      background-color: var(--lbz-theme-primary);
-      opacity: #lbz-state.primary[active];
-    }
 
     .lbz-list-item__center,
     .lbz-list-item__subtitle,
     .lbz-list-item__supporting-text {
       color: var(--lbz-theme-primary);
     }
-  }
-
-  // selected
-  &.is-selected .lbz-list-item__state::before {
-    opacity: #lbz-state.surface[selected];
   }
 
   // disabled

@@ -231,9 +231,9 @@ export default class App extends Vue {
   };
 
   private vsupportsCssVars: boolean = supportsCssVariables();
-  private visDark: boolean = false;
-  private vwidth: number = 0;
+  private visMobile: boolean = false;
   private vactive: boolean = true;
+  private visDark: boolean = false;
 
   @Watch('$route.name')
   private frouteChanged(val: string, oldVal: string): void {
@@ -242,11 +242,16 @@ export default class App extends Vue {
 
   @Watch('vactive')
   private factiveChanged(val: boolean, oldVal: boolean): void {
-    lockBodyScroll(this.vwidth <= 719 && val);
+    lockBodyScroll(this.visMobile && val);
   }
 
   private created(): void {
     cancelContextmenu();
+
+    this.fresize();
+    window.addEventListener('resize', (): void => {
+      this.fresize();
+    });
 
     if (this.vsupportsCssVars) {
       this.fchangeMode();
@@ -254,17 +259,22 @@ export default class App extends Vue {
         this.fchangeMode();
       });
     }
-
-    this.fresize(document.body.clientWidth);
-    window.addEventListener('resize', (): void => {
-      this.fresize(document.body.clientWidth);
-    });
   }
 
   private fcloseDrawer(): void {
-    if (this.vwidth <= 719) {
+    if (this.visMobile) {
       this.vactive = false;
     }
+  }
+
+  private fresize(): void {
+    const isMobile: boolean = document.body.clientWidth < 600;
+
+    this.visMobile = isMobile;
+    if (!isMobile && this.vactive) {
+      lockBodyScroll(isMobile);
+    }
+    this.vactive = !isMobile;
   }
 
   private fchangeMode(): void {
@@ -272,16 +282,6 @@ export default class App extends Vue {
 
     this.visDark = isDark;
     this.fsetTheme(isDark);
-  }
-
-  private fresize(val: number): void {
-    const isGt719: boolean = val > 719;
-
-    if (isGt719 && this.vactive) {
-      lockBodyScroll(!isGt719);
-    }
-    this.vwidth = val;
-    this.vactive = isGt719;
   }
 
   private fsetTheme(val: boolean, e?: MouseEvent): void {

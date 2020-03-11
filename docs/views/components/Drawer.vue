@@ -17,7 +17,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="vlabel === item.label"
+              :activated="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >{{ item.label }}</lbz-list-item>
             <lbz-divider/>
@@ -36,7 +36,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="vlabel === item.label"
+              :activated="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -73,7 +73,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="vlabel === item.label"
+              :activated="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -114,7 +114,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="vlabel === item.label"
+              :activated="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -154,7 +154,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="vlabel === item.label"
+              :activated="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -195,7 +195,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="vlabel === item.label"
+              :activated="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -237,7 +237,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="vlabel === item.label"
+              :activated="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -277,7 +277,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="vlabel === item.label"
+              :activated="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -321,7 +321,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="vlabel === item.label"
+              :activated="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -362,7 +362,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="vlabel === item.label"
+              :activated="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>
@@ -401,7 +401,7 @@
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
-              :active="vlabel === item.label"
+              :activated="vlabel === item.label"
               @click.stop="vlabel = item.label"
             >
               <template #start>

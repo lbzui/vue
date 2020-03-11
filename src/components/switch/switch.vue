@@ -3,7 +3,7 @@
     :class="[
       'lbz-switch',
       color && `lbz-switch--${color}`,
-      cisSelected && 'is-checked',
+      cisChecked && 'is-checked',
       disabled && 'is-disabled'
     ]"
     @click.stop="!disabled && fclick($event)"
@@ -17,7 +17,7 @@
             name: `${name}`,
             type: 'checkbox',
             value,
-            checked: cisSelected,
+            checked: cisChecked,
             disabled
           }"
         >
@@ -61,15 +61,15 @@ export default class LbzSwitch extends Vue {
 
   private value: boolean | number | string = this.mchecked;
 
-  get cisSelected(): boolean {
+  get cisChecked(): boolean {
     return this.mchecked === this.trueValue;
   }
 
   get cgetStateAttrs(): StateAttributes {
     return {
       class: 'lbz-switch__state',
-      type: this.cisSelected ? 'primary' : '',
-      background: this.cisSelected ? (this.color || 'secondary') : '',
+      type: this.cisChecked ? 'primary' : '',
+      background: this.cisChecked ? (this.color || 'secondary') : '',
       unbounded: true,
       centered: true,
     };
@@ -77,7 +77,7 @@ export default class LbzSwitch extends Vue {
 
   @Emit('change')
   private fclick(e: MouseEvent) {
-    this.value = this.cisSelected
+    this.value = this.cisChecked
       ? this.falseValue
       : this.trueValue;
 

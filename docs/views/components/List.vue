@@ -809,22 +809,10 @@
       <lbz-list-item tag="a" href="#/components/list">A</lbz-list-item>
     </lbz-list>
 
-    <h3 class="lbz-typography--subtitle1">$ active: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ selected: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ activated: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ disabled: undefined (default), true, false</h3>
     <lbz-list class="lbzui-u-rectangle">
-      <lbz-list-item active>
-        <template #start>
-          <lbz-icon>bluetooth</lbz-icon>
-        </template>
-        <template #center>
-          <span class="lbz-list-item__title">Active</span>
-          <span class="lbz-list-item__subtitle">Secondary text</span>
-        </template>
-        <template #end>
-          <lbz-icon-button>more_vert</lbz-icon-button>
-        </template>
-      </lbz-list-item>
       <lbz-list-item selected>
         <template #start>
           <lbz-radio
@@ -845,6 +833,18 @@
             name="vradio"
             :value="false"
           />
+        </template>
+      </lbz-list-item>
+      <lbz-list-item activated>
+        <template #start>
+          <lbz-icon>bluetooth</lbz-icon>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Activated</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <lbz-icon-button>more_vert</lbz-icon-button>
         </template>
       </lbz-list-item>
       <lbz-list-item disabled>

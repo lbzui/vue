@@ -6,7 +6,7 @@
         'lbz-drawer',
         type && `lbz-drawer--${type}`,
         cisFullScreen && 'is-full-screen',
-        cisActive ? 'is-active' : 'is-inactive'
+        cisActive && 'is-active'
       ]"
     >
       <div class="lbz-drawer__container">
