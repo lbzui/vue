@@ -6,6 +6,7 @@
     <h3 class="lbz-typography--subtitle1">$ id: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ name: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ [required]value: true, false, x, 'x'</h3>
+
     <lbz-radio
       v-model="vradio0"
       id="vradio0-true"
@@ -22,6 +23,7 @@
     >False</lbz-radio>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary', 'secondary' (default)</h3>
+
     <lbz-radio
       v-model="vradio1"
       :value="1"
@@ -30,6 +32,7 @@
     <lbz-radio v-model="vradio1" :value="0">Secondary</lbz-radio>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
+
     <lbz-radio
       v-model="vradio2"
       value="checked"

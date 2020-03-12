@@ -73,15 +73,8 @@
     opacity: #lbz-state.surface[focus];
   }
 
-  // activated
-  &:active::before,
-  &.is-activated::before {
+  &:active::before {
     opacity: #lbz-state.surface[activated];
-  }
-
-  // selected
-  &.is-selected::before {
-    opacity: #lbz-state.surface[selected];
   }
 
   // type
@@ -94,14 +87,8 @@
       opacity: #lbz-state.primary[focus];
     }
 
-    &:active::before,
-    &.is-activated::before {
+    &:active::before {
       opacity: #lbz-state.primary[activated];
-    }
-
-    // selected
-    &.is-selected::before {
-      opacity: #lbz-state.primary[selected];
     }
   }
 
@@ -114,23 +101,47 @@
       opacity: #lbz-state.image[focus];
     }
 
-    &:active::before,
-    &.is-activated::before {
+    &:active::before {
       opacity: #lbz-state.image[activated];
     }
+  }
 
-    // selected
-    &.is-selected::before {
+  // selected
+  .is-selected > & {
+    &::before {
+      opacity: #lbz-state.surface[selected];
+    }
+
+    &.lbz-state--primary::before {
+      opacity: #lbz-state.primary[selected];
+    }
+
+    &.lbz-state--image::before {
       opacity: #lbz-state.image[selected];
     }
   }
-}
 
-// NOTE: `:hover`, `:focus`, and `:active` will not work,
-// mainly applied in Card, List, and List item
-.lbz-state-no-before--child > .lbz-state::before,
-.lbz-state-no-before--descendant .lbz-state::before {
-  content: normal;
+  // activated
+  .is-activated > & {
+    &::before {
+      opacity: #lbz-state.surface[activated];
+    }
+
+    &.lbz-state--primary::before {
+      opacity: #lbz-state.primary[activated];
+    }
+
+    &.lbz-state--image::before {
+      opacity: #lbz-state.image[activated];
+    }
+  }
+
+  // NOTE: `:hover`, `:focus`, and `:active` will not work,
+  // mainly applied in Card, List, and List item
+  .lbz-state-no-before--child > &::before,
+  .lbz-state-no-before--descendant &::before {
+    content: normal;
+  }
 }
 
 // ripple

@@ -1,6 +1,7 @@
 <template>
   <article class="lbzui-components-icon">
     <h2 class="lbz-typography--h5"># Icon</h2>
+
     <lbz-icon>favorite</lbz-icon>
     <lbz-icon>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -13,12 +14,14 @@
     </lbz-icon>
 
     <h3 class="lbz-typography--subtitle1">$ size: 18, 24 (default), 36, 48</h3>
+
     <lbz-icon :size="18">favorite</lbz-icon>
     <lbz-icon>favorite</lbz-icon>
     <lbz-icon :size="36">favorite</lbz-icon>
     <lbz-icon :size="48">favorite</lbz-icon>
 
     <h3 class="lbz-typography--subtitle1">$ color: '' (default), 'primary', 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
+
     <lbz-icon>favorite</lbz-icon>
     <lbz-icon color="primary">favorite</lbz-icon>
     <lbz-icon color="secondary">favorite</lbz-icon>
@@ -29,6 +32,7 @@
     <lbz-icon color="dark">favorite</lbz-icon>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
+
     <lbz-icon disabled>favorite</lbz-icon>
     <lbz-icon color="primary" disabled>favorite</lbz-icon>
     <lbz-icon color="secondary" disabled>favorite</lbz-icon>

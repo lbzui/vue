@@ -3,6 +3,7 @@
     <h2 class="lbz-typography--h5"># List</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'one-line' (default), 'two-line', 'three-line'</h3>
+
     <lbz-list class="lbzui-u-rectangle" subtitle="One-line">
       <lbz-list-item @click.stop="fclick">
         <template #center>Single-line item</template>
@@ -207,7 +208,7 @@
       item-tag="a"
       subtitle="Router-link"
     >
-      <lbz-list-item to="">Router-link</lbz-list-item>
+      <lbz-list-item to="/components/list">Router-link</lbz-list-item>
       <lbz-list-item :to="{ path: '/404' }">Router-link</lbz-list-item>
     </lbz-list>
     <lbz-list
@@ -217,10 +218,11 @@
       subtitle="Non-router-link"
     >
       <lbz-list-item href="#/components/list">A</lbz-list-item>
-      <lbz-list-item href="#/components/list">A</lbz-list-item>
+      <lbz-list-item href="#/404">A</lbz-list-item>
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+
     <lbz-list
       class="lbzui-u-rectangle"
       type="two-line"
@@ -362,6 +364,7 @@
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ dense: undefined (default), true, false</h3>
+
     <lbz-list
       class="lbzui-u-rectangle"
       dense
@@ -751,6 +754,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ placement: 'start' (default), 'center'</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
+
     <lbz-list class="lbzui-u-rectangle">
       <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
@@ -771,6 +775,7 @@
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
+
     <lbz-list
       class="lbzui-u-rectangle"
       subtitle="Disabled"
@@ -784,6 +789,7 @@
     <h3 class="lbz-typography--subtitle1">$ router-link: undefined (default), true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ to (router-link): '' (default), 'x', { x: y }</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: '' (default), li', 'a', 'x'</h3>
+
     <lbz-list
       class="lbzui-u-rectangle"
       tag="nav"
@@ -791,7 +797,7 @@
     >
       <lbz-list-item
         router-link
-        to=""
+        to="/components/list"
         tag="a"
       >Router-link</lbz-list-item>
       <lbz-list-item
@@ -806,12 +812,13 @@
       subtitle="Non-router-link"
     >
       <lbz-list-item tag="a" href="#/components/list">A</lbz-list-item>
-      <lbz-list-item tag="a" href="#/components/list">A</lbz-list-item>
+      <lbz-list-item tag="a" href="#/404">A</lbz-list-item>
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ selected: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ activated: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ disabled: undefined (default), true, false</h3>
+
     <lbz-list class="lbzui-u-rectangle">
       <lbz-list-item selected>
         <template #start>

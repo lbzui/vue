@@ -143,16 +143,103 @@
 
     &-light {
       // subtitle
-      .lbz-list__subtitle {
+      .lbz-list__subtitle,
+      .lbz-list-item,
+      .lbz-list-item__subtitle,
+      .lbz-list-item__supporting-text {
         color: #lbz-theme-text.dark[medium-emphasis];
       }
+
+      .lbz-list-item {
+        &__center {
+          color: #lbz-theme-text.dark[high-emphasis];
+        }
+
+        &__end {
+          color: #lbz-theme-text.dark[disabled];
+        }
+
+        &__avatar.lbz-icon {
+          background-color: #lbz-theme-outline[dark];
+        }
+
+        // activated
+        &.is-activated {
+          color: @black;
+
+          .lbz-list-item__center,
+          .lbz-list-item__subtitle,
+          .lbz-list-item__supporting-text {
+            color: @black;
+          }
+        }
+
+        // disabled
+        &.is-disabled {
+          color: #lbz-theme-text.dark[disabled];
+
+          .lbz-list-item__center,
+          .lbz-list-item__subtitle,
+          .lbz-list-item__supporting-text {
+            color: #lbz-theme-text.dark[disabled];
+          }
+        }
+      }
+    }
+  }
+
+  &&--on-dark,
+  html[theme="dark"] &:not(.lbz-list--on-light):not(.lbz-list--on-dark) {
+    // subtitle
+    .lbz-list__subtitle,
+    .lbz-list-item,
+    .lbz-list-item__subtitle,
+    .lbz-list-item__supporting-text {
+      color: #lbz-theme-text.light[medium-emphasis];
     }
 
-    &-dark {
-      // subtitle
-      .lbz-list__subtitle {
-        color: #lbz-theme-text.light[medium-emphasis];
+    .lbz-list-item {
+      &__center {
+        color: #lbz-theme-text.light[high-emphasis];
       }
+
+      &__end {
+        color: #lbz-theme-text.light[disabled];
+      }
+
+      &__avatar.lbz-icon {
+        background-color: #lbz-theme-outline[light];
+      }
+
+      // activated
+      &.is-activated {
+        color: @white;
+
+        .lbz-list-item__center,
+        .lbz-list-item__subtitle,
+        .lbz-list-item__supporting-text {
+          color: @white;
+        }
+      }
+
+      // disabled
+      &.is-disabled {
+        color: #lbz-theme-text.light[disabled];
+
+        .lbz-list-item__center,
+        .lbz-list-item__subtitle,
+        .lbz-list-item__supporting-text {
+          color: #lbz-theme-text.light[disabled];
+        }
+      }
+    }
+  }
+
+  &:not(.lbz-list--on-primary):not(.lbz-list--on-secondary):not(.lbz-list--on-light):not(.lbz-list--on-dark)
+  .is-activated .lbz-list-item__state {
+    &::before,
+    &::after {
+      background-color: var(--lbz-theme-primary);
     }
   }
 
@@ -218,6 +305,18 @@
 
     .lbz-divider {
       margin: 3px 0 4px;
+    }
+  }
+
+  // on-background
+  html[theme="dark"] &:not(.lbz-list--on-light):not(.lbz-list--on-dark) {
+    background-color: transparent;
+
+    .lbz-list-item__state {
+      &::before,
+      &::after {
+        background-color: @white;
+      }
     }
   }
 }

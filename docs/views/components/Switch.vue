@@ -7,6 +7,7 @@
     <h3 class="lbz-typography--subtitle1">$ name: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ true-value: true (default), false, x, 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ false-value: true, false (default), x, 'x'</h3>
+
     <lbz-switch
       v-model="vswitch0"
       id="vswitch0"
@@ -15,6 +16,7 @@
     />
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary', 'secondary' (default)</h3>
+
     <lbz-switch
       v-model="vswitch1"
       :true-value="1"
@@ -28,6 +30,7 @@
     >Secondary</lbz-switch>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
+
     <lbz-switch
       v-model="vswitch2"
       true-value="checked"

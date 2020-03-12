@@ -4,6 +4,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'extended', 'short'</h3>
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
+
     <lbz-top-app-bar title="Page title"></lbz-top-app-bar>
     <lbz-top-app-bar title="Page title">
       <template #start>
@@ -22,6 +23,7 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'</h3>
+
     <lbz-top-app-bar title="Page title">
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
@@ -94,6 +96,7 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ inactive (type === 'standard'): '' (default), 'scroll-off', 'tab-fixed'</h3>
+
     <lbz-top-app-bar inactive="scroll-off" title="Page title">
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
@@ -125,6 +128,7 @@
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ dense (desktop only): undefined (default), true, false</h3>
+
     <lbz-top-app-bar dense title="Page title">
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
@@ -147,6 +151,7 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ elevated: true, false (default)</h3>
+
     <lbz-top-app-bar elevated title="Page title">
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
@@ -162,6 +167,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'extended', 'short'</h3>
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
+
     <lbz-top-app-bar type="extended" title="Page title"></lbz-top-app-bar>
     <lbz-top-app-bar type="extended" title="Page title">
       <template #start>
@@ -180,6 +186,7 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'</h3>
+
     <lbz-top-app-bar type="extended" title="Page title">
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
@@ -276,6 +283,7 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ dense (desktop only): undefined (default), true, false</h3>
+
     <lbz-top-app-bar
       type="extended"
       dense
@@ -306,6 +314,7 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ elevated: true, false (default)</h3>
+
     <lbz-top-app-bar
       type="extended"
       elevated
@@ -322,6 +331,7 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ media (type === 'extended'): '' (default), 'x'</h3>
+
     <lbz-top-app-bar
       type="extended"
       background="light"
@@ -341,6 +351,7 @@
     <h2 class="lbz-typography--h5"># Short top app bar</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'extended', 'short'</h3>
+
     <lbz-top-app-bar type="short" title="Page title">
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
@@ -353,6 +364,7 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'</h3>
+
     <lbz-top-app-bar type="short" title="Page title">
       <template #start>
         <lbz-icon-button on-background="primary">menu</lbz-icon-button>
@@ -449,6 +461,7 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ dense (desktop only): undefined (default), true, false</h3>
+
     <lbz-top-app-bar
       type="short"
       dense
@@ -479,6 +492,7 @@
     </lbz-top-app-bar>
 
     <h3 class="lbz-typography--subtitle1">$ elevated: true, false (default)</h3>
+
     <lbz-top-app-bar
       type="short"
       elevated

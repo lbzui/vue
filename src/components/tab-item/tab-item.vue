@@ -65,6 +65,7 @@ export default class LbzTabItem extends Vue {
         tag,
         exact,
         event,
+        exactActiveClass: 'is-active',
       } : {
         is: tag,
       };
@@ -87,7 +88,7 @@ export default class LbzTabItem extends Vue {
   get cgetStateAttrs(): StateAttributes {
     return {
       class: 'lbz-tab-item__state',
-      type: this.ponBackground === 'light' ? '' : 'primary',
+      type: ['', 'surface', 'light'].includes(this.ponBackground) ? '' : 'primary',
       background: ['', 'surface'].includes(this.ponBackground) ? 'primary' : `on-${this.ponBackground}`,
     };
   }

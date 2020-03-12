@@ -4,6 +4,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
+
     <div class="lbzui-u-app">
       <lbz-empty-state title="Your lab, everywhere">
         <template #start>

@@ -3,6 +3,7 @@
     <h2 class="lbz-typography--h5"># Icon button</h2>
 
     <h3 class="lbz-typography--subtitle1">$ toggle: true, false (default)</h3>
+
     <lbz-icon-button @click.stop="fclick">favorite_border</lbz-icon-button>
     <lbz-icon-button>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -17,10 +18,11 @@
     <h3 class="lbz-typography--subtitle1">$ router-link (!toggle): true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ router-link-props (!toggle && router-link): { to: '' (default) || 'x' || { x: y }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
+
     <lbz-icon-button
       router-link
       :router-link-props="{
-        to: '/404',
+        to: '/components/icon-button',
         replace: true,
         event: 'dblclick'
       }"
@@ -29,6 +31,7 @@
     <lbz-icon-button tag="a" href="#/components/icon-button">favorite_border</lbz-icon-button>
 
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'</h3>
+
     <lbz-icon-button on-background="primary">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="secondary">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="background">favorite_border</lbz-icon-button>
@@ -38,6 +41,7 @@
     <lbz-icon-button on-background="dark">favorite_border</lbz-icon-button>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
+
     <lbz-icon-button on-background="primary" disabled>favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="secondary" disabled>favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="background" disabled>favorite_border</lbz-icon-button>
@@ -47,10 +51,12 @@
     <lbz-icon-button on-background="dark" disabled>favorite_border</lbz-icon-button>
 
     <h2 class="lbz-typography--h5"># Toggle button</h2>
+
     <h3 class="lbz-typography--subtitle1">$ active.sync (toggle): true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ toggle: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ on-icon (toggle): '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ off-icon (toggle): '' (default), 'x'</h3>
+
     <lbz-icon-button
       :active.sync="vactive"
       toggle
@@ -85,6 +91,7 @@
     </lbz-icon-button>
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
+
     <lbz-icon-button
       :active.sync="vactive"
       toggle
@@ -94,6 +101,7 @@
     />
 
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'</h3>
+
     <lbz-icon-button
       :active.sync="vactive"
       toggle
@@ -144,6 +152,7 @@
     />
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
+
     <lbz-icon-button
       :active.sync="vactive"
       toggle

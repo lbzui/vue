@@ -3,6 +3,7 @@
     <h2 class="lbz-typography--h5"># Standard FAB (floating action button)</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'mini', 'extended'</h3>
+
     <lbz-fab @click.stop="fclick">add</lbz-fab>
     <lbz-fab>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -15,10 +16,12 @@
     </lbz-fab>
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
+
     <lbz-fab>add</lbz-fab>
     <lbz-fab tag="a" href="#/components/fab">add</lbz-fab>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'background', 'surface', 'light', 'dark'</h3>
+
     <lbz-fab background="primary">add</lbz-fab>
     <lbz-fab background="primary-variant">add</lbz-fab>
     <lbz-fab>add</lbz-fab>
@@ -28,12 +31,14 @@
     <lbz-fab background="dark">add</lbz-fab>
 
     <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
+
     <lbz-button @click.stop="ftoggleInactive()">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
     <lbz-fab :inactive="vinactive">add</lbz-fab>
 
     <h2 class="lbz-typography--h5"># Mini FAB</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'mini', 'extended'</h3>
+
     <lbz-fab type="mini">add</lbz-fab>
     <lbz-fab type="mini">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -46,6 +51,7 @@
     </lbz-fab>
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
+
     <lbz-fab type="mini">add</lbz-fab>
     <lbz-fab
       type="mini"
@@ -54,6 +60,7 @@
     >add</lbz-fab>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'background', 'surface', 'light', 'dark'</h3>
+
     <lbz-fab type="mini" background="primary">add</lbz-fab>
     <lbz-fab type="mini" background="primary-variant">add</lbz-fab>
     <lbz-fab type="mini">add</lbz-fab>
@@ -63,6 +70,7 @@
     <lbz-fab type="mini" background="dark">add</lbz-fab>
 
     <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
+
     <lbz-button @click.stop="ftoggleInactive()">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
     <lbz-fab type="mini" :inactive="vinactive">add</lbz-fab>
 
@@ -70,6 +78,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'mini', 'extended'</h3>
     <h3 class="lbz-typography--subtitle1">$ label (type === 'extended'): '' (default), 'x'</h3>
+
     <lbz-fab type="extended" label="Create"/>
     <lbz-fab type="extended" label="Create">add</lbz-fab>
     <lbz-fab type="extended" label="Create">
@@ -83,6 +92,7 @@
     </lbz-fab>
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
+
     <lbz-fab type="extended" label="Create"/>
     <lbz-fab
       type="extended"
@@ -92,6 +102,7 @@
     />
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'background', 'surface', 'light', 'dark'</h3>
+
     <lbz-fab
       type="extended"
       background="primary"
@@ -125,6 +136,7 @@
     />
 
     <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
+
     <lbz-button @click.stop="ftoggleInactive()">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
     <lbz-fab
       type="extended"

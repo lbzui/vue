@@ -3,6 +3,7 @@
     <h2 class="lbz-typography--h5"># State (non-IE)</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'surface' (default), 'primary', 'image'</h3>
+
     <div class="lbzui-u-square">
       Surface
       <lbz-state></lbz-state>
@@ -17,6 +18,7 @@
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary', 'secondary-variant', 'background', 'surface', 'error', 'light', 'dark', 'on-primary', 'on-primary-variant', 'on-secondary', 'on-secondary-variant', 'on-background', 'on-surface' (default), 'on-error', 'on-light', 'on-dark'</h3>
+
     <div class="lbzui-u-square">
       Primary
       <lbz-state background="primary"></lbz-state>
@@ -91,12 +93,14 @@
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ unbounded: true, false (default)</h3>
+
     <div class="lbzui-u-square lbz-state-no-before--descendant" style="overflow: visible;">
       Unbounded
       <lbz-state unbounded></lbz-state>
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ centered: true, false (default)</h3>
+
     <div class="lbzui-u-square">
       Centered
       <lbz-state centered></lbz-state>

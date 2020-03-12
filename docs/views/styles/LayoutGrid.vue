@@ -1,6 +1,7 @@
 <template>
   <article class="lbzui-styles-layout-grid">
     <h2 class="lbz-typography--h5"># Layout grid (IE unfriendly)</h2>
+
     <div class="lbzui-u-rectangle lbz-layout-grid">
       <div class="lbz-layout-grid__cell">.lbz-layout-grid__cell</div>
       <div class="lbz-layout-grid__cell">.lbz-layout-grid__cell</div>

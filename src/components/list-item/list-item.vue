@@ -90,12 +90,12 @@ export default class LbzListItem extends Vue {
   }
 
   get cgetStateAttrs(): StateAttributes {
+    const isPrimary: boolean = this.activated && ['', 'surface'].includes(this.ponBackground);
+
     return {
       class: 'lbz-list-item__state',
-      type: this.ponBackground === 'light' ? '' : 'primary',
-      background: this.activated ? 'primary' : (this.ponBackground ? `on-${this.ponBackground}` : ''),
-      selected: this.selected,
-      activated: this.activated,
+      type: ['', 'surface', 'light'].includes(this.ponBackground) ? '' : 'primary',
+      background: isPrimary ? 'primary' : (this.ponBackground ? `on-${this.ponBackground}` : ''),
     };
   }
 }

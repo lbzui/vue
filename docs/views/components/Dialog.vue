@@ -4,6 +4,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'alert' (default), 'simple', 'confirmation', 'full-screen (mobile only)'</h3>
+
     <lbz-button @click.stop="valert0 = true">Alert</lbz-button>
     <lbz-dialog
       ref="dialog"
@@ -19,6 +20,7 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
+
     <lbz-button @click.stop="valert1 = true">Append to body</lbz-button>
     <lbz-dialog :active.sync="valert1" append-to-body>
       <template #center>Discard draft?</template>
@@ -29,6 +31,7 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
+
     <lbz-button @click.stop="valert2 = true">Unlock scroll</lbz-button>
     <lbz-dialog :active.sync="valert2" :lock-scroll="false">
       <template #center>Discard draft?</template>
@@ -39,6 +42,7 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ stacked (['', 'alert', 'confirmation'].includes(type)): true, false (default)</h3>
+
     <lbz-button @click.stop="valert3 = true">Stacked</lbz-button>
     <lbz-dialog :active.sync="valert3" stacked>
       <template #center>Discard draft?</template>
@@ -49,6 +53,7 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
+
     <lbz-button @click.stop="valert4 = true">Title</lbz-button>
     <lbz-dialog :active.sync="valert4" title="Dialog header">
       <template #center>Discard draft?</template>
@@ -59,6 +64,7 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ content-height (type !== 'full-screen'): '' (default), 'x'</h3>
+
     <lbz-button @click.stop="valert5 = true">Content height</lbz-button>
     <lbz-dialog :active.sync="valert5" content-height="180px">
       <template #center>Discard draft?</template>
@@ -73,6 +79,7 @@
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'alert' (default), 'simple', 'confirmation', 'full-screen (mobile only)'</h3>
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
+
     <lbz-button @click.stop="vsimple0 = true">Simple</lbz-button>
     <lbz-dialog
       :active.sync="vsimple0"
@@ -96,6 +103,7 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
+
     <lbz-button @click.stop="vsimple1 = true">Append to body</lbz-button>
     <lbz-dialog
       :active.sync="vsimple1"
@@ -120,6 +128,7 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
+
     <lbz-button @click.stop="vsimple2 = true">Unlock scroll</lbz-button>
     <lbz-dialog
       :active.sync="vsimple2"
@@ -144,6 +153,7 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ content-height (type !== 'full-screen'): '' (default), 'x'</h3>
+
     <lbz-button @click.stop="vsimple3 = true">Content height</lbz-button>
     <lbz-dialog
       :active.sync="vsimple3"
@@ -172,6 +182,7 @@
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'alert' (default), 'simple', 'confirmation', 'full-screen (mobile only)'</h3>
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
+
     <lbz-button @click.stop="vconfirmation0 = true">Confirmation</lbz-button>
     <lbz-dialog
       :active.sync="vconfirmation0"
@@ -186,6 +197,7 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
+
     <lbz-button @click.stop="vconfirmation1 = true">Append to body</lbz-button>
     <lbz-dialog
       :active.sync="vconfirmation1"
@@ -201,6 +213,7 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
+
     <lbz-button @click.stop="vconfirmation2 = true">Unlock scroll</lbz-button>
     <lbz-dialog
       :active.sync="vconfirmation2"
@@ -217,6 +230,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ scrollable (type === 'confirmation'): true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ content-height (type !== 'full-screen'): '' (default), 'x'</h3>
+
     <lbz-button @click.stop="vconfirmation3 = true">Scrollable & Content height</lbz-button>
     <lbz-dialog
       :active.sync="vconfirmation3"
@@ -246,6 +260,7 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ stacked (['', 'alert', 'confirmation'].includes(type)): true, false (default)</h3>
+
     <lbz-button @click.stop="vconfirmation4 = true">Stacked</lbz-button>
     <lbz-dialog
       :active.sync="vconfirmation4"
@@ -265,6 +280,7 @@
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'alert' (default), 'simple', 'confirmation', 'full-screen (mobile only)'</h3>
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
+
     <lbz-button @click.stop="vfullScreen0 = true">Full-screen</lbz-button>
     <lbz-dialog
       :active.sync="vfullScreen0"
@@ -279,6 +295,7 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
+
     <lbz-button @click.stop="vfullScreen1 = true">Append to body</lbz-button>
     <lbz-dialog
       :active.sync="vfullScreen1"
@@ -294,6 +311,7 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
+
     <lbz-button @click.stop="vfullScreen2 = true">Unlock scroll</lbz-button>
     <lbz-dialog
       :active.sync="vfullScreen2"

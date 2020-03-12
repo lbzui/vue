@@ -44,7 +44,8 @@
     }
   }
 
-  &&--dark {
+  &&--dark,
+  html[theme="dark"] &:not(.lbz-top-app-bar--light):not(.lbz-top-app-bar--dark) {
     color: @white;
     .lbz-surface("dark"; 0);
 
@@ -212,14 +213,6 @@
 
   // background
   html[theme="dark"] &:not(.lbz-top-app-bar--light):not(.lbz-top-app-bar--dark) {
-    color: @white;
-    .lbz-surface("dark"; 0);
-
-    // elevated
-    &.is-elevated {
-      .lbz-surface("dark"; 4);
-    }
-
     .lbz-button__state,
     .lbz-icon-button__state {
       &::before,

@@ -3,6 +3,7 @@
     <h2 class="lbz-typography--h5"># Elevated card</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'elevated' (default), 'outlined'</h3>
+
     <lbz-card @click.stop="fclick">
       <template #start>
         <div class="lbz-card__header__center">
@@ -98,6 +99,7 @@
     </lbz-card>
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'div' (default), 'a', 'x'</h3>
+
     <lbz-card>
       <template #start>
         <div class="lbz-card__header__center">
@@ -140,6 +142,7 @@
     <h2 class="lbz-typography--h5"># Outlined card</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'elevated' (default), 'outlined'</h3>
+
     <lbz-card type="outlined">
       <template #start>
         <div class="lbz-card__header__center">
@@ -162,6 +165,7 @@
     </lbz-card>
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'div' (default), 'a', 'x'</h3>
+
     <lbz-card type="outlined">
       <template #start>
         <div class="lbz-card__header__center">

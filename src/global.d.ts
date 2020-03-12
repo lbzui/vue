@@ -24,6 +24,7 @@ declare global {
     tag?: string;
     exact?: boolean;
     event?: string | string[];
+    exactActiveClass?: string;
     disabled?: boolean;
     [key: string]: any;
   }
@@ -32,8 +33,6 @@ declare global {
     class: string;
     type?: string;
     background?: string;
-    selected?: boolean;
-    activated?: boolean;
     unbounded?: boolean;
     centered?: boolean;
   }

@@ -3,16 +3,18 @@
     <h2 class="lbz-typography--h5"># Text button</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'text' (default), 'outlined', 'contained'</h3>
+
     <lbz-button @click.stop="fclick">Text</lbz-button>
     <lbz-button icon="add">Text</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { to: '' (default) || 'x' || { x: y }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
+
     <lbz-button
       router-link
       :router-link-props="{
-        to: '/404',
+        to: '/components/button',
         replace: true,
         event: 'dblclick'
       }"
@@ -25,6 +27,7 @@
     >Non-router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
+
     <lbz-button>Primary</lbz-button>
     <lbz-button icon="add">Primary</lbz-button>
     <br>
@@ -47,14 +50,17 @@
     <lbz-button color="dark" icon="add">Dark</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ full-width: true, false (default)</h3>
+
     <lbz-button full-width>Full-width</lbz-button>
     <lbz-button full-width icon="add">Full-width</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ dense: undefined (default), true, false</h3>
+
     <lbz-button dense>Dense</lbz-button>
     <lbz-button :dense="false" icon="add">Non-dense</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
+
     <lbz-button disabled>Primary</lbz-button>
     <lbz-button disabled icon="add">Primary</lbz-button>
     <br>
@@ -101,6 +107,7 @@
     >Dark</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ icon: '' (default), 'x'</h3>
+
     <lbz-button icon="add">Icon</lbz-button>
     <lbz-button>
       <template #icon>add</template>
@@ -125,17 +132,19 @@
     <h2 class="lbz-typography--h5"># Outlined button</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'text' (default), 'outlined', 'contained'</h3>
+
     <lbz-button type="outlined">Outlined</lbz-button>
     <lbz-button type="outlined" icon="add">Outlined</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { to: '' (default) || 'x' || { x: y }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
+
     <lbz-button
       type="outlined"
       router-link
       :router-link-props="{
-        to: '/404',
+        to: '/components/button',
         replace: true,
         event: 'dblclick'
       }"
@@ -149,6 +158,7 @@
     >Non-router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
+
     <lbz-button type="outlined">Primary</lbz-button>
     <lbz-button type="outlined" icon="add">Primary</lbz-button>
     <br>
@@ -195,6 +205,7 @@
     >Dark</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ full-width: true, false (default)</h3>
+
     <lbz-button type="outlined" full-width>Full-width</lbz-button>
     <lbz-button
       type="outlined"
@@ -203,6 +214,7 @@
     >Full-width</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ dense: undefined (default), true, false</h3>
+
     <lbz-button type="outlined" dense>Dense</lbz-button>
     <lbz-button
       type="outlined"
@@ -211,6 +223,7 @@
     >Non-dense</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
+
     <lbz-button type="outlined" disabled>Primary</lbz-button>
     <lbz-button
       type="outlined"
@@ -291,6 +304,7 @@
     >Dark</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ icon: '' (default), 'x'</h3>
+
     <lbz-button type="outlined" icon="add">Icon</lbz-button>
     <lbz-button type="outlined">
       <template #icon>add</template>
@@ -315,17 +329,19 @@
     <h2 class="lbz-typography--h5"># Contained button</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'text' (default), 'outlined', 'contained'</h3>
+
     <lbz-button type="contained">Contained</lbz-button>
     <lbz-button type="contained" icon="add">Contained</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { to: '' (default) || 'x' || { x: y }, replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
+
     <lbz-button
       type="contained"
       router-link
       :router-link-props="{
-        to: '/404',
+        to: '/components/button',
         replace: true,
         event: 'dblclick'
       }"
@@ -339,6 +355,7 @@
     >Non-router-link</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
+
     <lbz-button type="contained">Primary</lbz-button>
     <lbz-button type="contained" icon="add">Primary</lbz-button>
     <br>
@@ -385,6 +402,7 @@
     >Dark</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ full-width: true, false (default)</h3>
+
     <lbz-button type="contained" full-width>Full-width</lbz-button>
     <lbz-button
       type="contained"
@@ -393,6 +411,7 @@
     >Full-width</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ dense: undefined (default), true, false</h3>
+
     <lbz-button type="contained" dense>Dense</lbz-button>
     <lbz-button
       type="contained"
@@ -401,6 +420,7 @@
     >Non-dense</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ unelevated (type === 'contained'): true, false (default)</h3>
+
     <lbz-button type="contained" unelevated>Unelevated</lbz-button>
     <lbz-button
       type="contained"
@@ -409,6 +429,7 @@
     >Unelevated</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
+
     <lbz-button type="contained" disabled>Primary</lbz-button>
     <lbz-button
       type="contained"
@@ -489,6 +510,7 @@
     >Dark</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ icon: '' (default), 'x'</h3>
+
     <lbz-button type="contained" icon="add">Icon</lbz-button>
     <lbz-button type="contained">
       <template #icon>add</template>

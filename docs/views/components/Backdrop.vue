@@ -4,6 +4,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ background: 'primary' (default), 'secondary', 'dark'</h3>
+
     <div class="lbzui-u-app">
       <lbz-backdrop ref="backdrop" :active.sync="vactive">
         <template #back-start>
@@ -135,6 +136,7 @@
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
+
     <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" subtitle="Subtitle">
         <template #back-start>
@@ -163,6 +165,7 @@
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ icon: true, false (default)</h3>
+
     <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" icon>
         <template #back-start>
@@ -191,6 +194,7 @@
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ divider: true, false (default)</h3>
+
     <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" divider>
         <template #back-start>
@@ -219,6 +223,7 @@
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ horizontal: true, false (default)</h3>
+
     <div class="lbzui-u-app">
       <lbz-backdrop
         :active.sync="vactive"
@@ -277,6 +282,7 @@
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ scrim: true, false (default)</h3>
+
     <div class="lbzui-u-app">
       <lbz-backdrop :active.sync="vactive" scrim>
         <template #back-start>

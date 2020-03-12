@@ -4,6 +4,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ v-model: undefined (default), true, false, x, 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'fixed' (default), 'scrollable'</h3>
+
     <lbz-tab v-model="vtab0" @change="fchange">
       <lbz-tab-item
         v-for="(item, index) of 3"
@@ -13,6 +14,7 @@
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'nav' (default), 'x'</h3>
+
     <lbz-tab v-model="vtab0">
       <lbz-tab-item
         v-for="(item, index) of 3"
@@ -29,6 +31,7 @@
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+
     <lbz-tab v-model="vtab0" on-background="primary">
       <lbz-tab-item
         v-for="(item, index) of 3"
@@ -66,6 +69,7 @@
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ alignment (type === 'fixed'): '' (default), 'left', 'center', 'right'</h3>
+
     <lbz-tab v-model="vtab0">
       <lbz-tab-item
         v-for="(item, index) of 3"
@@ -96,6 +100,7 @@
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ stacked: true, false (default)</h3>
+
     <lbz-tab v-model="vtab0" stacked>
       <lbz-tab-item :value="0" icon="phone">Item 1</lbz-tab-item>
       <lbz-tab-item :value="1" icon="favorite">Item 2</lbz-tab-item>
@@ -109,6 +114,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
+
     <lbz-tab router-link :router-link-props="{ replace: true }">
       <lbz-tab-item to="/components/tab">Router-link 1</lbz-tab-item>
       <lbz-tab-item :to="{ path: '/404' }">Router-link 2</lbz-tab-item>
@@ -116,6 +122,7 @@
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ item-tag: 'button' (default), 'a', 'x'</h3>
+
     <lbz-tab v-model="vtab0">
       <lbz-tab-item
         v-for="(item, index) of 3"
@@ -133,6 +140,7 @@
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ on-content: true, false (default)</h3>
+
     <lbz-tab v-model="vtab0" on-content>
       <lbz-tab-item
         v-for="(item, index) of 3"
@@ -152,6 +160,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ v-model: undefined (default), true, false, x, 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'fixed' (default), 'scrollable'</h3>
+
     <lbz-tab v-model="vtab1" type="scrollable">
       <lbz-tab-item
         v-for="(item, index) of 6"
@@ -161,6 +170,7 @@
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'nav' (default), 'x'</h3>
+
     <lbz-tab v-model="vtab1" type="scrollable">
       <lbz-tab-item
         v-for="(item, index) of 6"
@@ -181,6 +191,7 @@
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+
     <lbz-tab
       v-model="vtab1"
       type="scrollable"
@@ -234,6 +245,7 @@
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ stacked: true, false (default)</h3>
+
     <lbz-tab
       v-model="vtab1"
       type="scrollable"
@@ -257,6 +269,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ router-link: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
+
     <lbz-tab
       type="scrollable"
       router-link
@@ -271,6 +284,7 @@
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ item-tag: 'button' (default), 'a', 'x'</h3>
+
     <lbz-tab v-model="vtab1" type="scrollable">
       <lbz-tab-item
         v-for="(item, index) of 6"
@@ -292,6 +306,7 @@
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ on-content: true, false (default)</h3>
+
     <lbz-tab
       v-model="vtab1"
       type="scrollable"
@@ -318,19 +333,43 @@
     <h3 class="lbz-typography--subtitle1">$ tag: '' (default), 'button', 'a', 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ value: undefined (default), true, false, x, 'x'</h3>
 
-    <lbz-tab v-model="vtab1">
-      <lbz-tab-item :value="0">Button</lbz-tab-item>
+    <lbz-tab v-model="vtab2">
       <lbz-tab-item
-        router-link :to="{ path: '/404' }" tag="a">Router-link</lbz-tab-item>
+        v-for="(item, index) of 3"
+        :key="index"
+        :value="index"
+      >Button {{ item }}</lbz-tab-item>
+    </lbz-tab>
+    <lbz-tab>
       <lbz-tab-item
+        router-link
+        to="/components/tab"
+        tag="a"
+      >Router-link 1</lbz-tab-item>
+      <lbz-tab-item
+        router-link
+        :to="{ path: '/404' }"
+        tag="a"
+      >Router-link 2</lbz-tab-item>
+      <lbz-tab-item
+        router-link
+        :to="{ path: '/404' }"
+        tag="a"
+      >Router-link 3</lbz-tab-item>
+    </lbz-tab>
+    <lbz-tab v-model="vtab2">
+      <lbz-tab-item
+        v-for="(item, index) of 3"
+        :key="index"
         tag="a"
         href="#/components/tab"
-        :value="2"
-      >A</lbz-tab-item>
+        :value="index"
+      >A {{ item }}</lbz-tab-item>
     </lbz-tab>
 
     <h3 class="lbz-typography--subtitle1">$ icon: '' (default), 'x'</h3>
-    <lbz-tab v-model="vtab1">
+
+    <lbz-tab v-model="vtab2">
       <lbz-tab-item :value="0" icon="phone"/>
       <lbz-tab-item :value="1" icon="favorite"/>
       <lbz-tab-item :value="2" icon="place"/>
@@ -345,6 +384,7 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class ComponentsTab extends Vue {
   private vtab0: number = 0;
   private vtab1: number = 0;
+  private vtab2: number = 0;
 
   private fchange(val: boolean | number | string, e: MouseEvent): void {
     alert(val);

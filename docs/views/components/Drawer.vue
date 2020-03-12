@@ -4,6 +4,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ active.sync: true (default), false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'modal', 'bottom (mobile only)'</h3>
+
     <lbz-button type="contained" @click.stop="ftoggle">{{ vactive0 ? 'Inactive' : 'Active' }}</lbz-button>
     <div class="lbzui-u-app">
       <lbz-drawer
@@ -66,6 +67,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
+
     <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactive0" title="Title">
         <template #center>
@@ -146,6 +148,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ active.sync: true (default), false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'modal', 'bottom (mobile only)'</h3>
+
     <lbz-button type="contained" @click.stop="vactive1 = !vactive1">{{ vactive1 ? 'Inactive' : 'Active' }}</lbz-button>
     <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactive1" type="modal">
@@ -184,6 +187,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
+
     <div class="lbzui-u-app">
       <lbz-drawer
         :active.sync="vactive1"
@@ -269,6 +273,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ active.sync: true (default), false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'modal', 'bottom (mobile only)'</h3>
+
     <lbz-button type="contained" @click.stop="vactive2 = !vactive2">{{ vactive2 ? 'Inactive' : 'Active' }}</lbz-button>
     <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactive2" type="bottom">
@@ -306,6 +311,7 @@
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ full-screen (type === 'bottom'): true, false (default)</h3>
+
     <div class="lbzui-u-app">
       <lbz-drawer
         :active.sync="vactive2"
@@ -351,6 +357,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
+
     <div class="lbzui-u-app">
       <lbz-drawer
         :active.sync="vactive2"
