@@ -70,22 +70,6 @@
       padding: 0 var(--lbz-layout-grid-margin);
       height: 56px;
 
-      // subtitle
-      &__title {
-        flex: 1;
-        margin: 0;
-        .lbz-typography("subtitle1");
-        .lbz-u-truncate(1);
-        color: var(--lbz-theme-text-high-emphasis-on-surface);
-      }
-
-      // icon
-      &__icon {
-        flex: none;
-        display: none;
-        margin-right: -12px;
-      }
-
       // divider
       .lbz-divider {
         position: absolute;
@@ -93,6 +77,22 @@
         bottom: -1px;
         left: var(--lbz-layout-grid-margin);
       }
+    }
+
+    // subtitle
+    &__title {
+      flex: 1;
+      margin: 0;
+      .lbz-typography("subtitle1");
+      .lbz-u-truncate(1);
+      color: var(--lbz-theme-text-high-emphasis-on-surface);
+    }
+
+    // icon
+    &__icon {
+      flex: none;
+      display: none;
+      margin-right: -12px;
     }
 
     &__content {
@@ -121,6 +121,25 @@
       left: 0;
       border-radius: inherit;
       background-color: #lbz-theme-scrim[light];
+    }
+  }
+
+  @media #lbz-layout-grid.media[xsmall] {
+    & &__back-layer__header {
+      height: 56px;
+    }
+
+    & &__back-layer__content .lbz-list.is-nav {
+      margin-top: -16px;
+    }
+
+    & &__front-layer {
+      height: calc(100% - 56px);
+      transform: translate3d(0, 56px, 0);
+
+      &__header {
+        height: 48px;
+      }
     }
   }
 
@@ -153,35 +172,15 @@
       transform: translate3d(0, calc(100% - 66px), 0); // (100% + 64px) - 130px
       transform: translate3d(0, 90%, 0)\9\0;
 
+      @media #lbz-layout-grid.media[xsmall] {
+        transform: translate3d(0, calc(100% - 74px), 0); // (100% + 56px) - 130px
+      }
+
       // icon, scrim
-      &__header__icon,
+      &__icon,
       &__scrim {
         display: block;
       }
-    }
-  }
-
-  @media #lbz-layout-grid.media[xsmall] {
-    & &__back-layer__header {
-      height: 56px;
-    }
-
-    & &__back-layer__content .lbz-list.is-nav {
-      margin-top: -16px;
-    }
-
-    & &__front-layer {
-      height: calc(100% - 56px);
-      transform: translate3d(0, 56px, 0);
-
-      &__header {
-        height: 48px;
-      }
-    }
-
-    // active
-    &.is-active .lbz-backdrop__front-layer {
-      transform: translate3d(0, calc(100% - 74px), 0); // (100% + 56px) - 130px
     }
   }
 

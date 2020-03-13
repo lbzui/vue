@@ -26,11 +26,13 @@
   transition: opacity 15ms linear 30ms, box-shadow 280ms #lbz-motion.curve[standard], transform 270ms #lbz-motion.curve[deceleration] 0ms;
   user-select: none;
 
-  // inactive
-  &.is-inactive {
-    opacity: 0;
-    transition: opacity 15ms linear 150ms, transform 180ms #lbz-motion.curve[acceleration] 0ms;
-    transform: scale(0);
+  &:hover,
+  &:focus {
+    .lbz-shadow(8);
+  }
+
+  &:active {
+    .lbz-shadow(12);
   }
 
   // type
@@ -86,12 +88,10 @@
     .lbz-surface("dark"; 6);
   }
 
-  &:hover,
-  &:focus {
-    .lbz-shadow(8);
-  }
-
-  &:active {
-    .lbz-shadow(12);
+  // inactive
+  &.is-inactive {
+    opacity: 0;
+    transition: opacity 15ms linear 150ms, transform 180ms #lbz-motion.curve[acceleration] 0ms;
+    transform: scale(0);
   }
 }

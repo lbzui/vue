@@ -30,37 +30,6 @@
     transition: background-color 15ms linear, opacity 15ms linear;
   }
 
-  // background
-  @backgrounds: {
-    primary: var(--lbz-theme-primary);
-    primary-variant: var(--lbz-theme-primary-variant);
-    secondary: var(--lbz-theme-secondary);
-    secondary-variant: var(--lbz-theme-secondary-variant);
-    background: var(--lbz-theme-background);
-    surface: var(--lbz-theme-surface);
-    error: var(--lbz-theme-error);
-    light: @white;
-    dark: @black;
-
-    on-primary: var(--lbz-theme-on-primary);
-    on-primary-variant: var(--lbz-theme-on-primary);
-    on-secondary: var(--lbz-theme-on-secondary);
-    on-secondary-variant: var(--lbz-theme-on-secondary);
-    on-background: var(--lbz-theme-on-background);
-    on-error: var(--lbz-theme-on-error);
-    on-light: @black;
-    on-dark: @white;
-  };
-
-  each(@backgrounds, {
-    &&-bg--@{key} {
-      &::before,
-      &::after {
-        background-color: @value;
-      }
-    }
-  });
-
   &:hover {
     cursor: pointer;
 
@@ -106,6 +75,37 @@
     }
   }
 
+  // background
+  @backgrounds: {
+    primary: var(--lbz-theme-primary);
+    primary-variant: var(--lbz-theme-primary-variant);
+    secondary: var(--lbz-theme-secondary);
+    secondary-variant: var(--lbz-theme-secondary-variant);
+    background: var(--lbz-theme-background);
+    surface: var(--lbz-theme-surface);
+    error: var(--lbz-theme-error);
+    light: @white;
+    dark: @black;
+
+    on-primary: var(--lbz-theme-on-primary);
+    on-primary-variant: var(--lbz-theme-on-primary);
+    on-secondary: var(--lbz-theme-on-secondary);
+    on-secondary-variant: var(--lbz-theme-on-secondary);
+    on-background: var(--lbz-theme-on-background);
+    on-error: var(--lbz-theme-on-error);
+    on-light: @black;
+    on-dark: @white;
+  };
+
+  each(@backgrounds, {
+    &&-bg--@{key} {
+      &::before,
+      &::after {
+        background-color: @value;
+      }
+    }
+  });
+
   // selected
   .is-selected > & {
     &::before {
@@ -124,10 +124,6 @@
   // activated
   .is-activated > & {
     &::before {
-      opacity: #lbz-state.surface[activated];
-    }
-
-    &.lbz-state--primary::before {
       opacity: #lbz-state.primary[activated];
     }
 
@@ -154,6 +150,19 @@
   --lbz-ripple-translate-end: 0;
   --lbz-ripple-scale: 1;
 
+  &::before {
+    transform: scale(var(--lbz-ripple-scale, 1));
+  }
+
+  &::after {
+    top: var(--lbz-ripple-top, 0);
+    left: var(--lbz-ripple-left, 0);
+    width: var(--lbz-ripple-size, 100%);
+    height: var(--lbz-ripple-size, 100%);
+    transform: scale(0);
+    transform-origin: center center;
+  }
+
   // type
   &.lbz-state--primary {
     --lbz-ripple-opacity: #lbz-state.primary[pressed];
@@ -166,19 +175,6 @@
   // unbounded
   &.lbz-ripple--unbounded {
     overflow: visible;
-  }
-
-  &::before {
-    transform: scale(var(--lbz-ripple-scale, 1));
-  }
-
-  &::after {
-    top: var(--lbz-ripple-top, 0);
-    left: var(--lbz-ripple-left, 0);
-    width: var(--lbz-ripple-size, 100%);
-    height: var(--lbz-ripple-size, 100%);
-    transform: scale(0);
-    transform-origin: center center;
   }
 
   &.lbz-ripple-enter {

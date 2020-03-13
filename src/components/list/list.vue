@@ -5,6 +5,7 @@
       'lbz-list',
       type && `lbz-list--${type}`,
       onBackground && `lbz-list--on-${onBackground}`,
+      nav && 'is-nav',
       cisDense && 'is-dense'
     ]"
   >
@@ -47,6 +48,8 @@ export default class LbzList extends Vue {
   @Prop({ type: String, default: 'li' }) private itemTag!: string;
   // on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
+  // nav: true, false (default)
+  @Prop({ type: Boolean, default: false }) private nav!: boolean;
   // dense: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private dense!: boolean;
   // placement: 'start' (default), 'center'

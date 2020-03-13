@@ -37,7 +37,7 @@
     &-primary .lbz-tab-item {
       color: var(--lbz-theme-text-medium-emphasis-on-primary);
 
-      .lbz-tab-item__indicator {
+      &__indicator {
         background-color: var(--lbz-theme-on-primary);
       }
 
@@ -49,7 +49,7 @@
     &-secondary .lbz-tab-item {
       color: var(--lbz-theme-text-medium-emphasis-on-secondary);
 
-      .lbz-tab-item__indicator {
+      &__indicator {
         background-color: var(--lbz-theme-on-secondary);
       }
 
@@ -61,7 +61,7 @@
     &-light .lbz-tab-item {
       color: #lbz-theme-text.dark[medium-emphasis];
 
-      .lbz-tab-item__indicator {
+      &__indicator {
         background-color: @black;
       }
 
@@ -76,12 +76,23 @@
     .lbz-tab-item {
       color: #lbz-theme-text.light[medium-emphasis];
 
-      .lbz-tab-item__indicator {
+      &__indicator {
         background-color: @white;
       }
 
       &.is-active {
         color: #lbz-theme-text.light[high-emphasis];
+      }
+    }
+  }
+
+  html[theme="dark"] &:not(.lbz-tab--on-light):not(.lbz-tab--on-dark) {
+    background-color: transparent;
+
+    .lbz-tab-item__state {
+      &::before,
+      &::after {
+        background-color: @white;
       }
     }
   }
@@ -110,37 +121,23 @@
     .lbz-tab-item {
       height: 72px;
 
-      .lbz-tab-item {
-        &__content {
-          flex-direction: column;
-        }
+      &__content {
+        flex-direction: column;
+      }
 
-        // icon
-        &__icon {
-          margin-top: 12px;
+      // icon
+      &__icon {
+        margin-top: 12px;
 
-           + .lbz-tab-item__label {
-            margin-top: 4px;
-            margin-left: 0;
-          }
-        }
-
-        &__label {
-          margin-bottom: 16px;
-          max-width: 100%;
+         + .lbz-tab-item__label {
+          margin-top: 4px;
+          margin-left: 0;
         }
       }
-    }
-  }
 
-  // on-background
-  html[theme="dark"] &:not(.lbz-tab--on-light):not(.lbz-tab--on-dark) {
-    background-color: transparent;
-
-    .lbz-tab-item__state {
-      &::before,
-      &::after {
-        background-color: @white;
+      &__label {
+        margin-bottom: 16px;
+        max-width: 100%;
       }
     }
   }

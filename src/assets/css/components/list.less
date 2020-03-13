@@ -22,7 +22,7 @@
   &&--two-line .lbz-list-item {
     min-height: 64px;
 
-    .lbz-list-item__avatar,
+    &__avatar,
     .lbz-list-item__media--square {
       margin: 4px 0;
       width: 40px;
@@ -33,12 +33,12 @@
     align-items: flex-start;
     min-height: 88px;
 
-    .lbz-list-item__end .lbz-icon-button {
+    &__end .lbz-icon-button {
       margin-top: -8px;
     }
 
-    .lbz-list-item__avatar,
-    .lbz-list-item__media {
+    &__avatar,
+    &__media {
       margin: 4px 0;
     }
 
@@ -243,33 +243,18 @@
     }
   }
 
-  // dense
-  &.is-dense {
-    padding-top: 4px;
-    padding-bottom: 4px;
+  html[theme="dark"] &:not(.lbz-list--on-light):not(.lbz-list--on-dark) {
+    background-color: transparent;
 
-    // subtitle
-    .lbz-list__subtitle,
-    .lbz-list-item {
-      padding-top: 8px;
-      padding-bottom: 8px;
-    }
-
-    .lbz-list-item {
-      min-height: 40px;
-    }
-
-    // type
-    &.lbz-list--two-line .lbz-list-item {
-      min-height: 56px;
-    }
-
-    &.lbz-list--three-line .lbz-list-item {
-      min-height: 76px;
+    .lbz-list-item__state {
+      &::before,
+      &::after {
+        background-color: @white;
+      }
     }
   }
 
-  // NOTE: Convert List into Navigation
+  // nav
   &.is-nav {
     // subtitle
     .lbz-list__subtitle {
@@ -294,11 +279,11 @@
         margin-bottom: 0;
       }
 
-      .lbz-list-item__start > .lbz-icon {
+      &__start > .lbz-icon {
         margin: 0;
       }
 
-      .lbz-list-item__center {
+      &__center {
         .lbz-u-truncate(1);
       }
     }
@@ -308,15 +293,29 @@
     }
   }
 
-  // on-background
-  html[theme="dark"] &:not(.lbz-list--on-light):not(.lbz-list--on-dark) {
-    background-color: transparent;
+  // dense
+  &.is-dense {
+    padding-top: 4px;
+    padding-bottom: 4px;
 
-    .lbz-list-item__state {
-      &::before,
-      &::after {
-        background-color: @white;
-      }
+    // subtitle
+    .lbz-list__subtitle,
+    .lbz-list-item {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .lbz-list-item {
+      min-height: 40px;
+    }
+
+    // type
+    &.lbz-list--two-line .lbz-list-item {
+      min-height: 56px;
+    }
+
+    &.lbz-list--three-line .lbz-list-item {
+      min-height: 76px;
     }
   }
 }

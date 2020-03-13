@@ -25,10 +25,10 @@
         </template>
         <template #back-center>
           <lbz-list
-            class="is-nav"
             tag="nav"
             item-tag="a"
             on-background="primary"
+            nav
           >
             <lbz-list-item
               v-for="(item, index) of NAV"
@@ -68,10 +68,10 @@
         </template>
         <template #back-center>
           <lbz-list
-            class="is-nav"
             tag="nav"
             item-tag="a"
             on-background="secondary"
+            nav
           >
             <lbz-list-item
               v-for="(item, index) of NAV"
@@ -111,10 +111,10 @@
         </template>
         <template #back-center>
           <lbz-list
-            class="is-nav"
             tag="nav"
             item-tag="a"
             on-background="dark"
+            nav
           >
             <lbz-list-item
               v-for="(item, index) of NAV"

@@ -14,7 +14,11 @@
         @close="fclose"
       >
         <template #center>
-          <lbz-list tag="nav" item-tag="a">
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            nav
+          >
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
@@ -33,7 +37,11 @@
     <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactive0">
         <template #center>
-          <lbz-list tag="nav" item-tag="a">
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            nav
+          >
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
@@ -71,7 +79,11 @@
     <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactive0" title="Title">
         <template #center>
-          <lbz-list tag="nav" item-tag="a">
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            nav
+          >
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
@@ -112,7 +124,11 @@
           <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>
-          <lbz-list tag="nav" item-tag="a">
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            nav
+          >
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
@@ -153,7 +169,11 @@
     <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactive1" type="modal">
         <template #center>
-          <lbz-list tag="nav" item-tag="a">
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            nav
+          >
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
@@ -195,7 +215,11 @@
         title="Title"
       >
         <template #center>
-          <lbz-list tag="nav" item-tag="a">
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            nav
+          >
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
@@ -237,7 +261,11 @@
           <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>
-          <lbz-list tag="nav" item-tag="a">
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            nav
+          >
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
@@ -278,7 +306,11 @@
     <div class="lbzui-u-app">
       <lbz-drawer :active.sync="vactive2" type="bottom">
         <template #center>
-          <lbz-list tag="nav" item-tag="a">
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            nav
+          >
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
@@ -323,7 +355,11 @@
           <lbz-icon-button>search</lbz-icon-button>
         </template>
         <template #center>
-          <lbz-list tag="nav" item-tag="a">
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            nav
+          >
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
@@ -365,7 +401,11 @@
         title="Title"
       >
         <template #center>
-          <lbz-list tag="nav" item-tag="a">
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            nav
+          >
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"
@@ -404,7 +444,11 @@
         subtitle="subtext"
       >
         <template #center>
-          <lbz-list tag="nav" item-tag="a">
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            nav
+          >
             <lbz-list-item
               v-for="item of DESTINATIONS.primary"
               :key="item.label"

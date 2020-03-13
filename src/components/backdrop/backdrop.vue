@@ -21,13 +21,13 @@
       >
         <h2
           v-if="subtitle"
-          class="lbz-backdrop__front-layer__header__title"
+          class="lbz-backdrop__front-layer__title"
           v-html="subtitle"
         ></h2>
         <slot name="front-start"/>
         <lbz-icon-button
           v-if="icon"
-          class="lbz-backdrop__front-layer__header__icon"
+          class="lbz-backdrop__front-layer__icon"
           @click.stop="fclose()"
         >expand_less</lbz-icon-button>
         <lbz-divider v-show="divider"/>

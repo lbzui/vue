@@ -21,22 +21,6 @@
   outline: none;
   user-select: none;
 
-  // full-width
-  &.is-full-width {
-    width: 100%;
-
-    + .is-full-width {
-      margin-top: 12px;
-      margin-left: 0;
-    }
-  }
-
-  // dense
-  &.is-dense {
-    height: 32px;
-    font-size: 13px;
-  }
-
   // icon
   & &__icon {
     margin-right: 8px;
@@ -45,39 +29,8 @@
     font-size: 18px;
   }
 
-  // color
-  &&--secondary {
-    color: var(--lbz-theme-secondary);
-  }
-
-  &&--background {
-    color: var(--lbz-theme-on-background);
-  }
-
-  &&--surface {
-    color: var(--lbz-theme-on-surface);
-  }
-
-  &&--error {
-    color: var(--lbz-theme-error);
-  }
-
-  &&--light {
-    color: @white;
-
-    // type, disabled
-    &:not(.lbz-button--contained).is-disabled {
-      color: #lbz-theme-text.light[disabled];
-    }
-  }
-
-  &&--dark {
-    color: @black;
-
-    // type, disabled
-    &:not(.lbz-button--contained).is-disabled {
-      color: #lbz-theme-text.dark[disabled];
-    }
+  & + & {
+    margin-left: 8px;
   }
 
   // type
@@ -164,11 +117,6 @@
       box-shadow: none;
     }
 
-    // icon
-    .lbz-button__icon {
-      margin-left: -4px;
-    }
-
     &:not(.is-unelevated):not(.is-disabled) {
       &:hover,
       &:focus {
@@ -179,14 +127,66 @@
         .lbz-shadow(8);
       }
     }
+
+    // icon
+    .lbz-button__icon {
+      margin-left: -4px;
+    }
+  }
+
+  // color
+  &&--secondary {
+    color: var(--lbz-theme-secondary);
+  }
+
+  &&--background {
+    color: var(--lbz-theme-on-background);
+  }
+
+  &&--surface {
+    color: var(--lbz-theme-on-surface);
+  }
+
+  &&--error {
+    color: var(--lbz-theme-error);
+  }
+
+  &&--light {
+    color: @white;
+
+    // type, disabled
+    &:not(.lbz-button--contained).is-disabled {
+      color: #lbz-theme-text.light[disabled];
+    }
+  }
+
+  &&--dark {
+    color: @black;
+
+    // type, disabled
+    &:not(.lbz-button--contained).is-disabled {
+      color: #lbz-theme-text.dark[disabled];
+    }
+  }
+
+  // full-width
+  &.is-full-width {
+    width: 100%;
+
+    + .is-full-width {
+      margin-top: 12px;
+      margin-left: 0;
+    }
+  }
+
+  // dense
+  &.is-dense {
+    height: 32px;
+    font-size: 13px;
   }
 
   // disabled
   &.is-disabled {
     color: var(--lbz-theme-text-disabled-on-surface);
-  }
-
-  & + & {
-    margin-left: 8px;
   }
 }

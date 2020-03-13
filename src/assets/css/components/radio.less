@@ -79,6 +79,10 @@
     }
   }
 
+  & + & {
+    margin-left: 10px;
+  }
+
   // color
   &&--primary.is-checked:not(.is-disabled) .lbz-radio__circle {
     border-color: var(--lbz-theme-primary);
@@ -93,9 +97,5 @@
     .lbz-radio__label {
       color: var(--lbz-theme-text-disabled-on-surface);
     }
-  }
-
-  & + & {
-    margin-left: 10px;
   }
 }

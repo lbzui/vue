@@ -26,6 +26,25 @@
     height: 100%;
   }
 
+  & &__state::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  // on-background
+  &&--on {
+    // disabled
+    &-light.is-disabled {
+      color: #lbz-theme-text.dark[disabled];
+    }
+
+    &-dark.is-disabled {
+      color: #lbz-theme-text.light[disabled];
+    }
+  }
+
   // toggle
   & &__icon {
     position: absolute;
@@ -44,13 +63,6 @@
     }
   }
 
-  & &__state::before {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
   // active
   &.is-active .lbz-icon-button__icon {
     // on-icon
@@ -61,18 +73,6 @@
     // off-icon
     &--off {
       opacity: 0;
-    }
-  }
-
-  // on-background
-  &&--on {
-    // disabled
-    &-light.is-disabled {
-      color: #lbz-theme-text.dark[disabled];
-    }
-
-    &-dark.is-disabled {
-      color: #lbz-theme-text.light[disabled];
     }
   }
 

@@ -20,6 +20,7 @@
           router-link
           :router-link-props="{ exact: true }"
           item-tag="a"
+          nav
         >
           <lbz-divider/>
           <lbz-list-item to="/">Getting started</lbz-list-item>
