@@ -197,14 +197,11 @@
     <h3 class="lbz-typography--subtitle1">$ router-link-props (router-link): { replace: true || false (default), append: true || false (default), exact: true || false (default), event: 'click' (default) || 'x' || ['x'] }</h3>
     <h3 class="lbz-typography--subtitle1">$ item-tag: 'li' (default), 'a', 'x'</h3>
 
-    <lbz-list class="lbzui-u-rectangle" subtitle="Default">
-      <lbz-list-item>Item</lbz-list-item>
-    </lbz-list>
     <lbz-list
       class="lbzui-u-rectangle"
       tag="nav"
       router-link
-      :router-link-props="{ replace: true, event: 'dblclick' }"
+      :router-link-props="{ exact: true }"
       item-tag="a"
       subtitle="Router-link"
     >
@@ -780,9 +777,6 @@
     <h3 class="lbz-typography--subtitle1">$ placement: 'start' (default), 'center'</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
 
-    <lbz-list class="lbzui-u-rectangle">
-      <lbz-list-item>Item</lbz-list-item>
-    </lbz-list>
     <lbz-list class="lbzui-u-rectangle" subtitle="Subtitle">
       <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
@@ -882,6 +876,7 @@
     <lbz-list
       class="lbzui-u-rectangle"
       tag="nav"
+      :router-link-props="{ exact: true }"
       subtitle="Router-link"
     >
       <lbz-list-item

@@ -19,7 +19,7 @@
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="primary" @click.stop="ftoggleActive()">more_vert</lbz-icon-button>
+              <lbz-icon-button on-background="primary" @click.stop="ftoggleActive">more_vert</lbz-icon-button>
             </template>
           </lbz-top-app-bar>
         </template>

@@ -30,10 +30,10 @@ import LbzState from '../state/state.vue';
 })
 export default class LbzTabItem extends Vue {
   @InjectReactive('value') private prvalue!: boolean | number | string;
-  @Inject('on-background') private ponBackground!: string;
   @Inject('router-link') private prouterLink!: boolean;
   @Inject('router-link-props') private prouterLinkProps!: object;
   @Inject('tag') private ptag!: string;
+  @Inject('on-background') private ponBackground!: string;
   @Inject('on-content') private ponContent!: boolean;
 
   // router-link: undefined (default), true, false
@@ -42,6 +42,7 @@ export default class LbzTabItem extends Vue {
   @Prop({ type: [String, Object], default: '' }) private to!: string | object;
   // tag: '' (default), 'button', 'a', 'x'
   @Prop({ type: String, default: '' }) private tag!: string;
+
   // value: undefined (default), true, false, x, 'x'
   @Prop({ type: [Boolean, Number, String], default: undefined }) private value!: boolean | number | string;
   // icon: '' (default), 'x'

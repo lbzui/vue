@@ -34,8 +34,6 @@ import LbzState from '../state/state.vue';
   },
 })
 export default class LbzButton extends Vue {
-  // type: 'text' (default), 'outlined', 'contained'
-  @Prop({ type: String, default: '' }) private type!: string;
   // router-link: true, false (default)
   @Prop({ type: Boolean, default: false }) private routerLink!: boolean;
   // router-link-props (router-link): {
@@ -57,6 +55,9 @@ export default class LbzButton extends Vue {
   }) private routerLinkProps!: object;
   // tag: 'button' (default), 'a', 'x'
   @Prop({ type: String, default: 'button' }) private tag!: string;
+
+  // type: 'text' (default), 'outlined', 'contained'
+  @Prop({ type: String, default: '' }) private type!: string;
   // color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private color!: string;
   // full-width: true, false (default)

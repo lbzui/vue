@@ -23,7 +23,6 @@
         </div>
       </template>
     </lbz-card>
-    <br>
     <lbz-card>
       <template #start>
         <div class="lbz-card__header__start">
@@ -54,7 +53,6 @@
         </div>
       </template>
     </lbz-card>
-    <br>
     <lbz-card>
       <template #center>
         <div class="lbz-u-aspect-ratio--16x9 lbz-card__media">
@@ -78,7 +76,6 @@
         </div>
       </template>
     </lbz-card>
-    <br>
     <lbz-card>
       <template #center>
         <div class="lbz-u-aspect-ratio--16x9 lbz-card__media">
@@ -100,25 +97,6 @@
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'div' (default), 'a', 'x'</h3>
 
-    <lbz-card>
-      <template #start>
-        <div class="lbz-card__header__center">
-          <span class="lbz-card__title">Title goes here</span>
-          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
-        </div>
-        <div class="lbz-card__header__end">
-          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
-            <img src="../../assets/img/placeholder@1x1.png">
-          </div>
-        </div>
-      </template>
-      <template #end>
-        <div class="lbz-card__actions__buttons">
-          <lbz-button>Action 1</lbz-button>
-          <lbz-button>Action 2</lbz-button>
-        </div>
-      </template>
-    </lbz-card>
     <lbz-card tag="a" href="#/components/card">
       <template #start>
         <div class="lbz-card__header__center">
@@ -166,30 +144,10 @@
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'div' (default), 'a', 'x'</h3>
 
-    <lbz-card type="outlined">
-      <template #start>
-        <div class="lbz-card__header__center">
-          <span class="lbz-typography--overline">Overline</span>
-          <span class="lbz-card__title">Headline 5</span>
-          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
-        </div>
-        <div class="lbz-card__header__end">
-          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
-            <img src="../../assets/img/placeholder@1x1.png">
-          </div>
-        </div>
-      </template>
-      <template #end>
-        <div class="lbz-card__actions__buttons">
-          <lbz-button>Button</lbz-button>
-          <lbz-button>Button</lbz-button>
-        </div>
-      </template>
-    </lbz-card>
     <lbz-card
-      type="outlined"
       tag="a"
       href="#/components/card"
+      type="outlined"
     >
       <template #start>
         <div class="lbz-card__header__center">

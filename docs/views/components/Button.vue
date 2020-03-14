@@ -16,6 +16,7 @@
       :router-link-props="{
         to: '/components/button',
         replace: true,
+        exact: true,
         event: 'dblclick'
       }"
       tag="a"
@@ -141,19 +142,20 @@
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
 
     <lbz-button
-      type="outlined"
       router-link
       :router-link-props="{
         to: '/components/button',
         replace: true,
+        exact: true,
         event: 'dblclick'
       }"
       tag="a"
+      type="outlined"
     >Router-link</lbz-button>
     <lbz-button
-      type="outlined"
       tag="a"
       href="#/components/button"
+      type="outlined"
       icon="add"
     >Non-router-link</lbz-button>
 
@@ -338,19 +340,20 @@
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
 
     <lbz-button
-      type="contained"
       router-link
       :router-link-props="{
         to: '/components/button',
         replace: true,
+        exact: true,
         event: 'dblclick'
       }"
       tag="a"
+      type="contained"
     >Router-link</lbz-button>
     <lbz-button
-      type="contained"
       tag="a"
       href="#/components/button"
+      type="contained"
       icon="add"
     >Non-router-link</lbz-button>
 
@@ -422,11 +425,6 @@
     <h3 class="lbz-typography--subtitle1">$ unelevated (type === 'contained'): true, false (default)</h3>
 
     <lbz-button type="contained" unelevated>Unelevated</lbz-button>
-    <lbz-button
-      type="contained"
-      unelevated
-      icon="add"
-    >Unelevated</lbz-button>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
 

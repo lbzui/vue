@@ -23,8 +23,6 @@ import { Component, Prop, Provide, Vue } from 'vue-property-decorator';
 
 @Component
 export default class LbzList extends Vue {
-  // type: 'one-line' (default), 'two-line', 'three-line'
-  @Prop({ type: String, default: '' }) private type!: string;
   // tag: 'ul' (default), 'nav', 'x'
   @Prop({ type: String, default: 'ul' }) private tag!: string;
   // router-link: true, false (default)
@@ -46,6 +44,9 @@ export default class LbzList extends Vue {
   }) private routerLinkProps!: object;
   // item-tag: 'li' (default), 'a', 'x'
   @Prop({ type: String, default: 'li' }) private itemTag!: string;
+
+  // type: 'one-line' (default), 'two-line', 'three-line'
+  @Prop({ type: String, default: '' }) private type!: string;
   // on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
   // nav: true, false (default)

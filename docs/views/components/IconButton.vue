@@ -24,6 +24,7 @@
       :router-link-props="{
         to: '/components/icon-button',
         replace: true,
+        exact: true,
         event: 'dblclick'
       }"
       tag="a"
@@ -94,8 +95,8 @@
 
     <lbz-icon-button
       :active.sync="vactive"
-      toggle
       tag="a"
+      toggle
       on-icon="favorite"
       off-icon="favorite_border"
     />

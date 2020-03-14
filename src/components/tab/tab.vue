@@ -4,8 +4,8 @@
     :class="[
       'lbz-tab',
       type && `lbz-tab--${type}`,
-      onBackground && `lbz-tab--on-${onBackground}`,
       type !== 'scrollable' && alignment && `lbz-tab--${alignment}`,
+      onBackground && `lbz-tab--on-${onBackground}`,
       stacked && 'is-stacked'
     ]"
   >
@@ -25,16 +25,8 @@ export default class LbzTab extends Vue {
     default: undefined,
   }) private mvalue!: boolean | number | string;
 
-  // type: 'fixed' (default), 'scrollable'
-  @Prop({ type: String, default: '' }) private type!: string;
   // tag: 'nav' (default), 'x'
   @Prop({ type: String, default: 'nav' }) private tag!: string;
-  // on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'
-  @Prop({ type: String, default: '' }) private onBackground!: string;
-  // alignment (type === 'fixed'): '' (default), 'left', 'center', 'right'
-  @Prop({ type: String, default: '' }) private alignment!: string;
-  // stacked: true, false (default)
-  @Prop({ type: Boolean, default: false }) private stacked!: boolean;
   // router-link: true, false (default)
   @Prop({ type: Boolean, default: false }) private routerLink!: boolean;
   // router-link-props (router-link): {
@@ -54,14 +46,23 @@ export default class LbzTab extends Vue {
   }) private routerLinkProps!: object;
   // item-tag: 'button' (default), 'a', 'x'
   @Prop({ type: String, default: 'button' }) private itemTag!: string;
+
+  // type: 'fixed' (default), 'scrollable'
+  @Prop({ type: String, default: '' }) private type!: string;
+  // alignment (type === 'fixed'): '' (default), 'left', 'center', 'right'
+  @Prop({ type: String, default: '' }) private alignment!: string;
+  // on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'
+  @Prop({ type: String, default: '' }) private onBackground!: string;
+  // stacked: true, false (default)
+  @Prop({ type: Boolean, default: false }) private stacked!: boolean;
   // on-content: true, false (default)
   @Prop({ type: Boolean, default: false }) private onContent!: boolean;
 
   @ProvideReactive('value') private prvalue: boolean | number | string = this.mvalue;
-  @Provide('on-background') private ponBackground: string = this.onBackground;
   @Provide('router-link') private prouterLink: boolean = this.routerLink;
   @Provide('router-link-props') private prouterLinkProps: object = this.routerLinkProps;
   @Provide('tag') private ptag: string = this.itemTag;
+  @Provide('on-background') private ponBackground: string = this.onBackground;
   @Provide('on-content') private ponContent: boolean = this.onContent;
 
   private created(): void {

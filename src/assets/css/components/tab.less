@@ -32,6 +32,23 @@
     }
   }
 
+  // alignment
+  &&--left,
+  &&--center,
+  &&--right {
+    .lbz-tab-item {
+      flex: 0 1 auto;
+    }
+  }
+
+  &&--center .lbz-tab__container {
+    justify-content: center;
+  }
+
+  &&--right .lbz-tab__container {
+    justify-content: flex-end;
+  }
+
   // on-background
   &&--on {
     &-primary .lbz-tab-item {
@@ -95,23 +112,6 @@
         background-color: @white;
       }
     }
-  }
-
-  // alignment
-  &&--left,
-  &&--center,
-  &&--right {
-    .lbz-tab-item {
-      flex: 0 1 auto;
-    }
-  }
-
-  &&--center .lbz-tab__container {
-    justify-content: center;
-  }
-
-  &&--right .lbz-tab__container {
-    justify-content: flex-end;
   }
 
   // stacked

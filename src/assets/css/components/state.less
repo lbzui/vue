@@ -109,26 +109,26 @@
   // selected
   .is-selected > & {
     &::before {
-      opacity: #lbz-state.surface[selected];
+      opacity: #lbz-state.surface[selected] !important;
     }
 
     &.lbz-state--primary::before {
-      opacity: #lbz-state.primary[selected];
+      opacity: #lbz-state.primary[selected] !important;
     }
 
     &.lbz-state--image::before {
-      opacity: #lbz-state.image[selected];
+      opacity: #lbz-state.image[selected] !important;
     }
   }
 
   // activated
   .is-activated > & {
     &::before {
-      opacity: #lbz-state.primary[activated];
+      opacity: #lbz-state.primary[activated] !important;
     }
 
     &.lbz-state--image::before {
-      opacity: #lbz-state.image[activated];
+      opacity: #lbz-state.image[activated] !important;
     }
   }
 

@@ -74,10 +74,6 @@ export default class LbzDialog extends Vue {
 
   // type: 'alert' (default), 'simple', 'confirmation', 'full-screen (mobile only)'
   @Prop({ type: String, default: '' }) private type!: string;
-  // append-to-body: true, false (default)
-  @Prop({ type: Boolean, default: false }) private appendToBody!: boolean;
-  // lock-scroll: true (default), false
-  @Prop({ type: Boolean, default: true }) private lockScroll!: boolean;
   // scrollable (type === 'confirmation'): true, false (default)
   @Prop({ type: Boolean, default: false }) private scrollable!: boolean;
   // stacked (['', 'alert', 'confirmation'].includes(type)): true, false (default)
@@ -86,6 +82,10 @@ export default class LbzDialog extends Vue {
   @Prop({ type: String, default: '' }) private title!: string;
   // content-height (type !== 'full-screen'): '' (default), 'x'
   @Prop({ type: String, default: '' }) private contentHeight!: string;
+  // append-to-body: true, false (default)
+  @Prop({ type: Boolean, default: false }) private appendToBody!: boolean;
+  // lock-scroll: true (default), false
+  @Prop({ type: Boolean, default: true }) private lockScroll!: boolean;
 
   get cisAlertAndConfirmation(): boolean {
     return ['', 'alert', 'confirmation'].includes(this.type);

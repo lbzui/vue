@@ -28,10 +28,11 @@ import LbzState from '../state/state.vue';
   },
 })
 export default class LbzCard extends Vue {
-  // type: 'elevated' (default), 'outlined'
-  @Prop({ type: String, default: '' }) private type!: string;
   // tag: 'div' (default), 'a', 'x'
   @Prop({ type: String, default: 'div' }) private tag!: string;
+
+  // type: 'elevated' (default), 'outlined'
+  @Prop({ type: String, default: '' }) private type!: string;
 
   get cgetStateAttrs(): StateAttributes {
     return {

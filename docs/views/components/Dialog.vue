@@ -14,15 +14,15 @@
     >
       <template #center>Discard draft?</template>
       <template #end>
-        <lbz-button @click.stop="fcancel()">Cancel</lbz-button>
+        <lbz-button @click.stop="fcancel">Cancel</lbz-button>
         <lbz-button @click.stop="valert0 = false">Discard</lbz-button>
       </template>
     </lbz-dialog>
 
-    <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ stacked (['', 'alert', 'confirmation'].includes(type)): true, false (default)</h3>
 
-    <lbz-button @click.stop="valert1 = true">Append to body</lbz-button>
-    <lbz-dialog :active.sync="valert1" append-to-body>
+    <lbz-button @click.stop="valert1 = true">Stacked</lbz-button>
+    <lbz-dialog :active.sync="valert1" stacked>
       <template #center>Discard draft?</template>
       <template #end>
         <lbz-button @click.stop="valert1 = false">Cancel</lbz-button>
@@ -30,10 +30,10 @@
       </template>
     </lbz-dialog>
 
-    <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
+    <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
 
-    <lbz-button @click.stop="valert2 = true">Unlock scroll</lbz-button>
-    <lbz-dialog :active.sync="valert2" :lock-scroll="false">
+    <lbz-button @click.stop="valert2 = true">Title</lbz-button>
+    <lbz-dialog :active.sync="valert2" title="Dialog header">
       <template #center>Discard draft?</template>
       <template #end>
         <lbz-button @click.stop="valert2 = false">Cancel</lbz-button>
@@ -41,10 +41,10 @@
       </template>
     </lbz-dialog>
 
-    <h3 class="lbz-typography--subtitle1">$ stacked (['', 'alert', 'confirmation'].includes(type)): true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ content-height (type !== 'full-screen'): '' (default), 'x'</h3>
 
-    <lbz-button @click.stop="valert3 = true">Stacked</lbz-button>
-    <lbz-dialog :active.sync="valert3" stacked>
+    <lbz-button @click.stop="valert3 = true">Content height</lbz-button>
+    <lbz-dialog :active.sync="valert3" content-height="180px">
       <template #center>Discard draft?</template>
       <template #end>
         <lbz-button @click.stop="valert3 = false">Cancel</lbz-button>
@@ -52,10 +52,10 @@
       </template>
     </lbz-dialog>
 
-    <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
 
-    <lbz-button @click.stop="valert4 = true">Title</lbz-button>
-    <lbz-dialog :active.sync="valert4" title="Dialog header">
+    <lbz-button @click.stop="valert4 = true">Append to body</lbz-button>
+    <lbz-dialog :active.sync="valert4" append-to-body>
       <template #center>Discard draft?</template>
       <template #end>
         <lbz-button @click.stop="valert4 = false">Cancel</lbz-button>
@@ -63,10 +63,10 @@
       </template>
     </lbz-dialog>
 
-    <h3 class="lbz-typography--subtitle1">$ content-height (type !== 'full-screen'): '' (default), 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
 
-    <lbz-button @click.stop="valert5 = true">Content height</lbz-button>
-    <lbz-dialog :active.sync="valert5" content-height="180px">
+    <lbz-button @click.stop="valert5 = true">Unlock scroll</lbz-button>
+    <lbz-dialog :active.sync="valert5" :lock-scroll="false">
       <template #center>Discard draft?</template>
       <template #end>
         <lbz-button @click.stop="valert5 = false">Cancel</lbz-button>
@@ -102,14 +102,14 @@
       </template>
     </lbz-dialog>
 
-    <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ content-height (type !== 'full-screen'): '' (default), 'x'</h3>
 
-    <lbz-button @click.stop="vsimple1 = true">Append to body</lbz-button>
+    <lbz-button @click.stop="vsimple1 = true">Content height</lbz-button>
     <lbz-dialog
       :active.sync="vsimple1"
       type="simple"
-      append-to-body
       title="Dialog header"
+      content-height="360px"
     >
       <template #center>
         <lbz-list dense>
@@ -127,14 +127,14 @@
       </template>
     </lbz-dialog>
 
-    <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
+    <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
 
-    <lbz-button @click.stop="vsimple2 = true">Unlock scroll</lbz-button>
+    <lbz-button @click.stop="vsimple2 = true">Append to body</lbz-button>
     <lbz-dialog
       :active.sync="vsimple2"
       type="simple"
-      :lock-scroll="false"
       title="Dialog header"
+      append-to-body
     >
       <template #center>
         <lbz-list dense>
@@ -152,14 +152,14 @@
       </template>
     </lbz-dialog>
 
-    <h3 class="lbz-typography--subtitle1">$ content-height (type !== 'full-screen'): '' (default), 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
 
-    <lbz-button @click.stop="vsimple3 = true">Content height</lbz-button>
+    <lbz-button @click.stop="vsimple3 = true">Unlock scroll</lbz-button>
     <lbz-dialog
       :active.sync="vsimple3"
       type="simple"
       title="Dialog header"
-      content-height="360px"
+      :lock-scroll="false"
     >
       <template #center>
         <lbz-list dense>
@@ -196,44 +196,12 @@
       </template>
     </lbz-dialog>
 
-    <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
-
-    <lbz-button @click.stop="vconfirmation1 = true">Append to body</lbz-button>
-    <lbz-dialog
-      :active.sync="vconfirmation1"
-      type="confirmation"
-      append-to-body
-      title="Two-line dialog header"
-    >
-      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
-      <template #end>
-        <lbz-button @click.stop="vconfirmation1 = false">Action 1</lbz-button>
-        <lbz-button @click.stop="vconfirmation1 = false">Action 2</lbz-button>
-      </template>
-    </lbz-dialog>
-
-    <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
-
-    <lbz-button @click.stop="vconfirmation2 = true">Unlock scroll</lbz-button>
-    <lbz-dialog
-      :active.sync="vconfirmation2"
-      type="confirmation"
-      :lock-scroll="false"
-      title="Two-line dialog header"
-    >
-      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
-      <template #end>
-        <lbz-button @click.stop="vconfirmation2 = false">Action 1</lbz-button>
-        <lbz-button @click.stop="vconfirmation2 = false">Action 2</lbz-button>
-      </template>
-    </lbz-dialog>
-
     <h3 class="lbz-typography--subtitle1">$ scrollable (type === 'confirmation'): true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ content-height (type !== 'full-screen'): '' (default), 'x'</h3>
 
-    <lbz-button @click.stop="vconfirmation3 = true">Scrollable & Content height</lbz-button>
+    <lbz-button @click.stop="vconfirmation1 = true">Scrollable & Content height</lbz-button>
     <lbz-dialog
-      :active.sync="vconfirmation3"
+      :active.sync="vconfirmation1"
       type="confirmation"
       scrollable
       title="Dialog header"
@@ -254,24 +222,56 @@
         </lbz-list>
       </template>
       <template #end>
-        <lbz-button @click.stop="vconfirmation3 = false">Action 1</lbz-button>
-        <lbz-button @click.stop="vconfirmation3 = false">Action 2</lbz-button>
+        <lbz-button @click.stop="vconfirmation1 = false">Action 1</lbz-button>
+        <lbz-button @click.stop="vconfirmation1 = false">Action 2</lbz-button>
       </template>
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ stacked (['', 'alert', 'confirmation'].includes(type)): true, false (default)</h3>
 
-    <lbz-button @click.stop="vconfirmation4 = true">Stacked</lbz-button>
+    <lbz-button @click.stop="vconfirmation2 = true">Stacked</lbz-button>
     <lbz-dialog
-      :active.sync="vconfirmation4"
+      :active.sync="vconfirmation2"
       type="confirmation"
       stacked
       title="Two-line dialog header"
     >
       <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
       <template #end>
-        <lbz-button @click.stop="vconfirmation4 = false">Turn on speed boost</lbz-button>
-        <lbz-button @click.stop="vconfirmation4 = false">No thanks</lbz-button>
+        <lbz-button @click.stop="vconfirmation2 = false">Turn on speed boost</lbz-button>
+        <lbz-button @click.stop="vconfirmation2 = false">No thanks</lbz-button>
+      </template>
+    </lbz-dialog>
+
+    <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
+
+    <lbz-button @click.stop="vconfirmation3 = true">Append to body</lbz-button>
+    <lbz-dialog
+      :active.sync="vconfirmation3"
+      type="confirmation"
+      title="Two-line dialog header"
+      append-to-body
+    >
+      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
+      <template #end>
+        <lbz-button @click.stop="vconfirmation3 = false">Action 1</lbz-button>
+        <lbz-button @click.stop="vconfirmation3 = false">Action 2</lbz-button>
+      </template>
+    </lbz-dialog>
+
+    <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
+
+    <lbz-button @click.stop="vconfirmation4 = true">Unlock scroll</lbz-button>
+    <lbz-dialog
+      :active.sync="vconfirmation4"
+      type="confirmation"
+      title="Two-line dialog header"
+      :lock-scroll="false"
+    >
+      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
+      <template #end>
+        <lbz-button @click.stop="vconfirmation4 = false">Action 1</lbz-button>
+        <lbz-button @click.stop="vconfirmation4 = false">Action 2</lbz-button>
       </template>
     </lbz-dialog>
 
@@ -300,8 +300,8 @@
     <lbz-dialog
       :active.sync="vfullScreen1"
       type="full-screen"
-      append-to-body
       title="Page title"
+      append-to-body
     >
       <template #start>
         <!-- Save, Send, Share, Update, or Create -->
@@ -316,8 +316,8 @@
     <lbz-dialog
       :active.sync="vfullScreen2"
       type="full-screen"
-      :lock-scroll="false"
       title="Page title"
+      :lock-scroll="false"
     >
       <template #start>
         <!-- Save, Send, Share, Update, or Create -->
@@ -364,9 +364,9 @@ export default class ComponentsDialog extends Vue {
 
   private vconfirmation0: boolean = false;
   private vconfirmation1: boolean = false;
+  private vradio: number = 0;
   private vconfirmation2: boolean = false;
   private vconfirmation3: boolean = false;
-  private vradio: number = -1;
   private vconfirmation4: boolean = false;
 
   private vfullScreen0: boolean = false;

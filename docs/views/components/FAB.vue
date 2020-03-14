@@ -17,7 +17,6 @@
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
 
-    <lbz-fab>add</lbz-fab>
     <lbz-fab tag="a" href="#/components/fab">add</lbz-fab>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'background', 'surface', 'light', 'dark'</h3>
@@ -32,7 +31,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
 
-    <lbz-button @click.stop="ftoggleInactive()">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
+    <lbz-button @click.stop="ftoggleInactive">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
     <lbz-fab :inactive="vinactive">add</lbz-fab>
 
     <h2 class="lbz-typography--h5"># Mini FAB</h2>
@@ -52,11 +51,10 @@
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
 
-    <lbz-fab type="mini">add</lbz-fab>
     <lbz-fab
-      type="mini"
       tag="a"
       href="#/components/fab"
+      type="mini"
     >add</lbz-fab>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary' (default), 'background', 'surface', 'light', 'dark'</h3>
@@ -71,7 +69,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
 
-    <lbz-button @click.stop="ftoggleInactive()">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
+    <lbz-button @click.stop="ftoggleInactive">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
     <lbz-fab type="mini" :inactive="vinactive">add</lbz-fab>
 
     <h2 class="lbz-typography--h5"># Extended FAB</h2>
@@ -93,11 +91,10 @@
 
     <h3 class="lbz-typography--subtitle1">$ tag: 'button' (default), 'a', 'x'</h3>
 
-    <lbz-fab type="extended" label="Create"/>
     <lbz-fab
-      type="extended"
       tag="a"
       href="#/components/fab"
+      type="extended"
       label="Create"
     />
 
@@ -137,17 +134,12 @@
 
     <h3 class="lbz-typography--subtitle1">$ inactive: true, false (default)</h3>
 
-    <lbz-button @click.stop="ftoggleInactive()">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
+    <lbz-button @click.stop="ftoggleInactive">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
     <lbz-fab
       type="extended"
       :inactive="vinactive"
       label="Create"
     />
-    <lbz-fab
-      type="extended"
-      :inactive="vinactive"
-      label="Create"
-    >add</lbz-fab>
   </article>
 </template>
 

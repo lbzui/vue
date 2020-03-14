@@ -111,7 +111,6 @@ import {
   List,
   ListItem,
   Radio,
-  Snackbar,
   State,
   Switch,
   Tab,
@@ -137,7 +136,6 @@ Vue.use(IconButton);
 Vue.use(List);
 Vue.use(ListItem);
 Vue.use(Radio);
-Vue.use(Snackbar);
 Vue.use(State);
 Vue.use(Switch);
 Vue.use(Tab);
@@ -206,7 +204,6 @@ import '@lbzui/vue/src/assets/css/components/icon-button.less';
 import '@lbzui/vue/src/assets/css/components/list.less';
 import '@lbzui/vue/src/assets/css/components/list-item.less';
 import '@lbzui/vue/src/assets/css/components/radio.less';
-import '@lbzui/vue/src/assets/css/components/snackbar.less';
 import '@lbzui/vue/src/assets/css/components/state.less';
 import '@lbzui/vue/src/assets/css/components/switch.less';
 import '@lbzui/vue/src/assets/css/components/tab.less';

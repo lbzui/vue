@@ -6,9 +6,14 @@
       </template>
       <template #end>
         <lbz-button
-          type="contained"
+          router-link
+          :router-link-props="{
+            to: '/',
+            replace: true,
+            exact: true
+          }"
           tag="a"
-          href="#/"
+          type="contained"
         >Back Home</lbz-button>
       </template>
     </lbz-empty-state>

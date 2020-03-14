@@ -40,8 +40,6 @@ export default class LbzIconButton extends Vue {
   // active.sync (toggle): true, false (default)
   @PropSync('active', { type: Boolean, default: false }) private cisActive!: boolean;
 
-  // toggle: true, false (default)
-  @Prop({ type: Boolean, default: false }) private toggle!: boolean;
   // router-link (!toggle): true, false (default)
   @Prop({ type: Boolean, default: false }) private routerLink!: boolean;
   // router-link-props (!toggle && router-link): {
@@ -63,6 +61,9 @@ export default class LbzIconButton extends Vue {
   }) private routerLinkProps!: object;
   // tag: 'button' (default), 'a', 'x'
   @Prop({ type: String, default: 'button' }) private tag!: string;
+
+  // toggle: true, false (default)
+  @Prop({ type: Boolean, default: false }) private toggle!: boolean;
   // on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
   // disabled: true, false (default)

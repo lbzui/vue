@@ -27,10 +27,11 @@ import LbzState from '../state/state.vue';
   },
 })
 export default class LbzFAB extends Vue {
-  // type: 'standard' (default), 'mini', 'extended'
-  @Prop({ type: String, default: '' }) private type!: string;
   // tag: 'button' (default), 'a', 'x'
   @Prop({ type: String, default: 'button' }) private tag!: string;
+
+  // type: 'standard' (default), 'mini', 'extended'
+  @Prop({ type: String, default: '' }) private type!: string;
   // background: 'primary', 'primary-variant', 'secondary' (default), 'background', 'surface', 'light', 'dark'
   @Prop({ type: String, default: '' }) private background!: string;
   // inactive: true, false (default)

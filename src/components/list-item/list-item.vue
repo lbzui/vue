@@ -47,6 +47,7 @@ export default class LbzListItem extends Vue {
   @Prop({ type: [String, Object], default: '' }) private to!: string | object;
   // tag: '' (default), li', 'a', 'x'
   @Prop({ type: String, default: '' }) private tag!: string;
+
   // selected: true, false (default)
   @Prop({ type: Boolean, default: false }) private selected!: boolean;
   // activated: true, false (default)
