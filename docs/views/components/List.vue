@@ -208,8 +208,8 @@
       item-tag="a"
       subtitle="Router-link"
     >
-      <lbz-list-item to="/components/list">Router-link</lbz-list-item>
-      <lbz-list-item :to="{ path: '/404' }">Router-link</lbz-list-item>
+      <lbz-list-item to="/components/list">Router-link item</lbz-list-item>
+      <lbz-list-item :to="{ path: '/404' }">Router-link item</lbz-list-item>
     </lbz-list>
     <lbz-list
       class="lbzui-u-rectangle"
@@ -217,8 +217,8 @@
       item-tag="a"
       subtitle="Non-router-link"
     >
-      <lbz-list-item href="#/components/list">A</lbz-list-item>
-      <lbz-list-item href="#/404">A</lbz-list-item>
+      <lbz-list-item href="#/components/list">A item</lbz-list-item>
+      <lbz-list-item href="#/404">A item</lbz-list-item>
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
@@ -360,6 +360,31 @@
         <template #end>
           <lbz-icon-button on-background="dark">more_vert</lbz-icon-button>
         </template>
+      </lbz-list-item>
+    </lbz-list>
+
+    <h3 class="lbz-typography--subtitle1">$ nav: true, false (default)</h3>
+
+    <lbz-list
+      class="lbzui-u-rectangle"
+      tag="nav"
+      router-link
+      :router-link-props="{ exact: true }"
+      item-tag="a"
+      nav
+      subtitle="Nav"
+    >
+      <lbz-list-item to="/components/list">
+        <template #start>
+          <lbz-icon>bluetooth</lbz-icon>
+        </template>
+        <template #center>Nav item</template>
+      </lbz-list-item>
+      <lbz-list-item :to="{ path: '/404' }">
+        <template #start>
+          <lbz-icon>bluetooth</lbz-icon>
+        </template>
+        <template #center>Nav item</template>
       </lbz-list-item>
     </lbz-list>
 
@@ -778,10 +803,74 @@
 
     <lbz-list
       class="lbzui-u-rectangle"
-      subtitle="Disabled"
+      type="three-line"
       disabled
     >
-      <lbz-list-item>Item</lbz-list-item>
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-list-item__title">Three-line item</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        </template>
+        <template #end>
+          <span class="lbz-typography--caption">meta</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-list-item__title">Three-line item</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text Lorem ipsum dolor sit amet</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>bluetooth</lbz-icon>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Three-line item</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Three-line item</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text lorem ipsum dapibus, neque id cursus faucibus</span>
+        </template>
+        <template #end>
+          <lbz-icon-button>more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <div class="lbz-list-item__media lbz-list-item__media--square">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Three-line item</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text lorem ipsum dapibus, neque id cursus faucibus</span>
+        </template>
+        <template #end>
+          <lbz-icon-button>more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item style="padding-left: 0;">
+        <template #start>
+          <div class="lbz-list-item__media lbz-list-item__media--rectangle">
+            <img src="../../assets/img/placeholder@16x9.png">
+          </div>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Three-line item</span>
+          <span class="lbz-list-item__supporting-text">Secondary line text lorem ipsum dapibus, neque</span>
+        </template>
+        <template #end>
+          <lbz-icon-button>more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
     </lbz-list>
 
     <h2 class="lbz-typography--h5"># List item</h2>
@@ -799,20 +888,20 @@
         router-link
         to="/components/list"
         tag="a"
-      >Router-link</lbz-list-item>
+      >Router-link item</lbz-list-item>
       <lbz-list-item
         router-link
         :to="{ path: '/404' }"
         tag="a"
-      >Router-link</lbz-list-item>
+      >Router-link item</lbz-list-item>
     </lbz-list>
     <lbz-list
       class="lbzui-u-rectangle"
       tag="nav"
       subtitle="Non-router-link"
     >
-      <lbz-list-item tag="a" href="#/components/list">A</lbz-list-item>
-      <lbz-list-item tag="a" href="#/404">A</lbz-list-item>
+      <lbz-list-item tag="a" href="#/components/list">A item</lbz-list-item>
+      <lbz-list-item tag="a" href="#/404">A item</lbz-list-item>
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ selected: true, false (default)</h3>

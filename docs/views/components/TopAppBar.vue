@@ -119,9 +119,11 @@
         </template>
         <template #tab>
           <lbz-tab v-model="vtab" on-background="primary">
-            <lbz-tab-item :value="0">Item</lbz-tab-item>
-            <lbz-tab-item :value="1">Item</lbz-tab-item>
-            <lbz-tab-item :value="2">Item</lbz-tab-item>
+            <lbz-tab-item
+              v-for="(item, index) of 3"
+              :key="index"
+              :value="index"
+            >Item {{ item }}</lbz-tab-item>
           </lbz-tab>
         </template>
       </lbz-top-app-bar>
