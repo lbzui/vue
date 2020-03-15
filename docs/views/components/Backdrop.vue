@@ -5,7 +5,7 @@
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ background: 'primary' (default), 'secondary', 'dark'</h3>
 
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-backdrop ref="backdrop" :active.sync="vactive">
         <template #back-start>
           <lbz-top-app-bar title="Page title">
@@ -48,7 +48,7 @@
         </template>
       </lbz-backdrop>
     </div>
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-backdrop :active.sync="vactive" background="secondary">
         <template #back-start>
           <lbz-top-app-bar background="secondary" title="Page title">
@@ -91,7 +91,7 @@
         </template>
       </lbz-backdrop>
     </div>
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-backdrop :active.sync="vactive" background="dark">
         <template #back-start>
           <lbz-top-app-bar background="dark" title="Page title">
@@ -137,7 +137,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
 
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-backdrop :active.sync="vactive" subtitle="Subtitle">
         <template #back-start>
           <lbz-top-app-bar title="Page title">
@@ -166,7 +166,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ icon: true, false (default)</h3>
 
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-backdrop :active.sync="vactive" icon>
         <template #back-start>
           <lbz-top-app-bar title="Page title">
@@ -195,7 +195,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ divider: true, false (default)</h3>
 
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-backdrop :active.sync="vactive" divider>
         <template #back-start>
           <lbz-top-app-bar title="Page title">
@@ -224,7 +224,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ horizontal: true, false (default)</h3>
 
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-backdrop
         :active.sync="vactive"
         horizontal
@@ -254,7 +254,7 @@
         </template>
       </lbz-backdrop>
     </div>
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-backdrop :active.sync="vactive" @scroll="fscroll">
         <template #back-start>
           <lbz-top-app-bar title="Page title">
@@ -283,7 +283,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ scrim: true, false (default)</h3>
 
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-backdrop :active.sync="vactive" scrim>
         <template #back-start>
           <lbz-top-app-bar title="Page title">

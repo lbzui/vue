@@ -1,0 +1,8 @@
+// Truncate
+// usage: `.lbz-truncate--x` (x: 1, 2, 3)
+
+each(range(3), {
+  .lbz-truncate--@{value} {
+    .lbz-truncate(@value);
+  }
+});

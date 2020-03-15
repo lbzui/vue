@@ -1,0 +1,11 @@
+// Aspect ratio
+// usage: `.lbz-aspect-ratio(@width: 1; @height: 1);` (@width x @height: 16x9, 3x2, 4x3, 1x1, 3x4, 2x3)
+
+.lbz-aspect-ratio(@width: 1; @height: 1) {
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: (@height / @width * 100%);
+  width: 100%;
+  height: 0;
+}

@@ -6,7 +6,7 @@
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'modal', 'bottom (mobile only)'</h3>
 
     <lbz-button type="contained" @click.stop="ftoggle">{{ vactive0 ? 'Inactive' : 'Active' }}</lbz-button>
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-drawer
         ref="drawer"
         :active.sync="vactive0"
@@ -34,7 +34,7 @@
         </template>
       </lbz-drawer>
     </div>
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-drawer :active.sync="vactive0">
         <template #center>
           <lbz-list
@@ -76,7 +76,7 @@
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
 
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-drawer :active.sync="vactive0" title="Title">
         <template #center>
           <lbz-list
@@ -114,7 +114,7 @@
         </template>
       </lbz-drawer>
     </div>
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-drawer
         :active.sync="vactive0"
         title="Title"
@@ -166,7 +166,7 @@
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'modal', 'bottom (mobile only)'</h3>
 
     <lbz-button type="contained" @click.stop="vactive1 = !vactive1">{{ vactive1 ? 'Inactive' : 'Active' }}</lbz-button>
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-drawer :active.sync="vactive1" type="modal">
         <template #center>
           <lbz-list
@@ -208,7 +208,7 @@
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
 
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-drawer
         :active.sync="vactive1"
         type="modal"
@@ -250,7 +250,7 @@
         </template>
       </lbz-drawer>
     </div>
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-drawer
         :active.sync="vactive1"
         type="modal"
@@ -303,7 +303,7 @@
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'modal', 'bottom (mobile only)'</h3>
 
     <lbz-button type="contained" @click.stop="vactive2 = !vactive2">{{ vactive2 ? 'Inactive' : 'Active' }}</lbz-button>
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-drawer :active.sync="vactive2" type="bottom">
         <template #center>
           <lbz-list
@@ -344,7 +344,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ full-screen (type === 'bottom'): true, false (default)</h3>
 
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-drawer
         :active.sync="vactive2"
         type="bottom"
@@ -394,7 +394,7 @@
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
 
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-drawer
         :active.sync="vactive2"
         type="bottom"
@@ -436,7 +436,7 @@
         </template>
       </lbz-drawer>
     </div>
-    <div class="lbzui-u-app">
+    <div class="lbzui-app">
       <lbz-drawer
         :active.sync="vactive2"
         type="bottom"

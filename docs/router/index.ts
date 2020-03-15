@@ -13,36 +13,46 @@ const routes = [
     component: Home,
   },
 
-  // Styles
+  // Utilities
   {
-    path: '/styles/elevation',
+    path: '/utilities/aspect-ratio',
+    name: 'aspect-ratio',
+    component: () => import(/* webpackChunkName: "aspect-ratio" */ '../views/utilities/AspectRatio.vue'),
+  },
+  {
+    path: '/utilities/clearfix',
+    name: 'clearfix',
+    component: () => import(/* webpackChunkName: "clearfix" */ '../views/utilities/Clearfix.vue'),
+  },
+  {
+    path: '/utilities/elevation',
     name: 'elevation',
-    component: () => import(/* webpackChunkName: "elevation" */ '../views/styles/Elevation.vue'),
+    component: () => import(/* webpackChunkName: "elevation" */ '../views/utilities/Elevation.vue'),
   },
   {
-    path: '/styles/layout-grid',
+    path: '/utilities/layout-grid',
     name: 'layout-grid',
-    component: () => import(/* webpackChunkName: "layout-grid" */ '../views/styles/LayoutGrid.vue'),
+    component: () => import(/* webpackChunkName: "layout-grid" */ '../views/utilities/LayoutGrid.vue'),
   },
   {
-    path: '/styles/shadow',
+    path: '/utilities/shadow',
     name: 'shadow',
-    component: () => import(/* webpackChunkName: "shadow" */ '../views/styles/Shadow.vue'),
+    component: () => import(/* webpackChunkName: "shadow" */ '../views/utilities/Shadow.vue'),
   },
   {
-    path: '/styles/surface',
+    path: '/utilities/surface',
     name: 'surface',
-    component: () => import(/* webpackChunkName: "surface" */ '../views/styles/Surface.vue'),
+    component: () => import(/* webpackChunkName: "surface" */ '../views/utilities/Surface.vue'),
   },
   {
-    path: '/styles/typography',
+    path: '/utilities/truncate',
+    name: 'truncate',
+    component: () => import(/* webpackChunkName: "truncate" */ '../views/utilities/Truncate.vue'),
+  },
+  {
+    path: '/utilities/typography',
     name: 'typography',
-    component: () => import(/* webpackChunkName: "typography" */ '../views/styles/Typography.vue'),
-  },
-  {
-    path: '/styles/utility',
-    name: 'utility',
-    component: () => import(/* webpackChunkName: "utility" */ '../views/styles/Utility.vue'),
+    component: () => import(/* webpackChunkName: "typography" */ '../views/utilities/Typography.vue'),
   },
 
   // Components

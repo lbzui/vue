@@ -184,12 +184,14 @@ Import CSS source code in `src/main.ts(.js)`:
 // or individual (recommended):
 import '@lbzui/vue/src/assets/css/base.less';
 
-import '@lbzui/vue/src/assets/css/styles/elevation.less';
-import '@lbzui/vue/src/assets/css/styles/layout-grid.less';
-import '@lbzui/vue/src/assets/css/styles/shadow.less';
-import '@lbzui/vue/src/assets/css/styles/surface.less';
-import '@lbzui/vue/src/assets/css/styles/typography.less';
-import '@lbzui/vue/src/assets/css/styles/utility.less';
+import '@lbzui/vue/src/assets/css/utilities/aspect-ratio.less';
+import '@lbzui/vue/src/assets/css/utilities/clearfix.less';
+import '@lbzui/vue/src/assets/css/utilities/elevation.less';
+import '@lbzui/vue/src/assets/css/utilities/layout-grid.less';
+import '@lbzui/vue/src/assets/css/utilities/shadow.less';
+import '@lbzui/vue/src/assets/css/utilities/surface.less';
+import '@lbzui/vue/src/assets/css/utilities/truncate.less';
+import '@lbzui/vue/src/assets/css/utilities/typography.less';
 
 import '@lbzui/vue/src/assets/css/components/backdrop.less';
 import '@lbzui/vue/src/assets/css/components/button.less';

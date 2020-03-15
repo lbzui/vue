@@ -25,9 +25,9 @@
           <lbz-divider/>
           <lbz-list-item to="/">Getting started</lbz-list-item>
           <lbz-divider/>
-          <span class="lbz-list__subtitle">Styles</span>
+          <span class="lbz-list__subtitle">Utilities</span>
           <lbz-list-item
-            v-for="item of NAV.styles"
+            v-for="item of NAV.utilities"
             :key="item.path"
             :to="item.path"
           >{{ item.label }}</lbz-list-item>
@@ -95,30 +95,38 @@ import {
 @Component
 export default class App extends Vue {
   private NAV: object = {
-    styles: [
+    utilities: [
       {
-        path: '/styles/elevation',
+        path: '/utilities/aspect-ratio',
+        label: 'Aspect ratio',
+      },
+      {
+        path: '/utilities/clearfix',
+        label: 'Clearfix',
+      },
+      {
+        path: '/utilities/elevation',
         label: 'Elevation',
       },
       {
-        path: '/styles/layout-grid',
+        path: '/utilities/layout-grid',
         label: 'Layout grid',
       },
       {
-        path: '/styles/shadow',
+        path: '/utilities/shadow',
         label: 'Shadow',
       },
       {
-        path: '/styles/surface',
+        path: '/utilities/surface',
         label: 'Surface',
       },
       {
-        path: '/styles/typography',
-        label: 'Typography',
+        path: '/utilities/truncate',
+        label: 'Truncate',
       },
       {
-        path: '/styles/utility',
-        label: 'Utility',
+        path: '/utilities/typography',
+        label: 'Typography',
       },
     ],
     components: [

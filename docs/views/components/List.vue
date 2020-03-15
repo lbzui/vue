@@ -4,7 +4,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ type: 'one-line' (default), 'two-line', 'three-line'</h3>
 
-    <lbz-list class="lbzui-u-rectangle" subtitle="One-line">
+    <lbz-list class="lbzui-rectangle" subtitle="One-line">
       <lbz-list-item @click.stop="fclick">
         <template #center>Single-line item</template>
         <template #end>
@@ -51,7 +51,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       type="two-line"
       subtitle="Two-line"
     >
@@ -121,7 +121,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       type="three-line"
       subtitle="Three-line"
     >
@@ -198,7 +198,7 @@
     <h3 class="lbz-typography--subtitle1">$ item-tag: 'li' (default), 'a', 'x'</h3>
 
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       tag="nav"
       router-link
       :router-link-props="{ exact: true }"
@@ -209,7 +209,7 @@
       <lbz-list-item :to="{ path: '/404' }">Router-link item</lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       tag="nav"
       item-tag="a"
       subtitle="Non-router-link"
@@ -221,7 +221,7 @@
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
 
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       type="two-line"
       on-background="primary"
       subtitle="Primary"
@@ -249,7 +249,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       type="two-line"
       on-background="secondary"
       subtitle="Secondary"
@@ -277,7 +277,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       type="two-line"
       subtitle="Surface"
     >
@@ -304,7 +304,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       type="two-line"
       on-background="light"
       subtitle="Light"
@@ -332,7 +332,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       type="two-line"
       on-background="dark"
       subtitle="Dark"
@@ -363,7 +363,7 @@
     <h3 class="lbz-typography--subtitle1">$ nav: true, false (default)</h3>
 
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       tag="nav"
       router-link
       :router-link-props="{ exact: true }"
@@ -388,7 +388,7 @@
     <h3 class="lbz-typography--subtitle1">$ dense: undefined (default), true, false</h3>
 
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       dense
       subtitle="Dense one-line"
     >
@@ -438,7 +438,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       :dense="false"
       subtitle="Non-dense one-line"
     >
@@ -488,7 +488,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       type="two-line"
       dense
       subtitle="Dense two-line"
@@ -559,7 +559,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       type="two-line"
       :dense="false"
       subtitle="Non-dense two-line"
@@ -630,7 +630,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       type="three-line"
       dense
       subtitle="Dense three-line"
@@ -702,7 +702,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       type="three-line"
       :dense="false"
       subtitle="Non-dense three-line"
@@ -777,11 +777,11 @@
     <h3 class="lbz-typography--subtitle1">$ placement: 'start' (default), 'center'</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
 
-    <lbz-list class="lbzui-u-rectangle" subtitle="Subtitle">
+    <lbz-list class="lbzui-rectangle" subtitle="Subtitle">
       <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       placement="center"
       subtitle="Subtitle"
     >
@@ -796,7 +796,7 @@
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
 
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       type="three-line"
       disabled
     >
@@ -874,7 +874,7 @@
     <h3 class="lbz-typography--subtitle1">$ tag: '' (default), li', 'a', 'x'</h3>
 
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       tag="nav"
       :router-link-props="{ exact: true }"
       subtitle="Router-link"
@@ -891,7 +891,7 @@
       >Router-link item</lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-u-rectangle"
+      class="lbzui-rectangle"
       tag="nav"
       subtitle="Non-router-link"
     >
@@ -903,7 +903,7 @@
     <h3 class="lbz-typography--subtitle1">$ activated: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ disabled: undefined (default), true, false</h3>
 
-    <lbz-list class="lbzui-u-rectangle">
+    <lbz-list class="lbzui-rectangle">
       <lbz-list-item selected>
         <template #start>
           <lbz-radio

@@ -1,0 +1,17 @@
+// Truncate
+// usage: `.lbz-truncate(@value: 1);` (@value: 1, 2, 3)
+
+.lbz-truncate(@value: 1) when (@value = 1) {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.lbz-truncate(@value: 1) when (@value > 1) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: @value;
+  -webkit-box-orient: vertical;
+}

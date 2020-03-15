@@ -1,5 +1,5 @@
 <template>
-  <article class="lbzui-styles-typography">
+  <article class="lbzui-utilities-typography">
     <h2 class="lbz-typography--h5"># Typography</h2>
 
     <p class="lbz-typography">.lbz-typography</p>
@@ -30,5 +30,5 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class StylesTypography extends Vue {}
+export default class UtilitiesTypography extends Vue {}
 </script>

@@ -11,7 +11,7 @@
           <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
         </div>
         <div class="lbz-card__header__end">
-          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
             <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </div>
@@ -37,7 +37,7 @@
         </div>
       </template>
       <template #center>
-        <div class="lbz-u-aspect-ratio--16x9 lbz-card__media">
+        <div class="lbz-aspect-ratio--16x9 lbz-card__media">
           <img src="../../assets/img/placeholder@16x9.png">
         </div>
         <p class="lbz-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
@@ -55,7 +55,7 @@
     </lbz-card>
     <lbz-card>
       <template #center>
-        <div class="lbz-u-aspect-ratio--16x9 lbz-card__media">
+        <div class="lbz-aspect-ratio--16x9 lbz-card__media">
           <img src="../../assets/img/placeholder@16x9.png">
           <div class="lbz-card__supporting-text">
             <span class="lbz-card__title">Title goes here</span>
@@ -78,7 +78,7 @@
     </lbz-card>
     <lbz-card>
       <template #center>
-        <div class="lbz-u-aspect-ratio--16x9 lbz-card__media">
+        <div class="lbz-aspect-ratio--16x9 lbz-card__media">
           <img src="../../assets/img/placeholder@16x9.png">
         </div>
         <div class="lbz-card__supporting-text">
@@ -104,7 +104,7 @@
           <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
         </div>
         <div class="lbz-card__header__end">
-          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
             <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </div>
@@ -129,7 +129,7 @@
           <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
         </div>
         <div class="lbz-card__header__end">
-          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
             <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </div>
@@ -156,7 +156,7 @@
           <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
         </div>
         <div class="lbz-card__header__end">
-          <div class="lbz-u-aspect-ratio--1x1 lbz-card__media">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
             <img src="../../assets/img/placeholder@1x1.png">
           </div>
         </div>
