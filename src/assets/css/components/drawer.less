@@ -22,6 +22,7 @@
     border-right: 1px solid var(--lbz-theme-outline-on-surface);
     width: 256px;
     .lbz-surface(16);
+    scroll-behavior: smooth;
     overscroll-behavior-y: contain;
     -webkit-overflow-scrolling: touch;
   }
@@ -111,7 +112,7 @@
     }
 
     // full-screen
-    &.is-full-screen {
+    &.lbz-is-full-screen {
       .lbz-drawer__container {
         top: 0;
         border-radius: 0;
@@ -122,12 +123,13 @@
       .lbz-drawer__content {
         overflow-x: hidden;
         overflow-y: auto;
+        scroll-behavior: smooth;
         overscroll-behavior-y: contain;
         -webkit-overflow-scrolling: touch;
       }
     }
 
-    &:not(.is-full-screen) .lbz-drawer__scrim {
+    &:not(.lbz-is-full-screen) .lbz-drawer__scrim {
       display: block;
     }
   }

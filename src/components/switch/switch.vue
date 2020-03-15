@@ -3,8 +3,8 @@
     :class="[
       'lbz-switch',
       color && `lbz-switch--${color}`,
-      cisChecked && 'is-checked',
-      disabled && 'is-disabled'
+      cisChecked && 'lbz-is-checked',
+      disabled && 'lbz-is-disabled'
     ]"
     @click.stop="!disabled && fclick($event)"
   >

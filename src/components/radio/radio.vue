@@ -3,8 +3,8 @@
     :class="[
       'lbz-radio',
       color && `lbz-radio--${color}`,
-      cisChecked && 'is-checked',
-      disabled && 'is-disabled'
+      cisChecked && 'lbz-is-checked',
+      disabled && 'lbz-is-disabled'
     ]"
     @click.stop="!disabled && fclick($event)"
   >

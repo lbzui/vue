@@ -6,8 +6,8 @@
         'lbz-dialog',
         type && `lbz-dialog--${type}`,
         {
-          'is-scrollable': type === 'confirmation' && scrollable,
-          'is-stacked': cisAlertAndConfirmation && stacked
+          'lbz-is-scrollable': type === 'confirmation' && scrollable,
+          'lbz-is-stacked': cisAlertAndConfirmation && stacked
         }
       ]"
     >

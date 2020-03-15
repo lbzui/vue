@@ -69,7 +69,7 @@
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
   }
 
-  &.is-checked .lbz-radio__circle {
+  &.lbz-is-checked .lbz-radio__circle {
     border-color: var(--lbz-theme-secondary);
     transition: border-color 120ms #lbz-motion.curve[deceleration];
 
@@ -84,12 +84,12 @@
   }
 
   // color
-  &&--primary.is-checked:not(.is-disabled) .lbz-radio__circle {
+  &&--primary.lbz-is-checked:not(.lbz-is-disabled) .lbz-radio__circle {
     border-color: var(--lbz-theme-primary);
   }
 
   // disabled
-  &.is-disabled {
+  &.lbz-is-disabled {
     .lbz-radio__circle {
       border-color: var(--lbz-theme-text-disabled-on-surface);
     }

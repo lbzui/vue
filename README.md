@@ -333,36 +333,6 @@ All examples? Please view [code examples](/tree/master/docs/views) for details.
 
 ## FAQ
 
-### What CSS Classes can I declare?
-
-To avoid style overrides, please do not use `--lbz-x (x: ...)` CSS Variables and CSS Classes:
-
-```less
-.align--x (x: start, center, end, stretch)
-.end--x (x: 2-13)
-.is-activated
-.is-active
-.is-checked
-.is-dense
-.is-disabled
-.is-elevated
-.is-full-screen
-.is-full-width
-.is-horizontal
-.is-inactive
-.is-inactive--x (x: scroll-off, tab-fixed)
-.is-most-used
-.is-nav
-.is-scrollable
-.is-selected
-.is-stacked
-.is-unelevated
-.lbz-x (x: ...)
-.material-icons
-.span--x (x: 1-12)
-.start--x (x: 1-12)
-```
-
 ### Why doesn’t `<router-link>` active class work?
 
 Globally configure `<router-link>` default active class for exact matches:
@@ -370,8 +340,7 @@ Globally configure `<router-link>` default active class for exact matches:
 ```ts
 // router/index.ts(.js)
 const router = new VueRouter({
-  // 'router-link-exact-active' => 'is-activated'
-  linkExactActiveClass: 'is-activated',
+  linkExactActiveClass: 'lbz-is-activated',
   // ...
 });
 ```
@@ -382,7 +351,7 @@ const router = new VueRouter({
 | --- | --- | --- |
 | State | `.lbz-state-no-before--child` | `:hover`, `:focus`, and `:active` will not work in any direct children of elements, mainly applied in Card, List, and List item. |
 | State | `.lbz-state-no-before--descendant` | `:hover`, `:focus`, and `:active` will not work in any descendant of elements, mainly applied in Card, List, and List item. |
-| Top app bar | `.lbz-icon-button.is-most-used` | When transforming into short top app bar, place the most-used action. |
+| Top app bar | `.lbz-icon-button.lbz-is-most-used` | When transforming into short top app bar, place the most-used action. |
 
 ## Browser support
 

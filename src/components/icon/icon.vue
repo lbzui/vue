@@ -4,7 +4,7 @@
       'material-icons lbz-icon',
       size && `lbz-icon--${size}`,
       color && `lbz-icon--${color}`,
-      disabled && 'is-disabled'
+      disabled && 'lbz-is-disabled'
     ]"
   ><slot/></i>
 </template>

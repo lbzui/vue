@@ -4,9 +4,9 @@
       'lbz-top-app-bar',
       type && `lbz-top-app-bar--${type}`,
       background && `lbz-top-app-bar--${background}`,
-      inactive && `is-inactive--${inactive}`,
-      cisDense && 'is-dense',
-      elevated && 'is-elevated'
+      inactive && `lbz-is-inactive--${inactive}`,
+      cisDense && 'lbz-is-dense',
+      elevated && 'lbz-is-elevated'
     ]"
     :style="type === 'extended' && media ? { backgroundImage: `url(${media})` } : {}"
   >

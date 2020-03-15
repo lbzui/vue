@@ -1,10 +1,10 @@
 // Layout grid
 // usage: `.lbz-layout-grid`
 //        `.lbz-layout-grid__cell`
-//        `.lbz-layout-grid__cell.start--x` (x: 1-12)
-//        `.lbz-layout-grid__cell.span--x` (x: 1-12)
-//        `.lbz-layout-grid__cell.end--x` (x: 2-13)
-//        `.lbz-layout-grid__cell.align--x` (x: start, center, end, stretch)
+//        `.lbz-layout-grid__start--x` (x: 1-12)
+//        `.lbz-layout-grid__span--x` (x: 1-12)
+//        `.lbz-layout-grid__end--x` (x: 2-13)
+//        `.lbz-layout-grid__align--x` (x: start, center, end, stretch)
 
 .lbz-layout-grid {
   @supports (display: grid) {
@@ -27,15 +27,15 @@
     each(range(12), {
       @next-value: @value + 1;
 
-      .start--@{value} {
+      & &__start--@{value} {
         .lbz-layout-grid-grid-column-start(@value);
       }
 
-      .span--@{value} {
+      & &__span--@{value} {
         .lbz-layout-grid-grid-column-span(@value);
       }
 
-      .end--@{next-value} {
+      & &__end--@{next-value} {
         .lbz-layout-grid-grid-column-end(@next-value);
       }
     });
@@ -43,7 +43,7 @@
     @aligns: start, center, end, stretch;
 
     each(@aligns, {
-      .align--@{value} {
+      & &__align--@{value} {
         align-self: @value;
       }
     });
@@ -60,15 +60,15 @@
       each(@starts, {
         @next-value: @value + 1;
 
-        .start--@{value} {
+        & &__start--@{value} {
           .lbz-layout-grid-grid-column-start(@value - 8);
         }
 
-        .span--@{value} {
+        & &__span--@{value} {
           .lbz-layout-grid-grid-column-end(span 8);
         }
 
-        .end--@{next-value} {
+        & &__end--@{next-value} {
           .lbz-layout-grid-grid-column-end(@next-value - 8);
         }
       });
@@ -86,23 +86,23 @@
       each(@starts, {
         @next-value: @value + 1;
 
-        .start--@{value} when (@value <= 8) {
+        & &__start--@{value} when (@value <= 8) {
           .lbz-layout-grid-grid-column-start(@value - 4);
         }
 
-        .start--@{value} when (@value > 8) {
+        & &__start--@{value} when (@value > 8) {
           .lbz-layout-grid-grid-column-start(@value - 8);
         }
 
-        .span--@{value} {
+        & &__span--@{value} {
           .lbz-layout-grid-grid-column-end(span 4);
         }
 
-        .end--@{next-value} when (@next-value <= 8) {
+        & &__end--@{next-value} when (@next-value <= 8) {
           .lbz-layout-grid-grid-column-end(@next-value - 4);
         }
 
-        .end--@{next-value} when (@next-value > 8) {
+        & &__end--@{next-value} when (@next-value > 8) {
           .lbz-layout-grid-grid-column-end(@next-value - 8);
         }
       });

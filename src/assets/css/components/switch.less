@@ -72,8 +72,8 @@
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
   }
 
-  &.is-checked {
-    &:not(.is-disabled) {
+  &.lbz-is-checked {
+    &:not(.lbz-is-disabled) {
       .lbz-switch__track,
       .lbz-switch__thumb {
         background-color: var(--lbz-theme-secondary);
@@ -90,7 +90,7 @@
   }
 
   // color
-  &&--primary.is-checked:not(.is-disabled) {
+  &&--primary.lbz-is-checked:not(.lbz-is-disabled) {
     .lbz-switch__track,
     .lbz-switch__thumb {
       background-color: var(--lbz-theme-primary);
@@ -98,7 +98,7 @@
   }
 
   // disabled
-  &.is-disabled {
+  &.lbz-is-disabled {
     .lbz-switch__track {
       opacity: .12;
     }
@@ -113,12 +113,12 @@
   }
 
   html[theme="dark"] & {
-    &:not(.is-checked):not(.is-disabled) .lbz-switch__thumb {
+    &:not(.lbz-is-checked):not(.lbz-is-disabled) .lbz-switch__thumb {
       background-color: #bdbdbd;
     }
 
     // disabled
-    &.is-disabled .lbz-switch__thumb {
+    &.lbz-is-disabled .lbz-switch__thumb {
       background-color: #424242;
     }
   }

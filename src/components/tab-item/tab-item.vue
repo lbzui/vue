@@ -1,7 +1,7 @@
 <template>
   <component
     v-bind="cgetAttrs"
-    :class="['lbz-tab-item', cisActive && 'is-active']"
+    :class="['lbz-tab-item', cisActive && 'lbz-is-active']"
     @click.stop="fclick($event)"
   >
     <span class="lbz-tab-item__content">
@@ -66,7 +66,7 @@ export default class LbzTabItem extends Vue {
         tag,
         exact,
         event,
-        exactActiveClass: 'is-active',
+        exactActiveClass: 'lbz-is-active',
       } : {
         is: tag,
       };

@@ -10,7 +10,6 @@
   bottom: 0;
   left: 0;
   .lbz-elevation(24);
-  overscroll-behavior-y: contain;
 
   & &__container {
     overflow-x: hidden;
@@ -47,6 +46,8 @@
     padding: 20px 24px;
     .lbz-typography("body1");
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
 
     > :first-child {
@@ -112,7 +113,7 @@
   }
 
   // type, scrollable
-  &.is-scrollable:not(.lbz-dialog--full-screen) {
+  &.lbz-is-scrollable:not(.lbz-dialog--full-screen) {
     .lbz-dialog__header {
       padding-bottom: 16px;
     }
@@ -131,7 +132,7 @@
   }
 
   // stacked
-  &.is-stacked .lbz-dialog__actions {
+  &.lbz-is-stacked .lbz-dialog__actions {
     flex-direction: column;
     align-items: flex-end;
 

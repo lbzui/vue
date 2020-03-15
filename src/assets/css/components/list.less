@@ -12,7 +12,7 @@
     .lbz-typography("subtitle1");
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
 
-    // placement
+    // align
     &--center {
       text-indent: 56px;
     }
@@ -72,7 +72,7 @@
         }
 
         // activated
-        &.is-activated {
+        &.lbz-is-activated {
           color: var(--lbz-theme-on-primary);
 
           .lbz-list-item__center,
@@ -83,7 +83,7 @@
         }
 
         // disabled
-        &.is-disabled {
+        &.lbz-is-disabled {
           color: var(--lbz-theme-text-disabled-on-primary);
 
           .lbz-list-item__center,
@@ -118,7 +118,7 @@
         }
 
         // activated
-        &.is-activated {
+        &.lbz-is-activated {
           color: var(--lbz-theme-on-secondary);
 
           .lbz-list-item__center,
@@ -129,7 +129,7 @@
         }
 
         // disabled
-        &.is-disabled {
+        &.lbz-is-disabled {
           color: var(--lbz-theme-text-disabled-on-secondary);
 
           .lbz-list-item__center,
@@ -164,7 +164,7 @@
         }
 
         // activated
-        &.is-activated {
+        &.lbz-is-activated {
           color: @black;
 
           .lbz-list-item__center,
@@ -175,7 +175,7 @@
         }
 
         // disabled
-        &.is-disabled {
+        &.lbz-is-disabled {
           color: #lbz-theme-text.dark[disabled];
 
           .lbz-list-item__center,
@@ -212,7 +212,7 @@
       }
 
       // activated
-      &.is-activated {
+      &.lbz-is-activated {
         color: @white;
 
         .lbz-list-item__center,
@@ -223,7 +223,7 @@
       }
 
       // disabled
-      &.is-disabled {
+      &.lbz-is-disabled {
         color: #lbz-theme-text.light[disabled];
 
         .lbz-list-item__center,
@@ -236,7 +236,7 @@
   }
 
   &:not(.lbz-list--on-primary):not(.lbz-list--on-secondary):not(.lbz-list--on-light):not(.lbz-list--on-dark)
-  .is-activated .lbz-list-item__state {
+  .lbz-is-activated .lbz-list-item__state {
     &::before,
     &::after {
       background-color: var(--lbz-theme-primary);
@@ -255,7 +255,7 @@
   }
 
   // nav
-  &.is-nav {
+  &.lbz-is-nav {
     // subtitle
     .lbz-list__subtitle {
       padding-top: 8px;
@@ -294,7 +294,7 @@
   }
 
   // dense
-  &.is-dense {
+  &.lbz-is-dense {
     padding-top: 4px;
     padding-bottom: 4px;
 

@@ -12,6 +12,8 @@
     align-items: stretch;
     overflow-x: auto;
     overflow-y: hidden;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
     -webkit-overflow-scrolling: touch;
 
     &::-webkit-scrollbar {
@@ -32,10 +34,10 @@
     }
   }
 
-  // alignment
-  &&--left,
+  // align
+  &&--start,
   &&--center,
-  &&--right {
+  &&--end {
     .lbz-tab-item {
       flex: 0 1 auto;
     }
@@ -45,7 +47,7 @@
     justify-content: center;
   }
 
-  &&--right .lbz-tab__container {
+  &&--end .lbz-tab__container {
     justify-content: flex-end;
   }
 
@@ -58,7 +60,7 @@
         background-color: var(--lbz-theme-on-primary);
       }
 
-      &.is-active {
+      &.lbz-is-active {
         color: var(--lbz-theme-text-high-emphasis-on-primary);
       }
     }
@@ -70,7 +72,7 @@
         background-color: var(--lbz-theme-on-secondary);
       }
 
-      &.is-active {
+      &.lbz-is-active {
         color: var(--lbz-theme-text-high-emphasis-on-secondary);
       }
     }
@@ -82,7 +84,7 @@
         background-color: @black;
       }
 
-      &.is-active {
+      &.lbz-is-active {
         color: #lbz-theme-text.dark[high-emphasis];
       }
     }
@@ -97,7 +99,7 @@
         background-color: @white;
       }
 
-      &.is-active {
+      &.lbz-is-active {
         color: #lbz-theme-text.light[high-emphasis];
       }
     }
@@ -115,7 +117,7 @@
   }
 
   // stacked
-  &.is-stacked {
+  &.lbz-is-stacked {
     height: 72px;
 
     .lbz-tab-item {

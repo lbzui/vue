@@ -5,8 +5,8 @@
       :class="[
         'lbz-drawer',
         type && `lbz-drawer--${type}`,
-        cisFullScreen && 'is-full-screen',
-        cisActive && 'is-active'
+        cisFullScreen && 'lbz-is-full-screen',
+        cisActive && 'lbz-is-active'
       ]"
     >
       <div class="lbz-drawer__container">

@@ -5,13 +5,13 @@
       'lbz-list',
       type && `lbz-list--${type}`,
       onBackground && `lbz-list--on-${onBackground}`,
-      nav && 'is-nav',
-      cisDense && 'is-dense'
+      nav && 'lbz-is-nav',
+      cisDense && 'lbz-is-dense'
     ]"
   >
     <span
       v-if="subtitle"
-      :class="['lbz-list__subtitle', placement && `lbz-list__subtitle--${placement}`]"
+      :class="['lbz-list__subtitle', align && `lbz-list__subtitle--${align}`]"
       v-html="subtitle"
     ></span>
     <slot/>
@@ -53,8 +53,8 @@ export default class LbzList extends Vue {
   @Prop({ type: Boolean, default: false }) private nav!: boolean;
   // dense: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private dense!: boolean;
-  // placement: 'start' (default), 'center'
-  @Prop({ type: String, default: '' }) private placement!: string;
+  // align: 'start' (default), 'center'
+  @Prop({ type: String, default: '' }) private align!: string;
   // subtitle: '' (default), 'x'
   @Prop({ type: String, default: '' }) private subtitle!: string;
   // disabled: true, false (default)

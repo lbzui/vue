@@ -7,12 +7,7 @@
       subtitle="Material Components for Vue.js"
     >
       <template #start>
-        <router-link
-          class="lbz-drawer__title"
-          to="/"
-          tag="h1"
-          exact
-        >@lbzui/vue</router-link>
+        <h1 class="lbz-drawer__title" @click.stop="freload">@lbzui/vue</h1>
       </template>
       <template #center>
         <lbz-list
@@ -264,6 +259,10 @@ export default class App extends Vue {
         this.fchangeMode();
       });
     }
+  }
+
+  private freload(): void {
+    window.location.reload();
   }
 
   private fcloseDrawer(): void {

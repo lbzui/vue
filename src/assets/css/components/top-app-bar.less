@@ -102,7 +102,7 @@
 
         // NOTE: When transforming into short top app bar,
         // place the most-used action
-        .lbz-icon-button:not(.is-most-used) {
+        .lbz-icon-button:not(.lbz-is-most-used) {
           display: none;
         }
       }
@@ -125,7 +125,7 @@
     .lbz-surface(0);
 
     // elevated
-    &.is-elevated {
+    &.lbz-is-elevated {
       .lbz-surface(4);
     }
   }
@@ -135,7 +135,7 @@
     .lbz-surface("light"; 0);
 
     // elevated
-    &.is-elevated {
+    &.lbz-is-elevated {
       .lbz-surface("light"; 4);
     }
   }
@@ -146,7 +146,7 @@
     .lbz-surface("dark"; 0);
 
     // elevated
-    &.is-elevated {
+    &.lbz-is-elevated {
       .lbz-surface("dark"; 4);
     }
   }
@@ -167,13 +167,13 @@
   }
 
   // inactive
-  &.is-inactive--scroll-off {
+  &.lbz-is-inactive--scroll-off {
     opacity: 0;
     transition: transform 200ms #lbz-motion.curve[sharp];
     transform: translate3d(0, -100%, 0);
   }
 
-  &.is-inactive--tab-fixed {
+  &.lbz-is-inactive--tab-fixed {
     transition: transform 200ms #lbz-motion.curve[sharp];
     transform: translate3d(0, -64px, 0);
 
@@ -187,27 +187,27 @@
   }
 
   // dense
-  @media #lbz-layout-grid.media[non-xsmall] {
-    &.is-dense {
+  @media #lbz-layout-grid.media[no-xsmall] {
+    &.lbz-is-dense {
       .lbz-top-app-bar__container {
         padding: 0 4px;
         height: 48px;
       }
 
       // inactive
-      &.is-inactive--tab-fixed {
+      &.lbz-is-inactive--tab-fixed {
         transform: translate3d(0, -48px, 0);
       }
     }
 
     // type
-    &&--extended.is-dense .lbz-top-app-bar__container {
+    &&--extended.lbz-is-dense .lbz-top-app-bar__container {
       height: 96px;
     }
   }
 
   // elevated
-  &.is-elevated {
+  &.lbz-is-elevated {
     .lbz-shadow(4);
   }
 

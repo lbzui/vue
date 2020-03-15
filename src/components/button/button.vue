@@ -6,10 +6,10 @@
       type && `lbz-button--${type}`,
       color && `lbz-button--${color}`,
       {
-        'is-full-width': fullWidth,
-        'is-dense': cisDense,
-        'is-unelevated': type === 'contained' && unelevated,
-        'is-disabled': disabled
+        'lbz-is-full-width': fullWidth,
+        'lbz-is-dense': cisDense,
+        'lbz-is-unelevated': type === 'contained' && unelevated,
+        'lbz-is-disabled': disabled
       }
     ]"
     @click="!disabled && $emit('click', $event)"

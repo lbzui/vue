@@ -4,9 +4,9 @@
     :class="[
       'lbz-tab',
       type && `lbz-tab--${type}`,
-      type !== 'scrollable' && alignment && `lbz-tab--${alignment}`,
+      type !== 'scrollable' && align && `lbz-tab--${align}`,
       onBackground && `lbz-tab--on-${onBackground}`,
-      stacked && 'is-stacked'
+      stacked && 'lbz-is-stacked'
     ]"
   >
     <div class="lbz-tab__container"><slot/></div>
@@ -49,8 +49,8 @@ export default class LbzTab extends Vue {
 
   // type: 'fixed' (default), 'scrollable'
   @Prop({ type: String, default: '' }) private type!: string;
-  // alignment (type === 'fixed'): '' (default), 'left', 'center', 'right'
-  @Prop({ type: String, default: '' }) private alignment!: string;
+  // align (type === 'fixed'): 'start', 'center', 'end', 'stretch' (default)
+  @Prop({ type: String, default: '' }) private align!: string;
   // on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
   // stacked: true, false (default)

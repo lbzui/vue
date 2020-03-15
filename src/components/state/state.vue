@@ -5,7 +5,7 @@
       type && `lbz-state--${type}`,
       background && `lbz-state-bg--${background}`,
       cisRipple && 'lbz-ripple',
-      cisRipple && unbounded && 'lbz-ripple--unbounded'
+      cisRipple && unbounded && 'lbz-is-unbounded'
     ]"
     @touchstart.passive="ftouchstart($event)"
     @touchmove.passive="ftouchmove($event)"

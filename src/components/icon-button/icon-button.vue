@@ -6,8 +6,8 @@
       'lbz-icon-button',
       onBackground && `lbz-icon-button--on-${onBackground}`,
       {
-        'is-active': toggle && cisActive,
-        'is-disabled': disabled
+        'lbz-is-active': toggle && cisActive,
+        'lbz-is-disabled': disabled
       }
     ]"
     @click="!disabled && fclick($event)"

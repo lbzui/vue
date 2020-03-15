@@ -4,9 +4,9 @@
     :class="[
       'lbz-list-item',
       {
-        'is-selected': selected,
-        'is-activated': activated,
-        'is-disabled': cisDisabled
+        'lbz-is-selected': selected,
+        'lbz-is-activated': activated,
+        'lbz-is-disabled': cisDisabled
       }
     ]"
     @click="!cisDisabled && $emit('click', $event)"

@@ -41,23 +41,23 @@
       >A {{ item }}</lbz-tab-item>
     </lbz-tab>
 
-    <h3 class="lbz-typography--subtitle1">$ alignment (type === 'fixed'): '' (default), 'left', 'center', 'right'</h3>
+    <h3 class="lbz-typography--subtitle1">$ align (type === 'fixed'): 'start', 'center', 'end', 'stretch' (default)</h3>
 
-    <lbz-tab v-model="vtab0" alignment="left">
+    <lbz-tab v-model="vtab0" align="start">
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
         :value="index"
       >Item {{ item }}</lbz-tab-item>
     </lbz-tab>
-    <lbz-tab v-model="vtab0" alignment="center">
+    <lbz-tab v-model="vtab0" align="center">
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
         :value="index"
       >Item {{ item }}</lbz-tab-item>
     </lbz-tab>
-    <lbz-tab v-model="vtab0" alignment="right">
+    <lbz-tab v-model="vtab0" align="end">
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"

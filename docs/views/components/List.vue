@@ -774,7 +774,7 @@
       </lbz-list-item>
     </lbz-list>
 
-    <h3 class="lbz-typography--subtitle1">$ placement: 'start' (default), 'center'</h3>
+    <h3 class="lbz-typography--subtitle1">$ align: 'start' (default), 'center'</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
 
     <lbz-list class="lbzui-rectangle" subtitle="Subtitle">
@@ -782,7 +782,7 @@
     </lbz-list>
     <lbz-list
       class="lbzui-rectangle"
-      placement="center"
+      align="center"
       subtitle="Subtitle"
     >
       <lbz-list-item>

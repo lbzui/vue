@@ -3,7 +3,7 @@
     :class="[
       'lbz-backdrop',
       background && `lbz-backdrop--${background}`,
-      cisActive && 'is-active'
+      cisActive && 'lbz-is-active'
     ]"
   >
     <section class="lbz-backdrop__back-layer">
@@ -35,7 +35,7 @@
       <main
         ref="scroller"
         v-scroll="fscroll"
-        :class="['lbz-backdrop__front-layer__content', horizontal && 'is-horizontal']"
+        :class="['lbz-backdrop__front-layer__content', horizontal && 'lbz-is-horizontal']"
       >
         <slot name="front-center"/>
         <slot/>

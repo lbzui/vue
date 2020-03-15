@@ -5,7 +5,7 @@
       'lbz-fab',
       type && `lbz-fab--${type}`,
       background && `lbz-fab--${background}`,
-      inactive && 'is-inactive'
+      inactive && 'lbz-is-inactive'
     ]"
     @click="$emit('click', $event)"
   >
