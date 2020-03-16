@@ -51,8 +51,8 @@
   --lbz-theme-text-medium-emphasis-on-dark: rgba(255, 255, 255, 0.74);
   --lbz-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.38);
   --lbz-theme-outline-on-primary: rgba(255, 255, 255, 0.12);
-  --lbz-theme-outline-on-secondary: rgba(0, 0, 0, 0.12);
-  --lbz-theme-outline-on-background: rgba(0, 0, 0, 0.12);
-  --lbz-theme-outline-on-surface: rgba(0, 0, 0, 0.12);
+  --lbz-theme-outline-on-secondary: rgba(0, 0, 0, 0.2);
+  --lbz-theme-outline-on-background: rgba(0, 0, 0, 0.2);
+  --lbz-theme-outline-on-surface: rgba(0, 0, 0, 0.2);
   --lbz-theme-outline-on-error: rgba(255, 255, 255, 0.12);
 }

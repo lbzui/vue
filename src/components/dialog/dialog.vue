@@ -38,7 +38,7 @@
         <div
           v-if="$slots.center || $slots.default"
           class="lbz-dialog__content"
-          :style="type !== 'full-screen' && contentHeight ? { height: contentHeight } : {}"
+          :style="type !== 'full-screen' && height ? { height: height } : {}"
         >
           <slot name="center"/>
           <slot/>
@@ -80,12 +80,12 @@ export default class LbzDialog extends Vue {
   @Prop({ type: Boolean, default: false }) private stacked!: boolean;
   // title: '' (default), 'x'
   @Prop({ type: String, default: '' }) private title!: string;
-  // content-height (type !== 'full-screen'): '' (default), 'x'
-  @Prop({ type: String, default: '' }) private contentHeight!: string;
+  // height (type !== 'full-screen'): '' (default), 'x'
+  @Prop({ type: String, default: '' }) private height!: string;
   // append-to-body: true, false (default)
   @Prop({ type: Boolean, default: false }) private appendToBody!: boolean;
-  // lock-scroll: true (default), false
-  @Prop({ type: Boolean, default: true }) private lockScroll!: boolean;
+  // lock-body-scroll: true (default), false
+  @Prop({ type: Boolean, default: true }) private lockBodyScroll!: boolean;
 
   get cisAlertAndConfirmation(): boolean {
     return ['', 'alert', 'confirmation'].includes(this.type);
@@ -95,7 +95,7 @@ export default class LbzDialog extends Vue {
   private factiveChanged(val: boolean, oldVal: boolean): void {
     this.$nextTick().then(() => {
       this.$emit(val ? 'open' : 'close');
-      if (this.lockScroll) {
+      if (this.lockBodyScroll) {
         lockBodyScroll(val);
       }
     });

@@ -52,5 +52,5 @@ export function cancelContextmenu(): void {
 }
 
 export function lockBodyScroll(val: boolean): void {
-  document.body.classList[val ? 'add' : 'remove']('lbz-body--lock-scroll');
+  document.body.classList[val ? 'add' : 'remove']('lbz-is-locked');
 }

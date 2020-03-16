@@ -146,8 +146,8 @@
   --lbz-ripple-left: 0;
   --lbz-ripple-size: 0;
   --lbz-ripple-opacity: #lbz-state.surface[pressed];
-  --lbz-ripple-translate-start: 0;
-  --lbz-ripple-translate-end: 0;
+  --lbz-ripple-translate-start: 0, 0, 0;
+  --lbz-ripple-translate-end: 0, 0, 0;
   --lbz-ripple-scale: 1;
 
   &::before {
@@ -188,7 +188,7 @@
   }
 
   &.lbz-ripple-leave::after {
-    transform: translate(var(--lbz-ripple-translate-end, 0)) scale(var(--lbz-ripple-scale, 1));
+    transform: translate3d(var(--lbz-ripple-translate-end, 0, 0, 0)) scale(var(--lbz-ripple-scale, 1));
     animation: lbz-ripple-opacity-out 150ms;
   }
 }
@@ -217,11 +217,11 @@
 
 @keyframes lbz-ripple-radius-in {
   from {
-    transform: translate(var(--lbz-ripple-translate-start, 0)) scale(1);
+    transform: translate3d(var(--lbz-ripple-translate-start, 0, 0, 0)) scale(1);
     animation-timing-function: #lbz-motion.curve[standard];
   }
 
   to {
-    transform: translate(var(--lbz-ripple-translate-end, 0)) scale(var(--lbz-ripple-scale, 1));
+    transform: translate3d(var(--lbz-ripple-translate-end, 0, 0, 0)) scale(var(--lbz-ripple-scale, 1));
   }
 }

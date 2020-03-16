@@ -41,10 +41,10 @@
       </template>
     </lbz-dialog>
 
-    <h3 class="lbz-typography--subtitle1">$ content-height (type !== 'full-screen'): '' (default), 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ height (type !== 'full-screen'): '' (default), 'x'</h3>
 
-    <lbz-button @click.stop="valert3 = true">Content height</lbz-button>
-    <lbz-dialog :active.sync="valert3" content-height="180px">
+    <lbz-button @click.stop="valert3 = true">Height</lbz-button>
+    <lbz-dialog :active.sync="valert3" height="180px">
       <template #center>Discard draft?</template>
       <template #end>
         <lbz-button @click.stop="valert3 = false">Cancel</lbz-button>
@@ -63,10 +63,10 @@
       </template>
     </lbz-dialog>
 
-    <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
+    <h3 class="lbz-typography--subtitle1">$ lock-body-scroll: true (default), false</h3>
 
-    <lbz-button @click.stop="valert5 = true">Unlock scroll</lbz-button>
-    <lbz-dialog :active.sync="valert5" :lock-scroll="false">
+    <lbz-button @click.stop="valert5 = true">Unlock body scroll</lbz-button>
+    <lbz-dialog :active.sync="valert5" :lock-body-scroll="false">
       <template #center>Discard draft?</template>
       <template #end>
         <lbz-button @click.stop="valert5 = false">Cancel</lbz-button>
@@ -102,14 +102,14 @@
       </template>
     </lbz-dialog>
 
-    <h3 class="lbz-typography--subtitle1">$ content-height (type !== 'full-screen'): '' (default), 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ height (type !== 'full-screen'): '' (default), 'x'</h3>
 
-    <lbz-button @click.stop="vsimple1 = true">Content height</lbz-button>
+    <lbz-button @click.stop="vsimple1 = true">Height</lbz-button>
     <lbz-dialog
       :active.sync="vsimple1"
       type="simple"
       title="Dialog header"
-      content-height="360px"
+      height="360px"
     >
       <template #center>
         <lbz-list dense>
@@ -152,14 +152,14 @@
       </template>
     </lbz-dialog>
 
-    <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
+    <h3 class="lbz-typography--subtitle1">$ lock-body-scroll: true (default), false</h3>
 
-    <lbz-button @click.stop="vsimple3 = true">Unlock scroll</lbz-button>
+    <lbz-button @click.stop="vsimple3 = true">Unlock body scroll</lbz-button>
     <lbz-dialog
       :active.sync="vsimple3"
       type="simple"
       title="Dialog header"
-      :lock-scroll="false"
+      :lock-body-scroll="false"
     >
       <template #center>
         <lbz-list dense>
@@ -197,15 +197,15 @@
     </lbz-dialog>
 
     <h3 class="lbz-typography--subtitle1">$ scrollable (type === 'confirmation'): true, false (default)</h3>
-    <h3 class="lbz-typography--subtitle1">$ content-height (type !== 'full-screen'): '' (default), 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ height (type !== 'full-screen'): '' (default), 'x'</h3>
 
-    <lbz-button @click.stop="vconfirmation1 = true">Scrollable & Content height</lbz-button>
+    <lbz-button @click.stop="vconfirmation1 = true">Scrollable & Height</lbz-button>
     <lbz-dialog
       :active.sync="vconfirmation1"
       type="confirmation"
       scrollable
       title="Dialog header"
-      content-height="180px"
+      height="180px"
     >
       <template #center>
         <lbz-list dense>
@@ -259,14 +259,14 @@
       </template>
     </lbz-dialog>
 
-    <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
+    <h3 class="lbz-typography--subtitle1">$ lock-body-scroll: true (default), false</h3>
 
-    <lbz-button @click.stop="vconfirmation4 = true">Unlock scroll</lbz-button>
+    <lbz-button @click.stop="vconfirmation4 = true">Unlock body scroll</lbz-button>
     <lbz-dialog
       :active.sync="vconfirmation4"
       type="confirmation"
       title="Two-line dialog header"
-      :lock-scroll="false"
+      :lock-body-scroll="false"
     >
       <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
       <template #end>
@@ -310,14 +310,14 @@
       <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
     </lbz-dialog>
 
-    <h3 class="lbz-typography--subtitle1">$ lock-scroll: true (default), false</h3>
+    <h3 class="lbz-typography--subtitle1">$ lock-body-scroll: true (default), false</h3>
 
-    <lbz-button @click.stop="vfullScreen2 = true">Unlock scroll</lbz-button>
+    <lbz-button @click.stop="vfullScreen2 = true">Unlock body scroll</lbz-button>
     <lbz-dialog
       :active.sync="vfullScreen2"
       type="full-screen"
       title="Page title"
-      :lock-scroll="false"
+      :lock-body-scroll="false"
     >
       <template #start>
         <!-- Save, Send, Share, Update, or Create -->

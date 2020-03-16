@@ -135,8 +135,8 @@ export default class LbzState extends Vue {
         y: (offsetHeight - size) / 2,
       };
 
-      target.style.setProperty('--lbz-ripple-translate-start', `${translateStart.x}px, ${translateStart.y}px`);
-      target.style.setProperty('--lbz-ripple-translate-end', `${translateEnd.x}px, ${translateEnd.y}px`);
+      target.style.setProperty('--lbz-ripple-translate-start', `${translateStart.x}px, ${translateStart.y}px, 0`);
+      target.style.setProperty('--lbz-ripple-translate-end', `${translateEnd.x}px, ${translateEnd.y}px, 0`);
     }
 
     this.vframeTimer = window.requestAnimationFrame((): void => {
