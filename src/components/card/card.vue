@@ -33,10 +33,13 @@ export default class LbzCard extends Vue {
 
   // type: 'elevated' (default), 'outlined'
   @Prop({ type: String, default: '' }) private type!: string;
+  // ripple: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 
   get cgetStateAttrs(): StateAttributes {
     return {
       class: 'lbz-card__state',
+      ripple: this.ripple,
     };
   }
 }

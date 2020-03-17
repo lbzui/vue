@@ -44,13 +44,13 @@ const components: any[] = [
 ];
 const install: PluginFunction<any> = (v: typeof Vue, opts?: LbzuiOptions): void => {
   const {
-    ripple,
     dense,
+    ripple,
   }: any = opts || {};
 
   v.prototype.$lbzui = {
-    ripple: ripple === undefined ? true : ripple,
     dense: dense || false,
+    ripple: ripple === undefined ? true : ripple,
   };
 
   components.map((Component) => {

@@ -23,6 +23,7 @@
         </div>
       </template>
     </lbz-card>
+    <br>
     <lbz-card>
       <template #start>
         <div class="lbz-card__header__start">
@@ -53,6 +54,7 @@
         </div>
       </template>
     </lbz-card>
+    <br>
     <lbz-card>
       <template #center>
         <div class="lbz-aspect-ratio--16x9 lbz-card__media">
@@ -76,6 +78,7 @@
         </div>
       </template>
     </lbz-card>
+    <br>
     <lbz-card>
       <template #center>
         <div class="lbz-aspect-ratio--16x9 lbz-card__media">
@@ -113,6 +116,47 @@
         <div class="lbz-card__actions__buttons">
           <lbz-button>Action 1</lbz-button>
           <lbz-button>Action 2</lbz-button>
+        </div>
+      </template>
+    </lbz-card>
+
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-card ripple>
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+      <template #end>
+        <div class="lbz-card__actions__buttons">
+          <lbz-button ripple>Action 1</lbz-button>
+          <lbz-button ripple>Action 2</lbz-button>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card :ripple="false">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+      <template #end>
+        <div class="lbz-card__actions__buttons">
+          <lbz-button :ripple="false">Action 1</lbz-button>
+          <lbz-button :ripple="false">Action 2</lbz-button>
         </div>
       </template>
     </lbz-card>
@@ -165,6 +209,47 @@
         <div class="lbz-card__actions__buttons">
           <lbz-button>Button</lbz-button>
           <lbz-button>Button</lbz-button>
+        </div>
+      </template>
+    </lbz-card>
+
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-card type="outlined" ripple>
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+      <template #end>
+        <div class="lbz-card__actions__buttons">
+          <lbz-button ripple>Action 1</lbz-button>
+          <lbz-button ripple>Action 2</lbz-button>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card type="outlined" :ripple="false">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+      <template #end>
+        <div class="lbz-card__actions__buttons">
+          <lbz-button :ripple="false">Action 1</lbz-button>
+          <lbz-button :ripple="false">Action 2</lbz-button>
         </div>
       </template>
     </lbz-card>

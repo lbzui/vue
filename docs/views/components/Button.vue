@@ -130,6 +130,11 @@
       Img
     </lbz-button>
 
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-button ripple>Ripple</lbz-button>
+    <lbz-button :ripple="false" icon="add">Non-ripple</lbz-button>
+
     <h2 class="lbz-typography--h5"># Outlined button</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'text' (default), 'outlined', 'contained'</h3>
@@ -327,6 +332,11 @@
       </template>
       Img
     </lbz-button>
+
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-button type="outlined" ripple>Ripple</lbz-button>
+    <lbz-button type="outlined" :ripple="false" icon="add">Non-ripple</lbz-button>
 
     <h2 class="lbz-typography--h5"># Contained button</h2>
 
@@ -529,6 +539,11 @@
       </template>
       Img
     </lbz-button>
+
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-button type="contained" ripple>Ripple</lbz-button>
+    <lbz-button type="contained" :ripple="false" icon="add">Non-ripple</lbz-button>
   </article>
 </template>
 

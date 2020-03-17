@@ -49,6 +49,19 @@
       value="unchecked"
       disabled
     >Unchecked</lbz-radio>
+
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-radio
+      v-model="vradio3"
+      :value="true"
+      ripple
+    >Ripple</lbz-radio>
+    <lbz-radio
+      v-model="vradio3"
+      :value="false"
+      :ripple="false"
+    >Non-ripple</lbz-radio>
   </article>
 </template>
 
@@ -60,6 +73,7 @@ export default class ComponentsRadio extends Vue {
   private vradio0: boolean = true;
   private vradio1: number = 1;
   private vradio2: string = 'checked';
+  private vradio3: boolean = true;
 
   private fchange(val: boolean | number | string, e: MouseEvent): void {
     alert(val);

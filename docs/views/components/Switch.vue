@@ -50,6 +50,11 @@
       false-value="unchecked"
       disabled
     >Unchecked</lbz-switch>
+
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-switch v-model="vswitch4" ripple>Ripple</lbz-switch>
+    <lbz-switch v-model="vswitch4" :ripple="false">Non-ripple</lbz-switch>
   </article>
 </template>
 
@@ -62,6 +67,7 @@ export default class ComponentsSwitch extends Vue {
   private vswitch1: number = 0;
   private vswitch2: string = 'checked';
   private vswitch3: string = 'unchecked';
+  private vswitch4: boolean = false;
 
   private fchange(val: boolean | number | string, e: MouseEvent): void {
     alert(val);

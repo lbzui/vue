@@ -867,6 +867,23 @@
       </lbz-list-item>
     </lbz-list>
 
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-list
+      class="lbzui-rectangle"
+      subtitle="Ripple"
+      ripple
+    >
+      <lbz-list-item>Ripple item</lbz-list-item>
+    </lbz-list>
+    <lbz-list
+      class="lbzui-rectangle"
+      subtitle="Non-ripple"
+      :ripple="false"
+    >
+      <lbz-list-item>Non-ripple item</lbz-list-item>
+    </lbz-list>
+
     <h2 class="lbz-typography--h5"># List item</h2>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: undefined (default), true, false</h3>
@@ -955,6 +972,13 @@
           />
         </template>
       </lbz-list-item>
+    </lbz-list>
+
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-list class="lbzui-rectangle">
+      <lbz-list-item ripple>Ripple item</lbz-list-item>
+      <lbz-list-item :ripple="false">Non-ripple item</lbz-list-item>
     </lbz-list>
   </article>
 </template>

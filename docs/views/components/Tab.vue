@@ -126,6 +126,23 @@
       >Item {{ item }}</lbz-tab-item>
     </lbz-tab>
 
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-tab v-model="vtab0" ripple>
+      <lbz-tab-item
+        v-for="(item, index) of 3"
+        :key="index"
+        :value="index"
+      >Ripple {{ item }}</lbz-tab-item>
+    </lbz-tab>
+    <lbz-tab v-model="vtab0" :ripple="false">
+      <lbz-tab-item
+        v-for="(item, index) of 3"
+        :key="index"
+        :value="index"
+      >Non-ripple {{ item }}</lbz-tab-item>
+    </lbz-tab>
+
     <h2 class="lbz-typography--h5"># Scrollable tab</h2>
 
     <h3 class="lbz-typography--subtitle1">$ v-model: undefined (default), true, false, x, 'x'</h3>
@@ -263,6 +280,31 @@
       >Item {{ item }}</lbz-tab-item>
     </lbz-tab>
 
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-tab
+      v-model="vtab1"
+      type="scrollable"
+      ripple
+    >
+      <lbz-tab-item
+        v-for="(item, index) of 6"
+        :key="index"
+        :value="index"
+      >Ripple {{ item }}</lbz-tab-item>
+    </lbz-tab>
+    <lbz-tab
+      v-model="vtab1"
+      type="scrollable"
+      :ripple="false"
+    >
+      <lbz-tab-item
+        v-for="(item, index) of 6"
+        :key="index"
+        :value="index"
+      >Non-ripple {{ item }}</lbz-tab-item>
+    </lbz-tab>
+
     <h2 class="lbz-typography--h5"># Tab item</h2>
 
     <h3 class="lbz-typography--subtitle1">$ router-link: undefined (default), true, false</h3>
@@ -303,6 +345,25 @@
       <lbz-tab-item :value="0" icon="phone"/>
       <lbz-tab-item :value="1" icon="favorite"/>
       <lbz-tab-item :value="2" icon="place"/>
+    </lbz-tab>
+
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-tab v-model="vtab2">
+      <lbz-tab-item
+        v-for="(item, index) of 3"
+        :key="index"
+        :value="index"
+        ripple
+      >Ripple {{ item }}</lbz-tab-item>
+    </lbz-tab>
+    <lbz-tab v-model="vtab2">
+      <lbz-tab-item
+        v-for="(item, index) of 3"
+        :key="index"
+        :value="index"
+        :ripple="false"
+      >Non-ripple {{ item }}</lbz-tab-item>
     </lbz-tab>
   </article>
 </template>

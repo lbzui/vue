@@ -59,12 +59,15 @@ export default class LbzList extends Vue {
   @Prop({ type: String, default: '' }) private subtitle!: string;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
+  // ripple: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 
   @Provide('router-link') private prouterLink: boolean = this.routerLink;
   @Provide('router-link-props') private prouterLinkProps: object = this.routerLinkProps;
   @Provide('tag') private ptag: string = this.itemTag;
   @Provide('on-background') private ponBackground: string = this.onBackground;
   @Provide('disabled') private pdisabled: boolean = this.disabled;
+  @Provide('ripple') private pripple: boolean = this.ripple;
 
   get cisDense(): boolean {
     return this.dense === undefined

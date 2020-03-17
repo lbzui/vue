@@ -38,6 +38,8 @@ export default class LbzState extends Vue {
   //             'on-primary', 'on-primary-variant', 'on-secondary', 'on-secondary-variant',
   //             'on-background', 'on-surface' (default), 'on-error', 'on-light', 'on-dark'
   @Prop({ type: String, default: '' }) private background!: string;
+  // ripple: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
   // unbounded: true, false (default)
   @Prop({ type: Boolean, default: false }) private unbounded!: boolean;
   // centered: true, false (default)
@@ -49,7 +51,13 @@ export default class LbzState extends Vue {
   private vleaveTimer: any = 0;
 
   get cisRipple(): boolean {
-    return this.$lbzui.ripple && supportsCssVariables();
+    if (!supportsCssVariables()) {
+      return false;
+    }
+
+    return this.ripple === undefined
+      ? this.$lbzui.ripple
+      : this.ripple;
   }
 
   private beforeDestroy(): void {

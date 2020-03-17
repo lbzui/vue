@@ -4,6 +4,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ active.sync: true (default), false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'modal', 'bottom (mobile only)'</h3>
+    <h3 class="lbz-typography--subtitle1">$ lock-body-scroll: true (default), false</h3>
 
     <lbz-button type="contained" @click.stop="ftoggle">{{ vactive0 ? 'Inactive' : 'Active' }}</lbz-button>
     <div class="lbzui-app">
@@ -164,6 +165,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ active.sync: true (default), false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'modal', 'bottom (mobile only)'</h3>
+    <h3 class="lbz-typography--subtitle1">$ lock-body-scroll: true (default), false</h3>
 
     <lbz-button type="contained" @click.stop="vactive1 = !vactive1">{{ vactive1 ? 'Inactive' : 'Active' }}</lbz-button>
     <div class="lbzui-app">
@@ -301,6 +303,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ active.sync: true (default), false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'modal', 'bottom (mobile only)'</h3>
+    <h3 class="lbz-typography--subtitle1">$ lock-body-scroll: true (default), false</h3>
 
     <lbz-button type="contained" @click.stop="vactive2 = !vactive2">{{ vactive2 ? 'Inactive' : 'Active' }}</lbz-button>
     <div class="lbzui-app">

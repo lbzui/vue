@@ -72,6 +72,8 @@ export default class LbzIconButton extends Vue {
   @Prop({ type: String, default: '' }) private onIcon!: string;
   // off-icon (toggle): '' (default), 'x'
   @Prop({ type: String, default: '' }) private offIcon!: string;
+  // ripple: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 
   get cgetAttrs(): ComponentAttributes {
     const {
@@ -105,6 +107,7 @@ export default class LbzIconButton extends Vue {
       class: 'lbz-icon-button__state',
       type: ['background', '', 'surface', 'light'].includes(this.onBackground) ? '' : 'primary',
       background: this.onBackground ? `on-${this.onBackground}` : '',
+      ripple: this.ripple,
       unbounded: true,
       centered: true,
     };

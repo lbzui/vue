@@ -34,6 +34,11 @@
     <lbz-button @click.stop="ftoggleInactive">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
     <lbz-fab :inactive="vinactive">add</lbz-fab>
 
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-fab ripple>add</lbz-fab>
+    <lbz-fab :ripple="false">add</lbz-fab>
+
     <h2 class="lbz-typography--h5"># Mini FAB</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'mini', 'extended'</h3>
@@ -71,6 +76,11 @@
 
     <lbz-button @click.stop="ftoggleInactive">{{ vinactive ? 'Active' : 'Inactive' }}</lbz-button>
     <lbz-fab type="mini" :inactive="vinactive">add</lbz-fab>
+
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-fab type="mini" ripple>add</lbz-fab>
+    <lbz-fab type="mini" :ripple="false">add</lbz-fab>
 
     <h2 class="lbz-typography--h5"># Extended FAB</h2>
 
@@ -140,6 +150,19 @@
       :inactive="vinactive"
       label="Create"
     />
+
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-fab
+      type="extended"
+      label="Create"
+      ripple
+    />
+    <lbz-fab
+      type="extended"
+      label="Create"
+      :ripple="false"
+    >add</lbz-fab>
   </article>
 </template>
 

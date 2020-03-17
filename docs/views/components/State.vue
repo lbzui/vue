@@ -92,6 +92,17 @@
       <lbz-state background="on-dark"></lbz-state>
     </div>
 
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <div class="lbzui-square">
+      Ripple
+      <lbz-state ripple></lbz-state>
+    </div>
+    <div class="lbzui-square">
+      Non-ripple
+      <lbz-state :ripple="false"></lbz-state>
+    </div>
+
     <h3 class="lbz-typography--subtitle1">$ unbounded: true, false (default)</h3>
 
     <div class="lbzui-square lbz-state-no-before--descendant" style="overflow: visible;">

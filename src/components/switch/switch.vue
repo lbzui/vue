@@ -16,7 +16,7 @@
             id: `${id}`,
             name: `${name}`,
             type: 'checkbox',
-            value,
+            value: vvalue,
             checked: cisChecked,
             disabled
           }"
@@ -58,8 +58,10 @@ export default class LbzSwitch extends Vue {
   @Prop({ type: String, default: '' }) private color!: string;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
+  // ripple: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 
-  private value: boolean | number | string = this.mchecked;
+  private vvalue: boolean | number | string = this.mchecked;
 
   get cisChecked(): boolean {
     return this.mchecked === this.trueValue;
@@ -70,6 +72,7 @@ export default class LbzSwitch extends Vue {
       class: 'lbz-switch__state',
       type: this.cisChecked ? 'primary' : '',
       background: this.cisChecked ? (this.color || 'secondary') : '',
+      ripple: this.ripple,
       unbounded: true,
       centered: true,
     };
@@ -77,11 +80,11 @@ export default class LbzSwitch extends Vue {
 
   @Emit('change')
   private fclick(e: MouseEvent) {
-    this.value = this.cisChecked
+    this.vvalue = this.cisChecked
       ? this.falseValue
       : this.trueValue;
 
-    return this.value;
+    return this.vvalue;
   }
 }
 </script>

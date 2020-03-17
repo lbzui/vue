@@ -35,6 +35,7 @@ export default class LbzTabItem extends Vue {
   @Inject('tag') private ptag!: string;
   @Inject('on-background') private ponBackground!: string;
   @Inject('on-content') private ponContent!: boolean;
+  @Inject('ripple') private pripple!: boolean;
 
   // router-link: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private routerLink!: boolean;
@@ -47,6 +48,14 @@ export default class LbzTabItem extends Vue {
   @Prop({ type: [Boolean, Number, String], default: undefined }) private value!: boolean | number | string;
   // icon: '' (default), 'x'
   @Prop({ type: String, default: '' }) private icon!: string;
+  // ripple: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
+
+  get cisRouterLink(): boolean {
+    return this.routerLink === undefined
+      ? this.prouterLink
+      : this.routerLink;
+  }
 
   get cgetAttrs(): ComponentAttributes {
     const {
@@ -72,12 +81,6 @@ export default class LbzTabItem extends Vue {
       };
   }
 
-  get cisRouterLink(): boolean {
-    return this.routerLink === undefined
-      ? this.prouterLink
-      : this.routerLink;
-  }
-
   get cisActive(): boolean {
     if (this.cisRouterLink) {
       return false;
@@ -91,6 +94,7 @@ export default class LbzTabItem extends Vue {
       class: 'lbz-tab-item__state',
       type: this.ponBackground === 'light' ? '' : 'primary',
       background: ['', 'surface'].includes(this.ponBackground) ? 'primary' : `on-${this.ponBackground}`,
+      ripple: this.ripple === undefined ? this.pripple : this.ripple,
     };
   }
 

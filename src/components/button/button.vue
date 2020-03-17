@@ -70,6 +70,8 @@ export default class LbzButton extends Vue {
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
   // icon: '' (default), 'x'
   @Prop({ type: String, default: '' }) private icon!: string;
+  // ripple: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 
   get cgetAttrs(): ComponentAttributes {
     const {
@@ -111,6 +113,7 @@ export default class LbzButton extends Vue {
       class: 'lbz-button__state',
       type: ['background', 'surface', 'light'].includes(this.color) ? '' : 'primary',
       background: `${(isOn ? 'on-' : '') + (this.color || 'primary')}`,
+      ripple: this.ripple,
     };
   }
 }

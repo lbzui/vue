@@ -33,6 +33,7 @@ declare global {
     class: string;
     type?: string;
     background?: string;
+    ripple?: boolean;
     unbounded?: boolean;
     centered?: boolean;
   }

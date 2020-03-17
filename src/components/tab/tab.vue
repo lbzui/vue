@@ -57,6 +57,8 @@ export default class LbzTab extends Vue {
   @Prop({ type: Boolean, default: false }) private stacked!: boolean;
   // on-content: true, false (default)
   @Prop({ type: Boolean, default: false }) private onContent!: boolean;
+  // ripple: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 
   @ProvideReactive('value') private prvalue: boolean | number | string = this.mvalue;
   @Provide('router-link') private prouterLink: boolean = this.routerLink;
@@ -64,6 +66,7 @@ export default class LbzTab extends Vue {
   @Provide('tag') private ptag: string = this.itemTag;
   @Provide('on-background') private ponBackground: string = this.onBackground;
   @Provide('on-content') private ponContent: boolean = this.onContent;
+  @Provide('ripple') private pripple: boolean = this.ripple;
 
   private created(): void {
     EventBus.$on('change', this.fvalueChanged);

@@ -51,6 +51,11 @@
     <lbz-icon-button on-background="light" disabled>favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="dark" disabled>favorite_border</lbz-icon-button>
 
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-icon-button ripple>favorite_border</lbz-icon-button>
+    <lbz-icon-button :ripple="false">favorite_border</lbz-icon-button>
+
     <h2 class="lbz-typography--h5"># Toggle button</h2>
 
     <h3 class="lbz-typography--subtitle1">$ active.sync (toggle): true, false (default)</h3>
@@ -208,6 +213,23 @@
       disabled
       on-icon="favorite"
       off-icon="favorite_border"
+    />
+
+    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+
+    <lbz-icon-button
+      :active.sync="vactive"
+      toggle
+      on-icon="favorite"
+      off-icon="favorite_border"
+      ripple
+    />
+    <lbz-icon-button
+      :active.sync="vactive"
+      toggle
+      on-icon="favorite"
+      off-icon="favorite_border"
+      :ripple="false"
     />
   </article>
 </template>

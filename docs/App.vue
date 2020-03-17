@@ -1,6 +1,7 @@
 <template>
   <div class="lbzui">
     <lbz-drawer
+      ref="drawer"
       class="lbzui__drawer"
       :active.sync="vactive"
       role="navigation"
@@ -52,6 +53,7 @@
             :router-link="false"
             tag="span"
             :disabled="!vsupportsCssVars"
+            :ripple="false"
           >
             <template #center>Dark theme (non-IE)</template>
             <template #end>
@@ -77,18 +79,19 @@
 </template>
 
 <script lang="ts">
-import { Component, Watch, Vue } from 'vue-property-decorator';
+import { Component, Ref, Watch, Vue } from 'vue-property-decorator';
 import {
   supportsCssVariables,
   isDarkModeEnabled,
   changeModeHandler,
   setModeAttributes,
   cancelContextmenu,
-  lockBodyScroll,
 } from '@/utils/funcs';
 
 @Component
 export default class App extends Vue {
+  @Ref('drawer') private rdrawer!: HTMLFormElement;
+
   private NAV: object = {
     utilities: [
       {
@@ -231,54 +234,27 @@ export default class App extends Vue {
   };
 
   private vsupportsCssVars: boolean = supportsCssVariables();
-  private visMobile: boolean = false;
   private vactive: boolean = true;
   private visDark: boolean = false;
 
   @Watch('$route.name')
   private frouteChanged(val: string, oldVal: string): void {
-    this.fcloseDrawer();
-  }
-
-  @Watch('vactive')
-  private factiveChanged(val: boolean, oldVal: boolean): void {
-    lockBodyScroll(this.visMobile && val);
+    if (this.rdrawer.visMobile) {
+      this.rdrawer.fclose();
+    }
   }
 
   private created(): void {
     cancelContextmenu();
 
-    this.fresize();
-    window.addEventListener('resize', (): void => {
-      this.fresize();
-    });
-
     if (this.vsupportsCssVars) {
       this.fchangeMode();
-      changeModeHandler((): void => {
-        this.fchangeMode();
-      });
+      changeModeHandler(this.fchangeMode);
     }
   }
 
   private freload(): void {
     window.location.reload();
-  }
-
-  private fcloseDrawer(): void {
-    if (this.visMobile) {
-      this.vactive = false;
-    }
-  }
-
-  private fresize(): void {
-    const isMobile: boolean = document.body.clientWidth < 600;
-
-    this.visMobile = isMobile;
-    if (!isMobile && this.vactive) {
-      lockBodyScroll(isMobile);
-    }
-    this.vactive = !isMobile;
   }
 
   private fchangeMode(): void {
@@ -293,7 +269,6 @@ export default class App extends Vue {
       light: '#3700b3',
       dark: '#000',
     });
-    this.fcloseDrawer();
   }
 }
 </script>

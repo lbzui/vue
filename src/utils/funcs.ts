@@ -24,9 +24,7 @@ export function isDarkModeEnabled(): boolean {
 }
 
 export function changeModeHandler(handler: () => void): void {
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (): void => {
-    handler();
-  });
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handler);
 }
 
 export function setModeAttributes(isDark: boolean, themeColor: ThemeColor): void {

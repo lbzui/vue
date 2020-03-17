@@ -53,6 +53,8 @@ export default class LbzRadio extends Vue {
   @Prop({ type: String, default: '' }) private color!: string;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
+  // ripple: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 
   get cisChecked(): boolean {
     return this.mchecked === this.value;
@@ -63,6 +65,7 @@ export default class LbzRadio extends Vue {
       class: 'lbz-radio__state',
       type: this.cisChecked ? 'primary' : '',
       background: this.cisChecked ? (this.color || 'secondary') : '',
+      ripple: this.ripple,
       unbounded: true,
       centered: true,
     };

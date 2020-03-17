@@ -49,6 +49,7 @@
 
 <script lang="ts">
 import { Component, PropSync, Prop, Watch, Vue } from 'vue-property-decorator';
+import { lockBodyScroll } from '../../utils/funcs';
 import LbzIconButton from '../icon-button/icon-button.vue';
 import LbzTopAppBar from '../top-app-bar/top-app-bar.vue';
 
@@ -70,6 +71,14 @@ export default class LbzDrawer extends Vue {
   @Prop({ type: String, default: '' }) private title!: string;
   // subtitle: '' (default), 'x'
   @Prop({ type: String, default: '' }) private subtitle!: string;
+  // lock-body-scroll: true (default), false
+  @Prop({ type: Boolean, default: true }) private lockBodyScroll!: boolean;
+
+  private visMobile: boolean = false;
+
+  get cisStandard(): boolean {
+    return ['', 'standard'].includes(this.type);
+  }
 
   get cisFullScreen(): boolean {
     return this.type === 'bottom' && this.fullScreen;
@@ -79,7 +88,38 @@ export default class LbzDrawer extends Vue {
   private factiveChanged(val: boolean, oldVal: boolean): void {
     this.$nextTick().then(() => {
       this.$emit(val ? 'open' : 'close');
+
+      if (this.lockBodyScroll) {
+        lockBodyScroll(this.cisStandard ? (this.visMobile && val) : val);
+      }
     });
+  }
+
+  private created(): void {
+    if (this.cisStandard) {
+      this.fresize();
+      window.addEventListener('resize', this.fresize);
+    }
+  }
+
+  private beforeDestroy(): void {
+    if (this.cisStandard) {
+      window.removeEventListener('resize', this.fresize);
+    }
+  }
+
+  private fresize(): void {
+    if (!this.cisStandard) {
+      return;
+    }
+
+    this.visMobile = document.body.clientWidth < 600;
+
+    if (this.lockBodyScroll && !this.visMobile && this.cisActive) {
+      lockBodyScroll(false);
+    }
+
+    this.cisActive = !this.visMobile;
   }
 
   private ftoggle(): void {

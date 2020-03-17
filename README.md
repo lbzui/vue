@@ -88,8 +88,8 @@ import '@lbzui/vue/lib/lbzui.css';
 import LBZUI from '@lbzui/vue';
 
 Vue.use(LBZUI, {
-  ripple: true,
   dense: false,
+  ripple: true,
 });
 ```
 
@@ -119,8 +119,8 @@ import {
 } from '@lbzui/vue';
 
 Vue.prototype.$lbzui = {
-  ripple: true,
   dense: false,
+  ripple: true,
 };
 
 Vue.use(Backdrop);

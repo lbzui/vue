@@ -38,12 +38,15 @@ export default class LbzFAB extends Vue {
   @Prop({ type: Boolean, default: false }) private inactive!: boolean;
   // label (type === 'extended'): '' (default), 'x'
   @Prop({ type: String, default: '' }) private label!: string;
+  // ripple: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 
   get cgetStateAttrs(): StateAttributes {
     return {
       class: 'lbz-fab__state',
       type: ['background', 'surface', 'light'].includes(this.background) ? '' : 'primary',
       background: `on-${this.background || 'secondary'}`,
+      ripple: this.ripple,
     };
   }
 }

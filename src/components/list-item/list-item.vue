@@ -40,6 +40,7 @@ export default class LbzListItem extends Vue {
   @Inject('tag') private ptag!: string;
   @Inject('on-background') private ponBackground!: string;
   @Inject('disabled') private pdisabled!: boolean;
+  @Inject('ripple') private pripple!: boolean;
 
   // router-link: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private routerLink!: boolean;
@@ -54,8 +55,13 @@ export default class LbzListItem extends Vue {
   @Prop({ type: Boolean, default: false }) private activated!: boolean;
   // disabled: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private disabled!: boolean;
+  // ripple: undefined (default), true, false
+  @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 
   get cgetAttrs(): ComponentAttributes {
+    const isRouterLink: boolean = this.routerLink === undefined
+      ? this.prouterLink
+      : this.routerLink;
     const {
       replace,
       append,
@@ -64,7 +70,7 @@ export default class LbzListItem extends Vue {
     }: any = this.prouterLinkProps;
     const tag: string = this.tag || this.ptag;
 
-    return this.cisRouterLink
+    return isRouterLink
       ? {
         is: 'router-link',
         to: this.to,
@@ -76,12 +82,6 @@ export default class LbzListItem extends Vue {
       } : {
         is: tag,
       };
-  }
-
-  get cisRouterLink(): boolean {
-    return this.routerLink === undefined
-      ? this.prouterLink
-      : this.routerLink;
   }
 
   get cisDisabled(): boolean {
@@ -97,6 +97,7 @@ export default class LbzListItem extends Vue {
       class: 'lbz-list-item__state',
       type: ['', 'surface', 'light'].includes(this.ponBackground) ? '' : 'primary',
       background: isPrimary ? 'primary' : (this.ponBackground ? `on-${this.ponBackground}` : ''),
+      ripple: this.ripple === undefined ? this.pripple : this.ripple,
     };
   }
 }
