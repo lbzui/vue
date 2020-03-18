@@ -31,34 +31,71 @@
     >Primary</lbz-radio>
     <lbz-radio v-model="vradio1" :value="0">Secondary</lbz-radio>
 
+    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+
+    <div class="lbzui-square lbzui-radio--primary">
+      <lbz-radio
+        v-model="vradio2"
+        value="primary"
+        on-background="primary"
+      >Primary</lbz-radio>
+    </div>
+    <div class="lbzui-square lbzui-radio--secondary">
+      <lbz-radio
+        v-model="vradio2"
+        value="secondary"
+        on-background="secondary"
+      >Secondary</lbz-radio>
+    </div>
+    <div class="lbzui-square">
+      <lbz-radio
+        v-model="vradio2"
+        value="surface"
+      >Surface</lbz-radio>
+    </div>
+    <div class="lbzui-square lbzui-radio--light">
+      <lbz-radio
+        v-model="vradio2"
+        value="light"
+        on-background="light"
+      >Light</lbz-radio>
+    </div>
+    <div class="lbzui-square lbzui-radio--dark">
+      <lbz-radio
+        v-model="vradio2"
+        value="dark"
+        on-background="dark"
+      >Dark</lbz-radio>
+    </div>
+
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
 
     <lbz-radio
-      v-model="vradio2"
-      value="checked"
+      v-model="vradio3"
+      :value="true"
       color="primary"
       disabled
     >Primary & Checked</lbz-radio>
     <lbz-radio
-      v-model="vradio2"
-      value="checked"
+      v-model="vradio3"
+      :value="true"
       disabled
     >Checked</lbz-radio>
     <lbz-radio
-      v-model="vradio2"
-      value="unchecked"
+      v-model="vradio3"
+      :value="false"
       disabled
     >Unchecked</lbz-radio>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
 
     <lbz-radio
-      v-model="vradio3"
+      v-model="vradio4"
       :value="true"
       ripple
     >Ripple</lbz-radio>
     <lbz-radio
-      v-model="vradio3"
+      v-model="vradio4"
       :value="false"
       :ripple="false"
     >Non-ripple</lbz-radio>
@@ -72,12 +109,12 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class ComponentsRadio extends Vue {
   private vradio0: boolean = true;
   private vradio1: number = 1;
-  private vradio2: string = 'checked';
+  private vradio2: string = 'surface';
   private vradio3: boolean = true;
+  private vradio4: boolean = true;
 
   private fchange(val: boolean | number | string, e: MouseEvent): void {
-    alert(val);
-    console.log(e);
+    console.log(val, e);
   }
 }
 </script>

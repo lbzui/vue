@@ -134,9 +134,15 @@
 
   // NOTE: `:hover`, `:focus`, and `:active` will not work,
   // mainly applied in Card, List, and List item
-  .lbz-state-no-before--child > &::before,
-  .lbz-state-no-before--descendant &::before {
-    content: normal;
+  .lbz-state-no-before--child > &,
+  .lbz-state-no-before--descendant & {
+    &::before {
+      content: normal;
+    }
+
+    &:hover {
+      cursor: default;
+    }
   }
 }
 
@@ -163,6 +169,10 @@
     transform-origin: center center;
   }
 
+  &:active::before {
+    opacity: #lbz-state.surface[enabled] !important;
+  }
+
   // type
   &.lbz-state--primary {
     --lbz-ripple-opacity: #lbz-state.primary[pressed];
@@ -177,14 +187,8 @@
     overflow: visible;
   }
 
-  &.lbz-ripple-enter {
-    &:active::before {
-      opacity: #lbz-state.surface[enabled];
-    }
-
-    &::after {
-      animation: lbz-ripple-opacity-in 75ms forwards, lbz-ripple-radius-in 225ms forwards;
-    }
+  &.lbz-ripple-enter::after {
+    animation: lbz-ripple-opacity-in 75ms forwards, lbz-ripple-radius-in 225ms forwards;
   }
 
   &.lbz-ripple-leave::after {

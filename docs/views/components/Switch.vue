@@ -70,8 +70,7 @@ export default class ComponentsSwitch extends Vue {
   private vswitch4: boolean = false;
 
   private fchange(val: boolean | number | string, e: MouseEvent): void {
-    alert(val);
-    console.log(e);
+    console.log(val, e);
   }
 }
 </script>

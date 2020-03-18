@@ -6,13 +6,13 @@
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'modal', 'bottom (mobile only)'</h3>
     <h3 class="lbz-typography--subtitle1">$ lock-body-scroll: true (default), false</h3>
 
-    <lbz-button type="contained" @click.stop="ftoggle">{{ vactive0 ? 'Inactive' : 'Active' }}</lbz-button>
+    <lbz-button type="contained" @click.stop="ftoggleActive">{{ vactive0 ? 'Inactive' : 'Active' }}</lbz-button>
     <div class="lbzui-app">
       <lbz-drawer
         ref="drawer"
         :active.sync="vactive0"
-        @open="fopen"
-        @close="fclose"
+        @open="fbeforeOpen"
+        @close="fbeforeClose"
       >
         <template #center>
           <lbz-list
@@ -550,16 +550,16 @@ export default class ComponentsDrawer extends Vue {
   private vactive1: boolean = true;
   private vactive2: boolean = true;
 
-  private ftoggle(): void {
+  private ftoggleActive(): void {
     this.rdrawer.ftoggle();
   }
 
-  private fopen(): void {
-    alert('Open');
+  private fbeforeOpen(): void {
+    console.log('Drawer will be opened');
   }
 
-  private fclose(): void {
-    alert('Close');
+  private fbeforeClose(): void {
+    console.log('Drawer will be closed');
   }
 }
 </script>

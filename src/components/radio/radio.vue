@@ -3,6 +3,7 @@
     :class="[
       'lbz-radio',
       color && `lbz-radio--${color}`,
+      onBackground && `lbz-radio--on-${onBackground}`,
       cisChecked && 'lbz-is-checked',
       disabled && 'lbz-is-disabled'
     ]"
@@ -51,6 +52,8 @@ export default class LbzRadio extends Vue {
   @Prop({ type: [Boolean, Number, String], required: true }) private value!: boolean | number | string;
   // color: 'primary', 'secondary' (default)
   @Prop({ type: String, default: '' }) private color!: string;
+  // on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'
+  @Prop({ type: String, default: '' }) private onBackground!: string;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
   // ripple: undefined (default), true, false

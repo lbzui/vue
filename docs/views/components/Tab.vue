@@ -378,8 +378,7 @@ export default class ComponentsTab extends Vue {
   private vtab2: number = 0;
 
   private fchange(val: boolean | number | string, e: MouseEvent): void {
-    alert(val);
-    console.log(e);
+    console.log(val, e);
   }
 }
 </script>

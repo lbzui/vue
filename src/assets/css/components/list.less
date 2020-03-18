@@ -68,7 +68,7 @@
         }
 
         &__avatar.lbz-icon {
-          background-color: var(--lbz-theme-outline-on-primary);
+          background-color: var(--lbz-theme-divider-on-primary);
         }
 
         // activated
@@ -114,7 +114,7 @@
         }
 
         &__avatar.lbz-icon {
-          background-color: var(--lbz-theme-outline-on-secondary);
+          background-color: var(--lbz-theme-divider-on-secondary);
         }
 
         // activated
@@ -160,7 +160,7 @@
         }
 
         &__avatar.lbz-icon {
-          background-color: #lbz-theme-outline[dark];
+          background-color: #lbz-theme.divider[dark];
         }
 
         // activated
@@ -208,7 +208,7 @@
       }
 
       &__avatar.lbz-icon {
-        background-color: #lbz-theme-outline[light];
+        background-color: #lbz-theme.divider[light];
       }
 
       // activated
@@ -235,11 +235,16 @@
     }
   }
 
-  &:not(.lbz-list--on-primary):not(.lbz-list--on-secondary):not(.lbz-list--on-light):not(.lbz-list--on-dark)
-  .lbz-is-activated .lbz-list-item__state {
-    &::before,
-    &::after {
-      background-color: var(--lbz-theme-primary);
+  &:not(.lbz-list--on-primary):not(.lbz-list--on-secondary):not(.lbz-list--on-light):not(.lbz-list--on-dark) {
+    // selected, activated
+    .lbz-is-selected,
+    .lbz-is-activated {
+      .lbz-list-item__state {
+        &::before,
+        &::after {
+          background-color: var(--lbz-theme-primary);
+        }
+      }
     }
   }
 

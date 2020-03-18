@@ -13,48 +13,6 @@ const routes = [
     component: Home,
   },
 
-  // Utilities
-  {
-    path: '/utilities/aspect-ratio',
-    name: 'aspect-ratio',
-    component: () => import(/* webpackChunkName: "aspect-ratio" */ '../views/utilities/AspectRatio.vue'),
-  },
-  {
-    path: '/utilities/clearfix',
-    name: 'clearfix',
-    component: () => import(/* webpackChunkName: "clearfix" */ '../views/utilities/Clearfix.vue'),
-  },
-  {
-    path: '/utilities/elevation',
-    name: 'elevation',
-    component: () => import(/* webpackChunkName: "elevation" */ '../views/utilities/Elevation.vue'),
-  },
-  {
-    path: '/utilities/layout-grid',
-    name: 'layout-grid',
-    component: () => import(/* webpackChunkName: "layout-grid" */ '../views/utilities/LayoutGrid.vue'),
-  },
-  {
-    path: '/utilities/shadow',
-    name: 'shadow',
-    component: () => import(/* webpackChunkName: "shadow" */ '../views/utilities/Shadow.vue'),
-  },
-  {
-    path: '/utilities/surface',
-    name: 'surface',
-    component: () => import(/* webpackChunkName: "surface" */ '../views/utilities/Surface.vue'),
-  },
-  {
-    path: '/utilities/truncate',
-    name: 'truncate',
-    component: () => import(/* webpackChunkName: "truncate" */ '../views/utilities/Truncate.vue'),
-  },
-  {
-    path: '/utilities/typography',
-    name: 'typography',
-    component: () => import(/* webpackChunkName: "typography" */ '../views/utilities/Typography.vue'),
-  },
-
   // Components
   {
     path: '/components/backdrop',
@@ -135,6 +93,48 @@ const routes = [
     path: '/components/top-app-bar',
     name: 'top-app-bar',
     component: () => import(/* webpackChunkName: "top-app-bar" */ '../views/components/TopAppBar.vue'),
+  },
+
+  // Utilities
+  {
+    path: '/utilities/aspect-ratio',
+    name: 'aspect-ratio',
+    component: () => import(/* webpackChunkName: "aspect-ratio" */ '../views/utilities/AspectRatio.vue'),
+  },
+  {
+    path: '/utilities/clearfix',
+    name: 'clearfix',
+    component: () => import(/* webpackChunkName: "clearfix" */ '../views/utilities/Clearfix.vue'),
+  },
+  {
+    path: '/utilities/elevation',
+    name: 'elevation',
+    component: () => import(/* webpackChunkName: "elevation" */ '../views/utilities/Elevation.vue'),
+  },
+  {
+    path: '/utilities/layout-grid',
+    name: 'layout-grid',
+    component: () => import(/* webpackChunkName: "layout-grid" */ '../views/utilities/LayoutGrid.vue'),
+  },
+  {
+    path: '/utilities/shadow',
+    name: 'shadow',
+    component: () => import(/* webpackChunkName: "shadow" */ '../views/utilities/Shadow.vue'),
+  },
+  {
+    path: '/utilities/surface',
+    name: 'surface',
+    component: () => import(/* webpackChunkName: "surface" */ '../views/utilities/Surface.vue'),
+  },
+  {
+    path: '/utilities/truncate',
+    name: 'truncate',
+    component: () => import(/* webpackChunkName: "truncate" */ '../views/utilities/Truncate.vue'),
+  },
+  {
+    path: '/utilities/typography',
+    name: 'typography',
+    component: () => import(/* webpackChunkName: "typography" */ '../views/utilities/Typography.vue'),
   },
 
   // 404

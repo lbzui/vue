@@ -218,8 +218,9 @@
     <lbz-card type="outlined" ripple>
       <template #start>
         <div class="lbz-card__header__center">
-          <span class="lbz-card__title">Title goes here</span>
-          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
         </div>
         <div class="lbz-card__header__end">
           <div class="lbz-aspect-ratio--1x1 lbz-card__media">
@@ -229,16 +230,17 @@
       </template>
       <template #end>
         <div class="lbz-card__actions__buttons">
-          <lbz-button ripple>Action 1</lbz-button>
-          <lbz-button ripple>Action 2</lbz-button>
+          <lbz-button ripple>Button</lbz-button>
+          <lbz-button ripple>Button</lbz-button>
         </div>
       </template>
     </lbz-card>
     <lbz-card type="outlined" :ripple="false">
       <template #start>
         <div class="lbz-card__header__center">
-          <span class="lbz-card__title">Title goes here</span>
-          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
         </div>
         <div class="lbz-card__header__end">
           <div class="lbz-aspect-ratio--1x1 lbz-card__media">
@@ -248,8 +250,8 @@
       </template>
       <template #end>
         <div class="lbz-card__actions__buttons">
-          <lbz-button :ripple="false">Action 1</lbz-button>
-          <lbz-button :ripple="false">Action 2</lbz-button>
+          <lbz-button :ripple="false">Button</lbz-button>
+          <lbz-button :ripple="false">Button</lbz-button>
         </div>
       </template>
     </lbz-card>

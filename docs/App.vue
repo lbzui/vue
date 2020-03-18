@@ -21,16 +21,16 @@
           <lbz-divider/>
           <lbz-list-item to="/">Getting started</lbz-list-item>
           <lbz-divider/>
-          <span class="lbz-list__subtitle">Utilities</span>
+          <span class="lbz-list__subtitle">Components</span>
           <lbz-list-item
-            v-for="item of NAV.utilities"
+            v-for="item of NAV.components"
             :key="item.path"
             :to="item.path"
           >{{ item.label }}</lbz-list-item>
           <lbz-divider/>
-          <span class="lbz-list__subtitle">Components</span>
+          <span class="lbz-list__subtitle">Utilities</span>
           <lbz-list-item
-            v-for="item of NAV.components"
+            v-for="item of NAV.utilities"
             :key="item.path"
             :to="item.path"
           >{{ item.label }}</lbz-list-item>
@@ -93,40 +93,6 @@ export default class App extends Vue {
   @Ref('drawer') private rdrawer!: HTMLFormElement;
 
   private NAV: object = {
-    utilities: [
-      {
-        path: '/utilities/aspect-ratio',
-        label: 'Aspect ratio',
-      },
-      {
-        path: '/utilities/clearfix',
-        label: 'Clearfix',
-      },
-      {
-        path: '/utilities/elevation',
-        label: 'Elevation',
-      },
-      {
-        path: '/utilities/layout-grid',
-        label: 'Layout grid',
-      },
-      {
-        path: '/utilities/shadow',
-        label: 'Shadow',
-      },
-      {
-        path: '/utilities/surface',
-        label: 'Surface',
-      },
-      {
-        path: '/utilities/truncate',
-        label: 'Truncate',
-      },
-      {
-        path: '/utilities/typography',
-        label: 'Typography',
-      },
-    ],
     components: [
       {
         path: '/components/backdrop',
@@ -191,6 +157,40 @@ export default class App extends Vue {
       {
         path: '/components/top-app-bar',
         label: 'Top app bar',
+      },
+    ],
+    utilities: [
+      {
+        path: '/utilities/aspect-ratio',
+        label: 'Aspect ratio',
+      },
+      {
+        path: '/utilities/clearfix',
+        label: 'Clearfix',
+      },
+      {
+        path: '/utilities/elevation',
+        label: 'Elevation',
+      },
+      {
+        path: '/utilities/layout-grid',
+        label: 'Layout grid',
+      },
+      {
+        path: '/utilities/shadow',
+        label: 'Shadow',
+      },
+      {
+        path: '/utilities/surface',
+        label: 'Surface',
+      },
+      {
+        path: '/utilities/truncate',
+        label: 'Truncate',
+      },
+      {
+        path: '/utilities/typography',
+        label: 'Typography',
       },
     ],
     links: [

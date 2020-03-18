@@ -88,6 +88,77 @@
     border-color: var(--lbz-theme-primary);
   }
 
+  // on-background
+  &&--on {
+    &-primary {
+      .lbz-radio__circle {
+        border-color: var(--lbz-theme-text-medium-emphasis-on-primary);
+      }
+
+      .lbz-radio__label {
+        color: var(--lbz-theme-text-medium-emphasis-on-primary);
+      }
+
+      &.lbz-is-checked .lbz-radio__circle {
+        border-color: var(--lbz-theme-secondary);
+      }
+
+      // disabled
+      &.lbz-is-disabled .lbz-radio__circle {
+        border-color: var(--lbz-theme-text-disabled-on-primary);
+      }
+    }
+
+    &-secondary {
+      .lbz-radio__circle {
+        border-color: var(--lbz-theme-text-medium-emphasis-on-secondary);
+      }
+
+      .lbz-radio__label {
+        color: var(--lbz-theme-text-medium-emphasis-on-secondary);
+      }
+
+      &.lbz-is-checked .lbz-radio__circle {
+        border-color: var(--lbz-theme-primary);
+      }
+
+      // disabled
+      &.lbz-is-disabled .lbz-radio__circle {
+        border-color: var(--lbz-theme-text-disabled-on-secondary);
+      }
+    }
+
+    &-light {
+      .lbz-radio__circle {
+        border-color: #lbz-theme-text.dark[medium-emphasis];
+      }
+
+      .lbz-radio__label {
+        color: #lbz-theme-text.dark[medium-emphasis];
+      }
+
+      // disabled
+      &.lbz-is-disabled .lbz-radio__circle {
+        border-color: #lbz-theme-text.dark[disabled];
+      }
+    }
+
+    &-dark {
+      .lbz-radio__circle {
+        border-color: #lbz-theme-text.light[medium-emphasis];
+      }
+
+      .lbz-radio__label {
+        color: #lbz-theme-text.light[medium-emphasis];
+      }
+
+      // disabled
+      &.lbz-is-disabled .lbz-radio__circle {
+        border-color: #lbz-theme-text.light[disabled];
+      }
+    }
+  }
+
   // disabled
   &.lbz-is-disabled {
     .lbz-radio__circle {

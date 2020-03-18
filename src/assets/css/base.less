@@ -1,6 +1,10 @@
 @import "~normalize.css";
 
 /*! @lbzui/vue v0.4.0 | MIT License | https://github.com/lbzui/vue */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html,
 body {
   width: 100%;
@@ -11,7 +15,6 @@ body {
   background-color: var(--lbz-theme-surface);
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   // lock-body-scroll
   &.lbz-is-locked {

@@ -9,8 +9,8 @@
     <lbz-dialog
       ref="dialog"
       :active.sync="valert0"
-      @open="fopen"
-      @close="fclose"
+      @open="fbeforeOpen"
+      @close="fbeforeClose"
     >
       <template #center>Discard draft?</template>
       <template #end>
@@ -373,12 +373,12 @@ export default class ComponentsDialog extends Vue {
   private vfullScreen1: boolean = false;
   private vfullScreen2: boolean = false;
 
-  private fopen(): void {
-    alert('Open');
+  private fbeforeOpen(): void {
+    console.log('Dialog will be opened');
   }
 
-  private fclose(): void {
-    alert('Close');
+  private fbeforeClose(): void {
+    console.log('Dialog will be closed');
   }
 
   private fcancel(): void {
