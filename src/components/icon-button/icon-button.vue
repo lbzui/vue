@@ -64,7 +64,7 @@ export default class LbzIconButton extends Vue {
 
   // toggle: true, false (default)
   @Prop({ type: Boolean, default: false }) private toggle!: boolean;
-  // on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'
+  // on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
@@ -105,7 +105,7 @@ export default class LbzIconButton extends Vue {
   get cgetStateAttrs(): StateAttributes {
     return {
       class: 'lbz-icon-button__state',
-      type: ['background', '', 'surface', 'light'].includes(this.onBackground) ? '' : 'primary',
+      type: ['primary', 'secondary', 'error'].includes(this.onBackground) ? 'primary' : '',
       background: this.onBackground ? `on-${this.onBackground}` : '',
       ripple: this.ripple,
       unbounded: true,

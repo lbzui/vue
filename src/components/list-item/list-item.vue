@@ -95,7 +95,7 @@ export default class LbzListItem extends Vue {
 
     return {
       class: 'lbz-list-item__state',
-      type: ['', 'surface', 'light'].includes(this.ponBackground) ? '' : 'primary',
+      type: ['primary', 'secondary'].includes(this.ponBackground) ? 'primary' : '',
       background: isPrimary ? 'primary' : (this.ponBackground ? `on-${this.ponBackground}` : ''),
       ripple: this.ripple === undefined ? this.pripple : this.ripple,
     };

@@ -31,11 +31,10 @@
     >favorite_border</lbz-icon-button>
     <lbz-icon-button tag="a" href="#/components/icon-button">favorite_border</lbz-icon-button>
 
-    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'</h3>
 
     <lbz-icon-button on-background="primary">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="secondary">favorite_border</lbz-icon-button>
-    <lbz-icon-button on-background="background">favorite_border</lbz-icon-button>
     <lbz-icon-button>favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="error">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="light">favorite_border</lbz-icon-button>
@@ -45,7 +44,6 @@
 
     <lbz-icon-button on-background="primary" disabled>favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="secondary" disabled>favorite_border</lbz-icon-button>
-    <lbz-icon-button on-background="background" disabled>favorite_border</lbz-icon-button>
     <lbz-icon-button disabled>favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="error" disabled>favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="light" disabled>favorite_border</lbz-icon-button>
@@ -106,7 +104,7 @@
       off-icon="favorite_border"
     />
 
-    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'</h3>
 
     <lbz-icon-button
       :active.sync="vactive"
@@ -119,13 +117,6 @@
       :active.sync="vactive"
       toggle
       on-background="secondary"
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
-    <lbz-icon-button
-      :active.sync="vactive"
-      toggle
-      on-background="background"
       on-icon="favorite"
       off-icon="favorite_border"
     />
@@ -171,14 +162,6 @@
       :active.sync="vactive"
       toggle
       on-background="secondary"
-      disabled
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
-    <lbz-icon-button
-      :active.sync="vactive"
-      toggle
-      on-background="background"
       disabled
       on-icon="favorite"
       off-icon="favorite_border"

@@ -46,12 +46,12 @@
     </lbz-top-app-bar>
     <lbz-top-app-bar background="background" title="Page title">
       <template #start>
-        <lbz-icon-button on-background="background">menu</lbz-icon-button>
+        <lbz-icon-button>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="background">share</lbz-icon-button>
-        <lbz-icon-button on-background="background">search</lbz-icon-button>
-        <lbz-icon-button on-background="background">more_vert</lbz-icon-button>
+        <lbz-icon-button>share</lbz-icon-button>
+        <lbz-icon-button>search</lbz-icon-button>
+        <lbz-icon-button>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar background="surface" title="Page title">
@@ -219,12 +219,12 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="background">menu</lbz-icon-button>
+        <lbz-icon-button>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="background">share</lbz-icon-button>
-        <lbz-icon-button on-background="background">search</lbz-icon-button>
-        <lbz-icon-button on-background="background">more_vert</lbz-icon-button>
+        <lbz-icon-button>share</lbz-icon-button>
+        <lbz-icon-button>search</lbz-icon-button>
+        <lbz-icon-button>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -397,12 +397,12 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="background">menu</lbz-icon-button>
+        <lbz-icon-button>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="background">share</lbz-icon-button>
-        <lbz-icon-button on-background="background">search</lbz-icon-button>
-        <lbz-icon-button class="lbz-is-most-used" on-background="background">more_vert</lbz-icon-button>
+        <lbz-icon-button>share</lbz-icon-button>
+        <lbz-icon-button>search</lbz-icon-button>
+        <lbz-icon-button class="lbz-is-most-used">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar

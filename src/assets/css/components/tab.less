@@ -88,11 +88,8 @@
         color: #lbz-theme-text.dark[high-emphasis];
       }
     }
-  }
 
-  &&--on-dark,
-  html[theme="dark"] &:not(.lbz-tab--on-light):not(.lbz-tab--on-dark) {
-    .lbz-tab-item {
+    &-dark .lbz-tab-item {
       color: #lbz-theme-text.light[medium-emphasis];
 
       &__indicator {
@@ -105,13 +102,23 @@
     }
   }
 
-  html[theme="dark"] &:not(.lbz-tab--on-light):not(.lbz-tab--on-dark) {
-    background-color: transparent;
+  html[theme="dark"] & {
+    &.lbz-tab--on-primary,
+    &.lbz-tab--on-secondary {
+      background-color: transparent;
 
-    .lbz-tab-item__state {
-      &::before,
-      &::after {
-        background-color: @white;
+      .lbz-tab-item {
+        color: #lbz-theme-text.light[medium-emphasis];
+
+        &__indicator,
+        &__state::before,
+        &__state::after {
+          background-color: #lbz-theme.dark[primary];
+        }
+
+        &.lbz-is-active {
+          color: #lbz-theme.dark[primary];
+        }
       }
     }
   }

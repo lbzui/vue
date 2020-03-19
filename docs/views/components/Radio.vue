@@ -38,54 +38,143 @@
         v-model="vradio2"
         value="primary"
         on-background="primary"
-      >Primary</lbz-radio>
+      />
     </div>
     <div class="lbzui-square lbzui-radio--secondary">
       <lbz-radio
         v-model="vradio2"
         value="secondary"
+        color="primary"
         on-background="secondary"
-      >Secondary</lbz-radio>
+      />
     </div>
     <div class="lbzui-square">
       <lbz-radio
         v-model="vradio2"
         value="surface"
-      >Surface</lbz-radio>
+        color="primary"
+      />
+      <lbz-radio v-model="vradio2" value="surface"/>
     </div>
     <div class="lbzui-square lbzui-radio--light">
       <lbz-radio
         v-model="vradio2"
         value="light"
+        color="primary"
         on-background="light"
-      >Light</lbz-radio>
+      />
+      <lbz-radio
+        v-model="vradio2"
+        value="light"
+        on-background="light"
+      />
     </div>
     <div class="lbzui-square lbzui-radio--dark">
       <lbz-radio
         v-model="vradio2"
         value="dark"
+        color="primary"
         on-background="dark"
-      >Dark</lbz-radio>
+      />
+      <lbz-radio
+        v-model="vradio2"
+        value="dark"
+        on-background="dark"
+      />
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
 
-    <lbz-radio
-      v-model="vradio3"
-      :value="true"
-      color="primary"
-      disabled
-    >Primary & Checked</lbz-radio>
-    <lbz-radio
-      v-model="vradio3"
-      :value="true"
-      disabled
-    >Checked</lbz-radio>
-    <lbz-radio
-      v-model="vradio3"
-      :value="false"
-      disabled
-    >Unchecked</lbz-radio>
+    <div class="lbzui-square lbzui-radio--primary">
+      <lbz-radio
+        v-model="vradio3"
+        value="checked"
+        on-background="primary"
+        disabled
+      />
+      <lbz-radio
+        v-model="vradio3"
+        value="unchecked"
+        on-background="primary"
+        disabled
+      />
+    </div>
+    <div class="lbzui-square lbzui-radio--secondary">
+      <lbz-radio
+        v-model="vradio3"
+        value="checked"
+        color="primary"
+        on-background="secondary"
+        disabled
+      />
+      <lbz-radio
+        v-model="vradio3"
+        value="unchecked"
+        color="primary"
+        on-background="secondary"
+        disabled
+      />
+    </div>
+    <div class="lbzui-square">
+      <lbz-radio
+        v-model="vradio3"
+        value="checked"
+        color="primary"
+        disabled
+      />
+      <lbz-radio
+        v-model="vradio3"
+        value="checked"
+        disabled
+      />
+      <lbz-radio
+        v-model="vradio3"
+        value="unchecked"
+        disabled
+      />
+    </div>
+    <div class="lbzui-square lbzui-radio--light">
+      <lbz-radio
+        v-model="vradio3"
+        value="checked"
+        color="primary"
+        on-background="light"
+        disabled
+      />
+      <lbz-radio
+        v-model="vradio3"
+        value="checked"
+        on-background="light"
+        disabled
+      />
+      <lbz-radio
+        v-model="vradio3"
+        value="unchecked"
+        on-background="light"
+        disabled
+      />
+    </div>
+    <div class="lbzui-square lbzui-radio--dark">
+      <lbz-radio
+        v-model="vradio3"
+        value="checked"
+        color="primary"
+        on-background="dark"
+        disabled
+      />
+      <lbz-radio
+        v-model="vradio3"
+        value="checked"
+        on-background="dark"
+        disabled
+      />
+      <lbz-radio
+        v-model="vradio3"
+        value="unchecked"
+        on-background="dark"
+        disabled
+      />
+    </div>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
 
@@ -110,7 +199,7 @@ export default class ComponentsRadio extends Vue {
   private vradio0: boolean = true;
   private vradio1: number = 1;
   private vradio2: string = 'surface';
-  private vradio3: boolean = true;
+  private vradio3: string = 'checked';
   private vradio4: boolean = true;
 
   private fchange(val: boolean | number | string, e: MouseEvent): void {

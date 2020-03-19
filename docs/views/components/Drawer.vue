@@ -11,6 +11,7 @@
       <lbz-drawer
         ref="drawer"
         :active.sync="vactive0"
+        :lock-body-scroll="false"
         @open="fbeforeOpen"
         @close="fbeforeClose"
       >
@@ -36,7 +37,7 @@
       </lbz-drawer>
     </div>
     <div class="lbzui-app">
-      <lbz-drawer :active.sync="vactive0">
+      <lbz-drawer :active.sync="vactive0" :lock-body-scroll="false">
         <template #center>
           <lbz-list
             tag="nav"
@@ -78,7 +79,11 @@
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
 
     <div class="lbzui-app">
-      <lbz-drawer :active.sync="vactive0" title="Title">
+      <lbz-drawer
+        :active.sync="vactive0"
+        title="Title"
+        :lock-body-scroll="false"
+      >
         <template #center>
           <lbz-list
             tag="nav"
@@ -120,6 +125,7 @@
         :active.sync="vactive0"
         title="Title"
         subtitle="subtext"
+        :lock-body-scroll="false"
       >
         <template #start>
           <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
@@ -169,7 +175,11 @@
 
     <lbz-button type="contained" @click.stop="vactive1 = !vactive1">{{ vactive1 ? 'Inactive' : 'Active' }}</lbz-button>
     <div class="lbzui-app">
-      <lbz-drawer :active.sync="vactive1" type="modal">
+      <lbz-drawer
+        :active.sync="vactive1"
+        type="modal"
+        :lock-body-scroll="false"
+      >
         <template #center>
           <lbz-list
             tag="nav"
@@ -215,6 +225,7 @@
         :active.sync="vactive1"
         type="modal"
         title="Title"
+        :lock-body-scroll="false"
       >
         <template #center>
           <lbz-list
@@ -258,6 +269,7 @@
         type="modal"
         title="Title"
         subtitle="subtext"
+        :lock-body-scroll="false"
       >
         <template #start>
           <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
@@ -307,7 +319,11 @@
 
     <lbz-button type="contained" @click.stop="vactive2 = !vactive2">{{ vactive2 ? 'Inactive' : 'Active' }}</lbz-button>
     <div class="lbzui-app">
-      <lbz-drawer :active.sync="vactive2" type="bottom">
+      <lbz-drawer
+        :active.sync="vactive2"
+        type="bottom"
+        :lock-body-scroll="false"
+      >
         <template #center>
           <lbz-list
             tag="nav"
@@ -353,6 +369,7 @@
         type="bottom"
         full-screen
         title="Title"
+        :lock-body-scroll="false"
       >
         <template #start>
           <lbz-icon-button>search</lbz-icon-button>
@@ -402,6 +419,7 @@
         :active.sync="vactive2"
         type="bottom"
         title="Title"
+        :lock-body-scroll="false"
       >
         <template #center>
           <lbz-list
@@ -445,6 +463,7 @@
         type="bottom"
         title="Title"
         subtitle="subtext"
+        :lock-body-scroll="false"
       >
         <template #center>
           <lbz-list
