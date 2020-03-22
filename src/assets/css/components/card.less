@@ -7,7 +7,7 @@
   position: relative;
   .lbz-elevation(1);
   box-sizing: border-box;
-  border-radius: var(--lbz-shape-absolute-size-medium);
+  border-radius: var(--lbz-shape-size-medium);
   text-decoration: none;
   color: var(--lbz-theme-text-medium-emphasis-on-surface);
   .lbz-surface(1);
@@ -155,8 +155,15 @@
 
   // type
   &&--outlined {
-    border: 1px solid var(--lbz-theme-divider-on-surface);
+    border: 1px solid var(--lbz-theme-outline-on-surface);
     .lbz-surface(0);
     box-shadow: none;
+  }
+
+  // disabled
+  &.lbz-is-disabled {
+    opacity: #lbz-state.surface[disabled];
+    box-shadow: none;
+    pointer-events: none;
   }
 }

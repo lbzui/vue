@@ -70,7 +70,7 @@
   }
 
   &.lbz-is-checked .lbz-radio__circle {
-    border-color: var(--lbz-theme-secondary);
+    border-color: var(--lbz-theme-primary);
     transition: border-color 120ms #lbz-motion.curve[deceleration];
 
     &::after {
@@ -84,8 +84,8 @@
   }
 
   // color
-  &&--primary.lbz-is-checked:not(.lbz-is-disabled) .lbz-radio__circle {
-    border-color: var(--lbz-theme-primary);
+  &&--secondary.lbz-is-checked .lbz-radio__circle {
+    border-color: var(--lbz-theme-secondary);
   }
 
   // on-background
@@ -98,17 +98,6 @@
       .lbz-radio__label {
         color: var(--lbz-theme-text-medium-emphasis-on-primary);
       }
-
-      // disabled
-      &.lbz-is-disabled {
-        .lbz-radio__circle {
-          border-color: var(--lbz-theme-text-disabled-on-primary);
-        }
-
-        .lbz-radio__label {
-          color: var(--lbz-theme-text-disabled-on-primary);
-        }
-      }
     }
 
     &-secondary {
@@ -119,16 +108,15 @@
       .lbz-radio__label {
         color: var(--lbz-theme-text-medium-emphasis-on-secondary);
       }
+    }
 
-      // disabled
-      &.lbz-is-disabled {
-        .lbz-radio__circle {
-          border-color: var(--lbz-theme-text-disabled-on-secondary);
-        }
+    &-error {
+      &:not(.lbz-is-checked) .lbz-radio__circle {
+        border-color: var(--lbz-theme-text-medium-emphasis-on-error);
+      }
 
-        .lbz-radio__label {
-          color: var(--lbz-theme-text-disabled-on-secondary);
-        }
+      .lbz-radio__label {
+        color: var(--lbz-theme-text-medium-emphasis-on-error);
       }
     }
 
@@ -140,23 +128,11 @@
       .lbz-radio__label {
         color: #lbz-theme-text.dark[medium-emphasis];
       }
-
-      // disabled
-      &.lbz-is-disabled {
-        .lbz-radio__circle {
-          border-color: #lbz-theme-text.dark[disabled];
-        }
-
-        .lbz-radio__label {
-          color: #lbz-theme-text.dark[disabled];
-        }
-      }
     }
   }
 
   &&--on-dark,
-  html[theme="dark"] &.lbz-radio--on-primary,
-  html[theme="dark"] &.lbz-radio--on-secondary {
+  html[theme="dark"] &.lbz-is-auto-dark {
     &:not(.lbz-is-checked) .lbz-radio__circle {
       border-color: #lbz-theme-text.light[medium-emphasis];
     }
@@ -164,39 +140,18 @@
     .lbz-radio__label {
       color: #lbz-theme-text.light[medium-emphasis];
     }
-
-    // disabled
-    &.lbz-is-disabled {
-      .lbz-radio__circle {
-        border-color: #lbz-theme-text.light[disabled];
-      }
-
-      .lbz-radio__label {
-        color: #lbz-theme-text.light[disabled];
-      }
-    }
   }
 
-  html[theme="dark"] &:not(.lbz-is-checked) {
-    &.lbz-radio--on-primary,
-    &.lbz-radio--on-secondary {
-      .lbz-radio__state {
-        &::before,
-        &::after {
-          background-color: @white;
-        }
-      }
+  html[theme="dark"] &.lbz-is-auto-dark:not(.lbz-is-checked) .lbz-radio__state {
+    &::before,
+    &::after {
+      background-color: @white;
     }
   }
 
   // disabled
   &.lbz-is-disabled {
-    .lbz-radio__circle {
-      border-color: var(--lbz-theme-text-disabled-on-surface);
-    }
-
-    .lbz-radio__label {
-      color: var(--lbz-theme-text-disabled-on-surface);
-    }
+    opacity: #lbz-state.surface[disabled];
+    pointer-events: none;
   }
 }

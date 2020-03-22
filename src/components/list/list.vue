@@ -47,7 +47,7 @@ export default class LbzList extends Vue {
 
   // type: 'one-line' (default), 'two-line', 'three-line'
   @Prop({ type: String, default: '' }) private type!: string;
-  // on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'
+  // on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
   // nav: true, false (default)
   @Prop({ type: Boolean, default: false }) private nav!: boolean;

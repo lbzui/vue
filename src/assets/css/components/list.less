@@ -68,7 +68,7 @@
         }
 
         &__avatar.lbz-icon {
-          background-color: var(--lbz-theme-divider-on-primary);
+          background-color: var(--lbz-theme-outline-on-primary);
         }
 
         // activated
@@ -79,17 +79,6 @@
           .lbz-list-item__subtitle,
           .lbz-list-item__supporting-text {
             color: var(--lbz-theme-on-primary);
-          }
-        }
-
-        // disabled
-        &.lbz-is-disabled {
-          color: var(--lbz-theme-text-disabled-on-primary);
-
-          .lbz-list-item__center,
-          .lbz-list-item__subtitle,
-          .lbz-list-item__supporting-text {
-            color: var(--lbz-theme-text-disabled-on-primary);
           }
         }
       }
@@ -114,7 +103,7 @@
         }
 
         &__avatar.lbz-icon {
-          background-color: var(--lbz-theme-divider-on-secondary);
+          background-color: var(--lbz-theme-outline-on-secondary);
         }
 
         // activated
@@ -127,15 +116,39 @@
             color: var(--lbz-theme-on-secondary);
           }
         }
+      }
+    }
 
-        // disabled
-        &.lbz-is-disabled {
-          color: var(--lbz-theme-text-disabled-on-secondary);
+    &-error {
+      // subtitle
+      .lbz-list__subtitle,
+      .lbz-list-item,
+      .lbz-list-item__subtitle,
+      .lbz-list-item__supporting-text {
+        color: var(--lbz-theme-text-medium-emphasis-on-error);
+      }
+
+      .lbz-list-item {
+        &__center {
+          color: var(--lbz-theme-text-high-emphasis-on-error);
+        }
+
+        &__end {
+          color: var(--lbz-theme-text-disabled-on-error);
+        }
+
+        &__avatar.lbz-icon {
+          background-color: var(--lbz-theme-outline-on-error);
+        }
+
+        // activated
+        &.lbz-is-activated {
+          color: var(--lbz-theme-on-error);
 
           .lbz-list-item__center,
           .lbz-list-item__subtitle,
           .lbz-list-item__supporting-text {
-            color: var(--lbz-theme-text-disabled-on-secondary);
+            color: var(--lbz-theme-on-error);
           }
         }
       }
@@ -160,7 +173,7 @@
         }
 
         &__avatar.lbz-icon {
-          background-color: #lbz-theme.divider[dark];
+          background-color: #lbz-theme.outline[dark];
         }
 
         // activated
@@ -173,23 +186,12 @@
             color: @black;
           }
         }
-
-        // disabled
-        &.lbz-is-disabled {
-          color: #lbz-theme-text.dark[disabled];
-
-          .lbz-list-item__center,
-          .lbz-list-item__subtitle,
-          .lbz-list-item__supporting-text {
-            color: #lbz-theme-text.dark[disabled];
-          }
-        }
       }
     }
   }
 
   &&--on-dark,
-  html[theme="dark"] &:not(.lbz-list--on-light):not(.lbz-list--on-dark) {
+  html[theme="dark"] &.lbz-is-auto-dark {
     // subtitle
     .lbz-list__subtitle,
     .lbz-list-item,
@@ -208,7 +210,7 @@
       }
 
       &__avatar.lbz-icon {
-        background-color: #lbz-theme.divider[light];
+        background-color: #lbz-theme.outline[light];
       }
 
       // activated
@@ -221,21 +223,10 @@
           color: @white;
         }
       }
-
-      // disabled
-      &.lbz-is-disabled {
-        color: #lbz-theme-text.light[disabled];
-
-        .lbz-list-item__center,
-        .lbz-list-item__subtitle,
-        .lbz-list-item__supporting-text {
-          color: #lbz-theme-text.light[disabled];
-        }
-      }
     }
   }
 
-  &:not(.lbz-list--on-primary):not(.lbz-list--on-secondary):not(.lbz-list--on-light):not(.lbz-list--on-dark) {
+  &:not(.lbz-list--on-primary):not(.lbz-list--on-secondary):not(.lbz-list--on-error):not(.lbz-list--on-light):not(.lbz-list--on-dark) {
     // selected, activated
     .lbz-is-selected,
     .lbz-is-activated {
@@ -248,13 +239,24 @@
     }
   }
 
-  html[theme="dark"] &:not(.lbz-list--on-light):not(.lbz-list--on-dark) {
+  html[theme="dark"] &.lbz-is-auto-dark {
     background-color: transparent;
+
+    .lbz-divider {
+      border-color: #lbz-theme.outline[light];
+    }
+
+    .lbz-icon-button__state {
+      &::before,
+      &::after {
+        background-color: @white;
+      }
+    }
 
     .lbz-list-item__state {
       &::before,
       &::after {
-        background-color: @white;
+        background-color: #lbz-theme.dark[primary];
       }
     }
   }

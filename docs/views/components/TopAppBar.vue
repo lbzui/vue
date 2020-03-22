@@ -117,7 +117,7 @@
           <lbz-icon-button on-background="primary">search</lbz-icon-button>
           <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
         </template>
-        <template #tab>
+        <template #bottom>
           <lbz-tab v-model="vtab" on-background="primary">
             <lbz-tab-item
               v-for="(item, index) of 3"

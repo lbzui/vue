@@ -1,6 +1,5 @@
 // Shape
-// usage: `#lbz-shape.x.y[z]`
-//        `#lbz-shape.x[y]`
+// usage: `#lbz-shape.x[y]`
 
 #lbz-shape() {
   .size() {
@@ -14,10 +13,7 @@
     // Outlined text field                - rounded: 0-20px/0-50%, cut: 0-12px/0-50%, default: rounded 4px
     // Snackbar                           - rounded: 0-24px/0-50%, cut: 0-12px/0-50%, default: rounded 4px
     // Tooltip                            - rounded: 0-16px/0-50%, cut: 0-0px/0-0%, default: rounded 4px
-    .small() {
-      absolute: 4px;  // absolute size
-      percentage: 50%;  // percentage size
-    }
+    small: 4px; // absolute size
 
     // Medium Components (rounded: 0-36px, cut: 0-16px, default: rounded 4px):
     // Card            - rounded: 0-24px, cut: 0-16px, default: rounded 4px

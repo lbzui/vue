@@ -46,7 +46,7 @@ export default class LbzListItem extends Vue {
   @Prop({ type: Boolean, default: undefined }) private routerLink!: boolean;
   // to (router-link): '' (default), 'x', { x: y }
   @Prop({ type: [String, Object], default: '' }) private to!: string | object;
-  // tag: '' (default), li', 'a', 'x'
+  // tag: '' (default), 'li', 'a', 'x'
   @Prop({ type: String, default: '' }) private tag!: string;
 
   // selected: true, false (default)
@@ -91,12 +91,10 @@ export default class LbzListItem extends Vue {
   }
 
   get cgetStateAttrs(): StateAttributes {
-    const isPrimary: boolean = this.activated && ['', 'surface'].includes(this.ponBackground);
-
     return {
       class: 'lbz-list-item__state',
-      type: ['primary', 'secondary'].includes(this.ponBackground) ? 'primary' : '',
-      background: isPrimary ? 'primary' : (this.ponBackground ? `on-${this.ponBackground}` : ''),
+      type: ['primary', 'secondary', 'error'].includes(this.ponBackground) ? 'primary' : '',
+      background: this.ponBackground ? `on-${this.ponBackground}` : '',
       ripple: this.ripple === undefined ? this.pripple : this.ripple,
     };
   }

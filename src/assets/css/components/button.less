@@ -9,7 +9,7 @@
   position: relative;
   box-sizing: border-box;
   border: none;
-  border-radius: var(--lbz-shape-absolute-size-small);
+  border-radius: var(--lbz-shape-size-small);
   padding: 0 8px;
   min-width: 64px;
   height: 36px;
@@ -35,17 +35,17 @@
 
   // type
   &&--outlined {
-    border: 1px solid var(--lbz-theme-divider-on-surface);
+    border: 1px solid var(--lbz-theme-outline-on-surface);
     padding: 0 15px;
 
     // color
     &.lbz-button {
       &--light {
-        border-color: #lbz-theme.divider[light];
+        border-color: #lbz-theme.outline[light];
       }
 
       &--dark {
-        border-color: #lbz-theme.divider[dark];
+        border-color: #lbz-theme.outline[dark];
       }
     }
   }
@@ -113,7 +113,7 @@
     // disabled
     &.lbz-is-disabled {
       color: var(--lbz-theme-text-disabled-on-surface);
-      background-color: var(--lbz-theme-divider-on-surface);
+      background-color: var(--lbz-theme-outline-on-surface);
       box-shadow: none;
     }
 
@@ -188,5 +188,6 @@
   // disabled
   &.lbz-is-disabled {
     color: var(--lbz-theme-text-disabled-on-surface);
+    pointer-events: none;
   }
 }

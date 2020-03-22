@@ -19,8 +19,9 @@
     bottom: 0;
     left: 0;
     box-sizing: border-box;
-    border-right: 1px solid var(--lbz-theme-divider-on-surface);
+    border-right: 1px solid var(--lbz-theme-outline-on-surface);
     width: 256px;
+    max-width: 400px;
     .lbz-surface(16);
     scroll-behavior: smooth;
     overscroll-behavior-y: contain;
@@ -37,11 +38,16 @@
     box-sizing: border-box;
     padding: 0 16px 4px;
     min-height: 64px;
+    max-height: 225px;
+
+    .lbz-divider {
+      margin: 13px -16px -4px;
+    }
   }
 
   & &__avatar {
     display: block;
-    margin: 16px 0 4px;
+    margin: 16px 0 6px;
     border-radius: 50%;
     width: 48px;
     height: 48px;
@@ -64,6 +70,8 @@
 
   & &__content {
     flex: auto;
+    box-sizing: border-box;
+    padding-bottom: 16px;
     .lbz-typography("body2");
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
   }
@@ -85,8 +93,8 @@
     right: 0;
 
     .lbz-drawer__container {
-      border-top-right-radius: var(--lbz-shape-absolute-size-large);
-      border-bottom-right-radius: var(--lbz-shape-absolute-size-large);
+      border-top-right-radius: var(--lbz-shape-size-large);
+      border-bottom-right-radius: var(--lbz-shape-size-large);
       .lbz-shadow(16);
     }
 
@@ -104,9 +112,10 @@
       top: auto;
       right: 0;
       border-right: none;
-      border-top-left-radius: var(--lbz-shape-absolute-size-large);
-      border-top-right-radius: var(--lbz-shape-absolute-size-large);
+      border-top-left-radius: var(--lbz-shape-size-large);
+      border-top-right-radius: var(--lbz-shape-size-large);
       width: 100%;
+      max-width: 100%;
       max-height: 62.5%;
       .lbz-shadow(16);
     }
@@ -135,13 +144,17 @@
   }
 
   @media #lbz-layout-grid.media[xsmall] {
+    &:not(.lbz-drawer--bottom) .lbz-drawer__container {
+      width: calc(100% - 56px);
+    }
+
     &:not(.lbz-drawer--modal):not(.lbz-drawer--bottom) {
       position: fixed;
       right: 0;
 
       .lbz-drawer__container {
-        border-top-right-radius: var(--lbz-shape-absolute-size-large);
-        border-bottom-right-radius: var(--lbz-shape-absolute-size-large);
+        border-top-right-radius: var(--lbz-shape-size-large);
+        border-bottom-right-radius: var(--lbz-shape-size-large);
         .lbz-shadow(16);
       }
 

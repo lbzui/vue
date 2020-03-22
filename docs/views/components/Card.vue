@@ -120,6 +120,28 @@
       </template>
     </lbz-card>
 
+    <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
+
+    <lbz-card disabled>
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+      <template #end>
+        <div class="lbz-card__actions__buttons">
+          <lbz-button disabled>Action 1</lbz-button>
+          <lbz-button disabled>Action 2</lbz-button>
+        </div>
+      </template>
+    </lbz-card>
+
     <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
 
     <lbz-card ripple>
@@ -209,6 +231,29 @@
         <div class="lbz-card__actions__buttons">
           <lbz-button>Button</lbz-button>
           <lbz-button>Button</lbz-button>
+        </div>
+      </template>
+    </lbz-card>
+
+    <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
+
+    <lbz-card type="outlined" disabled>
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+      <template #end>
+        <div class="lbz-card__actions__buttons">
+          <lbz-button disabled>Button</lbz-button>
+          <lbz-button disabled>Button</lbz-button>
         </div>
       </template>
     </lbz-card>

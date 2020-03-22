@@ -1,10 +1,14 @@
 <template>
   <component
     :is="tag"
-    :class="['lbz-card', type && `lbz-card--${type}`]"
-    @click="$emit('click', $event)"
+    :class="[
+      'lbz-card',
+      type && `lbz-card--${type}`,
+      disabled && 'lbz-is-disabled'
+    ]"
+    @click="!disabled && $emit('click', $event)"
   >
-    <lbz-state v-bind="cgetStateAttrs"/>
+    <lbz-state v-if="!disabled" v-bind="cgetStateAttrs"/>
     <div v-if="$slots.start" class="lbz-card__header">
       <slot name="start"/>
     </div>
@@ -33,6 +37,8 @@ export default class LbzCard extends Vue {
 
   // type: 'elevated' (default), 'outlined'
   @Prop({ type: String, default: '' }) private type!: string;
+  // disabled: true, false (default)
+  @Prop({ type: Boolean, default: false }) private disabled!: boolean;
   // ripple: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 

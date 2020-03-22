@@ -22,21 +22,22 @@
       @change="fchange"
     >False</lbz-radio>
 
-    <h3 class="lbz-typography--subtitle1">$ color: 'primary', 'secondary' (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary'</h3>
 
+    <lbz-radio v-model="vradio1" :value="1">Primary</lbz-radio>
     <lbz-radio
       v-model="vradio1"
-      :value="1"
-      color="primary"
-    >Primary</lbz-radio>
-    <lbz-radio v-model="vradio1" :value="0">Secondary</lbz-radio>
+      :value="0"
+      color="secondary"
+    >Secondary</lbz-radio>
 
-    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'</h3>
 
     <div class="lbzui-square lbzui-radio--primary">
       <lbz-radio
         v-model="vradio2"
         value="primary"
+        color="secondary"
         on-background="primary"
       />
     </div>
@@ -44,28 +45,40 @@
       <lbz-radio
         v-model="vradio2"
         value="secondary"
-        color="primary"
         on-background="secondary"
       />
     </div>
     <div class="lbzui-square">
+      <lbz-radio v-model="vradio2" value="surface"/>
       <lbz-radio
         v-model="vradio2"
         value="surface"
-        color="primary"
+        color="secondary"
       />
-      <lbz-radio v-model="vradio2" value="surface"/>
+    </div>
+    <div class="lbzui-square lbzui-radio--error">
+      <lbz-radio
+        v-model="vradio2"
+        value="error"
+        on-background="error"
+      />
+      <lbz-radio
+        v-model="vradio2"
+        value="error"
+        color="secondary"
+        on-background="error"
+      />
     </div>
     <div class="lbzui-square lbzui-radio--light">
       <lbz-radio
         v-model="vradio2"
         value="light"
-        color="primary"
         on-background="light"
       />
       <lbz-radio
         v-model="vradio2"
         value="light"
+        color="secondary"
         on-background="light"
       />
     </div>
@@ -73,12 +86,12 @@
       <lbz-radio
         v-model="vradio2"
         value="dark"
-        color="primary"
         on-background="dark"
       />
       <lbz-radio
         v-model="vradio2"
         value="dark"
+        color="secondary"
         on-background="dark"
       />
     </div>
@@ -89,12 +102,14 @@
       <lbz-radio
         v-model="vradio3"
         value="checked"
+        color="secondary"
         on-background="primary"
         disabled
       />
       <lbz-radio
         v-model="vradio3"
         value="unchecked"
+        color="secondary"
         on-background="primary"
         disabled
       />
@@ -103,14 +118,12 @@
       <lbz-radio
         v-model="vradio3"
         value="checked"
-        color="primary"
         on-background="secondary"
         disabled
       />
       <lbz-radio
         v-model="vradio3"
         value="unchecked"
-        color="primary"
         on-background="secondary"
         disabled
       />
@@ -119,12 +132,12 @@
       <lbz-radio
         v-model="vradio3"
         value="checked"
-        color="primary"
         disabled
       />
       <lbz-radio
         v-model="vradio3"
         value="checked"
+        color="secondary"
         disabled
       />
       <lbz-radio
@@ -133,17 +146,38 @@
         disabled
       />
     </div>
+    <div class="lbzui-square lbzui-radio--error">
+      <lbz-radio
+        v-model="vradio3"
+        value="checked"
+        on-background="error"
+        disabled
+      />
+      <lbz-radio
+        v-model="vradio3"
+        value="checked"
+        color="secondary"
+        on-background="error"
+        disabled
+      />
+      <lbz-radio
+        v-model="vradio3"
+        value="unchecked"
+        on-background="error"
+        disabled
+      />
+    </div>
     <div class="lbzui-square lbzui-radio--light">
       <lbz-radio
         v-model="vradio3"
         value="checked"
-        color="primary"
         on-background="light"
         disabled
       />
       <lbz-radio
         v-model="vradio3"
         value="checked"
+        color="secondary"
         on-background="light"
         disabled
       />
@@ -158,13 +192,13 @@
       <lbz-radio
         v-model="vradio3"
         value="checked"
-        color="primary"
         on-background="dark"
         disabled
       />
       <lbz-radio
         v-model="vradio3"
         value="checked"
+        color="secondary"
         on-background="dark"
         disabled
       />
@@ -197,8 +231,8 @@ import { Component, Vue } from 'vue-property-decorator';
 @Component
 export default class ComponentsRadio extends Vue {
   private vradio0: boolean = true;
-  private vradio1: number = 1;
-  private vradio2: string = 'surface';
+  private vradio1: number = 0;
+  private vradio2: string = 'primary';
   private vradio3: string = 'checked';
   private vradio4: boolean = true;
 

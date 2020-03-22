@@ -10,6 +10,9 @@
       <template #start>
         <h1 class="lbz-drawer__title" @click.stop="freload">@lbzui/vue</h1>
       </template>
+      <template #bottom>
+        <lbz-divider/>
+      </template>
       <template #center>
         <lbz-list
           tag="nav"
@@ -18,7 +21,6 @@
           item-tag="a"
           nav
         >
-          <lbz-divider/>
           <lbz-list-item to="/">Getting started</lbz-list-item>
           <lbz-divider/>
           <span class="lbz-list__subtitle">Components</span>

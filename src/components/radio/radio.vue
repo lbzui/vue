@@ -50,9 +50,9 @@ export default class LbzRadio extends Vue {
   @Prop({ type: String, default: '' }) private name!: string;
   // [required]value: true, false, x, 'x'
   @Prop({ type: [Boolean, Number, String], required: true }) private value!: boolean | number | string;
-  // color: 'primary', 'secondary' (default)
+  // color: 'primary' (default), 'secondary'
   @Prop({ type: String, default: '' }) private color!: string;
-  // on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'
+  // on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
@@ -66,8 +66,8 @@ export default class LbzRadio extends Vue {
   get cgetStateAttrs(): StateAttributes {
     return {
       class: 'lbz-radio__state',
-      type: ['primary', 'secondary'].includes(this.onBackground) || this.cisChecked ? 'primary' : '',
-      background: this.cisChecked ? (this.color || 'secondary') : (this.onBackground ? `on-${this.onBackground}` : ''),
+      type: ['primary', 'secondary', 'error'].includes(this.onBackground) || this.cisChecked ? 'primary' : '',
+      background: this.cisChecked ? (this.color || 'primary') : (this.onBackground ? `on-${this.onBackground}` : ''),
       ripple: this.ripple,
       unbounded: true,
       centered: true,

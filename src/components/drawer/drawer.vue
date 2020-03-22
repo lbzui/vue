@@ -10,7 +10,7 @@
       ]"
     >
       <div class="lbz-drawer__container">
-        <template v-if="$slots.start || title || subtitle">
+        <template v-if="$slots.start || title || subtitle || $slots.bottom">
           <lbz-top-app-bar
             v-if="cisFullScreen"
             background="transparent"
@@ -19,8 +19,11 @@
             <template #start>
               <lbz-icon-button @click.stop="fclose()">close</lbz-icon-button>
             </template>
-            <template #end>
+            <template v-if="$slots.start" #end>
               <slot name="start"/>
+            </template>
+            <template v-if="$slots.bottom" #bottom>
+              <slot name="bottom"/>
             </template>
           </lbz-top-app-bar>
           <header v-else class="lbz-drawer__header">
@@ -35,6 +38,7 @@
               class="lbz-drawer__subtitle"
               v-html="subtitle"
             ></p>
+            <slot name="bottom"/>
           </header>
         </template>
         <div class="lbz-drawer__content">

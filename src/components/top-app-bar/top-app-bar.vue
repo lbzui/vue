@@ -27,8 +27,8 @@
         <slot name="end"/>
       </div>
     </section>
-    <section v-if="(['', 'standard'].includes(type)) && $slots.tab" class="lbz-top-app-bar__tab">
-      <slot name="tab"/>
+    <section v-if="(['', 'standard'].includes(type)) && $slots.bottom" class="lbz-top-app-bar__bottom">
+      <slot name="bottom"/>
     </section>
   </header>
 </template>

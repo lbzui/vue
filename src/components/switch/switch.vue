@@ -3,6 +3,7 @@
     :class="[
       'lbz-switch',
       color && `lbz-switch--${color}`,
+      onBackground && `lbz-switch--on-${onBackground}`,
       cisChecked && 'lbz-is-checked',
       disabled && 'lbz-is-disabled'
     ]"
@@ -54,8 +55,10 @@ export default class LbzSwitch extends Vue {
   @Prop({ type: [Boolean, Number, String], default: true }) private trueValue!: boolean | number | string;
   // false-value: true, false (default), x, 'x'
   @Prop({ type: [Boolean, Number, String], default: false }) private falseValue!: boolean | number | string;
-  // color: 'primary', 'secondary' (default)
+  // color: 'primary' (default), 'secondary'
   @Prop({ type: String, default: '' }) private color!: string;
+  // on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'
+  @Prop({ type: String, default: '' }) private onBackground!: string;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
   // ripple: undefined (default), true, false
@@ -70,8 +73,8 @@ export default class LbzSwitch extends Vue {
   get cgetStateAttrs(): StateAttributes {
     return {
       class: 'lbz-switch__state',
-      type: this.cisChecked ? 'primary' : '',
-      background: this.cisChecked ? (this.color || 'secondary') : '',
+      type: ['primary', 'secondary', 'error'].includes(this.onBackground) || this.cisChecked ? 'primary' : '',
+      background: this.cisChecked ? (this.color || 'primary') : (this.onBackground ? `on-${this.onBackground}` : ''),
       ripple: this.ripple,
       unbounded: true,
       centered: true,

@@ -14,7 +14,7 @@
   & &__container {
     overflow-x: hidden;
     overflow-y: auto;
-    border-radius: var(--lbz-shape-absolute-size-medium);
+    border-radius: var(--lbz-shape-size-medium);
     width: 560px;
     max-height: calc(100% - 32px);
     .lbz-surface(24);
@@ -103,11 +103,11 @@
     }
 
     .lbz-dialog__content {
-      padding: 64px 0 0;
+      padding: 80px var(--lbz-layout-grid-margin) 16px;
       height: 100%;
 
       @media #lbz-layout-grid.media[xsmall] {
-        padding-top: 56px;
+        padding-top: 72px;
       }
     }
   }
@@ -121,7 +121,7 @@
     .lbz-dialog__content {
       border-top: 1px solid;
       border-bottom: 1px solid;
-      border-color: var(--lbz-theme-divider-on-surface);
+      border-color: var(--lbz-theme-outline-on-surface);
       padding-top: 8px;
       padding-bottom: 8px;
     }

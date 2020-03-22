@@ -19,6 +19,7 @@
     &__header {
       flex: none;
       height: 64px;
+      .lbz-elevation(0);
     }
 
     &__content {
@@ -26,7 +27,7 @@
       overflow-x: hidden;
       overflow-y: auto;
       box-sizing: border-box;
-      padding: var(--lbz-layout-grid-margin);
+      padding: 16px var(--lbz-layout-grid-margin);
       opacity: 0;
       transition: opacity 15ms linear;
       scroll-behavior: smooth;
@@ -34,7 +35,7 @@
       -webkit-overflow-scrolling: touch;
 
       .lbz-list.lbz-is-nav {
-        margin: -24px -16px 0;
+        margin: -16px -16px 0;
       }
     }
   }
@@ -53,6 +54,7 @@
     height: calc(100% - 64px);
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
     .lbz-surface(2);
+    .lbz-shadow(2);
     transition: transform 250ms #lbz-motion.curve[standard];
     transform: translate3d(0, 64px, 0);
 
@@ -101,7 +103,7 @@
       overflow-x: hidden;
       overflow-y: auto;
       box-sizing: border-box;
-      padding: var(--lbz-layout-grid-margin);
+      padding: 16px var(--lbz-layout-grid-margin);
       scroll-behavior: smooth;
       overscroll-behavior: contain;
       -webkit-overflow-scrolling: touch;
@@ -131,10 +133,6 @@
       height: 56px;
     }
 
-    & &__back-layer__content .lbz-list.lbz-is-nav {
-      margin-top: -16px;
-    }
-
     & &__front-layer {
       height: calc(100% - 56px);
       transform: translate3d(0, 56px, 0);
@@ -154,13 +152,33 @@
     }
   }
 
+  &&--surface {
+    background-color: var(--lbz-theme-surface);
+
+    .lbz-backdrop__back-layer {
+      color: var(--lbz-theme-text-medium-emphasis-on-surface);
+    }
+  }
+
+  &&--light {
+    .lbz-surface("light"; 0);
+
+    .lbz-backdrop__back-layer {
+      color: #lbz-theme-text.dark[medium-emphasis];
+    }
+  }
+
   &&--dark,
-  html[theme="dark"] &:not(.lbz-backdrop--dark) {
+  html[theme="dark"] &:not(.lbz-backdrop--light):not(.lbz-backdrop--dark) {
     .lbz-surface("dark"; 0);
 
     .lbz-backdrop__back-layer {
       color: #lbz-theme-text.light[medium-emphasis];
     }
+  }
+
+  html[theme="dark"] &:not(.lbz-backdrop--light):not(.lbz-backdrop--dark) .lbz-backdrop__back-layer__content .lbz-divider {
+    border-color: #lbz-theme.outline[light];
   }
 
   // active

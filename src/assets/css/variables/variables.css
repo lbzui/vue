@@ -7,10 +7,9 @@
   --lbz-layout-grid-margin: 24px;
 
   /* Shape */
-  --lbz-shape-absolute-size-small: 4px;
-  --lbz-shape-percentage-size-small: 50%;
-  --lbz-shape-absolute-size-medium: 4px;
-  --lbz-shape-absolute-size-large: 0;
+  --lbz-shape-size-small: 4px;
+  --lbz-shape-size-medium: 4px;
+  --lbz-shape-size-large: 0;
 
   /* Theme */
   --lbz-theme-primary: #6200ee;
@@ -30,11 +29,15 @@
   --lbz-theme-surface-16: #fff;
   --lbz-theme-surface-24: #fff;
   --lbz-theme-error: #b00020;
+  --lbz-theme-light: #fff;
+  --lbz-theme-dark: #000;
   --lbz-theme-on-primary: #fff;
   --lbz-theme-on-secondary: #000;
   --lbz-theme-on-background: #000;
   --lbz-theme-on-surface: #000;
   --lbz-theme-on-error: #fff;
+  --lbz-theme-on-light: #000;
+  --lbz-theme-on-dark: #fff;
   --lbz-theme-text-high-emphasis-on-primary: #fff;
   --lbz-theme-text-medium-emphasis-on-primary: rgba(255, 255, 255, 0.74);
   --lbz-theme-text-disabled-on-primary: rgba(255, 255, 255, 0.38);
@@ -44,15 +47,20 @@
   --lbz-theme-text-high-emphasis-on-surface: rgba(0, 0, 0, 0.87);
   --lbz-theme-text-medium-emphasis-on-surface: rgba(0, 0, 0, 0.6);
   --lbz-theme-text-disabled-on-surface: rgba(0, 0, 0, 0.38);
+  --lbz-theme-text-high-emphasis-on-error: #fff;
+  --lbz-theme-text-medium-emphasis-on-error: rgba(255, 255, 255, 0.74);
+  --lbz-theme-text-disabled-on-error: rgba(255, 255, 255, 0.38);
   --lbz-theme-text-high-emphasis-on-light: rgba(0, 0, 0, 0.87);
   --lbz-theme-text-medium-emphasis-on-light: rgba(0, 0, 0, 0.6);
   --lbz-theme-text-disabled-on-light: rgba(0, 0, 0, 0.38);
   --lbz-theme-text-high-emphasis-on-dark: #fff;
   --lbz-theme-text-medium-emphasis-on-dark: rgba(255, 255, 255, 0.74);
   --lbz-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.38);
-  --lbz-theme-divider-on-primary: rgba(255, 255, 255, 0.2);
-  --lbz-theme-divider-on-secondary: rgba(0, 0, 0, 0.12);
-  --lbz-theme-divider-on-background: rgba(0, 0, 0, 0.12);
-  --lbz-theme-divider-on-surface: rgba(0, 0, 0, 0.12);
-  --lbz-theme-divider-on-error: rgba(255, 255, 255, 0.2);
+  --lbz-theme-outline-on-primary: rgba(255, 255, 255, 0.2);
+  --lbz-theme-outline-on-secondary: rgba(0, 0, 0, 0.12);
+  --lbz-theme-outline-on-background: rgba(0, 0, 0, 0.12);
+  --lbz-theme-outline-on-surface: rgba(0, 0, 0, 0.12);
+  --lbz-theme-outline-on-error: rgba(255, 255, 255, 0.2);
+  --lbz-theme-outline-on-light: rgba(0, 0, 0, 0.12);
+  --lbz-theme-outline-on-dark: rgba(255, 255, 255, 0.2);
 }

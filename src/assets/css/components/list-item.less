@@ -50,7 +50,7 @@
       line-height: 40px;
       text-align: center;
       color: @white;
-      background-color: var(--lbz-theme-divider-on-surface);
+      background-color: var(--lbz-theme-outline-on-surface);
     }
   }
 
@@ -118,12 +118,7 @@
 
   // disabled
   &.lbz-is-disabled {
-    color: var(--lbz-theme-text-disabled-on-surface);
-
-    .lbz-list-item__center,
-    .lbz-list-item__subtitle,
-    .lbz-list-item__supporting-text {
-      color: var(--lbz-theme-text-disabled-on-surface);
-    }
+    opacity: #lbz-state.surface[disabled];
+    pointer-events: none;
   }
 }

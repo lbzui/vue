@@ -3,7 +3,7 @@
     <h2 class="lbz-typography--h5"># Backdrop</h2>
 
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
-    <h3 class="lbz-typography--subtitle1">$ background: 'primary' (default), 'secondary', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ background: 'primary' (default), 'secondary', 'surface', 'light', 'dark'</h3>
 
     <div class="lbzui-app">
       <lbz-backdrop ref="backdrop" :active.sync="vactive">
@@ -25,6 +25,7 @@
         </template>
         <template #back-center>
           <lbz-list
+            class="lbz-is-auto-dark"
             tag="nav"
             item-tag="a"
             on-background="primary"
@@ -68,9 +69,94 @@
         </template>
         <template #back-center>
           <lbz-list
+            class="lbz-is-auto-dark"
             tag="nav"
             item-tag="a"
             on-background="secondary"
+            nav
+          >
+            <lbz-list-item
+              v-for="(item, index) of NAV"
+              :key="index"
+              :activated="vindex === index"
+              @click.stop="vindex = index"
+            >
+              <template #start>
+                <lbz-icon>{{ item }}</lbz-icon>
+              </template>
+              <template #center>Item {{ index + 1 }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+        <template #front-center>
+          <article>Front layer content</article>
+        </template>
+      </lbz-backdrop>
+    </div>
+    <div class="lbzui-app">
+      <lbz-backdrop :active.sync="vactive" background="surface">
+        <template #back-start>
+          <lbz-top-app-bar background="surface" title="Page title">
+            <template #start>
+              <lbz-icon-button
+                :active.sync="vactive"
+                toggle
+                on-icon="close"
+                off-icon="menu"
+              />
+            </template>
+            <template #end>
+              <lbz-icon-button>more_vert</lbz-icon-button>
+            </template>
+          </lbz-top-app-bar>
+        </template>
+        <template #back-center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            nav
+          >
+            <lbz-list-item
+              v-for="(item, index) of NAV"
+              :key="index"
+              :activated="vindex === index"
+              @click.stop="vindex = index"
+            >
+              <template #start>
+                <lbz-icon>{{ item }}</lbz-icon>
+              </template>
+              <template #center>Item {{ index + 1 }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+        <template #front-center>
+          <article>Front layer content</article>
+        </template>
+      </lbz-backdrop>
+    </div>
+    <div class="lbzui-app">
+      <lbz-backdrop :active.sync="vactive" background="light">
+        <template #back-start>
+          <lbz-top-app-bar background="light" title="Page title">
+            <template #start>
+              <lbz-icon-button
+                :active.sync="vactive"
+                toggle
+                on-background="light"
+                on-icon="close"
+                off-icon="menu"
+              />
+            </template>
+            <template #end>
+              <lbz-icon-button on-background="light">more_vert</lbz-icon-button>
+            </template>
+          </lbz-top-app-bar>
+        </template>
+        <template #back-center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            on-background="light"
             nav
           >
             <lbz-list-item

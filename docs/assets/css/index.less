@@ -1,6 +1,10 @@
 html body {
-  .lbz-surface(1);
+  background-color: #fafafa;
   overscroll-behavior: none;
+}
+
+html[theme="dark"] body {
+  background-color: #303030;
 }
 
 .lbzui {
@@ -12,20 +16,18 @@ html body {
     overflow: hidden;
     position: relative;
     margin: 0 16px 16px 0;
-    box-sizing: border-box;
-    border: 1px solid var(--lbz-theme-divider-on-surface);
     width: 180px;
     height: 180px;
     vertical-align: top;
+    background-color: var(--lbz-theme-surface);
   }
 
   &-rectangle {
     display: block;
     overflow: hidden;
     position: relative;
-    box-sizing: border-box;
-    border: 1px solid var(--lbz-theme-divider-on-surface);
     width: 100%;
+    background-color: var(--lbz-theme-surface);
 
     & + & {
       margin-top: 16px;
@@ -37,12 +39,11 @@ html body {
     overflow: hidden;
     position: relative;
     margin: 0 16px 16px 0;
-    box-sizing: border-box;
-    border: 1px solid var(--lbz-theme-divider-on-surface);
     width: 100%;
     max-width: 360px;
     height: 640px;
     vertical-align: top;
+    background-color: var(--lbz-theme-surface);
   }
 
   width: 100%;
@@ -82,6 +83,11 @@ html body {
 
   & &__fab {
     display: none;
+
+    html[theme="dark"] & {
+      color: #lbz-theme.dark[on-primary];
+      background-color: #lbz-theme.dark[primary];
+    }
   }
 
   // Home
@@ -168,21 +174,31 @@ html body {
     // on-background
     &-icon-button .lbz-icon-button--on {
       &-primary {
+        margin-right: 8px;
         color: var(--lbz-theme-on-primary);
         background-color: var(--lbz-theme-primary);
       }
 
       &-secondary {
+        margin-right: 8px;
         color: var(--lbz-theme-on-secondary);
         background-color: var(--lbz-theme-secondary);
       }
 
+      &-surface {
+        margin-right: 8px;
+        color: var(--lbz-theme-on-surface);
+        background-color: var(--lbz-theme-surface);
+      }
+
       &-error {
+        margin-right: 8px;
         color: var(--lbz-theme-on-error);
         background-color: var(--lbz-theme-error);
       }
 
       &-light {
+        margin-right: 8px;
         color: @black;
         .lbz-surface("light"; 0);
       }
@@ -206,6 +222,10 @@ html body {
           background-color: var(--lbz-theme-secondary);
         }
 
+        &-error {
+          background-color: var(--lbz-theme-error);
+        }
+
         &-light {
           .lbz-surface("light"; 0);
         }
@@ -221,6 +241,10 @@ html body {
         margin: 0 8px 0 0 !important;
       }
 
+      .lbzui-square .lbz-radio {
+        margin: 0 !important;
+      }
+
       // on-background
       .lbzui-radio {
         &--primary {
@@ -231,19 +255,16 @@ html body {
           background-color: var(--lbz-theme-secondary);
         }
 
+        &--error {
+          background-color: var(--lbz-theme-error);
+        }
+
         &--light {
           .lbz-surface("light"; 0);
         }
 
         &--dark {
           .lbz-surface("dark"; 0);
-        }
-      }
-
-      html[theme="dark"] & {
-        .lbzui-radio--primary,
-        .lbzui-radio--secondary {
-          background-color: transparent;
         }
       }
     }
@@ -300,13 +321,43 @@ html body {
       }
     }
 
-    &-switch .lbz-switch {
-      margin-right: 8px;
+    &-switch {
+      .lbz-switch {
+        margin-right: 8px;
+      }
+
+      // on-background
+      .lbzui-switch {
+        &--primary {
+          background-color: var(--lbz-theme-primary);
+        }
+
+        &--secondary {
+          background-color: var(--lbz-theme-secondary);
+        }
+
+        &--error {
+          background-color: var(--lbz-theme-error);
+        }
+
+        &--light {
+          .lbz-surface("light"; 0);
+        }
+
+        &--dark {
+          .lbz-surface("dark"; 0);
+        }
+      }
     }
 
     &-tab .lbz-tab {
       width: 100%;
       max-width: 360px;
+      .lbz-surface(0);
+
+      + .lbz-tab {
+        margin-top: 16px;
+      }
 
       // on-background
       &.lbz-tab--on {
@@ -327,8 +378,8 @@ html body {
         }
       }
 
-      + .lbz-tab {
-        margin-top: 16px;
+      html[theme="dark"] &:not(.lbz-tab--on-light):not(.lbz-tab--on-dark) {
+        .lbz-surface("dark"; 0);
       }
     }
 
@@ -353,19 +404,18 @@ html body {
   &-utilities {
     &-aspect-ratio .lbzui-aspect-ratio {
       margin: 0 16px 16px 0;
-      box-sizing: border-box;
-      border: 1px solid var(--lbz-theme-divider-on-surface);
       width: 180px;
+      background-color: var(--lbz-theme-surface);
     }
 
     &-layout-grid .lbz-layout-grid {
       .lbz-layout-grid__cell {
         height: 180px;
-        background-color: var(--lbz-theme-divider-on-surface);
+        background-color: var(--lbz-theme-outline-on-surface);
       }
 
       .lbzui-layout-grid__cell {
-        height: 90px;
+        height: 120px;
       }
     }
 

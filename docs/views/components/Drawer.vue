@@ -127,9 +127,6 @@
         subtitle="subtext"
         :lock-body-scroll="false"
       >
-        <template #start>
-          <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
-        </template>
         <template #center>
           <lbz-list
             tag="nav"
@@ -274,6 +271,9 @@
         <template #start>
           <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
+        <template #bottom>
+          <lbz-divider/>
+        </template>
         <template #center>
           <lbz-list
             tag="nav"
@@ -373,6 +373,9 @@
       >
         <template #start>
           <lbz-icon-button>search</lbz-icon-button>
+        </template>
+        <template #bottom>
+          <lbz-divider/>
         </template>
         <template #center>
           <lbz-list

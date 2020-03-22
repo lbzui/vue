@@ -218,7 +218,7 @@
       <lbz-list-item href="#/404">A item</lbz-list-item>
     </lbz-list>
 
-    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'</h3>
 
     <lbz-list
       class="lbzui-rectangle"
@@ -300,6 +300,34 @@
         </template>
         <template #end>
           <lbz-icon-button>more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+    </lbz-list>
+    <lbz-list
+      class="lbzui-rectangle"
+      type="two-line"
+      on-background="error"
+      subtitle="Error"
+    >
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-list-item__title">Two-line item</span>
+        </template>
+        <template #end>
+          <span class="lbz-typography--caption">meta</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>bluetooth</lbz-icon>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <lbz-icon-button on-background="error">more_vert</lbz-icon-button>
         </template>
       </lbz-list-item>
     </lbz-list>
@@ -884,6 +912,35 @@
     <lbz-list
       class="lbzui-rectangle"
       type="two-line"
+      on-background="error"
+      subtitle="Error"
+      disabled
+    >
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-list-item__title">Two-line item</span>
+        </template>
+        <template #end>
+          <span class="lbz-typography--caption">meta</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>bluetooth</lbz-icon>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <lbz-icon-button on-background="error" disabled>more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+    </lbz-list>
+    <lbz-list
+      class="lbzui-rectangle"
+      type="two-line"
       on-background="light"
       subtitle="Light"
       disabled
@@ -961,7 +1018,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ router-link: undefined (default), true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ to (router-link): '' (default), 'x', { x: y }</h3>
-    <h3 class="lbz-typography--subtitle1">$ tag: '' (default), li', 'a', 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ tag: '' (default), 'li', 'a', 'x'</h3>
 
     <lbz-list
       class="lbzui-rectangle"

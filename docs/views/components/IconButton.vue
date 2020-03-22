@@ -35,7 +35,7 @@
 
     <lbz-icon-button on-background="primary">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="secondary">favorite_border</lbz-icon-button>
-    <lbz-icon-button>favorite_border</lbz-icon-button>
+    <lbz-icon-button on-background="surface">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="error">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="light">favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="dark">favorite_border</lbz-icon-button>
@@ -44,7 +44,7 @@
 
     <lbz-icon-button on-background="primary" disabled>favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="secondary" disabled>favorite_border</lbz-icon-button>
-    <lbz-icon-button disabled>favorite_border</lbz-icon-button>
+    <lbz-icon-button on-background="surface" disabled>favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="error" disabled>favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="light" disabled>favorite_border</lbz-icon-button>
     <lbz-icon-button on-background="dark" disabled>favorite_border</lbz-icon-button>
@@ -123,6 +123,7 @@
     <lbz-icon-button
       :active.sync="vactive"
       toggle
+      on-background="surface"
       on-icon="favorite"
       off-icon="favorite_border"
     />
@@ -170,6 +171,7 @@
       :active.sync="vactive"
       toggle
       disabled
+      on-background="surface"
       on-icon="favorite"
       off-icon="favorite_border"
     />

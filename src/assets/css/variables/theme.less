@@ -24,6 +24,8 @@
   --lbz-theme-surface-16: #lbz-theme-surface.light[@16];
   --lbz-theme-surface-24: #lbz-theme-surface.light[@24];
   --lbz-theme-error: #lbz-theme.light[error];
+  --lbz-theme-light: @white;
+  --lbz-theme-dark: @black;
 
   // Typography and iconography colors
   --lbz-theme-on-primary: #lbz-theme.light[on-primary];
@@ -31,21 +33,28 @@
   --lbz-theme-on-background: #lbz-theme.light[on-background];
   --lbz-theme-on-surface: #lbz-theme.light[on-surface];
   --lbz-theme-on-error: #lbz-theme.light[on-error];
+  --lbz-theme-on-light: @black;
+  --lbz-theme-on-dark: @white;
 
-  // Light text on primary backgrounds
+  // Text on primary backgrounds
   --lbz-theme-text-high-emphasis-on-primary: if((#lbz-theme.light[on-primary] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
   --lbz-theme-text-medium-emphasis-on-primary: if((#lbz-theme.light[on-primary] = #fff), #lbz-theme-text.light[medium-emphasis], #lbz-theme-text.dark[medium-emphasis]);
   --lbz-theme-text-disabled-on-primary: if((#lbz-theme.light[on-primary] = #fff), #lbz-theme-text.light[disabled], #lbz-theme-text.dark[disabled]);
 
-  // Dark text on secondary backgrounds
+  // Text on secondary backgrounds
   --lbz-theme-text-high-emphasis-on-secondary: if((#lbz-theme.light[on-secondary] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
   --lbz-theme-text-medium-emphasis-on-secondary: if((#lbz-theme.light[on-secondary] = #fff), #lbz-theme-text.light[medium-emphasis], #lbz-theme-text.dark[medium-emphasis]);
   --lbz-theme-text-disabled-on-secondary: if((#lbz-theme.light[on-secondary] = #fff), #lbz-theme-text.light[disabled], #lbz-theme-text.dark[disabled]);
 
-  // Dark text on surface backgrounds
+  // Text on surface backgrounds
   --lbz-theme-text-high-emphasis-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
   --lbz-theme-text-medium-emphasis-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme-text.light[medium-emphasis], #lbz-theme-text.dark[medium-emphasis]);
   --lbz-theme-text-disabled-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme-text.light[disabled], #lbz-theme-text.dark[disabled]);
+
+  // Text on error backgrounds
+  --lbz-theme-text-high-emphasis-on-error: if((#lbz-theme.light[on-error] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
+  --lbz-theme-text-medium-emphasis-on-error: if((#lbz-theme.light[on-error] = #fff), #lbz-theme-text.light[medium-emphasis], #lbz-theme-text.dark[medium-emphasis]);
+  --lbz-theme-text-disabled-on-error: if((#lbz-theme.light[on-error] = #fff), #lbz-theme-text.light[disabled], #lbz-theme-text.dark[disabled]);
 
   // Dark text on light backgrounds
   --lbz-theme-text-high-emphasis-on-light: #lbz-theme-text.dark[high-emphasis];
@@ -57,12 +66,14 @@
   --lbz-theme-text-medium-emphasis-on-dark: #lbz-theme-text.light[medium-emphasis];
   --lbz-theme-text-disabled-on-dark: #lbz-theme-text.light[disabled];
 
-  // Divider colors
-  --lbz-theme-divider-on-primary: if((#lbz-theme.light[on-primary] = #fff), #lbz-theme.divider[light], #lbz-theme.divider[dark]);
-  --lbz-theme-divider-on-secondary: if((#lbz-theme.light[on-secondary] = #fff), #lbz-theme.divider[light], #lbz-theme.divider[dark]);
-  --lbz-theme-divider-on-background: if((#lbz-theme.light[on-background] = #fff), #lbz-theme.divider[light], #lbz-theme.divider[dark]);
-  --lbz-theme-divider-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme.divider[light], #lbz-theme.divider[dark]);
-  --lbz-theme-divider-on-error: if((#lbz-theme.light[on-error] = #fff), #lbz-theme.divider[light], #lbz-theme.divider[dark]);
+  // Outline colors
+  --lbz-theme-outline-on-primary: if((#lbz-theme.light[on-primary] = #fff), #lbz-theme.outline[light], #lbz-theme.outline[dark]);
+  --lbz-theme-outline-on-secondary: if((#lbz-theme.light[on-secondary] = #fff), #lbz-theme.outline[light], #lbz-theme.outline[dark]);
+  --lbz-theme-outline-on-background: if((#lbz-theme.light[on-background] = #fff), #lbz-theme.outline[light], #lbz-theme.outline[dark]);
+  --lbz-theme-outline-on-surface: if((#lbz-theme.light[on-surface] = #fff), #lbz-theme.outline[light], #lbz-theme.outline[dark]);
+  --lbz-theme-outline-on-error: if((#lbz-theme.light[on-error] = #fff), #lbz-theme.outline[light], #lbz-theme.outline[dark]);
+  --lbz-theme-outline-on-light: #lbz-theme.outline[dark];
+  --lbz-theme-outline-on-dark: #lbz-theme.outline[light];
 }
 
 html[theme="dark"] {
@@ -96,25 +107,30 @@ html[theme="dark"] {
   --lbz-theme-on-surface: #lbz-theme.dark[on-surface];
   --lbz-theme-on-error: #lbz-theme.dark[on-error];
 
-  // Light text on primary backgrounds
+  // Text on primary backgrounds
   --lbz-theme-text-high-emphasis-on-primary: if((#lbz-theme.dark[on-primary] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
   --lbz-theme-text-medium-emphasis-on-primary: if((#lbz-theme.dark[on-primary] = #fff), #lbz-theme-text.light[medium-emphasis], #lbz-theme-text.dark[medium-emphasis]);
   --lbz-theme-text-disabled-on-primary: if((#lbz-theme.dark[on-primary] = #fff), #lbz-theme-text.light[disabled], #lbz-theme-text.dark[disabled]);
 
-  // Dark text on secondary backgrounds
+  // Text on secondary backgrounds
   --lbz-theme-text-high-emphasis-on-secondary: if((#lbz-theme.dark[on-secondary] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
   --lbz-theme-text-medium-emphasis-on-secondary: if((#lbz-theme.dark[on-secondary] = #fff), #lbz-theme-text.light[medium-emphasis], #lbz-theme-text.dark[medium-emphasis]);
   --lbz-theme-text-disabled-on-secondary: if((#lbz-theme.dark[on-secondary] = #fff), #lbz-theme-text.light[disabled], #lbz-theme-text.dark[disabled]);
 
-  // Dark text on surface backgrounds
+  // Text on surface backgrounds
   --lbz-theme-text-high-emphasis-on-surface: if((#lbz-theme.dark[on-surface] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
   --lbz-theme-text-medium-emphasis-on-surface: if((#lbz-theme.dark[on-surface] = #fff), #lbz-theme-text.light[medium-emphasis], #lbz-theme-text.dark[medium-emphasis]);
   --lbz-theme-text-disabled-on-surface: if((#lbz-theme.dark[on-surface] = #fff), #lbz-theme-text.light[disabled], #lbz-theme-text.dark[disabled]);
 
-  // Divider colors
-  --lbz-theme-divider-on-primary: if((#lbz-theme.dark[on-primary] = #fff), #lbz-theme.divider[light], #lbz-theme.divider[dark]);
-  --lbz-theme-divider-on-secondary: if((#lbz-theme.dark[on-secondary] = #fff), #lbz-theme.divider[light], #lbz-theme.divider[dark]);
-  --lbz-theme-divider-on-background: if((#lbz-theme.dark[on-background] = #fff), #lbz-theme.divider[light], #lbz-theme.divider[dark]);
-  --lbz-theme-divider-on-surface: if((#lbz-theme.dark[on-surface] = #fff), #lbz-theme.divider[light], #lbz-theme.divider[dark]);
-  --lbz-theme-divider-on-error: if((#lbz-theme.dark[on-error] = #fff), #lbz-theme.divider[light], #lbz-theme.divider[dark]);
+  // Text on error backgrounds
+  --lbz-theme-text-high-emphasis-on-error: if((#lbz-theme.dark[on-error] = #fff), #lbz-theme-text.light[high-emphasis], #lbz-theme-text.dark[high-emphasis]);
+  --lbz-theme-text-medium-emphasis-on-error: if((#lbz-theme.dark[on-error] = #fff), #lbz-theme-text.light[medium-emphasis], #lbz-theme-text.dark[medium-emphasis]);
+  --lbz-theme-text-disabled-on-error: if((#lbz-theme.dark[on-error] = #fff), #lbz-theme-text.light[disabled], #lbz-theme-text.dark[disabled]);
+
+  // Outline colors
+  --lbz-theme-outline-on-primary: if((#lbz-theme.dark[on-primary] = #fff), #lbz-theme.outline[light], #lbz-theme.outline[dark]);
+  --lbz-theme-outline-on-secondary: if((#lbz-theme.dark[on-secondary] = #fff), #lbz-theme.outline[light], #lbz-theme.outline[dark]);
+  --lbz-theme-outline-on-background: if((#lbz-theme.dark[on-background] = #fff), #lbz-theme.outline[light], #lbz-theme.outline[dark]);
+  --lbz-theme-outline-on-surface: if((#lbz-theme.dark[on-surface] = #fff), #lbz-theme.outline[light], #lbz-theme.outline[dark]);
+  --lbz-theme-outline-on-error: if((#lbz-theme.dark[on-error] = #fff), #lbz-theme.outline[light], #lbz-theme.outline[dark]);
 }
