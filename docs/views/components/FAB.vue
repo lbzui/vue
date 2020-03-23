@@ -1,6 +1,6 @@
 <template>
   <article class="lbzui-components-fab">
-    <h2 class="lbz-typography--h5"># Standard FAB (floating action button)</h2>
+    <h2 class="lbz-typography--h5"># Standard FAB</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'mini', 'extended'</h3>
 

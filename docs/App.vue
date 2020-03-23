@@ -126,7 +126,7 @@ export default class App extends Vue {
       },
       {
         path: '/components/fab',
-        label: 'FAB',
+        label: 'FAB (floating action button)',
       },
       {
         path: '/components/icon',
@@ -201,25 +201,9 @@ export default class App extends Vue {
         label: 'GitHub repo',
       },
       {
-        path: 'https://github.com/lbzui/vue/tree/master/docs/views',
-        label: 'Code examples',
-      },
-      {
         path: 'https://github.com/orgs/lbzui/projects/1',
-        label: 'LBZUI board',
+        label: 'Component library',
       },
-      {
-        path: 'https://github.com/lbzui/vue/projects/1',
-        label: '@lbzui/vue board',
-      },
-      // {
-      //   path: 'https://github.com/lbzui/vue/issues',
-      //   label: 'Issues',
-      // },
-      // {
-      //   path: 'https://github.com/lbzui/vue/blob/master/CHANGELOG.md',
-      //   label: 'Changelog',
-      // },
       {
         path: 'https://material.io/',
         label: 'Material Design',

@@ -70,6 +70,50 @@
       />
     </div>
 
+    <h3 class="lbz-typography--subtitle1">$ darkened: true, false (default)</h3>
+
+    <div class="lbzui-square lbzui-switch--primary lbzui-is-darkened">
+      <lbz-switch
+        v-model="vswitch2"
+        color="secondary"
+        on-background="primary"
+        darkened
+      />
+    </div>
+    <div class="lbzui-square lbzui-switch--secondary lbzui-is-darkened">
+      <lbz-switch
+        v-model="vswitch2"
+        on-background="secondary"
+        darkened
+      />
+    </div>
+    <div class="lbzui-square lbzui-switch--error lbzui-is-darkened">
+      <lbz-switch
+        v-model="vswitch2"
+        on-background="error"
+        darkened
+      />
+      <lbz-switch
+        v-model="vswitch2"
+        color="secondary"
+        on-background="error"
+        darkened
+      />
+    </div>
+    <div class="lbzui-square lbzui-switch--light lbzui-is-darkened">
+      <lbz-switch
+        v-model="vswitch2"
+        on-background="light"
+        darkened
+      />
+      <lbz-switch
+        v-model="vswitch2"
+        color="secondary"
+        on-background="light"
+        darkened
+      />
+    </div>
+
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
 
     <div class="lbzui-square lbzui-switch--primary">

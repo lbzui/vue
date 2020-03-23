@@ -5,6 +5,7 @@
       'lbz-list',
       type && `lbz-list--${type}`,
       onBackground && `lbz-list--on-${onBackground}`,
+      darkened && 'lbz-is-darkened',
       nav && 'lbz-is-nav',
       cisDense && 'lbz-is-dense'
     ]"
@@ -49,6 +50,8 @@ export default class LbzList extends Vue {
   @Prop({ type: String, default: '' }) private type!: string;
   // on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
+  // darkened: true, false (default)
+  @Prop({ type: Boolean, default: false }) private darkened!: boolean;
   // nav: true, false (default)
   @Prop({ type: Boolean, default: false }) private nav!: boolean;
   // dense: undefined (default), true, false

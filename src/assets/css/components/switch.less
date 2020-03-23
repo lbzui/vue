@@ -192,7 +192,7 @@
   }
 
   &&--on-dark,
-  html[theme="dark"] &.lbz-is-auto-dark {
+  html[theme="dark"] &.lbz-is-darkened {
     &:not(.lbz-is-checked) {
       .lbz-switch__track {
         background-color: @white;
@@ -212,7 +212,8 @@
     }
   }
 
-  html[theme="dark"] &.lbz-is-auto-dark:not(.lbz-is-checked) .lbz-switch__state {
+  // darkened
+  html[theme="dark"] &.lbz-is-darkened:not(.lbz-is-checked) .lbz-switch__state {
     &::before,
     &::after {
       background-color: @white;

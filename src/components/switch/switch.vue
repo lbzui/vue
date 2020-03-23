@@ -4,6 +4,7 @@
       'lbz-switch',
       color && `lbz-switch--${color}`,
       onBackground && `lbz-switch--on-${onBackground}`,
+      darkened && 'lbz-is-darkened',
       cisChecked && 'lbz-is-checked',
       disabled && 'lbz-is-disabled'
     ]"
@@ -59,6 +60,8 @@ export default class LbzSwitch extends Vue {
   @Prop({ type: String, default: '' }) private color!: string;
   // on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
+  // darkened: true, false (default)
+  @Prop({ type: Boolean, default: false }) private darkened!: boolean;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
   // ripple: undefined (default), true, false

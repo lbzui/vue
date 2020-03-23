@@ -25,10 +25,10 @@
         </template>
         <template #back-center>
           <lbz-list
-            class="lbz-is-auto-dark"
             tag="nav"
             item-tag="a"
             on-background="primary"
+            darkened
             nav
           >
             <lbz-list-item
@@ -69,10 +69,10 @@
         </template>
         <template #back-center>
           <lbz-list
-            class="lbz-is-auto-dark"
             tag="nav"
             item-tag="a"
             on-background="secondary"
+            darkened
             nav
           >
             <lbz-list-item

@@ -13,21 +13,15 @@ html[theme="dark"] body {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    position: relative;
     margin: 0 16px 16px 0;
     width: 180px;
     height: 180px;
     vertical-align: top;
-    background-color: var(--lbz-theme-surface);
   }
 
   &-rectangle {
     display: block;
-    overflow: hidden;
-    position: relative;
     width: 100%;
-    background-color: var(--lbz-theme-surface);
 
     & + & {
       margin-top: 16px;
@@ -36,14 +30,32 @@ html[theme="dark"] body {
 
   &-app {
     display: inline-block;
-    overflow: hidden;
-    position: relative;
     margin: 0 16px 16px 0;
     width: 100%;
     max-width: 360px;
     height: 640px;
     vertical-align: top;
-    background-color: var(--lbz-theme-surface);
+  }
+
+  &-square,
+  &-rectangle,
+  &-app {
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid var(--lbz-theme-outline-on-surface);
+    border-radius: 4px;
+    .lbz-surface(0);
+    transition: box-shadow 150ms linear;
+
+    &:hover {
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, .08), 0 0 15px 0 rgba(0, 0, 0, .02), 0 0 20px 4px rgba(0, 0, 0, .06);
+    }
+
+    // darkened
+    html[theme="dark"] &.lbzui-is-darkened {
+      .lbz-surface("dark"; 0) !important;
+    }
   }
 
   width: 100%;
@@ -54,6 +66,10 @@ html[theme="dark"] body {
   & &__drawer {
     position: fixed;
     width: 256px;
+
+    .lbz-drawer__container {
+      width: inherit;
+    }
 
     // title
     .lbz-drawer__title {
@@ -98,13 +114,8 @@ html[theme="dark"] body {
       color: var(--lbz-theme-text-medium-emphasis-on-surface);
     }
 
-    a {
-      text-decoration: none;
-      color: var(--lbz-theme-primary);
-
-      &:hover {
-        text-decoration: underline;
-      }
+    a:hover {
+      text-decoration: underline;
     }
 
     strong {
@@ -124,7 +135,7 @@ html[theme="dark"] body {
       width: 16px;
       height: 16px;
       font-size: 16px;
-      color: var(--lbz-theme-text-disabled-on-surface);
+      color: var(--lbz-theme-outline-on-surface);
     }
   }
 
@@ -402,10 +413,8 @@ html[theme="dark"] body {
 
   // Utilities
   &-utilities {
-    &-aspect-ratio .lbzui-aspect-ratio {
-      margin: 0 16px 16px 0;
+    &-aspect-ratio .lbzui-rectangle {
       width: 180px;
-      background-color: var(--lbz-theme-surface);
     }
 
     &-layout-grid .lbz-layout-grid {

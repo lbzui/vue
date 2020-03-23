@@ -3,11 +3,9 @@
     v-bind="cgetAttrs"
     :class="[
       'lbz-list-item',
-      {
-        'lbz-is-selected': selected,
-        'lbz-is-activated': activated,
-        'lbz-is-disabled': cisDisabled
-      }
+      selected && 'lbz-is-selected',
+      activated && 'lbz-is-activated',
+      cisDisabled && 'lbz-is-disabled'
     ]"
     @click="!cisDisabled && $emit('click', $event)"
   >

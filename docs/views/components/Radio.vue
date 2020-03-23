@@ -96,6 +96,56 @@
       />
     </div>
 
+    <h3 class="lbz-typography--subtitle1">$ darkened: true, false (default)</h3>
+
+    <div class="lbzui-square lbzui-radio--primary lbzui-is-darkened">
+      <lbz-radio
+        v-model="vradio2"
+        value="primary"
+        color="secondary"
+        on-background="primary"
+        darkened
+      />
+    </div>
+    <div class="lbzui-square lbzui-radio--secondary lbzui-is-darkened">
+      <lbz-radio
+        v-model="vradio2"
+        value="secondary"
+        on-background="secondary"
+        darkened
+      />
+    </div>
+    <div class="lbzui-square lbzui-radio--error lbzui-is-darkened">
+      <lbz-radio
+        v-model="vradio2"
+        value="error"
+        on-background="error"
+        darkened
+      />
+      <lbz-radio
+        v-model="vradio2"
+        value="error"
+        color="secondary"
+        on-background="error"
+        darkened
+      />
+    </div>
+    <div class="lbzui-square lbzui-radio--light lbzui-is-darkened">
+      <lbz-radio
+        v-model="vradio2"
+        value="light"
+        on-background="light"
+        darkened
+      />
+      <lbz-radio
+        v-model="vradio2"
+        value="light"
+        color="secondary"
+        on-background="light"
+        darkened
+      />
+    </div>
+
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
 
     <div class="lbzui-square lbzui-radio--primary">

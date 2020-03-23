@@ -388,6 +388,125 @@
       </lbz-list-item>
     </lbz-list>
 
+    <h3 class="lbz-typography--subtitle1">$ darkened: true, false (default)</h3>
+
+    <lbz-list
+      class="lbzui-rectangle lbzui-is-darkened"
+      type="two-line"
+      on-background="primary"
+      darkened
+      subtitle="Primary"
+    >
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-list-item__title">Two-line item</span>
+        </template>
+        <template #end>
+          <span class="lbz-typography--caption">meta</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>bluetooth</lbz-icon>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+    </lbz-list>
+    <lbz-list
+      class="lbzui-rectangle lbzui-is-darkened"
+      type="two-line"
+      on-background="secondary"
+      darkened
+      subtitle="Secondary"
+    >
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-list-item__title">Two-line item</span>
+        </template>
+        <template #end>
+          <span class="lbz-typography--caption">meta</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>bluetooth</lbz-icon>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <lbz-icon-button on-background="secondary">more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+    </lbz-list>
+    <lbz-list
+      class="lbzui-rectangle lbzui-is-darkened"
+      type="two-line"
+      on-background="error"
+      darkened
+      subtitle="Error"
+    >
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-list-item__title">Two-line item</span>
+        </template>
+        <template #end>
+          <span class="lbz-typography--caption">meta</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>bluetooth</lbz-icon>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <lbz-icon-button on-background="error">more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+    </lbz-list>
+    <lbz-list
+      class="lbzui-rectangle lbzui-is-darkened"
+      type="two-line"
+      on-background="light"
+      darkened
+      subtitle="Light"
+    >
+      <lbz-list-item>
+        <template #center>
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-list-item__title">Two-line item</span>
+        </template>
+        <template #end>
+          <span class="lbz-typography--caption">meta</span>
+        </template>
+      </lbz-list-item>
+      <lbz-list-item>
+        <template #start>
+          <lbz-icon>bluetooth</lbz-icon>
+        </template>
+        <template #center>
+          <span class="lbz-list-item__title">Two-line item</span>
+          <span class="lbz-list-item__subtitle">Secondary text</span>
+        </template>
+        <template #end>
+          <lbz-icon-button on-background="light">more_vert</lbz-icon-button>
+        </template>
+      </lbz-list-item>
+    </lbz-list>
+
     <h3 class="lbz-typography--subtitle1">$ nav: true, false (default)</h3>
 
     <lbz-list

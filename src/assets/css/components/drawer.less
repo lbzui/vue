@@ -20,7 +20,7 @@
     left: 0;
     box-sizing: border-box;
     border-right: 1px solid var(--lbz-theme-outline-on-surface);
-    width: 256px;
+    width: 280px;
     max-width: 400px;
     .lbz-surface(16);
     scroll-behavior: smooth;
@@ -146,6 +146,7 @@
   @media #lbz-layout-grid.media[xsmall] {
     &:not(.lbz-drawer--bottom) .lbz-drawer__container {
       width: calc(100% - 56px);
+      max-width: 320px;
     }
 
     &:not(.lbz-drawer--modal):not(.lbz-drawer--bottom) {
