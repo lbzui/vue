@@ -4,6 +4,7 @@ import '../assets/css/index.less';
 import Backdrop from './backdrop';
 import Button from './button';
 import Card from './card';
+import Checkbox from './checkbox';
 import Dialog from './dialog';
 import Divider from './divider';
 import Drawer from './drawer';
@@ -26,6 +27,7 @@ const components: any[] = [
   Backdrop,
   Button,
   Card,
+  Checkbox,
   Dialog,
   Divider,
   Drawer,
@@ -42,19 +44,19 @@ const components: any[] = [
   TabItem,
   TopAppBar,
 ];
-const install: PluginFunction<any> = (v: typeof Vue, opts?: LbzuiOptions): void => {
+const install: PluginFunction<any> = (vm: typeof Vue, opts?: LbzuiOptions): void => {
   const {
     dense,
     ripple,
   }: any = opts || {};
 
-  v.prototype.$lbzui = {
+  vm.prototype.$lbzui = {
     dense: dense || false,
     ripple: ripple === undefined ? true : ripple,
   };
 
   components.map((Component) => {
-    v.use(Component.install);
+    vm.use(Component.install);
   });
 };
 
@@ -68,6 +70,7 @@ export default {
   Backdrop,
   Button,
   Card,
+  Checkbox,
   Dialog,
   Divider,
   Drawer,

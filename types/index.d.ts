@@ -14,16 +14,17 @@ export interface VueScrollPosition {
 
 declare module '@lbzui/vue' {
   class LbzuiComponent extends Vue {
-    static install(v: typeof Vue, opts?: LbzuiOptions): void;
+    static install(vm: typeof Vue, opts?: LbzuiOptions): void;
   }
 
   export const version: string;
 
-  export function install(v: typeof Vue, opts?: LbzuiOptions): void;
+  export function install(vm: typeof Vue, opts?: LbzuiOptions): void;
 
   export class Backdrop extends LbzuiComponent {}
   export class Button extends LbzuiComponent {}
   export class Card extends LbzuiComponent {}
+  export class Checkbox extends LbzuiComponent {}
   export class Dialog extends LbzuiComponent {}
   export class Divider extends LbzuiComponent {}
   export class Drawer extends LbzuiComponent {}

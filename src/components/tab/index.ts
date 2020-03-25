@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Tab from './tab.vue';
 
-(Tab as any).install = (v: typeof Vue, opts?: any): void => {
-  v.component('lbz-tab', Tab);
+(Tab as any).install = (vm: typeof Vue, opts?: any): void => {
+  vm.component('lbz-tab', Tab);
 };
 
 export default Tab;

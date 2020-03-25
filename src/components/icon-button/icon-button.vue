@@ -2,17 +2,15 @@
   <component
     v-bind="cgetAttrs"
     :class="[
-      !toggle && 'material-icons',
+      !cisToggle && 'material-icons',
       'lbz-icon-button',
       onBackground && `lbz-icon-button--on-${onBackground}`,
-      {
-        'lbz-is-active': toggle && cisActive,
-        'lbz-is-disabled': disabled
-      }
+      cisActive && 'lbz-is-active',
+      disabled && 'lbz-is-disabled'
     ]"
     @click="!disabled && fclick($event)"
   >
-    <template v-if="toggle">
+    <template v-if="cisToggle">
       <lbz-icon class="lbz-icon-button__icon lbz-icon-button__icon--on">
         <template v-if="onIcon">{{ onIcon }}</template><slot v-else name="on-icon"/>
       </lbz-icon>
@@ -37,8 +35,8 @@ import LbzState from '../state/state.vue';
   },
 })
 export default class LbzIconButton extends Vue {
-  // active.sync (toggle): true, false (default)
-  @PropSync('active', { type: Boolean, default: false }) private cisActive!: boolean;
+  // active.sync (toggle): undefined (default), true, false
+  @PropSync('active', { type: Boolean, default: undefined }) private cisActive!: boolean;
 
   // router-link (!toggle): true, false (default)
   @Prop({ type: Boolean, default: false }) private routerLink!: boolean;
@@ -49,21 +47,11 @@ export default class LbzIconButton extends Vue {
   //   exact: true || false (default),
   //   event: 'click' (default) || 'x' || ['x']
   // }
-  @Prop({
-    type: Object,
-    default: () => ({
-      to: '',
-      replace: false,
-      append: false,
-      exact: false,
-      event: 'click',
-    }),
-  }) private routerLinkProps!: object;
+  @Prop({ type: Object, default: () => ({ to: '', replace: false, append: false, exact: false, event: 'click' }) })
+  private routerLinkProps!: object;
   // tag: 'button' (default), 'a', 'x'
   @Prop({ type: String, default: 'button' }) private tag!: string;
 
-  // toggle: true, false (default)
-  @Prop({ type: Boolean, default: false }) private toggle!: boolean;
   // on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
   // disabled: true, false (default)
@@ -74,6 +62,10 @@ export default class LbzIconButton extends Vue {
   @Prop({ type: String, default: '' }) private offIcon!: string;
   // ripple: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
+
+  get cisToggle(): boolean {
+    return this.cisActive !== undefined;
+  }
 
   get cgetAttrs(): ComponentAttributes {
     const {
@@ -86,7 +78,7 @@ export default class LbzIconButton extends Vue {
     const tag: string = this.tag;
     const disabled: boolean = tag === 'button' && this.disabled;
 
-    return !this.toggle && this.routerLink
+    return !this.cisToggle && this.routerLink
       ? {
         is: 'router-link',
         to,
@@ -115,7 +107,7 @@ export default class LbzIconButton extends Vue {
 
   @Emit('click')
   private fclick(e: MouseEvent): void {
-    if (this.toggle) {
+    if (this.cisToggle) {
       this.cisActive = !this.cisActive;
     }
   }

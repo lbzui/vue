@@ -16,9 +16,9 @@
         <input
           v-bind="{
             id: `${id}`,
-            name: `${name}`,
             type: 'checkbox',
-            value: vvalue,
+            'true-value': `${trueValue}`,
+            'false-value': `${falseValue}`,
             checked: cisChecked,
             disabled
           }"
@@ -50,8 +50,6 @@ export default class LbzSwitch extends Vue {
 
   // id: '' (default), 'x'
   @Prop({ type: String, default: '' }) private id!: string;
-  // name: '' (default), 'x'
-  @Prop({ type: String, default: '' }) private name!: string;
   // true-value: true (default), false, x, 'x'
   @Prop({ type: [Boolean, Number, String], default: true }) private trueValue!: boolean | number | string;
   // false-value: true, false (default), x, 'x'
@@ -66,8 +64,6 @@ export default class LbzSwitch extends Vue {
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
   // ripple: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
-
-  private vvalue: boolean | number | string = this.mchecked;
 
   get cisChecked(): boolean {
     return this.mchecked === this.trueValue;
@@ -86,11 +82,9 @@ export default class LbzSwitch extends Vue {
 
   @Emit('change')
   private fclick(e: MouseEvent) {
-    this.vvalue = this.cisChecked
+    return this.cisChecked
       ? this.falseValue
       : this.trueValue;
-
-    return this.vvalue;
   }
 }
 </script>

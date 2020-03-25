@@ -40,7 +40,7 @@
 
     <h2 class="lbz-typography--h5"># Browser support</h2>
 
-    <p class="lbz-typography--body1">@lbzui/vue supports <a href="https://browserl.ist/?q=%3E%3D+1%25" target="_blank">all modern browsers</a><lbz-icon>open_in_new</lbz-icon> and IE 10+ (<strong>Layout grid</strong> works unfriendly, and <strong>dark theme</strong> does not supported).</p>
+    <p class="lbz-typography--body1">@lbzui/vue supports <a href="https://browserl.ist/?q=%3E%3D+1%25" target="_blank">all modern browsers</a><lbz-icon>open_in_new</lbz-icon> and IE 10+ (<strong>Layout grid</strong> works unfriendly, and <strong>Dark theme</strong> does not supported).</p>
     <p class="lbz-typography--body1">May work in other browsers but it's untested.</p>
 
     <h2 class="lbz-typography--h5"># Changelog</h2>

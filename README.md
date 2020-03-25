@@ -101,6 +101,7 @@ import {
   Backdrop,
   Button,
   Card,
+  Checkbox,
   Dialog,
   Divider,
   Drawer,
@@ -126,6 +127,7 @@ Vue.prototype.$lbzui = {
 Vue.use(Backdrop);
 Vue.use(Button);
 Vue.use(Card);
+Vue.use(Checkbox);
 Vue.use(Dialog);
 Vue.use(Divider);
 Vue.use(Drawer);
@@ -196,6 +198,7 @@ import '@lbzui/vue/src/assets/css/utilities/typography.less';
 import '@lbzui/vue/src/assets/css/components/backdrop.less';
 import '@lbzui/vue/src/assets/css/components/button.less';
 import '@lbzui/vue/src/assets/css/components/card.less';
+import '@lbzui/vue/src/assets/css/components/checkbox.less';
 import '@lbzui/vue/src/assets/css/components/dialog.less';
 import '@lbzui/vue/src/assets/css/components/divider.less';
 import '@lbzui/vue/src/assets/css/components/drawer.less';
@@ -355,7 +358,7 @@ const router = new VueRouter({
 
 ## Browser support
 
-@lbzui/vue supports all [modern browsers](https://browserl.ist/?q=%3E%3D+1%25) and IE 10+ (**Layout grid** works unfriendly, and **dark theme** does not supported).
+@lbzui/vue supports all [modern browsers](https://browserl.ist/?q=%3E%3D+1%25) and IE 10+ (**Layout grid** works unfriendly, and **Dark theme** does not supported).
 
 May work in other browsers but it's untested.
 

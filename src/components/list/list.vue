@@ -34,15 +34,8 @@ export default class LbzList extends Vue {
   //   exact: true || false (default),
   //   event: 'click' (default) || 'x' || ['x']
   // }
-  @Prop({
-    type: Object,
-    default: () => ({
-      replace: false,
-      append: false,
-      exact: false,
-      event: 'click',
-    }),
-  }) private routerLinkProps!: object;
+  @Prop({ type: Object, default: () => ({ replace: false, append: false, exact: false, event: 'click' }) })
+  private routerLinkProps!: object;
   // item-tag: 'li' (default), 'a', 'x'
   @Prop({ type: String, default: 'li' }) private itemTag!: string;
 

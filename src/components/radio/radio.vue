@@ -14,7 +14,6 @@
       <input
         v-bind="{
           id: `${id}`,
-          name: `${name}`,
           type: 'radio',
           value,
           checked: cisChecked,
@@ -47,8 +46,6 @@ export default class LbzRadio extends Vue {
 
   // id: '' (default), 'x'
   @Prop({ type: String, default: '' }) private id!: string;
-  // name: '' (default), 'x'
-  @Prop({ type: String, default: '' }) private name!: string;
   // [required]value: true, false, x, 'x'
   @Prop({ type: [Boolean, Number, String], required: true }) private value!: boolean | number | string;
   // color: 'primary' (default), 'secondary'

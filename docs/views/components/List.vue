@@ -1172,53 +1172,42 @@
     <lbz-list class="lbzui-rectangle">
       <lbz-list-item selected>
         <template #start>
-          <lbz-radio
-            v-model="vradio"
-            id="vradio-true"
-            name="vradio"
-            :value="true"
-          />
+          <lbz-checkbox v-model="vcheckbox"/>
         </template>
         <template #center>
           <span class="lbz-list-item__title">Selected</span>
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
-          <lbz-radio
-            v-model="vradio"
-            id="vradio-false"
-            name="vradio"
-            :value="false"
-          />
+          <lbz-checkbox v-model="vcheckbox" color="secondary"/>
         </template>
       </lbz-list-item>
       <lbz-list-item activated>
         <template #start>
-          <lbz-icon>bluetooth</lbz-icon>
+          <lbz-radio v-model="vradio" :value="true"/>
         </template>
         <template #center>
           <span class="lbz-list-item__title">Activated</span>
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
-          <lbz-icon-button>more_vert</lbz-icon-button>
+          <lbz-radio
+            v-model="vradio"
+            :value="true"
+            color="secondary"
+          />
         </template>
       </lbz-list-item>
       <lbz-list-item disabled>
         <template #start>
-          <lbz-icon>bluetooth</lbz-icon>
+          <lbz-switch v-model="vswitch" disabled/>
         </template>
         <template #center>
           <span class="lbz-list-item__title">Disabled</span>
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
-          <lbz-switch
-            v-model="vswitch"
-            id="vswitch"
-            name="vswitch"
-            disabled
-          />
+          <lbz-switch v-model="vswitch" color="secondary" disabled/>
         </template>
       </lbz-list-item>
     </lbz-list>
@@ -1237,6 +1226,7 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class ComponentsList extends Vue {
+  private vcheckbox: boolean = true;
   private vradio: boolean = true;
   private vswitch: boolean = true;
 

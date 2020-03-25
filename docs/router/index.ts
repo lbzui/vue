@@ -30,6 +30,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "card" */ '../views/components/Card.vue'),
   },
   {
+    path: '/components/checkbox',
+    name: 'checkbox',
+    component: () => import(/* webpackChunkName: "checkbox" */ '../views/components/Checkbox.vue'),
+  },
+  {
     path: '/components/dialog',
     name: 'dialog',
     component: () => import(/* webpackChunkName: "dialog" */ '../views/components/Dialog.vue'),

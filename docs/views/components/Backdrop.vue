@@ -12,7 +12,6 @@
             <template #start>
               <lbz-icon-button
                 :active.sync="vactive"
-                toggle
                 on-background="primary"
                 on-icon="close"
                 off-icon="menu"
@@ -56,7 +55,6 @@
             <template #start>
               <lbz-icon-button
                 :active.sync="vactive"
-                toggle
                 on-background="secondary"
                 on-icon="close"
                 off-icon="menu"
@@ -100,7 +98,6 @@
             <template #start>
               <lbz-icon-button
                 :active.sync="vactive"
-                toggle
                 on-icon="close"
                 off-icon="menu"
               />
@@ -141,7 +138,6 @@
             <template #start>
               <lbz-icon-button
                 :active.sync="vactive"
-                toggle
                 on-background="light"
                 on-icon="close"
                 off-icon="menu"
@@ -184,7 +180,6 @@
             <template #start>
               <lbz-icon-button
                 :active.sync="vactive"
-                toggle
                 on-background="dark"
                 on-icon="close"
                 off-icon="menu"
@@ -230,7 +225,6 @@
             <template #start>
               <lbz-icon-button
                 :active.sync="vactive"
-                toggle
                 on-background="primary"
                 on-icon="close"
                 off-icon="menu"
@@ -259,7 +253,6 @@
             <template #start>
               <lbz-icon-button
                 :active.sync="vactive"
-                toggle
                 on-background="primary"
                 on-icon="close"
                 off-icon="menu"
@@ -288,7 +281,6 @@
             <template #start>
               <lbz-icon-button
                 :active.sync="vactive"
-                toggle
                 on-background="primary"
                 on-icon="close"
                 off-icon="menu"
@@ -321,7 +313,6 @@
             <template #start>
               <lbz-icon-button
                 :active.sync="vactive"
-                toggle
                 on-background="primary"
                 on-icon="close"
                 off-icon="menu"
@@ -347,7 +338,6 @@
             <template #start>
               <lbz-icon-button
                 :active.sync="vactive"
-                toggle
                 on-background="primary"
                 on-icon="close"
                 off-icon="menu"
@@ -376,7 +366,6 @@
             <template #start>
               <lbz-icon-button
                 :active.sync="vactive"
-                toggle
                 on-background="primary"
                 on-icon="close"
                 off-icon="menu"

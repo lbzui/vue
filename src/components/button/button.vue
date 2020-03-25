@@ -43,16 +43,8 @@ export default class LbzButton extends Vue {
   //   exact: true || false (default),
   //   event: 'click' (default) || 'x' || ['x']
   // }
-  @Prop({
-    type: Object,
-    default: () => ({
-      to: '',
-      replace: false,
-      append: false,
-      exact: false,
-      event: 'click',
-    }),
-  }) private routerLinkProps!: object;
+  @Prop({ type: Object, default: () => ({ to: '', replace: false, append: false, exact: false, event: 'click' }) })
+  private routerLinkProps!: object;
   // tag: 'button' (default), 'a', 'x'
   @Prop({ type: String, default: 'button' }) private tag!: string;
 

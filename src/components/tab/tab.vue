@@ -20,10 +20,7 @@ import EventBus from '../../utils/event-bus';
 @Component
 export default class LbzTab extends Vue {
   // v-model: undefined (default), true, false, x, 'x'
-  @Model('change', {
-    type: [Boolean, Number, String],
-    default: undefined,
-  }) private mvalue!: boolean | number | string;
+  @Model('change', { type: [Boolean, Number, String], default: undefined }) private mvalue!: boolean | number | string;
 
   // tag: 'nav' (default), 'x'
   @Prop({ type: String, default: 'nav' }) private tag!: string;
@@ -35,15 +32,8 @@ export default class LbzTab extends Vue {
   //   exact: true || false (default),
   //   event: 'click' (default) || 'x' || ['x']
   // }
-  @Prop({
-    type: Object,
-    default: () => ({
-      replace: false,
-      append: false,
-      exact: false,
-      event: 'click',
-    }),
-  }) private routerLinkProps!: object;
+  @Prop({ type: Object, default: () => ({ replace: false, append: false, exact: false, event: 'click' }) })
+  private routerLinkProps!: object;
   // item-tag: 'button' (default), 'a', 'x'
   @Prop({ type: String, default: 'button' }) private itemTag!: string;
 

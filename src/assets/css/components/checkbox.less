@@ -1,0 +1,198 @@
+// Checkbox
+.lbz-checkbox {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  & &__container {
+    -webkit-appearance: none;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 50%;
+    padding: 11px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    outline: none;
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+  & &__square {
+    position: relative;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 2px;
+    width: 18px;
+    height: 18px;
+    color: var(--lbz-theme-text-medium-emphasis-on-surface);
+    background-color: transparent;
+    transition: color 90ms #lbz-motion.curve[sharp], background-color 90ms #lbz-motion.curve[sharp];
+  }
+
+  & &__checkmark {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: var(--lbz-theme-on-primary);
+    stroke: currentColor;
+    opacity: 0;
+    transition: opacity 180ms #lbz-motion.curve[sharp];
+
+    path {
+      stroke-width: (2 / 15 * 18px) * 1.3;
+      stroke-dashoffset: 29.7833385;
+      stroke-dasharray: 29.7833385;
+      transition: stroke-dashoffset .18s #lbz-motion.curve[sharp];
+    }
+  }
+
+  & &__mixedmark {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    box-sizing: border-box;
+    border: 1px solid;
+    width: 100%;
+    height: 0;
+    color: var(--lbz-theme-on-primary);
+    opacity: 0;
+    transition: opacity 90ms #lbz-motion.curve[sharp], transform 90ms #lbz-motion.curve[sharp];
+    transform: scaleX(0) rotate(0deg);
+  }
+
+  & &__state::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  & &__label {
+    margin-left: 4px;
+    .lbz-typography("body2");
+    color: var(--lbz-theme-text-medium-emphasis-on-surface);
+  }
+
+  &.lbz-is-checked .lbz-checkbox {
+    &__square {
+      color: var(--lbz-theme-primary);
+      background-color: var(--lbz-theme-primary);
+      transition: color 90ms #lbz-motion.curve[deceleration], background-color 90ms #lbz-motion.curve[deceleration];
+    }
+
+    &__checkmark {
+      opacity: 1;
+      transition: opacity 180ms #lbz-motion.curve[standard], transform 180ms #lbz-motion.curve[standard];
+
+      path {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    &__mixedmark {
+      transform: scaleX(1) rotate(-45deg);
+    }
+  }
+
+  & + & {
+    margin-left: 10px;
+  }
+
+  // color
+  &&--secondary.lbz-is-checked .lbz-checkbox {
+    &__square {
+      color: var(--lbz-theme-secondary);
+      background-color: var(--lbz-theme-secondary);
+    }
+
+    &__checkmark,
+    &__mixedmark {
+      color: var(--lbz-theme-on-secondary);
+    }
+  }
+
+  // on-background
+  &&--on {
+    &-primary {
+      &:not(.lbz-is-checked) .lbz-checkbox__square,
+      .lbz-radio__label {
+        color: var(--lbz-theme-text-medium-emphasis-on-primary);
+      }
+    }
+
+    &-secondary {
+      &:not(.lbz-is-checked) .lbz-checkbox__square,
+      .lbz-radio__label {
+        color: var(--lbz-theme-text-medium-emphasis-on-secondary);
+      }
+    }
+
+    &-error {
+      &:not(.lbz-is-checked) .lbz-checkbox__square,
+      .lbz-radio__label {
+        color: var(--lbz-theme-text-medium-emphasis-on-error);
+      }
+    }
+
+    &-light {
+      &:not(.lbz-is-checked) .lbz-checkbox__square,
+      .lbz-radio__label {
+        color: #lbz-theme-text.dark[medium-emphasis];
+      }
+    }
+  }
+
+  &&--on-dark,
+  html[theme="dark"] &.lbz-is-darkened {
+    &:not(.lbz-is-checked) .lbz-checkbox__square,
+    .lbz-radio__label {
+      color: #lbz-theme-text.light[medium-emphasis];
+    }
+  }
+
+  // darkened
+  html[theme="dark"] &.lbz-is-darkened:not(.lbz-is-checked) .lbz-checkbox__state {
+    &::before,
+    &::after {
+      background-color: @white;
+    }
+  }
+
+  // indeterminate
+  &.lbz-is-indeterminate {
+    .lbz-checkbox__checkmark {
+      opacity: 0;
+      transition: opacity 90ms #lbz-motion.curve[standard], transform 90ms #lbz-motion.curve[standard];
+      transform: rotate(45deg);
+    }
+
+    .lbz-checkbox__mixedmark {
+      opacity: 1;
+      transform: scaleX(1) rotate(0deg);
+    }
+  }
+
+  // disabled
+  &.lbz-is-disabled {
+    opacity: #lbz-state.surface[disabled];
+    pointer-events: none;
+  }
+}

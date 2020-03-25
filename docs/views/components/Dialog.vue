@@ -215,7 +215,7 @@
             @click.stop="vradio = index"
           >
             <template #start>
-              <lbz-radio v-model="vradio" :value="index"></lbz-radio>
+              <lbz-radio v-model="vradio" :value="index"/>
             </template>
             <template #center>Item {{ item }}</template>
           </lbz-list-item>

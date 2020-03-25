@@ -61,8 +61,6 @@
             <template #end>
               <lbz-switch
                 v-model="visDark"
-                id="visDark"
-                name="visDark"
                 :disabled="!vsupportsCssVars"
                 @change="fsetTheme"
               />
@@ -107,6 +105,10 @@ export default class App extends Vue {
       {
         path: '/components/card',
         label: 'Card',
+      },
+      {
+        path: '/components/checkbox',
+        label: 'Checkbox',
       },
       {
         path: '/components/dialog',
@@ -202,7 +204,7 @@ export default class App extends Vue {
       },
       {
         path: 'https://github.com/orgs/lbzui/projects/1',
-        label: 'Component library',
+        label: 'API',
       },
       {
         path: 'https://material.io/',
