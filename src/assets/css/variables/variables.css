@@ -63,4 +63,6 @@
   --lbz-theme-outline-on-error: rgba(255, 255, 255, 0.12);
   --lbz-theme-outline-on-light: rgba(0, 0, 0, 0.12);
   --lbz-theme-outline-on-dark: rgba(255, 255, 255, 0.12);
+  --lbz-theme-scrim-light: rgba(255, 255, 255, 0.32);
+  --lbz-theme-scrim-dark: rgba(0, 0, 0, 0.32);
 }

@@ -41,11 +41,11 @@
     // color
     &.lbz-button {
       &--light {
-        border-color: #lbz-theme.outline[light];
+        border-color: var(--lbz-theme-outline-on-dark);
       }
 
       &--dark {
-        border-color: #lbz-theme.outline[dark];
+        border-color: var(--lbz-theme-outline-on-light);
       }
     }
   }
@@ -85,7 +85,7 @@
       }
 
       &--light {
-        color: @black;
+        color: var(--lbz-theme-on-light);
         .lbz-surface("light"; 2);
 
         // unelevated
@@ -95,7 +95,7 @@
       }
 
       &--dark {
-        color: @white;
+        color: var(--lbz-theme-on-dark);
         .lbz-surface("dark"; 2);
 
         // unelevated
@@ -152,20 +152,20 @@
   }
 
   &&--light {
-    color: @white;
+    color: var(--lbz-theme-light);
 
     // type, disabled
     &:not(.lbz-button--contained).lbz-is-disabled {
-      color: #lbz-theme-text.light[disabled];
+      color: var(--lbz-theme-text-disabled-on-dark);
     }
   }
 
   &&--dark {
-    color: @black;
+    color: var(--lbz-theme-dark);
 
     // type, disabled
     &:not(.lbz-button--contained).lbz-is-disabled {
-      color: #lbz-theme-text.dark[disabled];
+      color: var(--lbz-theme-text-disabled-on-light);
     }
   }
 

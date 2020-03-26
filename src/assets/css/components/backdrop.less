@@ -124,7 +124,7 @@
       bottom: 0;
       left: 0;
       border-radius: inherit;
-      background-color: #lbz-theme.scrim[light];
+      background-color: var(--lbz-theme-scrim-light);
     }
   }
 
@@ -164,7 +164,7 @@
     .lbz-surface("light"; 0);
 
     .lbz-backdrop__back-layer {
-      color: #lbz-theme-text.dark[medium-emphasis];
+      color: var(--lbz-theme-text-medium-emphasis-on-light);
     }
   }
 
@@ -173,12 +173,12 @@
     .lbz-surface("dark"; 0);
 
     .lbz-backdrop__back-layer {
-      color: #lbz-theme-text.light[medium-emphasis];
+      color: var(--lbz-theme-text-medium-emphasis-on-dark);
     }
   }
 
   html[theme="dark"] &:not(.lbz-backdrop--light):not(.lbz-backdrop--dark) .lbz-backdrop__back-layer__content .lbz-divider {
-    border-color: #lbz-theme.outline[light];
+    border-color: var(--lbz-theme-outline-on-dark);
   }
 
   // active
@@ -206,6 +206,6 @@
 
   // scrim
   html[theme="dark"] & .lbz-backdrop__front-layer__scrim {
-    background-color: #lbz-theme.scrim[dark];
+    background-color: var(--lbz-theme-scrim-dark);
   }
 }

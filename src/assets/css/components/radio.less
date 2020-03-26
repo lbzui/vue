@@ -114,7 +114,7 @@
     &-light {
       &:not(.lbz-is-checked) .lbz-radio__circle,
       .lbz-radio__label {
-        color: #lbz-theme-text.dark[medium-emphasis];
+        color: var(--lbz-theme-text-medium-emphasis-on-light);
       }
     }
   }
@@ -123,7 +123,7 @@
   html[theme="dark"] &.lbz-is-darkened {
     &:not(.lbz-is-checked) .lbz-radio__circle,
     .lbz-radio__label {
-      color: #lbz-theme-text.light[medium-emphasis];
+      color: var(--lbz-theme-text-medium-emphasis-on-dark);
     }
   }
 
@@ -131,7 +131,7 @@
   html[theme="dark"] &.lbz-is-darkened:not(.lbz-is-checked) .lbz-radio__state {
     &::before,
     &::after {
-      background-color: @white;
+      background-color: var(--lbz-theme-on-dark);
     }
   }
 

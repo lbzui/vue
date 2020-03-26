@@ -140,7 +140,7 @@
   }
 
   &&--light {
-    color: @black;
+    color: var(--lbz-theme-on-light);
     .lbz-surface("light"; 0);
 
     // elevated
@@ -151,7 +151,7 @@
 
   &&--dark,
   html[theme="dark"] &:not(.lbz-top-app-bar--light):not(.lbz-top-app-bar--dark):not(.lbz-top-app-bar--transparent) {
-    color: @white;
+    color: var(--lbz-theme-on-dark);
     .lbz-surface("dark"; 0);
 
     // elevated
@@ -170,12 +170,12 @@
     .lbz-icon-button__state {
       &::before,
       &::after {
-        background-color: @white;
+        background-color: var(--lbz-theme-on-dark);
       }
     }
 
     .lbz-divider {
-      border-color: #lbz-theme.outline[light];
+      border-color: var(--lbz-theme-outline-on-dark);
     }
   }
 
