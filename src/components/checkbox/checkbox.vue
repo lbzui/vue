@@ -43,6 +43,7 @@
 
 <script lang="ts">
 import { Component, Model, Prop, Emit, Vue } from 'vue-property-decorator';
+import { inputId } from '../../utils/funcs';
 import LbzState from '../state/state.vue';
 
 @Component({
@@ -55,15 +56,15 @@ export default class LbzCheckbox extends Vue {
   @Model('change', { type: [Boolean, Number, String, Array], required: true })
   private mchecked!: boolean | number | string | any[];
 
-  // id: '' (default), 'x'
-  @Prop({ type: String, default: '' }) private id!: string;
+  // id: 'lbz-checkbox-x' (default), 'x'
+  @Prop({ type: String, default: `lbz-checkbox-${inputId()}` }) private id!: string;
   // true-value (!group): true (default), false, x, 'x'
   @Prop({ type: [Boolean, Number, String], default: true }) private trueValue!: boolean | number | string;
   // false-value (!group): true, false (default), x, 'x'
   @Prop({ type: [Boolean, Number, String], default: false }) private falseValue!: boolean | number | string;
   // value (group): true, false, x, 'x'
   @Prop({ type: [Boolean, Number, String], default: undefined }) private value!: boolean | number | string;
-  // color: 'primary' (default), 'secondary'
+  // color: 'primary', 'secondary' (default)
   @Prop({ type: String, default: '' }) private color!: string;
   // on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
@@ -93,10 +94,12 @@ export default class LbzCheckbox extends Vue {
   }
 
   get cgetStateAttrs(): StateAttributes {
+    const isPrimary: boolean = this.cisIndeterminate || this.cisChecked;
+
     return {
       class: 'lbz-checkbox__state',
-      type: ['primary', 'secondary', 'error'].includes(this.onBackground) || this.cisChecked ? 'primary' : '',
-      background: this.cisChecked ? (this.color || 'primary') : (this.onBackground ? `on-${this.onBackground}` : ''),
+      type: ['primary', 'secondary', 'error'].includes(this.onBackground) || isPrimary ? 'primary' : '',
+      background: isPrimary ? (this.color || 'secondary') : (this.onBackground ? `on-${this.onBackground}` : ''),
       ripple: this.ripple,
       unbounded: true,
       centered: true,

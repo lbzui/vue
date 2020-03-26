@@ -52,7 +52,7 @@
     <lbz-icon-button ripple>favorite_border</lbz-icon-button>
     <lbz-icon-button :ripple="false">favorite_border</lbz-icon-button>
 
-    <h2 class="lbz-typography--h5"># Toggle button</h2>
+    <h2 class="lbz-typography--h5"># Icon toggle button</h2>
 
     <h3 class="lbz-typography--subtitle1">$ active.sync (toggle): undefined (default), true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ on-icon (toggle): '' (default), 'x'</h3>

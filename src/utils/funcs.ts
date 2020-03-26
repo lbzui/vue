@@ -52,3 +52,7 @@ export function cancelContextmenu(): void {
 export function lockBodyScroll(val: boolean): void {
   document.body.classList[val ? 'add' : 'remove']('lbz-is-locked');
 }
+
+export function inputId(): string {
+  return Math.random().toString(36).slice(4);
+}

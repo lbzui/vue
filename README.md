@@ -7,7 +7,7 @@
 
 > Material Components for Vue.js
 
-@lbzui/vue is now available in [BETA](https://github.com/lbzui/vue/projects/1), but you can read in more depth on [component library](https://github.com/orgs/lbzui/projects/1) and [documentation website](https://lbzui-vue.lanbizhong.com/) to develop.
+@lbzui/vue is now available in [BETA](https://github.com/lbzui/vue/projects/1), but you can read in more depth on [component API](https://github.com/orgs/lbzui/projects/1) and [documentation website](https://lbzui-vue.lanbizhong.com/) to develop.
 
 If you have any questions, ideas or you want to discuss with it, [create an issue](https://github.com/lbzui/vue/issues/new) or email to lbz_ui@163.com.
 
@@ -364,7 +364,7 @@ May work in other browsers but it's untested.
 
 ## Changelog
 
-Recently updated? Please read the [changelog](/CHANGELOG.md).
+Detailed changes for each release are documented in the [release notes](https://github.com/lbzui/vue/releases).
 
 ## LICENSE
 

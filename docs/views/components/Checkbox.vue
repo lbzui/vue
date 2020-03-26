@@ -3,7 +3,7 @@
     <h2 class="lbz-typography--h5"># Checkbox</h2>
 
     <h3 class="lbz-typography--subtitle1">$ [required]v-model: true, false, x, 'x', [true, false, x, 'x']</h3>
-    <h3 class="lbz-typography--subtitle1">$ id: '' (default), 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ id: 'lbz-checkbox-x' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ true-value (!group): true (default), false, x, 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ false-value (!group): true, false (default), x, 'x'</h3>
 
@@ -30,10 +30,10 @@
       @change="fgroupChange"
     >{{ item }}</lbz-checkbox>
 
-    <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary'</h3>
+    <h3 class="lbz-typography--subtitle1">$ color: 'primary', 'secondary' (default)</h3>
 
-    <lbz-checkbox v-model="vcheckbox2">Primary</lbz-checkbox>
-    <lbz-checkbox v-model="vcheckbox2" color="secondary">Secondary</lbz-checkbox>
+    <lbz-checkbox v-model="vcheckbox2" color="primary">Primary</lbz-checkbox>
+    <lbz-checkbox v-model="vcheckbox2">Secondary</lbz-checkbox>
 
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'</h3>
 
@@ -41,7 +41,6 @@
       <lbz-checkbox
         v-model="vcheckbox3"
         value="primary"
-        color="secondary"
         on-background="primary"
       />
     </div>
@@ -49,27 +48,28 @@
       <lbz-checkbox
         v-model="vcheckbox3"
         value="secondary"
+        color="primary"
         on-background="secondary"
       />
     </div>
     <div class="lbzui-square">
-      <lbz-checkbox v-model="vcheckbox3" value="surface"/>
       <lbz-checkbox
         v-model="vcheckbox3"
         value="surface"
-        color="secondary"
+        color="primary"
       />
+      <lbz-checkbox v-model="vcheckbox3" value="surface"/>
     </div>
     <div class="lbzui-square lbzui-background--error">
       <lbz-checkbox
         v-model="vcheckbox3"
         value="error"
+        color="primary"
         on-background="error"
       />
       <lbz-checkbox
         v-model="vcheckbox3"
         value="error"
-        color="secondary"
         on-background="error"
       />
     </div>
@@ -77,12 +77,12 @@
       <lbz-checkbox
         v-model="vcheckbox3"
         value="light"
+        color="primary"
         on-background="light"
       />
       <lbz-checkbox
         v-model="vcheckbox3"
         value="light"
-        color="secondary"
         on-background="light"
       />
     </div>
@@ -90,12 +90,12 @@
       <lbz-checkbox
         v-model="vcheckbox3"
         value="dark"
+        color="primary"
         on-background="dark"
       />
       <lbz-checkbox
         v-model="vcheckbox3"
         value="dark"
-        color="secondary"
         on-background="dark"
       />
     </div>
@@ -106,7 +106,6 @@
       <lbz-checkbox
         v-model="vcheckbox3"
         value="primary"
-        color="secondary"
         on-background="primary"
         darkened
       />
@@ -115,6 +114,7 @@
       <lbz-checkbox
         v-model="vcheckbox3"
         value="secondary"
+        color="primary"
         on-background="secondary"
         darkened
       />
@@ -123,13 +123,13 @@
       <lbz-checkbox
         v-model="vcheckbox3"
         value="error"
+        color="primary"
         on-background="error"
         darkened
       />
       <lbz-checkbox
         v-model="vcheckbox3"
         value="error"
-        color="secondary"
         on-background="error"
         darkened
       />
@@ -138,13 +138,13 @@
       <lbz-checkbox
         v-model="vcheckbox3"
         value="light"
+        color="primary"
         on-background="light"
         darkened
       />
       <lbz-checkbox
         v-model="vcheckbox3"
         value="light"
-        color="secondary"
         on-background="light"
         darkened
       />
@@ -156,14 +156,12 @@
       <lbz-checkbox
         v-model="vcheckbox4"
         value="checked"
-        color="secondary"
         on-background="primary"
         disabled
       />
       <lbz-checkbox
         v-model="vcheckbox4"
         value="unchecked"
-        color="secondary"
         on-background="primary"
         disabled
       />
@@ -172,12 +170,14 @@
       <lbz-checkbox
         v-model="vcheckbox4"
         value="checked"
+        color="primary"
         on-background="secondary"
         disabled
       />
       <lbz-checkbox
         v-model="vcheckbox4"
         value="unchecked"
+        color="primary"
         on-background="secondary"
         disabled
       />
@@ -186,12 +186,12 @@
       <lbz-checkbox
         v-model="vcheckbox4"
         value="checked"
+        color="primary"
         disabled
       />
       <lbz-checkbox
         v-model="vcheckbox4"
         value="checked"
-        color="secondary"
         disabled
       />
       <lbz-checkbox
@@ -204,13 +204,13 @@
       <lbz-checkbox
         v-model="vcheckbox4"
         value="checked"
+        color="primary"
         on-background="error"
         disabled
       />
       <lbz-checkbox
         v-model="vcheckbox4"
         value="checked"
-        color="secondary"
         on-background="error"
         disabled
       />
@@ -225,13 +225,13 @@
       <lbz-checkbox
         v-model="vcheckbox4"
         value="checked"
+        color="primary"
         on-background="light"
         disabled
       />
       <lbz-checkbox
         v-model="vcheckbox4"
         value="checked"
-        color="secondary"
         on-background="light"
         disabled
       />
@@ -246,13 +246,13 @@
       <lbz-checkbox
         v-model="vcheckbox4"
         value="checked"
+        color="primary"
         on-background="dark"
         disabled
       />
       <lbz-checkbox
         v-model="vcheckbox4"
         value="checked"
-        color="secondary"
         on-background="dark"
         disabled
       />

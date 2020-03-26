@@ -1172,42 +1172,46 @@
     <lbz-list class="lbzui-rectangle">
       <lbz-list-item selected>
         <template #start>
-          <lbz-checkbox v-model="vcheckbox"/>
+          <lbz-checkbox v-model="vcheckbox" color="primary"/>
         </template>
         <template #center>
           <span class="lbz-list-item__title">Selected</span>
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
-          <lbz-checkbox v-model="vcheckbox" color="secondary"/>
+          <lbz-checkbox v-model="vcheckbox"/>
         </template>
       </lbz-list-item>
       <lbz-list-item activated>
         <template #start>
-          <lbz-radio v-model="vradio" :value="true"/>
+          <lbz-radio
+            v-model="vradio"
+            :value="true"
+            color="primary"
+          />
         </template>
         <template #center>
           <span class="lbz-list-item__title">Activated</span>
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
-          <lbz-radio
-            v-model="vradio"
-            :value="true"
-            color="secondary"
-          />
+          <lbz-radio v-model="vradio" :value="false"/>
         </template>
       </lbz-list-item>
       <lbz-list-item disabled>
         <template #start>
-          <lbz-switch v-model="vswitch" disabled/>
+          <lbz-switch
+            v-model="vswitch"
+            color="primary"
+            disabled
+          />
         </template>
         <template #center>
           <span class="lbz-list-item__title">Disabled</span>
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
-          <lbz-switch v-model="vswitch" color="secondary" disabled/>
+          <lbz-switch v-model="vswitch" disabled/>
         </template>
       </lbz-list-item>
     </lbz-list>

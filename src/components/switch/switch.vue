@@ -37,6 +37,7 @@
 
 <script lang="ts">
 import { Component, Model, Prop, Emit, Vue } from 'vue-property-decorator';
+import { inputId } from '../../utils/funcs';
 import LbzState from '../state/state.vue';
 
 @Component({
@@ -48,13 +49,13 @@ export default class LbzSwitch extends Vue {
   // [required]v-model: true, false, x, 'x'
   @Model('change', { type: [Boolean, Number, String], required: true }) private mchecked!: boolean | number | string;
 
-  // id: '' (default), 'x'
-  @Prop({ type: String, default: '' }) private id!: string;
+  // id: 'lbz-switch-x' (default), 'x'
+  @Prop({ type: String, default: `lbz-switch-${inputId()}` }) private id!: string;
   // true-value: true (default), false, x, 'x'
   @Prop({ type: [Boolean, Number, String], default: true }) private trueValue!: boolean | number | string;
   // false-value: true, false (default), x, 'x'
   @Prop({ type: [Boolean, Number, String], default: false }) private falseValue!: boolean | number | string;
-  // color: 'primary' (default), 'secondary'
+  // color: 'primary', 'secondary' (default)
   @Prop({ type: String, default: '' }) private color!: string;
   // on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
@@ -73,7 +74,7 @@ export default class LbzSwitch extends Vue {
     return {
       class: 'lbz-switch__state',
       type: ['primary', 'secondary', 'error'].includes(this.onBackground) || this.cisChecked ? 'primary' : '',
-      background: this.cisChecked ? (this.color || 'primary') : (this.onBackground ? `on-${this.onBackground}` : ''),
+      background: this.cisChecked ? (this.color || 'secondary') : (this.onBackground ? `on-${this.onBackground}` : ''),
       ripple: this.ripple,
       unbounded: true,
       centered: true,

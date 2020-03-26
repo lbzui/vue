@@ -49,7 +49,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    color: var(--lbz-theme-on-primary);
+    color: var(--lbz-theme-on-secondary);
     stroke: currentColor;
     opacity: 0;
     transition: opacity 180ms #lbz-motion.curve[sharp];
@@ -72,7 +72,7 @@
     border: 1px solid;
     width: 100%;
     height: 0;
-    color: var(--lbz-theme-on-primary);
+    color: var(--lbz-theme-on-secondary);
     opacity: 0;
     transition: opacity 90ms #lbz-motion.curve[sharp], transform 90ms #lbz-motion.curve[sharp];
     transform: scaleX(0) rotate(0deg);
@@ -93,8 +93,8 @@
 
   &.lbz-is-checked .lbz-checkbox {
     &__square {
-      color: var(--lbz-theme-primary);
-      background-color: var(--lbz-theme-primary);
+      color: var(--lbz-theme-secondary);
+      background-color: var(--lbz-theme-secondary);
       transition: color 90ms #lbz-motion.curve[deceleration], background-color 90ms #lbz-motion.curve[deceleration];
     }
 
@@ -117,15 +117,15 @@
   }
 
   // color
-  &&--secondary.lbz-is-checked .lbz-checkbox {
-    &__square {
-      color: var(--lbz-theme-secondary);
-      background-color: var(--lbz-theme-secondary);
+  &&--primary {
+    .lbz-checkbox__checkmark,
+    .lbz-checkbox__mixedmark {
+      color: var(--lbz-theme-on-primary);
     }
 
-    &__checkmark,
-    &__mixedmark {
-      color: var(--lbz-theme-on-secondary);
+    &.lbz-is-checked .lbz-checkbox__square {
+      color: var(--lbz-theme-primary);
+      background-color: var(--lbz-theme-primary);
     }
   }
 

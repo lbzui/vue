@@ -204,7 +204,7 @@ export default class App extends Vue {
       },
       {
         path: 'https://github.com/orgs/lbzui/projects/1',
-        label: 'API',
+        label: 'Component API',
       },
       {
         path: 'https://material.io/',

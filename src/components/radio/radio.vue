@@ -33,6 +33,7 @@
 
 <script lang="ts">
 import { Component, Model, Prop, Emit, Vue } from 'vue-property-decorator';
+import { inputId } from '../../utils/funcs';
 import LbzState from '../state/state.vue';
 
 @Component({
@@ -44,11 +45,11 @@ export default class LbzRadio extends Vue {
   // [required]v-model: true, false, x, 'x'
   @Model('change', { type: [Boolean, Number, String], required: true }) private mchecked!: boolean | number | string;
 
-  // id: '' (default), 'x'
-  @Prop({ type: String, default: '' }) private id!: string;
+  // id: 'lbz-radio-x' (default), 'x'
+  @Prop({ type: String, default: `lbz-radio-${inputId()}` }) private id!: string;
   // [required]value: true, false, x, 'x'
   @Prop({ type: [Boolean, Number, String], required: true }) private value!: boolean | number | string;
-  // color: 'primary' (default), 'secondary'
+  // color: 'primary', 'secondary' (default)
   @Prop({ type: String, default: '' }) private color!: string;
   // on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
@@ -67,7 +68,7 @@ export default class LbzRadio extends Vue {
     return {
       class: 'lbz-radio__state',
       type: ['primary', 'secondary', 'error'].includes(this.onBackground) || this.cisChecked ? 'primary' : '',
-      background: this.cisChecked ? (this.color || 'primary') : (this.onBackground ? `on-${this.onBackground}` : ''),
+      background: this.cisChecked ? (this.color || 'secondary') : (this.onBackground ? `on-${this.onBackground}` : ''),
       ripple: this.ripple,
       unbounded: true,
       centered: true,
