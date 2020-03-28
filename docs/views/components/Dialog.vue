@@ -284,48 +284,19 @@
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'alert' (default), 'simple', 'confirmation', 'full-screen (mobile only)'</h3>
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">$ lock-body-scroll: true (default), false</h3>
 
     <lbz-button @click.stop="vfullScreen0 = true">Full-screen</lbz-button>
     <lbz-dialog
       :active.sync="vfullScreen0"
       type="full-screen"
       title="Page title"
-    >
-      <template #start>
-        <!-- Save, Send, Share, Update, or Create -->
-        <lbz-button @click.stop="vfullScreen0 = false">Action</lbz-button>
-      </template>
-      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
-    </lbz-dialog>
-
-    <h3 class="lbz-typography--subtitle1">$ append-to-body: true, false (default)</h3>
-
-    <lbz-button @click.stop="vfullScreen1 = true">Append to body</lbz-button>
-    <lbz-dialog
-      :active.sync="vfullScreen1"
-      type="full-screen"
-      title="Page title"
       append-to-body
     >
       <template #start>
         <!-- Save, Send, Share, Update, or Create -->
-        <lbz-button @click.stop="vfullScreen1 = false">Action</lbz-button>
-      </template>
-      <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
-    </lbz-dialog>
-
-    <h3 class="lbz-typography--subtitle1">$ lock-body-scroll: true (default), false</h3>
-
-    <lbz-button @click.stop="vfullScreen2 = true">Unlock body scroll</lbz-button>
-    <lbz-dialog
-      :active.sync="vfullScreen2"
-      type="full-screen"
-      title="Page title"
-      :lock-body-scroll="false"
-    >
-      <template #start>
-        <!-- Save, Send, Share, Update, or Create -->
-        <lbz-button @click.stop="vfullScreen2 = false">Action</lbz-button>
+        <lbz-button @click.stop="vfullScreen0 = false">Action</lbz-button>
       </template>
       <template #center>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</template>
     </lbz-dialog>
@@ -374,8 +345,6 @@ export default class ComponentsDialog extends Vue {
   private vconfirmation4: boolean = false;
 
   private vfullScreen0: boolean = false;
-  private vfullScreen1: boolean = false;
-  private vfullScreen2: boolean = false;
 
   private fbeforeOpen(): void {
     console.log('Dialog will be opened');

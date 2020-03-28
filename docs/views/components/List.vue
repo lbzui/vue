@@ -50,6 +50,7 @@
         </template>
       </lbz-list-item>
     </lbz-list>
+    <br>
     <lbz-list
       class="lbzui-rectangle"
       type="two-line"
@@ -120,6 +121,7 @@
         </template>
       </lbz-list-item>
     </lbz-list>
+    <br>
     <lbz-list
       class="lbzui-rectangle"
       type="three-line"
@@ -221,7 +223,7 @@
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'</h3>
 
     <lbz-list
-      class="lbzui-rectangle"
+      class="lbzui-rectangle lbzui-background--primary"
       type="two-line"
       on-background="primary"
       subtitle="Primary"
@@ -249,7 +251,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-rectangle"
+      class="lbzui-rectangle lbzui-background--secondary"
       type="two-line"
       on-background="secondary"
       subtitle="Secondary"
@@ -304,7 +306,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-rectangle"
+      class="lbzui-rectangle lbzui-background--error"
       type="two-line"
       on-background="error"
       subtitle="Error"
@@ -332,7 +334,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-rectangle"
+      class="lbzui-rectangle lbzui-background--light"
       type="two-line"
       on-background="light"
       subtitle="Light"
@@ -360,7 +362,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-rectangle"
+      class="lbzui-rectangle lbzui-background--dark"
       type="two-line"
       on-background="dark"
       subtitle="Dark"
@@ -391,7 +393,7 @@
     <h3 class="lbz-typography--subtitle1">$ darkened: true, false (default)</h3>
 
     <lbz-list
-      class="lbzui-rectangle lbzui-is-darkened"
+      class="lbzui-rectangle lbzui-background--primary lbzui-is-darkened"
       type="two-line"
       on-background="primary"
       darkened
@@ -420,7 +422,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-rectangle lbzui-is-darkened"
+      class="lbzui-rectangle lbzui-background--secondary lbzui-is-darkened"
       type="two-line"
       on-background="secondary"
       darkened
@@ -449,7 +451,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-rectangle lbzui-is-darkened"
+      class="lbzui-rectangle lbzui-background--error lbzui-is-darkened"
       type="two-line"
       on-background="error"
       darkened
@@ -478,7 +480,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-rectangle lbzui-is-darkened"
+      class="lbzui-rectangle lbzui-background--light lbzui-is-darkened"
       type="two-line"
       on-background="light"
       darkened
@@ -634,6 +636,7 @@
         </template>
       </lbz-list-item>
     </lbz-list>
+    <br>
     <lbz-list
       class="lbzui-rectangle"
       type="two-line"
@@ -776,6 +779,7 @@
         </template>
       </lbz-list-item>
     </lbz-list>
+    <br>
     <lbz-list
       class="lbzui-rectangle"
       type="three-line"
@@ -943,7 +947,7 @@
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
 
     <lbz-list
-      class="lbzui-rectangle"
+      class="lbzui-rectangle lbzui-background--primary"
       type="two-line"
       on-background="primary"
       subtitle="Primary"
@@ -972,7 +976,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-rectangle"
+      class="lbzui-rectangle lbzui-background--secondary"
       type="two-line"
       on-background="secondary"
       subtitle="Secondary"
@@ -1029,7 +1033,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-rectangle"
+      class="lbzui-rectangle lbzui-background--error"
       type="two-line"
       on-background="error"
       subtitle="Error"
@@ -1058,7 +1062,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-rectangle"
+      class="lbzui-rectangle lbzui-background--light"
       type="two-line"
       on-background="light"
       subtitle="Light"
@@ -1087,7 +1091,7 @@
       </lbz-list-item>
     </lbz-list>
     <lbz-list
-      class="lbzui-rectangle"
+      class="lbzui-rectangle lbzui-background--dark"
       type="two-line"
       on-background="dark"
       subtitle="Dark"
@@ -1170,7 +1174,7 @@
     <h3 class="lbz-typography--subtitle1">$ disabled: undefined (default), true, false</h3>
 
     <lbz-list class="lbzui-rectangle">
-      <lbz-list-item selected>
+      <lbz-list-item :selected="vcheckbox">
         <template #start>
           <lbz-checkbox v-model="vcheckbox" color="primary"/>
         </template>

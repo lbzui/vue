@@ -20,7 +20,7 @@
       v-model="vcheckAll"
       :indeterminate="vindeterminate"
       @change="fcheckAll"
-    />
+    >Check all?</lbz-checkbox>
     <br>
     <lbz-checkbox
       v-for="(item, index) of LIST"
@@ -31,70 +31,66 @@
     >{{ item }}</lbz-checkbox>
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary', 'secondary' (default)</h3>
-
-    <lbz-checkbox v-model="vcheckbox2" color="primary">Primary</lbz-checkbox>
-    <lbz-checkbox v-model="vcheckbox2">Secondary</lbz-checkbox>
-
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'</h3>
 
-    <div class="lbzui-square lbzui-background--primary">
+    <div class="lbzui-mini-rectangle lbzui-background--primary">
       <lbz-checkbox
-        v-model="vcheckbox3"
+        v-model="vcheckbox2"
         value="primary"
         on-background="primary"
       />
     </div>
-    <div class="lbzui-square lbzui-background--secondary">
+    <div class="lbzui-mini-rectangle lbzui-background--secondary">
       <lbz-checkbox
-        v-model="vcheckbox3"
+        v-model="vcheckbox2"
         value="secondary"
         color="primary"
         on-background="secondary"
       />
     </div>
-    <div class="lbzui-square">
+    <div class="lbzui-mini-rectangle">
       <lbz-checkbox
-        v-model="vcheckbox3"
+        v-model="vcheckbox2"
         value="surface"
         color="primary"
       />
-      <lbz-checkbox v-model="vcheckbox3" value="surface"/>
+      <lbz-checkbox v-model="vcheckbox2" value="surface"/>
     </div>
-    <div class="lbzui-square lbzui-background--error">
+    <div class="lbzui-mini-rectangle lbzui-background--error">
       <lbz-checkbox
-        v-model="vcheckbox3"
+        v-model="vcheckbox2"
         value="error"
         color="primary"
         on-background="error"
       />
       <lbz-checkbox
-        v-model="vcheckbox3"
+        v-model="vcheckbox2"
         value="error"
         on-background="error"
       />
     </div>
-    <div class="lbzui-square lbzui-background--light">
+    <div class="lbzui-mini-rectangle lbzui-background--light">
       <lbz-checkbox
-        v-model="vcheckbox3"
+        v-model="vcheckbox2"
         value="light"
         color="primary"
         on-background="light"
       />
       <lbz-checkbox
-        v-model="vcheckbox3"
+        v-model="vcheckbox2"
         value="light"
         on-background="light"
       />
     </div>
-    <div class="lbzui-square lbzui-background--dark">
+    <div class="lbzui-mini-rectangle lbzui-background--dark">
       <lbz-checkbox
-        v-model="vcheckbox3"
+        v-model="vcheckbox2"
         value="dark"
         color="primary"
         on-background="dark"
       />
       <lbz-checkbox
-        v-model="vcheckbox3"
+        v-model="vcheckbox2"
         value="dark"
         on-background="dark"
       />
@@ -102,48 +98,48 @@
 
     <h3 class="lbz-typography--subtitle1">$ darkened: true, false (default)</h3>
 
-    <div class="lbzui-square lbzui-background--primary lbzui-is-darkened">
+    <div class="lbzui-mini-rectangle lbzui-background--primary lbzui-is-darkened">
       <lbz-checkbox
-        v-model="vcheckbox3"
+        v-model="vcheckbox2"
         value="primary"
         on-background="primary"
         darkened
       />
     </div>
-    <div class="lbzui-square lbzui-background--secondary lbzui-is-darkened">
+    <div class="lbzui-mini-rectangle lbzui-background--secondary lbzui-is-darkened">
       <lbz-checkbox
-        v-model="vcheckbox3"
+        v-model="vcheckbox2"
         value="secondary"
         color="primary"
         on-background="secondary"
         darkened
       />
     </div>
-    <div class="lbzui-square lbzui-background--error lbzui-is-darkened">
+    <div class="lbzui-mini-rectangle lbzui-background--error lbzui-is-darkened">
       <lbz-checkbox
-        v-model="vcheckbox3"
+        v-model="vcheckbox2"
         value="error"
         color="primary"
         on-background="error"
         darkened
       />
       <lbz-checkbox
-        v-model="vcheckbox3"
+        v-model="vcheckbox2"
         value="error"
         on-background="error"
         darkened
       />
     </div>
-    <div class="lbzui-square lbzui-background--light lbzui-is-darkened">
+    <div class="lbzui-mini-rectangle lbzui-background--light lbzui-is-darkened">
       <lbz-checkbox
-        v-model="vcheckbox3"
+        v-model="vcheckbox2"
         value="light"
         color="primary"
         on-background="light"
         darkened
       />
       <lbz-checkbox
-        v-model="vcheckbox3"
+        v-model="vcheckbox2"
         value="light"
         on-background="light"
         darkened
@@ -152,112 +148,112 @@
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
 
-    <div class="lbzui-square lbzui-background--primary">
+    <div class="lbzui-mini-rectangle lbzui-background--primary">
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="checked"
         on-background="primary"
         disabled
       />
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="unchecked"
         on-background="primary"
         disabled
       />
     </div>
-    <div class="lbzui-square lbzui-background--secondary">
+    <div class="lbzui-mini-rectangle lbzui-background--secondary">
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="checked"
         color="primary"
         on-background="secondary"
         disabled
       />
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="unchecked"
         color="primary"
         on-background="secondary"
         disabled
       />
     </div>
-    <div class="lbzui-square">
+    <div class="lbzui-mini-rectangle">
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="checked"
         color="primary"
         disabled
       />
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="checked"
         disabled
       />
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="unchecked"
         disabled
       />
     </div>
-    <div class="lbzui-square lbzui-background--error">
+    <div class="lbzui-mini-rectangle lbzui-background--error">
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="checked"
         color="primary"
         on-background="error"
         disabled
       />
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="checked"
         on-background="error"
         disabled
       />
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="unchecked"
         on-background="error"
         disabled
       />
     </div>
-    <div class="lbzui-square lbzui-background--light">
+    <div class="lbzui-mini-rectangle lbzui-background--light">
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="checked"
         color="primary"
         on-background="light"
         disabled
       />
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="checked"
         on-background="light"
         disabled
       />
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="unchecked"
         on-background="light"
         disabled
       />
     </div>
-    <div class="lbzui-square lbzui-background--dark">
+    <div class="lbzui-mini-rectangle lbzui-background--dark">
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="checked"
         color="primary"
         on-background="dark"
         disabled
       />
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="checked"
         on-background="dark"
         disabled
       />
       <lbz-checkbox
-        v-model="vcheckbox4"
+        v-model="vcheckbox3"
         value="unchecked"
         on-background="dark"
         disabled
@@ -267,13 +263,13 @@
     <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
 
     <lbz-checkbox
-      v-model="vcheckbox5"
-      :value="true"
+      v-model="vcheckbox4"
+      :value="0"
       ripple
     >Ripple</lbz-checkbox>
     <lbz-checkbox
-      v-model="vcheckbox5"
-      :value="false"
+      v-model="vcheckbox4"
+      :value="1"
       :ripple="false"
     >Non-ripple</lbz-checkbox>
   </article>
@@ -294,10 +290,9 @@ export default class ComponentsCheckbox extends Vue {
   private vcheckAll: boolean = false;
   private vindeterminate: boolean = true;
   private vcheckbox1: number[] = [1];
-  private vcheckbox2: boolean = false;
-  private vcheckbox3: string[] = [];
-  private vcheckbox4: string[] = ['checked'];
-  private vcheckbox5: boolean[] = [];
+  private vcheckbox2: string[] = [];
+  private vcheckbox3: string[] = ['checked'];
+  private vcheckbox4: number[] = [];
 
   private fchange(val: boolean | number | string, e: MouseEvent): void {
     console.log(val, e);

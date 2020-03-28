@@ -97,18 +97,12 @@
 
     <h3 class="lbz-typography--subtitle1">$ inactive (type === 'standard'): '' (default), 'scroll-off', 'tab-fixed'</h3>
 
-    <lbz-top-app-bar inactive="scroll-off" title="Page title">
-      <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
-      </template>
-      <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
-      </template>
-    </lbz-top-app-bar>
-    <div style="overflow: hidden;">
-      <lbz-top-app-bar inactive="tab-fixed" title="Page title">
+    <lbz-radio v-model="vinactive" value="active">Active</lbz-radio>
+    <lbz-radio v-model="vinactive" value="scroll-off">Scroll-off</lbz-radio>
+    <lbz-radio v-model="vinactive" value="tab-fixed">Tab-fixed</lbz-radio>
+    <br>
+    <div class="lbzui-rectangle">
+      <lbz-top-app-bar :inactive="vinactive" title="Page title">
         <template #start>
           <lbz-icon-button on-background="primary">menu</lbz-icon-button>
         </template>
@@ -517,6 +511,7 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class ComponentsTopAppBar extends Vue {
+  private vinactive: string = 'active';
   private vtab: number = 0;
 }
 </script>

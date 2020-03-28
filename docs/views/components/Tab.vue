@@ -67,14 +67,22 @@
 
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
 
-    <lbz-tab v-model="vtab0" on-background="primary">
+    <lbz-tab
+      v-model="vtab0"
+      class="lbzui-background--primary"
+      on-background="primary"
+    >
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
         :value="index"
       >Item {{ item }}</lbz-tab-item>
     </lbz-tab>
-    <lbz-tab v-model="vtab0" on-background="secondary">
+    <lbz-tab
+      v-model="vtab0"
+      class="lbzui-background--secondary"
+      on-background="secondary"
+    >
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
@@ -88,14 +96,22 @@
         :value="index"
       >Item {{ item }}</lbz-tab-item>
     </lbz-tab>
-    <lbz-tab v-model="vtab0" on-background="light">
+    <lbz-tab
+      v-model="vtab0"
+      class="lbzui-background--light"
+      on-background="light"
+    >
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
         :value="index"
       >Item {{ item }}</lbz-tab-item>
     </lbz-tab>
-    <lbz-tab v-model="vtab0" on-background="dark">
+    <lbz-tab
+      v-model="vtab0"
+      class="lbzui-background--dark"
+      on-background="dark"
+    >
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
@@ -193,6 +209,7 @@
 
     <lbz-tab
       v-model="vtab1"
+      class="lbzui-background--primary"
       type="scrollable"
       on-background="primary"
     >
@@ -204,6 +221,7 @@
     </lbz-tab>
     <lbz-tab
       v-model="vtab1"
+      class="lbzui-background--secondary"
       type="scrollable"
       on-background="secondary"
     >
@@ -222,6 +240,7 @@
     </lbz-tab>
     <lbz-tab
       v-model="vtab1"
+      class="lbzui-background--light"
       type="scrollable"
       on-background="light"
     >
@@ -233,6 +252,7 @@
     </lbz-tab>
     <lbz-tab
       v-model="vtab1"
+      class="lbzui-background--dark"
       type="scrollable"
       on-background="dark"
     >

@@ -12,6 +12,7 @@
     align-items: stretch;
     overflow-x: auto;
     overflow-y: hidden;
+    transition: 250ms transform #lbz-motion.curve[standard];
     scroll-behavior: smooth;
     overscroll-behavior-x: contain;
     -webkit-overflow-scrolling: touch;
@@ -56,59 +57,42 @@
     &-primary .lbz-tab-item {
       color: var(--lbz-theme-text-medium-emphasis-on-primary);
 
-      &__indicator {
-        background-color: var(--lbz-theme-on-primary);
-      }
-
       &.lbz-is-active {
-        color: var(--lbz-theme-text-high-emphasis-on-primary);
+        color: var(--lbz-theme-on-primary);
       }
     }
 
     &-secondary .lbz-tab-item {
       color: var(--lbz-theme-text-medium-emphasis-on-secondary);
 
-      &__indicator {
-        background-color: var(--lbz-theme-on-secondary);
-      }
-
       &.lbz-is-active {
-        color: var(--lbz-theme-text-high-emphasis-on-secondary);
+        color: var(--lbz-theme-on-secondary);
       }
     }
 
     &-light .lbz-tab-item {
       color: var(--lbz-theme-text-medium-emphasis-on-light);
 
-      &__indicator {
-        background-color: var(--lbz-theme-on-light);
-      }
-
       &.lbz-is-active {
-        color: var(--lbz-theme-text-high-emphasis-on-light);
+        color: var(--lbz-theme-on-light);
       }
     }
 
     &-dark .lbz-tab-item {
       color: var(--lbz-theme-text-medium-emphasis-on-dark);
 
-      &__indicator {
-        background-color: var(--lbz-theme-on-dark);
-      }
-
       &.lbz-is-active {
-        color: var(--lbz-theme-text-high-emphasis-on-dark);
+        color: var(--lbz-theme-on-dark);
       }
     }
   }
 
-  html[theme="dark"] &:not(.lbz-tab--on-light):not(.lbz-tab--on-dark) {
+  html[theme="dark"] & {
     background-color: transparent;
 
     .lbz-tab-item {
       color: var(--lbz-theme-text-medium-emphasis-on-dark);
 
-      &__indicator,
       &__state::before,
       &__state::after {
         background-color: #lbz-theme.dark[primary];

@@ -44,11 +44,15 @@
     <lbz-button color="error">Error</lbz-button>
     <lbz-button color="error" icon="add">Error</lbz-button>
     <br>
-    <lbz-button color="light">Light</lbz-button>
-    <lbz-button color="light" icon="add">Light</lbz-button>
+    <div class="lbzui-mini-rectangle lbzui-background--dark">
+      <lbz-button color="light">Light</lbz-button>
+      <lbz-button color="light" icon="add">Light</lbz-button>
+    </div>
     <br>
-    <lbz-button color="dark">Dark</lbz-button>
-    <lbz-button color="dark" icon="add">Dark</lbz-button>
+    <div class="lbzui-mini-rectangle lbzui-background--light">
+      <lbz-button color="dark">Dark</lbz-button>
+      <lbz-button color="dark" icon="add">Dark</lbz-button>
+    </div>
 
     <h3 class="lbz-typography--subtitle1">$ full-width: true, false (default)</h3>
 
@@ -93,19 +97,23 @@
       icon="add"
     >Error</lbz-button>
     <br>
-    <lbz-button color="light" disabled>Light</lbz-button>
-    <lbz-button
-      color="light"
-      disabled
-      icon="add"
-    >Light</lbz-button>
+    <div class="lbzui-mini-rectangle lbzui-background--dark">
+      <lbz-button color="light" disabled>Light</lbz-button>
+      <lbz-button
+        color="light"
+        disabled
+        icon="add"
+      >Light</lbz-button>
+    </div>
     <br>
-    <lbz-button color="dark" disabled>Dark</lbz-button>
-    <lbz-button
-      color="dark"
-      disabled
-      icon="add"
-    >Dark</lbz-button>
+    <div class="lbzui-mini-rectangle lbzui-background--light">
+      <lbz-button color="dark" disabled>Dark</lbz-button>
+      <lbz-button
+        color="dark"
+        disabled
+        icon="add"
+      >Dark</lbz-button>
+    </div>
 
     <h3 class="lbz-typography--subtitle1">$ icon: '' (default), 'x'</h3>
 
@@ -197,19 +205,23 @@
       icon="add"
     >Error</lbz-button>
     <br>
-    <lbz-button type="outlined" color="light">Light</lbz-button>
-    <lbz-button
-      type="outlined"
-      color="light"
-      icon="add"
-    >Light</lbz-button>
+    <div class="lbzui-mini-rectangle lbzui-background--dark">
+      <lbz-button type="outlined" color="light">Light</lbz-button>
+      <lbz-button
+        type="outlined"
+        color="light"
+        icon="add"
+      >Light</lbz-button>
+    </div>
     <br>
-    <lbz-button type="outlined" color="dark">Dark</lbz-button>
-    <lbz-button
-      type="outlined"
-      color="dark"
-      icon="add"
-    >Dark</lbz-button>
+    <div class="lbzui-mini-rectangle lbzui-background--light">
+      <lbz-button type="outlined" color="dark">Dark</lbz-button>
+      <lbz-button
+        type="outlined"
+        color="dark"
+        icon="add"
+      >Dark</lbz-button>
+    </div>
 
     <h3 class="lbz-typography--subtitle1">$ full-width: true, false (default)</h3>
 
@@ -286,29 +298,33 @@
       icon="add"
     >Error</lbz-button>
     <br>
-    <lbz-button
-      type="outlined"
-      color="light"
-      disabled
-    >Light</lbz-button>
-    <lbz-button
-      type="outlined"
-      color="light"
-      disabled
-      icon="add"
-    >Light</lbz-button>
+    <div class="lbzui-mini-rectangle lbzui-background--dark">
+      <lbz-button
+        type="outlined"
+        color="light"
+        disabled
+      >Light</lbz-button>
+      <lbz-button
+        type="outlined"
+        color="light"
+        disabled
+        icon="add"
+      >Light</lbz-button>
+    </div>
     <br>
-    <lbz-button
-      type="outlined"
-      color="dark"
-      disabled
-    >Dark</lbz-button>
-    <lbz-button
-      type="outlined"
-      color="dark"
-      disabled
-      icon="add"
-    >Dark</lbz-button>
+    <div class="lbzui-mini-rectangle lbzui-background--light">
+      <lbz-button
+        type="outlined"
+        color="dark"
+        disabled
+      >Dark</lbz-button>
+      <lbz-button
+        type="outlined"
+        color="dark"
+        disabled
+        icon="add"
+      >Dark</lbz-button>
+    </div>
 
     <h3 class="lbz-typography--subtitle1">$ icon: '' (default), 'x'</h3>
 

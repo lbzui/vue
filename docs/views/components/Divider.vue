@@ -6,19 +6,27 @@
 
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'background', 'surface' (default), 'error', 'light', 'dark'</h3>
 
-    <lbz-divider on-background="primary"/>
-    <br>
-    <lbz-divider on-background="secondary"/>
-    <br>
-    <lbz-divider on-background="background"/>
-    <br>
-    <lbz-divider/>
-    <br>
-    <lbz-divider on-background="error"/>
-    <br>
-    <lbz-divider on-background="light"/>
-    <br>
-    <lbz-divider on-background="dark"/>
+    <div class="lbzui-mini-rectangle lbzui-background--primary">
+      <lbz-divider on-background="primary"/>
+    </div>
+    <div class="lbzui-mini-rectangle lbzui-background--secondary">
+      <lbz-divider on-background="secondary"/>
+    </div>
+    <div class="lbzui-mini-rectangle">
+      <lbz-divider on-background="background"/>
+    </div>
+    <div class="lbzui-mini-rectangle">
+      <lbz-divider/>
+    </div>
+    <div class="lbzui-mini-rectangle lbzui-background--error">
+      <lbz-divider on-background="error"/>
+    </div>
+    <div class="lbzui-mini-rectangle lbzui-background--light">
+      <lbz-divider on-background="light"/>
+    </div>
+    <div class="lbzui-mini-rectangle lbzui-background--dark">
+      <lbz-divider on-background="dark"/>
+    </div>
   </article>
 </template>
 

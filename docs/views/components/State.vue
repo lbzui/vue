@@ -55,39 +55,39 @@
       Dark
       <lbz-state background="dark"></lbz-state>
     </div>
-    <div class="lbzui-square lbzui-state--primary">
+    <div class="lbzui-square lbzui-color-background--primary">
       On-primary
       <lbz-state background="on-primary"></lbz-state>
     </div>
-    <div class="lbzui-square lbzui-state--primary-variant">
+    <div class="lbzui-square lbzui-color-background--primary-variant">
       On-primary-variant
       <lbz-state background="on-primary-variant"></lbz-state>
     </div>
-    <div class="lbzui-square lbzui-state--secondary">
+    <div class="lbzui-square lbzui-color-background--secondary">
       On-secondary
       <lbz-state background="on-secondary"></lbz-state>
     </div>
-    <div class="lbzui-square lbzui-state--secondary-variant">
+    <div class="lbzui-square lbzui-color-background--secondary-variant">
       On-secondary-variant
       <lbz-state background="on-secondary-variant"></lbz-state>
     </div>
-    <div class="lbzui-square lbzui-state--background">
+    <div class="lbzui-square lbzui-color-background--background">
       On-background
       <lbz-state background="on-background"></lbz-state>
     </div>
-    <div class="lbzui-square lbzui-state--surface">
+    <div class="lbzui-square lbzui-color-background--surface">
       On-surface
       <lbz-state></lbz-state>
     </div>
-    <div class="lbzui-square lbzui-state--error">
+    <div class="lbzui-square lbzui-color-background--error">
       On-error
       <lbz-state background="on-error"></lbz-state>
     </div>
-    <div class="lbzui-square lbzui-state--light">
+    <div class="lbzui-square lbzui-color-background--light">
       On-light
       <lbz-state background="on-light"></lbz-state>
     </div>
-    <div class="lbzui-square lbzui-state--dark">
+    <div class="lbzui-square lbzui-color-background--dark">
       On-dark
       <lbz-state background="on-dark"></lbz-state>
     </div>

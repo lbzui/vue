@@ -58,6 +58,7 @@
     .lbz-button {
       margin-top: 6px;
       color: inherit;
+      background-color: transparent;
     }
   }
 
@@ -122,11 +123,35 @@
   &&--secondary {
     color: var(--lbz-theme-on-secondary);
     background-color: var(--lbz-theme-secondary);
+
+    .lbz-button__state {
+      &::before,
+      &::after {
+        background-color: var(--lbz-theme-on-secondary);
+      }
+    }
   }
 
   &&--background {
     color: var(--lbz-theme-on-background);
     background-color: var(--lbz-theme-background);
+
+    .lbz-button__state {
+      &::before,
+      &::after {
+        background-color: var(--lbz-theme-on-background);
+      }
+    }
+  }
+
+  &&--surface,
+  &&--transparent {
+    .lbz-button__state {
+      &::before,
+      &::after {
+        background-color: var(--lbz-theme-on-surface);
+      }
+    }
   }
 
   &&--surface {
@@ -143,6 +168,13 @@
     color: var(--lbz-theme-on-light);
     .lbz-surface("light"; 0);
 
+    .lbz-button__state {
+      &::before,
+      &::after {
+        background-color: var(--lbz-theme-on-light);
+      }
+    }
+
     // elevated
     &.lbz-is-elevated {
       .lbz-surface("light"; 4);
@@ -150,9 +182,16 @@
   }
 
   &&--dark,
-  html[theme="dark"] &:not(.lbz-top-app-bar--light):not(.lbz-top-app-bar--dark):not(.lbz-top-app-bar--transparent) {
+  html[theme="dark"] & {
     color: var(--lbz-theme-on-dark);
     .lbz-surface("dark"; 0);
+
+    .lbz-button__state {
+      &::before,
+      &::after {
+        background-color: var(--lbz-theme-on-dark);
+      }
+    }
 
     // elevated
     &.lbz-is-elevated {
@@ -162,26 +201,24 @@
 
   &&--transparent {
     color: var(--lbz-theme-on-surface);
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
-  html[theme="dark"] &:not(.lbz-top-app-bar--light):not(.lbz-top-app-bar--dark):not(.lbz-top-app-bar--transparent) {
-    .lbz-button__state,
+  html[theme="dark"] & {
+    .lbz-divider {
+      border-color: var(--lbz-theme-outline-on-dark);
+    }
+
     .lbz-icon-button__state {
       &::before,
       &::after {
         background-color: var(--lbz-theme-on-dark);
       }
     }
-
-    .lbz-divider {
-      border-color: var(--lbz-theme-outline-on-dark);
-    }
   }
 
   // inactive
   &.lbz-is-inactive--scroll-off {
-    opacity: 0;
     transition: transform 200ms #lbz-motion.curve[sharp];
     transform: translate3d(0, -100%, 0);
   }
@@ -192,10 +229,6 @@
 
     @media #lbz-layout-grid.media[xsmall] {
       transform: translate3d(0, -56px, 0);
-    }
-
-    .lbz-top-app-bar__container {
-      opacity: 0;
     }
   }
 

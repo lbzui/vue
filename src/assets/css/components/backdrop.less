@@ -169,7 +169,7 @@
   }
 
   &&--dark,
-  html[theme="dark"] &:not(.lbz-backdrop--light):not(.lbz-backdrop--dark) {
+  html[theme="dark"] & {
     .lbz-surface("dark"; 0);
 
     .lbz-backdrop__back-layer {
@@ -177,8 +177,17 @@
     }
   }
 
-  html[theme="dark"] &:not(.lbz-backdrop--light):not(.lbz-backdrop--dark) .lbz-backdrop__back-layer__content .lbz-divider {
-    border-color: var(--lbz-theme-outline-on-dark);
+  html[theme="dark"] & .lbz-backdrop__back-layer__content {
+    .lbz-divider {
+      border-color: var(--lbz-theme-outline-on-dark);
+    }
+
+    .lbz-icon-button__state {
+      &::before,
+      &::after {
+        background-color: var(--lbz-theme-on-dark);
+      }
+    }
   }
 
   // active

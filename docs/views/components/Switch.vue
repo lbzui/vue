@@ -14,99 +14,86 @@
     />
 
     <h3 class="lbz-typography--subtitle1">$ color: 'primary', 'secondary' (default)</h3>
-
-    <lbz-switch
-      v-model="vswitch1"
-      :true-value="1"
-      :false-value="0"
-      color="primary"
-    >Primary</lbz-switch>
-    <lbz-switch
-      v-model="vswitch1"
-      :true-value="1"
-      :false-value="0"
-    >Secondary</lbz-switch>
-
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'</h3>
 
-    <div class="lbzui-square lbzui-background--primary">
-      <lbz-switch v-model="vswitch2" on-background="primary"/>
+    <div class="lbzui-mini-rectangle lbzui-background--primary">
+      <lbz-switch v-model="vswitch1" on-background="primary"/>
     </div>
-    <div class="lbzui-square lbzui-background--secondary">
+    <div class="lbzui-mini-rectangle lbzui-background--secondary">
       <lbz-switch
-        v-model="vswitch2"
+        v-model="vswitch1"
         color="primary"
         on-background="secondary"
       />
     </div>
-    <div class="lbzui-square">
-      <lbz-switch v-model="vswitch2" color="primary"/>
-      <lbz-switch v-model="vswitch2"/>
+    <div class="lbzui-mini-rectangle">
+      <lbz-switch v-model="vswitch1" color="primary"/>
+      <lbz-switch v-model="vswitch1"/>
     </div>
-    <div class="lbzui-square lbzui-background--error">
+    <div class="lbzui-mini-rectangle lbzui-background--error">
       <lbz-switch
-        v-model="vswitch2"
+        v-model="vswitch1"
         color="primary"
         on-background="error"
       />
-      <lbz-switch v-model="vswitch2" on-background="error"/>
+      <lbz-switch v-model="vswitch1" on-background="error"/>
     </div>
-    <div class="lbzui-square lbzui-background--light">
+    <div class="lbzui-mini-rectangle lbzui-background--light">
       <lbz-switch
-        v-model="vswitch2"
+        v-model="vswitch1"
         color="primary"
         on-background="light"
       />
-      <lbz-switch v-model="vswitch2" on-background="light"/>
+      <lbz-switch v-model="vswitch1" on-background="light"/>
     </div>
-    <div class="lbzui-square lbzui-background--dark">
+    <div class="lbzui-mini-rectangle lbzui-background--dark">
       <lbz-switch
-        v-model="vswitch2"
+        v-model="vswitch1"
         color="primary"
         on-background="dark"
       />
-      <lbz-switch v-model="vswitch2" on-background="dark"/>
+      <lbz-switch v-model="vswitch1" on-background="dark"/>
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ darkened: true, false (default)</h3>
 
-    <div class="lbzui-square lbzui-background--primary lbzui-is-darkened">
+    <div class="lbzui-mini-rectangle lbzui-background--primary lbzui-is-darkened">
       <lbz-switch
-        v-model="vswitch2"
+        v-model="vswitch1"
         on-background="primary"
         darkened
       />
     </div>
-    <div class="lbzui-square lbzui-background--secondary lbzui-is-darkened">
+    <div class="lbzui-mini-rectangle lbzui-background--secondary lbzui-is-darkened">
       <lbz-switch
-        v-model="vswitch2"
+        v-model="vswitch1"
         color="primary"
         on-background="secondary"
         darkened
       />
     </div>
-    <div class="lbzui-square lbzui-background--error lbzui-is-darkened">
+    <div class="lbzui-mini-rectangle lbzui-background--error lbzui-is-darkened">
       <lbz-switch
-        v-model="vswitch2"
+        v-model="vswitch1"
         color="primary"
         on-background="error"
         darkened
       />
       <lbz-switch
-        v-model="vswitch2"
+        v-model="vswitch1"
         on-background="error"
         darkened
       />
     </div>
-    <div class="lbzui-square lbzui-background--light lbzui-is-darkened">
+    <div class="lbzui-mini-rectangle lbzui-background--light lbzui-is-darkened">
       <lbz-switch
-        v-model="vswitch2"
+        v-model="vswitch1"
         color="primary"
         on-background="light"
         darkened
       />
       <lbz-switch
-        v-model="vswitch2"
+        v-model="vswitch1"
         on-background="light"
         darkened
       />
@@ -114,25 +101,25 @@
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
 
-    <div class="lbzui-square lbzui-background--primary">
+    <div class="lbzui-mini-rectangle lbzui-background--primary">
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="checked"
         false-value="unchecked"
         on-background="primary"
         disabled
       />
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="unchecked"
         false-value="checked"
         on-background="primary"
         disabled
       />
     </div>
-    <div class="lbzui-square lbzui-background--secondary">
+    <div class="lbzui-mini-rectangle lbzui-background--secondary">
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="checked"
         false-value="unchecked"
         color="primary"
@@ -140,7 +127,7 @@
         disabled
       />
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="unchecked"
         false-value="checked"
         color="primary"
@@ -148,30 +135,30 @@
         disabled
       />
     </div>
-    <div class="lbzui-square">
+    <div class="lbzui-mini-rectangle">
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="checked"
         false-value="unchecked"
         color="primary"
         disabled
       />
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="checked"
         false-value="unchecked"
         disabled
       />
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="unchecked"
         false-value="checked"
         disabled
       />
     </div>
-    <div class="lbzui-square lbzui-background--error">
+    <div class="lbzui-mini-rectangle lbzui-background--error">
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="checked"
         false-value="unchecked"
         color="primary"
@@ -179,23 +166,23 @@
         disabled
       />
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="checked"
         false-value="unchecked"
         on-background="error"
         disabled
       />
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="unchecked"
         false-value="checked"
         on-background="error"
         disabled
       />
     </div>
-    <div class="lbzui-square lbzui-background--light">
+    <div class="lbzui-mini-rectangle lbzui-background--light">
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="checked"
         false-value="unchecked"
         color="primary"
@@ -203,23 +190,23 @@
         disabled
       />
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="checked"
         false-value="unchecked"
         on-background="light"
         disabled
       />
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="unchecked"
         false-value="checked"
         on-background="light"
         disabled
       />
     </div>
-    <div class="lbzui-square lbzui-background--dark">
+    <div class="lbzui-mini-rectangle lbzui-background--dark">
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="checked"
         false-value="unchecked"
         color="primary"
@@ -227,14 +214,14 @@
         disabled
       />
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="checked"
         false-value="unchecked"
         on-background="dark"
         disabled
       />
       <lbz-switch
-        v-model="vswitch3"
+        v-model="vswitch2"
         true-value="unchecked"
         false-value="checked"
         on-background="dark"
@@ -244,8 +231,13 @@
 
     <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
 
-    <lbz-switch v-model="vswitch4" ripple>Ripple</lbz-switch>
-    <lbz-switch v-model="vswitch5" :ripple="false">Non-ripple</lbz-switch>
+    <lbz-switch
+      v-model="vswitch3"
+      :true-value="1"
+      :false-value="0"
+      ripple
+    >Ripple</lbz-switch>
+    <lbz-switch v-model="vswitch4" :ripple="false">Non-ripple</lbz-switch>
   </article>
 </template>
 
@@ -255,11 +247,10 @@ import { Component, Vue } from 'vue-property-decorator';
 @Component
 export default class ComponentsSwitch extends Vue {
   private vswitch0: boolean = true;
-  private vswitch1: number = 0;
-  private vswitch2: boolean = false;
-  private vswitch3: string = 'checked';
+  private vswitch1: boolean = false;
+  private vswitch2: string = 'checked';
+  private vswitch3: number = 0;
   private vswitch4: boolean = false;
-  private vswitch5: boolean = false;
 
   private fchange(val: boolean | number | string, e: MouseEvent): void {
     console.log(val, e);

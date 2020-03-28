@@ -31,21 +31,45 @@
 
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'</h3>
 
-    <lbz-icon-button on-background="primary">favorite_border</lbz-icon-button>
-    <lbz-icon-button on-background="secondary">favorite_border</lbz-icon-button>
-    <lbz-icon-button on-background="surface">favorite_border</lbz-icon-button>
-    <lbz-icon-button on-background="error">favorite_border</lbz-icon-button>
-    <lbz-icon-button on-background="light">favorite_border</lbz-icon-button>
-    <lbz-icon-button on-background="dark">favorite_border</lbz-icon-button>
+    <div class="lbzui-mini-square lbzui-color-background--primary">
+      <lbz-icon-button on-background="primary">favorite_border</lbz-icon-button>
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--secondary">
+      <lbz-icon-button on-background="secondary">favorite_border</lbz-icon-button>
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--surface">
+      <lbz-icon-button>favorite_border</lbz-icon-button>
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--error">
+      <lbz-icon-button on-background="error">favorite_border</lbz-icon-button>
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--light">
+      <lbz-icon-button on-background="light">favorite_border</lbz-icon-button>
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--dark">
+      <lbz-icon-button on-background="dark">favorite_border</lbz-icon-button>
+    </div>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
 
-    <lbz-icon-button on-background="primary" disabled>favorite_border</lbz-icon-button>
-    <lbz-icon-button on-background="secondary" disabled>favorite_border</lbz-icon-button>
-    <lbz-icon-button on-background="surface" disabled>favorite_border</lbz-icon-button>
-    <lbz-icon-button on-background="error" disabled>favorite_border</lbz-icon-button>
-    <lbz-icon-button on-background="light" disabled>favorite_border</lbz-icon-button>
-    <lbz-icon-button on-background="dark" disabled>favorite_border</lbz-icon-button>
+    <div class="lbzui-mini-square lbzui-color-background--primary">
+      <lbz-icon-button on-background="primary" disabled>favorite_border</lbz-icon-button>
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--secondary">
+      <lbz-icon-button on-background="secondary" disabled>favorite_border</lbz-icon-button>
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--surface">
+      <lbz-icon-button disabled>favorite_border</lbz-icon-button>
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--error">
+      <lbz-icon-button on-background="error" disabled>favorite_border</lbz-icon-button>
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--light">
+      <lbz-icon-button on-background="light" disabled>favorite_border</lbz-icon-button>
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--dark">
+      <lbz-icon-button on-background="dark" disabled>favorite_border</lbz-icon-button>
+    </div>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
 
@@ -101,87 +125,109 @@
 
     <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'</h3>
 
-    <lbz-icon-button
-      :active.sync="vactive"
-      on-background="primary"
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
-    <lbz-icon-button
-      :active.sync="vactive"
-      on-background="secondary"
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
-    <lbz-icon-button
-      :active.sync="vactive"
-      on-background="surface"
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
-    <lbz-icon-button
-      :active.sync="vactive"
-      on-background="error"
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
-    <lbz-icon-button
-      :active.sync="vactive"
-      on-background="light"
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
-    <lbz-icon-button
-      :active.sync="vactive"
-      on-background="dark"
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
+    <div class="lbzui-mini-square lbzui-color-background--primary">
+      <lbz-icon-button
+        :active.sync="vactive"
+        on-background="primary"
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--secondary">
+      <lbz-icon-button
+        :active.sync="vactive"
+        on-background="secondary"
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--surface">
+      <lbz-icon-button
+        :active.sync="vactive"
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--error">
+      <lbz-icon-button
+        :active.sync="vactive"
+        on-background="error"
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--light">
+      <lbz-icon-button
+        :active.sync="vactive"
+        on-background="light"
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--dark">
+      <lbz-icon-button
+        :active.sync="vactive"
+        on-background="dark"
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
 
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
 
-    <lbz-icon-button
-      :active.sync="vactive"
-      on-background="primary"
-      disabled
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
-    <lbz-icon-button
-      :active.sync="vactive"
-      on-background="secondary"
-      disabled
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
-    <lbz-icon-button
-      :active.sync="vactive"
-      disabled
-      on-background="surface"
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
-    <lbz-icon-button
-      :active.sync="vactive"
-      on-background="error"
-      disabled
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
-    <lbz-icon-button
-      :active.sync="vactive"
-      on-background="light"
-      disabled
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
-    <lbz-icon-button
-      :active.sync="vactive"
-      on-background="dark"
-      disabled
-      on-icon="favorite"
-      off-icon="favorite_border"
-    />
+    <div class="lbzui-mini-square lbzui-color-background--primary">
+      <lbz-icon-button
+        :active.sync="vactive"
+        on-background="primary"
+        disabled
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--secondary">
+      <lbz-icon-button
+        :active.sync="vactive"
+        on-background="secondary"
+        disabled
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--surface">
+      <lbz-icon-button
+        :active.sync="vactive"
+        disabled
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--error">
+      <lbz-icon-button
+        :active.sync="vactive"
+        on-background="error"
+        disabled
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--light">
+      <lbz-icon-button
+        :active.sync="vactive"
+        on-background="light"
+        disabled
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--dark">
+      <lbz-icon-button
+        :active.sync="vactive"
+        on-background="dark"
+        disabled
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
 

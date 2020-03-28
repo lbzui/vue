@@ -153,6 +153,7 @@
             tag="nav"
             item-tag="a"
             on-background="light"
+            darkened
             nav
           >
             <lbz-list-item
@@ -195,6 +196,7 @@
             tag="nav"
             item-tag="a"
             on-background="dark"
+            darkened
             nav
           >
             <lbz-list-item
@@ -217,65 +219,16 @@
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
-
-    <div class="lbzui-app">
-      <lbz-backdrop :active.sync="vactive" subtitle="Subtitle">
-        <template #back-start>
-          <lbz-top-app-bar title="Page title">
-            <template #start>
-              <lbz-icon-button
-                :active.sync="vactive"
-                on-background="primary"
-                on-icon="close"
-                off-icon="menu"
-              />
-            </template>
-            <template #end>
-              <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
-            </template>
-          </lbz-top-app-bar>
-        </template>
-        <template #back-center>
-          <div>Back layer content</div>
-        </template>
-        <template #front-center>
-          <article>Front layer content</article>
-        </template>
-      </lbz-backdrop>
-    </div>
-
     <h3 class="lbz-typography--subtitle1">$ icon: true, false (default)</h3>
-
-    <div class="lbzui-app">
-      <lbz-backdrop :active.sync="vactive" icon>
-        <template #back-start>
-          <lbz-top-app-bar title="Page title">
-            <template #start>
-              <lbz-icon-button
-                :active.sync="vactive"
-                on-background="primary"
-                on-icon="close"
-                off-icon="menu"
-              />
-            </template>
-            <template #end>
-              <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
-            </template>
-          </lbz-top-app-bar>
-        </template>
-        <template #back-center>
-          <div>Back layer content</div>
-        </template>
-        <template #front-center>
-          <article>Front layer content</article>
-        </template>
-      </lbz-backdrop>
-    </div>
-
     <h3 class="lbz-typography--subtitle1">$ divider: true, false (default)</h3>
 
     <div class="lbzui-app">
-      <lbz-backdrop :active.sync="vactive" divider>
+      <lbz-backdrop
+        :active.sync="vactive"
+        subtitle="Subtitle"
+        icon
+        divider
+      >
         <template #back-start>
           <lbz-top-app-bar title="Page title">
             <template #start>
