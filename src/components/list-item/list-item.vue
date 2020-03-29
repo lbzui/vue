@@ -37,6 +37,7 @@ export default class LbzListItem extends Vue {
   @Inject('router-link-props') private prouterLinkProps!: object;
   @Inject('tag') private ptag!: string;
   @Inject('on-background') private ponBackground!: string;
+  @Inject('darkened') private pdarkened!: boolean;
   @Inject('disabled') private pdisabled!: boolean;
   @Inject('ripple') private pripple!: boolean;
 
@@ -56,7 +57,7 @@ export default class LbzListItem extends Vue {
   // ripple: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 
-  get cgetAttrs(): ComponentAttributes {
+  get cgetAttrs(): LbzComponentAttributes {
     const isRouterLink: boolean = this.routerLink === undefined
       ? this.prouterLink
       : this.routerLink;
@@ -88,11 +89,12 @@ export default class LbzListItem extends Vue {
       : this.disabled;
   }
 
-  get cgetStateAttrs(): StateAttributes {
+  get cgetStateAttrs(): LbzStateAttributes {
     return {
       class: 'lbz-list-item__state',
       type: ['primary', 'secondary', 'error'].includes(this.ponBackground) ? 'primary' : '',
       background: this.ponBackground ? `on-${this.ponBackground}` : '',
+      darkened: this.pdarkened,
       ripple: this.ripple === undefined ? this.pripple : this.ripple,
     };
   }

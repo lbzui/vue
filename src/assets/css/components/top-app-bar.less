@@ -7,7 +7,7 @@
   position: relative;
   top: 0;
   left: 0;
-  .lbz-elevation(4);
+  z-index: 4;
   width: 100%;
   color: var(--lbz-theme-on-primary);
   background-color: var(--lbz-theme-primary);
@@ -182,7 +182,7 @@
   }
 
   &&--dark,
-  html[theme="dark"] & {
+  html[data-lbz-theme="dark"] & {
     color: var(--lbz-theme-on-dark);
     .lbz-surface("dark"; 0);
 
@@ -202,19 +202,6 @@
   &&--transparent {
     color: var(--lbz-theme-on-surface);
     background-color: transparent !important;
-  }
-
-  html[theme="dark"] & {
-    .lbz-divider {
-      border-color: var(--lbz-theme-outline-on-dark);
-    }
-
-    .lbz-icon-button__state {
-      &::before,
-      &::after {
-        background-color: var(--lbz-theme-on-dark);
-      }
-    }
   }
 
   // inactive
@@ -254,6 +241,6 @@
 
   // elevated
   &.lbz-is-elevated {
-    .lbz-shadow(4);
+    .lbz-elevation(4);
   }
 }

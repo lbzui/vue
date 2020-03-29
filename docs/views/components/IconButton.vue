@@ -50,6 +50,21 @@
       <lbz-icon-button on-background="dark">favorite_border</lbz-icon-button>
     </div>
 
+    <h3 class="lbz-typography--subtitle1">$ darkened: true, false (default)</h3>
+
+    <div class="lbzui-mini-square lbzui-color-background--primary lbzui-is-darkened">
+      <lbz-icon-button on-background="primary" darkened>favorite_border</lbz-icon-button>
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--secondary lbzui-is-darkened">
+      <lbz-icon-button on-background="secondary" darkened>favorite_border</lbz-icon-button>
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--error lbzui-is-darkened">
+      <lbz-icon-button on-background="error" darkened>favorite_border</lbz-icon-button>
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--light lbzui-is-darkened">
+      <lbz-icon-button on-background="light" darkened>favorite_border</lbz-icon-button>
+    </div>
+
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
 
     <div class="lbzui-mini-square lbzui-color-background--primary">
@@ -168,6 +183,45 @@
       <lbz-icon-button
         :active.sync="vactive"
         on-background="dark"
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
+
+    <h3 class="lbz-typography--subtitle1">$ darkened: true, false (default)</h3>
+
+    <div class="lbzui-mini-square lbzui-color-background--primary lbzui-is-darkened">
+      <lbz-icon-button
+        :active.sync="vactive"
+        on-background="primary"
+        darkened
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--secondary lbzui-is-darkened">
+      <lbz-icon-button
+        :active.sync="vactive"
+        on-background="secondary"
+        darkened
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--error lbzui-is-darkened">
+      <lbz-icon-button
+        :active.sync="vactive"
+        on-background="error"
+        darkened
+        on-icon="favorite"
+        off-icon="favorite_border"
+      />
+    </div>
+    <div class="lbzui-mini-square lbzui-color-background--light lbzui-is-darkened">
+      <lbz-icon-button
+        :active.sync="vactive"
+        on-background="light"
+        darkened
         on-icon="favorite"
         off-icon="favorite_border"
       />

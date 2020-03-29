@@ -4,6 +4,8 @@
     :class="[
       'lbz-card',
       type && `lbz-card--${type}`,
+      background && `lbz-card--${background}`,
+      darkened && 'lbz-is-darkened',
       disabled && 'lbz-is-disabled'
     ]"
     @click="!disabled && $emit('click', $event)"
@@ -37,14 +39,21 @@ export default class LbzCard extends Vue {
 
   // type: 'elevated' (default), 'outlined'
   @Prop({ type: String, default: '' }) private type!: string;
+  // background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'
+  @Prop({ type: String, default: '' }) private background!: string;
+  // darkened: true, false (default)
+  @Prop({ type: Boolean, default: false }) private darkened!: boolean;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
   // ripple: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 
-  get cgetStateAttrs(): StateAttributes {
+  get cgetStateAttrs(): LbzStateAttributes {
     return {
       class: 'lbz-card__state',
+      type: ['primary', 'secondary', 'error'].includes(this.background) ? 'primary' : '',
+      background: this.background ? `on-${this.background}` : '',
+      darkened: this.darkened,
       ripple: this.ripple,
     };
   }

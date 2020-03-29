@@ -62,6 +62,7 @@ export default class LbzList extends Vue {
   @Provide('router-link-props') private prouterLinkProps: object = this.routerLinkProps;
   @Provide('tag') private ptag: string = this.itemTag;
   @Provide('on-background') private ponBackground: string = this.onBackground;
+  @Provide('darkened') private pdarkened: boolean = this.darkened;
   @Provide('disabled') private pdisabled: boolean = this.disabled;
   @Provide('ripple') private pripple: boolean = this.ripple;
 

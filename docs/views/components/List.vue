@@ -417,7 +417,7 @@
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
-          <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+          <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
         </template>
       </lbz-list-item>
     </lbz-list>
@@ -446,7 +446,7 @@
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
-          <lbz-icon-button on-background="secondary">more_vert</lbz-icon-button>
+          <lbz-icon-button on-background="secondary" darkened>more_vert</lbz-icon-button>
         </template>
       </lbz-list-item>
     </lbz-list>
@@ -475,7 +475,7 @@
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
-          <lbz-icon-button on-background="error">more_vert</lbz-icon-button>
+          <lbz-icon-button on-background="error" darkened>more_vert</lbz-icon-button>
         </template>
       </lbz-list-item>
     </lbz-list>
@@ -504,7 +504,7 @@
           <span class="lbz-list-item__subtitle">Secondary text</span>
         </template>
         <template #end>
-          <lbz-icon-button on-background="light">more_vert</lbz-icon-button>
+          <lbz-icon-button on-background="light" darkened>more_vert</lbz-icon-button>
         </template>
       </lbz-list-item>
     </lbz-list>

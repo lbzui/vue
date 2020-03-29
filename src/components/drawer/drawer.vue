@@ -5,6 +5,7 @@
       :class="[
         'lbz-drawer',
         type && `lbz-drawer--${type}`,
+        background && `lbz-drawer--${background}`,
         cisFullScreen && 'lbz-is-full-screen',
         cisActive && 'lbz-is-active'
       ]"
@@ -13,11 +14,15 @@
         <template v-if="$slots.start || title || subtitle || $slots.bottom">
           <lbz-top-app-bar
             v-if="cisFullScreen"
-            background="transparent"
+            :background="background || 'transparent'"
             :title="title"
           >
             <template #start>
-              <lbz-icon-button @click.stop="fclose()">close</lbz-icon-button>
+              <lbz-icon-button
+                :on-background="background"
+                darkened
+                @click.stop="fclose()"
+              >close</lbz-icon-button>
             </template>
             <template v-if="$slots.start" #end>
               <slot name="start"/>
@@ -69,6 +74,8 @@ export default class LbzDrawer extends Vue {
 
   // type: 'standard' (default), 'modal', 'bottom (mobile only)'
   @Prop({ type: String, default: '' }) private type!: string;
+  // background (darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'
+  @Prop({ type: String, default: '' }) private background!: string;
   // full-screen (type === 'bottom'): true, false (default)
   @Prop({ type: Boolean, default: false }) private fullScreen!: boolean;
   // title: '' (default), 'x'

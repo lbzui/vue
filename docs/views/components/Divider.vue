@@ -27,6 +27,21 @@
     <div class="lbzui-mini-rectangle lbzui-background--dark">
       <lbz-divider on-background="dark"/>
     </div>
+
+    <h3 class="lbz-typography--subtitle1">$ darkened: true, false (default)</h3>
+
+    <div class="lbzui-mini-rectangle lbzui-background--primary lbzui-is-darkened">
+      <lbz-divider on-background="primary" darkened/>
+    </div>
+    <div class="lbzui-mini-rectangle lbzui-background--secondary lbzui-is-darkened">
+      <lbz-divider on-background="secondary" darkened/>
+    </div>
+    <div class="lbzui-mini-rectangle lbzui-background--error lbzui-is-darkened">
+      <lbz-divider on-background="error" darkened/>
+    </div>
+    <div class="lbzui-mini-rectangle lbzui-background--light lbzui-is-darkened">
+      <lbz-divider on-background="light" darkened/>
+    </div>
   </article>
 </template>
 

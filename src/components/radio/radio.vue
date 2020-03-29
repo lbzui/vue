@@ -64,11 +64,12 @@ export default class LbzRadio extends Vue {
     return this.mchecked === this.value;
   }
 
-  get cgetStateAttrs(): StateAttributes {
+  get cgetStateAttrs(): LbzStateAttributes {
     return {
       class: 'lbz-radio__state',
       type: ['primary', 'secondary', 'error'].includes(this.onBackground) || this.cisChecked ? 'primary' : '',
       background: this.cisChecked ? (this.color || 'secondary') : (this.onBackground ? `on-${this.onBackground}` : ''),
+      darkened: this.darkened && !this.cisChecked,
       ripple: this.ripple,
       unbounded: true,
       centered: true,

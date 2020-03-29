@@ -40,7 +40,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class LbzTopAppBar extends Vue {
   // type: 'standard' (default), 'extended', 'short'
   @Prop({ type: String, default: '' }) private type!: string;
-  // background: 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'
+  // background (darkened): 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'
   @Prop({ type: String, default: '' }) private background!: string;
   // inactive (type === 'standard'): '' (default), 'scroll-off', 'tab-fixed'
   @Prop({ type: String, default: '' }) private inactive!: string;

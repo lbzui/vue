@@ -28,7 +28,7 @@ export function changeModeHandler(handler: () => void): void {
 }
 
 export function setModeAttributes(isDark: boolean, themeColor: ThemeColor): void {
-  document.documentElement.setAttribute('theme', isDark ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-lbz-theme', isDark ? 'dark' : 'light');
 
   if (document.querySelector('meta[name=theme-color]')) {
     document.querySelector('meta[name=theme-color]')!

@@ -32,7 +32,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    .lbz-elevation(1);
+    z-index: 1;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -57,7 +57,7 @@
     width: 20px;
     height: 20px;
     background-color: var(--lbz-theme-surface);
-    .lbz-shadow(2);
+    .lbz-elevation(2);
     transition: background-color 90ms #lbz-motion.curve[standard];
 
     &::after {
@@ -195,8 +195,9 @@
     }
   }
 
+  // darkened
   &&--on-dark,
-  html[theme="dark"] &.lbz-is-darkened {
+  html[data-lbz-theme="dark"] &.lbz-is-darkened {
     &:not(.lbz-is-checked) {
       .lbz-switch__track {
         background-color: var(--lbz-theme-on-dark);
@@ -213,14 +214,6 @@
 
     .lbz-switch__label {
       color: var(--lbz-theme-text-medium-emphasis-on-dark);
-    }
-  }
-
-  // darkened
-  html[theme="dark"] &.lbz-is-darkened:not(.lbz-is-checked) .lbz-switch__state {
-    &::before,
-    &::after {
-      background-color: var(--lbz-theme-on-dark);
     }
   }
 

@@ -8,11 +8,10 @@
       cisChecked && 'lbz-is-checked',
       disabled && 'lbz-is-disabled'
     ]"
-    @click.stop="!disabled && fclick($event)"
   >
     <button class="lbz-switch__container">
       <div class="lbz-switch__track"></div>
-      <div class="lbz-switch__thumb-underlay">
+      <div class="lbz-switch__thumb-underlay" @click.stop="!disabled && fclick($event)">
         <input
           v-bind="{
             id: `${id}`,
@@ -70,11 +69,12 @@ export default class LbzSwitch extends Vue {
     return this.mchecked === this.trueValue;
   }
 
-  get cgetStateAttrs(): StateAttributes {
+  get cgetStateAttrs(): LbzStateAttributes {
     return {
       class: 'lbz-switch__state',
       type: ['primary', 'secondary', 'error'].includes(this.onBackground) || this.cisChecked ? 'primary' : '',
       background: this.cisChecked ? (this.color || 'secondary') : (this.onBackground ? `on-${this.onBackground}` : ''),
+      darkened: this.darkened && !this.cisChecked,
       ripple: this.ripple,
       unbounded: true,
       centered: true,

@@ -93,13 +93,14 @@ export default class LbzCheckbox extends Vue {
     return this.mchecked === this.trueValue;
   }
 
-  get cgetStateAttrs(): StateAttributes {
+  get cgetStateAttrs(): LbzStateAttributes {
     const isPrimary: boolean = this.cisIndeterminate || this.cisChecked;
 
     return {
       class: 'lbz-checkbox__state',
       type: ['primary', 'secondary', 'error'].includes(this.onBackground) || isPrimary ? 'primary' : '',
       background: isPrimary ? (this.color || 'secondary') : (this.onBackground ? `on-${this.onBackground}` : ''),
+      darkened: this.darkened && !this.cisChecked,
       ripple: this.ripple,
       unbounded: true,
       centered: true,

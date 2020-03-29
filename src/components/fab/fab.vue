@@ -41,7 +41,7 @@ export default class LbzFAB extends Vue {
   // ripple: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 
-  get cgetStateAttrs(): StateAttributes {
+  get cgetStateAttrs(): LbzStateAttributes {
     return {
       class: 'lbz-fab__state',
       type: ['primary', 'primary-variant', '', 'secondary'].includes(this.background) ? 'primary' : '',

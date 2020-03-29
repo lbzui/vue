@@ -65,7 +65,7 @@
       >Item {{ item }}</lbz-tab-item>
     </lbz-tab>
 
-    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ on-background (darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
 
     <lbz-tab
       v-model="vtab0"
@@ -205,7 +205,7 @@
       >A {{ item }}</lbz-tab-item>
     </lbz-tab>
 
-    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ on-background (darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
 
     <lbz-tab
       v-model="vtab1"

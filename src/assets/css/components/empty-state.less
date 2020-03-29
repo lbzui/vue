@@ -50,4 +50,58 @@
   & &__actions {
     margin: 50px 0 24px;
   }
+
+  // on-background
+  &&--on {
+    &-primary {
+      figcaption {
+        color: var(--lbz-theme-text-medium-emphasis-on-primary);
+      }
+
+      .lbz-empty-state__title {
+        color: var(--lbz-theme-text-high-emphasis-on-primary);
+      }
+    }
+
+    &-secondary {
+      figcaption {
+        color: var(--lbz-theme-text-medium-emphasis-on-secondary);
+      }
+
+      .lbz-empty-state__title {
+        color: var(--lbz-theme-text-high-emphasis-on-secondary);
+      }
+    }
+
+    &-error {
+      figcaption {
+        color: var(--lbz-theme-text-medium-emphasis-on-error);
+      }
+
+      .lbz-empty-state__title {
+        color: var(--lbz-theme-text-high-emphasis-on-error);
+      }
+    }
+
+    &-light {
+      figcaption {
+        color: var(--lbz-theme-text-medium-emphasis-on-light);
+      }
+
+      .lbz-empty-state__title {
+        color: var(--lbz-theme-text-high-emphasis-on-light);
+      }
+    }
+  }
+
+  &&--on-dark,
+  html[data-lbz-theme="dark"] & {
+    figcaption {
+      color: var(--lbz-theme-text-medium-emphasis-on-dark);
+    }
+
+    .lbz-empty-state__title {
+      color: var(--lbz-theme-text-high-emphasis-on-dark);
+    }
+  }
 }

@@ -120,6 +120,142 @@
       </template>
     </lbz-card>
 
+    <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'</h3>
+
+    <lbz-card background="primary">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card background="secondary">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card>
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card background="error">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card background="light">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card background="dark">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+
+    <h3 class="lbz-typography--subtitle1">$ darkened: true, false (default)</h3>
+
+    <lbz-card background="primary" darkened>
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card background="secondary" darkened>
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card background="error" darkened>
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card background="light" darkened>
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-card__title">Title goes here</span>
+          <span class="lbz-card__subtitle">Secondary line text Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+
     <h3 class="lbz-typography--subtitle1">$ disabled: true, false (default)</h3>
 
     <lbz-card disabled>
@@ -231,6 +367,168 @@
         <div class="lbz-card__actions__buttons">
           <lbz-button>Button</lbz-button>
           <lbz-button>Button</lbz-button>
+        </div>
+      </template>
+    </lbz-card>
+
+    <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'</h3>
+
+    <lbz-card type="outlined" background="primary">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card type="outlined" background="secondary">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card type="outlined">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card type="outlined" background="error">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card type="outlined" background="light">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card type="outlined" background="dark">
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+
+    <h3 class="lbz-typography--subtitle1">$ darkened: true, false (default)</h3>
+
+    <lbz-card
+      type="outlined"
+      background="primary"
+      darkened
+    >
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card
+      type="outlined"
+      background="secondary"
+      darkened
+    >
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card
+      type="outlined"
+      background="error"
+      darkened
+    >
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
+        </div>
+      </template>
+    </lbz-card>
+    <lbz-card
+      type="outlined"
+      background="light"
+      darkened
+    >
+      <template #start>
+        <div class="lbz-card__header__center">
+          <span class="lbz-typography--overline">Overline</span>
+          <span class="lbz-card__title">Headline 5</span>
+          <span class="lbz-card__subtitle">Greyhound divisively hello coldly wonderfully</span>
+        </div>
+        <div class="lbz-card__header__end">
+          <div class="lbz-aspect-ratio--1x1 lbz-card__media">
+            <img src="../../assets/img/placeholder@1x1.png">
+          </div>
         </div>
       </template>
     </lbz-card>

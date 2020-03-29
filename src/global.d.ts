@@ -16,7 +16,7 @@ declare global {
     Vue?: VueConstructor;
   }
 
-  interface ComponentAttributes {
+  interface LbzComponentAttributes {
     is: string;
     to?: string | object;
     replace?: boolean;
@@ -29,10 +29,11 @@ declare global {
     [key: string]: any;
   }
 
-  interface StateAttributes {
+  interface LbzStateAttributes {
     class: string;
     type?: string;
     background?: string;
+    darkened?: boolean;
     ripple?: boolean;
     unbounded?: boolean;
     centered?: boolean;

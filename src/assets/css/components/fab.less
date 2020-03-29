@@ -9,7 +9,7 @@
   position: fixed;
   right: var(--lbz-layout-grid-margin);
   bottom: var(--lbz-layout-grid-margin);
-  .lbz-elevation(12);
+  z-index: 12;
   box-sizing: border-box;
   border: none;
   border-radius: 50%;
@@ -22,17 +22,17 @@
   fill: currentColor;
   background-color: var(--lbz-theme-secondary);
   outline: none;
-  .lbz-shadow(6);
+  .lbz-elevation(6);
   transition: opacity 15ms linear 30ms, box-shadow 280ms #lbz-motion.curve[standard], transform 270ms #lbz-motion.curve[deceleration] 0ms;
   user-select: none;
 
   &:hover,
   &:focus {
-    .lbz-shadow(8);
+    .lbz-elevation(8);
   }
 
   &:active {
-    .lbz-shadow(12);
+    .lbz-elevation(12);
   }
 
   // type

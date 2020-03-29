@@ -1,5 +1,5 @@
 <template>
-  <div class="lbz-empty-state">
+  <div :class="['lbz-empty-state', onBackground && `lbz-empty-state--on-${onBackground}`]">
     <figure>
       <div v-if="$slots.start" class="lbz-empty-state__media">
         <slot name="start"/>
@@ -30,6 +30,8 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class LbzEmptyState extends Vue {
+  // on-background (darkened): 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'
+  @Prop({ type: String, default: '' }) private onBackground!: string;
   // title: '' (default), 'x'
   @Prop({ type: String, default: '' }) private title!: string;
   // subtitle: '' (default), 'x'

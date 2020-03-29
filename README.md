@@ -190,7 +190,6 @@ import '@lbzui/vue/src/assets/css/utilities/aspect-ratio.less';
 import '@lbzui/vue/src/assets/css/utilities/clearfix.less';
 import '@lbzui/vue/src/assets/css/utilities/elevation.less';
 import '@lbzui/vue/src/assets/css/utilities/layout-grid.less';
-import '@lbzui/vue/src/assets/css/utilities/shadow.less';
 import '@lbzui/vue/src/assets/css/utilities/surface.less';
 import '@lbzui/vue/src/assets/css/utilities/truncate.less';
 import '@lbzui/vue/src/assets/css/utilities/typography.less';
@@ -318,7 +317,7 @@ module.exports = {
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Demo extends Vue {
+export default class HelloWorld extends Vue {
   private fclick(e: MouseEvent): void {
     alert('Hello @lbzui/vue!');
   }

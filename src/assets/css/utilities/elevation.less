@@ -1,9 +1,7 @@
 // Elevation
-// usage: `.lbz-elevation--x` (x: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24)
+// usage: `.lbz-elevation--x` (x: 0-24)
 
-@lbz-elevation: 0, 1, 2, 3, 4, 6, 8, 12, 16, 24;
-
-each(@lbz-elevation, {
+each(range(0, 24, 1), {
   .lbz-elevation--@{value} {
     .lbz-elevation(@value);
   }

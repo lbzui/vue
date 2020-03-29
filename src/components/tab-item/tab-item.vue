@@ -57,7 +57,7 @@ export default class LbzTabItem extends Vue {
       : this.routerLink;
   }
 
-  get cgetAttrs(): ComponentAttributes {
+  get cgetAttrs(): LbzComponentAttributes {
     const {
       replace,
       append,
@@ -89,7 +89,7 @@ export default class LbzTabItem extends Vue {
     return this.prvalue === this.value;
   }
 
-  get cgetStateAttrs(): StateAttributes {
+  get cgetStateAttrs(): LbzStateAttributes {
     return {
       class: 'lbz-tab-item__state',
       type: ['light', 'dark'].includes(this.ponBackground) ? '' : 'primary',

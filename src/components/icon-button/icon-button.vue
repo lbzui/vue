@@ -5,6 +5,7 @@
       !cisToggle && 'material-icons',
       'lbz-icon-button',
       onBackground && `lbz-icon-button--on-${onBackground}`,
+      darkened && 'lbz-is-darkened',
       cisActive && 'lbz-is-active',
       disabled && 'lbz-is-disabled'
     ]"
@@ -54,6 +55,8 @@ export default class LbzIconButton extends Vue {
 
   // on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
+  // darkened: true, false (default)
+  @Prop({ type: Boolean, default: false }) private darkened!: boolean;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
   // on-icon (toggle): '' (default), 'x'
@@ -67,7 +70,7 @@ export default class LbzIconButton extends Vue {
     return this.cisActive !== undefined;
   }
 
-  get cgetAttrs(): ComponentAttributes {
+  get cgetAttrs(): LbzComponentAttributes {
     const {
       to,
       replace,
@@ -94,11 +97,12 @@ export default class LbzIconButton extends Vue {
       };
   }
 
-  get cgetStateAttrs(): StateAttributes {
+  get cgetStateAttrs(): LbzStateAttributes {
     return {
       class: 'lbz-icon-button__state',
       type: ['primary', 'secondary', 'error'].includes(this.onBackground) ? 'primary' : '',
       background: this.onBackground ? `on-${this.onBackground}` : '',
+      darkened: this.darkened,
       ripple: this.ripple,
       unbounded: true,
       centered: true,

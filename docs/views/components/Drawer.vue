@@ -4,6 +4,8 @@
 
     <h3 class="lbz-typography--subtitle1">$ active.sync: true (default), false</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'modal', 'bottom (mobile only)'</h3>
+    <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ lock-body-scroll: true (default), false</h3>
 
     <lbz-button type="contained" @click.stop="ftoggleActive">{{ vactive0 ? 'Inactive' : 'Active' }}</lbz-button>
@@ -36,48 +38,6 @@
         </template>
       </lbz-drawer>
     </div>
-    <div class="lbzui-app">
-      <lbz-drawer :active.sync="vactive0" :lock-body-scroll="false">
-        <template #center>
-          <lbz-list
-            tag="nav"
-            item-tag="a"
-            nav
-          >
-            <lbz-list-item
-              v-for="item of DESTINATIONS.primary"
-              :key="item.label"
-              :activated="vlabel === item.label"
-              @click.stop="vlabel = item.label"
-            >
-              <template #start>
-                <lbz-icon>{{ item.icon }}</lbz-icon>
-              </template>
-              <template #center>{{ item.label }}</template>
-            </lbz-list-item>
-            <lbz-divider/>
-            <span class="lbz-list__subtitle">Labels</span>
-            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
-              <template #start>
-                <lbz-icon>{{ item.icon }}</lbz-icon>
-              </template>
-              <template #center>{{ item.label }}</template>
-            </lbz-list-item>
-            <lbz-divider/>
-            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
-              <template #start>
-                <lbz-icon>{{ item.icon }}</lbz-icon>
-              </template>
-              <template #center>{{ item.label }}</template>
-            </lbz-list-item>
-          </lbz-list>
-        </template>
-      </lbz-drawer>
-    </div>
-
-    <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
-    <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
-
     <div class="lbzui-app">
       <lbz-drawer
         :active.sync="vactive0"
@@ -153,6 +113,236 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+      </lbz-drawer>
+    </div>
+
+    <h3 class="lbz-typography--subtitle1">$ background (darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+
+    <div class="lbzui-app">
+      <lbz-drawer
+        :active.sync="vactive0"
+        background="primary"
+        title="Title"
+        subtitle="subtext"
+        :lock-body-scroll="false"
+      >
+        <template #center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            on-background="primary"
+            darkened
+            nav
+          >
+            <lbz-list-item
+              v-for="item of DESTINATIONS.primary"
+              :key="item.label"
+              :activated="vlabel === item.label"
+              @click.stop="vlabel = item.label"
+            >
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="primary" darkened/>
+            <span class="lbz-list__subtitle">Labels</span>
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="primary" darkened/>
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+      </lbz-drawer>
+    </div>
+    <div class="lbzui-app">
+      <lbz-drawer
+        :active.sync="vactive0"
+        background="secondary"
+        title="Title"
+        subtitle="subtext"
+        :lock-body-scroll="false"
+      >
+        <template #center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            on-background="secondary"
+            darkened
+            nav
+          >
+            <lbz-list-item
+              v-for="item of DESTINATIONS.primary"
+              :key="item.label"
+              :activated="vlabel === item.label"
+              @click.stop="vlabel = item.label"
+            >
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="secondary" darkened/>
+            <span class="lbz-list__subtitle">Labels</span>
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="secondary" darkened/>
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+      </lbz-drawer>
+    </div>
+    <div class="lbzui-app">
+      <lbz-drawer
+        :active.sync="vactive0"
+        title="Title"
+        subtitle="subtext"
+        :lock-body-scroll="false"
+      >
+        <template #center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            nav
+          >
+            <lbz-list-item
+              v-for="item of DESTINATIONS.primary"
+              :key="item.label"
+              :activated="vlabel === item.label"
+              @click.stop="vlabel = item.label"
+            >
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider/>
+            <span class="lbz-list__subtitle">Labels</span>
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider/>
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+      </lbz-drawer>
+    </div>
+    <div class="lbzui-app">
+      <lbz-drawer
+        :active.sync="vactive0"
+        background="light"
+        title="Title"
+        subtitle="subtext"
+        :lock-body-scroll="false"
+      >
+        <template #center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            on-background="light"
+            darkened
+            nav
+          >
+            <lbz-list-item
+              v-for="item of DESTINATIONS.primary"
+              :key="item.label"
+              :activated="vlabel === item.label"
+              @click.stop="vlabel = item.label"
+            >
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="light" darkened/>
+            <span class="lbz-list__subtitle">Labels</span>
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="light" darkened/>
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+      </lbz-drawer>
+    </div>
+    <div class="lbzui-app">
+      <lbz-drawer
+        :active.sync="vactive0"
+        background="dark"
+        title="Title"
+        subtitle="subtext"
+        :lock-body-scroll="false"
+      >
+        <template #center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            on-background="dark"
+            darkened
+            nav
+          >
+            <lbz-list-item
+              v-for="item of DESTINATIONS.primary"
+              :key="item.label"
+              :activated="vlabel === item.label"
+              @click.stop="vlabel = item.label"
+            >
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="dark" darkened/>
+            <span class="lbz-list__subtitle">Labels</span>
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="dark" darkened/>
             <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -309,6 +499,271 @@
       </lbz-drawer>
     </div>
 
+    <h3 class="lbz-typography--subtitle1">$ background (darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+
+    <div class="lbzui-app">
+      <lbz-drawer
+        :active.sync="vactive1"
+        type="modal"
+        background="primary"
+        title="Title"
+        subtitle="subtext"
+        :lock-body-scroll="false"
+      >
+        <template #start>
+          <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
+        </template>
+        <template #bottom>
+          <lbz-divider on-background="primary" darkened/>
+        </template>
+        <template #center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            on-background="primary"
+            darkened
+            nav
+          >
+            <lbz-list-item
+              v-for="item of DESTINATIONS.primary"
+              :key="item.label"
+              :activated="vlabel === item.label"
+              @click.stop="vlabel = item.label"
+            >
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="primary" darkened/>
+            <span class="lbz-list__subtitle">Labels</span>
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="primary" darkened/>
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+      </lbz-drawer>
+    </div>
+    <div class="lbzui-app">
+      <lbz-drawer
+        :active.sync="vactive1"
+        type="modal"
+        background="secondary"
+        title="Title"
+        subtitle="subtext"
+        :lock-body-scroll="false"
+      >
+        <template #start>
+          <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
+        </template>
+        <template #bottom>
+          <lbz-divider on-background="secondary" darkened/>
+        </template>
+        <template #center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            on-background="secondary"
+            darkened
+            nav
+          >
+            <lbz-list-item
+              v-for="item of DESTINATIONS.primary"
+              :key="item.label"
+              :activated="vlabel === item.label"
+              @click.stop="vlabel = item.label"
+            >
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="secondary" darkened/>
+            <span class="lbz-list__subtitle">Labels</span>
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="secondary" darkened/>
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+      </lbz-drawer>
+    </div>
+    <div class="lbzui-app">
+      <lbz-drawer
+        :active.sync="vactive1"
+        type="modal"
+        title="Title"
+        subtitle="subtext"
+        :lock-body-scroll="false"
+      >
+        <template #start>
+          <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
+        </template>
+        <template #bottom>
+          <lbz-divider/>
+        </template>
+        <template #center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            nav
+          >
+            <lbz-list-item
+              v-for="item of DESTINATIONS.primary"
+              :key="item.label"
+              :activated="vlabel === item.label"
+              @click.stop="vlabel = item.label"
+            >
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider/>
+            <span class="lbz-list__subtitle">Labels</span>
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider/>
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+      </lbz-drawer>
+    </div>
+    <div class="lbzui-app">
+      <lbz-drawer
+        :active.sync="vactive1"
+        type="modal"
+        background="light"
+        title="Title"
+        subtitle="subtext"
+        :lock-body-scroll="false"
+      >
+        <template #start>
+          <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
+        </template>
+        <template #bottom>
+          <lbz-divider on-background="light" darkened/>
+        </template>
+        <template #center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            on-background="light"
+            darkened
+            nav
+          >
+            <lbz-list-item
+              v-for="item of DESTINATIONS.primary"
+              :key="item.label"
+              :activated="vlabel === item.label"
+              @click.stop="vlabel = item.label"
+            >
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="light" darkened/>
+            <span class="lbz-list__subtitle">Labels</span>
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="light" darkened/>
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+      </lbz-drawer>
+    </div>
+    <div class="lbzui-app">
+      <lbz-drawer
+        :active.sync="vactive1"
+        type="modal"
+        background="dark"
+        title="Title"
+        subtitle="subtext"
+        :lock-body-scroll="false"
+      >
+        <template #start>
+          <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
+        </template>
+        <template #bottom>
+          <lbz-divider on-background="dark" darkened/>
+        </template>
+        <template #center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            on-background="dark"
+            darkened
+            nav
+          >
+            <lbz-list-item
+              v-for="item of DESTINATIONS.primary"
+              :key="item.label"
+              :activated="vlabel === item.label"
+              @click.stop="vlabel = item.label"
+            >
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="dark" darkened/>
+            <span class="lbz-list__subtitle">Labels</span>
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="dark" darkened/>
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+      </lbz-drawer>
+    </div>
+
     <h2 class="lbz-typography--h5"># Bottom drawer (mobile only)</h2>
 
     <h3 class="lbz-typography--subtitle1">$ active.sync: true (default), false</h3>
@@ -448,8 +903,115 @@
       </lbz-drawer>
     </div>
 
+    <h3 class="lbz-typography--subtitle1">$ background (darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
     <h3 class="lbz-typography--subtitle1">$ full-screen (type === 'bottom'): true, false (default)</h3>
 
+    <div class="lbzui-app">
+      <lbz-drawer
+        :active.sync="vactive2"
+        background="primary"
+        type="bottom"
+        full-screen
+        title="Title"
+        :lock-body-scroll="false"
+      >
+        <template #start>
+          <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        </template>
+        <template #bottom>
+          <lbz-divider on-background="primary" darkened/>
+        </template>
+        <template #center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            on-background="primary"
+            darkened
+            nav
+          >
+            <lbz-list-item
+              v-for="item of DESTINATIONS.primary"
+              :key="item.label"
+              :activated="vlabel === item.label"
+              @click.stop="vlabel = item.label"
+            >
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="primary" darkened/>
+            <span class="lbz-list__subtitle">Labels</span>
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="primary" darkened/>
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+      </lbz-drawer>
+    </div>
+    <div class="lbzui-app">
+      <lbz-drawer
+        :active.sync="vactive2"
+        background="secondary"
+        type="bottom"
+        full-screen
+        title="Title"
+        :lock-body-scroll="false"
+      >
+        <template #start>
+          <lbz-icon-button on-background="secondary" darkened>search</lbz-icon-button>
+        </template>
+        <template #bottom>
+          <lbz-divider on-background="secondary" darkened/>
+        </template>
+        <template #center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            on-background="secondary"
+            darkened
+            nav
+          >
+            <lbz-list-item
+              v-for="item of DESTINATIONS.primary"
+              :key="item.label"
+              :activated="vlabel === item.label"
+              @click.stop="vlabel = item.label"
+            >
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="secondary" darkened/>
+            <span class="lbz-list__subtitle">Labels</span>
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="secondary" darkened/>
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+      </lbz-drawer>
+    </div>
     <div class="lbzui-app">
       <lbz-drawer
         :active.sync="vactive2"
@@ -490,6 +1052,112 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+      </lbz-drawer>
+    </div>
+    <div class="lbzui-app">
+      <lbz-drawer
+        :active.sync="vactive2"
+        background="light"
+        type="bottom"
+        full-screen
+        title="Title"
+        :lock-body-scroll="false"
+      >
+        <template #start>
+          <lbz-icon-button on-background="light" darkened>search</lbz-icon-button>
+        </template>
+        <template #bottom>
+          <lbz-divider on-background="light" darkened/>
+        </template>
+        <template #center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            on-background="light"
+            darkened
+            nav
+          >
+            <lbz-list-item
+              v-for="item of DESTINATIONS.primary"
+              :key="item.label"
+              :activated="vlabel === item.label"
+              @click.stop="vlabel = item.label"
+            >
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="light" darkened/>
+            <span class="lbz-list__subtitle">Labels</span>
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="light" darkened/>
+            <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+          </lbz-list>
+        </template>
+      </lbz-drawer>
+    </div>
+    <div class="lbzui-app">
+      <lbz-drawer
+        :active.sync="vactive2"
+        background="dark"
+        type="bottom"
+        full-screen
+        title="Title"
+        :lock-body-scroll="false"
+      >
+        <template #start>
+          <lbz-icon-button on-background="dark" darkened>search</lbz-icon-button>
+        </template>
+        <template #bottom>
+          <lbz-divider on-background="dark" darkened/>
+        </template>
+        <template #center>
+          <lbz-list
+            tag="nav"
+            item-tag="a"
+            on-background="dark"
+            darkened
+            nav
+          >
+            <lbz-list-item
+              v-for="item of DESTINATIONS.primary"
+              :key="item.label"
+              :activated="vlabel === item.label"
+              @click.stop="vlabel = item.label"
+            >
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="dark" darkened/>
+            <span class="lbz-list__subtitle">Labels</span>
+            <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
+              <template #start>
+                <lbz-icon>{{ item.icon }}</lbz-icon>
+              </template>
+              <template #center>{{ item.label }}</template>
+            </lbz-list-item>
+            <lbz-divider on-background="dark" darkened/>
             <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>

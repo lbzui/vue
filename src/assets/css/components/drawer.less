@@ -4,7 +4,7 @@
   top: 0;
   bottom: 0;
   left: 0;
-  .lbz-elevation(16);
+  z-index: 16;
   height: 100%;
 
   & &__container {
@@ -30,7 +30,6 @@
 
   .lbz-top-app-bar {
     flex: none;
-    background-color: transparent !important;
   }
 
   & &__header {
@@ -95,7 +94,7 @@
     .lbz-drawer__container {
       border-top-right-radius: var(--lbz-shape-size-large);
       border-bottom-right-radius: var(--lbz-shape-size-large);
-      .lbz-shadow(16);
+      .lbz-elevation(16);
     }
 
     .lbz-drawer__scrim {
@@ -117,7 +116,7 @@
       width: 100%;
       max-width: 100%;
       max-height: 62.5%;
-      .lbz-shadow(16);
+      .lbz-elevation(16);
     }
 
     // full-screen
@@ -156,12 +155,82 @@
       .lbz-drawer__container {
         border-top-right-radius: var(--lbz-shape-size-large);
         border-bottom-right-radius: var(--lbz-shape-size-large);
-        .lbz-shadow(16);
+        .lbz-elevation(16);
       }
 
       .lbz-drawer__scrim {
         display: block;
       }
+    }
+  }
+
+  // background
+  &&--primary .lbz-drawer {
+    &__container {
+      background-color: var(--lbz-theme-primary);
+    }
+
+    // title
+    &__title {
+      color: var(--lbz-theme-text-high-emphasis-on-primary);
+    }
+
+    // subtitle
+    &__subtitle,
+    &__content {
+      color: var(--lbz-theme-text-medium-emphasis-on-primary);
+    }
+  }
+
+  &&--secondary .lbz-drawer {
+    &__container {
+      background-color: var(--lbz-theme-secondary);
+    }
+
+    // title
+    &__title {
+      color: var(--lbz-theme-text-high-emphasis-on-secondary);
+    }
+
+    // subtitle
+    &__subtitle,
+    &__content {
+      color: var(--lbz-theme-text-medium-emphasis-on-secondary);
+    }
+  }
+
+  &&--light .lbz-drawer {
+    &__container {
+      .lbz-surface("light"; 16);
+    }
+
+    // title
+    &__title {
+      color: var(--lbz-theme-text-high-emphasis-on-light);
+    }
+
+    // subtitle
+    &__subtitle,
+    &__content {
+      color: var(--lbz-theme-text-medium-emphasis-on-light);
+    }
+  }
+
+  &&--dark .lbz-drawer,
+  html[data-lbz-theme="dark"] & .lbz-drawer {
+    &__container {
+      .lbz-surface("dark"; 16);
+    }
+
+    // title
+    &__title {
+      color: var(--lbz-theme-text-high-emphasis-on-dark);
+    }
+
+    // subtitle
+    &__subtitle,
+    &__content {
+      color: var(--lbz-theme-text-medium-emphasis-on-dark);
     }
   }
 

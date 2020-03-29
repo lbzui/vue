@@ -191,8 +191,9 @@
     }
   }
 
+  // darkened
   &&--on-dark,
-  html[theme="dark"] &.lbz-is-darkened {
+  html[data-lbz-theme="dark"] &.lbz-is-darkened {
     // subtitle
     .lbz-list__subtitle,
     .lbz-list-item,
@@ -241,20 +242,8 @@
   }
 
   // darkened
-  html[theme="dark"] &.lbz-is-darkened {
+  html[data-lbz-theme="dark"] &.lbz-is-darkened {
     background-color: transparent;
-
-    .lbz-divider {
-      border-color: var(--lbz-theme-outline-on-dark);
-    }
-
-    .lbz-icon-button__state,
-    .lbz-list-item__state {
-      &::before,
-      &::after {
-        background-color: var(--lbz-theme-on-dark);
-      }
-    }
 
     // selected, activated
     .lbz-is-selected,

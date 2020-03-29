@@ -6,115 +6,150 @@
 
     <div class="lbzui-square">
       Surface
-      <lbz-state></lbz-state>
+      <lbz-state/>
     </div>
     <div class="lbzui-square">
       Primary
-      <lbz-state type="primary"></lbz-state>
+      <lbz-state type="primary"/>
     </div>
     <div class="lbzui-square">
       Image
-      <lbz-state type="image"></lbz-state>
+      <lbz-state type="image"/>
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ background: 'primary', 'primary-variant', 'secondary', 'secondary-variant', 'background', 'surface', 'error', 'light', 'dark', 'on-primary', 'on-primary-variant', 'on-secondary', 'on-secondary-variant', 'on-background', 'on-surface' (default), 'on-error', 'on-light', 'on-dark'</h3>
 
     <div class="lbzui-square">
       Primary
-      <lbz-state background="primary"></lbz-state>
+      <lbz-state background="primary"/>
     </div>
     <div class="lbzui-square">
       Primary-variant
-      <lbz-state background="primary-variant"></lbz-state>
+      <lbz-state background="primary-variant"/>
     </div>
     <div class="lbzui-square">
       Secondary
-      <lbz-state background="secondary"></lbz-state>
+      <lbz-state background="secondary"/>
     </div>
     <div class="lbzui-square">
       Secondary-variant
-      <lbz-state background="secondary-variant"></lbz-state>
+      <lbz-state background="secondary-variant"/>
     </div>
     <div class="lbzui-square">
       Background
-      <lbz-state background="background"></lbz-state>
+      <lbz-state background="background"/>
     </div>
     <div class="lbzui-square">
       Surface
-      <lbz-state background="surface"></lbz-state>
+      <lbz-state background="surface"/>
     </div>
     <div class="lbzui-square">
       Error
-      <lbz-state background="error"></lbz-state>
+      <lbz-state background="error"/>
     </div>
     <div class="lbzui-square">
       Light
-      <lbz-state background="light"></lbz-state>
+      <lbz-state background="light"/>
     </div>
     <div class="lbzui-square">
       Dark
-      <lbz-state background="dark"></lbz-state>
+      <lbz-state background="dark"/>
     </div>
     <div class="lbzui-square lbzui-color-background--primary">
       On-primary
-      <lbz-state background="on-primary"></lbz-state>
+      <lbz-state background="on-primary"/>
     </div>
     <div class="lbzui-square lbzui-color-background--primary-variant">
       On-primary-variant
-      <lbz-state background="on-primary-variant"></lbz-state>
+      <lbz-state background="on-primary-variant"/>
     </div>
     <div class="lbzui-square lbzui-color-background--secondary">
       On-secondary
-      <lbz-state background="on-secondary"></lbz-state>
+      <lbz-state background="on-secondary"/>
     </div>
     <div class="lbzui-square lbzui-color-background--secondary-variant">
       On-secondary-variant
-      <lbz-state background="on-secondary-variant"></lbz-state>
+      <lbz-state background="on-secondary-variant"/>
     </div>
     <div class="lbzui-square lbzui-color-background--background">
       On-background
-      <lbz-state background="on-background"></lbz-state>
+      <lbz-state background="on-background"/>
     </div>
     <div class="lbzui-square lbzui-color-background--surface">
       On-surface
-      <lbz-state></lbz-state>
+      <lbz-state/>
     </div>
     <div class="lbzui-square lbzui-color-background--error">
       On-error
-      <lbz-state background="on-error"></lbz-state>
+      <lbz-state background="on-error"/>
     </div>
     <div class="lbzui-square lbzui-color-background--light">
       On-light
-      <lbz-state background="on-light"></lbz-state>
+      <lbz-state background="on-light"/>
     </div>
     <div class="lbzui-square lbzui-color-background--dark">
       On-dark
-      <lbz-state background="on-dark"></lbz-state>
+      <lbz-state background="on-dark"/>
+    </div>
+
+    <h3 class="lbz-typography--subtitle1">$ darkened: true, false (default)</h3>
+
+    <div class="lbzui-square lbzui-color-background--primary lbzui-is-darkened">
+      On-primary
+      <lbz-state background="on-primary" darkened/>
+    </div>
+    <div class="lbzui-square lbzui-color-background--primary-variant lbzui-is-darkened">
+      On-primary-variant
+      <lbz-state background="on-primary-variant" darkened/>
+    </div>
+    <div class="lbzui-square lbzui-color-background--secondary lbzui-is-darkened">
+      On-secondary
+      <lbz-state background="on-secondary" darkened/>
+    </div>
+    <div class="lbzui-square lbzui-color-background--secondary-variant lbzui-is-darkened">
+      On-secondary-variant
+      <lbz-state background="on-secondary-variant" darkened/>
+    </div>
+    <div class="lbzui-square lbzui-color-background--background lbzui-is-darkened">
+      On-background
+      <lbz-state background="on-background" darkened/>
+    </div>
+    <div class="lbzui-square lbzui-color-background--error lbzui-is-darkened">
+      On-error
+      <lbz-state background="on-error" darkened/>
+    </div>
+    <div class="lbzui-square lbzui-color-background--light lbzui-is-darkened">
+      On-light
+      <lbz-state background="on-light" darkened/>
+    </div>
+    <div class="lbzui-square lbzui-color-background--dark lbzui-is-darkened">
+      On-dark
+      <lbz-state background="on-dark" darkened/>
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
 
     <div class="lbzui-square">
       Ripple
-      <lbz-state ripple></lbz-state>
+      <lbz-state ripple/>
     </div>
     <div class="lbzui-square">
       Non-ripple
-      <lbz-state :ripple="false"></lbz-state>
+      <lbz-state :ripple="false"/>
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ unbounded: true, false (default)</h3>
 
     <div class="lbzui-square lbz-state-no-before--descendant" style="overflow: visible;">
       Unbounded
-      <lbz-state unbounded></lbz-state>
+      <lbz-state unbounded/>
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ centered: true, false (default)</h3>
 
     <div class="lbzui-square">
       Centered
-      <lbz-state centered></lbz-state>
+      <lbz-state centered/>
     </div>
   </article>
 </template>

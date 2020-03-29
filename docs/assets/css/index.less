@@ -4,7 +4,7 @@
 @lbzuiDrawerWidth: 256px;
 @lbzuiAppWidth: 360px;
 @lbzuiAppHeight: 640px;
-@lbzuiSquareWidth: (@lbzuiAppWidth - 16px) / 2;
+@lbzuiSquareWidth: (@lbzuiAppWidth - 4 * 16px) / 2;
 @lbzuiMiniSquareWidth: 64px;
 
 html body {
@@ -12,7 +12,7 @@ html body {
   overscroll-behavior: none;
 }
 
-html[theme="dark"] body {
+html[data-lbz-theme="dark"] body {
   background-color: #303030;
 }
 
@@ -35,7 +35,7 @@ html[theme="dark"] body {
     }
 
     // darkened
-    html[theme="dark"] &.lbzui-is-darkened {
+    html[data-lbz-theme="dark"] &.lbzui-is-darkened {
       .lbz-surface("dark"; 0) !important;
     }
   }
@@ -191,7 +191,7 @@ html[theme="dark"] body {
   & &__fab {
     display: none;
 
-    html[theme="dark"] & {
+    html[data-lbz-theme="dark"] & {
       color: #lbz-theme.dark[on-primary];
       background-color: #lbz-theme.dark[primary];
     }
@@ -279,6 +279,13 @@ html[theme="dark"] body {
       }
     }
 
+    &-icon-button,
+    &-state {
+      html[data-lbz-theme="dark"] & .lbzui-is-darkened {
+        color: var(--lbz-theme-on-dark);
+      }
+    }
+
     &-list .lbz-list {
       margin: @lbzuiMargin;
     }
@@ -300,7 +307,7 @@ html[theme="dark"] body {
         .lbz-surface(0);
       }
 
-      html[theme="dark"] & {
+      html[data-lbz-theme="dark"] & {
         .lbz-surface("dark"; 0) !important;
       }
     }
@@ -322,7 +329,7 @@ html[theme="dark"] body {
 
       .lbzui-rectangle {
         display: block;
-        height: 114px;
+        max-height: 114px;
 
         .lbz-top-app-bar {
           margin: 0;

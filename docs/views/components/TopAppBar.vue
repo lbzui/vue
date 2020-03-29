@@ -8,40 +8,40 @@
     <lbz-top-app-bar title="Page title"></lbz-top-app-bar>
     <lbz-top-app-bar title="Page title">
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar title="Page title">
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
-    <h3 class="lbz-typography--subtitle1">$ background: 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'</h3>
+    <h3 class="lbz-typography--subtitle1">$ background (darkened): 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'</h3>
 
     <lbz-top-app-bar title="Page title">
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar background="secondary" title="Page title">
       <template #start>
-        <lbz-icon-button on-background="secondary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="secondary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="secondary">share</lbz-icon-button>
-        <lbz-icon-button on-background="secondary">search</lbz-icon-button>
-        <lbz-icon-button on-background="secondary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="secondary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="secondary" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="secondary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar background="background" title="Page title">
@@ -66,22 +66,22 @@
     </lbz-top-app-bar>
     <lbz-top-app-bar background="light" title="Page title">
       <template #start>
-        <lbz-icon-button on-background="light">menu</lbz-icon-button>
+        <lbz-icon-button on-background="light" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="light">share</lbz-icon-button>
-        <lbz-icon-button on-background="light">search</lbz-icon-button>
-        <lbz-icon-button on-background="light">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="light" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="light" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="light" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar background="dark" title="Page title">
       <template #start>
-        <lbz-icon-button on-background="dark">menu</lbz-icon-button>
+        <lbz-icon-button on-background="dark" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="dark">share</lbz-icon-button>
-        <lbz-icon-button on-background="dark">search</lbz-icon-button>
-        <lbz-icon-button on-background="dark">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="dark" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="dark" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="dark" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar background="transparent" title="Page title">
@@ -104,12 +104,12 @@
     <div class="lbzui-rectangle">
       <lbz-top-app-bar :inactive="vinactive" title="Page title">
         <template #start>
-          <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+          <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
         </template>
         <template #end>
-          <lbz-icon-button on-background="primary">share</lbz-icon-button>
-          <lbz-icon-button on-background="primary">search</lbz-icon-button>
-          <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+          <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+          <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+          <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
         </template>
         <template #bottom>
           <lbz-tab v-model="vtab" on-background="primary">
@@ -127,22 +127,22 @@
 
     <lbz-top-app-bar dense title="Page title">
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar :dense="false" title="Page title">
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
@@ -150,12 +150,12 @@
 
     <lbz-top-app-bar elevated title="Page title">
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
@@ -167,30 +167,30 @@
     <lbz-top-app-bar type="extended" title="Page title"></lbz-top-app-bar>
     <lbz-top-app-bar type="extended" title="Page title">
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar type="extended" title="Page title">
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
-    <h3 class="lbz-typography--subtitle1">$ background: 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'</h3>
+    <h3 class="lbz-typography--subtitle1">$ background (darkened): 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'</h3>
 
     <lbz-top-app-bar type="extended" title="Page title">
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -199,12 +199,12 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="secondary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="secondary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="secondary">share</lbz-icon-button>
-        <lbz-icon-button on-background="secondary">search</lbz-icon-button>
-        <lbz-icon-button on-background="secondary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="secondary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="secondary" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="secondary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -241,12 +241,12 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="light">menu</lbz-icon-button>
+        <lbz-icon-button on-background="light" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="light">share</lbz-icon-button>
-        <lbz-icon-button on-background="light">search</lbz-icon-button>
-        <lbz-icon-button on-background="light">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="light" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="light" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="light" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -255,12 +255,12 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="dark">menu</lbz-icon-button>
+        <lbz-icon-button on-background="dark" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="dark">share</lbz-icon-button>
-        <lbz-icon-button on-background="dark">search</lbz-icon-button>
-        <lbz-icon-button on-background="dark">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="dark" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="dark" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="dark" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -286,12 +286,12 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -300,12 +300,12 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
@@ -317,12 +317,12 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
@@ -335,12 +335,12 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="light">menu</lbz-icon-button>
+        <lbz-icon-button on-background="light" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="light">share</lbz-icon-button>
-        <lbz-icon-button on-background="light">search</lbz-icon-button>
-        <lbz-icon-button on-background="light">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="light" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="light" darkened>search</lbz-icon-button>
+        <lbz-icon-button on-background="light" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
@@ -350,25 +350,25 @@
 
     <lbz-top-app-bar type="short" title="Page title">
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button class="lbz-is-most-used" on-background="primary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        <lbz-icon-button class="lbz-is-most-used" on-background="primary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
-    <h3 class="lbz-typography--subtitle1">$ background: 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'</h3>
+    <h3 class="lbz-typography--subtitle1">$ background (darkened): 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'</h3>
 
     <lbz-top-app-bar type="short" title="Page title">
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button class="lbz-is-most-used" on-background="primary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        <lbz-icon-button class="lbz-is-most-used" on-background="primary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -377,12 +377,12 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="secondary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="secondary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="secondary">share</lbz-icon-button>
-        <lbz-icon-button on-background="secondary">search</lbz-icon-button>
-        <lbz-icon-button class="lbz-is-most-used" on-background="secondary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="secondary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="secondary" darkened>search</lbz-icon-button>
+        <lbz-icon-button class="lbz-is-most-used" on-background="secondary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -419,12 +419,12 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="light">menu</lbz-icon-button>
+        <lbz-icon-button on-background="light" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="light">share</lbz-icon-button>
-        <lbz-icon-button on-background="light">search</lbz-icon-button>
-        <lbz-icon-button class="lbz-is-most-used" on-background="light">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="light" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="light" darkened>search</lbz-icon-button>
+        <lbz-icon-button class="lbz-is-most-used" on-background="light" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -433,12 +433,12 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="dark">menu</lbz-icon-button>
+        <lbz-icon-button on-background="dark" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="dark">share</lbz-icon-button>
-        <lbz-icon-button on-background="dark">search</lbz-icon-button>
-        <lbz-icon-button class="lbz-is-most-used" on-background="dark">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="dark" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="dark" darkened>search</lbz-icon-button>
+        <lbz-icon-button class="lbz-is-most-used" on-background="dark" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -464,12 +464,12 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button class="lbz-is-most-used" on-background="primary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        <lbz-icon-button class="lbz-is-most-used" on-background="primary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
     <lbz-top-app-bar
@@ -478,12 +478,12 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button class="lbz-is-most-used" on-background="primary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        <lbz-icon-button class="lbz-is-most-used" on-background="primary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
@@ -495,12 +495,12 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="primary">menu</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="primary">share</lbz-icon-button>
-        <lbz-icon-button on-background="primary">search</lbz-icon-button>
-        <lbz-icon-button class="lbz-is-most-used" on-background="primary">more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+        <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+        <lbz-icon-button class="lbz-is-most-used" on-background="primary" darkened>more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
   </article>

@@ -5,13 +5,14 @@
   justify-content: flex-start;
   align-items: stretch;
   position: relative;
-  .lbz-elevation(1);
+  z-index: 1;
   box-sizing: border-box;
   border-radius: var(--lbz-shape-size-medium);
   text-decoration: none;
   color: var(--lbz-theme-text-medium-emphasis-on-surface);
   .lbz-surface(1);
-  .lbz-shadow(1);
+  outline: none;
+  .lbz-elevation(1);
   transition: box-shadow 280ms #lbz-motion.curve[standard];
 
   > :first-child:not(.lbz-card__state),
@@ -136,20 +137,20 @@
       color: var(--lbz-theme-text-medium-emphasis-on-dark);
 
       .lbz-card__title {
-        color: var(--lbz-theme-text-high-emphasis-on-dark);
+        color: var(--lbz-theme-text-high-emphasis-on-dark) !important;
       }
     }
   }
 
   &:hover,
   &:focus {
+    z-index: 4;
     .lbz-elevation(4);
-    .lbz-shadow(4);
   }
 
   &:active {
+    z-index: 8;
     .lbz-elevation(8);
-    .lbz-shadow(8);
   }
 
   // type
@@ -157,6 +158,64 @@
     border: 1px solid var(--lbz-theme-outline-on-surface);
     .lbz-surface(0);
     box-shadow: none;
+  }
+
+  // background
+  &&--primary {
+    color: var(--lbz-theme-text-medium-emphasis-on-primary);
+    background-color: var(--lbz-theme-primary);
+
+    .lbz-card__title {
+      color: var(--lbz-theme-text-high-emphasis-on-primary);
+    }
+  }
+
+  &&--secondary {
+    color: var(--lbz-theme-text-medium-emphasis-on-secondary);
+    background-color: var(--lbz-theme-secondary);
+
+    .lbz-card__title {
+      color: var(--lbz-theme-text-high-emphasis-on-secondary);
+    }
+  }
+
+  &&--error {
+    color: var(--lbz-theme-text-medium-emphasis-on-error);
+    background-color: var(--lbz-theme-error);
+
+    .lbz-card__title {
+      color: var(--lbz-theme-text-high-emphasis-on-error);
+    }
+  }
+
+  &&--light {
+    color: var(--lbz-theme-text-medium-emphasis-on-light);
+    .lbz-surface("light"; 1);
+
+    .lbz-card__title {
+      color: var(--lbz-theme-text-high-emphasis-on-light);
+    }
+
+    // type
+    &.lbz-card--outlined {
+      .lbz-surface("light"; 0);
+    }
+  }
+
+  // darkened
+  &&--dark,
+  html[data-lbz-theme="dark"] &.lbz-is-darkened {
+    color: var(--lbz-theme-text-medium-emphasis-on-dark);
+    .lbz-surface("dark"; 1);
+
+    .lbz-card__title {
+      color: var(--lbz-theme-text-high-emphasis-on-dark);
+    }
+
+    // type
+    &.lbz-card--outlined {
+      .lbz-surface("dark"; 0);
+    }
   }
 
   // disabled

@@ -54,7 +54,7 @@
     padding: 0 16px;
     color: var(--lbz-theme-on-primary);
     background-color: var(--lbz-theme-primary);
-    .lbz-shadow(2);
+    .lbz-elevation(2);
     transition: box-shadow 280ms #lbz-motion.curve[standard];
 
     // color
@@ -120,11 +120,11 @@
     &:not(.lbz-is-unelevated):not(.lbz-is-disabled) {
       &:hover,
       &:focus {
-        .lbz-shadow(4);
+        .lbz-elevation(4);
       }
 
       &:active {
-        .lbz-shadow(8);
+        .lbz-elevation(8);
       }
     }
 

@@ -27,9 +27,11 @@
     &-light {
       border-color: var(--lbz-theme-outline-on-light);
     }
+  }
 
-    &-dark {
-      border-color: var(--lbz-theme-outline-on-dark);
-    }
+  // darkened
+  &&--on-dark,
+  html[data-lbz-theme="dark"] &.lbz-is-darkened {
+    border-color: var(--lbz-theme-outline-on-dark);
   }
 }

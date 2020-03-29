@@ -106,6 +106,14 @@
     }
   });
 
+  // darkened
+  html[data-lbz-theme="dark"] &.lbz-is-darkened {
+    &::before,
+    &::after {
+      background-color: var(--lbz-theme-on-dark);
+    }
+  }
+
   // selected
   .lbz-is-selected > & {
     &::before {

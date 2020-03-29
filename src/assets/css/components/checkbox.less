@@ -160,19 +160,12 @@
     }
   }
 
+  // darkened
   &&--on-dark,
-  html[theme="dark"] &.lbz-is-darkened {
+  html[data-lbz-theme="dark"] &.lbz-is-darkened {
     &:not(.lbz-is-checked) .lbz-checkbox__square,
     .lbz-radio__label {
       color: var(--lbz-theme-text-medium-emphasis-on-dark);
-    }
-  }
-
-  // darkened
-  html[theme="dark"] &.lbz-is-darkened:not(.lbz-is-checked) .lbz-checkbox__state {
-    &::before,
-    &::after {
-      background-color: var(--lbz-theme-on-dark);
     }
   }
 

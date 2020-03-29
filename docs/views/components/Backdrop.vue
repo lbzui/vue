@@ -3,7 +3,7 @@
     <h2 class="lbz-typography--h5"># Backdrop</h2>
 
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
-    <h3 class="lbz-typography--subtitle1">$ background: 'primary' (default), 'secondary', 'surface', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ background (darkened): 'primary' (default), 'secondary', 'surface', 'light', 'dark'</h3>
 
     <div class="lbzui-app">
       <lbz-backdrop ref="backdrop" :active.sync="vactive">
@@ -13,12 +13,17 @@
               <lbz-icon-button
                 :active.sync="vactive"
                 on-background="primary"
+                darkened
                 on-icon="close"
                 off-icon="menu"
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="primary" @click.stop="ftoggleActive">more_vert</lbz-icon-button>
+              <lbz-icon-button
+                on-background="primary"
+                darkened
+                @click.stop="ftoggleActive"
+              >more_vert</lbz-icon-button>
             </template>
           </lbz-top-app-bar>
         </template>
@@ -56,12 +61,13 @@
               <lbz-icon-button
                 :active.sync="vactive"
                 on-background="secondary"
+                darkened
                 on-icon="close"
                 off-icon="menu"
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="secondary">more_vert</lbz-icon-button>
+              <lbz-icon-button on-background="secondary" darkened>more_vert</lbz-icon-button>
             </template>
           </lbz-top-app-bar>
         </template>
@@ -139,12 +145,13 @@
               <lbz-icon-button
                 :active.sync="vactive"
                 on-background="light"
+                darkened
                 on-icon="close"
                 off-icon="menu"
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="light">more_vert</lbz-icon-button>
+              <lbz-icon-button on-background="light" darkened>more_vert</lbz-icon-button>
             </template>
           </lbz-top-app-bar>
         </template>
@@ -182,12 +189,13 @@
               <lbz-icon-button
                 :active.sync="vactive"
                 on-background="dark"
+                darkened
                 on-icon="close"
                 off-icon="menu"
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="dark">more_vert</lbz-icon-button>
+              <lbz-icon-button on-background="dark" darkened>more_vert</lbz-icon-button>
             </template>
           </lbz-top-app-bar>
         </template>
@@ -235,12 +243,13 @@
               <lbz-icon-button
                 :active.sync="vactive"
                 on-background="primary"
+                darkened
                 on-icon="close"
                 off-icon="menu"
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+              <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
             </template>
           </lbz-top-app-bar>
         </template>
@@ -267,12 +276,13 @@
               <lbz-icon-button
                 :active.sync="vactive"
                 on-background="primary"
+                darkened
                 on-icon="close"
                 off-icon="menu"
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+              <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
             </template>
           </lbz-top-app-bar>
         </template>
@@ -292,12 +302,13 @@
               <lbz-icon-button
                 :active.sync="vactive"
                 on-background="primary"
+                darkened
                 on-icon="close"
                 off-icon="menu"
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+              <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
             </template>
           </lbz-top-app-bar>
         </template>
@@ -320,12 +331,13 @@
               <lbz-icon-button
                 :active.sync="vactive"
                 on-background="primary"
+                darkened
                 on-icon="close"
                 off-icon="menu"
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="primary">more_vert</lbz-icon-button>
+              <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
             </template>
           </lbz-top-app-bar>
         </template>

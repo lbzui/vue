@@ -122,11 +122,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "layout-grid" */ '../views/utilities/LayoutGrid.vue'),
   },
   {
-    path: '/utilities/shadow',
-    name: 'shadow',
-    component: () => import(/* webpackChunkName: "shadow" */ '../views/utilities/Shadow.vue'),
-  },
-  {
     path: '/utilities/surface',
     name: 'surface',
     component: () => import(/* webpackChunkName: "surface" */ '../views/utilities/Surface.vue'),

@@ -21,7 +21,7 @@
           item-tag="a"
           nav
         >
-          <lbz-list-item to="/">Getting started</lbz-list-item>
+          <lbz-list-item to="/">Home</lbz-list-item>
           <lbz-divider/>
           <span class="lbz-list__subtitle">Components</span>
           <lbz-list-item
@@ -180,10 +180,6 @@ export default class App extends Vue {
       {
         path: '/utilities/layout-grid',
         label: 'Layout grid',
-      },
-      {
-        path: '/utilities/shadow',
-        label: 'Shadow',
       },
       {
         path: '/utilities/surface',

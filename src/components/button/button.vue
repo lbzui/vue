@@ -65,7 +65,7 @@ export default class LbzButton extends Vue {
   // ripple: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 
-  get cgetAttrs(): ComponentAttributes {
+  get cgetAttrs(): LbzComponentAttributes {
     const {
       to,
       replace,
@@ -98,7 +98,7 @@ export default class LbzButton extends Vue {
       : this.dense;
   }
 
-  get cgetStateAttrs(): StateAttributes {
+  get cgetStateAttrs(): LbzStateAttributes {
     const isOn: boolean = this.type === 'contained' || ['background', 'surface'].includes(this.color);
 
     return {

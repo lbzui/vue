@@ -4,6 +4,7 @@
       'lbz-state',
       type && `lbz-state--${type}`,
       background && `lbz-state-bg--${background}`,
+      darkened && 'lbz-is-darkened',
       cisRipple && 'lbz-ripple',
       cisRipple && unbounded && 'lbz-is-unbounded'
     ]"
@@ -38,6 +39,8 @@ export default class LbzState extends Vue {
   //             'on-primary', 'on-primary-variant', 'on-secondary', 'on-secondary-variant',
   //             'on-background', 'on-surface' (default), 'on-error', 'on-light', 'on-dark'
   @Prop({ type: String, default: '' }) private background!: string;
+  // darkened: true, false (default)
+  @Prop({ type: Boolean, default: false }) private darkened!: boolean;
   // ripple: undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
   // unbounded: true, false (default)

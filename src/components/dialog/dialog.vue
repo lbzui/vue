@@ -20,7 +20,11 @@
             :title="title"
           >
             <template #start>
-              <lbz-icon-button on-background="primary" @click.stop="fclose()">close</lbz-icon-button>
+              <lbz-icon-button
+                on-background="primary"
+                darkened
+                @click.stop="fclose()"
+              >close</lbz-icon-button>
             </template>
             <template #end>
               <slot name="start"/>
