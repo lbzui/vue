@@ -240,6 +240,7 @@ module.exports = {
         // resolve(`${LBZUI_CSS_PATH}variables/_shape.less`),
         resolve('src/assets/css/lbzui/_shape.less'), // your custom shape
         resolve(`${LBZUI_CSS_PATH}variables/_state.less`),
+        resolve(`${LBZUI_CSS_PATH}variables/_surface.less`),
         // resolve(`${LBZUI_CSS_PATH}variables/_theme.less`),
         resolve('src/assets/css/lbzui/_theme.less'), // your custom theme
 
@@ -353,6 +354,10 @@ const router = new VueRouter({
 | --- | --- | --- |
 | State | `.lbz-state-no-before--child` | `:hover`, `:focus`, and `:active` will not work in any direct children of elements, mainly applied in Card, List, and List item. |
 | State | `.lbz-state-no-before--descendant` | `:hover`, `:focus`, and `:active` will not work in any descendant of elements, mainly applied in Card, List, and List item. |
+| Top app bar | `.lbz-top-app-bar--fixed-adjust` | Style the content below the standard / short top app bar (fixed) to prevent the top app bar from covering it. |
+| Top app bar | `.lbz-top-app-bar--dense-fixed-adjust` | Style the content below the standard / short top app bar (fixed, dense) to prevent the top app bar from covering it. |
+| Top app bar | `.lbz-top-app-bar--extended-fixed-adjust` | Style the content below the extended top app bar (fixed) to prevent the top app bar from covering it. |
+| Top app bar | `.lbz-top-app-bar--dense-extended-fixed-adjust` | Style the content below the extended top app bar (fixed, dense) to prevent the top app bar from covering it. |
 | Top app bar | `.lbz-icon-button.lbz-is-most-used` | When transforming into short top app bar, place the most-used action. |
 
 ## Browser support

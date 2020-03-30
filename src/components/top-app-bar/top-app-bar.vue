@@ -4,9 +4,10 @@
       'lbz-top-app-bar',
       type && `lbz-top-app-bar--${type}`,
       background && `lbz-top-app-bar--${background}`,
-      inactive && `lbz-is-inactive--${inactive}`,
+      fixed && 'lbz-is-fixed',
       cisDense && 'lbz-is-dense',
-      elevated && 'lbz-is-elevated'
+      elevated && 'lbz-is-elevated',
+      inactive && `lbz-is-inactive--${inactive}`
     ]"
     :style="type === 'extended' && media ? { backgroundImage: `url(${media})` } : {}"
   >
@@ -42,12 +43,14 @@ export default class LbzTopAppBar extends Vue {
   @Prop({ type: String, default: '' }) private type!: string;
   // background (darkened): 'primary' (default), 'secondary', 'background', 'surface', 'light', 'dark', 'transparent'
   @Prop({ type: String, default: '' }) private background!: string;
-  // inactive (type === 'standard'): '' (default), 'scroll-off', 'tab-fixed'
-  @Prop({ type: String, default: '' }) private inactive!: string;
+  // fixed: true, false (default)
+  @Prop({ type: Boolean, default: false }) private fixed!: boolean;
   // dense (desktop only): undefined (default), true, false
   @Prop({ type: Boolean, default: undefined }) private dense!: boolean;
   // elevated: true, false (default)
   @Prop({ type: Boolean, default: false }) private elevated!: boolean;
+  // inactive (type === 'standard'): '' (default), 'scroll-off', 'tab-fixed'
+  @Prop({ type: String, default: '' }) private inactive!: string;
   // media (type === 'extended'): '' (default), 'x'
   @Prop({ type: String, default: '' }) private media!: string;
   // title: '' (default), 'x'

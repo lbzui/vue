@@ -71,9 +71,11 @@
       </template>
     </lbz-drawer>
     <main class="lbzui__main" role="main">
-      <keep-alive>
-        <router-view class="lbzui__main__container"/>
-      </keep-alive>
+      <transition name="lbzui__main__container">
+        <keep-alive :max="10">
+          <router-view class="lbzui__main__container"/>
+        </keep-alive>
+      </transition>
     </main>
     <lbz-fab class="lbzui__fab" @click.stop="vactive = true">menu</lbz-fab>
   </div>
@@ -219,7 +221,7 @@ export default class App extends Vue {
   };
 
   private vsupportsCssVars: boolean = supportsCssVariables();
-  private vactive: boolean = true;
+  private vactive: boolean = document.body.clientWidth >= 600;
   private visDark: boolean = false;
 
   @Watch('$route.name')

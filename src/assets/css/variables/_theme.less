@@ -1,7 +1,8 @@
 // Theme
 // usage: `#lbz-theme.x[y]`
 //        `#lbz-theme-text.x[y]`
-//        `#lbz-theme-surface.x[y]`
+//        `#lbz-theme-outline[x]`
+//        `#lbz-theme-scrim[x]`
 
 @white: #fff;
 @black: #000;
@@ -63,18 +64,6 @@
     on-surface: @white;
     on-error: @black;
   }
-
-  // Outline colors
-  .outline() {
-    light: rgba(@white, .12);
-    dark: rgba(@black, .12);
-  }
-
-  // Scrim background colors
-  .scrim() {
-    light: rgba(@white, .32);
-    dark: rgba(@black, .32);
-  }
 }
 
 // Typography and iconography colors
@@ -94,33 +83,14 @@
   }
 }
 
-// Higher elevation, lighter surface
-#lbz-theme-surface() {
-  // Light surface background colors
-  .light() {
-    @0: @white;
-    @1: @white;
-    @2: @white;
-    @3: @white;
-    @4: @white;
-    @6: @white;
-    @8: @white;
-    @12: @white;
-    @16: @white;
-    @24: @white;
-  }
+// Outline colors
+#lbz-theme-outline() {
+  light: rgba(@white, .12);
+  dark: rgba(@black, .12);
+}
 
-  // Dark surface background colors
-  .dark() {
-    @0: #121212; // rgb(18, 18, 18)
-    @1: #1e1e1e; // rgba(18, 18, 18, .05)
-    @2: #222; // rgba(18, 18, 18, .07)
-    @3: #252525; // rgba(18, 18, 18, .08)
-    @4: #272727; // rgba(18, 18, 18, .09)
-    @6: #2c2c2c; // rgba(18, 18, 18, .11)
-    @8: #2e2e2e; // rgba(18, 18, 18, .12)
-    @12: #333; // rgba(18, 18, 18, .14)
-    @16: #363636; // rgba(18, 18, 18, .15)
-    @24: #373737; // rgba(18, 18, 18, .16)
-  }
+// Scrim background colors
+#lbz-theme-scrim() {
+  light: rgba(@white, .32);
+  dark: rgba(@black, .32);
 }

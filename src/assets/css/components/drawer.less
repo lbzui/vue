@@ -30,6 +30,7 @@
 
   .lbz-top-app-bar {
     flex: none;
+    background-color: transparent !important;
   }
 
   & &__header {
@@ -110,9 +111,9 @@
       overflow-y: hidden;
       top: auto;
       right: 0;
-      border-right: none;
       border-top-left-radius: var(--lbz-shape-size-large);
       border-top-right-radius: var(--lbz-shape-size-large);
+      border-right: none;
       width: 100%;
       max-width: 100%;
       max-height: 62.5%;
@@ -120,15 +121,15 @@
     }
 
     // full-screen
-    &.lbz-is-full-screen {
-      .lbz-drawer__container {
+    &.lbz-is-full-screen .lbz-drawer {
+      &__container {
         top: 0;
         border-radius: 0;
         height: 100%;
         max-height: 100%;
       }
 
-      .lbz-drawer__content {
+      &__content {
         overflow-x: hidden;
         overflow-y: auto;
         scroll-behavior: smooth;
@@ -235,7 +236,7 @@
   }
 
   // active
-  &.lbz-drawer-enter-active {
+  &&-enter-active {
     transition: opacity 250ms linear;
 
     .lbz-drawer__container {
@@ -247,7 +248,7 @@
     }
   }
 
-  &.lbz-drawer-leave-active {
+  &&-leave-active {
     transition: opacity 200ms linear;
 
     .lbz-drawer__container {
@@ -259,8 +260,8 @@
     }
   }
 
-  &.lbz-drawer-enter,
-  &.lbz-drawer-leave-to {
+  &&-enter,
+  &&-leave-to {
     // type
     &:not(.lbz-drawer--bottom) .lbz-drawer__container {
       transform: translate3d(-100%, 0, 0);

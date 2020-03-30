@@ -11,6 +11,18 @@
   --lbz-shape-size-medium: 4px;
   --lbz-shape-size-large: 0;
 
+  /* Surface */
+  --lbz-surface-0: #fff;
+  --lbz-surface-1: #fff;
+  --lbz-surface-2: #fff;
+  --lbz-surface-3: #fff;
+  --lbz-surface-4: #fff;
+  --lbz-surface-6: #fff;
+  --lbz-surface-8: #fff;
+  --lbz-surface-12: #fff;
+  --lbz-surface-16: #fff;
+  --lbz-surface-24: #fff;
+
   /* Theme */
   --lbz-theme-primary: #6200ee;
   --lbz-theme-primary-variant: #3700b3;
@@ -18,16 +30,6 @@
   --lbz-theme-secondary-variant: #018786;
   --lbz-theme-background: #fff;
   --lbz-theme-surface: #fff;
-  --lbz-theme-surface-0: #fff;
-  --lbz-theme-surface-1: #fff;
-  --lbz-theme-surface-2: #fff;
-  --lbz-theme-surface-3: #fff;
-  --lbz-theme-surface-4: #fff;
-  --lbz-theme-surface-6: #fff;
-  --lbz-theme-surface-8: #fff;
-  --lbz-theme-surface-12: #fff;
-  --lbz-theme-surface-16: #fff;
-  --lbz-theme-surface-24: #fff;
   --lbz-theme-error: #b00020;
   --lbz-theme-light: #fff;
   --lbz-theme-dark: #000;

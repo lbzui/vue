@@ -85,17 +85,17 @@
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
   }
 
-  &.lbz-is-checked {
-    .lbz-switch__track,
-    .lbz-switch__thumb {
+  &.lbz-is-checked .lbz-switch {
+    &__track,
+    &__thumb {
       background-color: var(--lbz-theme-secondary);
     }
 
-    .lbz-switch__thumb-underlay {
+    &__thumb-underlay {
       transform: translate3d(14px, 0, 0);
     }
 
-    .lbz-switch__thumb::after {
+    &__thumb::after {
       background-color: transparent;
     }
   }
@@ -105,9 +105,9 @@
   }
 
   // color
-  &&--primary.lbz-is-checked {
-    .lbz-switch__track,
-    .lbz-switch__thumb {
+  &&--primary.lbz-is-checked .lbz-switch {
+    &__track,
+    &__thumb {
       background-color: var(--lbz-theme-primary);
     }
   }
@@ -115,12 +115,12 @@
   // on-background
   &&--on {
     &-primary {
-      &:not(.lbz-is-checked) {
-        .lbz-switch__track {
+      &:not(.lbz-is-checked) .lbz-switch {
+        &__track {
           background-color: var(--lbz-theme-on-primary);
         }
 
-        .lbz-switch__thumb {
+        &__thumb {
           background-color: var(--lbz-theme-primary);
 
           &::after {
@@ -135,12 +135,12 @@
     }
 
     &-secondary {
-      &:not(.lbz-is-checked) {
-        .lbz-switch__track {
+      &:not(.lbz-is-checked) .lbz-switch {
+        &__track {
           background-color: var(--lbz-theme-on-secondary);
         }
 
-        .lbz-switch__thumb {
+        &__thumb {
           background-color: var(--lbz-theme-secondary);
 
           &::after {
@@ -155,12 +155,12 @@
     }
 
     &-error {
-      &:not(.lbz-is-checked) {
-        .lbz-switch__track {
+      &:not(.lbz-is-checked) .lbz-switch {
+        &__track {
           background-color: var(--lbz-theme-on-error);
         }
 
-        .lbz-switch__thumb {
+        &__thumb {
           background-color: var(--lbz-theme-error);
 
           &::after {
@@ -175,12 +175,12 @@
     }
 
     &-light {
-      &:not(.lbz-is-checked) {
-        .lbz-switch__track {
+      &:not(.lbz-is-checked) .lbz-switch {
+        &__track {
           background-color: var(--lbz-theme-on-light);
         }
 
-        .lbz-switch__thumb {
+        &__thumb {
           background-color: var(--lbz-theme-light);
 
           &::after {
@@ -198,12 +198,12 @@
   // darkened
   &&--on-dark,
   html[data-lbz-theme="dark"] &.lbz-is-darkened {
-    &:not(.lbz-is-checked) {
-      .lbz-switch__track {
+    &:not(.lbz-is-checked) .lbz-switch {
+      &__track {
         background-color: var(--lbz-theme-on-dark);
       }
 
-      .lbz-switch__thumb {
+      &__thumb {
         background-color: var(--lbz-theme-dark);
 
         &::after {

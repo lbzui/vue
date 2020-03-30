@@ -3,6 +3,7 @@
     <h2 class="lbz-typography--h5"># Standard top app bar</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'extended', 'short'</h3>
+    <h3 class="lbz-typography--subtitle1">$ fixed: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
 
     <lbz-top-app-bar title="Page title"></lbz-top-app-bar>
@@ -95,34 +96,6 @@
       </template>
     </lbz-top-app-bar>
 
-    <h3 class="lbz-typography--subtitle1">$ inactive (type === 'standard'): '' (default), 'scroll-off', 'tab-fixed'</h3>
-
-    <lbz-radio v-model="vinactive" value="active">Active</lbz-radio>
-    <lbz-radio v-model="vinactive" value="scroll-off">Scroll-off</lbz-radio>
-    <lbz-radio v-model="vinactive" value="tab-fixed">Tab-fixed</lbz-radio>
-    <br>
-    <div class="lbzui-rectangle">
-      <lbz-top-app-bar :inactive="vinactive" title="Page title">
-        <template #start>
-          <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
-        </template>
-        <template #end>
-          <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
-          <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
-          <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
-        </template>
-        <template #bottom>
-          <lbz-tab v-model="vtab" on-background="primary">
-            <lbz-tab-item
-              v-for="(item, index) of 3"
-              :key="index"
-              :value="index"
-            >Item {{ item }}</lbz-tab-item>
-          </lbz-tab>
-        </template>
-      </lbz-top-app-bar>
-    </div>
-
     <h3 class="lbz-typography--subtitle1">$ dense (desktop only): undefined (default), true, false</h3>
 
     <lbz-top-app-bar dense title="Page title">
@@ -159,9 +132,38 @@
       </template>
     </lbz-top-app-bar>
 
+    <h3 class="lbz-typography--subtitle1">$ inactive (type === 'standard'): '' (default), 'scroll-off', 'tab-fixed'</h3>
+
+    <lbz-radio v-model="vinactive" value="active">Active</lbz-radio>
+    <lbz-radio v-model="vinactive" value="scroll-off">Scroll-off</lbz-radio>
+    <lbz-radio v-model="vinactive" value="tab-fixed">Tab-fixed</lbz-radio>
+    <br>
+    <div class="lbzui-rectangle">
+      <lbz-top-app-bar :inactive="vinactive" title="Page title">
+        <template #start>
+          <lbz-icon-button on-background="primary" darkened>menu</lbz-icon-button>
+        </template>
+        <template #end>
+          <lbz-icon-button on-background="primary" darkened>share</lbz-icon-button>
+          <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
+          <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
+        </template>
+        <template #bottom>
+          <lbz-tab v-model="vtab" on-background="primary">
+            <lbz-tab-item
+              v-for="(item, index) of 3"
+              :key="index"
+              :value="index"
+            >Item {{ item }}</lbz-tab-item>
+          </lbz-tab>
+        </template>
+      </lbz-top-app-bar>
+    </div>
+
     <h2 class="lbz-typography--h5"># Extended top app bar</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'extended', 'short'</h3>
+    <h3 class="lbz-typography--subtitle1">$ fixed: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
 
     <lbz-top-app-bar type="extended" title="Page title"></lbz-top-app-bar>
@@ -335,18 +337,19 @@
       title="Page title"
     >
       <template #start>
-        <lbz-icon-button on-background="light" darkened>menu</lbz-icon-button>
+        <lbz-icon-button on-background="light">menu</lbz-icon-button>
       </template>
       <template #end>
-        <lbz-icon-button on-background="light" darkened>share</lbz-icon-button>
-        <lbz-icon-button on-background="light" darkened>search</lbz-icon-button>
-        <lbz-icon-button on-background="light" darkened>more_vert</lbz-icon-button>
+        <lbz-icon-button on-background="light">share</lbz-icon-button>
+        <lbz-icon-button on-background="light">search</lbz-icon-button>
+        <lbz-icon-button on-background="light">more_vert</lbz-icon-button>
       </template>
     </lbz-top-app-bar>
 
     <h2 class="lbz-typography--h5"># Short top app bar</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'standard' (default), 'extended', 'short'</h3>
+    <h3 class="lbz-typography--subtitle1">$ fixed: true, false (default)</h3>
 
     <lbz-top-app-bar type="short" title="Page title">
       <template #start>

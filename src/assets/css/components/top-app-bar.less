@@ -111,7 +111,7 @@
         margin-right: 8px;
 
         // NOTE: When transforming into short top app bar,
-        // place the most-used action
+        //       place the most-used action.
         .lbz-icon-button:not(.lbz-is-most-used) {
           display: none;
         }
@@ -204,27 +204,47 @@
     background-color: transparent !important;
   }
 
-  // inactive
-  &.lbz-is-inactive--scroll-off {
-    transition: transform 200ms #lbz-motion.curve[sharp];
-    transform: translate3d(0, -100%, 0);
+  // fixed
+  &.lbz-is-fixed {
+    position: fixed;
   }
 
-  &.lbz-is-inactive--tab-fixed {
-    transition: transform 200ms #lbz-motion.curve[sharp];
-    transform: translate3d(0, -64px, 0);
+  // NOTE: Style the content below the top app bar (fixed, dense)
+  //       to prevent the top app bar from covering it.
+  &--fixed-adjust,
+  &--dense-fixed-adjust {
+    padding-top: 64px;
 
     @media #lbz-layout-grid.media[xsmall] {
-      transform: translate3d(0, -56px, 0);
+      padding-top: 56px;
     }
   }
 
-  // dense
+  &--extended-fixed-adjust,
+  &--dense-extended-fixed-adjust {
+    padding-top: 128px;
+  }
+
   @media #lbz-layout-grid.media[no-xsmall] {
+    // fixed
+    &--dense-fixed-adjust {
+      padding-top: 48px;
+    }
+
+    &--dense-extended-fixed-adjust {
+      padding-top: 96px;
+    }
+
+    // dense
     &.lbz-is-dense {
       .lbz-top-app-bar__container {
         padding: 0 4px;
         height: 48px;
+      }
+
+      // type
+      &.lbz-top-app-bar--extended .lbz-top-app-bar__container {
+        height: 96px;
       }
 
       // inactive
@@ -232,15 +252,27 @@
         transform: translate3d(0, -48px, 0);
       }
     }
-
-    // type
-    &&--extended.lbz-is-dense .lbz-top-app-bar__container {
-      height: 96px;
-    }
   }
 
   // elevated
   &.lbz-is-elevated {
     .lbz-elevation(4);
+  }
+
+  // inactive
+  &.lbz-is-inactive {
+    &--scroll-off {
+      transition: transform 200ms #lbz-motion.curve[sharp];
+      transform: translate3d(0, -100%, 0);
+    }
+
+    &--tab-fixed {
+      transition: transform 200ms #lbz-motion.curve[sharp];
+      transform: translate3d(0, -64px, 0);
+
+      @media #lbz-layout-grid.media[xsmall] {
+        transform: translate3d(0, -56px, 0);
+      }
+    }
   }
 }

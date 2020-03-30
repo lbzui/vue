@@ -170,14 +170,14 @@
   }
 
   // indeterminate
-  &.lbz-is-indeterminate {
-    .lbz-checkbox__checkmark {
+  &.lbz-is-indeterminate .lbz-checkbox {
+    &__checkmark {
       opacity: 0;
       transition: opacity 90ms #lbz-motion.curve[standard], transform 90ms #lbz-motion.curve[standard];
       transform: rotate(45deg);
     }
 
-    .lbz-checkbox__mixedmark {
+    &__mixedmark {
       opacity: 1;
       transform: scaleX(1) rotate(0deg);
     }

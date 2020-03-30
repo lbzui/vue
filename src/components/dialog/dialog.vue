@@ -15,7 +15,6 @@
         <template v-if="title || $slots.start">
           <lbz-top-app-bar
             v-if="type === 'full-screen'"
-            class="lbz-dialog__header"
             elevated
             :title="title"
           >
