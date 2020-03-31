@@ -2,34 +2,33 @@
 // usage: `#lbz-layout-grid.x[y]`
 
 #lbz-layout-grid() {
-  // Breakpoints (@media)
-  .media() {
+  // Breakpoints
+  .breakpoint() {
     xlarge: ~"(min-width: 1920px)";
     large: ~"(min-width: 1440px) and (max-width: 1919px)";
     medium: ~"(min-width: 1024px) and (max-width: 1439px)";
     small: ~"(min-width: 600px) and (max-width: 1023px)";
     xsmall: ~"(max-width: 599px)";
 
-    no-xsmall: ~"(min-width: 600px)";
+    desktop: ~"(min-width: 840px)";
+    tablet: ~"(min-width: 600px) and (max-width: 839px)";
+    mobile: ~"(max-width: 599px)";
   }
 
-  // Devices (columns, gutters, and margins)
-  .desktop() { // width >= 840px
-    media: ~"(min-width: 840px)";
+  // Columns, gutters, and margins
+  .desktop() {
     column: 12;
     gutter: 24px;
     margin: 24px;
   }
 
-  .tablet() { // 600px <= width < 840px
-    media: ~"(min-width: 600px) and (max-width: 839px)";
+  .tablet() {
     column: 8;
     gutter: 16px;
     margin: 16px;
   }
 
-  .mobile() { // width < 600px
-    media: ~"(max-width: 599px)";
+  .mobile() {
     column: 4;
     gutter: 16px;
     margin: 16px;

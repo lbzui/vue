@@ -61,7 +61,7 @@
 
 <script lang="ts">
 import { Component, PropSync, Prop, Watch, Vue } from 'vue-property-decorator';
-import { lockBodyScroll } from '../../utils/funcs';
+import { lbzfLockBodyScroll } from '../../utils/funcs';
 import LbzIconButton from '../icon-button/icon-button.vue';
 import LbzTopAppBar from '../top-app-bar/top-app-bar.vue';
 
@@ -100,7 +100,7 @@ export default class LbzDialog extends Vue {
       this.$emit(val ? 'open' : 'close');
 
       if (this.lockBodyScroll) {
-        lockBodyScroll(val);
+        lbzfLockBodyScroll(val);
       }
     });
   }

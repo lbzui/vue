@@ -33,7 +33,7 @@
 
 <script lang="ts">
 import { Component, Model, Prop, Emit, Vue } from 'vue-property-decorator';
-import { inputId } from '../../utils/funcs';
+import { lbzfRandomId } from '../../utils/funcs';
 import LbzState from '../state/state.vue';
 
 @Component({
@@ -46,7 +46,7 @@ export default class LbzRadio extends Vue {
   @Model('change', { type: [Boolean, Number, String], required: true }) private mchecked!: boolean | number | string;
 
   // id: 'lbz-radio-x' (default), 'x'
-  @Prop({ type: String, default: `lbz-radio-${inputId()}` }) private id!: string;
+  @Prop({ type: String, default: `lbz-radio-${lbzfRandomId()}` }) private id!: string;
   // [required]value: true, false, x, 'x'
   @Prop({ type: [Boolean, Number, String], required: true }) private value!: boolean | number | string;
   // color: 'primary', 'secondary' (default)

@@ -48,7 +48,7 @@
       }
     });
 
-    @media #lbz-layout-grid.tablet[media] {
+    @media #lbz-layout-grid.breakpoint[tablet] {
       grid-template-columns: repeat(#lbz-layout-grid.tablet[column], minmax(0, 1fr));
       /*! autoprefixer: ignore next */
       grid-template-rows: repeat(auto-fill, minmax(0, auto));
@@ -74,7 +74,7 @@
       });
     }
 
-    @media #lbz-layout-grid.mobile[media] {
+    @media #lbz-layout-grid.breakpoint[mobile] {
       grid-template-columns: repeat(#lbz-layout-grid.mobile[column], minmax(0, 1fr));
       /*! autoprefixer: ignore next */
       grid-template-rows: repeat(auto-fill, minmax(0, auto));

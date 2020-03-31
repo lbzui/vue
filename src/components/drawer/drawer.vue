@@ -11,7 +11,7 @@
       ]"
     >
       <div class="lbz-drawer__container">
-        <template v-if="$slots.start || title || subtitle || $slots.bottom">
+        <template v-if="$slots.start || title || subtitle || $slots.append">
           <lbz-top-app-bar
             v-if="cisFullScreen"
             :background="background || 'transparent'"
@@ -27,8 +27,8 @@
             <template v-if="$slots.start" #end>
               <slot name="start"/>
             </template>
-            <template v-if="$slots.bottom" #bottom>
-              <slot name="bottom"/>
+            <template v-if="$slots.append" #append>
+              <slot name="append"/>
             </template>
           </lbz-top-app-bar>
           <header v-else class="lbz-drawer__header">
@@ -43,12 +43,15 @@
               class="lbz-drawer__subtitle"
               v-html="subtitle"
             ></p>
-            <slot name="bottom"/>
+            <slot name="append"/>
           </header>
         </template>
         <div class="lbz-drawer__content">
           <slot name="center"/>
           <slot/>
+        </div>
+        <div v-if="$slots.end" class="lbz-drawer__footer">
+          <slot name="end"/>
         </div>
       </div>
       <div class="lbz-drawer__scrim" @click.stop="fclose()"></div>
@@ -58,7 +61,7 @@
 
 <script lang="ts">
 import { Component, PropSync, Prop, Watch, Vue } from 'vue-property-decorator';
-import { lockBodyScroll } from '../../utils/funcs';
+import { lbzfIsMobileBreakpoint, lbzfLockBodyScroll } from '../../utils/funcs';
 import LbzIconButton from '../icon-button/icon-button.vue';
 import LbzTopAppBar from '../top-app-bar/top-app-bar.vue';
 
@@ -101,7 +104,7 @@ export default class LbzDrawer extends Vue {
       this.$emit(val ? 'open' : 'close');
 
       if (this.lockBodyScroll) {
-        lockBodyScroll(this.cisStandard ? (this.visMobile && val) : val);
+        lbzfLockBodyScroll(this.cisStandard ? (this.visMobile && val) : val);
       }
     });
   }
@@ -124,10 +127,10 @@ export default class LbzDrawer extends Vue {
       return;
     }
 
-    this.visMobile = document.body.clientWidth < 600;
+    this.visMobile = lbzfIsMobileBreakpoint();
 
     if (this.lockBodyScroll && !this.visMobile && this.cisActive) {
-      lockBodyScroll(false);
+      lbzfLockBodyScroll(false);
     }
 
     this.cisActive = !this.visMobile;

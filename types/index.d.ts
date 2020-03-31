@@ -1,15 +1,21 @@
 import Vue from 'vue';
 
+// vue-scroll
+export interface VueScrollPosition {
+  readonly scrollTop: number;
+  readonly scrollLeft: number;
+}
+
 export interface LbzuiOptions {
   dense: boolean;
   ripple: boolean;
   [key: string]: any;
 }
 
-// vue-scroll
-export interface VueScrollPosition {
-  readonly scrollTop: number;
-  readonly scrollLeft: number;
+declare module 'vue/types/vue' {
+  export interface Vue {
+    $lbzui: LbzuiOptions;
+  }
 }
 
 declare module '@lbzui/vue' {
@@ -40,10 +46,4 @@ declare module '@lbzui/vue' {
   export class Tab extends LbzuiComponent {}
   export class TabItem extends LbzuiComponent {}
   export class TopAppBar extends LbzuiComponent {}
-}
-
-declare module 'vue/types/vue' {
-  export interface Vue {
-    $lbzui: LbzuiOptions;
-  }
 }

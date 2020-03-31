@@ -36,7 +36,7 @@
 
 <script lang="ts">
 import { Component, Model, Prop, Emit, Vue } from 'vue-property-decorator';
-import { inputId } from '../../utils/funcs';
+import { lbzfRandomId } from '../../utils/funcs';
 import LbzState from '../state/state.vue';
 
 @Component({
@@ -49,7 +49,7 @@ export default class LbzSwitch extends Vue {
   @Model('change', { type: [Boolean, Number, String], required: true }) private mchecked!: boolean | number | string;
 
   // id: 'lbz-switch-x' (default), 'x'
-  @Prop({ type: String, default: `lbz-switch-${inputId()}` }) private id!: string;
+  @Prop({ type: String, default: `lbz-switch-${lbzfRandomId()}` }) private id!: string;
   // true-value: true (default), false, x, 'x'
   @Prop({ type: [Boolean, Number, String], default: true }) private trueValue!: boolean | number | string;
   // false-value: true, false (default), x, 'x'

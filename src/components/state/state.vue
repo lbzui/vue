@@ -18,14 +18,14 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { supportsTouch, supportsCssVariables } from '../../utils/funcs';
+import { lbzfSupportsCssVariables, lbzfSupportsTouch } from '../../utils/funcs';
 
-interface RippleCoordinate {
+interface LbzRippleCoordinate {
   readonly top: number;
   readonly left: number;
 }
 
-interface RippleTranslate {
+interface LbzRippleTranslate {
   readonly x: number;
   readonly y: number;
 }
@@ -48,13 +48,13 @@ export default class LbzState extends Vue {
   // centered: true, false (default)
   @Prop({ type: Boolean, default: false }) private centered!: boolean;
 
-  private vsupportsTouch: boolean = supportsTouch();
+  private vsupportsTouch: boolean = lbzfSupportsTouch();
   private vframeTimer: any = 0;
   private venterTimer: any = 0;
   private vleaveTimer: any = 0;
 
   get cisRipple(): boolean {
-    if (!supportsCssVariables()) {
+    if (!lbzfSupportsCssVariables()) {
       return false;
     }
 
@@ -125,7 +125,7 @@ export default class LbzState extends Vue {
     target.style.setProperty('--lbz-ripple-scale', `${radius / size}`);
 
     if (this.centered) {
-      const coordinate: RippleCoordinate = {
+      const coordinate: LbzRippleCoordinate = {
         top: Math.round((offsetHeight - size) / 2),
         left: Math.round((offsetWidth - size) / 2),
       };
@@ -137,11 +137,11 @@ export default class LbzState extends Vue {
       const touch: any = e.type === 'touchstart'
         ? (e as TouchEvent).changedTouches[0]
         : (e as MouseEvent);
-      const translateStart: RippleTranslate = {
+      const translateStart: LbzRippleTranslate = {
         x: (touch.pageX - (window.pageXOffset + clientRect.left)) - size / 2,
         y: (touch.pageY - (window.pageYOffset + clientRect.top)) - size / 2,
       };
-      const translateEnd: RippleTranslate = {
+      const translateEnd: LbzRippleTranslate = {
         x: (offsetWidth - size) / 2,
         y: (offsetHeight - size) / 2,
       };

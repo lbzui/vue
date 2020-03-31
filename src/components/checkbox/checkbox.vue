@@ -43,7 +43,7 @@
 
 <script lang="ts">
 import { Component, Model, Prop, Emit, Vue } from 'vue-property-decorator';
-import { inputId } from '../../utils/funcs';
+import { lbzfRandomId } from '../../utils/funcs';
 import LbzState from '../state/state.vue';
 
 @Component({
@@ -57,7 +57,7 @@ export default class LbzCheckbox extends Vue {
   private mchecked!: boolean | number | string | any[];
 
   // id: 'lbz-checkbox-x' (default), 'x'
-  @Prop({ type: String, default: `lbz-checkbox-${inputId()}` }) private id!: string;
+  @Prop({ type: String, default: `lbz-checkbox-${lbzfRandomId()}` }) private id!: string;
   // true-value (!group): true (default), false, x, 'x'
   @Prop({ type: [Boolean, Number, String], default: true }) private trueValue!: boolean | number | string;
   // false-value (!group): true, false (default), x, 'x'

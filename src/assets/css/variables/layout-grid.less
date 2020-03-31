@@ -8,14 +8,14 @@
   --lbz-layout-grid-margin: #lbz-layout-grid.desktop[margin];
 
   // 600px <= width < 840px
-  @media #lbz-layout-grid.tablet[media] {
+  @media #lbz-layout-grid.breakpoint[tablet] {
     --lbz-layout-grid-column: #lbz-layout-grid.tablet[column];
     --lbz-layout-grid-gutter: #lbz-layout-grid.tablet[gutter];
     --lbz-layout-grid-margin: #lbz-layout-grid.tablet[margin];
   }
 
   // width < 600px
-  @media #lbz-layout-grid.mobile[media] {
+  @media #lbz-layout-grid.breakpoint[mobile] {
     --lbz-layout-grid-column: #lbz-layout-grid.mobile[column];
     --lbz-layout-grid-gutter: #lbz-layout-grid.mobile[gutter];
     --lbz-layout-grid-margin: #lbz-layout-grid.mobile[margin];

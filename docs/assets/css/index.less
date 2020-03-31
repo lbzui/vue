@@ -166,13 +166,23 @@ html {
     position: fixed;
     width: @lbzuiDrawerWidth;
 
-    .lbz-drawer__container {
-      width: inherit;
-    }
+    .lbz-drawer {
+      &__container {
+        width: inherit;
+      }
 
-    // title
-    .lbz-drawer__title {
-      cursor: pointer;
+      // title
+      &__title {
+        cursor: pointer;
+      }
+
+      &__content {
+        overflow: auto;
+      }
+
+      &__footer .lbz-list {
+        padding: 16px 0 0;
+      }
     }
   }
 
@@ -208,6 +218,9 @@ html {
 
   & &__fab {
     display: none;
+    position: fixed;
+    right: var(--lbz-layout-grid-margin);
+    bottom: var(--lbz-layout-grid-margin);
 
     html[data-lbz-theme="dark"] & {
       color: #lbz-theme.dark[on-primary];
@@ -285,14 +298,8 @@ html {
     }
 
     &-fab {
-      .lbz-button {
-        margin: @lbzuiMargin;
-      }
-
+      .lbz-button,
       .lbz-fab {
-        position: relative;
-        right: 0;
-        bottom: 0;
         margin: @lbzuiMargin;
       }
     }
@@ -393,7 +400,7 @@ html {
     }
   }
 
-  @media #lbz-layout-grid.media[xsmall] {
+  @media #lbz-layout-grid.breakpoint[mobile] {
     & &__drawer {
       width: 100%;
     }

@@ -26,6 +26,10 @@
     scroll-behavior: smooth;
     overscroll-behavior-y: contain;
     -webkit-overflow-scrolling: touch;
+
+    > :last-child {
+      padding-bottom: 16px;
+    }
   }
 
   .lbz-top-app-bar {
@@ -71,9 +75,16 @@
   & &__content {
     flex: auto;
     box-sizing: border-box;
-    padding-bottom: 16px;
     .lbz-typography("body2");
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
+    scroll-behavior: smooth;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  & &__footer {
+    flex: auto;
+    box-sizing: border-box;
   }
 
   & &__scrim {
@@ -108,7 +119,7 @@
     right: 0;
 
     .lbz-drawer__container {
-      overflow-y: hidden;
+      overflow: hidden;
       top: auto;
       right: 0;
       border-top-left-radius: var(--lbz-shape-size-large);
@@ -130,11 +141,7 @@
       }
 
       &__content {
-        overflow-x: hidden;
-        overflow-y: auto;
-        scroll-behavior: smooth;
-        overscroll-behavior-y: contain;
-        -webkit-overflow-scrolling: touch;
+        overflow: auto;
       }
     }
 
@@ -143,7 +150,7 @@
     }
   }
 
-  @media #lbz-layout-grid.media[xsmall] {
+  @media #lbz-layout-grid.breakpoint[mobile] {
     &:not(.lbz-drawer--bottom) .lbz-drawer__container {
       width: calc(100% - 56px);
       max-width: 320px;

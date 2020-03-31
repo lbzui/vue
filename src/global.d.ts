@@ -1,13 +1,10 @@
 import Vue, { VueConstructor } from 'vue';
 import {
-  LbzuiOptions as Options,
   VueScrollPosition as ScrollPosition,
+  LbzuiOptions as Options,
 } from '../types';
 
 declare global {
-  // tslint:disable no-empty-interface
-  interface LbzuiOptions extends Options {}
-
   // vue-scroll
   // tslint:disable no-empty-interface
   interface VueScrollPosition extends ScrollPosition {}
@@ -15,6 +12,9 @@ declare global {
   interface Window {
     Vue?: VueConstructor;
   }
+
+  // tslint:disable no-empty-interface
+  interface LbzuiOptions extends Options {}
 
   interface LbzComponentAttributes {
     is: string;

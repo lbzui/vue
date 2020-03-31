@@ -459,7 +459,7 @@
         <template #start>
           <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
-        <template #bottom>
+        <template #append>
           <lbz-divider/>
         </template>
         <template #center>
@@ -513,7 +513,7 @@
         <template #start>
           <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
-        <template #bottom>
+        <template #append>
           <lbz-divider on-background="primary" darkened/>
         </template>
         <template #center>
@@ -566,7 +566,7 @@
         <template #start>
           <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
-        <template #bottom>
+        <template #append>
           <lbz-divider on-background="secondary" darkened/>
         </template>
         <template #center>
@@ -618,7 +618,7 @@
         <template #start>
           <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
-        <template #bottom>
+        <template #append>
           <lbz-divider/>
         </template>
         <template #center>
@@ -669,7 +669,7 @@
         <template #start>
           <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
-        <template #bottom>
+        <template #append>
           <lbz-divider on-background="light" darkened/>
         </template>
         <template #center>
@@ -722,7 +722,7 @@
         <template #start>
           <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
         </template>
-        <template #bottom>
+        <template #append>
           <lbz-divider on-background="dark" darkened/>
         </template>
         <template #center>
@@ -918,7 +918,7 @@
         <template #start>
           <lbz-icon-button on-background="primary" darkened>search</lbz-icon-button>
         </template>
-        <template #bottom>
+        <template #append>
           <lbz-divider on-background="primary" darkened/>
         </template>
         <template #center>
@@ -971,7 +971,7 @@
         <template #start>
           <lbz-icon-button on-background="secondary" darkened>search</lbz-icon-button>
         </template>
-        <template #bottom>
+        <template #append>
           <lbz-divider on-background="secondary" darkened/>
         </template>
         <template #center>
@@ -1023,7 +1023,7 @@
         <template #start>
           <lbz-icon-button>search</lbz-icon-button>
         </template>
-        <template #bottom>
+        <template #append>
           <lbz-divider/>
         </template>
         <template #center>
@@ -1074,7 +1074,7 @@
         <template #start>
           <lbz-icon-button on-background="light" darkened>search</lbz-icon-button>
         </template>
-        <template #bottom>
+        <template #append>
           <lbz-divider on-background="light" darkened/>
         </template>
         <template #center>
@@ -1127,7 +1127,7 @@
         <template #start>
           <lbz-icon-button on-background="dark" darkened>search</lbz-icon-button>
         </template>
-        <template #bottom>
+        <template #append>
           <lbz-divider on-background="dark" darkened/>
         </template>
         <template #center>

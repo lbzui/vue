@@ -10,7 +10,7 @@
       <template #start>
         <h1 class="lbz-drawer__title" @click.stop="freload">@lbzui/vue</h1>
       </template>
-      <template #bottom>
+      <template #append>
         <lbz-divider/>
       </template>
       <template #center>
@@ -48,15 +48,12 @@
             <template #center>{{ item.label }}</template>
             <template #end><lbz-icon>open_in_new</lbz-icon></template>
           </lbz-list-item>
-          <lbz-divider/>
-          <span class="lbz-list__subtitle">Settings</span>
-          <lbz-list-item
-            class="lbz-state-no-before--child"
-            :router-link="false"
-            tag="span"
-            :disabled="!vsupportsCssVars"
-            :ripple="false"
-          >
+        </lbz-list>
+      </template>
+      <template #end>
+        <lbz-divider/>
+        <lbz-list nav :ripple="false">
+          <lbz-list-item class="lbz-state-no-before--child" :disabled="!vsupportsCssVars">
             <template #center>Dark theme (non-IE)</template>
             <template #end>
               <lbz-switch
@@ -84,11 +81,12 @@
 <script lang="ts">
 import { Component, Ref, Watch, Vue } from 'vue-property-decorator';
 import {
-  supportsCssVariables,
-  isDarkModeEnabled,
-  changeModeHandler,
-  setModeAttributes,
-  cancelContextmenu,
+  lbzfCancelContextmenu,
+  lbzfChangeModeHandler,
+  lbzfIsDarkModeEnabled,
+  lbzfIsMobileBreakpoint,
+  lbzfSetModeAttributes,
+  lbzfSupportsCssVariables,
 } from '@/utils/funcs';
 
 @Component
@@ -220,8 +218,8 @@ export default class App extends Vue {
     ],
   };
 
-  private vsupportsCssVars: boolean = supportsCssVariables();
-  private vactive: boolean = document.body.clientWidth >= 600;
+  private vactive: boolean = !lbzfIsMobileBreakpoint();
+  private vsupportsCssVars: boolean = lbzfSupportsCssVariables();
   private visDark: boolean = false;
 
   @Watch('$route.name')
@@ -232,11 +230,11 @@ export default class App extends Vue {
   }
 
   private created(): void {
-    cancelContextmenu();
+    lbzfCancelContextmenu();
 
     if (this.vsupportsCssVars) {
       this.fchangeMode();
-      changeModeHandler(this.fchangeMode);
+      lbzfChangeModeHandler(this.fchangeMode);
     }
   }
 
@@ -245,14 +243,14 @@ export default class App extends Vue {
   }
 
   private fchangeMode(): void {
-    const isDark: boolean = isDarkModeEnabled();
+    const isDark: boolean = lbzfIsDarkModeEnabled();
 
     this.visDark = isDark;
     this.fsetTheme(isDark);
   }
 
   private fsetTheme(val: boolean, e?: MouseEvent): void {
-    setModeAttributes(val, {
+    lbzfSetModeAttributes(val, {
       light: '#3700b3',
       dark: '#000',
     });
