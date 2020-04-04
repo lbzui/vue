@@ -15,6 +15,7 @@ import IconButton from './icon-button';
 import List from './list';
 import ListItem from './list-item';
 import Radio from './radio';
+import Snackbar from './snackbar';
 import State from './state';
 import Switch from './switch';
 import Tab from './tab';
@@ -55,9 +56,11 @@ const install: PluginFunction<any> = (vm: typeof Vue, opts?: LbzuiOptions): void
     ripple: ripple === undefined ? true : ripple,
   };
 
-  components.map((Component) => {
+  components.map((Component): void => {
     vm.use(Component.install);
   });
+
+  vm.prototype.$lbzSnackbar = Snackbar;
 };
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -81,6 +84,7 @@ export default {
   List,
   ListItem,
   Radio,
+  Snackbar,
   State,
   Switch,
   Tab,

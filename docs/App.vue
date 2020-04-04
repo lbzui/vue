@@ -148,6 +148,10 @@ export default class App extends Vue {
         label: 'Radio',
       },
       {
+        path: '/components/snackbar',
+        label: 'Snackbar',
+      },
+      {
         path: '/components/state',
         label: 'State',
       },
@@ -200,8 +204,8 @@ export default class App extends Vue {
         label: 'GitHub repo',
       },
       {
-        path: 'https://github.com/orgs/lbzui/projects/1',
-        label: 'Component API',
+        path: 'https://github.com/lbzui/vue/projects/2',
+        label: 'API documentation',
       },
       {
         path: 'https://material.io/',
@@ -254,6 +258,10 @@ export default class App extends Vue {
       light: '#3700b3',
       dark: '#000',
     });
+
+    if (!e) {
+      this.$lbzSnackbar('Dark Mode is turned on.');
+    }
   }
 }
 </script>

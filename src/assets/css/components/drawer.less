@@ -4,7 +4,6 @@
   top: 0;
   bottom: 0;
   left: 0;
-  z-index: 16;
   height: 100%;
 
   & &__container {
@@ -26,10 +25,6 @@
     scroll-behavior: smooth;
     overscroll-behavior-y: contain;
     -webkit-overflow-scrolling: touch;
-
-    > :last-child {
-      padding-bottom: 16px;
-    }
   }
 
   .lbz-top-app-bar {
@@ -42,16 +37,16 @@
     box-sizing: border-box;
     padding: 0 16px 4px;
     min-height: 64px;
-    max-height: 225px;
+    max-height: 400px / (16 / 9);
 
     .lbz-divider {
-      margin: 13px -16px -4px;
+      margin: 17px -16px -4px;
     }
   }
 
   & &__avatar {
     display: block;
-    margin: 16px 0 6px;
+    margin: 16px 16px 0 0;
     border-radius: 50%;
     width: 48px;
     height: 48px;
@@ -102,8 +97,10 @@
   &&--modal {
     position: fixed;
     right: 0;
+    z-index: 16;
 
     .lbz-drawer__container {
+      border-right: none;
       border-top-right-radius: var(--lbz-shape-size-large);
       border-bottom-right-radius: var(--lbz-shape-size-large);
       .lbz-elevation(16);
@@ -117,18 +114,23 @@
   &&--bottom {
     position: fixed;
     right: 0;
+    z-index: 16;
 
     .lbz-drawer__container {
       overflow: hidden;
       top: auto;
       right: 0;
+      border-right: none;
       border-top-left-radius: var(--lbz-shape-size-large);
       border-top-right-radius: var(--lbz-shape-size-large);
-      border-right: none;
       width: 100%;
       max-width: 100%;
       max-height: 62.5%;
       .lbz-elevation(16);
+    }
+
+    .lbz-drawer__avatar {
+      float: left;
     }
 
     // full-screen
@@ -141,7 +143,7 @@
       }
 
       &__content {
-        overflow: auto;
+        overflow-y: auto;
       }
     }
 
@@ -159,8 +161,10 @@
     &:not(.lbz-drawer--modal):not(.lbz-drawer--bottom) {
       position: fixed;
       right: 0;
+      z-index: 16;
 
       .lbz-drawer__container {
+        border-right: none;
         border-top-right-radius: var(--lbz-shape-size-large);
         border-bottom-right-radius: var(--lbz-shape-size-large);
         .lbz-elevation(16);

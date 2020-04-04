@@ -57,7 +57,7 @@ module.exports = {
       preProcessor: 'less',
       patterns: [
         resolve('src/assets/css/variables/_*.less'),
-        resolve('src/assets/css/mixins/*.less')
+        resolve('src/assets/css/utilities/_*.less')
       ]
     }
   }

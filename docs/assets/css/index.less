@@ -169,6 +169,10 @@ html {
     .lbz-drawer {
       &__container {
         width: inherit;
+
+        > :last-child {
+          padding-bottom: @lbzuiMarginTop;
+        }
       }
 
       // title
@@ -219,8 +223,9 @@ html {
   & &__fab {
     display: none;
     position: fixed;
-    right: var(--lbz-layout-grid-margin);
-    bottom: var(--lbz-layout-grid-margin);
+    right: 0;
+    bottom: 0;
+    margin: var(--lbz-layout-grid-margin);
 
     html[data-lbz-theme="dark"] & {
       color: #lbz-theme.dark[on-primary];
@@ -313,6 +318,15 @@ html {
 
     &-list .lbz-list {
       margin: @lbzuiMargin;
+    }
+
+    &-snackbar .lbz-button {
+      display: flex;
+
+      + .lbz-button {
+        margin-top: @lbzuiMarginTop;
+        margin-left: 0;
+      }
     }
 
     &-state .lbzui-square {
@@ -416,5 +430,11 @@ html {
     & &__fab {
       display: inline-flex;
     }
+  }
+}
+
+@media #lbz-layout-grid.breakpoint[mobile] {
+  body .lbz-snackbar {
+    margin-bottom: calc(var(--lbz-layout-grid-margin) + 64px);
   }
 }

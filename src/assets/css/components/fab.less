@@ -21,7 +21,7 @@
   background-color: var(--lbz-theme-secondary);
   outline: none;
   .lbz-elevation(6);
-  transition: opacity 15ms linear 30ms, box-shadow 280ms #lbz-motion.curve[standard], transform 270ms #lbz-motion.curve[deceleration] 0ms;
+  transition: opacity 15ms linear 30ms, box-shadow 280ms #lbz-motion.curve[standard], transform 270ms #lbz-motion.curve[deceleration];
   user-select: none;
 
   &:hover,
@@ -89,7 +89,7 @@
   // inactive
   &.lbz-is-inactive {
     opacity: 0;
-    transition: opacity 15ms linear 150ms, transform 180ms #lbz-motion.curve[acceleration] 0ms;
+    transition: opacity 15ms linear 150ms, transform 180ms #lbz-motion.curve[acceleration];
     transform: scale(0);
   }
 }

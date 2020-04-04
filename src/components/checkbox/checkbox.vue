@@ -113,7 +113,7 @@ export default class LbzCheckbox extends Vue {
       const arr: any[] = this.mchecked as any[];
 
       if (this.cisChecked) {
-        const index = arr.indexOf(this.value);
+        const index: number = arr.indexOf(this.value);
 
         if (index !== -1) {
           arr.splice(index, 1);

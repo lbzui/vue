@@ -1,3 +1,5 @@
+import Vue from 'vue';
+
 interface LbzThemeColor {
   readonly light: string;
   readonly dark: string;
@@ -20,7 +22,7 @@ export function lbzfIsDarkModeEnabled(): boolean {
 }
 
 export function lbzfIsMobileBreakpoint(): boolean {
-  if (typeof document === 'undefined') { // SSR
+  if (Vue.prototype.$isServer) { // SSR
     return false;
   }
 

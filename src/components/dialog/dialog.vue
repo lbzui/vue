@@ -96,7 +96,7 @@ export default class LbzDialog extends Vue {
 
   @Watch('cisActive')
   private factiveChanged(val: boolean, oldVal: boolean): void {
-    this.$nextTick().then(() => {
+    this.$nextTick().then((): void => {
       this.$emit(val ? 'open' : 'close');
 
       if (this.lockBodyScroll) {

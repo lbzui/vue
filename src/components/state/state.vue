@@ -68,6 +68,9 @@ export default class LbzState extends Vue {
       window.cancelAnimationFrame(this.vframeTimer);
       clearTimeout(this.venterTimer);
       clearTimeout(this.vleaveTimer);
+      this.vframeTimer = 0;
+      this.venterTimer = 0;
+      this.vleaveTimer = 0;
     }
   }
 

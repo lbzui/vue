@@ -10,7 +10,11 @@
     @click="$emit('click', $event)"
   >
     <lbz-icon v-if="$slots.default" class="lbz-fab__icon"><slot/></lbz-icon>
-    <span v-if="type === 'extended'" class="lbz-fab__label">{{ label }}</span>
+    <span
+      v-if="type === 'extended'"
+      class="lbz-fab__label"
+      v-html="label"
+    ></span>
     <lbz-state v-bind="cgetStateAttrs"/>
   </component>
 </template>

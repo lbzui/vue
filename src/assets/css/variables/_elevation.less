@@ -1,5 +1,5 @@
 // Elevation
-// usage: `.lbz-elevation(@value: 0);` (@value: 0-24)
+// usage: `#lbz-elevation[@@x]`
 
 //  0: Top app bar (resting elevation), Text button, Standard side sheet
 //  1: Search bar (resting elevation), Card (resting elevation), Switch
@@ -39,7 +39,3 @@
   @23: 0 11px 14px -7px rgba(0, 0, 0, .2), 0 23px 36px 3px rgba(0, 0, 0, .14), 0 9px 44px 8px rgba(0, 0, 0, .12);
   @24: 0 11px 15px -7px rgba(0, 0, 0, .2), 0 24px 38px 3px rgba(0, 0, 0, .14), 0 9px 46px 8px rgba(0, 0, 0, .12);
 };
-
-.lbz-elevation(@value: 0) {
-  box-shadow: #lbz-elevation[@@value];
-}

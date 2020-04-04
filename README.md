@@ -7,7 +7,7 @@
 
 > Material Components for Vue.js
 
-@lbzui/vue is now available in [BETA](https://github.com/lbzui/vue/projects/1), but you can read in more depth on [component API](https://github.com/orgs/lbzui/projects/1) and [documentation website](https://lbzui-vue.lanbizhong.com/) to develop.
+@lbzui/vue is now available in [BETA](https://github.com/lbzui/vue/projects/1), but you can read in more depth on [API documentation](https://github.com/lbzui/vue/projects/2) and [documentation website](https://lbzui-vue.lanbizhong.com/) to develop.
 
 If you have any questions, ideas or you want to discuss with it, [create an issue](https://github.com/lbzui/vue/issues/new) or email to lbz_ui@163.com.
 
@@ -112,6 +112,7 @@ import {
   List,
   ListItem,
   Radio,
+  Snackbar,
   State,
   Switch,
   Tab,
@@ -143,6 +144,8 @@ Vue.use(Switch);
 Vue.use(Tab);
 Vue.use(TabItem);
 Vue.use(TopAppBar);
+
+Vue.prototype.$lbzSnackbar = Snackbar;
 ```
 
 #### Step 4: Build a Material theme
@@ -208,6 +211,7 @@ import '@lbzui/vue/src/assets/css/components/icon-button.less';
 import '@lbzui/vue/src/assets/css/components/list.less';
 import '@lbzui/vue/src/assets/css/components/list-item.less';
 import '@lbzui/vue/src/assets/css/components/radio.less';
+import '@lbzui/vue/src/assets/css/components/snackbar.less';
 import '@lbzui/vue/src/assets/css/components/state.less';
 import '@lbzui/vue/src/assets/css/components/switch.less';
 import '@lbzui/vue/src/assets/css/components/tab.less';
@@ -234,6 +238,7 @@ module.exports = {
         // variables
         // resolve(`${LBZUI_CSS_PATH}variables/_*.less`),
 
+        resolve(`${LBZUI_CSS_PATH}variables/_elevation.less`),
         // resolve(`${LBZUI_CSS_PATH}variables/_layout-grid.less`),
         resolve('src/assets/css/lbzui/_layout-grid.less'), // your custom layout grid
         resolve(`${LBZUI_CSS_PATH}variables/_motion.less`),
@@ -245,7 +250,7 @@ module.exports = {
         resolve('src/assets/css/lbzui/_theme.less'), // your custom theme
 
         // mixins
-        resolve(`${LBZUI_CSS_PATH}mixins/*.less`)
+        resolve(`${LBZUI_CSS_PATH}utilities/_*.less`)
       ]
     }
   }

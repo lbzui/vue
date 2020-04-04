@@ -23,7 +23,7 @@
       </a>
     </p>
 
-    <p class="lbz-typography--body1">@lbzui/vue is now available in <a href="https://github.com/lbzui/vue/projects/1" target="_blank">BETA</a><lbz-icon>open_in_new</lbz-icon>, but you can read in more depth on <a href="https://github.com/orgs/lbzui/projects/1" target="_blank">component API</a><lbz-icon>open_in_new</lbz-icon> and this documentation website to develop.</p>
+    <p class="lbz-typography--body1">@lbzui/vue is now available in <a href="https://github.com/lbzui/vue/projects/1" target="_blank">BETA</a><lbz-icon>open_in_new</lbz-icon>, but you can read in more depth on <a href="https://github.com/lbzui/vue/projects/2" target="_blank">API documentation</a><lbz-icon>open_in_new</lbz-icon> and this documentation website to develop.</p>
     <p class="lbz-typography--body1">If you have any questions, ideas or you want to discuss with it, <a href="https://github.com/lbzui/vue/issues/new" target="_blank">create an issue</a><lbz-icon>open_in_new</lbz-icon> or email to <a href="mailto:lbz_ui@163.com">lbz_ui@163.com</a>.</p>
 
     <h2 class="lbz-typography--h5"># Features</h2>
@@ -36,7 +36,7 @@
 
     <h2 class="lbz-typography--h5"># Quick start</h2>
 
-    <p class="lbz-typography--body1"><a href="https://github.com/lbzui/vue#quick-start" target="_blank">Read how to use @lbzui/vue in your own project on GitHub README.md</a><lbz-icon>open_in_new</lbz-icon>.</p>
+    <p class="lbz-typography--body1">Read GitHub <a href="https://github.com/lbzui/vue#quick-start" target="_blank">README.md</a><lbz-icon>open_in_new</lbz-icon> for more information on how to use @lbzui/vue in your own project.</p>
 
     <h2 class="lbz-typography--h5"># Browser support</h2>
 
