@@ -27,16 +27,13 @@
       icon="add"
     >Non-router-link</lbz-button>
 
-    <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'surface', 'error', 'light', 'dark'</h3>
 
     <lbz-button>Primary</lbz-button>
     <lbz-button icon="add">Primary</lbz-button>
     <br>
     <lbz-button color="secondary">Secondary</lbz-button>
     <lbz-button color="secondary" icon="add">Secondary</lbz-button>
-    <br>
-    <lbz-button color="background">Background</lbz-button>
-    <lbz-button color="background" icon="add">Background</lbz-button>
     <br>
     <lbz-button color="surface">Surface</lbz-button>
     <lbz-button color="surface" icon="add">Surface</lbz-button>
@@ -75,13 +72,6 @@
       disabled
       icon="add"
     >Secondary</lbz-button>
-    <br>
-    <lbz-button color="background" disabled>Background</lbz-button>
-    <lbz-button
-      color="background"
-      disabled
-      icon="add"
-    >Background</lbz-button>
     <br>
     <lbz-button color="surface" disabled>Surface</lbz-button>
     <lbz-button
@@ -172,7 +162,7 @@
       icon="add"
     >Non-router-link</lbz-button>
 
-    <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'surface', 'error', 'light', 'dark'</h3>
 
     <lbz-button type="outlined">Primary</lbz-button>
     <lbz-button type="outlined" icon="add">Primary</lbz-button>
@@ -183,13 +173,6 @@
       color="secondary"
       icon="add"
     >Secondary</lbz-button>
-    <br>
-    <lbz-button type="outlined" color="background">Background</lbz-button>
-    <lbz-button
-      type="outlined"
-      color="background"
-      icon="add"
-    >Background</lbz-button>
     <br>
     <lbz-button type="outlined" color="surface">Surface</lbz-button>
     <lbz-button
@@ -261,18 +244,6 @@
       disabled
       icon="add"
     >Secondary</lbz-button>
-    <br>
-    <lbz-button
-      type="outlined"
-      color="background"
-      disabled
-    >Background</lbz-button>
-    <lbz-button
-      type="outlined"
-      color="background"
-      disabled
-      icon="add"
-    >Background</lbz-button>
     <br>
     <lbz-button
       type="outlined"
@@ -383,7 +354,7 @@
       icon="add"
     >Non-router-link</lbz-button>
 
-    <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ color: 'primary' (default), 'secondary', 'surface', 'error', 'light', 'dark'</h3>
 
     <lbz-button type="contained">Primary</lbz-button>
     <lbz-button type="contained" icon="add">Primary</lbz-button>
@@ -394,13 +365,6 @@
       color="secondary"
       icon="add"
     >Secondary</lbz-button>
-    <br>
-    <lbz-button type="contained" color="background">Background</lbz-button>
-    <lbz-button
-      type="contained"
-      color="background"
-      icon="add"
-    >Background</lbz-button>
     <br>
     <lbz-button type="contained" color="surface">Surface</lbz-button>
     <lbz-button
@@ -472,18 +436,6 @@
       disabled
       icon="add"
     >Secondary</lbz-button>
-    <br>
-    <lbz-button
-      type="contained"
-      color="background"
-      disabled
-    >Background</lbz-button>
-    <lbz-button
-      type="contained"
-      color="background"
-      disabled
-      icon="add"
-    >Background</lbz-button>
     <br>
     <lbz-button
       type="contained"

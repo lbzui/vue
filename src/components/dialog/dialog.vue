@@ -96,13 +96,11 @@ export default class LbzDialog extends Vue {
 
   @Watch('cisActive')
   private factiveChanged(val: boolean, oldVal: boolean): void {
-    this.$nextTick().then((): void => {
-      this.$emit(val ? 'open' : 'close');
+    this.$emit(val ? 'open' : 'close');
 
-      if (this.lockBodyScroll) {
-        lbzfLockBodyScroll(val);
-      }
-    });
+    if (this.lockBodyScroll) {
+      lbzfLockBodyScroll(val);
+    }
   }
 
   private mounted(): void {

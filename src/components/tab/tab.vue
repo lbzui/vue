@@ -41,7 +41,7 @@ export default class LbzTab extends Vue {
   @Prop({ type: String, default: '' }) private type!: string;
   // align (type === 'fixed'): 'start', 'center', 'end', 'stretch' (default)
   @Prop({ type: String, default: '' }) private align!: string;
-  // on-background (darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'
+  // on-background (auto-darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
   // stacked: true, false (default)
   @Prop({ type: Boolean, default: false }) private stacked!: boolean;

@@ -9,7 +9,7 @@
   left: 0;
   z-index: 4;
   width: 100%;
-  color: var(--lbz-theme-on-primary);
+  color: var(--lbz-theme-text-high-emphasis-on-primary);
   background-color: var(--lbz-theme-primary);
   transition: width 300ms #lbz-motion.curve[standard], box-shadow 200ms linear, transform 250ms #lbz-motion.curve[deceleration];
 
@@ -54,6 +54,7 @@
 
   & &__end {
     flex: none;
+    color: var(--lbz-theme-text-medium-emphasis-on-primary);
 
     .lbz-button {
       margin-top: 6px;
@@ -120,8 +121,12 @@
 
   // background
   &&--secondary {
-    color: var(--lbz-theme-on-secondary);
+    color: var(--lbz-theme-text-high-emphasis-on-secondary);
     background-color: var(--lbz-theme-secondary);
+
+    .lbz-top-app-bar__end {
+      color: var(--lbz-theme-text-medium-emphasis-on-secondary);
+    }
 
     .lbz-button__state {
       &::before,
@@ -131,20 +136,14 @@
     }
   }
 
-  &&--background {
-    color: var(--lbz-theme-on-background);
-    background-color: var(--lbz-theme-background);
-
-    .lbz-button__state {
-      &::before,
-      &::after {
-        background-color: var(--lbz-theme-on-background);
-      }
-    }
-  }
-
   &&--surface,
   &&--transparent {
+    color: var(--lbz-theme-text-high-emphasis-on-surface);
+
+    .lbz-top-app-bar__end {
+      color: var(--lbz-theme-text-medium-emphasis-on-surface);
+    }
+
     .lbz-button__state {
       &::before,
       &::after {
@@ -154,7 +153,6 @@
   }
 
   &&--surface {
-    color: var(--lbz-theme-on-surface);
     .lbz-surface(0);
 
     // elevated
@@ -164,8 +162,12 @@
   }
 
   &&--light {
-    color: var(--lbz-theme-on-light);
+    color: var(--lbz-theme-text-high-emphasis-on-light);
     .lbz-surface("light"; 0);
+
+    .lbz-top-app-bar__end {
+      color: var(--lbz-theme-text-medium-emphasis-on-light);
+    }
 
     .lbz-button__state {
       &::before,
@@ -182,8 +184,12 @@
 
   &&--dark,
   html[data-lbz-theme="dark"] & {
-    color: var(--lbz-theme-on-dark);
+    color: var(--lbz-theme-text-high-emphasis-on-dark);
     .lbz-surface("dark"; 0);
+
+    .lbz-top-app-bar__end {
+      color: var(--lbz-theme-text-medium-emphasis-on-dark);
+    }
 
     .lbz-button__state {
       &::before,
@@ -199,7 +205,6 @@
   }
 
   &&--transparent {
-    color: var(--lbz-theme-on-surface);
     background-color: transparent !important;
   }
 

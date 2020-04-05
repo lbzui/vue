@@ -64,7 +64,7 @@ export default class LbzBackdrop extends Vue {
   // [required]active.sync: true, false
   @PropSync('active', { type: Boolean, required: true }) private cisActive!: boolean;
 
-  // background (darkened): 'primary' (default), 'secondary', 'surface', 'light', 'dark'
+  // background (auto-darkened): 'primary' (default), 'secondary', 'surface', 'light', 'dark'
   @Prop({ type: String, default: '' }) private background!: string;
   // subtitle: '' (default), 'x'
   @Prop({ type: String, default: '' }) private subtitle!: string;

@@ -30,7 +30,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class LbzEmptyState extends Vue {
-  // on-background (darkened): 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'
+  // on-background (auto-darkened): 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private onBackground!: string;
   // title: '' (default), 'x'
   @Prop({ type: String, default: '' }) private title!: string;

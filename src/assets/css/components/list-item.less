@@ -104,6 +104,7 @@
   .lbz-icon-button {
     display: block;
     margin: -12px;
+    color: var(--lbz-theme-text-medium-emphasis-on-surface);
   }
 
   .lbz-switch {
@@ -115,10 +116,14 @@
   &.lbz-is-activated {
     color: var(--lbz-theme-primary);
 
-    .lbz-list-item__center,
-    .lbz-list-item__subtitle,
-    .lbz-list-item__supporting-text {
-      color: var(--lbz-theme-primary);
+    .lbz-list-item {
+      &__start,
+      &__center,
+      &__end,
+      &__subtitle,
+      &__supporting-text {
+        color: inherit !important;
+      }
     }
   }
 

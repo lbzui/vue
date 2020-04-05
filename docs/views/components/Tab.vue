@@ -48,24 +48,24 @@
         v-for="(item, index) of 3"
         :key="index"
         :value="index"
-      >Item {{ item }}</lbz-tab-item>
+      >Start {{ item }}</lbz-tab-item>
     </lbz-tab>
     <lbz-tab v-model="vtab0" align="center">
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
         :value="index"
-      >Item {{ item }}</lbz-tab-item>
+      >Center {{ item }}</lbz-tab-item>
     </lbz-tab>
     <lbz-tab v-model="vtab0" align="end">
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
         :value="index"
-      >Item {{ item }}</lbz-tab-item>
+      >End {{ item }}</lbz-tab-item>
     </lbz-tab>
 
-    <h3 class="lbz-typography--subtitle1">$ on-background (darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ on-background (auto-darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
 
     <lbz-tab
       v-model="vtab0"
@@ -205,7 +205,7 @@
       >A {{ item }}</lbz-tab-item>
     </lbz-tab>
 
-    <h3 class="lbz-typography--subtitle1">$ on-background (darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ on-background (auto-darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
 
     <lbz-tab
       v-model="vtab1"

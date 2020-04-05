@@ -3,7 +3,7 @@
     <h2 class="lbz-typography--h5"># Backdrop</h2>
 
     <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
-    <h3 class="lbz-typography--subtitle1">$ background (darkened): 'primary' (default), 'secondary', 'surface', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ background (auto-darkened): 'primary' (default), 'secondary', 'surface', 'light', 'dark'</h3>
 
     <div class="lbzui-app">
       <lbz-backdrop ref="backdrop" :active.sync="vactive">

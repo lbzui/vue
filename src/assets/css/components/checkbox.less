@@ -49,7 +49,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    color: var(--lbz-theme-on-secondary);
+    color: var(--lbz-theme-surface);
     stroke: currentColor;
     opacity: 0;
     transition: opacity 180ms #lbz-motion.curve[sharp];
@@ -72,7 +72,7 @@
     border: 1px solid;
     width: 100%;
     height: 0;
-    color: var(--lbz-theme-on-secondary);
+    color: var(--lbz-theme-surface);
     opacity: 0;
     transition: opacity 90ms #lbz-motion.curve[sharp], transform 90ms #lbz-motion.curve[sharp];
     transform: scaleX(0) rotate(0deg);
@@ -117,16 +117,9 @@
   }
 
   // color
-  &&--primary {
-    .lbz-checkbox__checkmark,
-    .lbz-checkbox__mixedmark {
-      color: var(--lbz-theme-on-primary);
-    }
-
-    &.lbz-is-checked .lbz-checkbox__square {
-      color: var(--lbz-theme-primary);
-      background-color: var(--lbz-theme-primary);
-    }
+  &&--primary.lbz-is-checked .lbz-checkbox__square {
+    color: var(--lbz-theme-primary);
+    background-color: var(--lbz-theme-primary);
   }
 
   // on-background

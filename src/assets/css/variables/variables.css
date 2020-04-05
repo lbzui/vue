@@ -34,7 +34,9 @@
   --lbz-theme-light: #fff;
   --lbz-theme-dark: #000;
   --lbz-theme-on-primary: #fff;
+  --lbz-theme-on-primary-variant: #fff;
   --lbz-theme-on-secondary: #000;
+  --lbz-theme-on-secondary-variant: #000;
   --lbz-theme-on-background: #000;
   --lbz-theme-on-surface: #000;
   --lbz-theme-on-error: #fff;
@@ -65,6 +67,6 @@
   --lbz-theme-outline-on-error: rgba(255, 255, 255, 0.12);
   --lbz-theme-outline-on-light: rgba(0, 0, 0, 0.12);
   --lbz-theme-outline-on-dark: rgba(255, 255, 255, 0.12);
-  --lbz-theme-scrim-light: rgba(255, 255, 255, 0.32);
+  --lbz-theme-scrim-light: rgba(255, 255, 255, 0.5);
   --lbz-theme-scrim-dark: rgba(0, 0, 0, 0.32);
 }

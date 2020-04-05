@@ -2,7 +2,7 @@
   <article class="lbzui-components-empty-state">
     <h2 class="lbz-typography--h5"># Empty state</h2>
 
-    <h3 class="lbz-typography--subtitle1">$ on-background (darkened): 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ on-background (auto-darkened): 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'</h3>
     <h3 class="lbz-typography--subtitle1">$ title: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
 

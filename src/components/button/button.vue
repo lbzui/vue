@@ -50,7 +50,7 @@ export default class LbzButton extends Vue {
 
   // type: 'text' (default), 'outlined', 'contained'
   @Prop({ type: String, default: '' }) private type!: string;
-  // color: 'primary' (default), 'secondary', 'background', 'surface', 'error', 'light', 'dark'
+  // color: 'primary' (default), 'secondary', 'surface', 'error', 'light', 'dark'
   @Prop({ type: String, default: '' }) private color!: string;
   // full-width: true, false (default)
   @Prop({ type: Boolean, default: false }) private fullWidth!: boolean;
@@ -99,7 +99,7 @@ export default class LbzButton extends Vue {
   }
 
   get cgetStateAttrs(): LbzStateAttributes {
-    const isOn: boolean = this.type === 'contained' || ['background', 'surface'].includes(this.color);
+    const isOn: boolean = this.type === 'contained' || this.color === 'surface';
 
     return {
       class: 'lbz-button__state',

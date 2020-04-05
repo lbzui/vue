@@ -77,7 +77,7 @@ export default class LbzDrawer extends Vue {
 
   // type: 'standard' (default), 'modal', 'bottom (mobile only)'
   @Prop({ type: String, default: '' }) private type!: string;
-  // background (darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'
+  // background (auto-darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'
   @Prop({ type: String, default: '' }) private background!: string;
   // full-screen (type === 'bottom'): true, false (default)
   @Prop({ type: Boolean, default: false }) private fullScreen!: boolean;
@@ -100,13 +100,11 @@ export default class LbzDrawer extends Vue {
 
   @Watch('cisActive')
   private factiveChanged(val: boolean, oldVal: boolean): void {
-    this.$nextTick().then((): void => {
-      this.$emit(val ? 'open' : 'close');
+    this.$emit(val ? 'open' : 'close');
 
-      if (this.lockBodyScroll) {
-        lbzfLockBodyScroll(this.cisStandard ? (this.visMobile && val) : val);
-      }
-    });
+    if (this.lockBodyScroll) {
+      lbzfLockBodyScroll(this.cisStandard ? (this.visMobile && val) : val);
+    }
   }
 
   private created(): void {

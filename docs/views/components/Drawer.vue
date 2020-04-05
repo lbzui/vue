@@ -124,7 +124,7 @@
       </lbz-drawer>
     </div>
 
-    <h3 class="lbz-typography--subtitle1">$ background (darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ background (auto-darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
 
     <div class="lbzui-app">
       <lbz-drawer
@@ -543,7 +543,7 @@
       </lbz-drawer>
     </div>
 
-    <h3 class="lbz-typography--subtitle1">$ background (darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ background (auto-darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
 
     <div class="lbzui-app">
       <lbz-drawer
@@ -997,7 +997,7 @@
       </lbz-drawer>
     </div>
 
-    <h3 class="lbz-typography--subtitle1">$ background (darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">$ background (auto-darkened): 'primary', 'secondary', 'surface' (default), 'light', 'dark'</h3>
     <h3 class="lbz-typography--subtitle1">$ full-screen (type === 'bottom'): true, false (default)</h3>
 
     <div class="lbzui-app">

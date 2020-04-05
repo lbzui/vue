@@ -260,7 +260,7 @@ export default class App extends Vue {
     });
 
     if (!e) {
-      this.$lbzSnackbar('Dark Mode is turned on.');
+      this.$lbzSnackbar('Dark Mode is enabled on your device.');
     }
   }
 }

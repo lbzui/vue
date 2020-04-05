@@ -58,7 +58,7 @@
       color: var(--lbz-theme-text-medium-emphasis-on-primary);
 
       &.lbz-is-active {
-        color: var(--lbz-theme-on-primary);
+        color: var(--lbz-theme-text-high-emphasis-on-primary);
       }
     }
 
@@ -66,7 +66,7 @@
       color: var(--lbz-theme-text-medium-emphasis-on-secondary);
 
       &.lbz-is-active {
-        color: var(--lbz-theme-on-secondary);
+        color: var(--lbz-theme-text-high-emphasis-on-secondary);
       }
     }
 
@@ -74,34 +74,27 @@
       color: var(--lbz-theme-text-medium-emphasis-on-light);
 
       &.lbz-is-active {
-        color: var(--lbz-theme-on-light);
+        color: var(--lbz-theme-primary);
       }
     }
+  }
 
-    &-dark .lbz-tab-item {
-      color: var(--lbz-theme-text-medium-emphasis-on-dark);
+  &&--on-dark .lbz-tab-item,
+  html[data-lbz-theme="dark"] & .lbz-tab-item {
+    color: var(--lbz-theme-text-medium-emphasis-on-dark);
 
-      &.lbz-is-active {
-        color: var(--lbz-theme-on-dark);
-      }
+    &__state::before,
+    &__state::after {
+      background-color: #lbz-theme.dark[primary];
+    }
+
+    &.lbz-is-active {
+      color: #lbz-theme.dark[primary];
     }
   }
 
   html[data-lbz-theme="dark"] & {
     background-color: transparent;
-
-    .lbz-tab-item {
-      color: var(--lbz-theme-text-medium-emphasis-on-dark);
-
-      &__state::before,
-      &__state::after {
-        background-color: #lbz-theme.dark[primary];
-      }
-
-      &.lbz-is-active {
-        color: #lbz-theme.dark[primary];
-      }
-    }
   }
 
   // stacked
