@@ -1,3 +1,5 @@
+/* tslint:disable:no-console */
+
 import { register } from 'register-service-worker';
 
 if (process.env.NODE_ENV === 'production') {
@@ -19,7 +21,7 @@ if (process.env.NODE_ENV === 'production') {
     },
     updated(registration) {
       console.log('New content is available; please refresh.');
-      registration.waiting.postMessage({
+      (registration as any).waiting.postMessage({
         type: 'SKIP_WAITING',
       });
     },

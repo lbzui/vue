@@ -8,7 +8,7 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=auto">
-    <title>@lbzui/vue</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
     <meta name="renderer" content="webkit">
     <meta name="x5-fullscreen" content="true">
     <meta name="x5-page-mode" content="app">
@@ -18,33 +18,33 @@
     <meta name="nightmode" content="disable">
     <meta name="layoutmode" content="fitscreen">
     <meta name="wap-font-scale" content="no">
-    <meta name="application-name" content="@lbzui/vue">
-    <meta name="description" content="Material Components for Vue.js">
+    <meta name="application-name" content="<%= VUE_APP_SITE_NAME %>">
+    <meta name="description" content="<%= VUE_APP_SITE_DESCRIPTION %>">
     <meta name="author" content="LAN Bizhong,bizhong_lan@163.com">
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="msapplication-tooltip" content="Material Components for Vue.js">
+    <meta name="msapplication-tooltip" content="<%= VUE_APP_SITE_DESCRIPTION %>">
     <meta name="msapplication-starturl" content="<%= VUE_APP_SITE_URL %>?pinned=true">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@lbzui/vue">
+    <meta name="twitter:site" content="<%= VUE_APP_SITE_NAME %>">
     <meta name="twitter:creator" content="@lanbizhong">
-    <meta property="og:title" content="@lbzui/vue">
+    <meta property="og:title" content="<%= VUE_APP_SITE_NAME %>">
     <meta property="og:type" content="website">
     <meta property="og:image" content="<%= VUE_APP_SITE_URL %>img/logo/ogp/1200x628.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="628">
-    <meta property="og:image:alt" content="Material Components for Vue.js">
+    <meta property="og:image:alt" content="<%= VUE_APP_SITE_DESCRIPTION %>">
     <meta property="og:url" content="<%= VUE_APP_SITE_URL %>">
-    <meta property="og:description" content="Material Components for Vue.js">
+    <meta property="og:description" content="<%= VUE_APP_SITE_DESCRIPTION %>">
     <meta property="og:locale" content="en_CN">
-    <meta property="og:site_name" content="@lbzui/vue">
-    <meta itemprop="name" content="@lbzui/vue">
-    <meta itemprop="description" content="Material Components for Vue.js">
+    <meta property="og:site_name" content="<%= VUE_APP_SITE_NAME %>">
+    <meta itemprop="name" content="<%= VUE_APP_SITE_NAME %>">
+    <meta itemprop="description" content="<%= VUE_APP_SITE_DESCRIPTION %>">
     <meta itemprop="image" content="<%= VUE_APP_SITE_URL %>img/logo/ogp/1200x628.png">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons&display=block">
@@ -68,7 +68,7 @@
   </head>
   <body class="lbz-typography" ontouchstart>
     <noscript>
-      <strong>We're sorry but @lbzui/vue doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="lbzui"></div>
     <!-- built files will be auto injected -->

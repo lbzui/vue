@@ -71,7 +71,7 @@ yarn global add @vue/cli
 vue add lbzui-vue-demo
 ```
 
-#### Step 2: Install @lbzui/vue through npm or yarn
+#### Step 2: Install @lbzui/vue in your project
 
 ```bash
 # with npm

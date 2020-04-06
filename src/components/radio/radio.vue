@@ -8,7 +8,7 @@
       cisChecked && 'lbz-is-checked',
       disabled && 'lbz-is-disabled'
     ]"
-    @click.stop="!disabled && fclick($event)"
+    @click.stop="!disabled && $emit('change', value, $event)"
   >
     <button class="lbz-radio__container">
       <input
@@ -32,7 +32,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Model, Prop, Emit, Vue } from 'vue-property-decorator';
+import { Component, Model, Prop, Vue } from 'vue-property-decorator';
 import { lbzfRandomId } from '../../utils/funcs';
 import LbzState from '../state/state.vue';
 
@@ -74,11 +74,6 @@ export default class LbzRadio extends Vue {
       unbounded: true,
       centered: true,
     };
-  }
-
-  @Emit('change')
-  private fclick(e: MouseEvent) {
-    return this.value;
   }
 }
 </script>

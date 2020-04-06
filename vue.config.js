@@ -1,5 +1,7 @@
 const path = require('path')
 
+process.env.VUE_APP_SITE_NAME = '@lbzui/vue'
+process.env.VUE_APP_SITE_DESCRIPTION = 'Material Components for Vue.js'
 process.env.VUE_APP_SITE_URL = process.env.NODE_ENV === 'production'
   ? 'https://lbzui-vue.lanbizhong.com/'
   : '/'
@@ -28,7 +30,7 @@ module.exports = {
     manifestOptions: {
       lang: 'en',
       dir: 'ltr',
-      description: 'Material Components for Vue.js',
+      description: process.env.VUE_APP_SITE_DESCRIPTION,
       icons: [
         {
           src: './img/logo/pwa/192x192.png',

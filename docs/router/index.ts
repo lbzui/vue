@@ -1,11 +1,11 @@
 import Vue from 'vue';
-import VueRouter from 'vue-router';
+import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '../views/Home.vue';
 import NotFound from '../views/404.vue';
 
 Vue.use(VueRouter);
 
-const routes = [
+const routes: RouteConfig[] = [
   // Home
   {
     path: '/',
