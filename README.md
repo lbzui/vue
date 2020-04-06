@@ -14,8 +14,9 @@ If you have any questions, ideas or you want to discuss with it, [create an issu
 ## Features
 
 - Follow the principles of [Material Design](https://material.io/)
-- Support [light](https://material.io/design/color/the-color-system.html) and [dark](https://material.io/design/color/dark-theme.html) theme
-- Customize [layout grid](https://material.io/design/layout/responsive-layout-grid.html), [shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), [theme](https://material.io/resources/color/), and more
+- Support [Light](https://material.io/design/color/the-color-system.html) and [Dark](https://material.io/design/color/dark-theme.html) theme, and easily adapt darkened UIs to dark theme
+- Customize [Layout grid](https://material.io/design/layout/responsive-layout-grid.html), [Shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), [Theme](https://material.io/resources/color/), and more
+- Enable `<router-link>` and custom tag of components
 - Fit responsive web design (desktop first)
 - Use [Vue](https://vuejs.org/) (2.6.0+), [TypeScript](http://www.typescriptlang.org/), [Less](http://lesscss.org/) (3.5.0+), [PostCSS](https://postcss.org/), etc
 
@@ -150,9 +151,9 @@ Vue.prototype.$lbzSnackbar = Snackbar;
 
 #### Step 4: Build a Material theme
 
-> NOTE: If you just want to use the compiled CSS, you can skip to [Step 5](#step-5-use-lbz-button-component).
+> NOTE: If you just want to use the compiled CSS, you can skip to [Step 5](#step-5-use-components-like-button).
 
-Create your own Material theme by customizing values for [layout grid](https://material.io/design/layout/responsive-layout-grid.html), [shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), [theme](https://material.io/resources/color/), and more.
+Create your own Material theme by customizing values for [Layout grid](https://material.io/design/layout/responsive-layout-grid.html), [Shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), [Theme](https://material.io/resources/color/), and more.
 
 Install devDependencies through npm or yarn:
 
@@ -353,9 +354,9 @@ const router = new VueRouter({
 });
 ```
 
-### Are there any extra featured CSS Classes?
+### Are there any extra featured CSS classes?
 
-| Component | CSS Class | Description |
+| Component | CSS class | Description |
 | --- | --- | --- |
 | State | `.lbz-state-no-before--child` | `:hover`, `:focus`, and `:active` will not work in any direct children of elements, mainly applied in Card, List, and List item. |
 | State | `.lbz-state-no-before--descendant` | `:hover`, `:focus`, and `:active` will not work in any descendant of elements, mainly applied in Card, List, and List item. |
