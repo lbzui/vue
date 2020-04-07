@@ -51,7 +51,7 @@ html {
   &-app,
   &-rectangle {
     display: inline-block;
-    margin: @lbzuiMargin;
+    margin: @lbzuiMargin !important;
     width: 100%;
     max-width: @lbzuiAppWidth;
     vertical-align: top;
@@ -233,7 +233,21 @@ html {
     }
   }
 
-  // Home
+  // Home, Customization
+  &-home,
+  &-customization {
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .lbz-icon {
+      width: 16px;
+      height: 16px;
+      font-size: 16px;
+      color: var(--lbz-theme-outline-on-surface);
+    }
+  }
+
   &-home {
     h2 span {
       display: block;
@@ -248,17 +262,6 @@ html {
       img {
         display: block;
       }
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .lbz-icon {
-      width: 16px;
-      height: 16px;
-      font-size: 16px;
-      color: var(--lbz-theme-outline-on-surface);
     }
 
     strong {
@@ -298,7 +301,7 @@ html {
 
       .lbz-drawer {
         position: relative !important;
-        z-index: 0;
+        z-index: 4 !important;
       }
     }
 
@@ -314,10 +317,6 @@ html {
       html[data-lbz-theme="dark"] & .lbzui-is-darkened {
         color: var(--lbz-theme-on-dark);
       }
-    }
-
-    &-list .lbz-list {
-      margin: @lbzuiMargin;
     }
 
     &-snackbar .lbz-button {
@@ -393,11 +392,11 @@ html {
       }
 
       .lbzui-layout-grid__cell {
-        height: @lbzuiSquareWidth * 3 / 4;
+        height: @lbzuiSquareWidth / ( 4 / 3);
       }
 
       + .lbz-layout-grid {
-        margin-top: @lbzuiMarginTop;
+        margin-top: @lbzuiMarginTop !important;
       }
     }
 

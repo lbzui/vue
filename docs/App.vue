@@ -22,6 +22,7 @@
           nav
         >
           <lbz-list-item to="/">Home</lbz-list-item>
+          <lbz-list-item to="/customization">Customization</lbz-list-item>
           <lbz-divider/>
           <span class="lbz-list__subtitle">Components</span>
           <lbz-list-item
@@ -259,7 +260,7 @@ export default class App extends Vue {
       dark: '#000',
     });
 
-    if (!e) {
+    if (val && !e) {
       this.$lbzSnackbar('Dark Mode is enabled on your device.');
     }
   }

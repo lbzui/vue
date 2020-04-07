@@ -13,6 +13,13 @@ const routes: RouteConfig[] = [
     component: Home,
   },
 
+  // Customization
+  {
+    path: '/customization',
+    name: 'customization',
+    component: () => import(/* webpackChunkName: "customization" */ '../views/Customization.vue'),
+  },
+
   // Components
   {
     path: '/components/backdrop',
