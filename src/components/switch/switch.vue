@@ -8,10 +8,11 @@
       cisChecked && 'lbz-is-checked',
       disabled && 'lbz-is-disabled'
     ]"
+    @click.stop="!disabled && fclick($event)"
   >
     <button class="lbz-switch__container">
       <div class="lbz-switch__track"></div>
-      <div class="lbz-switch__thumb-underlay" @click.stop="!disabled && fclick($event)">
+      <div class="lbz-switch__thumb-underlay">
         <input
           v-bind="{
             id: `${id}`,

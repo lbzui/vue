@@ -1,6 +1,6 @@
 <template>
   <article class="lbzui-components-state">
-    <h2 class="lbz-typography--h5"># State (non-IE)</h2>
+    <h2 class="lbz-typography--h5"># State (ripple: non-IE)</h2>
 
     <h3 class="lbz-typography--subtitle1">$ type: 'surface' (default), 'primary', 'image'</h3>
 

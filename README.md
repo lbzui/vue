@@ -340,35 +340,9 @@ All examples? Please view [code examples](/tree/master/docs/views) for details.
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons&display=block">
 ```
 
-## FAQ
-
-### Why doesn’t `<router-link>` active class work?
-
-Globally configure `<router-link>` default active class for exact matches:
-
-```ts
-// router/index.ts(.js)
-const router = new VueRouter({
-  linkExactActiveClass: 'lbz-is-activated',
-  // ...
-});
-```
-
-### Are there any extra featured CSS classes?
-
-| Component | CSS class | Description |
-| --- | --- | --- |
-| State | `.lbz-state-no-before--child` | `:hover`, `:focus`, and `:active` will not work in any direct children of elements, mainly applied in Card, List, and List item. |
-| State | `.lbz-state-no-before--descendant` | `:hover`, `:focus`, and `:active` will not work in any descendant of elements, mainly applied in Card, List, and List item. |
-| Top app bar | `.lbz-top-app-bar--fixed-adjust` | Style the content below the standard / short top app bar (fixed) to prevent the top app bar from covering it. |
-| Top app bar | `.lbz-top-app-bar--dense-fixed-adjust` | Style the content below the standard / short top app bar (fixed, dense) to prevent the top app bar from covering it. |
-| Top app bar | `.lbz-top-app-bar--extended-fixed-adjust` | Style the content below the extended top app bar (fixed) to prevent the top app bar from covering it. |
-| Top app bar | `.lbz-top-app-bar--dense-extended-fixed-adjust` | Style the content below the extended top app bar (fixed, dense) to prevent the top app bar from covering it. |
-| Top app bar | `.lbz-icon-button.lbz-is-most-used` | When transforming into short top app bar, place the most-used action. |
-
 ## Browser support
 
-@lbzui/vue supports all [modern browsers](https://browserl.ist/?q=%3E%3D+1%25) and IE 10+ (**Layout grid** works unfriendly, and **Dark theme** does not supported).
+@lbzui/vue supports all [modern browsers](https://browserl.ist/?q=%3E%3D+1%25) (IE: **Layout grid** works unfriendly, and **Dark theme** does not supported).
 
 May work in other browsers but it's untested.
 
