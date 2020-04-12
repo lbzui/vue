@@ -59,6 +59,7 @@
             <template #end>
               <lbz-switch
                 v-model="visDark"
+                id="visDark"
                 color="primary"
                 :disabled="!vsupportsCssVars"
                 @change="fsetTheme"

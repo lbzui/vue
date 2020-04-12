@@ -26,8 +26,8 @@
         }"
       >
       <div class="lbz-checkbox__square">
-        <svg class="lbz-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+        <svg class="lbz-checkbox__checkmark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M1.73,12.91 8.1,19.28 22.79,4.59" fill="none"/>
         </svg>
         <span class="lbz-checkbox__mixedmark"></span>
       </div>
