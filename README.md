@@ -337,7 +337,7 @@ All examples? Please view [code examples](/tree/master/docs/views) for details.
 #### Step 6: Optionally import [Roboto font](https://fonts.google.com/specimen/Roboto) and [Material Icons](https://material.io/resources/icons/) from Google CDN
 
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons&display=block">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap|Material+Icons&display=block">
 ```
 
 ## Browser support
