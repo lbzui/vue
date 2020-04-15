@@ -1,4 +1,5 @@
-workbox.core.setCacheNameDetails({ prefix: '@lbzui/vue' });
+// Offline Google Analytics
+workbox.googleAnalytics.initialize();
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
@@ -33,6 +34,3 @@ workbox.routing.registerRoute(
     ],
   }),
 );
-
-// Offline Google Analytics
-workbox.googleAnalytics.initialize();
