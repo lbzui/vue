@@ -16,9 +16,10 @@ If you have any questions, ideas or you want to discuss with it, [create an issu
 - Follow the principles of [Material Design](https://material.io/)
 - Support [Light](https://material.io/design/color/the-color-system.html) and [Dark](https://material.io/design/color/dark-theme.html) theme, and easily adapt darkened UIs to dark theme
 - Customize [Layout grid](https://material.io/design/layout/responsive-layout-grid.html), [Shape](https://material.io/design/shape/about-shape.html#shape-customization-tool), [Theme](https://material.io/resources/color/), and more
-- Enable `<router-link>` and custom tag of components
-- Fit responsive web design (desktop first)
-- Use [Vue](https://vuejs.org/) (2.6.0+), [TypeScript](http://www.typescriptlang.org/), [Less](http://lesscss.org/) (3.5.0+), [PostCSS](https://postcss.org/), etc
+- Fit Responsive Web Design (desktop first)
+- Use [Vue.js](https://vuejs.org/) (2.6.0+), [TypeScript](http://www.typescriptlang.org/), [Less.js](http://lesscss.org/) (3.5.0+), [PostCSS](https://postcss.org/), etc
+- Compatible with [SSR](https://ssr.vuejs.org/) (Server-Side Rendering)
+- Enable [`<router-link>`](https://router.vuejs.org/api/#router-link-props) and custom tag of Components
 
 ## Quick start
 

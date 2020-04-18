@@ -6,6 +6,10 @@ interface LbzThemeColor {
 }
 
 export function lbzfCancelContextmenu(): void {
+  if (Vue.prototype.$isServer) { // SSR
+    return;
+  }
+
   document.addEventListener('contextmenu', (e: MouseEvent): void => {
     if (['INPUT', 'TEXTAREA'].indexOf((e as any).target.tagName.toUpperCase()) < 0) {
       e.preventDefault();
@@ -14,10 +18,18 @@ export function lbzfCancelContextmenu(): void {
 }
 
 export function lbzfChangeModeHandler(handler: () => void): void {
+  if (Vue.prototype.$isServer) { // SSR
+    return;
+  }
+
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handler);
 }
 
 export function lbzfIsDarkModeEnabled(): boolean {
+  if (Vue.prototype.$isServer) { // SSR
+    return false;
+  }
+
   return window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
 
@@ -32,6 +44,10 @@ export function lbzfIsMobileBreakpoint(): boolean {
 }
 
 export function lbzfLockBodyScroll(val: boolean): void {
+  if (Vue.prototype.$isServer) { // SSR
+    return;
+  }
+
   document.body.classList[val ? 'add' : 'remove']('lbz-is-locked');
 }
 
@@ -40,6 +56,10 @@ export function lbzfRandomId(): string {
 }
 
 export function lbzfSetModeAttributes(isDark: boolean, themeColor: LbzThemeColor): void {
+  if (Vue.prototype.$isServer) { // SSR
+    return;
+  }
+
   document.documentElement.setAttribute('data-lbz-theme', isDark ? 'dark' : 'light');
 
   if (document.querySelector('meta[name=theme-color]')) {
@@ -54,6 +74,10 @@ export function lbzfSetModeAttributes(isDark: boolean, themeColor: LbzThemeColor
 }
 
 export function lbzfSupportsCssVariables(): boolean {
+  if (Vue.prototype.$isServer) { // SSR
+    return false;
+  }
+
   const { CSS }: any = window;
 
   if (!(CSS && typeof CSS.supports === 'function')) {
@@ -66,5 +90,9 @@ export function lbzfSupportsCssVariables(): boolean {
 }
 
 export function lbzfSupportsTouch(): boolean {
+  if (Vue.prototype.$isServer) { // SSR
+    return false;
+  }
+
   return 'ontouchstart' in window || navigator.msMaxTouchPoints > 0;
 }

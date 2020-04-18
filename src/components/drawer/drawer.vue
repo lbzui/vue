@@ -112,7 +112,7 @@ export default class LbzDrawer extends Vue {
     }
   }
 
-  private created(): void {
+  private mounted(): void {
     if (this.cisStandard) {
       this.fresize();
       window.addEventListener('resize', this.fresize);
