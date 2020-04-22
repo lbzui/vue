@@ -70,10 +70,8 @@
     "less",
     "postcss",
     "material-components",
-    "material-components-vue",
     "material-design",
-    "lbzui",
-    "lbzui-vue"
+    "lbzui"
   ],
   "license": "MIT",
   "repository": {

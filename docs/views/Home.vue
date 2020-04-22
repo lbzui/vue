@@ -36,9 +36,9 @@
     <p class="lbz-typography--body1">- Compatible with <a href="https://ssr.vuejs.org/" target="_blank">SSR</a><lbz-icon>open_in_new</lbz-icon> (Server-Side Rendering)</p>
     <p class="lbz-typography--body1">- Enable <a href="https://router.vuejs.org/api/#router-link-props" target="_blank">&lt;router-link&gt;</a><lbz-icon>open_in_new</lbz-icon> and custom tag of Components</p>
 
-    <h3 class="lbz-typography--h5"># Quick start</h3>
+    <h3 class="lbz-typography--h5"># Usage</h3>
 
-    <p class="lbz-typography--body1">Read GitHub <a href="https://github.com/lbzui/vue#quick-start" target="_blank">README.md</a><lbz-icon>open_in_new</lbz-icon> for more information.</p>
+    <p class="lbz-typography--body1">Read GitHub <a href="https://github.com/lbzui/vue#usage" target="_blank">README.md</a><lbz-icon>open_in_new</lbz-icon> for more information.</p>
 
     <h3 class="lbz-typography--h5"># Browser support</h3>
 
