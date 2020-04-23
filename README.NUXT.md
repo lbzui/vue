@@ -37,7 +37,8 @@ Vue.use(LBZUI, {
 
 Or use individual components (recommended):
 
-```ts
+```js
+// plugins/lbzui.js
 import Vue from 'vue'
 import {
   Backdrop,
@@ -90,7 +91,7 @@ Vue.use(TopAppBar)
 Vue.prototype.$lbzSnackbar = Snackbar
 ```
 
-Add CSS resource and components in `nuxt.config.js`:
+Add it and CSS resource in `nuxt.config.js`:
 
 ```js
 export default {
@@ -99,8 +100,12 @@ export default {
   plugins: ['~/plugins/lbzui.js'],
 
   router: {
-    // Globally configure `<router-link>` default active class for exact matches
+    // globally configure `<router-link>` default active class for exact matches
     linkExactActiveClass: 'lbz-is-activated'
+  },
+
+  build: {
+    transpile: ['@lbzui/vue']
   }
 }
 ```
@@ -119,81 +124,52 @@ Install devDependencies:
 npm i less less-loader -D
 npm i @nuxtjs/style-resources -D
 
-## CSS resets
-npm i normalize.css -D
-
 ## convert pixel units to rem units (optional)
 npm i postcss-pxtorem -D
 
 # or yarn
-yarn add less less-loader @nuxtjs/style-resources normalize.css postcss-pxtorem --dev
+yarn add less less-loader @nuxtjs/style-resources postcss-pxtorem --dev
 ```
 
 Import CSS source code in `assets/css/lbzui/index.less`:
 
 ```less
-@import "normalize.css";
+@import 'normalize.css';
 
-/*! ~@lbzui/vue v0.5.2 | MIT License | https://github.com/lbzui/vue */
-body {
-  background-color: var(--lbz-theme-background);
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  -webkit-tap-highlight-color: transparent;
+// all:
+// @import '~@lbzui/vue/src/assets/css/index.less';
 
-  // lock-body-scroll
-  &.lbz-is-locked {
-    overflow: hidden;
-  }
-}
+// or individual (recommended):
+@import '~@lbzui/vue/src/assets/css/base.less';
 
-a {
-  text-decoration: none;
-  color: var(--lbz-theme-primary);
-  outline: none;
-}
+@import '~@lbzui/vue/src/assets/css/utilities/aspect-ratio.less';
+@import '~@lbzui/vue/src/assets/css/utilities/clearfix.less';
+@import '~@lbzui/vue/src/assets/css/utilities/elevation.less';
+@import '~@lbzui/vue/src/assets/css/utilities/layout-grid.less';
+@import '~@lbzui/vue/src/assets/css/utilities/surface.less';
+@import '~@lbzui/vue/src/assets/css/utilities/truncate.less';
+@import '~@lbzui/vue/src/assets/css/utilities/typography.less';
 
-::selection {
-  color: var(--lbz-theme-text-high-emphasis-on-secondary);
-  background-color: var(--lbz-theme-secondary);
-}
-
-// Variables
-@import "~@lbzui/vue/src/assets/css/variables/layout-grid.less";
-@import "~@lbzui/vue/src/assets/css/variables/shape.less";
-@import "~@lbzui/vue/src/assets/css/variables/surface.less";
-@import "~@lbzui/vue/src/assets/css/variables/theme.less";
-
-// Utilities
-@import "~@lbzui/vue/src/assets/css/utilities/aspect-ratio.less";
-@import "~@lbzui/vue/src/assets/css/utilities/clearfix.less";
-@import "~@lbzui/vue/src/assets/css/utilities/elevation.less";
-@import "~@lbzui/vue/src/assets/css/utilities/layout-grid.less";
-@import "~@lbzui/vue/src/assets/css/utilities/surface.less";
-@import "~@lbzui/vue/src/assets/css/utilities/truncate.less";
-@import "~@lbzui/vue/src/assets/css/utilities/typography.less";
-
-// Components
-@import "~@lbzui/vue/src/assets/css/components/backdrop.less";
-@import "~@lbzui/vue/src/assets/css/components/button.less";
-@import "~@lbzui/vue/src/assets/css/components/card.less";
-@import "~@lbzui/vue/src/assets/css/components/checkbox.less";
-@import "~@lbzui/vue/src/assets/css/components/dialog.less";
-@import "~@lbzui/vue/src/assets/css/components/divider.less";
-@import "~@lbzui/vue/src/assets/css/components/drawer.less";
-@import "~@lbzui/vue/src/assets/css/components/empty-state.less";
-@import "~@lbzui/vue/src/assets/css/components/fab.less";
-@import "~@lbzui/vue/src/assets/css/components/icon.less";
-@import "~@lbzui/vue/src/assets/css/components/icon-button.less";
-@import "~@lbzui/vue/src/assets/css/components/list.less";
-@import "~@lbzui/vue/src/assets/css/components/list-item.less";
-@import "~@lbzui/vue/src/assets/css/components/radio.less";
-@import "~@lbzui/vue/src/assets/css/components/snackbar.less";
-@import "~@lbzui/vue/src/assets/css/components/state.less";
-@import "~@lbzui/vue/src/assets/css/components/switch.less";
-@import "~@lbzui/vue/src/assets/css/components/tab.less";
-@import "~@lbzui/vue/src/assets/css/components/tab-item.less";
-@import "~@lbzui/vue/src/assets/css/components/top-app-bar.less";
+@import '~@lbzui/vue/src/assets/css/components/backdrop.less';
+@import '~@lbzui/vue/src/assets/css/components/button.less';
+@import '~@lbzui/vue/src/assets/css/components/card.less';
+@import '~@lbzui/vue/src/assets/css/components/checkbox.less';
+@import '~@lbzui/vue/src/assets/css/components/dialog.less';
+@import '~@lbzui/vue/src/assets/css/components/divider.less';
+@import '~@lbzui/vue/src/assets/css/components/drawer.less';
+@import '~@lbzui/vue/src/assets/css/components/empty-state.less';
+@import '~@lbzui/vue/src/assets/css/components/fab.less';
+@import '~@lbzui/vue/src/assets/css/components/icon.less';
+@import '~@lbzui/vue/src/assets/css/components/icon-button.less';
+@import '~@lbzui/vue/src/assets/css/components/list.less';
+@import '~@lbzui/vue/src/assets/css/components/list-item.less';
+@import '~@lbzui/vue/src/assets/css/components/radio.less';
+@import '~@lbzui/vue/src/assets/css/components/snackbar.less';
+@import '~@lbzui/vue/src/assets/css/components/state.less';
+@import '~@lbzui/vue/src/assets/css/components/switch.less';
+@import '~@lbzui/vue/src/assets/css/components/tab.less';
+@import '~@lbzui/vue/src/assets/css/components/tab-item.less';
+@import '~@lbzui/vue/src/assets/css/components/top-app-bar.less';
 ```
 
 Add some configurations in `nuxt.config.js`:
@@ -202,8 +178,8 @@ Add some configurations in `nuxt.config.js`:
 export default {
   css: ['~assets/css/lbzui/index.less'],
 
+  // https://github.com/nuxt-community/style-resources-module
   buildModules: ['@nuxtjs/style-resources'],
-
   styleResources: {
     less: [
       // variables
@@ -211,14 +187,14 @@ export default {
 
       './node_modules/@lbzui/vue/src/assets/css/variables/_elevation.less',
       // './node_modules/@lbzui/vue/src/assets/css/variables/_layout-grid.less',
-      './assets/css/lbzui/_layout-grid.less',
+      './assets/css/lbzui/_layout-grid.less', // your custom layout grid
       './node_modules/@lbzui/vue/src/assets/css/variables/_motion.less',
       // './node_modules/@lbzui/vue/src/assets/css/variables/_shape.less',
-      './assets/css/lbzui/_shape.less',
+      './assets/css/lbzui/_shape.less', // your custom shape
       './node_modules/@lbzui/vue/src/assets/css/variables/_state.less',
       './node_modules/@lbzui/vue/src/assets/css/variables/_surface.less',
       // './node_modules/@lbzui/vue/src/assets/css/variables/_theme.less',
-      './assets/css/lbzui/_theme.less',
+      './assets/css/lbzui/_theme.less', // your custom theme
 
       // mixins
       './node_modules/@lbzui/vue/src/assets/css/utilities/_*.less'
@@ -226,24 +202,26 @@ export default {
   },
 
   build: {
-    transpile: ['@lbzui/vue'],
     postcss: {
-      // Add plugin names as key and arguments as value
-      // Install them before as dependencies with npm or yarn
       plugins: {
+        // https://github.com/cuth/postcss-pxtorem#options
         'postcss-pxtorem': {
           unitPrecision: 8,
           propList: ['font', 'font-size', 'line-height']
         }
       },
       preset: {
-        // Change the postcss-preset-env settings
+        // change the postcss-preset-env settings
+        // https://github.com/csstools/postcss-preset-env#options
         stage: 3,
         autoprefixer: {
           flexbox: 'no-2009',
           grid: 'no-autoplace'
         },
-        importFrom: ['./assets/css/lbzui/variables.css']
+        importFrom: [
+          // './node_modules/@lbzui/vue/src/assets/css/variables/variables.css'
+          './assets/css/lbzui/variables.css' // your custom CSS Variables
+        ]
       }
     }
   }
@@ -261,6 +239,7 @@ export default {
 import Vue from 'vue'
 
 export default Vue.extend({
+  name: 'HelloWorld',
   methods: {
     fclick(e: MouseEvent): void {
       alert('Hello @lbzui/vue!')

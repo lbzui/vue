@@ -1,5 +1,6 @@
 import Vue, { PluginFunction } from 'vue';
 import VueScroll from 'vue-scroll';
+import 'normalize.css';
 import '../assets/css/index.less';
 import Backdrop from './backdrop';
 import Button from './button';

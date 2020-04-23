@@ -30,7 +30,7 @@ If you have any questions, ideas or you want to discuss with it, [create an issu
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>hello-world</title>
+    <title>Hello world</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons&display=block">
     <link rel="stylesheet" href="https://unpkg.com/@lbzui/vue/lib/lbzui.css">
@@ -86,7 +86,7 @@ Use components like Button:
 
 <script>
 export default {
-  name: 'hello-world',
+  name: 'HelloWorld',
   methods: {
     fclick(e) { alert('Hello @lbzui/vue!') }
   }

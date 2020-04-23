@@ -9,12 +9,11 @@ npm i @vue/cli -g
 # or yarn
 yarn global add @vue/cli
 
-# create a new project (customize? please pick `Less` pre-processor!)
 # in Windows, run `winpty vue.cmd create <project-name>`
 vue add <project-name>
 ```
 
-...
+> NOTE: Build a Material theme? Please pick `Less` CSS pre-processor!
 
 ## Step 2: Install @lbzui/vue in your project
 
@@ -30,19 +29,20 @@ yarn add @lbzui/vue
 
 ```ts
 // src/main.ts
-import '@lbzui/vue/lib/lbzui.css';
-import LBZUI from '@lbzui/vue';
+import '@lbzui/vue/lib/lbzui.css'
+import LBZUI from '@lbzui/vue'
 
 Vue.use(LBZUI, {
   dense: false,
-  ripple: true,
-});
+  ripple: true
+})
 ```
 
 Or use individual components (recommended):
 
 ```ts
-import '@lbzui/vue/lib/lbzui.css';
+// src/main.ts
+import '@lbzui/vue/lib/lbzui.css'
 import {
   Backdrop,
   Button,
@@ -63,44 +63,44 @@ import {
   Switch,
   Tab,
   TabItem,
-  TopAppBar,
-} from '@lbzui/vue';
+  TopAppBar
+} from '@lbzui/vue'
 
 Vue.prototype.$lbzui = {
   dense: false,
-  ripple: true,
-};
+  ripple: true
+}
 
-Vue.use(Backdrop);
-Vue.use(Button);
-Vue.use(Card);
-Vue.use(Checkbox);
-Vue.use(Dialog);
-Vue.use(Divider);
-Vue.use(Drawer);
-Vue.use(EmptyState);
-Vue.use(FAB);
-Vue.use(Icon);
-Vue.use(IconButton);
-Vue.use(List);
-Vue.use(ListItem);
-Vue.use(Radio);
-Vue.use(State);
-Vue.use(Switch);
-Vue.use(Tab);
-Vue.use(TabItem);
-Vue.use(TopAppBar);
+Vue.use(Backdrop)
+Vue.use(Button)
+Vue.use(Card)
+Vue.use(Checkbox)
+Vue.use(Dialog)
+Vue.use(Divider)
+Vue.use(Drawer)
+Vue.use(EmptyState)
+Vue.use(FAB)
+Vue.use(Icon)
+Vue.use(IconButton)
+Vue.use(List)
+Vue.use(ListItem)
+Vue.use(Radio)
+Vue.use(State)
+Vue.use(Switch)
+Vue.use(Tab)
+Vue.use(TabItem)
+Vue.use(TopAppBar)
 
-Vue.prototype.$lbzSnackbar = Snackbar;
+Vue.prototype.$lbzSnackbar = Snackbar
 ```
 
 Globally configure `<router-link>` default active class for exact matches:
 
 ```ts
-// router/index.ts
+// src/router/index.ts
 const router = new VueRouter({
-  linkExactActiveClass: 'lbz-is-activated',
-});
+  linkExactActiveClass: 'lbz-is-activated'
+})
 ```
 
 ## Step 4: Build a Material theme
@@ -116,9 +116,6 @@ Install devDependencies:
 ## upgrade Less to 3.5.0+
 npm i less@latest -D
 
-## CSS resets
-npm i normalize.css -D
-
 ## convert modern CSS
 npm i postcss-preset-env -D
 
@@ -126,49 +123,57 @@ npm i postcss-preset-env -D
 npm i postcss-pxtorem -D
 
 # or yarn
-yarn add less normalize.css postcss-preset-env postcss-pxtorem --dev
+yarn add less postcss-preset-env postcss-pxtorem --dev
 
 # in Windows, run `winpty vue.cmd add style-resources-loader`
 vue add style-resources-loader
 ```
 
-Import CSS source code in `src/main.ts`:
+Import CSS source code in `src/assets/css/lbzui/index.less`:
 
-```ts
+```less
+@import '~normalize.css';
+
 // all:
-// import '@lbzui/vue/src/assets/css/index.less';
+// @import '~@lbzui/vue/src/assets/css/index.less';
 
 // or individual (recommended):
-import '@lbzui/vue/src/assets/css/base.less';
+@import '~@lbzui/vue/src/assets/css/base.less';
 
-import '@lbzui/vue/src/assets/css/utilities/aspect-ratio.less';
-import '@lbzui/vue/src/assets/css/utilities/clearfix.less';
-import '@lbzui/vue/src/assets/css/utilities/elevation.less';
-import '@lbzui/vue/src/assets/css/utilities/layout-grid.less';
-import '@lbzui/vue/src/assets/css/utilities/surface.less';
-import '@lbzui/vue/src/assets/css/utilities/truncate.less';
-import '@lbzui/vue/src/assets/css/utilities/typography.less';
+@import '~@lbzui/vue/src/assets/css/utilities/aspect-ratio.less';
+@import '~@lbzui/vue/src/assets/css/utilities/clearfix.less';
+@import '~@lbzui/vue/src/assets/css/utilities/elevation.less';
+@import '~@lbzui/vue/src/assets/css/utilities/layout-grid.less';
+@import '~@lbzui/vue/src/assets/css/utilities/surface.less';
+@import '~@lbzui/vue/src/assets/css/utilities/truncate.less';
+@import '~@lbzui/vue/src/assets/css/utilities/typography.less';
 
-import '@lbzui/vue/src/assets/css/components/backdrop.less';
-import '@lbzui/vue/src/assets/css/components/button.less';
-import '@lbzui/vue/src/assets/css/components/card.less';
-import '@lbzui/vue/src/assets/css/components/checkbox.less';
-import '@lbzui/vue/src/assets/css/components/dialog.less';
-import '@lbzui/vue/src/assets/css/components/divider.less';
-import '@lbzui/vue/src/assets/css/components/drawer.less';
-import '@lbzui/vue/src/assets/css/components/empty-state.less';
-import '@lbzui/vue/src/assets/css/components/fab.less';
-import '@lbzui/vue/src/assets/css/components/icon.less';
-import '@lbzui/vue/src/assets/css/components/icon-button.less';
-import '@lbzui/vue/src/assets/css/components/list.less';
-import '@lbzui/vue/src/assets/css/components/list-item.less';
-import '@lbzui/vue/src/assets/css/components/radio.less';
-import '@lbzui/vue/src/assets/css/components/snackbar.less';
-import '@lbzui/vue/src/assets/css/components/state.less';
-import '@lbzui/vue/src/assets/css/components/switch.less';
-import '@lbzui/vue/src/assets/css/components/tab.less';
-import '@lbzui/vue/src/assets/css/components/tab-item.less';
-import '@lbzui/vue/src/assets/css/components/top-app-bar.less';
+@import '~@lbzui/vue/src/assets/css/components/backdrop.less';
+@import '~@lbzui/vue/src/assets/css/components/button.less';
+@import '~@lbzui/vue/src/assets/css/components/card.less';
+@import '~@lbzui/vue/src/assets/css/components/checkbox.less';
+@import '~@lbzui/vue/src/assets/css/components/dialog.less';
+@import '~@lbzui/vue/src/assets/css/components/divider.less';
+@import '~@lbzui/vue/src/assets/css/components/drawer.less';
+@import '~@lbzui/vue/src/assets/css/components/empty-state.less';
+@import '~@lbzui/vue/src/assets/css/components/fab.less';
+@import '~@lbzui/vue/src/assets/css/components/icon.less';
+@import '~@lbzui/vue/src/assets/css/components/icon-button.less';
+@import '~@lbzui/vue/src/assets/css/components/list.less';
+@import '~@lbzui/vue/src/assets/css/components/list-item.less';
+@import '~@lbzui/vue/src/assets/css/components/radio.less';
+@import '~@lbzui/vue/src/assets/css/components/snackbar.less';
+@import '~@lbzui/vue/src/assets/css/components/state.less';
+@import '~@lbzui/vue/src/assets/css/components/switch.less';
+@import '~@lbzui/vue/src/assets/css/components/tab.less';
+@import '~@lbzui/vue/src/assets/css/components/tab-item.less';
+@import '~@lbzui/vue/src/assets/css/components/top-app-bar.less';
+```
+
+Then import it in `src/main.ts`:
+
+```ts
+import './assets/css/lbzui/index.less'
 ```
 
 Prepend variables and mixins to all less files in `vue.config.js`:
@@ -241,6 +246,7 @@ Use PostCSS plugins to convert CSS in `package.json` or `postcss.config.js`:
 // postcss.config.js (if you prefer placing config in dedicated config files)
 module.exports = {
   plugins: {
+    // https://github.com/csstools/postcss-preset-env#options
     'postcss-preset-env': {
       stage: 3,
       autoprefixer: {
@@ -248,10 +254,11 @@ module.exports = {
         grid: 'no-autoplace'
       },
       importFrom: [
-        // "node_modules/@lbzui/vue/src/assets/css/variables/variables.css"
+        // 'node_modules/@lbzui/vue/src/assets/css/variables/variables.css'
         'src/assets/css/lbzui/variables.css' // your custom CSS Variables
       ]
     },
+    // https://github.com/cuth/postcss-pxtorem#options
     'postcss-pxtorem': {
       unitPrecision: 8,
       propList: [
@@ -272,12 +279,14 @@ module.exports = {
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import Vue from 'vue'
 
-@Component
-export default class HelloWorld extends Vue {
-  private fclick(e: MouseEvent): void {
-    alert('Hello @lbzui/vue!');
+export default Vue.extend({
+  name: 'HelloWorld',
+  methods: {
+    fclick(e: MouseEvent): void {
+      alert('Hello @lbzui/vue!')
+    }
   }
 }
 </script>
