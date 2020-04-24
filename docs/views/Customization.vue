@@ -6,7 +6,7 @@
 
     <h3 class="lbz-typography--h5"># Layout grid</h3>
 
-    <lbz-list class="lbzui-rectangle" subtitle="Columns, gutters, and margins">
+    <lbz-list class="lbzui-rectangle" subheader="Columns, gutters, and margins">
       <lbz-list-item>
         <template #center>#lbz-layout-grid.desktop[column]</template>
         <template #end>12</template>
@@ -49,7 +49,7 @@
 
     <h3 class="lbz-typography--h5"># Shape</h3>
 
-    <lbz-list class="lbzui-rectangle" subtitle="Sizes">
+    <lbz-list class="lbzui-rectangle" subheader="Sizes">
       <lbz-list-item>
         <template #center>#lbz-shape.size[small]</template>
         <template #end>4px</template>
@@ -66,7 +66,7 @@
 
     <h3 class="lbz-typography--h5"># Theme</h3>
 
-    <lbz-list class="lbzui-rectangle" subtitle="Light theme colors">
+    <lbz-list class="lbzui-rectangle" subheader="Light theme colors">
       <lbz-list-item>
         <template #center>#lbz-theme.light[primary]</template>
         <template #end>#6200ee</template>
@@ -127,7 +127,7 @@
         <template #end>#fff</template>
       </lbz-list-item>
     </lbz-list>
-    <lbz-list class="lbzui-rectangle" subtitle="Dark theme colors">
+    <lbz-list class="lbzui-rectangle" subheader="Dark theme colors">
       <lbz-list-item>
         <template #center>#lbz-theme.dark[primary]</template>
         <template #end>#bb86fc</template>
@@ -189,7 +189,7 @@
       </lbz-list-item>
     </lbz-list>
     <br>
-    <lbz-list class="lbzui-rectangle" subtitle="Typography and iconography colors">
+    <lbz-list class="lbzui-rectangle" subheader="Typography and iconography colors">
       <lbz-list-item>
         <template #center>#lbz-theme-text.light[high-emphasis]</template>
         <template #end>#fff</template>
@@ -217,7 +217,7 @@
       </lbz-list-item>
     </lbz-list>
     <br>
-    <lbz-list class="lbzui-rectangle" subtitle="Outline colors">
+    <lbz-list class="lbzui-rectangle" subheader="Outline colors">
       <lbz-list-item>
         <template #center>#lbz-theme-outline[light]</template>
         <template #end>rgba(255, 255, 255, .12)</template>
@@ -228,7 +228,7 @@
       </lbz-list-item>
     </lbz-list>
     <br>
-    <lbz-list class="lbzui-rectangle" subtitle="Scrim backgrounds">
+    <lbz-list class="lbzui-rectangle" subheader="Scrim backgrounds">
       <lbz-list-item>
         <template #center>#lbz-theme-scrim[light]</template>
         <template #end>rgba(255, 255, 255, .5)</template>

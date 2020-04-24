@@ -16,13 +16,13 @@
     </section>
     <section class="lbz-backdrop__front-layer">
       <header
-        v-if="subtitle || $slots['front-start'] || icon || divider"
+        v-if="subheader || $slots['front-start'] || icon || divider"
         class="lbz-backdrop__front-layer__header"
       >
         <h2
-          v-if="subtitle"
-          class="lbz-backdrop__front-layer__title"
-          v-html="subtitle"
+          v-if="subheader"
+          class="lbz-backdrop__front-layer__subheader"
+          v-html="subheader"
         ></h2>
         <slot name="front-start"/>
         <lbz-icon-button
@@ -71,8 +71,8 @@ export default class LbzBackdrop extends Vue {
 
   // background (auto-darkened): 'primary' (default), 'secondary', 'surface', 'light', 'dark'
   @Prop({ type: String, default: '' }) private background!: string;
-  // subtitle: '' (default), 'x'
-  @Prop({ type: String, default: '' }) private subtitle!: string;
+  // subheader: '' (default), 'x'
+  @Prop({ type: String, default: '' }) private subheader!: string;
   // icon: true, false (default)
   @Prop({ type: Boolean, default: false }) private icon!: boolean;
   // divider: true, false (default)

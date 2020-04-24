@@ -226,14 +226,14 @@
       </lbz-backdrop>
     </div>
 
-    <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ subheader: '' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ icon: true, false (default)</h3>
     <h3 class="lbz-typography--subtitle1">$ divider: true, false (default)</h3>
 
     <div class="lbzui-app">
       <lbz-backdrop
         :active.sync="vactive"
-        subtitle="Subtitle"
+        subheader="Subtitle"
         icon
         divider
       >

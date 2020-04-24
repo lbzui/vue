@@ -27,7 +27,7 @@
     <lbz-card>
       <template #start>
         <div class="lbz-card__header__start">
-          <img class="lbz-card__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-card__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </div>
         <div class="lbz-card__header__center">
           <span class="lbz-card__title">Title goes here</span>

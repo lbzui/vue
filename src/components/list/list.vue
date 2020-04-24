@@ -11,9 +11,9 @@
     ]"
   >
     <span
-      v-if="subtitle"
-      :class="['lbz-list__subtitle', align && `lbz-list__subtitle--${align}`]"
-      v-html="subtitle"
+      v-if="subheader"
+      :class="['lbz-list__subheader', align && `lbz-list__subheader--${align}`]"
+      v-html="subheader"
     ></span>
     <slot/>
   </component>
@@ -51,8 +51,8 @@ export default class LbzList extends Vue {
   @Prop({ type: Boolean, default: undefined }) private dense!: boolean;
   // align: 'start' (default), 'center'
   @Prop({ type: String, default: '' }) private align!: string;
-  // subtitle: '' (default), 'x'
-  @Prop({ type: String, default: '' }) private subtitle!: string;
+  // subheader: '' (default), 'x'
+  @Prop({ type: String, default: '' }) private subheader!: string;
   // disabled: true, false (default)
   @Prop({ type: Boolean, default: false }) private disabled!: boolean;
   // ripple: undefined (default), true, false

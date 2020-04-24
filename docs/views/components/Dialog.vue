@@ -94,7 +94,7 @@
             @click.stop="vsimple0 = false"
           >
             <template #start>
-              <lbz-icon class="lbz-list-item__avatar">{{ item.icon }}</lbz-icon>
+              <lbz-icon class="lbz-list-item__thumbnail">{{ item.icon }}</lbz-icon>
             </template>
             <template #center>{{ item.label }}</template>
           </lbz-list-item>
@@ -119,7 +119,7 @@
             @click.stop="vsimple1 = false"
           >
             <template #start>
-              <lbz-icon class="lbz-list-item__avatar">{{ item.icon }}</lbz-icon>
+              <lbz-icon class="lbz-list-item__thumbnail">{{ item.icon }}</lbz-icon>
             </template>
             <template #center>{{ item.label }}</template>
           </lbz-list-item>
@@ -144,7 +144,7 @@
             @click.stop="vsimple2 = false"
           >
             <template #start>
-              <lbz-icon class="lbz-list-item__avatar">{{ item.icon }}</lbz-icon>
+              <lbz-icon class="lbz-list-item__thumbnail">{{ item.icon }}</lbz-icon>
             </template>
             <template #center>{{ item.label }}</template>
           </lbz-list-item>
@@ -169,7 +169,7 @@
             @click.stop="vsimple3 = false"
           >
             <template #start>
-              <lbz-icon class="lbz-list-item__avatar">{{ item.icon }}</lbz-icon>
+              <lbz-icon class="lbz-list-item__thumbnail">{{ item.icon }}</lbz-icon>
             </template>
             <template #center>{{ item.label }}</template>
           </lbz-list-item>

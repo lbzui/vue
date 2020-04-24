@@ -24,21 +24,21 @@
           <lbz-list-item to="/">Home</lbz-list-item>
           <lbz-list-item to="/customization">Customization</lbz-list-item>
           <lbz-divider/>
-          <span class="lbz-list__subtitle">Components</span>
+          <span class="lbz-list__subheader">Components</span>
           <lbz-list-item
             v-for="item of NAV.components"
             :key="item.path"
             :to="item.path"
           >{{ item.label }}</lbz-list-item>
           <lbz-divider/>
-          <span class="lbz-list__subtitle">Utilities</span>
+          <span class="lbz-list__subheader">Utilities</span>
           <lbz-list-item
             v-for="item of NAV.utilities"
             :key="item.path"
             :to="item.path"
           >{{ item.label }}</lbz-list-item>
           <lbz-divider/>
-          <span class="lbz-list__subtitle">Useful links</span>
+          <span class="lbz-list__subheader">Useful links</span>
           <lbz-list-item
             v-for="item of NAV.links"
             :key="item.path"

@@ -30,7 +30,7 @@
               @click.stop="vlabel = item.label"
             >{{ item.label }}</lbz-list-item>
             <lbz-divider/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">{{ item.label }}</lbz-list-item>
             <lbz-divider/>
             <lbz-list-item v-for="item of DESTINATIONS.unrelated" :key="item.label">{{ item.label }}</lbz-list-item>
@@ -62,7 +62,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -105,7 +105,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -154,7 +154,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider on-background="primary" darkened/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -200,7 +200,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider on-background="secondary" darkened/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -243,7 +243,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -289,7 +289,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider on-background="light" darkened/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -335,7 +335,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider on-background="dark" darkened/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -387,7 +387,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -430,7 +430,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -474,7 +474,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -501,7 +501,7 @@
         :lock-body-scroll="false"
       >
         <template #start>
-          <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-drawer__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #append>
           <lbz-divider/>
@@ -524,7 +524,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -555,7 +555,7 @@
         :lock-body-scroll="false"
       >
         <template #start>
-          <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-drawer__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #append>
           <lbz-divider on-background="primary" darkened/>
@@ -580,7 +580,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider on-background="primary" darkened/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -608,7 +608,7 @@
         :lock-body-scroll="false"
       >
         <template #start>
-          <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-drawer__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #append>
           <lbz-divider on-background="secondary" darkened/>
@@ -633,7 +633,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider on-background="secondary" darkened/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -660,7 +660,7 @@
         :lock-body-scroll="false"
       >
         <template #start>
-          <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-drawer__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #append>
           <lbz-divider/>
@@ -683,7 +683,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -711,7 +711,7 @@
         :lock-body-scroll="false"
       >
         <template #start>
-          <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-drawer__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #append>
           <lbz-divider on-background="light" darkened/>
@@ -736,7 +736,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider on-background="light" darkened/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -764,7 +764,7 @@
         :lock-body-scroll="false"
       >
         <template #start>
-          <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-drawer__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #append>
           <lbz-divider on-background="dark" darkened/>
@@ -789,7 +789,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider on-background="dark" darkened/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -841,7 +841,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -884,7 +884,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -928,7 +928,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -955,7 +955,7 @@
         :lock-body-scroll="false"
       >
         <template #start>
-          <img class="lbz-drawer__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-drawer__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #append>
           <lbz-divider/>
@@ -978,7 +978,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -1035,7 +1035,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider on-background="primary" darkened/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -1088,7 +1088,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider on-background="secondary" darkened/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -1138,7 +1138,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -1191,7 +1191,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider on-background="light" darkened/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>
@@ -1244,7 +1244,7 @@
               <template #center>{{ item.label }}</template>
             </lbz-list-item>
             <lbz-divider on-background="dark" darkened/>
-            <span class="lbz-list__subtitle">Labels</span>
+            <span class="lbz-list__subheader">Labels</span>
             <lbz-list-item v-for="item of DESTINATIONS.secondary" :key="item.label">
               <template #start>
                 <lbz-icon>{{ item.icon }}</lbz-icon>

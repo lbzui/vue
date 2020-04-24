@@ -4,7 +4,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ type: 'one-line' (default), 'two-line', 'three-line'</h3>
 
-    <lbz-list class="lbzui-rectangle" subtitle="One-line">
+    <lbz-list class="lbzui-rectangle" subheader="One-line">
       <lbz-list-item @click.stop="fclick">
         <template #center>Single-line item</template>
         <template #end>
@@ -20,7 +20,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-list-item__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>Single-line item</template>
         <template #end>
@@ -54,7 +54,7 @@
     <lbz-list
       class="lbzui-rectangle"
       type="two-line"
-      subtitle="Two-line"
+      subheader="Two-line"
     >
       <lbz-list-item>
         <template #center>
@@ -82,7 +82,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-list-item__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>
           <span class="lbz-list-item__title">Two-line item</span>
@@ -125,7 +125,7 @@
     <lbz-list
       class="lbzui-rectangle"
       type="three-line"
-      subtitle="Three-line"
+      subheader="Three-line"
     >
       <lbz-list-item>
         <template #center>
@@ -154,7 +154,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-list-item__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
@@ -205,7 +205,7 @@
       router-link
       :router-link-props="{ exact: true }"
       item-tag="a"
-      subtitle="Router-link"
+      subheader="Router-link"
     >
       <lbz-list-item to="/components/list">Router-link item</lbz-list-item>
       <lbz-list-item :to="{ path: '/404' }">Router-link item</lbz-list-item>
@@ -214,7 +214,7 @@
       class="lbzui-rectangle"
       tag="nav"
       item-tag="a"
-      subtitle="Non-router-link"
+      subheader="Non-router-link"
     >
       <lbz-list-item href="#/components/list">A item</lbz-list-item>
       <lbz-list-item href="#/404">A item</lbz-list-item>
@@ -226,7 +226,7 @@
       class="lbzui-rectangle lbzui-background--primary"
       type="two-line"
       on-background="primary"
-      subtitle="Primary"
+      subheader="Primary"
     >
       <lbz-list-item>
         <template #center>
@@ -254,7 +254,7 @@
       class="lbzui-rectangle lbzui-background--secondary"
       type="two-line"
       on-background="secondary"
-      subtitle="Secondary"
+      subheader="Secondary"
     >
       <lbz-list-item>
         <template #center>
@@ -281,7 +281,7 @@
     <lbz-list
       class="lbzui-rectangle"
       type="two-line"
-      subtitle="Surface"
+      subheader="Surface"
     >
       <lbz-list-item>
         <template #center>
@@ -309,7 +309,7 @@
       class="lbzui-rectangle lbzui-background--error"
       type="two-line"
       on-background="error"
-      subtitle="Error"
+      subheader="Error"
     >
       <lbz-list-item>
         <template #center>
@@ -337,7 +337,7 @@
       class="lbzui-rectangle lbzui-background--light"
       type="two-line"
       on-background="light"
-      subtitle="Light"
+      subheader="Light"
     >
       <lbz-list-item>
         <template #center>
@@ -365,7 +365,7 @@
       class="lbzui-rectangle lbzui-background--dark"
       type="two-line"
       on-background="dark"
-      subtitle="Dark"
+      subheader="Dark"
     >
       <lbz-list-item>
         <template #center>
@@ -397,7 +397,7 @@
       type="two-line"
       on-background="primary"
       darkened
-      subtitle="Primary"
+      subheader="Primary"
     >
       <lbz-list-item>
         <template #center>
@@ -426,7 +426,7 @@
       type="two-line"
       on-background="secondary"
       darkened
-      subtitle="Secondary"
+      subheader="Secondary"
     >
       <lbz-list-item>
         <template #center>
@@ -455,7 +455,7 @@
       type="two-line"
       on-background="error"
       darkened
-      subtitle="Error"
+      subheader="Error"
     >
       <lbz-list-item>
         <template #center>
@@ -484,7 +484,7 @@
       type="two-line"
       on-background="light"
       darkened
-      subtitle="Light"
+      subheader="Light"
     >
       <lbz-list-item>
         <template #center>
@@ -518,7 +518,7 @@
       :router-link-props="{ exact: true }"
       item-tag="a"
       nav
-      subtitle="Nav"
+      subheader="Nav"
     >
       <lbz-list-item to="/components/list">
         <template #start>
@@ -539,7 +539,7 @@
     <lbz-list
       class="lbzui-rectangle"
       dense
-      subtitle="Dense one-line"
+      subheader="Dense one-line"
     >
       <lbz-list-item>
         <template #center>Single-line item</template>
@@ -556,7 +556,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-list-item__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>Single-line item</template>
         <template #end>
@@ -589,7 +589,7 @@
     <lbz-list
       class="lbzui-rectangle"
       :dense="false"
-      subtitle="Non-dense one-line"
+      subheader="Non-dense one-line"
     >
       <lbz-list-item>
         <template #center>Single-line item</template>
@@ -606,7 +606,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-list-item__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>Single-line item</template>
         <template #end>
@@ -641,7 +641,7 @@
       class="lbzui-rectangle"
       type="two-line"
       dense
-      subtitle="Dense two-line"
+      subheader="Dense two-line"
     >
       <lbz-list-item>
         <template #center>
@@ -669,7 +669,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-list-item__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>
           <span class="lbz-list-item__title">Two-line item</span>
@@ -712,7 +712,7 @@
       class="lbzui-rectangle"
       type="two-line"
       :dense="false"
-      subtitle="Non-dense two-line"
+      subheader="Non-dense two-line"
     >
       <lbz-list-item>
         <template #center>
@@ -740,7 +740,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-list-item__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>
           <span class="lbz-list-item__title">Two-line item</span>
@@ -784,7 +784,7 @@
       class="lbzui-rectangle"
       type="three-line"
       dense
-      subtitle="Dense three-line"
+      subheader="Dense three-line"
     >
       <lbz-list-item>
         <template #center>
@@ -813,7 +813,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-list-item__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
@@ -856,7 +856,7 @@
       class="lbzui-rectangle"
       type="three-line"
       :dense="false"
-      subtitle="Non-dense three-line"
+      subheader="Non-dense three-line"
     >
       <lbz-list-item>
         <template #center>
@@ -885,7 +885,7 @@
       </lbz-list-item>
       <lbz-list-item>
         <template #start>
-          <img class="lbz-list-item__avatar" src="../../assets/img/placeholder@1x1.png">
+          <img class="lbz-list-item__thumbnail" src="../../assets/img/placeholder@1x1.png">
         </template>
         <template #center>
           <span class="lbz-list-item__title">Three-line item</span>
@@ -926,15 +926,15 @@
     </lbz-list>
 
     <h3 class="lbz-typography--subtitle1">$ align: 'start' (default), 'center'</h3>
-    <h3 class="lbz-typography--subtitle1">$ subtitle: '' (default), 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ subheader: '' (default), 'x'</h3>
 
-    <lbz-list class="lbzui-rectangle" subtitle="Subtitle">
+    <lbz-list class="lbzui-rectangle" subheader="Subheader">
       <lbz-list-item>Item</lbz-list-item>
     </lbz-list>
     <lbz-list
       class="lbzui-rectangle"
       align="center"
-      subtitle="Subtitle"
+      subheader="Subheader"
     >
       <lbz-list-item>
         <template #start>
@@ -950,7 +950,7 @@
       class="lbzui-rectangle lbzui-background--primary"
       type="two-line"
       on-background="primary"
-      subtitle="Primary"
+      subheader="Primary"
       disabled
     >
       <lbz-list-item>
@@ -979,7 +979,7 @@
       class="lbzui-rectangle lbzui-background--secondary"
       type="two-line"
       on-background="secondary"
-      subtitle="Secondary"
+      subheader="Secondary"
       disabled
     >
       <lbz-list-item>
@@ -1007,7 +1007,7 @@
     <lbz-list
       class="lbzui-rectangle"
       type="two-line"
-      subtitle="Surface"
+      subheader="Surface"
       disabled
     >
       <lbz-list-item>
@@ -1036,7 +1036,7 @@
       class="lbzui-rectangle lbzui-background--error"
       type="two-line"
       on-background="error"
-      subtitle="Error"
+      subheader="Error"
       disabled
     >
       <lbz-list-item>
@@ -1065,7 +1065,7 @@
       class="lbzui-rectangle lbzui-background--light"
       type="two-line"
       on-background="light"
-      subtitle="Light"
+      subheader="Light"
       disabled
     >
       <lbz-list-item>
@@ -1094,7 +1094,7 @@
       class="lbzui-rectangle lbzui-background--dark"
       type="two-line"
       on-background="dark"
-      subtitle="Dark"
+      subheader="Dark"
       disabled
     >
       <lbz-list-item>
@@ -1124,14 +1124,14 @@
 
     <lbz-list
       class="lbzui-rectangle"
-      subtitle="Ripple"
+      subheader="Ripple"
       ripple
     >
       <lbz-list-item>Ripple item</lbz-list-item>
     </lbz-list>
     <lbz-list
       class="lbzui-rectangle"
-      subtitle="Non-ripple"
+      subheader="Non-ripple"
       :ripple="false"
     >
       <lbz-list-item>Non-ripple item</lbz-list-item>
@@ -1147,7 +1147,7 @@
       class="lbzui-rectangle"
       tag="nav"
       :router-link-props="{ exact: true }"
-      subtitle="Router-link"
+      subheader="Router-link"
     >
       <lbz-list-item
         router-link
@@ -1163,7 +1163,7 @@
     <lbz-list
       class="lbzui-rectangle"
       tag="nav"
-      subtitle="Non-router-link"
+      subheader="Non-router-link"
     >
       <lbz-list-item tag="a" href="#/components/list">A item</lbz-list-item>
       <lbz-list-item tag="a" href="#/404">A item</lbz-list-item>
