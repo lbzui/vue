@@ -30,6 +30,7 @@ import LbzState from '../state/state.vue';
 })
 export default class LbzTabItem extends Vue {
   @InjectReactive('value') private prvalue!: boolean | number | string;
+  @Inject('id') private pid!: string;
   @Inject('router-link') private prouterLink!: boolean;
   @Inject('router-link-props') private prouterLinkProps!: object;
   @Inject('tag') private ptag!: string;
@@ -103,7 +104,7 @@ export default class LbzTabItem extends Vue {
       return;
     }
 
-    EventBus.$emit('change', this.value, e);
+    EventBus.$emit('change', this.pid, this.value, e);
   }
 }
 </script>

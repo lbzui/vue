@@ -14,13 +14,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Model, Prop, ProvideReactive, Provide, Emit, Vue } from 'vue-property-decorator';
+import { Component, Model, Prop, ProvideReactive, Provide, Vue } from 'vue-property-decorator';
 import EventBus from '../../utils/event-bus';
+import { lbzfRandomId } from '../../utils/funcs';
 
 @Component
 export default class LbzTab extends Vue {
   // v-model: undefined (default), true, false, x, 'x'
   @Model('change', { type: [Boolean, Number, String], default: undefined }) private mvalue!: boolean | number | string;
+
+  // id: 'lbz-tab-x' (default), 'x'
+  @Prop({ type: String, default: `lbz-tab-${lbzfRandomId()}` }) private id!: string;
 
   // tag: 'nav' (default), 'x'
   @Prop({ type: String, default: 'nav' }) private tag!: string;
@@ -51,6 +55,7 @@ export default class LbzTab extends Vue {
   @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 
   @ProvideReactive('value') private prvalue: boolean | number | string = this.mvalue;
+  @Provide('id') private pid: string = this.id;
   @Provide('router-link') private prouterLink: boolean = this.routerLink;
   @Provide('router-link-props') private prouterLinkProps: object = this.routerLinkProps;
   @Provide('tag') private ptag: string = this.itemTag;
@@ -66,9 +71,11 @@ export default class LbzTab extends Vue {
     EventBus.$off('change', this.fvalueChanged);
   }
 
-  @Emit('change')
-  private fvalueChanged(val: boolean | number | string, e: MouseEvent): void {
-    this.prvalue = val;
+  private fvalueChanged(id: string, val: boolean | number | string, e: MouseEvent): void {
+    if (this.id === id) {
+      this.prvalue = val;
+      this.$emit('change', val, e);
+    }
   }
 }
 </script>

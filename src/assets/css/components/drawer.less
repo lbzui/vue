@@ -22,9 +22,9 @@
     width: 280px;
     max-width: 400px;
     .lbz-surface(16);
-    scroll-behavior: smooth;
-    overscroll-behavior-y: contain;
-    -webkit-overflow-scrolling: touch;
+    scroll-behavior: @scroll-behavior;
+    overscroll-behavior-y: @overscroll-behavior;
+    -webkit-overflow-scrolling: @overflow-scrolling;
   }
 
   .lbz-top-app-bar {
@@ -72,9 +72,9 @@
     box-sizing: border-box;
     .lbz-typography("body2");
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
-    scroll-behavior: smooth;
-    overscroll-behavior-y: contain;
-    -webkit-overflow-scrolling: touch;
+    scroll-behavior: @scroll-behavior;
+    overscroll-behavior-y: @overscroll-behavior;
+    -webkit-overflow-scrolling: @overflow-scrolling;
   }
 
   & &__footer {

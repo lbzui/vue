@@ -13,9 +13,9 @@
     overflow-x: auto;
     overflow-y: hidden;
     transition: 250ms transform #lbz-motion.curve[standard];
-    scroll-behavior: smooth;
-    overscroll-behavior-x: contain;
-    -webkit-overflow-scrolling: touch;
+    scroll-behavior: @scroll-behavior;
+    overscroll-behavior-x: @overscroll-behavior;
+    -webkit-overflow-scrolling: @overflow-scrolling;
 
     &::-webkit-scrollbar {
       display: none;

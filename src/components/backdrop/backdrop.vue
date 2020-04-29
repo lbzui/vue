@@ -51,6 +51,7 @@
         @click.stop="fclose()"
       ></aside>
     </section>
+    <section v-if="$slots.popup" class="lbz-backdrop__popup"><slot name="popup"/></section>
   </div>
 </template>
 
@@ -94,6 +95,10 @@ export default class LbzBackdrop extends Vue {
 
   private fclose(): void {
     this.cisActive = false;
+  }
+
+  private fscrollToTop(): void {
+    this.rscroller.scrollTo(0, 0);
   }
 
   @Emit('scroll')

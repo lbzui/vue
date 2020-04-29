@@ -131,7 +131,7 @@ npm i postcss-pxtorem -D
 yarn add less less-loader @nuxtjs/style-resources postcss-pxtorem --dev
 ```
 
-Import CSS source code in `assets/css/lbzui/index.less`:
+Import CSS resources in `assets/css/lbzui/index.less`:
 
 ```less
 @import 'normalize.css';
@@ -195,6 +195,7 @@ export default {
       './node_modules/@lbzui/vue/src/assets/css/variables/_surface.less',
       // './node_modules/@lbzui/vue/src/assets/css/variables/_theme.less',
       './assets/css/lbzui/_theme.less', // your custom theme
+      './node_modules/@lbzui/vue/src/assets/css/variables/_variables.less',
 
       // mixins
       './node_modules/@lbzui/vue/src/assets/css/utilities/_*.less'
@@ -266,7 +267,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Material+Icons&display=block'
+          'https://fonts.googleapis.com/icon?family=Material+Icons&display=block'
       }
     ]
   }

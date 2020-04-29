@@ -3,9 +3,14 @@
     <h2 class="lbz-typography--h5"># Fixed tab</h2>
 
     <h3 class="lbz-typography--subtitle1">$ v-model: undefined (default), true, false, x, 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ id: 'lbz-tab-x' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'fixed' (default), 'scrollable'</h3>
 
-    <lbz-tab v-model="vtab0" @change="fchange">
+    <lbz-tab
+      v-model="vtab0"
+      id="vtab0"
+      @change="fchange"
+    >
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
@@ -30,6 +35,7 @@
     </lbz-tab>
     <lbz-tab
       v-model="vtab0"
+      id="vtab0"
       tag="div"
       item-tag="a"
     >
@@ -43,21 +49,33 @@
 
     <h3 class="lbz-typography--subtitle1">$ align (type === 'fixed'): 'start', 'center', 'end', 'stretch' (default)</h3>
 
-    <lbz-tab v-model="vtab0" align="start">
+    <lbz-tab
+      v-model="vtab0"
+      id="vtab0"
+      align="start"
+    >
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
         :value="index"
       >Start {{ item }}</lbz-tab-item>
     </lbz-tab>
-    <lbz-tab v-model="vtab0" align="center">
+    <lbz-tab
+      v-model="vtab0"
+      id="vtab0"
+      align="center"
+    >
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
         :value="index"
       >Center {{ item }}</lbz-tab-item>
     </lbz-tab>
-    <lbz-tab v-model="vtab0" align="end">
+    <lbz-tab
+      v-model="vtab0"
+      id="vtab0"
+      align="end"
+    >
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
@@ -69,6 +87,7 @@
 
     <lbz-tab
       v-model="vtab0"
+      id="vtab0"
       class="lbzui-background--primary"
       on-background="primary"
     >
@@ -80,6 +99,7 @@
     </lbz-tab>
     <lbz-tab
       v-model="vtab0"
+      id="vtab0"
       class="lbzui-background--secondary"
       on-background="secondary"
     >
@@ -89,7 +109,7 @@
         :value="index"
       >Item {{ item }}</lbz-tab-item>
     </lbz-tab>
-    <lbz-tab v-model="vtab0">
+    <lbz-tab v-model="vtab0" id="vtab0">
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
@@ -98,6 +118,7 @@
     </lbz-tab>
     <lbz-tab
       v-model="vtab0"
+      id="vtab0"
       class="lbzui-background--light"
       on-background="light"
     >
@@ -109,6 +130,7 @@
     </lbz-tab>
     <lbz-tab
       v-model="vtab0"
+      id="vtab0"
       class="lbzui-background--dark"
       on-background="dark"
     >
@@ -121,12 +143,16 @@
 
     <h3 class="lbz-typography--subtitle1">$ stacked: true, false (default)</h3>
 
-    <lbz-tab v-model="vtab0" stacked>
+    <lbz-tab
+      v-model="vtab0"
+      id="vtab0"
+      stacked
+    >
       <lbz-tab-item :value="0" icon="phone">Item 1</lbz-tab-item>
       <lbz-tab-item :value="1" icon="favorite">Item 2</lbz-tab-item>
       <lbz-tab-item :value="2" icon="place">Item 3</lbz-tab-item>
     </lbz-tab>
-    <lbz-tab v-model="vtab0">
+    <lbz-tab v-model="vtab0" id="vtab0">
       <lbz-tab-item :value="0" icon="phone">Item 1</lbz-tab-item>
       <lbz-tab-item :value="1" icon="favorite">Item 2</lbz-tab-item>
       <lbz-tab-item :value="2" icon="place">Item 3</lbz-tab-item>
@@ -134,7 +160,11 @@
 
     <h3 class="lbz-typography--subtitle1">$ on-content: true, false (default)</h3>
 
-    <lbz-tab v-model="vtab0" on-content>
+    <lbz-tab
+      v-model="vtab0"
+      id="vtab0"
+      on-content
+    >
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
@@ -144,14 +174,22 @@
 
     <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
 
-    <lbz-tab v-model="vtab0" ripple>
+    <lbz-tab
+      v-model="vtab0"
+      id="vtab0"
+      ripple
+    >
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
         :value="index"
       >Ripple {{ item }}</lbz-tab-item>
     </lbz-tab>
-    <lbz-tab v-model="vtab0" :ripple="false">
+    <lbz-tab
+      v-model="vtab0"
+      id="vtab0"
+      :ripple="false"
+    >
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
@@ -162,9 +200,14 @@
     <h2 class="lbz-typography--h5"># Scrollable tab</h2>
 
     <h3 class="lbz-typography--subtitle1">$ v-model: undefined (default), true, false, x, 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">$ id: 'lbz-tab-x' (default), 'x'</h3>
     <h3 class="lbz-typography--subtitle1">$ type: 'fixed' (default), 'scrollable'</h3>
 
-    <lbz-tab v-model="vtab1" type="scrollable">
+    <lbz-tab
+      v-model="vtab1"
+      id="vtab1"
+      type="scrollable"
+    >
       <lbz-tab-item
         v-for="(item, index) of 6"
         :key="index"
@@ -193,6 +236,7 @@
     </lbz-tab>
     <lbz-tab
       v-model="vtab1"
+      id="vtab1"
       tag="div"
       item-tag="a"
       type="scrollable"
@@ -209,6 +253,7 @@
 
     <lbz-tab
       v-model="vtab1"
+      id="vtab1"
       class="lbzui-background--primary"
       type="scrollable"
       on-background="primary"
@@ -221,6 +266,7 @@
     </lbz-tab>
     <lbz-tab
       v-model="vtab1"
+      id="vtab1"
       class="lbzui-background--secondary"
       type="scrollable"
       on-background="secondary"
@@ -231,7 +277,11 @@
         :value="index"
       >Item {{ item }}</lbz-tab-item>
     </lbz-tab>
-    <lbz-tab v-model="vtab1" type="scrollable">
+    <lbz-tab
+      v-model="vtab1"
+      id="vtab1"
+      type="scrollable"
+    >
       <lbz-tab-item
         v-for="(item, index) of 6"
         :key="index"
@@ -240,6 +290,7 @@
     </lbz-tab>
     <lbz-tab
       v-model="vtab1"
+      id="vtab1"
       class="lbzui-background--light"
       type="scrollable"
       on-background="light"
@@ -252,6 +303,7 @@
     </lbz-tab>
     <lbz-tab
       v-model="vtab1"
+      id="vtab1"
       class="lbzui-background--dark"
       type="scrollable"
       on-background="dark"
@@ -267,6 +319,7 @@
 
     <lbz-tab
       v-model="vtab1"
+      id="vtab1"
       type="scrollable"
       stacked
     >
@@ -277,7 +330,11 @@
       <lbz-tab-item :value="4" icon="keyboard_voice">Item 5</lbz-tab-item>
       <lbz-tab-item :value="5" icon="flight">Item 6</lbz-tab-item>
     </lbz-tab>
-    <lbz-tab v-model="vtab1" type="scrollable">
+    <lbz-tab
+      v-model="vtab1"
+      id="vtab1"
+      type="scrollable"
+    >
       <lbz-tab-item :value="0" icon="phone">Item 1</lbz-tab-item>
       <lbz-tab-item :value="1" icon="favorite">Item 2</lbz-tab-item>
       <lbz-tab-item :value="2" icon="place">Item 3</lbz-tab-item>
@@ -290,6 +347,7 @@
 
     <lbz-tab
       v-model="vtab1"
+      id="vtab1"
       type="scrollable"
       on-content
     >
@@ -304,6 +362,7 @@
 
     <lbz-tab
       v-model="vtab1"
+      id="vtab1"
       type="scrollable"
       ripple
     >
@@ -315,6 +374,7 @@
     </lbz-tab>
     <lbz-tab
       v-model="vtab1"
+      id="vtab1"
       type="scrollable"
       :ripple="false"
     >
@@ -349,7 +409,7 @@
         tag="a"
       >Router-link 3</lbz-tab-item>
     </lbz-tab>
-    <lbz-tab v-model="vtab2">
+    <lbz-tab v-model="vtab2" id="vtab2">
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
@@ -361,7 +421,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ icon: '' (default), 'x'</h3>
 
-    <lbz-tab v-model="vtab2">
+    <lbz-tab v-model="vtab2" id="vtab2">
       <lbz-tab-item :value="0" icon="phone"/>
       <lbz-tab-item :value="1" icon="favorite"/>
       <lbz-tab-item :value="2" icon="place"/>
@@ -369,7 +429,7 @@
 
     <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
 
-    <lbz-tab v-model="vtab2">
+    <lbz-tab v-model="vtab2" id="vtab2">
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"
@@ -377,7 +437,7 @@
         ripple
       >Ripple {{ item }}</lbz-tab-item>
     </lbz-tab>
-    <lbz-tab v-model="vtab2">
+    <lbz-tab v-model="vtab2" id="vtab2">
       <lbz-tab-item
         v-for="(item, index) of 3"
         :key="index"

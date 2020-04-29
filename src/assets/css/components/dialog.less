@@ -50,9 +50,9 @@
     padding: 20px 24px;
     .lbz-typography("body1");
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
-    scroll-behavior: smooth;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
+    scroll-behavior: @scroll-behavior;
+    overscroll-behavior: @overscroll-behavior;
+    -webkit-overflow-scrolling: @overflow-scrolling;
 
     > :first-child {
       margin-top: 0;

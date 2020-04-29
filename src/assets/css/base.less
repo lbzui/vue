@@ -1,8 +1,9 @@
-/*! @lbzui/vue v0.6.0 | MIT License | https://github.com/lbzui/vue */
+/*! @lbzui/vue v0.6.1 | MIT License | https://github.com/lbzui/vue */
 body {
   background-color: var(--lbz-theme-background);
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  scroll-behavior: @scroll-behavior;
+  overscroll-behavior: @overscroll-behavior;
+  -webkit-overflow-scrolling: @overflow-scrolling;
   -webkit-tap-highlight-color: transparent;
 
   // lock-body-scroll

@@ -32,7 +32,7 @@ If you have any questions, ideas or you want to discuss with it, [create an issu
     <meta charset="utf-8">
     <title>Hello world</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons&display=block">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block">
     <link rel="stylesheet" href="https://unpkg.com/@lbzui/vue/lib/lbzui.css">
   </head>
   <body>

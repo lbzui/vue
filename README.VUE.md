@@ -129,7 +129,7 @@ yarn add less postcss-preset-env postcss-pxtorem --dev
 vue add style-resources-loader
 ```
 
-Import CSS source code in `src/assets/css/lbzui/index.less`:
+Import CSS resources in `src/assets/css/lbzui/index.less`:
 
 ```less
 @import '~normalize.css';
@@ -205,6 +205,7 @@ module.exports = {
         resolve(`${LBZUI_CSS_PATH}variables/_surface.less`),
         // resolve(`${LBZUI_CSS_PATH}variables/_theme.less`),
         resolve('src/assets/css/lbzui/_theme.less'), // your custom theme
+        resolve(`${LBZUI_CSS_PATH}variables/_variables.less`),
 
         // mixins
         resolve(`${LBZUI_CSS_PATH}utilities/_*.less`)
@@ -298,5 +299,5 @@ All examples? Please view [code examples](/tree/master/docs/views) for details.
 
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons&display=block">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block">
 ```
