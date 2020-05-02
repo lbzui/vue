@@ -6,12 +6,12 @@ import LBZUI from '@/components';
 
 Vue.use(LBZUI, {
   ripple: true,
-  dense: false,
+  dense: false
 });
 
 Vue.config.productionTip = false;
 
 new Vue({
   router,
-  render: (h) => h(App),
+  render: h => h(App)
 }).$mount('#lbzui');

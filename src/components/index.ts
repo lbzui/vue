@@ -44,17 +44,17 @@ const components: any[] = [
   Switch,
   Tab,
   TabItem,
-  TopAppBar,
+  TopAppBar
 ];
-const install: PluginFunction<any> = (vm: typeof Vue, opts?: LbzuiOptions): void => {
-  const {
-    dense,
-    ripple,
-  }: any = opts || {};
+const install: PluginFunction<any> = (
+  vm: typeof Vue,
+  opts?: LbzuiOptions
+): void => {
+  const { dense, ripple }: any = opts || {};
 
   vm.prototype.$lbzui = {
     dense: dense || false,
-    ripple: ripple === undefined ? true : ripple,
+    ripple: ripple === undefined ? true : ripple
   };
 
   components.map((Component): void => {
@@ -69,7 +69,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '0.6.1',
+  version: '0.7.0',
   install,
   Backdrop,
   Button,
@@ -90,5 +90,5 @@ export default {
   Switch,
   Tab,
   TabItem,
-  TopAppBar,
+  TopAppBar
 };

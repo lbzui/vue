@@ -1,12 +1,16 @@
-const path = require('path')
-const isProduction = process.env.NODE_ENV === 'production'
+/* eslint-disable @typescript-eslint/no-var-requires, @typescript-eslint/camelcase */
 
-process.env.VUE_APP_SITE_NAME = '@lbzui/vue'
-process.env.VUE_APP_SITE_DESCRIPTION = 'Material Components for Vue.js'
-process.env.VUE_APP_SITE_URL = isProduction ? 'https://lbzui-vue.lanbizhong.com/' : 'http://localhost:8080/'
+const path = require('path');
+const isProduction = process.env.NODE_ENV === 'production';
 
-function resolve (dir) {
-  return path.resolve(__dirname, dir)
+process.env.VUE_APP_SITE_NAME = '@lbzui/vue';
+process.env.VUE_APP_SITE_DESCRIPTION = 'Material Components for Vue.js';
+process.env.VUE_APP_SITE_URL = isProduction
+  ? 'https://lbzui-vue.lanbizhong.com/'
+  : 'http://localhost:8080/';
+
+function resolve(dir) {
+  return path.resolve(__dirname, dir);
 }
 
 module.exports = {
@@ -63,4 +67,4 @@ module.exports = {
       ]
     }
   }
-}
+};

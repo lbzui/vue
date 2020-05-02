@@ -2,8 +2,13 @@
   <article class="lbzui-components-backdrop">
     <h2 class="lbz-typography--h5"># Backdrop</h2>
 
-    <h3 class="lbz-typography--subtitle1">$ [required]active.sync: true, false</h3>
-    <h3 class="lbz-typography--subtitle1">$ background (auto-darkened): 'primary' (default), 'secondary', 'surface', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">
+      $ [required]active.sync: true, false
+    </h3>
+    <h3 class="lbz-typography--subtitle1">
+      $ background (auto-darkened): 'primary' (default), 'secondary', 'surface',
+      'light', 'dark'
+    </h3>
 
     <div class="lbzui-app">
       <lbz-backdrop ref="backdrop" :active.sync="vactive">
@@ -23,18 +28,13 @@
                 on-background="primary"
                 darkened
                 @click.stop="ftoggleActive"
-              >more_vert</lbz-icon-button>
+                >more_vert</lbz-icon-button
+              >
             </template>
           </lbz-top-app-bar>
         </template>
         <template #back-center>
-          <lbz-list
-            tag="nav"
-            item-tag="a"
-            on-background="primary"
-            darkened
-            nav
-          >
+          <lbz-list tag="nav" item-tag="a" on-background="primary" darkened nav>
             <lbz-list-item
               v-for="(item, index) of NAV"
               :key="index"
@@ -67,7 +67,9 @@
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="secondary" darkened>more_vert</lbz-icon-button>
+              <lbz-icon-button on-background="secondary" darkened
+                >more_vert</lbz-icon-button
+              >
             </template>
           </lbz-top-app-bar>
         </template>
@@ -114,11 +116,7 @@
           </lbz-top-app-bar>
         </template>
         <template #back-center>
-          <lbz-list
-            tag="nav"
-            item-tag="a"
-            nav
-          >
+          <lbz-list tag="nav" item-tag="a" nav>
             <lbz-list-item
               v-for="(item, index) of NAV"
               :key="index"
@@ -151,18 +149,14 @@
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="light" darkened>more_vert</lbz-icon-button>
+              <lbz-icon-button on-background="light" darkened
+                >more_vert</lbz-icon-button
+              >
             </template>
           </lbz-top-app-bar>
         </template>
         <template #back-center>
-          <lbz-list
-            tag="nav"
-            item-tag="a"
-            on-background="light"
-            darkened
-            nav
-          >
+          <lbz-list tag="nav" item-tag="a" on-background="light" darkened nav>
             <lbz-list-item
               v-for="(item, index) of NAV"
               :key="index"
@@ -195,18 +189,14 @@
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="dark" darkened>more_vert</lbz-icon-button>
+              <lbz-icon-button on-background="dark" darkened
+                >more_vert</lbz-icon-button
+              >
             </template>
           </lbz-top-app-bar>
         </template>
         <template #back-center>
-          <lbz-list
-            tag="nav"
-            item-tag="a"
-            on-background="dark"
-            darkened
-            nav
-          >
+          <lbz-list tag="nav" item-tag="a" on-background="dark" darkened nav>
             <lbz-list-item
               v-for="(item, index) of NAV"
               :key="index"
@@ -231,12 +221,7 @@
     <h3 class="lbz-typography--subtitle1">$ divider: true, false (default)</h3>
 
     <div class="lbzui-app">
-      <lbz-backdrop
-        :active.sync="vactive"
-        subheader="Subtitle"
-        icon
-        divider
-      >
+      <lbz-backdrop :active.sync="vactive" subheader="Subtitle" icon divider>
         <template #back-start>
           <lbz-top-app-bar title="Page title">
             <template #start>
@@ -249,7 +234,9 @@
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
+              <lbz-icon-button on-background="primary" darkened
+                >more_vert</lbz-icon-button
+              >
             </template>
           </lbz-top-app-bar>
         </template>
@@ -262,14 +249,12 @@
       </lbz-backdrop>
     </div>
 
-    <h3 class="lbz-typography--subtitle1">$ horizontal: true, false (default)</h3>
+    <h3 class="lbz-typography--subtitle1">
+      $ horizontal: true, false (default)
+    </h3>
 
     <div class="lbzui-app">
-      <lbz-backdrop
-        :active.sync="vactive"
-        horizontal
-        @scroll="fscroll"
-      >
+      <lbz-backdrop :active.sync="vactive" horizontal @scroll="fscroll">
         <template #back-start>
           <lbz-top-app-bar title="Page title">
             <template #start>
@@ -282,7 +267,9 @@
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
+              <lbz-icon-button on-background="primary" darkened
+                >more_vert</lbz-icon-button
+              >
             </template>
           </lbz-top-app-bar>
         </template>
@@ -290,7 +277,9 @@
           <div style="height: 1280px;">Back layer content</div>
         </template>
         <template #front-center>
-          <article style="width: 1280px; height: 100%;">Front layer content</article>
+          <article style="width: 1280px; height: 100%;">
+            Front layer content
+          </article>
         </template>
       </lbz-backdrop>
     </div>
@@ -308,7 +297,9 @@
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
+              <lbz-icon-button on-background="primary" darkened
+                >more_vert</lbz-icon-button
+              >
             </template>
           </lbz-top-app-bar>
         </template>
@@ -337,7 +328,9 @@
               />
             </template>
             <template #end>
-              <lbz-icon-button on-background="primary" darkened>more_vert</lbz-icon-button>
+              <lbz-icon-button on-background="primary" darkened
+                >more_vert</lbz-icon-button
+              >
             </template>
           </lbz-top-app-bar>
         </template>
@@ -353,36 +346,40 @@
 </template>
 
 <script lang="ts">
-import { Component, Ref, Vue } from 'vue-property-decorator';
+  import { Component, Ref, Vue } from 'vue-property-decorator';
 
-@Component
-export default class ComponentsBackdrop extends Vue {
-  @Ref('backdrop') private rbackdrop!: HTMLFormElement;
+  @Component
+  export default class ComponentsBackdrop extends Vue {
+    @Ref('backdrop') private rbackdrop!: HTMLFormElement;
 
-  private NAV: string[] = [
-    'mail',
-    'bookmark',
-    'speaker_notes',
-    'note',
-    'place',
-    'data_usage',
-    'backup',
-    'favorite',
-    'chrome_reader_mode',
-    'event',
-    'blur_on',
-  ];
+    private NAV: string[] = [
+      'mail',
+      'bookmark',
+      'speaker_notes',
+      'note',
+      'place',
+      'data_usage',
+      'backup',
+      'favorite',
+      'chrome_reader_mode',
+      'event',
+      'blur_on'
+    ];
 
-  private vactive: boolean = false;
-  private vindex: number = 0;
+    private vactive = false;
+    private vindex = 0;
 
-  private ftoggleActive(): void {
-    this.rbackdrop.ftoggle();
+    private ftoggleActive(): void {
+      this.rbackdrop.ftoggle();
+    }
+
+    private fscroll(
+      el: HTMLElement,
+      e: Event,
+      position: VueScrollPosition
+    ): void {
+      console.log(el.scrollHeight, e);
+      alert(JSON.stringify(position));
+    }
   }
-
-  private fscroll(el: HTMLElement, e: Event, position: VueScrollPosition): void {
-    console.log(el.scrollHeight, e);
-    alert(JSON.stringify(position));
-  }
-}
 </script>

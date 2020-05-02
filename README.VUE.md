@@ -262,11 +262,7 @@ module.exports = {
     // https://github.com/cuth/postcss-pxtorem#options
     'postcss-pxtorem': {
       unitPrecision: 8,
-      propList: [
-        'font',
-        'font-size',
-        'line-height'
-      ]
+      propList: ['font','font-size','line-height']
     }
   }
 }

@@ -6,17 +6,11 @@ module.exports = {
         flexbox: 'no-2009',
         grid: 'no-autoplace'
       },
-      importFrom: [
-        'src/assets/css/variables/variables.css'
-      ]
+      importFrom: ['src/assets/css/variables/variables.css']
     },
     'postcss-pxtorem': {
       unitPrecision: 8,
-      propList: [
-        'font',
-        'font-size',
-        'line-height'
-      ]
+      propList: ['font', 'font-size', 'line-height']
     }
   }
-}
+};

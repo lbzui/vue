@@ -9,94 +9,89 @@
     ]"
     @click="!cisDisabled && $emit('click', $event)"
   >
-    <lbz-state v-if="!cisDisabled" v-bind="cgetStateAttrs"/>
+    <lbz-state v-if="!cisDisabled" v-bind="cgetStateAttrs" />
     <div v-if="$slots.start" class="lbz-list-item__start">
-      <slot name="start"/>
+      <slot name="start" />
     </div>
     <div v-if="$slots.center || $slots.default" class="lbz-list-item__center">
-      <slot name="center"/>
-      <slot/>
+      <slot name="center" />
+      <slot />
     </div>
     <div v-if="$slots.end" class="lbz-list-item__end">
-      <slot name="end"/>
+      <slot name="end" />
     </div>
   </component>
 </template>
 
 <script lang="ts">
-import { Component, Inject, Prop, Vue } from 'vue-property-decorator';
-import LbzState from '../state/state.vue';
+  import { Component, Inject, Prop, Vue } from 'vue-property-decorator';
+  import LbzState from '../state/state.vue';
 
-@Component({
-  components: {
-    LbzState,
-  },
-})
-export default class LbzListItem extends Vue {
-  @Inject('router-link') private prouterLink!: boolean;
-  @Inject('router-link-props') private prouterLinkProps!: object;
-  @Inject('tag') private ptag!: string;
-  @Inject('on-background') private ponBackground!: string;
-  @Inject('darkened') private pdarkened!: boolean;
-  @Inject('disabled') private pdisabled!: boolean;
-  @Inject('ripple') private pripple!: boolean;
+  @Component({
+    components: {
+      LbzState
+    }
+  })
+  export default class LbzListItem extends Vue {
+    @Inject('router-link') private prouterLink!: boolean;
+    @Inject('router-link-props') private prouterLinkProps!: object;
+    @Inject('tag') private ptag!: string;
+    @Inject('on-background') private ponBackground!: string;
+    @Inject('darkened') private pdarkened!: boolean;
+    @Inject('disabled') private pdisabled!: boolean;
+    @Inject('ripple') private pripple!: boolean;
 
-  // router-link: undefined (default), true, false
-  @Prop({ type: Boolean, default: undefined }) private routerLink!: boolean;
-  // to (router-link): '' (default), 'x', { x: y }
-  @Prop({ type: [String, Object], default: '' }) private to!: string | object;
-  // tag: '' (default), 'li', 'a', 'x'
-  @Prop({ type: String, default: '' }) private tag!: string;
+    // router-link: undefined (default), true, false
+    @Prop({ type: Boolean, default: undefined }) private routerLink!: boolean;
+    // to (router-link): '' (default), 'x', { x: y }
+    @Prop({ type: [String, Object], default: '' }) private to!: string | object;
+    // tag: '' (default), 'li', 'a', 'x'
+    @Prop({ type: String, default: '' }) private tag!: string;
 
-  // selected: true, false (default)
-  @Prop({ type: Boolean, default: false }) private selected!: boolean;
-  // activated: true, false (default)
-  @Prop({ type: Boolean, default: false }) private activated!: boolean;
-  // disabled: undefined (default), true, false
-  @Prop({ type: Boolean, default: undefined }) private disabled!: boolean;
-  // ripple: undefined (default), true, false
-  @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
+    // selected: true, false (default)
+    @Prop({ type: Boolean, default: false }) private selected!: boolean;
+    // activated: true, false (default)
+    @Prop({ type: Boolean, default: false }) private activated!: boolean;
+    // disabled: undefined (default), true, false
+    @Prop({ type: Boolean, default: undefined }) private disabled!: boolean;
+    // ripple: undefined (default), true, false
+    @Prop({ type: Boolean, default: undefined }) private ripple!: boolean;
 
-  get cgetAttrs(): LbzComponentAttributes {
-    const isRouterLink: boolean = this.routerLink === undefined
-      ? this.prouterLink
-      : this.routerLink;
-    const {
-      replace,
-      append,
-      exact,
-      event,
-    }: any = this.prouterLinkProps;
-    const tag: string = this.tag || this.ptag;
+    get cgetAttrs(): LbzComponentAttributes {
+      const isRouterLink: boolean =
+        this.routerLink === undefined ? this.prouterLink : this.routerLink;
+      const { replace, append, exact, event }: any = this.prouterLinkProps;
+      const tag: string = this.tag || this.ptag;
 
-    return isRouterLink
-      ? {
-        is: 'router-link',
-        to: this.to,
-        replace,
-        append,
-        tag,
-        exact,
-        event,
-      } : {
-        is: tag,
+      return isRouterLink
+        ? {
+            is: 'router-link',
+            to: this.to,
+            replace,
+            append,
+            tag,
+            exact,
+            event
+          }
+        : {
+            is: tag
+          };
+    }
+
+    get cisDisabled(): boolean {
+      return this.disabled === undefined ? this.pdisabled : this.disabled;
+    }
+
+    get cgetStateAttrs(): LbzStateAttributes {
+      return {
+        class: 'lbz-list-item__state',
+        type: ['primary', 'secondary', 'error'].includes(this.ponBackground)
+          ? 'primary'
+          : '',
+        background: this.ponBackground ? `on-${this.ponBackground}` : '',
+        darkened: this.pdarkened,
+        ripple: this.ripple === undefined ? this.pripple : this.ripple
       };
+    }
   }
-
-  get cisDisabled(): boolean {
-    return this.disabled === undefined
-      ? this.pdisabled
-      : this.disabled;
-  }
-
-  get cgetStateAttrs(): LbzStateAttributes {
-    return {
-      class: 'lbz-list-item__state',
-      type: ['primary', 'secondary', 'error'].includes(this.ponBackground) ? 'primary' : '',
-      background: this.ponBackground ? `on-${this.ponBackground}` : '',
-      darkened: this.pdarkened,
-      ripple: this.ripple === undefined ? this.pripple : this.ripple,
-    };
-  }
-}
 </script>

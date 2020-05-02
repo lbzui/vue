@@ -2,9 +2,15 @@
   <article class="lbzui-components-radio">
     <h2 class="lbz-typography--h5"># Radio</h2>
 
-    <h3 class="lbz-typography--subtitle1">$ [required]v-model: true, false, x, 'x'</h3>
-    <h3 class="lbz-typography--subtitle1">$ id: 'lbz-radio-x' (default), 'x'</h3>
-    <h3 class="lbz-typography--subtitle1">$ [required]value: true, false, x, 'x'</h3>
+    <h3 class="lbz-typography--subtitle1">
+      $ [required]v-model: true, false, x, 'x'
+    </h3>
+    <h3 class="lbz-typography--subtitle1">
+      $ id: 'lbz-radio-x' (default), 'x'
+    </h3>
+    <h3 class="lbz-typography--subtitle1">
+      $ [required]value: true, false, x, 'x'
+    </h3>
 
     <lbz-radio
       v-model="vradio0"
@@ -19,15 +25,16 @@
       @change="fchange"
     />
 
-    <h3 class="lbz-typography--subtitle1">$ color: 'primary', 'secondary' (default)</h3>
-    <h3 class="lbz-typography--subtitle1">$ on-background: 'primary', 'secondary', 'surface' (default), 'error', 'light', 'dark'</h3>
+    <h3 class="lbz-typography--subtitle1">
+      $ color: 'primary', 'secondary' (default)
+    </h3>
+    <h3 class="lbz-typography--subtitle1">
+      $ on-background: 'primary', 'secondary', 'surface' (default), 'error',
+      'light', 'dark'
+    </h3>
 
     <div class="lbzui-mini-rectangle lbzui-background--primary">
-      <lbz-radio
-        v-model="vradio1"
-        value="primary"
-        on-background="primary"
-      />
+      <lbz-radio v-model="vradio1" value="primary" on-background="primary" />
     </div>
     <div class="lbzui-mini-rectangle lbzui-background--secondary">
       <lbz-radio
@@ -38,12 +45,8 @@
       />
     </div>
     <div class="lbzui-mini-rectangle">
-      <lbz-radio
-        v-model="vradio1"
-        value="surface"
-        color="primary"
-      />
-      <lbz-radio v-model="vradio1" value="surface"/>
+      <lbz-radio v-model="vradio1" value="surface" color="primary" />
+      <lbz-radio v-model="vradio1" value="surface" />
     </div>
     <div class="lbzui-mini-rectangle lbzui-background--error">
       <lbz-radio
@@ -52,11 +55,7 @@
         color="primary"
         on-background="error"
       />
-      <lbz-radio
-        v-model="vradio1"
-        value="error"
-        on-background="error"
-      />
+      <lbz-radio v-model="vradio1" value="error" on-background="error" />
     </div>
     <div class="lbzui-mini-rectangle lbzui-background--light">
       <lbz-radio
@@ -65,11 +64,7 @@
         color="primary"
         on-background="light"
       />
-      <lbz-radio
-        v-model="vradio1"
-        value="light"
-        on-background="light"
-      />
+      <lbz-radio v-model="vradio1" value="light" on-background="light" />
     </div>
     <div class="lbzui-mini-rectangle lbzui-background--dark">
       <lbz-radio
@@ -78,16 +73,14 @@
         color="primary"
         on-background="dark"
       />
-      <lbz-radio
-        v-model="vradio1"
-        value="dark"
-        on-background="dark"
-      />
+      <lbz-radio v-model="vradio1" value="dark" on-background="dark" />
     </div>
 
     <h3 class="lbz-typography--subtitle1">$ darkened: true, false (default)</h3>
 
-    <div class="lbzui-mini-rectangle lbzui-background--primary lbzui-is-darkened">
+    <div
+      class="lbzui-mini-rectangle lbzui-background--primary lbzui-is-darkened"
+    >
       <lbz-radio
         v-model="vradio1"
         value="primary"
@@ -95,7 +88,9 @@
         darkened
       />
     </div>
-    <div class="lbzui-mini-rectangle lbzui-background--secondary lbzui-is-darkened">
+    <div
+      class="lbzui-mini-rectangle lbzui-background--secondary lbzui-is-darkened"
+    >
       <lbz-radio
         v-model="vradio1"
         value="secondary"
@@ -168,22 +163,9 @@
       />
     </div>
     <div class="lbzui-mini-rectangle">
-      <lbz-radio
-        v-model="vradio2"
-        value="checked"
-        color="primary"
-        disabled
-      />
-      <lbz-radio
-        v-model="vradio2"
-        value="checked"
-        disabled
-      />
-      <lbz-radio
-        v-model="vradio2"
-        value="unchecked"
-        disabled
-      />
+      <lbz-radio v-model="vradio2" value="checked" color="primary" disabled />
+      <lbz-radio v-model="vradio2" value="checked" disabled />
+      <lbz-radio v-model="vradio2" value="unchecked" disabled />
     </div>
     <div class="lbzui-mini-rectangle lbzui-background--error">
       <lbz-radio
@@ -249,33 +231,29 @@
       />
     </div>
 
-    <h3 class="lbz-typography--subtitle1">$ ripple: undefined (default), true, false</h3>
+    <h3 class="lbz-typography--subtitle1">
+      $ ripple: undefined (default), true, false
+    </h3>
 
-    <lbz-radio
-      v-model="vradio3"
-      :value="0"
-      ripple
-    >Ripple</lbz-radio>
-    <lbz-radio
-      v-model="vradio3"
-      :value="1"
-      :ripple="false"
-    >Non-ripple</lbz-radio>
+    <lbz-radio v-model="vradio3" :value="0" ripple>Ripple</lbz-radio>
+    <lbz-radio v-model="vradio3" :value="1" :ripple="false"
+      >Non-ripple</lbz-radio
+    >
   </article>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+  import { Component, Vue } from 'vue-property-decorator';
 
-@Component
-export default class ComponentsRadio extends Vue {
-  private vradio0: boolean = true;
-  private vradio1: string = '';
-  private vradio2: string = 'checked';
-  private vradio3: number = -1;
+  @Component
+  export default class ComponentsRadio extends Vue {
+    private vradio0 = true;
+    private vradio1 = '';
+    private vradio2 = 'checked';
+    private vradio3 = -1;
 
-  private fchange(val: boolean | number | string, e: MouseEvent): void {
-    console.log(val, e);
+    private fchange(val: boolean | number | string, e: MouseEvent): void {
+      console.log(val, e);
+    }
   }
-}
 </script>

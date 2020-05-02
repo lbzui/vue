@@ -51,8 +51,12 @@ function fopenNextSnackbar(): void {
   }
 }
 
-const LbzSnackbar = (label: string, duration?: number | LbzSnackbarOptions): void => {
-  if (Vue.prototype.$isServer || !label) { // SSR
+const LbzSnackbar = (
+  label: string,
+  duration?: number | LbzSnackbarOptions
+): void => {
+  if (Vue.prototype.$isServer || !label) {
+    // SSR
     return;
   }
 
@@ -64,7 +68,7 @@ const LbzSnackbar = (label: string, duration?: number | LbzSnackbarOptions): voi
     valign: '',
     vstacked: false,
     vactionLabel: '',
-    factionClick: undefined,
+    factionClick: undefined
   };
 
   if (duration) {
