@@ -18,7 +18,7 @@
     box-sizing: border-box;
     padding: 0 var(--lbz-layout-grid-margin);
 
-    & &__cell {
+    &__cell {
       place-self: stretch stretch;
       overflow: hidden;
       box-sizing: border-box;
@@ -27,15 +27,15 @@
     each(range(12), {
       @next-value: @value + 1;
 
-      & &__start--@{value} {
+      &__start--@{value} {
         .lbz-layout-grid-grid-column-start(@value);
       }
 
-      & &__span--@{value} {
+      &__span--@{value} {
         .lbz-layout-grid-grid-column-span(@value);
       }
 
-      & &__end--@{next-value} {
+      &__end--@{next-value} {
         .lbz-layout-grid-grid-column-end(@next-value);
       }
     });
@@ -43,7 +43,7 @@
     @aligns: start, center, end, stretch;
 
     each(@aligns, {
-      & &__align--@{value} {
+      &__align--@{value} {
         align-self: @value;
       }
     });
@@ -60,15 +60,15 @@
       each(@starts, {
         @next-value: @value + 1;
 
-        & &__start--@{value} {
+        &__start--@{value} {
           .lbz-layout-grid-grid-column-start(@value - 8);
         }
 
-        & &__span--@{value} {
+        &__span--@{value} {
           .lbz-layout-grid-grid-column-end(span 8);
         }
 
-        & &__end--@{next-value} {
+        &__end--@{next-value} {
           .lbz-layout-grid-grid-column-end(@next-value - 8);
         }
       });
@@ -86,23 +86,23 @@
       each(@starts, {
         @next-value: @value + 1;
 
-        & &__start--@{value} when (@value <= 8) {
+        &__start--@{value} when (@value <= 8) {
           .lbz-layout-grid-grid-column-start(@value - 4);
         }
 
-        & &__start--@{value} when (@value > 8) {
+        &__start--@{value} when (@value > 8) {
           .lbz-layout-grid-grid-column-start(@value - 8);
         }
 
-        & &__span--@{value} {
+        &__span--@{value} {
           .lbz-layout-grid-grid-column-end(span 4);
         }
 
-        & &__end--@{next-value} when (@next-value <= 8) {
+        &__end--@{next-value} when (@next-value <= 8) {
           .lbz-layout-grid-grid-column-end(@next-value - 4);
         }
 
-        & &__end--@{next-value} when (@next-value > 8) {
+        &__end--@{next-value} when (@next-value > 8) {
           .lbz-layout-grid-grid-column-end(@next-value - 8);
         }
       });

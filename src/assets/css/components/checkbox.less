@@ -5,7 +5,7 @@
   justify-content: flex-start;
   align-items: center;
 
-  & &__container {
+  &__container {
     -webkit-appearance: none;
     overflow: hidden;
     position: relative;
@@ -30,7 +30,7 @@
     opacity: 0;
   }
 
-  & &__square {
+  &__square {
     position: relative;
     box-sizing: border-box;
     border: 2px solid;
@@ -42,7 +42,7 @@
     transition: color 90ms #lbz-motion.curve[sharp], background-color 90ms #lbz-motion.curve[sharp];
   }
 
-  & &__checkmark {
+  &__checkmark {
     display: block;
     position: absolute;
     top: 0;
@@ -64,7 +64,7 @@
     }
   }
 
-  & &__mixedmark {
+  &__mixedmark {
     display: block;
     position: absolute;
     top: 50%;
@@ -87,13 +87,13 @@
     height: 100%;
   }
 
-  & &__label {
+  &__label {
     margin-left: 4px;
     .lbz-typography("body2");
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
   }
 
-  &.lbz-is-checked .lbz-checkbox {
+  &.lbz-is-checked & {
     &__square {
       color: var(--lbz-theme-secondary);
       background-color: var(--lbz-theme-secondary);
@@ -119,53 +119,53 @@
   }
 
   // color
-  &&--primary.lbz-is-checked .lbz-checkbox__square {
+  &--primary.lbz-is-checked &__square {
     color: var(--lbz-theme-primary);
     background-color: var(--lbz-theme-primary);
   }
 
   // on-background
-  &&--on {
+  &--on {
     &-primary {
       &:not(.lbz-is-checked) .lbz-checkbox__square,
-      .lbz-radio__label {
+      .lbz-checkbox__label {
         color: var(--lbz-theme-text-medium-emphasis-on-primary);
       }
     }
 
     &-secondary {
       &:not(.lbz-is-checked) .lbz-checkbox__square,
-      .lbz-radio__label {
+      .lbz-checkbox__label {
         color: var(--lbz-theme-text-medium-emphasis-on-secondary);
       }
     }
 
     &-error {
       &:not(.lbz-is-checked) .lbz-checkbox__square,
-      .lbz-radio__label {
+      .lbz-checkbox__label {
         color: var(--lbz-theme-text-medium-emphasis-on-error);
       }
     }
 
     &-light {
       &:not(.lbz-is-checked) .lbz-checkbox__square,
-      .lbz-radio__label {
+      .lbz-checkbox__label {
         color: var(--lbz-theme-text-medium-emphasis-on-light);
       }
     }
   }
 
   // darkened
-  &&--on-dark,
+  &--on-dark,
   html[data-lbz-theme="dark"] &.lbz-is-darkened {
     &:not(.lbz-is-checked) .lbz-checkbox__square,
-    .lbz-radio__label {
+    .lbz-checkbox__label {
       color: var(--lbz-theme-text-medium-emphasis-on-dark);
     }
   }
 
   // indeterminate
-  &.lbz-is-indeterminate .lbz-checkbox {
+  &.lbz-is-indeterminate & {
     &__checkmark {
       opacity: 0;
       transition: opacity 90ms #lbz-motion.curve[standard], transform 90ms #lbz-motion.curve[standard];

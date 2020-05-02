@@ -12,7 +12,7 @@
   margin: var(--lbz-layout-grid-margin);
   pointer-events: none;
 
-  & &__container {
+  &__container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -43,7 +43,7 @@
     }
   }
 
-  & &__label {
+  &__label {
     flex: auto;
     margin: 14px 16px;
     .lbz-typography("body2");
@@ -51,7 +51,7 @@
     color: var(--lbz-theme-text-high-emphasis-on-primary);
   }
 
-  & &__action {
+  &__action {
     flex: none;
     margin-right: 8px;
   }
@@ -81,22 +81,22 @@
   @media #lbz-layout-grid.breakpoint[mobile] {
     margin: 8px;
 
-    .lbz-snackbar__container {
+    &__container {
       min-width: 100%;
     }
 
-    .lbz-snackbar__label {
+    &__label {
       .lbz-truncate(2);
     }
   }
 
   // align
-  &&--start {
+  &--start {
     justify-content: flex-start;
   }
 
   // stacked
-  &.lbz-is-stacked .lbz-snackbar {
+  &.lbz-is-stacked & {
     &__container {
       flex-direction: column;
       align-items: flex-start;
@@ -109,7 +109,7 @@
   }
 
   // active
-  &&-enter-active {
+  &-enter-active {
     transition: opacity 150ms #lbz-motion.curve[deceleration];
 
     .lbz-snackbar__container {
@@ -117,7 +117,7 @@
     }
   }
 
-  &&-leave-active {
+  &-leave-active {
     transition: opacity 75ms #lbz-motion.curve[acceleration];
 
     .lbz-snackbar__container {
@@ -125,14 +125,14 @@
     }
   }
 
-  &&-enter,
-  &&-leave-to {
+  &-enter,
+  &-leave-to {
     .lbz-snackbar__container {
       opacity: 0;
     }
   }
 
-  &&-enter .lbz-snackbar__container {
+  &-enter &__container {
     transform: scale(.8);
   }
 }

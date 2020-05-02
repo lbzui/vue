@@ -33,8 +33,62 @@
     margin-left: 8px;
   }
 
+  // color
+  &--secondary {
+    color: var(--lbz-theme-secondary);
+  }
+
+  &--surface {
+    color: var(--lbz-theme-text-high-emphasis-on-surface);
+  }
+
+  &--error {
+    color: var(--lbz-theme-error);
+  }
+
+  &--light {
+    color: var(--lbz-theme-light);
+
+    // type, disabled
+    &:not(.lbz-button--contained).lbz-is-disabled {
+      color: var(--lbz-theme-text-disabled-on-dark);
+    }
+  }
+
+  &--dark {
+    color: var(--lbz-theme-dark);
+
+    // type, disabled
+    &:not(.lbz-button--contained).lbz-is-disabled {
+      color: var(--lbz-theme-text-disabled-on-light);
+    }
+  }
+
+  // full-width
+  &.lbz-is-full-width {
+    width: 100%;
+
+    + .lbz-is-full-width {
+      margin-top: 12px;
+      margin-left: 0;
+    }
+  }
+
+  // dense
+  &.lbz-is-dense {
+    height: 32px;
+    font-size: 13px;
+  }
+
+  // disabled
+  &.lbz-is-disabled {
+    color: var(--lbz-theme-text-disabled-on-surface);
+    cursor: default;
+    pointer-events: none;
+  }
+
   // type
-  &&--outlined {
+  &--outlined {
     border: 1px solid var(--lbz-theme-outline-on-surface);
     padding: 0 15px;
 
@@ -50,7 +104,7 @@
     }
   }
 
-  &&--contained {
+  &--contained {
     padding: 0 16px;
     color: var(--lbz-theme-text-high-emphasis-on-primary);
     background-color: var(--lbz-theme-primary);
@@ -127,59 +181,5 @@
     .lbz-button__icon {
       margin-left: -4px;
     }
-  }
-
-  // color
-  &&--secondary {
-    color: var(--lbz-theme-secondary);
-  }
-
-  &&--surface {
-    color: var(--lbz-theme-text-high-emphasis-on-surface);
-  }
-
-  &&--error {
-    color: var(--lbz-theme-error);
-  }
-
-  &&--light {
-    color: var(--lbz-theme-light);
-
-    // type, disabled
-    &:not(.lbz-button--contained).lbz-is-disabled {
-      color: var(--lbz-theme-text-disabled-on-dark);
-    }
-  }
-
-  &&--dark {
-    color: var(--lbz-theme-dark);
-
-    // type, disabled
-    &:not(.lbz-button--contained).lbz-is-disabled {
-      color: var(--lbz-theme-text-disabled-on-light);
-    }
-  }
-
-  // full-width
-  &.lbz-is-full-width {
-    width: 100%;
-
-    + .lbz-is-full-width {
-      margin-top: 12px;
-      margin-left: 0;
-    }
-  }
-
-  // dense
-  &.lbz-is-dense {
-    height: 32px;
-    font-size: 13px;
-  }
-
-  // disabled
-  &.lbz-is-disabled {
-    color: var(--lbz-theme-text-disabled-on-surface);
-    cursor: default;
-    pointer-events: none;
   }
 }

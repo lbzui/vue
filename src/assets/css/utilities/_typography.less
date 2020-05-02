@@ -127,11 +127,12 @@
 
 .lbz-typography(@value) when (@value = "overline") {
   display: block;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
+  margin-bottom: -8px;
+  font-size: 16px; // 10px
+  font-weight: 700; // 400
+  line-height: 24px; // 16px
   text-decoration: none;
-  .lbz-typography-letter-spacing(1.5; 10);
+  .lbz-typography-letter-spacing(1.5; 16);
   text-transform: uppercase;
   transform: scale(10 / 16);
   transform-origin: 0 0;

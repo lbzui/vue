@@ -5,7 +5,7 @@
   justify-content: flex-start;
   align-items: center;
 
-  & &__container {
+  &__container {
     -webkit-appearance: none;
     overflow: hidden;
     position: relative;
@@ -18,7 +18,7 @@
     outline: none;
   }
 
-  & &__track {
+  &__track {
     border-radius: 7px;
     width: 34px;
     height: 14px;
@@ -27,7 +27,7 @@
     transition: background-color 90ms #lbz-motion.curve[standard], opacity 90ms #lbz-motion.curve[standard];
   }
 
-  & &__thumb-underlay {
+  &__thumb-underlay {
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -50,7 +50,7 @@
     opacity: 0;
   }
 
-  & &__thumb {
+  &__thumb {
     position: relative;
     margin: 10px;
     border-radius: inherit;
@@ -79,13 +79,13 @@
     height: 100%;
   }
 
-  & &__label {
+  &__label {
     margin-left: 4px;
     .lbz-typography("body2");
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
   }
 
-  &.lbz-is-checked .lbz-switch {
+  &.lbz-is-checked & {
     &__track,
     &__thumb {
       background-color: var(--lbz-theme-secondary);
@@ -105,7 +105,7 @@
   }
 
   // color
-  &&--primary.lbz-is-checked .lbz-switch {
+  &--primary.lbz-is-checked & {
     &__track,
     &__thumb {
       background-color: var(--lbz-theme-primary);
@@ -113,7 +113,7 @@
   }
 
   // on-background
-  &&--on {
+  &--on {
     &-primary {
       &:not(.lbz-is-checked) .lbz-switch {
         &__track {
@@ -196,7 +196,7 @@
   }
 
   // darkened
-  &&--on-dark,
+  &--on-dark,
   html[data-lbz-theme="dark"] &.lbz-is-darkened {
     &:not(.lbz-is-checked) .lbz-switch {
       &__track {

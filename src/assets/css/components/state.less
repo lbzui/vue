@@ -47,7 +47,7 @@
   }
 
   // type
-  &&--primary {
+  &--primary {
     &:hover::before {
       opacity: #lbz-state.primary[hover];
     }
@@ -61,7 +61,7 @@
     }
   }
 
-  &&--image {
+  &--image {
     &:hover::before {
       opacity: #lbz-state.image[hover];
     }
@@ -98,7 +98,7 @@
   };
 
   each(@backgrounds, {
-    &&-bg--@{key} {
+    &--bg-@{key} {
       &::before,
       &::after {
         background-color: @value;
@@ -142,8 +142,8 @@
 
   // NOTE: `:hover`, `:focus`, and `:active` will not work,
   //       mainly applied in Card, List, and List item.
-  .lbz-state-no-before--child > &,
-  .lbz-state-no-before--descendant & {
+  &-no-before--child > &,
+  &-no-before--descendant & {
     &::before {
       content: normal;
     }
@@ -195,11 +195,11 @@
     overflow: visible;
   }
 
-  &.lbz-ripple-enter::after {
+  &-enter::after {
     animation: lbz-ripple-opacity-in 75ms forwards, lbz-ripple-radius-in 225ms forwards;
   }
 
-  &.lbz-ripple-leave::after {
+  &-leave::after {
     transform: translate3d(var(--lbz-ripple-translate-end, 0, 0, 0)) scale(var(--lbz-ripple-scale, 1));
     animation: lbz-ripple-opacity-out 150ms;
   }

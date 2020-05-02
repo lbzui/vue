@@ -45,6 +45,7 @@
             :router-link="false"
             :href="item.path"
             target="_blank"
+            rel="noopener"
           >
             <template #center>{{ item.label }}</template>
             <template #end><lbz-icon>open_in_new</lbz-icon></template>

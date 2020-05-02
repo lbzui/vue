@@ -3,7 +3,7 @@
     :class="[
       'lbz-state',
       type && `lbz-state--${type}`,
-      background && `lbz-state-bg--${background}`,
+      background && `lbz-state--bg-${background}`,
       darkened && 'lbz-is-darkened',
       cisRipple && 'lbz-ripple',
       cisRipple && unbounded && 'lbz-is-unbounded'

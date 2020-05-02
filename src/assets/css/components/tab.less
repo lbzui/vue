@@ -5,7 +5,7 @@
   width: 100%;
   height: 48px;
 
-  & &__container {
+  &__container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -13,9 +13,9 @@
     overflow-x: auto;
     overflow-y: hidden;
     transition: 250ms transform #lbz-motion.curve[standard];
-    scroll-behavior: @scroll-behavior;
-    overscroll-behavior-x: @overscroll-behavior;
-    -webkit-overflow-scrolling: @overflow-scrolling;
+    scroll-behavior: #lbz[scroll-behavior];
+    overscroll-behavior-x: #lbz[overscroll-behavior];
+    -webkit-overflow-scrolling: #lbz[overflow-scrolling];
 
     &::-webkit-scrollbar {
       display: none;
@@ -23,7 +23,7 @@
   }
 
   // type
-  &&--scrollable .lbz-tab {
+  &--scrollable & {
     &__container {
       padding-left: 52px;
     }
@@ -36,24 +36,24 @@
   }
 
   // align
-  &&--start,
-  &&--center,
-  &&--end {
+  &--start,
+  &--center,
+  &--end {
     .lbz-tab-item {
       flex: 0 1 auto;
     }
   }
 
-  &&--center .lbz-tab__container {
+  &--center &__container {
     justify-content: center;
   }
 
-  &&--end .lbz-tab__container {
+  &--end &__container {
     justify-content: flex-end;
   }
 
   // on-background
-  &&--on {
+  &--on {
     &-primary .lbz-tab-item {
       color: var(--lbz-theme-text-medium-emphasis-on-primary);
 
@@ -79,8 +79,8 @@
     }
   }
 
-  &&--on-dark .lbz-tab-item,
-  html[data-lbz-theme="dark"] & .lbz-tab-item {
+  &--on-dark &-item,
+  html[data-lbz-theme="dark"] &-item {
     color: var(--lbz-theme-text-medium-emphasis-on-dark);
 
     &__state::before,

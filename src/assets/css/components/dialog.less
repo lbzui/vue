@@ -11,7 +11,7 @@
   left: 0;
   z-index: 24;
 
-  & &__container {
+  &__container {
     overflow-x: hidden;
     overflow-y: auto;
     border-radius: var(--lbz-shape-size-medium);
@@ -29,7 +29,7 @@
     flex: none;
   }
 
-  & &__header {
+  &__header {
     padding: 24px 24px 10px;
 
     + .lbz-dialog__content {
@@ -38,21 +38,21 @@
   }
 
   // title
-  & &__title {
+  &__title {
     margin: 0;
     .lbz-typography("h6");
     color: var(--lbz-theme-text-high-emphasis-on-surface);
   }
 
-  & &__content {
+  &__content {
     overflow: auto;
     box-sizing: border-box;
     padding: 20px 24px;
     .lbz-typography("body1");
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
-    scroll-behavior: @scroll-behavior;
-    overscroll-behavior: @overscroll-behavior;
-    -webkit-overflow-scrolling: @overflow-scrolling;
+    scroll-behavior: #lbz[scroll-behavior];
+    overscroll-behavior: #lbz[overscroll-behavior];
+    -webkit-overflow-scrolling: #lbz[overflow-scrolling];
 
     > :first-child {
       margin-top: 0;
@@ -72,7 +72,7 @@
     }
   }
 
-  & &__actions {
+  &__actions {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
@@ -82,7 +82,7 @@
     min-height: 52px;
   }
 
-  & &__scrim {
+  &__scrim {
     position: absolute;
     top: 0;
     right: 0;
@@ -93,7 +93,7 @@
   }
 
   // type
-  &&--full-screen .lbz-dialog {
+  &--full-screen & {
     &__container {
       display: flex;
       flex-flow: column nowrap;
@@ -113,7 +113,7 @@
   }
 
   // type, scrollable
-  &.lbz-is-scrollable:not(.lbz-dialog--full-screen) {
+  &.lbz-is-scrollable:not(&--full-screen) {
     .lbz-dialog__header {
       padding-bottom: 16px;
     }
@@ -132,7 +132,7 @@
   }
 
   // stacked
-  &.lbz-is-stacked .lbz-dialog__actions {
+  &.lbz-is-stacked &__actions {
     flex-direction: column;
     align-items: flex-end;
 
@@ -143,7 +143,7 @@
   }
 
   // active
-  &&-enter-active {
+  &-enter-active {
     transition: opacity 150ms linear;
 
     .lbz-dialog__container {
@@ -155,7 +155,7 @@
     }
   }
 
-  &&-leave-active {
+  &-leave-active {
     transition: opacity 75ms linear;
 
     .lbz-dialog__scrim {
@@ -163,15 +163,15 @@
     }
   }
 
-  &&-enter,
-  &&-leave-to {
+  &-enter,
+  &-leave-to {
     .lbz-dialog__container,
     .lbz-dialog__scrim {
       opacity: 0;
     }
   }
 
-  &&-enter {
+  &-enter {
     // type
     &:not(.lbz-dialog--full-screen) .lbz-dialog__container {
       transform: scale(.8);

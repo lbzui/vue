@@ -2,7 +2,7 @@
   <article class="lbzui-customization">
     <h2 class="lbz-typography--h4">Customization</h2>
 
-    <p class="lbz-typography--body1">Create your own Material theme by customizing values for <a href="https://material.io/design/layout/responsive-layout-grid.html" target="_blank">Layout grid</a><lbz-icon>open_in_new</lbz-icon>, <a href="https://material.io/design/shape/about-shape.html#shape-customization-tool" target="_blank">Shape</a><lbz-icon>open_in_new</lbz-icon>, <a href="https://material.io/resources/color/" target="_blank">Theme</a><lbz-icon>open_in_new</lbz-icon>, and more.</p>
+    <p class="lbz-typography--body1">Create your own Material theme by customizing values for <a href="https://material.io/design/layout/responsive-layout-grid.html" target="_blank" rel="noopener">Layout grid</a><lbz-icon>open_in_new</lbz-icon>, <a href="https://material.io/design/shape/about-shape.html#shape-customization-tool" target="_blank" rel="noopener">Shape</a><lbz-icon>open_in_new</lbz-icon>, <a href="https://material.io/resources/color/" target="_blank" rel="noopener">Theme</a><lbz-icon>open_in_new</lbz-icon>, and more.</p>
 
     <h3 class="lbz-typography--h5"># Layout grid</h3>
 

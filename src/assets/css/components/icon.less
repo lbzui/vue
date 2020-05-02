@@ -18,38 +18,43 @@
   }
 
   // size
-  &&--18 {
+  &--18 {
     width: 18px;
     height: 18px;
     font-size: 18px;
   }
 
-  &&--36 {
+  &--36 {
     width: 36px;
     height: 36px;
     font-size: 36px;
   }
 
-  &&--48 {
+  &--48 {
     width: 48px;
     height: 48px;
     font-size: 48px;
   }
 
+  // disabled
+  &.lbz-is-disabled {
+    color: var(--lbz-theme-text-disabled-on-surface);
+  }
+
   // color
-  &&--primary {
+  &--primary {
     color: var(--lbz-theme-primary);
   }
 
-  &&--secondary {
+  &--secondary {
     color: var(--lbz-theme-secondary);
   }
 
-  &&--error {
+  &--error {
     color: var(--lbz-theme-error);
   }
 
-  &&--light {
+  &--light {
     color: var(--lbz-theme-light);
 
     // disabled
@@ -58,17 +63,12 @@
     }
   }
 
-  &&--dark {
+  &--dark {
     color: var(--lbz-theme-dark);
 
     // disabled
     &.lbz-is-disabled {
       color: var(--lbz-theme-text-disabled-on-light);
     }
-  }
-
-  // disabled
-  &.lbz-is-disabled {
-    color: var(--lbz-theme-text-disabled-on-surface);
   }
 }

@@ -22,18 +22,18 @@
     secondary-variant: #018786;
 
     // Surface, background, and error colors
-    background: @white;
-    surface: @white;
+    background: #lbz[white];
+    surface: #lbz[white];
     error: #b00020;
 
     // Typography and iconography colors
-    on-primary: @white;
-    on-primary-variant: @white;
-    on-secondary: @black;
-    on-secondary-variant: @black;
-    on-background: @black;
-    on-surface: @black;
-    on-error: @white;
+    on-primary: #lbz[white];
+    on-primary-variant: #lbz[white];
+    on-secondary: #lbz[black];
+    on-secondary-variant: #lbz[black];
+    on-background: #lbz[black];
+    on-surface: #lbz[black];
+    on-error: #lbz[white];
   }
 
   // Dark theme
@@ -57,13 +57,13 @@
     error: #cf6679;
 
     // Typography and iconography colors
-    on-primary: @black;
-    on-primary-variant: @white;
-    on-secondary: @black;
-    on-secondary-variant: @black;
-    on-background: @white;
-    on-surface: @white;
-    on-error: @black;
+    on-primary: #lbz[black];
+    on-primary-variant: #lbz[white];
+    on-secondary: #lbz[black];
+    on-secondary-variant: #lbz[black];
+    on-background: #lbz[white];
+    on-surface: #lbz[white];
+    on-error: #lbz[black];
   }
 }
 
@@ -71,27 +71,27 @@
 #lbz-theme-text() {
   // Light text on dark backgrounds
   .light() {
-    high-emphasis: @white; // High-emphasis text
-    medium-emphasis: rgba(@white, .74); // Medium-emphasis text and hint text
-    disabled: rgba(@white, .38); // Disabled text
+    high-emphasis: #lbz[white]; // High-emphasis text
+    medium-emphasis: rgba(#lbz[white], .74); // Medium-emphasis text and hint text
+    disabled: rgba(#lbz[white], .38); // Disabled text
   }
 
   // Dark text on light backgrounds
   .dark() {
-    high-emphasis: rgba(@black, .87); // High-emphasis text
-    medium-emphasis: rgba(@black, .6); // Medium-emphasis text and hint text
-    disabled: rgba(@black, .38); // Disabled text
+    high-emphasis: rgba(#lbz[black], .87); // High-emphasis text
+    medium-emphasis: rgba(#lbz[black], .6); // Medium-emphasis text and hint text
+    disabled: rgba(#lbz[black], .38); // Disabled text
   }
 }
 
 // Outline colors
 #lbz-theme-outline() {
-  light: rgba(@white, .12);
-  dark: rgba(@black, .12);
+  light: rgba(#lbz[white], .12);
+  dark: rgba(#lbz[black], .12);
 }
 
 // Scrim backgrounds
 #lbz-theme-scrim() {
-  light: rgba(@white, .5);
-  dark: rgba(@black, .32);
+  light: rgba(#lbz[white], .5);
+  dark: rgba(#lbz[black], .32);
 }

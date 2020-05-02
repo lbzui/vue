@@ -1,10 +1,9 @@
 const path = require('path')
+const isProduction = process.env.NODE_ENV === 'production'
 
 process.env.VUE_APP_SITE_NAME = '@lbzui/vue'
 process.env.VUE_APP_SITE_DESCRIPTION = 'Material Components for Vue.js'
-process.env.VUE_APP_SITE_URL = process.env.NODE_ENV === 'production'
-  ? 'https://lbzui-vue.lanbizhong.com/'
-  : '/'
+process.env.VUE_APP_SITE_URL = isProduction ? 'https://lbzui-vue.lanbizhong.com/' : 'http://localhost:8080/'
 
 function resolve (dir) {
   return path.resolve(__dirname, dir)
@@ -14,6 +13,7 @@ module.exports = {
   pages: {
     index: 'docs/main.ts'
   },
+  lintOnSave: !isProduction,
   configureWebpack: {
     output: {
       libraryExport: 'default'

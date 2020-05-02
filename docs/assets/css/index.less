@@ -1,11 +1,13 @@
-@lbzuiMargin: 8px 16px 8px 0;
-@lbzuiMarginTop: 16px;
-@lbzuiFullMargin: 8px 0;
-@lbzuiDrawerWidth: 256px;
-@lbzuiAppWidth: 360px;
-@lbzuiAppHeight: 640px;
-@lbzuiSquareWidth: (@lbzuiAppWidth - 4 * 16px) / 2;
-@lbzuiMiniSquareWidth: 64px;
+#lbzui() {
+  margin: 8px 16px 8px 0;
+  margin-top: 16px;
+  full-margin: 8px 0;
+  drawer-width: 256px;
+  app-width: 360px;
+  app-height: 640px;
+  square-width: (360px - 4 * 16px) / 2;
+  mini-square-width: 64px;
+}
 
 html,
 body {
@@ -51,14 +53,14 @@ html {
   &-app,
   &-rectangle {
     display: inline-block;
-    margin: @lbzuiMargin !important;
+    margin: #lbzui[margin] !important;
     width: 100%;
-    max-width: @lbzuiAppWidth;
+    max-width: #lbzui[app-width];
     vertical-align: top;
   }
 
   &-app {
-    height: @lbzuiAppHeight;
+    height: #lbzui[app-height];
   }
 
   &-square,
@@ -68,24 +70,24 @@ html {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    margin: @lbzuiMargin;
+    margin: #lbzui[margin];
     vertical-align: top;
   }
 
   &-square {
-    width: @lbzuiSquareWidth;
-    height: @lbzuiSquareWidth;
+    width: #lbzui[square-width];
+    height: #lbzui[square-width];
   }
 
   &-mini-square {
-    width: @lbzuiMiniSquareWidth;
-    height: @lbzuiMiniSquareWidth;
+    width: #lbzui[mini-square-width];
+    height: #lbzui[mini-square-width];
   }
 
   &-mini-rectangle {
     width: 100%;
-    max-width: @lbzuiAppWidth;
-    height: @lbzuiMiniSquareWidth;
+    max-width: #lbzui[app-width];
+    height: #lbzui[mini-square-width];
   }
 
   &-background {
@@ -164,14 +166,14 @@ html {
 
   & &__drawer {
     position: fixed;
-    width: @lbzuiDrawerWidth;
+    width: #lbzui[drawer-width];
 
     .lbz-drawer {
       &__container {
         width: inherit;
 
         > :last-child {
-          padding-bottom: @lbzuiMarginTop;
+          padding-bottom: #lbzui[margin-top];
         }
       }
 
@@ -190,18 +192,17 @@ html {
     }
   }
 
-  & &__main {
+  &__main {
     display: flex;
     flex-flow: column nowrap;
     justify-content: stretch;
     align-items: stretch;
-    margin-left: @lbzuiDrawerWidth;
+    margin-left: #lbzui[drawer-width];
     min-height: 100%;
 
     &__container {
       flex: 1;
-      box-sizing: border-box;
-      padding: var(--lbz-layout-grid-margin);
+      margin: var(--lbz-layout-grid-margin);
 
       // transition
       &-enter-active {
@@ -273,7 +274,7 @@ html {
   &-components {
     &-button {
       .lbz-button {
-        margin: @lbzuiMargin !important;
+        margin: #lbzui[margin] !important;
       }
 
       .lbzui-mini-rectangle .lbz-button {
@@ -282,15 +283,15 @@ html {
     }
 
     &-card .lbz-card {
-      margin: @lbzuiMargin;
+      margin: #lbzui[margin];
       width: 100%;
-      max-width: @lbzuiAppWidth;
+      max-width: #lbzui[app-width];
     }
 
     &-drawer {
       .lbz-button {
         display: flex;
-        margin: @lbzuiFullMargin;
+        margin: #lbzui[full-margin];
       }
 
       .lbz-drawer {
@@ -302,7 +303,7 @@ html {
     &-fab {
       .lbz-button,
       .lbz-fab {
-        margin: @lbzuiMargin;
+        margin: #lbzui[margin];
       }
     }
 
@@ -317,7 +318,7 @@ html {
       display: flex;
 
       + .lbz-button {
-        margin-top: @lbzuiMarginTop;
+        margin-top: #lbzui[margin-top];
         margin-left: 0;
       }
     }
@@ -327,12 +328,12 @@ html {
     }
 
     &-tab .lbz-tab {
-      margin: @lbzuiMargin;
+      margin: #lbzui[margin];
       width: 100%;
-      max-width: @lbzuiAppWidth;
+      max-width: #lbzui[app-width];
 
       + .lbz-tab {
-        margin-top: @lbzuiMarginTop;
+        margin-top: #lbzui[margin-top];
       }
 
       // on-background
@@ -347,15 +348,15 @@ html {
 
     &-top-app-bar {
       .lbz-top-app-bar {
-        margin: @lbzuiMargin;
+        margin: #lbzui[margin];
 
         // type
         &:not(.lbz-top-app-bar--short) {
           width: 100%;
-          max-width: @lbzuiAppWidth;
+          max-width: #lbzui[app-width];
 
           + .lbz-top-app-bar {
-            margin-top: @lbzuiMarginTop;
+            margin-top: #lbzui[margin-top];
           }
         }
       }
@@ -374,23 +375,23 @@ html {
   // Utilities
   &-utilities {
     &-aspect-ratio .lbzui-rectangle {
-      width: @lbzuiSquareWidth;
+      width: #lbzui[square-width];
     }
 
     &-layout-grid .lbz-layout-grid {
       max-width: 100%;
 
-      .lbz-layout-grid__cell {
-        height: @lbzuiSquareWidth;
+      &__cell {
+        height: #lbzui[square-width];
         background-color: var(--lbz-theme-outline-on-surface);
       }
 
       .lbzui-layout-grid__cell {
-        height: @lbzuiSquareWidth / ( 4 / 3);
+        height: #lbzui[square-width] / ( 4 / 3);
       }
 
       + .lbz-layout-grid {
-        margin-top: @lbzuiMarginTop !important;
+        margin-top: #lbzui[margin-top] !important;
       }
     }
 
@@ -407,11 +408,11 @@ html {
       width: 100%;
     }
 
-    & &__main {
+    &__main {
       margin-left: 0;
 
       &__container {
-        padding-bottom: calc(2 * var(--lbz-layout-grid-margin) + 56px);
+        margin-bottom: calc(2 * var(--lbz-layout-grid-margin) + 56px);
       }
     }
 
