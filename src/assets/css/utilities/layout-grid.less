@@ -14,14 +14,11 @@
     grid-template-rows: repeat(auto-fill, minmax(0, auto));
     /*! autoprefixer: ignore next */
     gap: #lbz-layout-grid.desktop[gutter];
-    overflow: hidden;
     box-sizing: border-box;
     padding: 0 var(--lbz-layout-grid-margin);
 
     &__cell {
       place-self: stretch stretch;
-      overflow: hidden;
-      box-sizing: border-box;
     }
 
     each(range(12), {

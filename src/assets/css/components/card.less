@@ -143,22 +143,11 @@
     }
   }
 
-  &:hover,
-  &:focus {
-    z-index: 4;
-    .lbz-elevation(4);
-  }
-
-  &:active {
-    z-index: 8;
-    .lbz-elevation(8);
-  }
-
   // type
   &--outlined {
     border: 1px solid var(--lbz-theme-outline-on-surface);
     .lbz-surface(0);
-    box-shadow: none;
+    box-shadow: none !important;
   }
 
   // background
@@ -225,5 +214,18 @@
     box-shadow: none;
     cursor: default;
     pointer-events: none;
+  }
+
+  &:not(.lbz-is-disabled) {
+    &:hover,
+    &:focus {
+      z-index: 4;
+      .lbz-elevation(4);
+    }
+
+    &:active {
+      z-index: 8;
+      .lbz-elevation(8);
+    }
   }
 }

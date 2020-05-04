@@ -59,20 +59,20 @@
   .lbz-button {
     color: #lbz-theme.dark[primary];
 
-    &__state.lbz-state {
+    &__state {
       &::before,
       &::after {
-        background-color: #lbz-theme.dark[primary];
+        background-color: #lbz-theme.dark[primary] !important;
       }
     }
 
     html[data-lbz-theme="dark"] & {
       color: #lbz-theme.light[primary];
 
-      &__state.lbz-state {
+      &__state {
         &::before,
         &::after {
-          background-color: #lbz-theme.light[primary];
+          background-color: #lbz-theme.light[primary] !important;
         }
       }
     }
