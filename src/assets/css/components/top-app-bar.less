@@ -19,12 +19,12 @@
     justify-content: flex-start;
     align-items: flex-start;
     box-sizing: border-box;
-    padding: 8px 12px;
-    height: 64px;
+    padding: #lbz-top-app-bar[padding];
+    height: #lbz-top-app-bar[height];
 
     @media #lbz-layout-grid.breakpoint[mobile] {
-      padding: 4px;
-      height: 56px;
+      padding: #lbz-top-app-bar[padding-mobile];
+      height: #lbz-top-app-bar[height-mobile];
     }
   }
 
@@ -217,10 +217,10 @@
   //       to prevent the top app bar from covering it.
   &--fixed-adjust,
   &--dense-fixed-adjust {
-    padding-top: 64px;
+    padding-top: #lbz-top-app-bar[height];
 
     @media #lbz-layout-grid.breakpoint[mobile] {
-      padding-top: 56px;
+      padding-top: #lbz-top-app-bar[height-mobile];
     }
   }
 
@@ -272,10 +272,10 @@
 
     &--tab-fixed {
       transition: transform 200ms #lbz-motion.curve[sharp];
-      transform: translate3d(0, -64px, 0);
+      transform: translate3d(0, -(#lbz-top-app-bar[height]), 0);
 
       @media #lbz-layout-grid.breakpoint[mobile] {
-        transform: translate3d(0, -56px, 0);
+        transform: translate3d(0, -(#lbz-top-app-bar[height-mobile]), 0);
       }
     }
   }

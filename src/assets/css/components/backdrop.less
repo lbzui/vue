@@ -15,13 +15,13 @@
     justify-content: flex-start;
     align-items: stretch;
     width: 100%;
-    height: calc(100% - 130px);
+    height: calc(100% - #lbz-backdrop.front-layer[height-active]);
     color: var(--lbz-theme-text-medium-emphasis-on-primary);
 
     &__header {
       flex: none;
       z-index: 0;
-      height: 64px;
+      height: #lbz-backdrop.back-layer[header-height];
     }
 
     &__content {
@@ -52,12 +52,12 @@
     left: 0;
     border-radius: 24px 24px 0 0;
     width: 100%;
-    height: calc(100% - 64px);
+    height: calc(100% - #lbz-backdrop.back-layer[header-height]);
     color: var(--lbz-theme-text-medium-emphasis-on-surface);
     .lbz-surface(2);
     .lbz-elevation(2);
     transition: transform 250ms #lbz-motion.curve[standard];
-    transform: translate3d(0, 64px, 0);
+    transform: translate3d(0, #lbz-backdrop.back-layer[header-height], 0);
 
     > :first-child {
       border-top-left-radius: inherit;
@@ -72,7 +72,7 @@
       align-items: center;
       position: relative;
       padding: 0 var(--lbz-layout-grid-margin);
-      height: 56px;
+      height: #lbz-backdrop.front-layer[header-height];
 
       // divider
       .lbz-divider {
@@ -140,15 +140,15 @@
 
   @media #lbz-layout-grid.breakpoint[mobile] {
     &__back-layer__header {
-      height: 56px;
+      height: #lbz-backdrop.back-layer[header-height-mobile];
     }
 
     &__front-layer {
-      height: calc(100% - 56px);
-      transform: translate3d(0, 56px, 0);
+      height: calc(100% - #lbz-backdrop.back-layer[header-height-mobile]);
+      transform: translate3d(0, #lbz-backdrop.back-layer[header-height-mobile], 0);
 
       &__header {
-        height: 48px;
+        height: #lbz-backdrop.front-layer[header-height-mobile];
       }
     }
   }
@@ -195,11 +195,11 @@
 
     &__front-layer {
       transition: transform 300ms #lbz-motion.curve[standard];
-      transform: translate3d(0, calc((100% + 64px) - 130px), 0);
+      transform: translate3d(0, calc((100% + #lbz-backdrop.back-layer[header-height]) - #lbz-backdrop.front-layer[height-active]), 0);
       transform: translate3d(0, 90%, 0)\9\0;
 
       @media #lbz-layout-grid.breakpoint[mobile] {
-        transform: translate3d(0, calc((100% + 56px) - 130px), 0);
+        transform: translate3d(0, calc((100% + #lbz-backdrop.back-layer[header-height-mobile]) - #lbz-backdrop.front-layer[height-active]), 0);
       }
 
       // icon, scrim

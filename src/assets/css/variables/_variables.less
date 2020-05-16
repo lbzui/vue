@@ -1,5 +1,7 @@
 // Variables
 // usage: `#lbz[x]`
+//        `#lbz-backdrop.x[y]`
+//        `#lbz-top-app-bar[x]`
 
 // Common
 #lbz() {
@@ -9,4 +11,27 @@
   scroll-behavior: smooth;
   overscroll-behavior: contain;
   overflow-scrolling: touch;
+}
+
+// Components
+#lbz-backdrop() {
+  .back-layer() {
+    header-height: 64px;
+    header-height-mobile: 56px;
+  }
+
+  .front-layer() {
+    height-active: 130px;
+
+    header-height: 56px;
+    header-height-mobile: 48px;
+  }
+}
+
+#lbz-top-app-bar() {
+  padding: 8px 12px;
+  padding-mobile: 4px;
+
+  height: 64px;
+  height-mobile: 56px;
 }
