@@ -10,7 +10,7 @@ npm i @vue/cli -g
 yarn global add @vue/cli
 
 # in Windows, run `winpty vue.cmd create <project-name>`
-vue add <project-name>
+vue create <project-name>
 ```
 
 > NOTE: Build a Material theme? Please pick `Less` CSS pre-processor!
