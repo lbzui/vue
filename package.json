@@ -10,7 +10,7 @@
     "build:app": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint --fix --ext .ts,.js,.vue ."
+    "lint": "vue-cli-service lint --fix --ext .ts,.js,.vue --ignore-path .gitignore ."
   },
   "main": "lib/lbzui.common.js",
   "unpkg": "lib/lbzui.umd.min.js",
